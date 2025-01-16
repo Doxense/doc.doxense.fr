@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr-fr" xml:lang="fr-fr" class="_Skins_HTML5___Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="WSC Supervision|Pilotes d'impression" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Console de Supervision (WSC v6.1) - Ajouter un pilote (driver)</title>
+        <!-- Google Tag Manager -->
+        <!-- End Google Tag Manager -->
+        <!-- Tableau triable
+        <link rel="stylesheet" type="text/css" href="../DataTables/DataTables-1.10.20/css/jquery.dataTables.css" /> -->
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.needs-pie
+{
+	behavior: url('../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <style>/*&lt;meta /&gt;*/
+
+.button.previous-topic-button
+{
+	-pie-background: linear-gradient(transparent, #fcfaf8);
+}
+
+.button.next-topic-button
+{
+	-pie-background: linear-gradient(#ffffff, #fcfaf8);
+}
+
+.needs-pie
+{
+	behavior: url('../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../Resources/TableSlylesheets/Standard.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/javascript"> 
+			///*<![CDATA[*/
+			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PK49S9NW');
+		///*]]>*/</script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-left" role="navigation" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Retour" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" aria-label="title tab bar" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Passer au contenu principal</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Compte</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Paramètres</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Déconnexion</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Afficher le volet de navigation" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="https://doc.doxense.fr" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" role="navigation" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Compte</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Paramètres</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Déconnexion</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Champ de recherche" placeholder="Rechercher" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filtrer&#160;:</span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Filtre de recherche" title="Tous les fichiers" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">Tous les fichiers</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Rechercher" role="button" tabindex="0"><span class="invisible-label">Démarrer la recherche</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <!-- Google Tag Manager (noscript) -->
+                                    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+                                    </noscript>
+                                    <!-- End Google Tag Manager (noscript) -->
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Toolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Imprimer">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Imprimer">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie remove-highlight-button" title="Supprimer les surlignages">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Réduire tout" title="Développer tout" data-state1-title="Développer tout">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Développer tout">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="nocontent">
+                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Fil d'Ariane" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
+                                        </div>
+                                    </div>
+                                    <div class="body-container" role="main" id="mc-main-content">
+                                        <h1><a name="aanchor311"></a>
+                                            <MadCap:concept term="WSC" />Console de Supervision (WSC v6.1) - Ajouter un pilote (driver)</h1>
+                                        <h2>Prérequis</h2>
+                                        <p>Pour préparer les packages des pilotes à télécharger dansWSC&#160;v6.1, il est <strong>obligatoire</strong></p>
+                                        <ul>
+                                            <li>
+                                                <p>d'utiliser  l'outil <strong>DriverPackageExtractor.exe</strong> fourni par Doxense dans le package d'installation Watchdoc ;</p>
+                                            </li>
+                                            <li>
+                                                <p>d'utliser l'outil 7-Zip<sup>®</sup>(cf.<a href="https://7-zip.org/" target="_blank" title="Lien vers le site de téléchargement de l'outil 7-Zip " alt="Lien vers le site de téléchargement de l'outil 7-Zip ">https://7-zip.org/</a>) </p>
+                                            </li>
+                                        </ul>
+                                        <fieldset> Si vous effectuez une mise à jour à partir d'une version précédente, vous devez désinstaller les pilotes existants et les recréer à l'aide de la procédure suivante.<br />Si vous n'avez pas mis à jour les pilotes mais que vous ajoutez un serveur dans le domaine ou un poste utilisateur sur lequel vous installez la dernière version de WPC&#160;for Windows, vous devrez également désinstaller les pilotes existants et les réinstaller à l'aide de DriverPackageExtractor.<br /></fieldset>
+                                        <p>&#160;</p>
+                                        <p>Si vous n'avez pas l'autorisation d'installer 7-Zip sur le serveur WSC, installez-le sur un autre espace de travail et procédez à la préparation du package de pilote sur cet espace. <br />Pour cela, dans cet espace de travail, installez :
+        <ul><li>
+               7-Zip<sup>®</sup></li><li>
+               le package du pilote
+            </li></ul>Dans cet espace de travail, installez également les outils suivants, disponibles dans le package d'installation&#160;de Watchdoc&#160;:        <ul><li>
+                DriverPackageExtractor.exe
+            </li><li>
+                DriverPackageExtractor.exe.config
+            </li><li>
+                CliWrap.dll
+            </li><li>
+                Doxense.Core.dll
+            </li><li>
+               Doxense.IO.Compression.dll
+            </li><li>
+                Doxense.Watchdoc.SpoolMonitor.dll
+            </li><li>
+               UPDPCL6Win_397370MU.zip
+            </li></ul></p>
+                                        <h3>Télécharger le package certifié</h3>
+                                        <p>WSC v6.1 inclut un module de sécurité pour les pilotes d'impression. A partir de cette version, seuls les pilotes certifiés par Microsoft<sup>®</sup> avec une signature <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term108">WHQL<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Signature numérique attribuée aux packages de pilotes répondant aux exigences des tests HLK  (Windows Hardware Lab Kit) par Microsoft pour garantir la sécurité du pilote.
+(Source : https://learn.microsoft.com)</span></a> valide peuvent être installés sur la console de supervision.</p>
+                                        <p>&#160;</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Rendez-vous sur le site officiel du fabricant.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Sélectionnez le pilote correspondant au modèle du périphérique d'impression à installer.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Téléchargez le package du pilote (généralement, il s'agit d'une archive /fichier compressé).</p>
+                                                <p>S'il ne s'agit pas d'un fichier compressé (un .exe, par exemple), compressez-le car <strong>WSC&#160;traite exclusivement des pilotes présentés au format .zip.</strong><br /><br /></p>
+                                                <table style="width: auto;mc-table-style: url('../Resources/TableSlylesheets/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                    <col class="TableStyle-Standard-Column-Regular" />
+                                                    <col class="TableStyle-Standard-Column-Regular" />
+                                                    <tbody>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-weight: bold;">Marque </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-weight: bold;">Procédure </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyB-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;">Ricoh</td>
+                                                            <td class="TableStyle-Standard-BodyA-Regular-Row1">
+                                                                <p>Le pilote PCL&#160;6 est téléchargé sous forme d'un .exe</p>
+                                                                <ol>
+                                                                    <li value="1">
+                                                                        <p>décompressez le fichier .zip</p>
+                                                                    </li>
+                                                                    <li value="2">
+                                                                        <p>parmi les éléments décompressés, sélectionnez le dossier disc et le dossier misc</p>
+                                                                    </li>
+                                                                    <li value="3">
+                                                                        <p>recompressez ces deux dossiers </p>
+                                                                    </li>
+                                                                    <li value="4">
+                                                                        <p>renommez-le : ce fichier est considéré comme le nouveau package du pilote.</p>
+                                                                    </li>
+                                                                </ol>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </li>
+                                            <p>&#160;</p>
+                                            <li value="4">
+                                                <p>Enregistrez le package dans le serveur qui héberge WSC.</p>
+                                            </li>
+                                        </ol>
+                                        <h3>Préparer le pilote</h3>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Accédez à WSC en tant qu'administrateur.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Avec l'explorateur, rendez-vous dans le dossier C:\Program Files\Doxense\Watchdoc.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Lancez l'outil <strong>DriverPackageExtractor.exe</strong> en tant qu'administrateur :<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V61_DriverPackageExtractor.png" style="width: 700px;height: auto;" /></p>
+                                                <p>&#160;</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Dans l'outil <strong>DriverPackageExtractor</strong> :</p>
+                                                <ul>
+                                                    <li>
+                                                        <p><strong>Path to 7Zip</strong> : indiquez le chemin d'accès à l'utilitaire 7-Zip ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Driver archive :</strong> indiquez le chemin d'accès vers le fichier compressé du pilote (téléchargé précédemment) ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Temporary folder :</strong> indiquez le chemin vers un dossier dans lequel sont enregistrés temporairement les fichiers extraits du package du pilote et dans le champ <strong>File name</strong>, attribuez un nom à ce fichier final.&#160;</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li value="5">
+                                                <p>Cliquez sur le bouton <strong>Prepare package and analyse</strong>.</p>
+                                            </li>
+                                            <li value="6">
+                                                <p>Indiquez l'endroit où vous souhaitez enregistrer le package du pilote une fois analysé par DriverPackageExtractor et cliquez sur <strong>Save </strong>: <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V61_DriverPackageExtractor_Prepare.png" style="width: 700px;" />-<br /></p>
+                                                <p>&#160;</p>
+                                            </li>
+                                            <li value="7">
+                                                <p>Lorsque le package est prêt, cliquez sur <strong>OK </strong>dans l'interface informant du succès de l'opération.. <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V61_DriverPackageExtractor_Save.png" style="width: 700px;height: auto;" /></p>
+                                                <p>&#160;</p>
+                                                <p><span style="font-family: 'Wingdings'">è</span> Dès lors, ce package est conforme aux attente de WSC et vous pouvez l'y ajouter.<br />Si la préparation prend beaucoup de temps ou s'achève par un message d'erreur, il se peut que ce soit à cause du poids de l'archive. Dans ce cas allégez-le (cf. <a href="#All%C3%A9ger_le_package" target="_self">Alléger le dossier d'archive</a>).</p>
+                                            </li>
+                                        </ol>
+                                        <h2>Ajouter un pilote </h2>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Accédez à WSC en tant qu'administrateur.&#160;</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Depuis le <strong>Menu principal</strong> ,cliquez sur le menu <strong>Plug and Print</strong>&gt; <strong>Pilotes</strong> :<br /><br /><img src="../Z_Resources/Images/02_Captures/WD55_PnP_Admin_AccederAjoutPilote_FR.png" style="width: 893px;height: 126px;" /></p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Depuis l'interface <strong>Pilotes</strong>, dans le menu du haut à droite, cliquez sur <strong>Ajouter un pilote</strong>.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Dans la fenêtre <strong>Ajouter un pilote</strong>,</p>
+                                                <ul>
+                                                    <li>
+                                                        <p> glissez le fichier d'archive depuis votre espace de travail ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>ou cliquez dans le cadre pour ouvrir l'explorateur de l'espace de travail et sélectionner le package du pilote à télécharger :</p>
+                                                        <p>
+                                                            <br />
+                                                            <img src="../Z_Resources/Images/02_Captures/WSC_Admin_Pilote_Ajouter.png" style="width: 700px;" />
+                                                        </p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                        <ol data-mc-continue="true">
+                                            <li value="5">
+                                                <p>Cliquez sur le bouton <strong>Suivant </strong>;</p>
+                                            </li>
+                                            <li value="6">
+                                                <p>Dans l'interface <strong>Ajouter un pilote d'impression</strong>, si le téléchargement s'est bien passé et si le package est valide, les champs suivants sont complétés :</p>
+                                                <ul>
+                                                    <li>
+                                                        <p><strong>Chemin vers .inf : </strong> chemin vers le fichier d'installation (.inf) présent dans le package du pilote et dans lequel se trouve la valeur <strong>DriverName</strong>. </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Pilote </strong>: nom du pilote ou des pilotes contenus dans le package d'installation. S'il y en a plusieurs, choisissez dans la liste celui qui est compatible avec le(s) périphérique(s) utilisé(s).</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Version </strong>: version du pilote.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Systèmes </strong>: version du système sur lequel est installé le pilote :<br /><br /><img src="../Z_Resources/Images/02_Captures/WD55_PnP25_Admin_Pilotes_Ressume.png" style="height: auto;width: 300px;" /></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                        <ol data-mc-continue="true">
+                                            <li value="7">
+                                                <p>cliquez sur le bouton <strong>Suivant</strong> ;</p>
+                                            </li>
+                                        </ol>
+                                        <ol data-mc-continue="true">
+                                            <li value="8">
+                                                <p>Dans la fenêtre <strong>Créer une file universelle</strong>, </p>
+                                                <ol style="list-style-type: lower-roman;">
+                                                    <li value="1">
+                                                        <p>cochez la case <strong>Créer</strong> si vous souhaitez créer une <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term71">file universelle<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>File logique créée exclusivement pour la Print API. Elle est créée automatiquement par défaut et nommée "Impression Sécurisée" lors de l'installation de Watchdoc. Elle est préconfigurée pour rediriger les fichiers de spool vers le pool d'impression global (#global).
+Cette file ne peut pas être supprimée.
+Telle qu'elle est configurée à l'orignie, elle ne peut pas servir à WPC for Windows. Pour que WPC for Windows puisse l'utiliser, il convient de la configurer (cf. Configuration de la file universelle).</span></a> ;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p><strong>Nom </strong>: attribuez un nom à cette file.&#160;</p>
+                                                    </li>
+                                                </ol>
+                                            </li>
+                                            <li value="9">
+                                                <p>Cliquez sur <strong>Valider</strong>.<br /><span style="font-family: 'Wingdings'">è</span> Si l'opération s'est déroulée avec succès, le message suivant s'affiche.&#160;</p>
+                                                <p>&#160;</p>
+                                                <p>
+                                                    <img src="../Z_Resources/Images/02_Captures/WSC_V61_AjoutPilote_MsgSuccess.png" style="height: auto;width: 500px;" />
+                                                </p>
+                                                <p>
+                                                    <br />
+                                                </p>
+                                                <p><span style="font-family: 'Wingdings'">è</span>Dans le cas contraire, un message d'erreur s'affiche. Cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_WSC_VoirLogs.png" />pour afficher les logs dans lesquels sont listées les erreurs.</p>
+                                            </li>
+                                        </ol>
+                                        <h2><a name="Alléger_le_package"></a>Alléger le package du pilote</h2>
+                                        <p>Le poids d'un dossier contenant le pilote varie entre 10 et 30 Mb. </p>
+                                        <p>Si le dossier est conforme mais trop lourd, il peut arriver que l'étape de préparation prenne beaucoup de temps et s'achève par un message d'erreur (RequestEntityTooLarge ou End of Central Directory record could not be found). <br />Si vous tentez d'importer directement l'archive compressée dans WSC, le message est identique : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V61_DriverPackageExtractor_ErrTropLourd.png" style="width: 400px;height: 0;" /><br /><br />Dans ce cas, il convient d'alléger l'archive. </p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>A l'aide de 7-Zip<sup>®</sup>, décompressez l'archive du pilote.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p> Parmi les dossiers décompressés, sélectionnez un dossier de fichiers comportant la mention 64 (bits) (ou 32 bits si vos postes utilisateurs nécessitent cette version).</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Recompressez cet unique dossier qui devient le package du pilote.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Ouvrez <strong>DriverPackageExtractor</strong> en indiquant le dossier 64 bits compressé dans le champ <strong>Driver archive</strong>.</p>
+                                            </li>
+                                            <li value="5">
+                                                <p>Cliquez sur <strong>Repare package and analyse</strong>.</p>
+                                            </li>
+                                        </ol>
+                                        <h3>Créer une file universelle</h3>
+                                        <p>Dans Watchdoc, la file universelle sert exclusivement à Watchdoc Print Client (cf.&#160;<a href="../C_Configurer/ConfigFiles/ConfigFiles_FileUniv.htm" target="_blank" title="Lien vers l'article de présentation de la file universelle " alt="Lien vers l'article de présentation de la file universelle ">File universelle</a>). Si vous souhaitez que le pilote serve à générer une file universelle, </p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>cochez la case <strong>Créer une file universelle</strong></p>
+                                            </li>
+                                            <li value="2">
+                                                <p>saisissez le <strong>Nom </strong>attribué à cette file ;</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>cliquez sur<strong> Valider</strong>.</p>
+                                            </li>
+                                        </ol>
+                                        <h3>Associer une configuration</h3>
+                                        <p>Il est possible d'ajouter une (ou plusieurs) configuration(s)  de file d'impression lors de l'ajout d'un pilote.</p>
+                                        <p>Cela permet d'associer le pilote à une (ou plusieurs) configuration existante afin de gagner du temps ensuite lors de l'installation des files. En effet, il est alors possible d'installer les files sans avoir à les configurer. Outre le gain de temps, cette association garantie d'harmonisation des configurations lors de l'ajout de files en masse.</p>
+                                        <p>&#160;</p>
+                                        <p>Si vous disposez d'un fichier de configuration modèle (.dat) disponible dans votre espace de travail, procédez directement à son ajout.&#160;Si vous ne disposez d'aucun fichier de configuration, procédez d'abord au téléchargement d'un fichier de configuration modèle avant de l'associer à votre pilote.</p>
+                                        <p>&#160;</p>
+                                        <p>Si vous ne disposez pas de fichier de configuration (.dat), procédez comme suit :</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p> depuis l'interface<strong> Créez une file universelle avec ce pilote</strong>, cliquez sur le bouton <strong>Avancé</strong> ;</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>depuis l'interface<strong> Associez des configurations à ce pilote</strong>, cliquez sur le bouton <strong>Ajouter </strong>; </p>
+                                            </li>
+                                            <li value="3">
+                                                <p>parcourez votre espace de travail pour y sélectionner le fichier de configuration téléchargé ;</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>réitérez l'opération autant de fois que de fichiers de configuration à ajouter (jusqu'à 10) ; </p>
+                                            </li>
+                                            <li value="5">
+                                                <p>cliquez sur <strong>Valider </strong>pour finaliser l'ajout du pilote : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Pilotes_Config_Ajouter.png" style="width: 700px;height: auto;" /><br /></p>
+                                            </li>
+                                        </ol>
+                                        <h2>Procédure spécifique à Xerox</h2>
+                                        <p>La configuration du pilote Xerox n'est pas standard, Xerox fournissant un fichier .xml propre à la politique d'impression du client.&#160;Lors de l'ajout du fichier de configuration pour un périphérique Xerox, il convient donc de sélectionner le fichier <strong>CommonConfiguration.xml</strong> fourni par Xerox. </p>
+                                        <p>Ce fichier doit avoir été paramétré par nos soins préalablement, un fichier correspondant à une configuration de file d'impression. </p>
+                                        <p>&#160;</p>
+                                        <p>→ Une fois le pilote configuré, vous pouvez configurer le modèle de périphérique.</p>
+                                        <h2>Dépannages</h2>
+                                        <h3>Package du pilote non conforme</h3>
+                                        <p style="text-align: left;">Si vous tentez d'ajouter un package de pilote non-conforme aux attentes de WSC, un message d'erreur s'affiche dans l'interface <strong>Ajouter un pilote d'impression :</strong> No certified .inf file found.<strong><br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V61_PiloteCorrompu.png" style="width: 384px;height: 250px;" /></strong></p>
+                                        <p style="text-align: justify;">.<br />Dans ce cas, recommencez la procédure en veillant à ce que le pilote provienne bien du site officiel du fabricant et en utilisant DriverPackageExtractor.</p>
+                                    </div>
+                                    <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
+                                        <div class="button-group-container-left">
+                                            <button class="button elearning-button needs-pie previous-topic-button" title="Précédent" disabled="true">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Précédent">
+                                                        <div class="button-icon"> </div>
+                                                    </div><span class="button-text">Précédent</span>
+                                                </div>
+                                            </button>
+                                            <button class="button elearning-button needs-pie next-topic-button" title="Suivant" disabled="true">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Suivant">
+                                                        <div class="button-icon"> </div>
+                                                    </div><span class="button-text">Suivant</span>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <p><span style="font-size: 10pt;">Une suggestion ? Une demande de correction ? <a href="mailto:documentations@doxense.com?subject=Doxdoc.fr" target="_blank" title="Envoyer un email à documentations@doxense.com" alt="Envoyer un email à documentations@doxense.com">Exprimez-vous !</a></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

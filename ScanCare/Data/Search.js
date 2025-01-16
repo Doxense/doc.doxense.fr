@@ -1,0 +1,1 @@
+define({r:0.5,st:'Stem',n:1,t:[0],m:[],u:['../B_Procedure Topics/Ajouter_Peripheriques.htm'],s:['0','fichi','redémarrag'],p:[['0',4],['caractéristiques',20],['d\u0027affiner',27],['documents',28],['fichier',27],['la',1],['modèles',5],['peuvent',27],['saisir',8],['terme',29],['éventuels',26]]});

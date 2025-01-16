@@ -1,0 +1,627 @@
+/*<meta />*/
+
+@namespace MadCap url(http://www.madcapsoftware.com/Schemas/MadCap.xsd);
+
+@font-face 
+{
+	font-family: 'Helvetica';
+	src: url(../Fonts/Helvetica.ttf);
+}
+
+font
+{
+	font-family: 'Helvetica';
+}
+
+body
+{
+	font-size: 12pt;
+	font-family: Helvetica;
+}
+
+h1
+{
+	font-weight: bold;
+	font-size: 24.0pt;
+	color: #FF803B;
+}
+
+h2
+{
+	font-weight: bold;
+	font-size: 18.0pt;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-color: #FF803B;
+}
+
+h2_orange
+{
+	font-weight: bold;
+	font-size: 18.0pt;
+	font-color: #FF803B;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+h3
+{
+	font-weight: bold;
+	font-size: 14.0pt;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-color: #FF803B;
+}
+
+h3_orange
+{
+	font-weight: bold;
+	font-size: 14.0pt;
+	font-color: #FF803B;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+h4
+{
+	font-weight: bold;
+	font-size: 12.0pt;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-color: #FF803B;
+}
+
+p
+{
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	font-size: 12pt;
+	color: #696969;
+}
+
+ol,
+ul
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+ol,
+li
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: 11pt;
+	color: black;
+}
+
+img
+{
+	/*You can set height and width on each image to prevent an image from getting too large. Intent here is to scale down as browser size shrinks.*/
+	border: none;
+	max-width: 90%;
+	mc-thumbnail-max-height: auto;
+	mc-thumbnail: none;
+}
+
+div.home-tiles > div
+{
+	width: 25%;
+	margin-left: 4%;
+	padding: 20px;
+	background-color: #F1F1F1;
+	color: black;
+	border: none;
+	transition: 0.2s;
+	box-shadow: 12px 18px 40px rgba(0, 0, 0, 0.1);
+	height: 270px;
+}
+
+.tile-title
+{
+	font-size: 20px;
+}
+
+.img_tile
+{
+	display: block;
+	margin: 20px auto;
+}
+
+p.tile-content
+{
+	font-size: 15px;
+	line-height: 15px;
+}
+
+MadCap|expandingHead
+{
+	font-weight: normal;
+	cursor: hand;
+	text-decoration: none;
+	color: #585B58;
+}
+
+MadCap|expandingBody
+{
+	color: #777777;
+}
+
+MadCap|dropDownHotspot
+{
+	text-decoration: none;
+	font-style: normal;
+	color: #808080;
+	cursor: hand;
+}
+
+.body-container
+{
+	font-family: 'Helvetica';
+	padding-bottom: 50px;
+}
+
+/*== madcap proxy assigned styles ==*/
+
+MadCap|breadcrumbsProxy
+{
+	color: #FF803B;
+	border-bottom-style: none;
+}
+
+fieldset
+{
+	background-repeat: no-repeat;
+	color: #000000;
+	border-radius: 10px;
+	border: none;
+	background-image: url('../../Z_Resources/Images/01_Generiques/icon_Info.png');
+	text-align: left;
+	padding: 15px 15px 20px 40px;
+	margin: 5px 0;
+	background-position: 5px 10px;
+	background-size: 30px;
+	width: 70%;
+	align-items: left;
+	display: block;
+	background-color: #cbc9c9;
+}
+
+fieldset > img
+{
+	display: block;
+	margin: 30px auto;
+}
+
+table
+{
+	font-size: 11pt;
+	color: #696969;
+}
+
+a:link
+{
+	color: #000000;
+}
+
+ul
+{
+	font-size: 11pt;
+	color: #696969;
+}
+
+ol
+{
+	color: #696969;
+}
+
+li
+{
+	color: #696969;
+}
+
+MadCap|dropDownHotspot:focus
+{
+	
+}
+
+MadCap|dropDownHead
+{
+	font-size: 14pt;
+	font-family: 'Helvetica';
+	color: #000000;
+	font-weight: normal;
+}
+
+MadCap|glossaryTerm.Popup
+{
+	color: #696969;
+	font-weight: bold;
+	font-style: normal;
+}
+
+MadCap|glossaryTerm.Hyperlink
+{
+	color: #808080;
+	font-weight: bold;
+	font-style: normal;
+}
+
+MadCap|glossaryTerm.Expanding
+{
+	color: #808080;
+}
+
+MadCap|glossaryTerm
+{
+	color: #000000;
+}
+
+MadCap|bodyProxy
+{
+	
+}
+
+div.GlossaryPageHeading
+{
+	margin-bottom: 0px;
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+}
+
+.height-container-sidenav
+{
+	padding-bottom: 0 !important;
+}
+
+img.simple
+{
+	border: none;
+	max-width: 90%;
+}
+
+.btn_connect__block
+{
+	background-color: #ff803b;
+	color: black;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 320px;
+	box-shadow: 12px 18px 40px rgba(0, 0, 0, 0.1);
+	padding: 20px 0;
+	margin: 20px 0;
+	text-decoration: none;
+	transition: 0.2s;
+}
+
+.btn_connect__block:hover
+{
+	transform: scale(1.1);
+}
+
+MadCap|dropDown
+{
+	font-color: inherit;
+	mc-closed-image: url('../Images/icon_fleche_bas_WD.png');
+	mc-open-image: url('../Images/icon_fleche_haut_WD.png');
+}
+
+MadCap|miniTocProxy
+{
+	border-top-style: none;
+	border-top-width: 0px;
+	border-top-color: transparent;
+	padding-top: 7px;
+	font-size: 11pt;
+	font-weight: normal;
+	margin-top: 5 px;
+	padding-left: 10px;
+	font: 'Helvetica';
+}
+
+div
+{
+	content: inherit;
+}
+
+font-face
+{
+	font: Helvetica Neue 1;
+	font-family: 'Helvetica';
+}
+
+@media only screen and (max-width: 1279px)
+{
+	h1
+	{
+		margin-bottom: 0;
+		margin-top: 0;
+		color: #ff8c00;
+		font-size: 20pt;
+	}
+
+	ol
+	{
+		color: #696969;
+		padding: 10px;
+	}
+
+	ul
+	{
+		font-size: 11pt;
+		color: #696969;
+	}
+
+	fieldset
+	{
+		background-image: url('../../Z_Resources/Images/01_Generiques/icon_Info.png');
+		width: 100%;
+	}
+
+	table
+	{
+		border-left-style: solid;
+		border-left-width: 1px;
+		border-right-style: solid;
+		border-right-width: 1px;
+		border-top-style: solid;
+		border-top-width: 1px;
+		border-bottom-style: solid;
+		border-bottom-width: 1px;
+		padding-left: 1px;
+		padding-right: 1px;
+		padding-top: 1px;
+		padding-bottom: 1px;
+		border-top-left-radius: 1px;
+		border-top-right-radius: 1px;
+		border-bottom-right-radius: 1px;
+		border-bottom-left-radius: 1px;
+	}
+
+	td
+	{
+		
+	}
+
+	h2
+	{
+		font-size: 18pt;
+	}
+
+	.menu-icon
+	{
+		right: 0 !important;
+	}
+
+	img
+	{
+		margin: 20px auto;
+	}
+
+	.btn_connect__block
+	{
+		margin: 20px auto;
+		padding: 10px;
+	}
+}
+
+@media only screen and (max-width: 767px)
+{
+	div.GlossaryPageHeading
+	{
+		border-bottom-style: none;
+		border-bottom-width: 0px;
+		border-bottom-color: transparent;
+	}
+
+	MadCap|glossaryTerm.Popup
+	{
+		font-weight: normal;
+		font-style: normal;
+		font-size: 10pt;
+		background-color: #ffffff;
+	}
+
+	MadCap|glossaryTerm
+	{
+		color: #ff8c00;
+	}
+
+	MadCap|popupBody
+	{
+		font-size: 10pt;
+	}
+
+	MadCap|popup
+	{
+		font-size: 10pt;
+	}
+
+	div.GlossaryPageDefinition
+	{
+		font-size: 10pt;
+	}
+
+	div.GlossaryPageEntry
+	{
+		font-size: 10pt;
+	}
+
+	MadCap|glossaryTerm.Expanding
+	{
+		font-weight: normal;
+		font-style: normal;
+		font-size: 10pt;
+	}
+
+	MadCap|glossaryTerm.Hyperlink
+	{
+		font-weight: normal;
+		font-style: normal;
+		font-size: 10pt;
+	}
+
+	MadCap|dropDown
+	{
+		mc-closed-image: url('../../Z_Resources/Images/02_Captures/Boutons/Bouton_Ajouter.png');
+		mc-open-image: url('../../Z_Resources/Images/02_Captures/Boutons/Bouton_Supprimer.png');
+		content: inherit;
+		font-size: 12pt;
+		font-style: inherit;
+		font-weight: bold;
+		font-color: inherit;
+		color: #ff803b;
+	}
+
+	fieldset
+	{
+		background-color: #ffc6a6;
+	}
+
+	p.Print_H2
+	{
+		font-size: 18;
+		font-style: bold;
+	}
+
+	p
+	{
+		color: #000000;
+	}
+}
+
+span.SearchHighlight1
+{
+	background-color: #ffff00;
+}
+
+.SearchHighlight1
+{
+	
+}
+
+@media print
+{
+	fieldset
+	{
+		width: 100%;
+		padding: 10px 10px 10px 10px;
+		padding-bottom: 10px;
+		margin-top: 10px;
+		padding-left: 40px;
+		background-position: 2px 10px;
+		background-size: 25px;
+		margin: 25px;
+	}
+
+	MadCap|footnote
+	{
+		mc-footnote-format: '{n}';
+		font-size: 10pt;
+	}
+
+	.FootnoteNumber
+	{
+		
+	}
+
+	MadCap|footnote.WDFootNoteNumbers
+	{
+		font-size: 9pt;
+		vertical-align: super;
+		color: #ff8c00;
+	}
+
+	p
+	{
+		mc-hyphenate: never;
+	}
+
+	h1
+	{
+		mc-hyphenate: never;
+	}
+
+	h2
+	{
+		mc-hyphenate: never;
+	}
+
+	h3
+	{
+		mc-hyphenate: never;
+	}
+
+	Print_h2
+	{
+		font-weight: bold;
+		font-size: 18.0pt;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		font-color: #FF803B;
+	}
+
+	MadCap|expandingHead
+	{
+		font-size: 12pt;
+		font-weight: bold;
+		font-style: normal;
+		color: #000000;
+	}
+
+	MadCap|glossaryTerm
+	{
+		mc-image-position: left;
+	}
+
+	MadCap|dropDownHead
+	{
+		color: #FF803B;
+		mc-closed-image: url('../../Z_Resources/Images/02_Captures/Boutons/Bouton_Ajouter.png');
+		font-weight: bolder;
+	}
+
+	MadCap|dropDownHotspot
+	{
+		mc-closed-image: url('../../Z_Resources/Images/02_Captures/Boutons/Bouton_Ajouter.png');
+		color: #FF803B;
+		font-weight: bold;
+	}
+
+	MadCap|dropDown
+	{
+		mc-open-image: url('../../Z_Resources/Images/02_Captures/Boutons/Bouton_Ajouter.png');
+		mc-closed-image: url('../../Z_Resources/Images/02_Captures/Boutons/Bouton_Supprimer.png');
+		mc-image-position: left;
+		mc-image-spacing: 10px;
+		font: inherit;
+	}
+
+	span.mc-variable
+	{
+		mc-hyphenate: never;
+	}
+
+	MadCap|glossaryTerm.Popup
+	{
+		background-color: #ffffff;
+	}
+}
+
+table#SortTable
+{
+	
+}
+
+Print_h2
+{
+	font-weight: bold;
+	font-size: 18.0pt;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-color: #FF803B;
+}
+
