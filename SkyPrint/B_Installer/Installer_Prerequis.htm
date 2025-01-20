@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr-fr" xml:lang="fr-fr" class="_Skins_HTML5___Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="Configuration|[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="web">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr-fr" xml:lang="fr-fr" class="_Skins_HTML5___Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="[%=System.LinkedTitle%]" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="web">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Configurer les serveurs</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Installer les prérequis</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
@@ -214,16 +214,83 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h2>Configurer les serveurs</h2>
-                                        <h3>Accéder à l'interface de paramétrage des serveurs</h3>
+                                        <h1>Installer les prérequis</h1>
+                                        <h2 style="text-align: justify;">Installer les rôles du serveur</h2>
+                                        <p>Avant de procéder à l'installation de Watchdoc SkyPrint<sup>®</sup>, il est nécessaire d'installer les prérequis.Serveur d'impression, service LPD&#160;et l'impression Internet.&#160;Si ces prérequis sont déjà installés, passez directement au chapitre suivant, <i>Installer Watchdoc SkyPrint<sup>®</sup></i>.</p>
+                                        <p class="Liste_num_1">&#160;</p>
                                         <ol>
                                             <li value="1">
-                                                <p class="Liste_num_1">Pour accéder à l'interface de paramétrage des serveurs, cliquez sur le bouton <strong>Configurer</strong> dans l'encart <strong>Assistant de configuration</strong> de la page d'accueil :<br /><br /><img src="../Z_Resources/Images/02_Captures/WD_SP_Configurer_Configurer.png" style="width: 522px;height: 348px;" /></p>
+                                                <p class="Liste_num_1">Dans votre serveur, accédez au<strong> Server Manager Windows<sup>®</sup></strong> ;</p>
+                                            </li>
+                                            <li value="2">
+                                                <p class="Liste_num_1">dans la liste <strong>Server selection</strong>, sélectionnez le serveur sur lequel installer le service d'impression ;<br /><br /><img src="../Z_Resources/Images/02_Captures/WD_SP_Installation_RoleServeur_01_FR.png" style="width: 518px;height: 363px;" /><br /></p>
+                                                <p>&#160;</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>cliquez sur <strong>Suivant </strong>;</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>dans la liste <strong>Rôles des serveurs</strong>, cliquez sur <strong>Services d'impression et de numérisation</strong> des documents cochez les cases :</p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_2">Serveur d'impression ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2">Impression Internet ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2">LPD Service :<br /><br /><img src="../Z_Resources/Images/02_Captures/WD_SP_Installation_RoleServeur_02_FR.png" style="width: 469px;height: 313px;" /></p>
+                                                    </li>
+                                                    <li>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                        <ol data-mc-continue="true">
+                                            <li value="5">
+                                                <p class="Liste_num_1">Cliquez sur <strong>Suivant </strong>pour poursuivre l'installation jusqu'à accéder à la fenêtre <strong>Confirmer</strong> des choix d'installation ;</p>
+                                            </li>
+                                            <li value="6">
+                                                <p class="Liste_num_1">cliquez sur le bouton <strong>Installer </strong>pour confirmer l'installation des rôles et services sélectionnés ;</p>
+                                            </li>
+                                            <li value="7">
+                                                <p class="Liste_num_1">suivez le curseur de la boîte Progression de l'installation :<br /><br /><img src="../Z_Resources/Images/02_Captures/WD_SP_Installation_RoleServeur_03_FR.png" style="width: 456px;height: 320px;" /><br /></p>
+                                                <p>&#160;</p>
+                                            </li>
+                                            <li value="8">
+                                                <p>au terme de l'installation, cliquez sur <strong>Fermer </strong>;</p>
+                                            </li>
+                                            <li value="9">
+                                                <p>au terme de l'opération, redémarrez le serveur.</p>
+                                            </li>
+                                        </ol>
+                                        <h2>Installer le pilote d'impression</h2>
+                                        <p>Dans l'interface <strong>Gestion de l'impression</strong> :</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p class="Liste_num_1">Déployez toute l'arborescence <strong>Serveurs </strong>d'impression.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p class="Liste_num_1">Cliquez-droit sur <strong>Pilotes &gt; Ajouter un pilote.</strong></p>
+                                            </li>
+                                        </ol>
+                                        <p class="Liste_num_1">→ Un assistant <strong>Ajout de pilote d'imprimante</strong> s'affiche.<br /></p>
+                                        <p>&#160;</p>
+                                        <ol data-mc-continue="true">
+                                            <li value="3">
+                                                <p class="Liste_num_1">Suivez la procédure d'ajout de pilote présentée dans l'Assistant (en ajustant les paramètres en fonction de la configuration de votre parc et de vos périphériques).<br /><br /><img src="../Z_Resources/Images/02_Captures/WD_SP_Installation_Pilote_01_FR.png" style="width: 405px;height: 251px;" /><br /><br /></p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Au terme de l'installation, le pilote installé s'affiche dans la liste des pilotes disponibles :<br /><br /><img src="../Z_Resources/Images/02_Captures/WD_SP_Installation_Pilote_02_FR.png" style="width: 407px;height: 306px;" /></p>
                                             </li>
                                         </ol>
                                         <p>&#160;</p>
-                                        <p class="Resultat">→ Vous accédez à l'interface de paramétrage Console de supervision (serveur WSC).</p>
-                                        <fieldset>Dans les interfaces de configuration <strong>Watchdoc® SkyPrint</strong>, l'astérisque signale les champs obligatoires.</fieldset>
+                                        <ol data-mc-continue="true">
+                                            <li value="5">
+                                                <p class="Liste_num_1">Fermez l'interface <strong>Gestion de l'impression.</strong></p>
+                                            </li>
+                                        </ol>
                                     </div>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">
