@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr-fr" xml:lang="fr-fr" class="_Skins_HTML5___Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="web">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr-fr" xml:lang="fr-fr" class="_Skins_HTML5___Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="Dépannage" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="web">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Présentation de Watchdoc SkyPrint </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Dépanner Watchdoc SkyPrint - La connexion a échoué : adresse mail inexistante</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
@@ -214,42 +214,48 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1>Présentation de Watchdoc SkyPrint </h1>
-                                        <h2>Principe</h2>
-                                        <p>Watchdoc SkyPrint est un module complémentaire de la solution Watchdoc permettant à des utilisateurs nomades non enregistrés dans l’annuaire de l’entreprise d’imprimer leurs documents sur les équipements partagés.</p>
-                                        <p>&#160;</p>
-                                        <p>Après s’être enregistré si nécessaire sur le portail SkyPrint l’utilisateur peut soumettre les documents à imprimer de deux façons :</p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1">en envoyant ses documents à imprimer en pièce attachée vers une adresse courriel qui lui a été communiquée et qui correspond à l’équipement choisi pour imprimer ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">en téléchargeant le document à imprimer sur le portail SkyPrint, puis en désignant l’équipement sélectionné.</p>
-                                            </li>
-                                        </ul>
-                                        <p>&#160;</p>
-                                        <p>Lorsqu’il s’enregistre sur le portail, l’utilisateur reçoit un code de déblocage (code PUK) qui lui permet de libérer directement ses impressions sur le périphérique de son choix et en toute sécurité.</p>
-                                        <h2>Prérequis</h2>
-                                        <p>Pour utiliser SkyPrint, l'utilisateur doit disposer d'une adresse mail,</p>
-                                        <ul>
-                                            <li>
-                                                <p>soit enregistrée dans son compte de l'annuaire Active Directory ;</p>
-                                            </li>
-                                            <li>
-                                                <p>soit créée à la demande dans la base Invités de la Console de Supervision.</p>
-                                            </li>
-                                        </ul>
-                                        <h2>Schémas</h2>
-                                        <h3>Schéma fonctionnel</h3>
-                                        <p>
-                                            <img src="../Z_Resources/Images/03_Schemas/WD_SP_SCH_SchemaFonctionnel.png" style="width: 750px;height: 298px;" />
+                                        <h1>Dépanner Watchdoc SkyPrint - La connexion a échoué : adresse mail inexistante</h1>
+                                        <p><span style="font-size: 18pt; font-weight: bold;">Contexte</span>
                                         </p>
-                                        <h3>&#160;</h3>
-                                        <h3>Schéma des flux réseaux</h3>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Après avoir envoyé son mail, l'utilisateur se rend sur l'interface <strong>Soumettre vos impressions</strong>.&#160;</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Il saisit son code PUK dans le champ dédié. </p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Il clique sur <strong>Connexion</strong>.&#160;</p>
+                                                <p><span style="font-family: 'Wingdings'">è</span> un message <strong>Echoué La connexion a échoué s'affiche :</strong></p>
+                                                <p>&#160;</p>
+                                                <p>
+                                                    <img src="ADE_ConnexionEchoue.png" />
+                                                </p>
+                                            </li>
+                                        </ol>
                                         <p>&#160;</p>
-                                        <p style="text-align: left;">
-                                            <img src="../Z_Resources/Images/03_Schemas/WD_SP_SCH_SchemaArchitectTechnique_FR.png" style="width: 729px;height: 596px;" />
+                                        <p><b style="font-size: 18pt;">Cause</b>
                                         </p>
+                                        <p>Watchdoc SkyPrint envoie ce message dans le cas où aucune adresse mail n'est associée au compte de l'utilisateur connecté.&#160;</p>
+                                        <p>&#160;</p>
+                                        <p><span style="font-size: 18pt; font-weight: bold;">Résolution</span>
+                                        </p>
+                                        <p>Pour résoudre le problème, </p>
+                                        <ol>
+                                            <li value="1">
+                                                <p class="Liste_num_1">dans Watchdoc en tant qu'administrateur, rendez-vous dans l'interface de gestion des annuaires ; </p>
+                                            </li>
+                                            <li value="2">
+                                                <p class="Liste_num_1">dans le champ Test, saisissez le nom de l'utilisateur confronté à l'erreur&#160;;</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>dans les informations de l'utilisateur, vérifiez qu'il dispose ou nom, d'une adresse mail (attribut mail de l'annuaire Active Directory ou mail de l'annuaire Invité)&#160;;</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>s'il ne dispose pas d'adresse mail et que vous disposez des droits d'administration de l'annuaire, ajoutez son adresse mail dans l'attribut Mail de l'AD&#160;; </p>
+                                                <p>N.B. : si vous ne disposez pas des droits d'administration sur l'annuaire AD, il est aussi possible de créer un compte dans l'annuaire Invités de WSC pour cet utilisateur.</p>
+                                            </li>
+                                        </ol>
                                     </div>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">
