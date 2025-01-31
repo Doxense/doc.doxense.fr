@@ -402,12 +402,116 @@
                                                 </ul>
                                             </li>
                                         </ul>
+                                        <h3>Configurer la section Envoi de fichiers spools</h3>
+                                        <p>Par défaut, l'envoi des spools est géré automatiquement par Watchdoc. La modification des paramètres suivants n'est nécessaire que dans des cas de configurations particulières.</p>
+                                        <ul>
+                                            <li>
+                                                <p><strong>Mode d'envoi des fichiers spools</strong> : dans la liste sélectionnez la manière dont Watchdoc envoie les spools aux périphériques d'impression :</p>
+                                                <ul>
+                                                    <li>
+                                                        <p><strong>Utiliser la valeur du groupe</strong> : sélectionnez ce paramètre pour utiliser le mode d'envoi de spool défini pour le groupe auquel appartient la file&#160;;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Choisir automatiquement </strong>: sélectionnez ce paramètre pour laisser le système choisir automatiquement le mode d'envoi des spools&#160;;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Forcer l'utilisation du spooler Doxense </strong>: sélectionnez ce paramètre pour obliger l'outil à envoyer les spools selon les paramètres définis par Watchdoc ;</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p><strong>Synchronisation du statut :</strong> dans la liste, sélectionnez la manière de synchroniser le statut du périphérique d'impression : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p><strong>Utiliser la valeur du groupe</strong> : sélectionnez ce paramètre pour utiliser le mode d'envoi de spool défini pour le groupe auquel appartient la file ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>synchroniser le statut :</strong> sélectionnez ce paramètre pour permettre la synchronisation entre le périphérique d'impression et Watchdoc ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>ne pas synchroniser le statut : </strong>sélectionnez ce paramètre pour ne pas synchroniser Watchdoc et le périphérique d'impression</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p><strong>Ralentir l'envoi des spools :</strong> </p>
+                                                <ul>
+                                                    <li>
+                                                        <p><strong>Utiliser la valeur du groupe : </strong>
+                                                        </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Ralentir l'envoi du spool </strong>
+                                                        </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p><strong>Délai entre les travaux : </strong>indiquez, en délai à respecter entre 2 envois de travaux .</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Taille des tampons : </strong>indiquez, en KO, quelle est la taillede la mémoire tampon du périphérique.</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Ne pas ralentir l'envoi de spool : </strong>cochez cette case pour conserver la vitesse normale d'envoi de spools.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p><strong>Adresse : </strong>indiquez l'adresse du serveur utilisé pour envoyer les fichiers spools</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Timeouts : </strong>
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <p><strong>Connexion : </strong>indiquez, en secondes, le delai autorisé pour que Watchdoc établisse la connexion au périphérique. Au-delà de ce délai, la requête est relancée ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Envoi :</strong> indiquez, en secondes, le délai autorisé pour envoyer les spools. </p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p><strong>Protocole par défaut</strong> : sélectionnez dans la liste le protocole à utiliser par défaut et définissez les paramètres de ce protocole : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p><strong>Paramètres RAW :</strong>  cochez la case si vous autorisez l'envoi en RAW et indiquez obligatoirement le port dédié ou laissez vide pour utiliser le port 9100 par défaut ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Paramètres IPPS : </strong>cochez la case si vous autorisez l'envoi en IPPS et indiquez l'adresse IPPS du périphérique dans le champ Uri ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Paramètres IPP :</strong> cochez la case si vous autorisez l'envoi en IPP (non-sécurisé) et indiquez l'adresse IPP du périphérique dans le champ Uri ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Paramètres LPR : </strong>cochez la case si vous autorisez l'envoi en LPR, indiquez le nom de la file le nom de la file correspondant au périphérique ainsi que le port d'accès.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p><strong>Support du format PDF : </strong>
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <p><strong>Détection : </strong>précisez l'information si vous la connaissez ou laissez Watchdoc détecter automatiquement</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Version minimale : </strong>si le format PDF&#160;est supporté, indiquez quelle est la version minimale ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Version maximale :</strong> si le format PDF&#160;est supporté, indiquez quelle est la version minimale.<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Files_Section_EnvoiFichierSpools.png" /></p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <p>&#160;</p>
                                         <h3>Configurer la section Restrictions</h3>
                                         <p style="text-align: left;">
                                             <img src="../../Z_Resources/Images/02_Captures/Config_Files_Restriction_54.png" />
                                         </p>
                                         <p>&#160;</p>
-                                        <p class="Liste_puce_1"><strong><a name="Expiration"></a>Expiration</strong>
+                                        <p class="Liste_puce_1"><strong><a name="Expiration">Expiration</a></strong>
                                         </p>
                                         <p>Le paramètre fonctionne avec le paramètre <strong>Durée de vie</strong> qui suit.<br />Il permet de définir le traitement qui doit être appliqué aux travaux d'impression au-delà de la durée de vie fixée par défaut :</p>
                                         <ul>
