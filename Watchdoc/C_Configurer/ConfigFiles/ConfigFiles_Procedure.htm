@@ -202,7 +202,7 @@
                                             <MadCap:concept term="WD" />Watchdoc - Files d'impression - Configurer une file</h1>
                                         <h2>Configurer la file</h2>
                                         <p>Une fois que vous avez soumis la file au contrôle de Watchdoc, vous accédez à l'interface de configuration. Complétez-y les différentes sections.&#160;</p>
-                                        <h3>Configurer la section Informations générales</h3>
+                                        <h3>Section Informations générales</h3>
                                         <p style="text-align: left;">
                                             <img src="../../Z_Resources/Images/02_Captures/Config_Files_InfosGenerales_V54.png" style="width: 400px;height: auto;" />
                                         </p>
@@ -249,7 +249,7 @@
                                                 <p>&#160;</p>
                                             </li>
                                         </ul>
-                                        <h3>Configurer la section Périphériques</h3>
+                                        <h3>Section Périphériques</h3>
                                         <p>
                                             <img src="../../Z_Resources/Images/02_Captures/Config_Files_Peripheriques_V52.png" style="width: 700px;height: auto;" />
                                         </p>
@@ -346,36 +346,6 @@
                                         <blockquote>
                                             <fieldset>Par défaut, le mode SSR&#160;est activé. Dans la majorité des cas, ce paramètre ne donne lieu à aucun changement. Pour plus de précisions sur l'utilité de modifier ce paramètre, consultez le Manuel d'Administration - Fonctions Avancées.</fieldset>
                                         </blockquote>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Envoi de fichiers spool :</strong> ce paramètre permet de définir la manière dont Watchdoc envoie les spools aux périphériques d'impression. </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Composant </strong>: sélectionnez le composant dans la liste&#160;:</p>
-                                                <ul style="list-style-type: circle;">
-                                                    <li>
-                                                        <p><strong>Utiliser la valeur du groupe </strong>: sélectionnez ce paramètre pour utiliser le mode d'envoi de spool défini pour le groupe auquel appartient la file ; </p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Choisir automatiquement :</strong> sélectionnez ce paramètre pour laisser le système choisir automatiquement le mode d'envoi des spools ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Forcer l'utilisation du spooler Doxense :</strong> sélectionnez ce paramètre pour obliger l'outil à envoyer les spools selon les paramètres définis par Watchdoc ;</p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Mode d'envoi</strong> : par défaut, l'envoi des spools est géré automatiquement par Watchdoc. La modification des paramètres suivants n'est nécessaire que dans des cas de configurations particulières :</p>
-                                                <ul style="list-style-type: circle;">
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>Adresse IPP </strong>: dans le cas où le mode d'envoi sélectionné est IPP, indiquez obligatoirement l'adresse <strong>IPP </strong>du périphérique ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>Nom de la file</strong> : dans le cas le mode d'envoi sélectionné est LPR, indiquez obligatoirement le nom de la file correspondant au périphérique.</p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
                                         <p>&#160;</p>
                                         <ul>
                                             <li>
@@ -385,7 +355,7 @@
                                                         <p class="Liste_puce_2"><strong>Synchroniser automatiquement la configuration</strong> entre les périphériques d'entrée et de sortie : cette case concerne la synchronisation entre le spooler de lal file partagée et le spooler de la file shadow.  </p>
                                                     </li>
                                                     <li>
-                                                        <p class="Liste_puce_2"><strong>Synchroniser automatiquement les champs Commentaires et Emplacement</strong> entre Watchdoc et le serveur d'impression : cochez cette case pour permettre à Watchdoc<sup>®</sup> de récupérer automatiquement les informations saisies lors de l'installation de la file d'impression.</p>
+                                                        <p class="Liste_puce_2"><strong>Synchroniser automatiquement les champs Commentaires et Emplacement</strong> entre Watchdoc et le serveur d'impression : cochez cette case pour permettre à Watchdoc de récupérer automatiquement les informations saisies lors de l'installation de la file d'impression.</p>
                                                         <p>&#160;</p>
                                                     </li>
                                                 </ul>
@@ -402,20 +372,20 @@
                                                 </ul>
                                             </li>
                                         </ul>
-                                        <h3>Configurer la section Envoi de fichiers spools</h3>
-                                        <p>Par défaut, l'envoi des spools est géré automatiquement par Watchdoc. La modification des paramètres suivants n'est nécessaire que dans des cas de configurations particulières.</p>
+                                        <h3>Section <a name="Envoi_de_fichiers_spools"></a>Envoi de fichiers spools</h3>
+                                        <p>Par défaut, l'envoi des spools est géré automatiquement par Watchdoc. Cependant, il peut être nécessaire, dans des configurations très spécifiques, de modifier les paramètres suivants&#160;:</p>
                                         <ul>
                                             <li>
-                                                <p><strong>Mode d'envoi des fichiers spools</strong> : dans la liste sélectionnez la manière dont Watchdoc envoie les spools aux périphériques d'impression :</p>
+                                                <p><strong>Mode d'envoi des fichiers spools</strong> : dans la liste, sélectionnez la manière dont Watchdoc envoie les spools aux périphériques d'impression :</p>
                                                 <ul>
                                                     <li>
-                                                        <p><strong>Utiliser la valeur du groupe</strong> : sélectionnez ce paramètre pour utiliser le mode d'envoi de spool défini pour le groupe auquel appartient la file&#160;;</p>
+                                                        <p><strong>Utiliser la valeur du groupe</strong> : permet d'utiliser le même mode d'envoi que celui défini  pour le groupe de files auquel appartient la file&#160;;</p>
                                                     </li>
                                                     <li>
-                                                        <p><strong>Choisir automatiquement </strong>: sélectionnez ce paramètre pour laisser le système choisir automatiquement le mode d'envoi des spools&#160;;</p>
+                                                        <p><strong>Choisir automatiquement </strong>:permet de laisser Watchdoc choisir automatiquement le mode d'envoi des spools&#160;;</p>
                                                     </li>
                                                     <li>
-                                                        <p><strong>Forcer l'utilisation du spooler Doxense </strong>: sélectionnez ce paramètre pour obliger l'outil à envoyer les spools selon les paramètres définis par Watchdoc ;</p>
+                                                        <p><strong>Forcer l'utilisation du spooler Doxense </strong>: force l'envoi des spools à l'aide du spoller Doxense (Watchdoc) à la place du spooler <span>MS&#160;Windows&#160;;</span></p>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -423,52 +393,28 @@
                                                 <p><strong>Synchronisation du statut :</strong> dans la liste, sélectionnez la manière de synchroniser le statut du périphérique d'impression : </p>
                                                 <ul>
                                                     <li>
-                                                        <p><strong>Utiliser la valeur du groupe</strong> : sélectionnez ce paramètre pour utiliser le mode d'envoi de spool défini pour le groupe auquel appartient la file ;</p>
+                                                        <p><strong>utiliser la valeur du groupe</strong> : permet d'utiliser le même mode de synchonisation que celui qui est défini pour le groupe auquel appartient la file ;</p>
                                                     </li>
                                                     <li>
-                                                        <p><strong>synchroniser le statut :</strong> sélectionnez ce paramètre pour permettre la synchronisation entre le périphérique d'impression et Watchdoc ; </p>
+                                                        <p><strong>synchroniser le statut :</strong> permet de synchroniser le statut du périphérique d'impression avec Watchdoc : ce dernier tient alors compte du statut du périphérique envoyé en SNMP pour traiter les demandes d'impression (mode recommandé) ;</p>
                                                     </li>
                                                     <li>
-                                                        <p><strong>ne pas synchroniser le statut : </strong>sélectionnez ce paramètre pour ne pas synchroniser Watchdoc et le périphérique d'impression</p>
+                                                        <p><strong>ne pas synchroniser le statut : </strong>permet de ne pas synchroniser le statut du périphérique d'impression avec Watchdoc. Ce paramètres peut être utile dans le cas où les fluctuations de statuts perturbent le fonctionnement de Watchdoc.&#160;</p>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li>
-                                                <p><strong>Ralentir l'envoi des spools :</strong> </p>
-                                                <ul>
-                                                    <li>
-                                                        <p><strong>Utiliser la valeur du groupe : </strong>
-                                                        </p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Ralentir l'envoi du spool </strong>
-                                                        </p>
-                                                        <ul>
-                                                            <li>
-                                                                <p><strong>Délai entre les travaux : </strong>indiquez, en délai à respecter entre 2 envois de travaux .</p>
-                                                            </li>
-                                                            <li>
-                                                                <p><strong>Taille des tampons : </strong>indiquez, en KO, quelle est la taillede la mémoire tampon du périphérique.</p>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Ne pas ralentir l'envoi de spool : </strong>cochez cette case pour conserver la vitesse normale d'envoi de spools.</p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <p><strong>Adresse : </strong>indiquez l'adresse du serveur utilisé pour envoyer les fichiers spools</p>
+                                                <p><strong>Adresse : </strong>l'adresse du serveur utilisé pour envoyer les fichiers spools est automatiquement affichée dans le champ.</p>
                                             </li>
                                             <li>
                                                 <p><strong>Timeouts : </strong>
                                                 </p>
                                                 <ul>
                                                     <li>
-                                                        <p><strong>Connexion : </strong>indiquez, en secondes, le delai autorisé pour que Watchdoc établisse la connexion au périphérique. Au-delà de ce délai, la requête est relancée ;</p>
+                                                        <p><strong>Connexion : </strong>indiquez, en secondes, le délai autorisé pour que Watchdoc établisse la connexion au périphérique. Au-delà de ce délai, le travail d'impression est annulé.</p>
                                                     </li>
                                                     <li>
-                                                        <p><strong>Envoi :</strong> indiquez, en secondes, le délai autorisé pour envoyer les spools. </p>
+                                                        <p><strong>Envoi :</strong> indiquez, en secondes, le délai autorisé pour envoyer un spool (tampon  de 256KB).</p>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -476,37 +422,39 @@
                                                 <p><strong>Protocole par défaut</strong> : sélectionnez dans la liste le protocole à utiliser par défaut et définissez les paramètres de ce protocole : </p>
                                                 <ul>
                                                     <li>
-                                                        <p><strong>Paramètres RAW :</strong>  cochez la case si vous autorisez l'envoi en RAW et indiquez obligatoirement le port dédié ou laissez vide pour utiliser le port 9100 par défaut ;</p>
+                                                        <p><strong>Paramètres <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term14">RAW<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>"Raw" signifie "brut" en anglais. En impression, il désigne un format de fichier pour les images numériques. Il ne s'agit pas d'un format standard, mais d'un type de fichier créé par des dispositifs tels que les appareils photo numériques ou les scanners et caractérisé par le fait de n'avoir subi que peu de traitement informatique, proche, donc du format natif.</span></a> :</strong>  cochez la case si vous autorisez l'envoi en RAW et indiquez obligatoirement le port dédié ou laissez vide pour utiliser le port 9100 par défaut ;</p>
                                                     </li>
                                                     <li>
-                                                        <p><strong>Paramètres IPPS : </strong>cochez la case si vous autorisez l'envoi en IPPS et indiquez l'adresse IPPS du périphérique dans le champ Uri ;</p>
+                                                        <p><strong>Paramètres <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term106">IPPS<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Version sécurisée du protocole IPP</span></a> : </strong>cochez la case si vous autorisez l'envoi en IPPS et indiquez l'adresse IPPS du périphérique dans le champ Uri ;</p>
                                                     </li>
                                                     <li>
-                                                        <p><strong>Paramètres IPP :</strong> cochez la case si vous autorisez l'envoi en IPP (non-sécurisé) et indiquez l'adresse IPP du périphérique dans le champ Uri ; </p>
+                                                        <p><strong>Paramètres <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term98">IPP<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Internet Printing Protocol (protocole d'impression Internet) ou IPP, définit un protocole standard pour l'impression et ce qui s'y rattache, comme les files d'attente d'impression, la taille des médias, la résolution, etc.
+Comme tous les protocoles basés sur IP, IPP peut être utilisé localement ou sur l'Internet vers des imprimantes à des centaines ou des milliers de kilomètres. Toutefois, au contraire d'autres protocoles, IPP supporte les contrôles d'accès comme l'authentification et le chiffrement, le rendant ainsi plus sécurisé que d'autres solutions plus anciennes.
+(Source : Wikipédia)</span></a> :</strong> cochez la case si vous autorisez l'envoi en IPP (non-sécurisé) et indiquez l'adresse IPP du périphérique dans le champ Uri ; </p>
                                                     </li>
                                                     <li>
-                                                        <p><strong>Paramètres LPR : </strong>cochez la case si vous autorisez l'envoi en LPR, indiquez le nom de la file le nom de la file correspondant au périphérique ainsi que le port d'accès.</p>
+                                                        <p><strong>Paramètres <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term97">LPR<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Line Printer Remote ou LDP Line Printer Daemon ( imprimante distante en ligne ou protocole démon d'imprimante en ligne ) est un système de communication de client à serveur destiné à l'impression. La première mise en œuvre de ce protocole a été introduite avec le système d'impression Berkeley (Berkeley printing system) pour BSD. Le système d'impression Berkeley est communément utilisé sur les systèmes de type UNIX, bien que CUPS soit aujourd'hui plus répandu, notamment sur Linux.
+(Source : Wikipedia)</span></a> : </strong>cochez la case si vous autorisez l'envoi en LPR, indiquez le nom de la file le nom de la file correspondant au périphérique ainsi que le port d'accès.</p>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li>
-                                                <p><strong>Support du format PDF : </strong>
-                                                </p>
+                                                <p><strong>Support du format PDF : </strong>précisez si le périphérique supporte le format PDF&#160;permet de le rendre compatible avec WPC for Chrome et for Android.&#160;</p>
                                                 <ul>
                                                     <li>
-                                                        <p><strong>Détection : </strong>précisez l'information si vous la connaissez ou laissez Watchdoc détecter automatiquement</p>
+                                                        <p><strong>Détection automatique : </strong>permet au périphérique de gérer cette détection automatiquement&#160;; </p>
                                                     </li>
                                                     <li>
-                                                        <p><strong>Version minimale : </strong>si le format PDF&#160;est supporté, indiquez quelle est la version minimale ; </p>
+                                                        <p><strong>Version minimale : </strong>si le format PDF&#160;est supporté, indiquez quelle est la version minimale supportée ; </p>
                                                     </li>
                                                     <li>
-                                                        <p><strong>Version maximale :</strong> si le format PDF&#160;est supporté, indiquez quelle est la version minimale.<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Files_Section_EnvoiFichierSpools.png" /></p>
+                                                        <p><strong>Version maximale :</strong> si le format PDF&#160;est supporté, indiquez quelle est la version maximale supportée.<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Files_Section_EnvoiFichierSpools.png" /></p>
                                                     </li>
                                                 </ul>
                                             </li>
                                         </ul>
                                         <p>&#160;</p>
-                                        <h3>Configurer la section Restrictions</h3>
+                                        <h3>Section Restrictions</h3>
                                         <p style="text-align: left;">
                                             <img src="../../Z_Resources/Images/02_Captures/Config_Files_Restriction_54.png" />
                                         </p>
@@ -540,7 +488,7 @@
                                             </li>
                                         </ul>
                                         <p>&#160;</p>
-                                        <h3>Configurer la section Plateforme</h3>
+                                        <h3>Section Plateforme</h3>
                                         <p>
                                             <img src="../../Z_Resources/Images/02_Captures/Config_Files_Plateforme_60.png" style="width: 700px;height: auto;" />
                                             <br />
@@ -553,7 +501,7 @@
                                             </li>
                                         </ul>
                                         <p>&#160;</p>
-                                        <h3>Configurer la section Contacts</h3>
+                                        <h3>Section Contacts</h3>
                                         <p>
                                             <img src="../../Z_Resources/Images/02_Captures/Config_Files_Contacts_54.png" />
                                             <br />
@@ -574,7 +522,7 @@
                                                 <p class="Liste_puce_1"><strong>Message </strong>: fournissez toute information complémentaire pouvant aider l'utilisateur qui souhaite établir un contact avec le responsable (horaires de disponibilité, jours de fermeture, information sur la localisation physique du bureau du responsable, procédure spécifique à suivre, etc.).</p>
                                             </li>
                                         </ul>
-                                        <h3>Configurer la section Redirections</h3>
+                                        <h3>Section Redirections</h3>
                                         <p style="text-align: left;">
                                             <img src="../../Z_Resources/Images/02_Captures/Config_Files_Redirections_V541.png" />
                                             <br />
@@ -622,7 +570,7 @@
                                                 <p class="Liste_puce_1"><strong>Pool de travaux : </strong>sélectionnez dans la liste le pool dans lequel sont regroupées les autres files compatibles avec la file d'impression que vous paramétrez. Par défaut, lorsque la redirection 'est pas activée, c'est la mention <strong>Aucun pool</strong> sélectionné qui apparaît. Dans cette liste figurent les deux pools par défaut (#local ; #global) ainsi que les pools que vous avez éventuellement créés&#160;;</p>
                                             </li>
                                         </ul>
-                                        <h3>Configurer la section Monitoring</h3>
+                                        <h3>Section Monitoring</h3>
                                         <p style="text-align: left;">
                                             <img src="../../Z_Resources/Images/02_Captures/Config_Files_Monitoring.png" />
                                         </p>
@@ -660,7 +608,7 @@
                                         <blockquote>
                                             <fieldset>Les données renvoyées par la fonction <strong>Monitoring </strong>de Watchdoc sont visibles dans les onglets <strong>Etat du périphérique</strong> et <strong>Incidents </strong>de l'interface d'administration ainsi que dans la base SQL servant à générer les statistiques d'impression.</fieldset>
                                         </blockquote>
-                                        <h3>Configurer la section Configuration SNMP</h3>
+                                        <h3>Section Configuration SNMP</h3>
                                         <p>Si vous avez activé le monitoring SNMP, complétez-en la configuration (disponible depuis la v6.1.4898)&#160;: </p>
                                         <ul>
                                             <li>
@@ -701,7 +649,7 @@
                                                 </ul>
                                             </li>
                                         </ul>
-                                        <h3>Configurer la section Notifications</h3>
+                                        <h3>Section Notifications</h3>
                                         <p>
                                             <img src="../../Z_Resources/Images/02_Captures/Config_Files_Notifications_54.png" style="width: 852px;height: 202px;" />
                                         </p>
@@ -754,7 +702,7 @@
                                                 <p class="Liste_puce_2"><strong>Utiliser la configuration du groupe :</strong>   optez pour ce choix si le traitement à appliquer est celui qui a été défini pour le Groupe de files. La file hérite donc de la configuration générique de son Groupe.</p>
                                             </li>
                                         </ul>
-                                        <h3>Configurer la section Archivage</h3>
+                                        <h3>Section Archivage</h3>
                                         <p>&#160;</p>
                                         <p style="text-align: left;">
                                             <img src="../../Z_Resources/Images/02_Captures/Config_Files_Archivage_54.png" />
@@ -807,7 +755,7 @@
                                             </li>
                                         </ul>
                                         <fieldset>L'archivage temporaire est souvent utilisé à des fins d'analyse, notamment pour capturer les spools qui permettront d'expliquer des anomalies de comptage ou de valider des informations remontées par Watchdoc.<br />Attention, le mode audit nécessite un espace de stockage conséquent, de l'ordre de plusieurs dizaines de gigaoctets suivant le volume d'impression</fieldset>
-                                        <h3>Configurer la section WES</h3>
+                                        <h3>Section WES</h3>
                                         <p style="text-align: left;">
                                             <img src="../../Z_Resources/Images/02_Captures/Config_Files_WES_54.png" style="width: 545px;height: 138px;" />
                                         </p>
@@ -848,7 +796,7 @@
                                         <blockquote>
                                             <fieldset>En fonction du WES&#160;choisi, de nouveaux paramètres s'affichent. Le paramétrage additionnel est décrit dans la documentation propre à chaque WES.&#160;Pour savoir comment configurer correctement votre WES, reportez-vous au manuel de configuration du WES.</fieldset>
                                         </blockquote>
-                                        <h3>Configurer la section Transformation de spools</h3>
+                                        <h3>Section Transformation de spools</h3>
                                         <p style="text-align: left;">
                                             <img src="../../Z_Resources/Images/02_Captures/Config_Files_Section_TransfoSpools_V54.png" style="width: 540px;height: 66px;" />
                                         </p>
@@ -874,7 +822,7 @@
                                         <blockquote>
                                             <fieldset>Tracer les spools nécessite de disposer d'espace disque sur le serveur d'impression. C'est pourquoi nous recommandons de n'activer la fonction qu'à des fins d'analyse en cas de dysfonctionnement.</fieldset>
                                         </blockquote>
-                                        <h3>Configurer la section Profil du périphérique</h3>
+                                        <h3>Section Profil du périphérique</h3>
                                         <p>
                                             <img src="../../Z_Resources/Images/02_Captures/Config_Files_ProfilPerifph.png" />
                                         </p>
