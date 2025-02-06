@@ -207,7 +207,24 @@
                                         <p>&#160;</p>
                                         <p>Le message précise que le serveur d'impression échoue à obtenir les informations ("Failed to obtain server information from") : <br /><br /><img src="../../Z_Resources/Images/02_Captures/FT_MasterSlave_MsgErreur_FailedToObtain.png" style="width: 700px;" /></p>
                                         <h2>Résolution</h2>
-                                        <p>Pour résoudre le problème, désactivez la mise à jour des certificats racines dans les stratégies du serveur  Master et des autres serveurs Watchdoc.<br /><br /><img src="../../Z_Resources/Images/02_Captures/FT_MasterSlave_MsgErreur_MaJCertificat.png" /></p>
+                                        <p>Pour résoudre le problème, désactivez la mise à jour des certificats racines dans les stratégies du serveur  Master et des autres serveurs Watchdoc.</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Lancer&#160;<strong>gpedit.msc</strong>.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>dans l'arborescence, cliquer sur&#160;<strong>Configuration Ordinateur &gt; Modèle d'administration &gt; Système &gt; Gestion de la communication Internet &gt; Paramètres de communication Internet</strong> ;</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>cliquez droit sur le paramètre <strong>Désactiver la mise à jour automatique des certificats racines</strong> ;</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>cliquez sur <strong>Modifier </strong>;</p>
+                                            </li>
+                                            <li value="5">
+                                                <p>dans la fenêtre <strong>Désactiver... </strong>optez pour <strong>Activé </strong>:<br /><br /><img src="../../Z_Resources/Images/02_Captures/FT_MasterSlave_MsgErreur_MaJCertificat.png" /></p>
+                                            </li>
+                                        </ol>
                                         <h2>En savoir plus</h2>
                                         <p>Pour en savoir plus : https://technet.microsoft.com/en-us/library/cc734054(WS.10).aspx</p>
                                     </div>
