@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr-fr" xml:lang="fr-fr" class="_Skins_HTML5___Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="Configuration" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="web">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr-fr" xml:lang="fr-fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="Configuration" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="web">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Configurer le module de reconnaissance Codes-barres</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Watchdoc ScanCare - Configurer le module de reconnaissance Codes-Barres</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
@@ -57,6 +57,7 @@
 }
 
 </style>
+        <link href="../Z_Resources/TableStyles/Standard_test.css" rel="stylesheet" data-mc-stylesheet-type="table" />
         <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
         </script>
         <script src="../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
@@ -200,11 +201,12 @@
                                         </div>
                                     </div>
                                     <div class="nocontent">
-                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Fil d'Ariane" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
+                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h3>Configurer le module de reconnaissance Codes-barres</h3>
+                                        <h1>Watchdoc ScanCare - Configurer le module de reconnaissance Codes-Barres</h1>
+                                        <h2>Présentation</h2>
                                         <p>La fonction <strong>Reconnaissance de codes-barres</strong> permet l'analyse, la manipulation et l'extraction des données de n'importe quel code-barre présent sur le document numérisé.</p>
                                         <p>&#160;</p>
                                         <p>Pour activer la reconnaissance de codes-barres, il est nécessaire que disposer des modules suivants : </p>
@@ -218,7 +220,8 @@
                                         </ul>
                                         <p>&#160;</p>
                                         <p>En règle générale, le code-barre ne contient qu'une valeur telle qu'un numéro de client ou un numéro de commande. Cependant, un code-barre peut aussi contenir plusieurs informations telles qu'un numéro de client, un numéro de commande et une date, en particulier les codes-barre 2D, susceptibles de contenir une quantité importante de données.</p>
-                                        <h4>Configurer des variables de codes-barres</h4>
+                                        <h2>Configurer des variables de codes-barres</h2>
+                                        <h3>Principe</h3>
                                         <p>Afin d'extraire séparément  chaque ensemble de données d'un code-barre, il est possible d'utiliser des variables de code-barre.&#160;Vous pouvez générer un nombre illimité de variables de codes-barres, chaque variable constituant un ensemble de données à extraire d'un code-barre.</p>
                                         <p>&#160;</p>
                                         <p>Une variable de code-barre contient une règle librement définie pour déterminer les données à extraire. Les variables de codes-barres sont conçues pour être exploitées lors de la numérisation dans ScanCare.</p>
@@ -240,29 +243,31 @@
                                             </li>
                                         </ul>
                                         <p>Fonctions permettant l'analyse et l'extraction de données d'un code-barre : </p>
-                                        <table style="width: 100%;">
-                                            <col style="width: 161px;" />
-                                            <col style="width: 439px;" />
+                                        <p>&#160;</p>
+                                        <table style="width: 100%;mc-table-style: url('../Z_Resources/TableStyles/Standard_test.css');" class="TableStyle-Standard_test" cellspacing="0">
+                                            <col style="width: 161px;" class="TableStyle-Standard_test-Column-Regular" />
+                                            <col style="width: 439px;" class="TableStyle-Standard_test-Column-Regular" />
                                             <tbody>
-                                                <tr>
-                                                    <td>Fonction</td>
-                                                    <td>Détail</td>
+                                                <tr class="TableStyle-Standard_test-Body-Row1">
+                                                    <td class="TableStyle-Standard_test-BodyE-Regular-Row1" style="font-weight: bold;">Fonction</td>
+                                                    <td class="TableStyle-Standard_test-BodyD-Regular-Row1" style="font-weight: bold;">Détail</td>
                                                 </tr>
-                                                <tr>
-                                                    <td>Filtrer</td>
-                                                    <td>Permet d'exclure les codes-barres dont vous n'avez pas besoin. Un filtre peut donc être une longueur minimale de code-barre, un rang dans le code-barre, par exemple.</td>
+                                                <tr class="TableStyle-Standard_test-Body-Row2">
+                                                    <td class="TableStyle-Standard_test-BodyE-Regular-Row2">Filtrer</td>
+                                                    <td class="TableStyle-Standard_test-BodyD-Regular-Row2">Permet d'exclure les codes-barres dont vous n'avez pas besoin. Un filtre peut donc être une longueur minimale de code-barre, un rang dans le code-barre, par exemple.</td>
                                                 </tr>
-                                                <tr>
-                                                    <td>Séparer</td>
-                                                    <td>Permet de créer une liste de sous-chaînes à partir d'un caractère de séparation. En utilisant l'élément distinctif, vous pouvez déterminer la chaîne de caractères à conserver dans la variable.</td>
+                                                <tr class="TableStyle-Standard_test-Body-Row1">
+                                                    <td class="TableStyle-Standard_test-BodyE-Regular-Row1">Séparer</td>
+                                                    <td class="TableStyle-Standard_test-BodyD-Regular-Row1">Permet de créer une liste de sous-chaînes à partir d'un caractère de séparation. En utilisant l'élément distinctif, vous pouvez déterminer la chaîne de caractères à conserver dans la variable.</td>
                                                 </tr>
-                                                <tr>
-                                                    <td>Couper</td>
-                                                    <td>Permet de supprimer une partie du code-barre.</td>
+                                                <tr class="TableStyle-Standard_test-Body-Row2">
+                                                    <td class="TableStyle-Standard_test-BodyB-Regular-Row2">Couper</td>
+                                                    <td class="TableStyle-Standard_test-BodyA-Regular-Row2">Permet de supprimer une partie du code-barre.</td>
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        <h4> Procédure</h4>
+                                        <p>&#160;</p>
+                                        <h3>Procédure</h3>
                                         <p>Pour configurer les variables des codes-barres&#160;:</p>
                                         <ol>
                                             <li value="1">
@@ -298,34 +303,34 @@
                                                 <p>&#160;</p>
                                             </li>
                                         </ol>
-                                        <table style="width: 100%;">
-                                            <col />
-                                            <col />
+                                        <table style="width: 100%;mc-table-style: url('../Z_Resources/TableStyles/Standard_test.css');" class="TableStyle-Standard_test" cellspacing="0">
+                                            <col class="TableStyle-Standard_test-Column-Regular" />
+                                            <col class="TableStyle-Standard_test-Column-Regular" />
                                             <tbody>
-                                                <tr>
-                                                    <td>Paramètres </td>
-                                                    <td>Détail</td>
+                                                <tr class="TableStyle-Standard_test-Body-Row1">
+                                                    <td class="TableStyle-Standard_test-BodyE-Regular-Row1" style="font-weight: bold;">Paramètres </td>
+                                                    <td class="TableStyle-Standard_test-BodyD-Regular-Row1" style="font-weight: bold;">Détail</td>
                                                 </tr>
-                                                <tr>
-                                                    <td>Nom</td>
-                                                    <td>Permet d'attribuer un nom qui identifiera la variable dans l'application Watchdoc ScanCare. Ce nom pourra servir à générer le nom de fichier, mais également dans le fichier d'export CSV ou XML.</td>
+                                                <tr class="TableStyle-Standard_test-Body-Row2">
+                                                    <td class="TableStyle-Standard_test-BodyE-Regular-Row2">Nom</td>
+                                                    <td class="TableStyle-Standard_test-BodyD-Regular-Row2">Permet d'attribuer un nom qui identifiera la variable dans l'application Watchdoc ScanCare. Ce nom pourra servir à générer le nom de fichier, mais également dans le fichier d'export CSV ou XML.</td>
                                                 </tr>
-                                                <tr>
-                                                    <td>Type de code à barre</td>
-                                                    <td>
+                                                <tr class="TableStyle-Standard_test-Body-Row1">
+                                                    <td class="TableStyle-Standard_test-BodyE-Regular-Row1">Type de code à barre</td>
+                                                    <td class="TableStyle-Standard_test-BodyD-Regular-Row1">
                                                         <p>Permet de sélectionner le type de code-barre : </p>
                                                         <p>- tous ;</p>
                                                         <p>- codes à barres de lecture code à barres : codes barres faisant partie intégrante d'un documnet et comportant des données d'identification&#160;;</p>
                                                         <p>- codes à barres de séparation de documents: code à barres ne faisant pas partie intégrante du document, mais étant ajouté comme séparateur&#160;; </p>
                                                     </td>
                                                 </tr>
-                                                <tr>
-                                                    <td>Index de code-barre</td>
-                                                    <td>Permet de préciser quel code-barre analyser dans le cas où il existe plusieurs codes-barres dans la page. L'outil de reconnaissance parcourt les codes-barres de haut en bas et de gauche à droite.</td>
+                                                <tr class="TableStyle-Standard_test-Body-Row2">
+                                                    <td class="TableStyle-Standard_test-BodyE-Regular-Row2">Index de code-barre</td>
+                                                    <td class="TableStyle-Standard_test-BodyD-Regular-Row2">Permet de préciser quel code-barre analyser dans le cas où il existe plusieurs codes-barres dans la page. L'outil de reconnaissance parcourt les codes-barres de haut en bas et de gauche à droite.</td>
                                                 </tr>
-                                                <tr>
-                                                    <td>Par Défaut</td>
-                                                    <td>Permet d'indiquer une valeur par défaut appliquée à la variable dans le cas où l'outil n'a extrait aucune valeur après avoir appliqué le filtre, le fractionnement et la découpe.</td>
+                                                <tr class="TableStyle-Standard_test-Body-Row1">
+                                                    <td class="TableStyle-Standard_test-BodyB-Regular-Row1">Par Défaut</td>
+                                                    <td class="TableStyle-Standard_test-BodyA-Regular-Row1">Permet d'indiquer une valeur par défaut appliquée à la variable dans le cas où l'outil n'a extrait aucune valeur après avoir appliqué le filtre, le fractionnement et la découpe.</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -365,7 +370,7 @@
                                                 <li><strong>Chaîne de décalage : </strong>si les caractères à prendre en compte dans la variable sont toujours situés après une chaîne de caractères spécifique, cochez la case et indiquez dans le champ la valeur après laquelle les caractères doivent être extraits. Complétez ce paramétrage en indiquant la longueur de la valeur à exploiter dans la variable. Par exemple, Chaîne de décalage = REF et longueur = 7 permet d'extraire les 7 caractères suivants la chaîne de caractères REF&#160;figurant dans le code-barres.</li>
                                             </ul>
                                         </blockquote>
-                                        <h4>Configurer les options avancées de la reconnaissance de codes-barres</h4>
+                                        <h3>Configurer les options avancées de la reconnaissance de codes-barres</h3>
                                         <p>ScanCare dispose de plusieurs options permettant d'optimiser la reconnaissance des codes-barres. De plus, vous pouvez préciser que vous souhaitez la recherche sur les codes-barres verticaux en exclusivité. </p>
                                         <p>&#160;</p>
                                         <p>Pour configurer les options avancées&#160;:</p>
@@ -387,41 +392,43 @@
                                             </li>
                                             <li value="6">
                                                 <p class="Liste_num_1">utilisez les paramètres disponibles :</p>
+                                                <p>&#160;</p>
                                             </li>
                                         </ol>
-                                        <table style="width: 100%;">
-                                            <col />
-                                            <col />
+                                        <table style="width: 100%;mc-table-style: url('../Z_Resources/TableStyles/Standard_test.css');" class="TableStyle-Standard_test" cellspacing="0">
+                                            <col class="TableStyle-Standard_test-Column-Regular" />
+                                            <col class="TableStyle-Standard_test-Column-Regular" />
                                             <tbody>
-                                                <tr>
-                                                    <td>Paramètres</td>
-                                                    <td>Détail</td>
+                                                <tr class="TableStyle-Standard_test-Body-Row1">
+                                                    <td class="TableStyle-Standard_test-BodyE-Regular-Row1" style="font-weight: bold;font-size: 12pt;">Paramètres</td>
+                                                    <td class="TableStyle-Standard_test-BodyD-Regular-Row1" style="font-weight: bold;font-size: 12pt;">Détail</td>
                                                 </tr>
-                                                <tr>
-                                                    <td>Image du paramètre Range</td>
-                                                    <td>
+                                                <tr class="TableStyle-Standard_test-Body-Row2">
+                                                    <td class="TableStyle-Standard_test-BodyE-Regular-Row2" style="font-size: 12pt;">Image du paramètre Range</td>
+                                                    <td class="TableStyle-Standard_test-BodyD-Regular-Row2" style="font-size: 12pt;">
                                                         <p>Cette boîte permet de définir les paramètres pour exclure certains codes-barres de l'analyse en déterminant leur position dans la page.</p>
                                                         <p>Les valeurs Left <strong>Gauche </strong>et Top <strong>Haut </strong>déterminent le point de départ de la zone de reconnaissance qui est précisée par les valeurs Height <strong>Hauteur </strong>et Width <strong>Largeur</strong>.</p>
                                                         <p>Par ailleurs, vous devez définir l'unité de mesure de ces valeurs.</p>
+                                                        <p>&#160;</p>
                                                         <p style="text-align: center;">
                                                             <img src="../Z_Resources/Images/03_Schemas/WD_SC_Config_BarCodeZoneReconnaissance.png" style="width: 264px;height: 144px;" />
                                                         </p>
-                                                        <p>Par exemple, si vous ne souhaitez extraire que 3 codes-barres d'un document qui en comporte 5,déterminez précisément les zones dans lesquelles se trouvent les 3 codes-barres à analyser.</p>
+                                                        <p>Par exemple, si vous ne souhaitez extraire que 3 codes-barres d'un document qui en comporte 5, déterminez précisément les zones dans lesquelles se trouvent les 3 codes-barres à analyser.</p>
                                                         <p> Note:
 Watchdoc ScanCare  commence la recherche des codes-barres à partir de la première page du document et depuis le coin gauche.</p>
                                                     </td>
                                                 </tr>
-                                                <tr>
-                                                    <td>Couleur</td>
-                                                    <td>Permet de préciser la couleur du code-barre.</td>
+                                                <tr class="TableStyle-Standard_test-Body-Row1">
+                                                    <td class="TableStyle-Standard_test-BodyE-Regular-Row1" style="font-size: 12pt;">Couleur</td>
+                                                    <td class="TableStyle-Standard_test-BodyD-Regular-Row1" style="font-size: 12pt;">Permet de préciser la couleur du code-barre.</td>
                                                 </tr>
-                                                <tr>
-                                                    <td>Nombre max.</td>
-                                                    <td>Permet de définir le nombre maximal de codes-barres à extraire d'un document.</td>
+                                                <tr class="TableStyle-Standard_test-Body-Row2">
+                                                    <td class="TableStyle-Standard_test-BodyE-Regular-Row2" style="font-size: 12pt;">Nombre max.</td>
+                                                    <td class="TableStyle-Standard_test-BodyD-Regular-Row2" style="font-size: 12pt;">Permet de définir le nombre maximal de codes-barres à extraire d'un document.</td>
                                                 </tr>
-                                                <tr>
-                                                    <td>Autoriser le pré-traitement</td>
-                                                    <td>
+                                                <tr class="TableStyle-Standard_test-Body-Row1">
+                                                    <td class="TableStyle-Standard_test-BodyE-Regular-Row1" style="font-size: 12pt;">Autoriser le pré-traitement</td>
+                                                    <td class="TableStyle-Standard_test-BodyD-Regular-Row1" style="font-size: 12pt;">
                                                         <p>Permet l'activation du pré-traitement de l'image avant l'analyse de codes-barres.&#160;</p>
                                                         <p>- cochez la case <strong>Activer le pré-traitement</strong> ; </p>
                                                         <p>- cliquez sur le bouton <strong>Préférences </strong>;</p>
@@ -430,21 +437,21 @@ Watchdoc ScanCare  commence la recherche des codes-barres à partir de la premi�
                                                         <p>Note : cette fonction ne concerne que l'analyse du code-barre et n'a rien à voir avec le traitement de l'image lui-même.</p>
                                                     </td>
                                                 </tr>
-                                                <tr>
-                                                    <td>Distance</td>
-                                                    <td>Permet de définir la distance entre les barres du code.</td>
+                                                <tr class="TableStyle-Standard_test-Body-Row2">
+                                                    <td class="TableStyle-Standard_test-BodyE-Regular-Row2" style="font-size: 12pt;">Distance</td>
+                                                    <td class="TableStyle-Standard_test-BodyD-Regular-Row2" style="font-size: 12pt;">Permet de définir la distance entre les barres du code.</td>
                                                 </tr>
-                                                <tr>
-                                                    <td>Export</td>
-                                                    <td>Permet d'exporter les valeurs (base 64) des codes-barres vers un fichier CSV ou XML.</td>
+                                                <tr class="TableStyle-Standard_test-Body-Row1">
+                                                    <td class="TableStyle-Standard_test-BodyE-Regular-Row1" style="font-size: 12pt;">Export</td>
+                                                    <td class="TableStyle-Standard_test-BodyD-Regular-Row1" style="font-size: 12pt;">Permet d'exporter les valeurs (base 64) des codes-barres vers un fichier CSV ou XML.</td>
                                                 </tr>
-                                                <tr>
-                                                    <td>Direction</td>
-                                                    <td>Permet de définir la direction de lecture du code-barre. Optez pour le mode de lecture à adopter en fonction des types de codes-barres à lire.</td>
+                                                <tr class="TableStyle-Standard_test-Body-Row2">
+                                                    <td class="TableStyle-Standard_test-BodyE-Regular-Row2" style="font-size: 12pt;">Direction</td>
+                                                    <td class="TableStyle-Standard_test-BodyD-Regular-Row2" style="font-size: 12pt;">Permet de définir la direction de lecture du code-barre. Optez pour le mode de lecture à adopter en fonction des types de codes-barres à lire.</td>
                                                 </tr>
-                                                <tr>
-                                                    <td>Additional analysis</td>
-                                                    <td>
+                                                <tr class="TableStyle-Standard_test-Body-Row1">
+                                                    <td class="TableStyle-Standard_test-BodyB-Regular-Row1" style="font-size: 12pt;">Additional analysis</td>
+                                                    <td class="TableStyle-Standard_test-BodyA-Regular-Row1" style="font-size: 12pt;">
                                                         <p>Permet de : </p>
                                                         <p>- rogner la zone avant de tenter une nouvelle analyse ; </p>
                                                         <p>- élargir la zone avant de tenter une nouvelle analyse.</p>
@@ -455,7 +462,9 @@ Watchdoc ScanCare  commence la recherche des codes-barres à partir de la premi�
                                         <p class="Liste_num_1">&#160;</p>
                                         <ol data-mc-continue="true">
                                             <li value="7">
-                                                <p class="Liste_num_1">cliquez sur <strong>OK </strong>pour confirmer votre configuration.<br /></p>
+                                                <p class="Liste_num_1"><span style="font-size: 12pt;">cliquez sur </span><strong style="font-size: 12pt;">OK </strong><span style="font-size: 12pt;">pour confirmer votre configuration.</span>
+                                                    <br />
+                                                </p>
                                                 <p class="Liste_num_1">&#160;</p>
                                             </li>
                                         </ol>
@@ -472,6 +481,7 @@ Watchdoc ScanCare  commence la recherche des codes-barres à partir de la premi�
                                             </li>
                                             <li value="4">
                                                 <p class="Liste_num_2">vérifiez que les valeurs extraites du code-barre correspondent aux paramètres fixés.</p>
+                                                <p>&#160;</p>
                                             </li>
                                         </ol>
                                         <fieldset class="astuce" style="text-align: left;">Vous pouvez proposer la reconnaissance de code-barre depuis le périphérique, lorsque l'utilisateur sélectionne le profil de numérisation. Pour paramétrer ce choix&#160;: <br />- cochez la case <strong>Optionnel </strong>située sous le bouton <strong>Préférences</strong> ;<br />- dans la liste déroulante, sélectionnez <strong>Activer </strong>pour permettre la reconnaissance depuis le périphérique.</fieldset>
