@@ -255,44 +255,115 @@
                                             <img src="../Z_Resources/Images/01_Generiques/icon_pdf.png" style="width: 30px;height: 30px;" />&#160;&#160;<a href="WD_Notes_de_Versions.pdf" target="_blank">Téléchargez l'historique des notes de versions de Watchdoc 5.0 - 6.1 (.pdf)</a><span><span style="background-color: #ffffff; color: #ffffff;">Release notes</span></span></p>
                                         <p>&#160;</p>
                                         <fieldset>Watchdoc 6.1 nécessite une nouvelle licence, qui inclut la licence WSC (<a href="https://downloads.doxense.fr/doc.doxense/DOX_SUP_FDL_FormulaireDemandeLicences_FR.docx" target="_blank" title="Lien vers le formulaire de demande de licence" alt="Lien vers le formulaire de demande de licence">formulaire de demande de licence</a> à adresser  à l'équipe Support  via le site <a href="https://connect.doxense.com/hc/fr" target="_blank">Connect</a>).&#160;<br />Watchdoc v6.1 requiert la version <strong>4.8</strong> du .Net Framework (<a href="https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48" target="_blank" title="Link to the Microsoft web site" alt="Link to the Microsoft web site">à télécharger ici</a>).<br />Watchdoc v6.1 requiert Microsoft Visal C++ 2013 (<a href="https://www.microsoft.com/fr-fr/download/details.aspx?id=40784" target="_blank" title="Link to the Microsoft web site" alt="Link to the Microsoft web site">à télécharger ici</a>).</fieldset>
-                                        <!--<h2>Versions Watchdoc/WSC 6.1.0.51 et WPC for Windows 7.0.46 - 06/02/2025</h2>
-        <h4>Améliorations</h4>
-        <p>&#160;</p>
-        <h4>Correctifs</h4>
-        <h2>Versions Watchdoc/WSC 6.1.0.5138 et WPC for Windows 7.0.4681 - 27/01/2025</h2>
-        <h4>Améliorations</h4>
-        <ul>
-            <li>
-                <p><strong>Watchdoc</strong> : <MadCap:glossaryTerm glossTerm="Glossary.Term51">minification</MadCap:glossaryTerm> du javascript du portail d’administration de Watchdoc afin d'en renforcer la sécurité</p>
-            </li>
-            <li>
-                <p><strong>WES Ricoh</strong> : amélioration de la gestion des erreurs lors de la configuration du WES</p>
-            </li>
-        </ul>
-        <h4>Correctifs</h4>
-        <ul>
-            <li>
-                <p><strong>Watchdoc</strong>
-                </p>
-                <ul>
-                    <li>
-                        <p>traduction de certains champs dans la configuration des emplacements</p>
-                    </li>
-                    <li>
-                        <p>correction de l'interprétation des codes PUK commençant par des 0 </p>
-                    </li>
-                    <li>
-                        <p>masquage correct du code d'impression sur la page "Mon compte"</p>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <p><strong>WES Hewlett-Packard</strong> : correction du bouton Retour, rendu de nouveau fonctionnel</p>
-            </li>
-            <li>
-                <p><strong>WPC</strong> : synchronisation des codes PUK dans WPC (en mode Silent) tenant compte des changements de codes opérés dans Watchdoc</p>
-            </li>
-        </ul>-->
+                                        <h2>Versions Watchdoc/WSC 6.1.0.51 et WPC for Windows 7.0.46 - 06/02/2025</h2>
+                                        <h4>Nouveautés</h4>
+                                        <ul>
+                                            <li>
+                                                <p><strong>Watchdoc :</strong> modification de la base de données  <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term120">Json<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>JavaScript Object Notation est un format de données textuel facile à lire et à écrire pour les humains, et simple à analyser et à générer pour les machines. Ce fichier texte, initialement dérivé de JavaScript, est devenu indépendant du langage et de nombreux langages de programmation l’utilisent maintenant.
+(Source : datasunrise)</span></a>Db utilisée par Watchdoc pour stocker certaines informations à froid (comme l’avancée d’un scan par exemple). Jusqu’ici, la JsonDB se matérialise par des fichiers sur disques. Pour éviter que certains antivirus verrouillent les fichiers de la JsonDb, causant ainsi des problèmes, l’administrateur Watchdoc peut désormais choisir la cible de la JsonDb : la matérialiser en fichiers sur disques (Mode par défaut) ou alors pointer vers un serveur SQL.</p>
+                                            </li>
+                                        </ul>
+                                        <h4>Améliorations</h4>
+                                        <ul>
+                                            <li>
+                                                <p><strong>Watchdoc : </strong>ajout d'attributs de sécurité dans les cookies HTTP afin de renforcer la sécurité</p>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <p><strong>WESCan Kyocera : </strong>amélioration du message d’erreur dans le cas d’une exception qui se produit en JsonDb lors du scan afin de faciliter le diagnostic. L’administateur peut ainsi utiliser la nouvelle fonctionnalité qui lui permet de choisir de matérialiser la JsonDb sous forme de serveur SQL au lieu de fichiers sur disques.</p>
+                                            </li>
+                                        </ul>
+                                        <h4>Correctifs</h4>
+                                        <ul>
+                                            <li>
+                                                <p><strong>Watchdoc :</strong> </p>
+                                                <ul>
+                                                    <li>
+                                                        <p>apport de divers correctifs sur l'API&#160;Izly (Cap Monétique<sup>®</sup>)</p>
+                                                        <p> </p>
+                                                    </li>
+                                                    <li>
+                                                        <p>sécurisation des saisies utilisateurs afin de se prémunir d’injections</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <p><strong>WES :</strong> ajout de traductions manquantes dans la fonctionnalité permettant de dissocier un badge à partir du périphérique d'impression</p>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <p><strong>WES Kyocera : </strong>affichage correct du WES le modèle Kyocera MA4000</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>WES Ricoh :</strong> correction de la fonction Impression sécurisée qui n'était plus fonctionnelle</p>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <p><strong>WESCan : </strong>correction des destinations de scan qui se propagent lorsqu’on duplique un profil de scan</p>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <p><strong>WESCan Hewlett Packard : </strong>modification des profils de scan par défaut afin de disposer d'un contraste optimal</p>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <p><strong>WPC : </strong>suppression effective d'un travail d'impression annulé</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>WSC :</strong> </p>
+                                                <ul>
+                                                    <li>
+                                                        <p>correction de l'affichage des serveurs dans la console de supervision lorsque la télémétrie est répliquée et que les serveurs ne disposent pas d’emplacement</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>sécurisation de la saisie des utilisateurs afin de se prémunir d’injections</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <h2>Versions Watchdoc/WSC 6.1.0.5138 et WPC for Windows 7.0.4681 - 27/01/2025</h2>
+                                        <h4>Améliorations</h4>
+                                        <ul>
+                                            <li>
+                                                <p><strong>Watchdoc</strong> : <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term51">minification<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>La minification (ou minimisation) est le processus qui consiste à supprimer tous les caractères inutiles du code source des langages de programmation interprétés ou des langages de balisage sans en modifier la fonctionnalité. Ces caractères inutiles comprennent généralement les caractères d'espacement, les caractères de retour à la ligne, les commentaires et parfois les délimiteurs de blocs, qui sont utilisés pour améliorer la lisibilité du code mais ne sont pas nécessaires à son exécution. La minimisation réduit la taille du code source, ce qui rend sa transmission sur un réseau (par exemple Internet) plus efficace.
+
+(Source : Wikipedia)</span></a> du javascript du portail d’administration de Watchdoc afin d'en renforcer la sécurité</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>WES Ricoh</strong> : amélioration de la gestion des erreurs lors de la configuration du WES</p>
+                                            </li>
+                                        </ul>
+                                        <h4>Correctifs</h4>
+                                        <ul>
+                                            <li>
+                                                <p><strong>Watchdoc</strong>
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <p>traduction de certains champs dans la configuration des emplacements</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>correction de l'interprétation des codes PUK commençant par des 0 </p>
+                                                    </li>
+                                                    <li>
+                                                        <p>masquage correct du code d'impression sur la page "Mon compte"</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p><strong>WES Hewlett-Packard</strong> : correction du bouton Retour, rendu de nouveau fonctionnel</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>WPC</strong> : synchronisation des codes PUK dans WPC (en mode Silent) tenant compte des changements de codes opérés dans Watchdoc</p>
+                                            </li>
+                                        </ul>
                                         <h2>Versions Watchdoc/WSC 6.1.0.5122 et WPC for Windows 7.0.4631 - 09/01/2025</h2>
                                         <h4>Améliorations</h4>
                                         <ul>
