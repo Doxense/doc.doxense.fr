@@ -260,7 +260,7 @@
                                         <ul>
                                             <li>
                                                 <p><strong>Watchdoc :</strong> modification de la base de données  <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term120">Json<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>JavaScript Object Notation est un format de données textuel facile à lire et à écrire pour les humains, et simple à analyser et à générer pour les machines. Ce fichier texte, initialement dérivé de JavaScript, est devenu indépendant du langage et de nombreux langages de programmation l’utilisent maintenant.
-(Source : datasunrise)</span></a>Db utilisée par Watchdoc pour stocker certaines informations à froid (comme l’avancée d’un scan par exemple). Jusqu’ici, la JsonDB se matérialise par des fichiers sur disques. Pour éviter que certains antivirus verrouillent les fichiers de la JsonDb, causant ainsi des problèmes, l’administrateur Watchdoc peut désormais choisir la cible de la JsonDb : la matérialiser en fichiers sur disques (Mode par défaut) ou alors pointer vers un serveur SQL.</p>
+(Source : datasunrise)</span></a>Db utilisée par Watchdoc pour stocker certaines informations à froid (comme l’avancée d’un scan par exemple). Jusqu’ici, la JsonDB se matérialisait par des fichiers sur disque. Pour éviter que certains antivirus verrouillent les fichiers de la JsonDb, causant ainsi des problèmes, l’administrateur Watchdoc peut désormais choisir la cible de la JsonDb : la matérialiser en fichiers sur disque (Mode par défaut) ou pointer vers un serveur SQL.</p>
                                             </li>
                                         </ul>
                                         <h4>Améliorations</h4>
@@ -271,7 +271,7 @@
                                         </ul>
                                         <ul>
                                             <li>
-                                                <p><strong>WESCan Kyocera : </strong>amélioration du message d’erreur dans le cas d’une exception qui se produit en JsonDb lors du scan afin de faciliter le diagnostic. L’administateur peut ainsi utiliser la nouvelle fonctionnalité qui lui permet de choisir de matérialiser la JsonDb sous forme de serveur SQL au lieu de fichiers sur disques.</p>
+                                                <p><strong>WESCan Kyocera : </strong>amélioration du message d’erreur dans le cas d’une exception qui se produit en JsonDb lors du scan afin de faciliter le diagnostic. L’administateur peut ainsi utiliser la nouvelle fonctionnalité qui lui permet de choisir de matérialiser la JsonDb sous forme de serveur SQL au lieu de fichiers sur disque.</p>
                                             </li>
                                         </ul>
                                         <h4>Correctifs</h4>
@@ -281,10 +281,9 @@
                                                 <ul>
                                                     <li>
                                                         <p>apport de divers correctifs sur l'API&#160;Izly (Cap Monétique<sup>®</sup>)</p>
-                                                        <p> </p>
                                                     </li>
                                                     <li>
-                                                        <p>sécurisation des saisies utilisateurs afin de se prémunir d’injections</p>
+                                                        <p>sécurisation des interfaces web d'administration</p>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -296,7 +295,7 @@
                                         </ul>
                                         <ul>
                                             <li>
-                                                <p><strong>WES Kyocera : </strong>affichage correct du WES le modèle Kyocera MA4000</p>
+                                                <p><strong>WES Kyocera : </strong>correction de l'affichage du WES sur le modèle MA4000</p>
                                             </li>
                                             <li>
                                                 <p><strong>WES Ricoh :</strong> correction de la fonction Impression sécurisée qui n'était plus fonctionnelle</p>
@@ -320,10 +319,12 @@
                                                 <p><strong>WSC :</strong> </p>
                                                 <ul>
                                                     <li>
-                                                        <p>correction de l'affichage des serveurs dans la console de supervision lorsque la télémétrie est répliquée et que les serveurs ne disposent pas d’emplacement</p>
+                                                        <p>correction de l'affichage des serveurs dans WSC lorsque la télémétrie est répliquée et que les serveurs ne disposent pas d’emplacement</p>
                                                     </li>
                                                     <li>
-                                                        <p>sécurisation de la saisie des utilisateurs afin de se prémunir d’injections</p>
+                                                        <li>
+                                                            <p>sécurisation des interfaces web d'administration</p>
+                                                        </li>
                                                     </li>
                                                 </ul>
                                             </li>
