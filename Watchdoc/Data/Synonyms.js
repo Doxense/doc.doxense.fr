@@ -17,6 +17,7 @@ xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"enrolement\
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"désenrolement\" To=\"désenrôl\" FromStem=\"désenrol\" />';
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"maitre\" To=\"maîtr\" FromStem=\"maitr\" />';
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"créer\" To=\"cre\" FromStem=\"cré\" />';
+xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"scan to me\" To=\"scan2m\" FromStem=\"scan to m\" />';
 xmlSynonymsData += '    </Directional>';
 xmlSynonymsData += '</MadCapSynonyms>';
 MadCap.Utilities.Xhr._FilePathToXmlStringMap.Add('Synonyms', xmlSynonymsData);
