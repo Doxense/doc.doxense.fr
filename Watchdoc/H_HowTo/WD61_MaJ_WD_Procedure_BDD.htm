@@ -16,12 +16,11 @@
         <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Fluid/stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/stylesheets/styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/stylesheets/tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/stylesheets/mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/stylesheets/print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <style>/*&lt;meta /&gt;*/
 
 .button.print-button
@@ -46,7 +45,7 @@
 
 .needs-pie
 {
-	behavior: url('../Resources/Scripts/PIE-no-motw.htc');
+	behavior: url('../resources/Scripts/PIE-no-motw.htc');
 }
 
 </style>
@@ -64,23 +63,24 @@
 
 .needs-pie
 {
-	behavior: url('../Resources/Scripts/PIE-no-motw.htc');
+	behavior: url('../resources/Scripts/PIE-no-motw.htc');
 }
 
 </style>
-        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        <link href="../resources/stylesheets/mainstyles.css" rel="stylesheet" type="text/css" />
+        <script src="../resources/Scripts/jquery.min.js" type="text/javascript">
         </script>
-        <script src="../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        <script src="../resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
         </script>
-        <script src="../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        <script src="../resources/Scripts/require.min.js" type="text/javascript" defer="defer">
         </script>
-        <script src="../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        <script src="../resources/Scripts/require.config.js" type="text/javascript" defer="defer">
         </script>
-        <script src="../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        <script src="../resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
         </script>
-        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        <script src="../resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
         </script>
-        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        <script src="../resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
         </script>
         <script type="text/javascript"> 
 			///*<![CDATA[*/
@@ -202,7 +202,7 @@
                                         <h2>Etape 1 - Préparer la mise à jour</h2>
                                         <ol>
                                             <li value="1">
-                                                <p class="Liste_num_1">Téléchargez le package d'installation de la nouvelle version depuis la <a href="../A_Getting_Started/Versions_FR.htm" target="_blank" title="Lien vers la page de téléchargement du package d'installation" alt="Lien vers la page de téléchargement du package d'installation">page dédiée.</a></p>
+                                                <p class="Liste_num_1">Téléchargez le package d'installation de la nouvelle version depuis la <a href="../a_getting_started/versions_fr.htm" target="_blank" title="Lien vers la page de téléchargement du package d'installation" alt="Lien vers la page de téléchargement du package d'installation">page dédiée.</a></p>
                                             </li>
                                             <li value="2">
                                                 <p class="Liste_num_1">Dans le serveur d'impression Watchdoc, créez un dossier temporaire (C:\TEMPWD) permettant d'extraire les fichiers de l'archive.</p>
@@ -223,12 +223,12 @@
                                                         <p class="Liste_puce_2"><strong>WatchdocUpdate.exe.config </strong>: fichier contenant le fichier de configuration de l'exécutable&#160;;</p>
                                                     </li>
                                                     <li>
-                                                        <p class="Liste_puce_2" style="text-align: left;"><strong>WebXX.zip :</strong> contient les nouveaux fichiers pour le site web Watchdoc&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WD60_MMJ_ContenuFichierMaJ.png" style="width: 717px;height: 265px;" /></p>
+                                                        <p class="Liste_puce_2" style="text-align: left;"><strong>WebXX.zip :</strong> contient les nouveaux fichiers pour le site web Watchdoc&#160;:<br /><br /><img src="../z_resources/images/02_captures/wd60_mmj_contenufichiermaj.png" style="width: 717px;height: 265px;" /></p>
                                                         <p>&#160;</p>
                                                     </li>
                                                 </ul>
                                             </li>
-                                            <li value="5"><a name="MaJ_WEScan"><p>Si vous utilisez WEScan et avez personnalisé les profils de scan directement dans le dossier des profils par défaut (fichiers JSON), faites-en une sauvegarde que vous pourrez rétablir après la mise à jour passée.&#160;Ce dossier est en effet écrasé au cours de la mise à jour. Pour information, il est recommandé de créer un dossier spécifique pour les profils personnalisés (cf.&#160;<a href="../B_WEScan/ScanProfilesCustomizer_Presentation.htm" target="_blank" title="Lien vers la procédure d'utilisation" alt="Lien vers la procédure d'utilisation">Utiliser ScanProfilesCustomizer</a>).</p></a>
+                                            <li value="5"><a name="MaJ_WEScan"><p>Si vous utilisez WEScan et avez personnalisé les profils de scan directement dans le dossier des profils par défaut (fichiers JSON), faites-en une sauvegarde que vous pourrez rétablir après la mise à jour passée.&#160;Ce dossier est en effet écrasé au cours de la mise à jour. Pour information, il est recommandé de créer un dossier spécifique pour les profils personnalisés (cf.&#160;<a href="../b_wescan/scanprofilescustomizer_presentation.htm" target="_blank" title="Lien vers la procédure d'utilisation" alt="Lien vers la procédure d'utilisation">Utiliser ScanProfilesCustomizer</a>).</p></a>
                                             </li>
                                         </ol>
                                         <h2>Etape 2 - Mettre à jour la base de données </h2>
@@ -243,14 +243,14 @@
                                             <li value="3">
                                                 <p class="Liste_num_1">En fonction du type de votre base de données (MSSQL, PostgreSQL ou SQLite), repérez le fichier ou les fichiers de mise à jour <strong>[type_bdd]_update-XX</strong>.</p>
                                                 <p class="Liste_num_1">&#160;</p>
-                                                <p class="Liste_num_1">Si vous mettez à jour <strong>depuis une version 6.0</strong>, <strong>il n'est pas nécessaire</strong> de mettre à jour la base de données.<br />Si vous mettez à jour depuis une version antérieure à la 6.0, effectuez la mise à jour par étapes&#160;: depuis le dossier <strong>Kernel[n°version].zip\SQL</strong>, exécutez toutes les mises à jour de versions <strong>[Type_bdd]_update_[version]</strong> comprises entre la version installée dans votre environnement et la nouvelle version.&#160;<br /><br /><img src="../Z_Resources/Images/02_Captures/WD_Update_MSSQL.png" style="height: auto;width: 600px;text-align: left;" /></p>
+                                                <p class="Liste_num_1">Si vous mettez à jour <strong>depuis une version 6.0</strong>, <strong>il n'est pas nécessaire</strong> de mettre à jour la base de données.<br />Si vous mettez à jour depuis une version antérieure à la 6.0, effectuez la mise à jour par étapes&#160;: depuis le dossier <strong>Kernel[n°version].zip\SQL</strong>, exécutez toutes les mises à jour de versions <strong>[Type_bdd]_update_[version]</strong> comprises entre la version installée dans votre environnement et la nouvelle version.&#160;<br /><br /><img src="../z_resources/images/02_captures/wd_update_mssql.png" style="height: auto;width: 600px;text-align: left;" /></p>
                                             </li>
                                         </ol>
                                         <p>&#160;</p>
                                         <p>La base de données SQLServer peut être mise à jour avec deux outils :</p>
                                         <ol>
                                             <li value="1">
-                                                <p>avec l'outil MS SQL Server Management Studio<sup>®</sup>&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/MAJ_WD_MSSQL_Update_60.png" style="width: 700px;height: auto;" /></p>
+                                                <p>avec l'outil MS SQL Server Management Studio<sup>®</sup>&#160;:<br /><br /><img src="../z_resources/images/02_captures/maj_wd_mssql_update_60.png" style="width: 700px;height: auto;" /></p>
                                                 <p>&#160;</p>
                                             </li>
                                             <li value="2">
@@ -281,7 +281,7 @@
                                         <h2>Etape 3 - Mettre à jour  Watchdoc</h2>
                                         <ol>
                                             <li value="1">
-                                                <p class="Liste_num_1">Dans le dossier où ont été décompressés les fichiers, double-cliquez sur <strong>WatchdocUpdate.exe</strong> pour lancer l'exécutable de mise à jour&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/MAJ_WD_Update_60.png" style="width: 700px;" /></p>
+                                                <p class="Liste_num_1">Dans le dossier où ont été décompressés les fichiers, double-cliquez sur <strong>WatchdocUpdate.exe</strong> pour lancer l'exécutable de mise à jour&#160;:<br /><br /><img src="../z_resources/images/02_captures/maj_wd_update_60.png" style="width: 700px;" /></p>
                                             </li>
                                         </ol>
                                         <p>&#160;</p>
@@ -292,7 +292,7 @@
                                         </ol>
                                         <ol data-mc-continue="true">
                                             <li value="3">
-                                                <p class="Liste_num_1">Dans l'interface affichée, vérifiez les chemins d'accès des paramètres, puis cliquez sur le bouton <strong>Update Watchdoc !</strong>&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/MAJ_WD_LancerMaJ_60.png" style="width: 349px;height: 391px;" /></p>
+                                                <p class="Liste_num_1">Dans l'interface affichée, vérifiez les chemins d'accès des paramètres, puis cliquez sur le bouton <strong>Update Watchdoc !</strong>&#160;:<br /><br /><img src="../z_resources/images/02_captures/maj_wd_lancermaj_60.png" style="width: 349px;height: 391px;" /></p>
                                                 <p>&#160;</p>
                                                 <p class="Resultat">→ Un curseur indique la progression de la mise à jour.</p>
                                                 <p>&#160;</p>
@@ -301,15 +301,15 @@
                                                 <p class="Liste_num_1">Si vous n'avez pas coché les cases empêchant leur redémarrage, le service IIS&#160;et le spouleur sont arrêtés puis redémarrés.</p>
                                             </li>
                                             <li value="5">
-                                                <p class="Liste_num_1">Confirmez le redémarrage du  service IIS dans la boîte de dialogue affichée&#160;: <br /><br /><img src="../Z_Resources/Images/02_Captures/MAJ_WD_RedemarrageIIS.png" style="width: 345px;height: 153px;" /></p>
+                                                <p class="Liste_num_1">Confirmez le redémarrage du  service IIS dans la boîte de dialogue affichée&#160;: <br /><br /><img src="../z_resources/images/02_captures/maj_wd_redemarrageiis.png" style="width: 345px;height: 153px;" /></p>
                                             </li>
                                         </ol>
                                         <p class="Resultat">&#160;</p>
-                                        <p class="Resultat">→ un message vous informe de la fin et du succès de la mise à jour&#160;: <br /><br /><img src="../Z_Resources/Images/02_Captures/WD53_MaJ_UpdateComplete.png" style="width: 338px;height: 130px;" /></p>
+                                        <p class="Resultat">→ un message vous informe de la fin et du succès de la mise à jour&#160;: <br /><br /><img src="../z_resources/images/02_captures/wd53_maj_updatecomplete.png" style="width: 338px;height: 130px;" /></p>
                                         <h2>Etape 4&#160;- Vérifier la mise à jour</h2>
                                         <ol>
                                             <li value="1">
-                                                <p class="Liste_num_1">Dans la page d'accueil de l'interface web d'administration de Watchdoc, vérifiez que le numéro de version a été mis à jour&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WD61_MMJ_VerifVersion.png" style="width: 700px;" /></p>
+                                                <p class="Liste_num_1">Dans la page d'accueil de l'interface web d'administration de Watchdoc, vérifiez que le numéro de version a été mis à jour&#160;:<br /><br /><img src="../z_resources/images/02_captures/wd61_mmj_verifversion.png" style="width: 700px;" /></p>
                                                 <p>&#160;</p>
                                             </li>
                                         </ol>
@@ -326,7 +326,7 @@
                                                 <p class="Liste_num_2">cliquez sur <strong>Vérifier la base de données</strong>.</p>
                                             </li>
                                         </ol>
-                                        <p class="Resultat">→ un message vous indique si Watchdoc parvient à contacter la base de données&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WD60_MaJ_VerifBDDStat.png" style="width: 739px;height: 433px;" /><br /><br /></p>
+                                        <p class="Resultat">→ un message vous indique si Watchdoc parvient à contacter la base de données&#160;:<br /><br /><img src="../z_resources/images/02_captures/wd60_maj_verifbddstat.png" style="width: 739px;height: 433px;" /><br /><br /></p>
                                         <h2>Etape 5 - Migrer les données</h2>
                                         <p>Le schéma de la base de données de Watchodc 5.4 et 6.0 a été modifié.&#160;Si vous partez d'une version antérieure à la v5.4, il est donc nécessaire d'effectuer une migration des données lors de la mise à jour.&#160;</p>
                                         <p>&#160;</p>
@@ -349,7 +349,7 @@
                                                 <p class="Liste_num_1">dans l'interface d'administration de Watchdoc, depuis le <strong>Menu Principal</strong>, section <strong>Configuration &gt; Configuration avancée &gt; Base de statistiques</strong>.<br /></p>
                                             </li>
                                             <li value="2">
-                                                <p class="Liste_num_1">Dans la section  <strong>Migration des bases de données</strong>, cliquez sur <strong>Démarrer la migration immédiatement</strong>&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/MAJ_WD_Maj_Mig_Demarrer_54.png" style="width: 567px;height: 112px;" /></p>
+                                                <p class="Liste_num_1">Dans la section  <strong>Migration des bases de données</strong>, cliquez sur <strong>Démarrer la migration immédiatement</strong>&#160;:<br /><br /><img src="../z_resources/images/02_captures/maj_wd_maj_mig_demarrer_54.png" style="width: 567px;height: 112px;" /></p>
                                                 <p>&#160;</p>
                                             </li>
                                         </ol>
@@ -364,7 +364,7 @@
                                         <h2>Etape 6 - Mettre à jour les autres serveurs du domaine</h2>
                                         <p>Si Watchdoc est installé dans un domaine (configuration master/slaves), il est nécessaire de mettre également à jour les serveurs slaves.&#160;</p>
                                         <p>Pour les versions antérieures à v6.1, mettez à jour chaque serveur slave qui dépend du master en suivant la procédure ci-dessus.&#160;</p>
-                                        <p>Une fois la v6.1 installée dans votre domaine, vous pouvez procéder à la mise à jour vers les versions supérieures à l'aide de l'updater de WSC : cet outil permet de propager et d'appliquer les mises à jour sur les serveurs du domaine une fois le master actualisé (cf.&#160;<a href="../F_WSC/WSC_Gestion_MettreAJour_Domaine.htm" target="_blank" title="Procédure de mise à jour" alt="Procédure de mise à jour">Mise à jour d'un domaine</a>).&#160;</p>
+                                        <p>Une fois la v6.1 installée dans votre domaine, vous pouvez procéder à la mise à jour vers les versions supérieures à l'aide de l'updater de WSC : cet outil permet de propager et d'appliquer les mises à jour sur les serveurs du domaine une fois le master actualisé (cf.&#160;<a href="../f_wsc/wsc_gestion_mettreajour_domaine.htm" target="_blank" title="Procédure de mise à jour" alt="Procédure de mise à jour">Mise à jour d'un domaine</a>).&#160;</p>
                                     </div>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

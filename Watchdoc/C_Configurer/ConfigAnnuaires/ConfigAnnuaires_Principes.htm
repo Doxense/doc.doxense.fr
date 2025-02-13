@@ -16,12 +16,11 @@
         <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
+        <link href="../../Skins/Fluid/stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Fluid/stylesheets/styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Fluid/stylesheets/tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Fluid/stylesheets/mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Fluid/stylesheets/print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <style>/*&lt;meta /&gt;*/
 
 .button.print-button
@@ -46,7 +45,7 @@
 
 .needs-pie
 {
-	behavior: url('../../Resources/Scripts/PIE-no-motw.htc');
+	behavior: url('../../resources/Scripts/PIE-no-motw.htc');
 }
 
 </style>
@@ -64,23 +63,24 @@
 
 .needs-pie
 {
-	behavior: url('../../Resources/Scripts/PIE-no-motw.htc');
+	behavior: url('../../resources/Scripts/PIE-no-motw.htc');
 }
 
 </style>
-        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        <link href="../../resources/stylesheets/mainstyles.css" rel="stylesheet" type="text/css" />
+        <script src="../../resources/Scripts/jquery.min.js" type="text/javascript">
         </script>
-        <script src="../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        <script src="../../resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
         </script>
-        <script src="../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        <script src="../../resources/Scripts/require.min.js" type="text/javascript" defer="defer">
         </script>
-        <script src="../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        <script src="../../resources/Scripts/require.config.js" type="text/javascript" defer="defer">
         </script>
-        <script src="../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        <script src="../../resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
         </script>
-        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        <script src="../../resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
         </script>
-        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        <script src="../../resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
         </script>
         <script type="text/javascript"> 
 			///*<![CDATA[*/
@@ -206,7 +206,7 @@
                                         <p>&#160;</p>
                                         <p>Watchdoc s'appuie sur le ou les annuaires existants de l'organisation en temps réel et ne nécessite pas leur duplication. Si votre organisation dispose d'un annuaire, il convient donc de le configurer, de sorte que <span class="mc-variable Document.Produit variable">Watchdoc</span> puisse y trouver vos utilisateurs.</p>
                                         <p>&#160;</p>
-                                        <p>Si votre organisation ne dispose pas d'annuaire propre, il est possible d'utiliser la base <strong>Invités</strong> (ou Guests) générée par défaut dans Watchdoc et fondé sur une base de données  (SQL Server ou PostgreSQL). Dans le cas où votre organisme dispose d'un annuaire, cet annuaire est exploité en priorité. La base <strong>Invités </strong>sert alors à inscrire les personnes de passage non-présentes dans l'annuaire de votre organisation et qui ont besoin d'imprimer (cf.&#160;<a href="../../F_WSC/WSC_Base_Invites_Presentation.htm" target="_blank" title="Lien vers l'article de présentation" alt="Lien vers l'article de présentation">Base Invités</a>).</p>
+                                        <p>Si votre organisation ne dispose pas d'annuaire propre, il est possible d'utiliser la base <strong>Invités</strong> (ou Guests) générée par défaut dans Watchdoc et fondé sur une base de données  (SQL Server ou PostgreSQL). Dans le cas où votre organisme dispose d'un annuaire, cet annuaire est exploité en priorité. La base <strong>Invités </strong>sert alors à inscrire les personnes de passage non-présentes dans l'annuaire de votre organisation et qui ont besoin d'imprimer (cf.&#160;<a href="../../f_wsc/wsc_base_invites_presentation.htm" target="_blank" title="Lien vers l'article de présentation" alt="Lien vers l'article de présentation">Base Invités</a>).</p>
                                         <p>&#160;</p>
                                         <h3>Types et rôles des annuaires</h3>
                                         <p>Les annuaires Watchdoc sont de différents types et répondent à des besoins divers&#160;: </p>
@@ -217,7 +217,7 @@
                                         </ul>
                                         <ul>
                                             <li>
-                                                <p class="Liste_puce_1" style="text-align: justify;"><strong>GUESTS :</strong> il s'agit d'un annuaire facultatif créé afin d'inscrire comme utilisateurs de Watchdoc des utilisateurs "invités", c'est-à-dire qui ne sont pas inscrits dans l'annuaire principal de l'organisation. Cet annuaire repose sur la base "Invités" gérée dans WSC (cf. <a href="../../F_WSC/WSC_Base_Invites_Presentation.htm" target="_blank" title="Lien vers l'article de présentation" alt="Lien vers l'article de présentation">Base Invités)</a>.</p>
+                                                <p class="Liste_puce_1" style="text-align: justify;"><strong>GUESTS :</strong> il s'agit d'un annuaire facultatif créé afin d'inscrire comme utilisateurs de Watchdoc des utilisateurs "invités", c'est-à-dire qui ne sont pas inscrits dans l'annuaire principal de l'organisation. Cet annuaire repose sur la base "Invités" gérée dans WSC (cf. <a href="../../f_wsc/wsc_base_invites_presentation.htm" target="_blank" title="Lien vers l'article de présentation" alt="Lien vers l'article de présentation">Base Invités)</a>.</p>
                                             </li>
                                         </ul>
                                         <ul>

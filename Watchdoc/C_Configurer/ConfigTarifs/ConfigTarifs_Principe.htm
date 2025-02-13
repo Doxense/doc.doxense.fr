@@ -16,12 +16,11 @@
         <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
+        <link href="../../Skins/Fluid/stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Fluid/stylesheets/styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Fluid/stylesheets/tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Fluid/stylesheets/mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Fluid/stylesheets/print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <style>/*&lt;meta /&gt;*/
 
 .button.print-button
@@ -46,7 +45,7 @@
 
 .needs-pie
 {
-	behavior: url('../../Resources/Scripts/PIE-no-motw.htc');
+	behavior: url('../../resources/Scripts/PIE-no-motw.htc');
 }
 
 </style>
@@ -64,23 +63,24 @@
 
 .needs-pie
 {
-	behavior: url('../../Resources/Scripts/PIE-no-motw.htc');
+	behavior: url('../../resources/Scripts/PIE-no-motw.htc');
 }
 
 </style>
-        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        <link href="../../resources/stylesheets/mainstyles.css" rel="stylesheet" type="text/css" />
+        <script src="../../resources/Scripts/jquery.min.js" type="text/javascript">
         </script>
-        <script src="../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        <script src="../../resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
         </script>
-        <script src="../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        <script src="../../resources/Scripts/require.min.js" type="text/javascript" defer="defer">
         </script>
-        <script src="../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        <script src="../../resources/Scripts/require.config.js" type="text/javascript" defer="defer">
         </script>
-        <script src="../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        <script src="../../resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
         </script>
-        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        <script src="../../resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
         </script>
-        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        <script src="../../resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
         </script>
         <script type="text/javascript"> 
 			///*<![CDATA[*/
@@ -198,15 +198,15 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor7"></a>
+                                        <h1><a name="aanchor8"></a>
                                             <MadCap:concept term="WD" />Watchdoc - Quotas - Principes</h1>
                                         <h2>Prérequis</h2>
-                                        <p>Les quotas s'appuyant sur un tarif de refacturation,  il est nécessaire d'avoir <a href="../ConfigTarifsCouts/ConfigTarifsSimples_Procedure.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">configuré au moins 1 tarif</a>  avant de configurer des quotas.</p>
+                                        <p>Les quotas s'appuyant sur un tarif de refacturation,  il est nécessaire d'avoir <a href="../configtarifscouts/configtarifssimples_procedure.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">configuré au moins 1 tarif</a>  avant de configurer des quotas.</p>
                                         <h3>Qu'est-ce qu'un quota ?</h3>
                                         <p>Dans Watchdoc, un quota est un crédit d'unités de valeurs dédié à l'impression et attribué à un utilisateur ou à un groupe d'utilisateurs. </p>
                                         <p>Les quotas reposent sur une base de données spécifique, nommée <strong><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term115">Watchdocpmv<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>nom attribué par défaut à la base de données (type sql) dédiée à la collecte des informations de quotas (crédit attribué à un utilisateur pour l'impression).</span></a></strong> par défaut (de type SQL<sup>®</sup>), déclarée lors de l'installation initiale de Watchdoc.</p>
                                         <p>&#160;</p>
-                                        <p>Le fonctionnement du quota  est défini à l'aide d'une règle de gestion (cf. <a href="../ConfigRegleGestion/ConfigRegleGestion_Procedure.htm#Rechargement" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Configurer les règles de gestion</a>).</p>
+                                        <p>Le fonctionnement du quota  est défini à l'aide d'une règle de gestion (cf. <a href="../configreglegestion/configreglegestion_procedure.htm#Rechargement" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Configurer les règles de gestion</a>).</p>
                                         <p>&#160;</p>
                                         <p>Lorsque les travaux d'impression sont facturables à l'utilisateur, le quota est associé à une devise. Il peut alors être utilisé pour régler des coûts de travaux d'impression différents.&#160;<br />Ce coût est défini par l'administrateur qui attribue un prix par page en fonction de divers critères (monochrome/couleur, format des feuilles&#160;; recto/verso et applications logicielles dont sont issus les documents).</p>
                                         <p>&#160;</p>
@@ -233,8 +233,8 @@
                                             </li>
                                         </ul>
                                         <h3>Recharger un quota</h3>
-                                        <p>Il est possible de configurer la manière dont est rechargé un quota (cf. <a href="../ConfigAvancee/ConfigAvancee_BaseQuotas.htm" target="_blank" title="Lien vers la procédure de configuration" alt="Lien vers la procédure de configuration">Configurer la base des Quotas</a>).</p>
-                                        <p>Les quotas peuvent être rechargés manuellement par l'administrateur ou automatiquement. <br />La fréquence de réinitialisation (rechargement) est configurable (cf.&#160;<a href="../ConfigRegleGestion/ConfigRegleGestion_Procedure.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Configurer une règle de gestion</a>).&#160;</p>
+                                        <p>Il est possible de configurer la manière dont est rechargé un quota (cf. <a href="../configavancee/configavancee_basequotas.htm" target="_blank" title="Lien vers la procédure de configuration" alt="Lien vers la procédure de configuration">Configurer la base des Quotas</a>).</p>
+                                        <p>Les quotas peuvent être rechargés manuellement par l'administrateur ou automatiquement. <br />La fréquence de réinitialisation (rechargement) est configurable (cf.&#160;<a href="../configreglegestion/configreglegestion_procedure.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Configurer une règle de gestion</a>).&#160;</p>
                                         <p>Si l'administrateur l'autorise à recharger son compte, l'utilisateur peut le faire depuis l'interface web <strong>Mon Compte</strong> ou depuis une station de rechargement ou un site web dédié (type PayBox<sup>®</sup>, par exemple).</p>
                                         <h2>Etapes de configuration</h2>
                                         <p>Pour configurer un quota, il convient : </p>
@@ -255,7 +255,7 @@
                                                 <p class="Liste_num_1">éditer le paiement automatique.</p>
                                             </li>
                                         </ol>
-                                        <p><a class="btn_video" href="../../V_Videos/Video_quotas.htm" target="_blank" title="Lien vers l'article de présentation" alt="Lien vers l'article de présentation">Voir le tutoriel Configuration des quotas d'impression.</a>
+                                        <p><a class="btn_video" href="../../v_videos/video_quotas.htm" target="_blank" title="Lien vers l'article de présentation" alt="Lien vers l'article de présentation">Voir le tutoriel Configuration des quotas d'impression.</a>
                                         </p>
                                     </div>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">

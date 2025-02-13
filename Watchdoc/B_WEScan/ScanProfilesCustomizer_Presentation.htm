@@ -16,12 +16,11 @@
         <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Fluid/stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/stylesheets/styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/stylesheets/tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/stylesheets/mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/stylesheets/print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <style>/*&lt;meta /&gt;*/
 
 .button.print-button
@@ -46,7 +45,7 @@
 
 .needs-pie
 {
-	behavior: url('../Resources/Scripts/PIE-no-motw.htc');
+	behavior: url('../resources/Scripts/PIE-no-motw.htc');
 }
 
 </style>
@@ -64,23 +63,24 @@
 
 .needs-pie
 {
-	behavior: url('../Resources/Scripts/PIE-no-motw.htc');
+	behavior: url('../resources/Scripts/PIE-no-motw.htc');
 }
 
 </style>
-        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        <link href="../resources/stylesheets/mainstyles.css" rel="stylesheet" type="text/css" />
+        <script src="../resources/Scripts/jquery.min.js" type="text/javascript">
         </script>
-        <script src="../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        <script src="../resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
         </script>
-        <script src="../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        <script src="../resources/Scripts/require.min.js" type="text/javascript" defer="defer">
         </script>
-        <script src="../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        <script src="../resources/Scripts/require.config.js" type="text/javascript" defer="defer">
         </script>
-        <script src="../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        <script src="../resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
         </script>
-        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        <script src="../resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
         </script>
-        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        <script src="../resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
         </script>
         <script type="text/javascript"> 
 			///*<![CDATA[*/
@@ -198,7 +198,7 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor199"></a>
+                                        <h1><a name="aanchor201"></a>
                                             <MadCap:concept term="WEScan" />ScanProfilesCustomizer - Créer ou modifier un profil de scan</h1>
                                         <h2>Principe</h2>
                                         <p>Un <p><strong>profil</strong> (de scan) est une somme de paramètres (format, couleur, orientation, type du document, etc.) définissant la manière dont un document est numérisé. <br />Enregistré dans un fichier JSON, le profil de scan peut être modifié à l'aide de l'exécutable <a href="#" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure" class="selected">ScanProfilesCustomizer</a>.<br /><strong>N.B.&#160;: </strong>dans un domaine, pour garantir la disponibilité des profils de scan sur tous les serveurs slaves en cas de panne de la base de données interserveur, il convient de dupliquer tous les fichiers JSON des profils de scan du serveur master sur les serveurs slaves.<br />Pour cela, copiez le dossier de profils de scan personnalisés (dans lequel vous avez enregistré vos profils de scan) de votre serveur master sur le(s) serveur(s) slave(s).</p></p>
@@ -221,7 +221,7 @@
                                                 <p>rendez-vous dans le dossier <strong>C:\Program Files\Doxense\Watchdoc</strong>, </p>
                                             </li>
                                             <li value="2">
-                                                <p>cliquez sur <strong>ScanProfiles Customizer.exe</strong> : <br /><br /><img src="../Z_Resources/Images/02_Captures/WEScan_Config_Profils_SPC_Interface.png" style="width: 700px;height: auto;" /></p>
+                                                <p>cliquez sur <strong>ScanProfiles Customizer.exe</strong> : <br /><br /><img src="../z_resources/images/02_captures/wescan_config_profils_spc_interface.png" style="width: 700px;height: auto;" /></p>
                                             </li>
                                         </ol>
                                         <p>&#160;</p>
@@ -233,7 +233,7 @@
                                             </li>
                                             <li value="2">
                                                 <p>sélectionnez le profil correspondant à la marque et la technologie du profil que vous voulez créer ;</p>
-                                                <p><span style="font-family: 'Wingdings'">è</span> le profil sélectionné est surligné dans la section <strong>Profiles</strong> et ses paramètres s'affichent dans la section <strong>Settings</strong> :<br /><br /><img src="../Z_Resources/Images/02_Captures/WEScan_Config_Profils_SPC_Select_Json.png" style="width: 700px;height: auto;" /></p>
+                                                <p><span style="font-family: 'Wingdings'">è</span> le profil sélectionné est surligné dans la section <strong>Profiles</strong> et ses paramètres s'affichent dans la section <strong>Settings</strong> :<br /><br /><img src="../z_resources/images/02_captures/wescan_config_profils_spc_select_json.png" style="width: 700px;height: auto;" /></p>
                                                 <p>&#160;</p>
                                             </li>
                                             <li value="3">
@@ -243,7 +243,7 @@
                                                 <p>dans la boîte <strong>Add</strong>..., saisissez dans le champ l'identifiant du nouveau profil :</p>
                                             </li>
                                             <li value="5">
-                                                <p>cliquez sur <strong>Create </strong>:<br /><br /><img src="../Z_Resources/Images/02_Captures/WEScan_Config_Profils_SPC_Create.png" style="width: 700px;height: auto;" /></p>
+                                                <p>cliquez sur <strong>Create </strong>:<br /><br /><img src="../z_resources/images/02_captures/wescan_config_profils_spc_create.png" style="width: 700px;height: auto;" /></p>
                                                 <p>&#160;</p>
                                             </li>
                                             <li value="6">
@@ -264,11 +264,11 @@
                                                 <p>&#160;</p>
                                             </li>
                                         </ol>
-                                        <p>Certains paramètres doivent respecter des contraintes listées dans la section <strong>Conditions to display this profile : settings that must be supported / that must not be supported .</strong> <br />Lorsque ces conditions ne sont pas respectées, un message d'information s'affiche.&#160;Sous cette fenêtre, un lien envoie vers la documentation des <a href="ScanProfilesCustomizer_Contraintes.htm" target="_blank" title="Lien vers la liste des contraintes" alt="Lien vers la liste des contraintes">Contraintes de configuration des profils de scan</a>.<br /><br /><img src="../Z_Resources/Images/02_Captures/WEScan_Config_Profils_SPC_Contraintes.png" style="width: 700px;height: auto;" /></p>
+                                        <p>Certains paramètres doivent respecter des contraintes listées dans la section <strong>Conditions to display this profile : settings that must be supported / that must not be supported .</strong> <br />Lorsque ces conditions ne sont pas respectées, un message d'information s'affiche.&#160;Sous cette fenêtre, un lien envoie vers la documentation des <a href="scanprofilescustomizer_contraintes.htm" target="_blank" title="Lien vers la liste des contraintes" alt="Lien vers la liste des contraintes">Contraintes de configuration des profils de scan</a>.<br /><br /><img src="../z_resources/images/02_captures/wescan_config_profils_spc_contraintes.png" style="width: 700px;height: auto;" /></p>
                                         <p>&#160;</p>
                                         <ol data-mc-continue="true">
                                             <li value="7">
-                                                <p>Une fois le profil configuré selon vos besoins, cliquez sur <strong>Save </strong>pour le sauvegarder&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WEScan_Config_Profils_SPC_Parametres.png" style="width: 700px;height: auto;" /><br /></p>
+                                                <p>Une fois le profil configuré selon vos besoins, cliquez sur <strong>Save </strong>pour le sauvegarder&#160;:<br /><br /><img src="../z_resources/images/02_captures/wescan_config_profils_spc_parametres.png" style="width: 700px;height: auto;" /><br /></p>
                                                 <p>&#160;</p>
                                             </li>
                                             <li value="8">
@@ -288,7 +288,7 @@
                                                 <p>Dans la balise &lt;wes...&gt;, notez le nom de l'instance correspondant à vos profils de scan (cf. ci-dessous) ;</p>
                                             </li>
                                             <li value="4">
-                                                <p>Sous la balise d'instance, copiez les balises &lt;override-path&gt;  &lt;/override-path&gt; et indiquez dans cette balise le chemin d'accès au nouveau fichier de configuration&#160;: <br /><br /><img src="WEScan_ProfilesCutomizer_Config.png" /></p>
+                                                <p>Sous la balise d'instance, copiez les balises &lt;override-path&gt;  &lt;/override-path&gt; et indiquez dans cette balise le chemin d'accès au nouveau fichier de configuration&#160;: <br /><br /><img src="wescan_profilescutomizer_config.png" /></p>
                                                 <p>&#160;</p>
                                             </li>
                                             <li value="5">
