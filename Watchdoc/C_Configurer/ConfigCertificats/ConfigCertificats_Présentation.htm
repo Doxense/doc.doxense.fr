@@ -16,11 +16,12 @@
         <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../Skins/Fluid/stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../Skins/Fluid/stylesheets/styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../Skins/Fluid/stylesheets/tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../Skins/Fluid/stylesheets/mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../Skins/Fluid/stylesheets/print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
         <style>/*&lt;meta /&gt;*/
 
 .button.print-button
@@ -45,7 +46,7 @@
 
 .needs-pie
 {
-	behavior: url('../../resources/Scripts/PIE-no-motw.htc');
+	behavior: url('../../Resources/Scripts/PIE-no-motw.htc');
 }
 
 </style>
@@ -63,24 +64,23 @@
 
 .needs-pie
 {
-	behavior: url('../../resources/Scripts/PIE-no-motw.htc');
+	behavior: url('../../Resources/Scripts/PIE-no-motw.htc');
 }
 
 </style>
-        <link href="../../resources/stylesheets/mainstyles.css" rel="stylesheet" type="text/css" />
-        <script src="../../resources/Scripts/jquery.min.js" type="text/javascript">
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
         </script>
-        <script src="../../resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        <script src="../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
         </script>
-        <script src="../../resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
         </script>
-        <script src="../../resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
         </script>
-        <script src="../../resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        <script src="../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
         </script>
-        <script src="../../resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
         </script>
-        <script src="../../resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
         </script>
         <script type="text/javascript"> 
 			///*<![CDATA[*/
@@ -208,11 +208,11 @@
                                         <p>&#160;</p>
                                         <p>Désormais, pour gérer les certificats, Watchdoc dispose d'une interface dédiée, plus simple à utiliser que WCM. Cet outil reste néanmoins opérationnel.</p>
                                         <p>&#160;</p>
-                                        <p><a name="Notif_certifs"></a>Par ailleurs, vous pouvez configurer une notification permettant d'informer l'administrateur dès que la date d'expiration d'un certificat approche ou dès que le certificat est expiré (cf. <a href="../confignotifs/confignotifs_procedure.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Configurer les notifications</a> et <a href="../confignotifs/confignotifs_evenmts_procedure.htm" target="_blank">Configurer les événements de la notification</a>). </p>
+                                        <p><a name="Notif_certifs"></a>Par ailleurs, vous pouvez configurer une notification permettant d'informer l'administrateur dès que la date d'expiration d'un certificat approche ou dès que le certificat est expiré (cf. <a href="../ConfigNotifs/ConfigNotifs_Procedure.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Configurer les notifications</a> et <a href="../ConfigNotifs/ConfigNotifs_Evenmts_Procedure.htm" target="_blank">Configurer les événements de la notification</a>). </p>
                                         <p>Dans une configuration en domaine, cette notification peut être répliquée depuis le serveur master (maître) vers les autres serveurs (esclaves).</p>
                                         <p>
                                             <br />
-                                            <img src="wd_config_certif_alerte.png" />
+                                            <img src="WD_Config_Certif_Alerte.png" />
                                         </p>
                                         <p>&#160;</p>
                                         <fieldset>Watchdoc n'a pas besoin de certificat ayant l'attibut "Autorité de certification". Pour des raisons de sécurité, nous ne recommandons pas d'importer de tels certificats dans le gestionnaire.&#160;</fieldset>
@@ -227,7 +227,7 @@
                                                 <p>dans la section <strong>Configuration</strong>, cliquez sur <strong>Configuration avancée</strong>. </p>
                                             </li>
                                             <li value="3">
-                                                <p>dans l'interface <strong>Configuration avancée,</strong>, cliquez sur <strong>Certificats </strong>:<br /><br /><img src="wd_config_certif_acces.png" style="width: 700px;height: auto;" /></p>
+                                                <p>dans l'interface <strong>Configuration avancée,</strong>, cliquez sur <strong>Certificats </strong>:<br /><br /><img src="WD_Config_Certif_Acces.png" style="width: 700px;height: auto;" /></p>
                                             </li>
                                         </ol>
                                         <p>&#160;</p>
@@ -236,7 +236,7 @@
                                         <p>L'interface est composée de 4 sections : </p>
                                         <ul>
                                             <li>
-                                                <p>la section <strong>Certificats </strong>affiche une liste les certificats disponibles.&#160;S'il existe plusieurs certificats dans la liste, la coche verte<img src="../../z_resources/images/02_captures/boutons/icon_coche_verte.png" />désigne le certificat courant qui sécurise les interfaces web via le serveur HTTP.</p>
+                                                <p>la section <strong>Certificats </strong>affiche une liste les certificats disponibles.&#160;S'il existe plusieurs certificats dans la liste, la coche verte<img src="../../Z_Resources/Images/02_Captures/Boutons/icon_Coche_verte.png" />désigne le certificat courant qui sécurise les interfaces web via le serveur HTTP.</p>
                                                 <ul>
                                                     <li>
                                                         <p>le bouton-radio permet de sélectionner un certificat pour en afficher les informations en-dessous ;</p>
@@ -247,13 +247,13 @@
                                                         <p>dans la colonne <strong>Est signé</strong> : </p>
                                                         <ul>
                                                             <li>
-                                                                <p>le logo <img src="wd_config_certif_logosigne.png" /> indique que le certificat n'est pas signé ;</p>
+                                                                <p>le logo <img src="WD_Config_Certif_LogoSigne.png" /> indique que le certificat n'est pas signé ;</p>
                                                             </li>
                                                             <li>
-                                                                <p>le logo <img src="wd_config_certif_logoautosigne.png" style="width: 22px;height: 24px;" /> indique que le certificat est auto-signé ;</p>
+                                                                <p>le logo <img src="WD_Config_Certif_LogoAutoSigne.png" style="width: 22px;height: 24px;" /> indique que le certificat est auto-signé ;</p>
                                                             </li>
                                                             <li>
-                                                                <p>le logo <img src="../../z_resources/images/02_captures/boutons/bouton_certificat_signe.png" style="width: 20px;height: 20px;" /> indique que le certificat est signé par une autorité de certification ;</p>
+                                                                <p>le logo <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Certificat_Signe.png" style="width: 20px;height: 20px;" /> indique que le certificat est signé par une autorité de certification ;</p>
                                                             </li>
                                                         </ul>
                                                     </li>
@@ -261,16 +261,16 @@
                                                         <p>dans la colonne <strong>Actions</strong> : </p>
                                                         <ul>
                                                             <li>
-                                                                <p>le bouton <img src="../../z_resources/images/02_captures/boutons/bouton_certificat_courant.png" /> permet de désigner l'un des certificats de la liste comme certificat courant (s'il n'y a qu'un certificat, le bouton est inactif)&#160;;</p>
+                                                                <p>le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Certificat_Courant.png" /> permet de désigner l'un des certificats de la liste comme certificat courant (s'il n'y a qu'un certificat, le bouton est inactif)&#160;;</p>
                                                             </li>
                                                             <li>
-                                                                <p>le bouton <img src="../../z_resources/images/02_captures/boutons/bouton_supprimer.png" style="width: 18px;height: 18px;" /> permet de supprimer un certificat ; </p>
+                                                                <p>le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Supprimer.png" style="width: 18px;height: 18px;" /> permet de supprimer un certificat ; </p>
                                                             </li>
                                                             <li>
-                                                                <p>le bouton permet <img src="../../z_resources/images/02_captures/boutons/bouton_enregistrer.png" style="width: 24px;height: 22px;" /> de télécharger le certificat ; </p>
+                                                                <p>le bouton permet <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Enregistrer.png" style="width: 24px;height: 22px;" /> de télécharger le certificat ; </p>
                                                             </li>
                                                             <li>
-                                                                <p>le bouton <img src="../../z_resources/images/02_captures/boutons/bouton_signer_certificat.png" style="width: 27px;height: 21px;" /> permet de signer le certificat ;</p>
+                                                                <p>le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Signer_Certificat.png" style="width: 27px;height: 21px;" /> permet de signer le certificat ;</p>
                                                             </li>
                                                         </ul>
                                                     </li>
@@ -283,7 +283,7 @@
                                                 <p>la section <strong>Génération d'un nouveau certificat</strong> permet de générer un nouveau certificat&#160;;</p>
                                             </li>
                                             <li>
-                                                <p>la section<strong> Import d'un certificat</strong> permet d'importer un certificat (généré ou fourni par une autorité de certification).<br /><br /><img src="wd_config_certif_presentation.png" style="width: 700px;height: auto;" /></p>
+                                                <p>la section<strong> Import d'un certificat</strong> permet d'importer un certificat (généré ou fourni par une autorité de certification).<br /><br /><img src="WD_Config_Certif_Presentation.png" style="width: 700px;height: auto;" /></p>
                                             </li>
                                         </ul>
                                         <p>&#160;</p>

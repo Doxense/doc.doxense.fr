@@ -16,11 +16,12 @@
         <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../Skins/Fluid/stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../Skins/Fluid/stylesheets/styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../Skins/Fluid/stylesheets/tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../Skins/Fluid/stylesheets/mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../Skins/Fluid/stylesheets/print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
         <style>/*&lt;meta /&gt;*/
 
 .button.print-button
@@ -45,7 +46,7 @@
 
 .needs-pie
 {
-	behavior: url('../resources/Scripts/PIE-no-motw.htc');
+	behavior: url('../Resources/Scripts/PIE-no-motw.htc');
 }
 
 </style>
@@ -63,24 +64,23 @@
 
 .needs-pie
 {
-	behavior: url('../resources/Scripts/PIE-no-motw.htc');
+	behavior: url('../Resources/Scripts/PIE-no-motw.htc');
 }
 
 </style>
-        <link href="../resources/stylesheets/mainstyles.css" rel="stylesheet" type="text/css" />
-        <script src="../resources/Scripts/jquery.min.js" type="text/javascript">
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
         </script>
-        <script src="../resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        <script src="../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
         </script>
-        <script src="../resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
         </script>
-        <script src="../resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
         </script>
-        <script src="../resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        <script src="../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
         </script>
-        <script src="../resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
         </script>
-        <script src="../resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
         </script>
         <script type="text/javascript"> 
 			///*<![CDATA[*/
@@ -200,14 +200,14 @@
                                         <p>Depuis le Menu principal de Watchdoc, lorsqu’on clique sur la section<strong> Configuration &gt; Imprimantes &amp; périphériques</strong> il peut arriver que le message d'erreur suivant s'affiche :<br /></p>
                                         <blockquote>
                                             <p style="font-family: 'Courier New';text-align: left;">"Error while calling method AdminDevicesList</p>
-                                            <p style="font-family: 'Courier New';text-align: left;">Description : Index was outside the bounds of the array."<br /><br /><img src="../z_resources/images/02_captures/ade_erreur_affichage_periph.png" /></p>
+                                            <p style="font-family: 'Courier New';text-align: left;">Description : Index was outside the bounds of the array."<br /><br /><img src="../Z_Resources/Images/02_Captures/ADE_Erreur_Affichage_Periph.png" /></p>
                                         </blockquote>
                                         <h2>Cause</h2>
                                         <p>Ce dysfonctionnement survient lorsque la redirection MSTSC des imprimantes est activée au niveau du serveur.</p>
                                         <h2>Résolution</h2>
                                         <p>Il convient donc de désactiver la redirection MSTSC des imprimantes au niveau du serveur.</p>
                                         <p>&#160;</p>
-                                        <p>GPEDIT.MSC ==&gt; Computer Configuration\Policies\Administrative Templates\Windows Components\Remote Desktop Services\Remote Desktop Session Host\Printer Redirection\Do Not allow client printer redirection. (enable)<br /><img src="../z_resources/images/02_captures/ade_erreur_mstsc.png" style="width: 700px;height: auto;" /></p>
+                                        <p>GPEDIT.MSC ==&gt; Computer Configuration\Policies\Administrative Templates\Windows Components\Remote Desktop Services\Remote Desktop Session Host\Printer Redirection\Do Not allow client printer redirection. (enable)<br /><img src="../Z_Resources/Images/02_Captures/ADE_Erreur_MSTSC.png" style="width: 700px;height: auto;" /></p>
                                         <p>&#160;</p>
                                     </div>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
