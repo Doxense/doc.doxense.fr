@@ -3,6 +3,7 @@
 let blockNews = document.querySelector('.doc_news--ul');
 
 let arrayContent = [
+	
 {
 	date: "20 février 2025",
 	link:"/Watchdoc/Content/A_Getting_Started/Release_610.htm",
