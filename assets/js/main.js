@@ -11,12 +11,12 @@ let arrayContent = [
 {
 	date: "11 février 2025",
 	link:"/ScanCare/C_Release_Notes/Release_Notes.htm",
-    content: "nouvelle version de Watchdoc ScanCare 9.10.625"
+	content: "nouvelle version de Watchdoc ScanCare 9.10.625"
 },
 {
 	date: "06 février 2025",
 	link:"/Watchdoc/Content/A_Getting_Started/Release_610.htm",
-    content: "nouvelles versions de Watchdoc et Console de Supervision 6.1.0.5150, ainsi que Watchdoc Print Client for Windows 7.0.4723"
+	content: "nouvelles versions de Watchdoc et Console de Supervision 6.1.0.5150, ainsi que Watchdoc Print Client for Windows 7.0.4723"
 },
 {	
 	date: "09 janvier 2025",
