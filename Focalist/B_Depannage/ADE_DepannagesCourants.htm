@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr-fr" xml:lang="fr-fr" class="_Skins_HTML5_Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="Dépannage" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr-fr" xml:lang="fr-fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="Dépannage" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
@@ -79,8 +79,8 @@
     <body>
         <div class="foundation-wrap off-canvas-wrapper">
             <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
-                <aside class="off-canvas position-left" role="navigation" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
-                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Retour" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-left is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                <aside class="off-canvas position-right" role="navigation" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Retour" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
                     </ul>
                 </aside>
                 <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
@@ -188,7 +188,7 @@
                                         </div>
                                     </div>
                                     <div class="nocontent">
-                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Fil d'Ariane" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
+                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
                                     <div role="main" id="mc-main-content">
@@ -209,47 +209,63 @@
                                             </li>
                                         </ul>
                                         <p class="BodyText_1">&#160;</p>
-                                        <h2><a name="_bookmark26"></a><span class="span_6">Problème</span> <span class="span_6">de</span> <span class="span_6">certificat</span> <span class="span_6">à</span> <span class="span_6">travers</span> <span class="span_6">une</span> <span class="span_6">passerelle</span> <span class="span_7">Internet</span></h2>
-                                        <p class="BodyText_1">&#160;</p>
-                                        <p class="BodyText_21">Certaines passerelles Internet substituent les certificats SSL utilisés pour sécuriser le connexion. Dans ce cas on peut trouver ce genre de message dans le fichier log :</p>
-                                        <p class="BodyText_1">&#160;</p>
-                                        <p class="p_14"><span class="span_11">oct.</span> <span class="span_11">11,</span> <span class="span_11">2021</span> <span class="span_11">11:56:19</span> <span class="span_11">AM</span> <span class="span_11">com.princity.connector.client.websocket.ConnectorClient</span> <span class="span_11">connect </span><span class="span_13">GRAVE: Cannot connect to server</span></p>
-                                        <p class="p_15"><span class="span_11">java.util.concurrent.ExecutionException:</span> <span class="span_11">javax.websocket.DeploymentException:</span> <span class="span_13">Connection</span> <span class="span_16">failed.</span></p>
-                                        <p class="p_16">...</p>
-                                        <p class="p_5"><span class="span_11">Caused</span> <span class="span_11">by:</span> <span class="span_11">javax.net.ssl.SSLHandshakeException:</span> <span class="span_13">General</span> <span class="span_13">SSLEngine</span> <span class="span_16">problem</span></p>
-                                        <p class="p_16">...</p>
-                                        <p class="p_5"><span class="span_13">unable</span> <span class="span_13">to find valid</span> <span class="span_13">certification</span> <span class="span_13">path</span> <span class="span_13">to</span> <span class="span_13">requested</span> <span class="span_16">target</span></p>
-                                        <p class="BodyText_29">&#160;</p>
-                                        <p class="BodyText_30">&#160;</p>
-                                        <p class="BodyText_20">Pour éviter ce problème, ajoutez la ligne suivante dans le fichier <span class="span_9">agent.config</span> à la suite des lignes existantes :</p>
-                                        <p class="BodyText_1">&#160;</p>
-                                        <h4 class="Heading4_1">sslTrustAll=true</h4>
-                                        <p class="BodyText_1">
-                                            <img src="../Resources/Images/FL_MAP_InstallationAgentReseauWindows_FR/Dépannage_3.jpg" alt="Une image contenant texte  Description générée automatiquement" class="img_23" style="width: 686px;height: 191px;" />
-                                            <br />
-                                        </p>
-                                        <p class="BodyText_31">&#160;</p>
-                                        <p class="BodyText_1">
-                                            <img src="../Resources/Images/FL_MAP_InstallationAgentReseauWindows_FR/Dépannage_4.jpg" alt="Une image contenant texte  Description générée automatiquement" class="img_24" />
-                                            <br />
-                                        </p>
-                                        <p class="p_17">&#160;</p>
+                                        <h2><a name="_bookmark26"><span class="span_6">Utiliser</span> <span class="span_6">une</span> <span class="span_6">passerelle</span> <span class="span_7">Internet (proxy)</span></a>
+                                        </h2>
+                                        <p>Pour utiliser la passerelle web, ajoutez le fichier de configuration dans le dossier focalist-agent / config :</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p> Ouvrez l'application TextEdit</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Cliquez sur<strong> Nouveau document</strong></p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Insérer la ligne suivante avec l'adresse IP ou le nom d'hôte : <br />proxyHost = &lt;adresse de la passerelle web&gt;</p>
+                                                <p>ex : proxyHost = 165.212.24.11</p>
+                                                <p>proxyHost = justin.biber.it </p>
+                                            </li>
+                                        </ol>
+                                        <ol data-mc-continue="true">
+                                            <li value="4">
+                                                <p>Si et seulement si cette passerelle nécessite une authentification de l'utilisateur, ajoutez les lignes suivantes:</p>
+                                                <p>proxyUser=&lt;identifiant de l'utilisateur&gt;</p>
+                                                <p>proxyPassword=&lt;mot de passe&gt;</p>
+                                                <p>ex : proxyUser = Hatsune.Miku</p>
+                                                <p>proxyPassword = HatsuneMiku</p>
+                                                <p>Note : ce mot de passe sera crypté pendant l'installation de l'agent. </p>
+                                            </li>
+                                        </ol>
+                                        <ol data-mc-continue="true">
+                                            <li value="5">
+                                                <p>Si la passerelle modifie les certificats SSL, ajoutez la ligne suivante:</p>
+                                                <p>sslTrustAll = true</p>
+                                            </li>
+                                            <li value="6">
+                                                <p>Sauvegardez le fichier créé, en le renommant <strong>agent.config</strong> dans le dossier focalist-agent / config</p>
+                                            </li>
+                                            <li value="7">
+                                                <p>N'oubliez pas de supprimer l'extension .txt si elle a été ajoutée par défaut.</p>
+                                            </li>
+                                        </ol>
                                         <h2><a name="_bookmark27"></a><span class="span_6">Utilisation</span> <span class="span_6">d'un</span> <span class="span_6">compte</span> <span class="span_6">de</span> <span class="span_7">service</span></h2>
-                                        <p class="BodyText_1">&#160;</p>
                                         <p class="BodyText_32">Si la passerelle Internet n'ouvre pas l'accès de l'agent au serveur FOCALIST, c'est peut-être qu'elle n'arrive à authentifier l'ordinateur demandeur. Dans ce cas, il faut exécuter l'agent sous un compte de service connu de l'annuaire Active Directory.</p>
                                         <p class="BodyText_1">&#160;</p>
-                                        <p class="BodyText_33">Lancez le module d'administration des Services en tapant <span class="span_9">services.msc</span> dans le champ de recherche du bureau. Faites dérouler la liste des services jusqu'à la ligne <span class="span_9">focalist-agent</span>, faites un clic droit pour afficher les <span class="span_9">Propriétés </span>du service. Dans l'onglet Connexion, décochez l'option <span class="span_9">Compte système local </span>dans et renseignez les compte et mot de passe à utiliser dans l'option <span class="span_9">Ce compte </span>:</p>
+                                        <p class="BodyText_33">Lancez le module d'administration des Services en tapant <span class="span_9">services.msc</span> dans le champ de recherche du bureau. Faites dérouler la liste des services jusqu'à la ligne <span class="span_9">focalist-agent</span>, faites un clic droit pour afficher les <span class="span_9">Propriétés </span>du service. Dans l'onglet Connexion, décochez l'option <span class="span_9">Compte système local </span>dans et renseignez les compte et mot de passe à utiliser dans l'option <span class="span_9"><strong>Ce compt</strong><samp>e </samp></span>:</p>
+                                        <p class="BodyText_33">&#160;</p>
                                         <p class="BodyText_1">
                                             <img src="../Resources/Images/FL_MAP_InstallationAgentReseauWindows_FR/Dépannage_5.jpg" alt="Une image contenant texte  Description générée automatiquement" class="img_25" style="width: 691px;height: 368px;" />
                                             <br />
                                         </p>
                                         <p class="BodyText_1">&#160;</p>
                                         <p class="BodyText_32">Les paramètres seront fournis par l'administrateur système du client. En attendant vous pouvez utiliser les identifiants Windows utilisés pour se connecter à cet ordinateur, mais cela n'est pas recommandé, car en cas de changement d'affectation ou de mot de passe, la connexion ne fonctionnera plus.</p>
-                                        <p class="BodyText">&#160;</p>
                                         <p class="BodyText_1">&#160;</p>
                                         <h2><a name="_bookmark28"></a><span class="span_6">Autre</span> <span class="span_6">installation</span> <span class="span_6">en</span> <span class="span_7">cours</span></h2>
-                                        <p class="BodyText_1">&#160;</p>
                                         <p class="BodyText_7">Si la procédure d'installation échoue, vérifiez que vous n'avez pas lancé plusieurs installations en parallèle. Le code d'erreur associé est 1603.</p>
+                                        <p class="BodyText_7">&#160;</p>
+                                        <h2>Compte bloqué</h2>
+                                        <p>Il arrive qu'un compte soit bloqué après une tentative de connexion infructueuse.</p>
+                                        <p>Il se peut que ce soit parce que le compte utilisateur n'est pas actif.&#160;</p>
+                                        <p>Dans ce cas, il convient que l’administrateur vérifie le compte de l'utilisateur depuis l'onglet Réglages &gt;&#160;Utilisateurs &gt;&#160;Editer &gt; Activer (cf.&#160;<a href="../A_Admin_Manuel/Reglages.htm#Utilisateurs" target="_blank">Réglages Utilisateur</a>)</p>
                                     </div>
                                 </div>
                             </div>
