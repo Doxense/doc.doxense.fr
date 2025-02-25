@@ -1,1 +1,1 @@
-define({r:0.5,st:'Stem',n:1,t:[0],m:[],u:['../A_Admin_Manuel/Entreprises.htm'],s:['0','lequel'],p:[['0',13],['connecté',17],['en',4],['la',10],['pour',4],['séparer',5]]});
+define({r:0.5,st:'Stem',n:1,t:[0],m:[],u:['../A_Admin_Manuel/Entreprises.htm'],s:['0','lesquel'],p:[['0',13],['connectés',13],['en',10],['le',1],['pouvez',3],['terminé',4]]});
