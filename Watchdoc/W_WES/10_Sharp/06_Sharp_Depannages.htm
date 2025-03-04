@@ -219,6 +219,8 @@
                                                     </li>
                                                     <li class="tree-node"><a href="#WESSharpImpressionimpossibledepuisunefilevirtuelle">WES Sharp - Impression impossible depuis une file virtuelle  </a>
                                                     </li>
+                                                    <li class="tree-node"><a href="#MessagederreurImpossibledejoindreleserveurdauth">Message d'erreur - Impossible de joindre le serveur d'auth.</a>
+                                                    </li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -452,8 +454,28 @@
                                                 <p>&#160;</p>
                                             </li>
                                             <li value="8">
-                                                <p>Cliquez sur OK pour valider ce paramétrage.</p>
+                                                <p>Cliquez sur <b>OK</b> pour valider ce paramétrage.</p>
                                             </li>
+                                        </ol>
+                                        <hr width="100%" size="0" align="center" />
+                                        <h2 id="MessagederreurImpossibledejoindreleserveurdauth" data-magellan-target="MessagederreurImpossibledejoindreleserveurdauth">Message d'erreur - Impossible de joindre le <a name="serveur_d'auth"></a>serveur d'auth.</h2>
+                                        <p><span style="font-size: 14pt; font-weight: bold; color: #000000;">Contexte</span>
+                                        </p>
+                                        <p>Alors que tous les prérequis d'installation sont respectés et que le WES&#160;a été installé sans problème sur des modèles v.6, le message d'erreur "Impossible de joindre le serveur d'auth." s'affiche sur le périphérique d'impression quand un utilisateur tente de s'identifier.</p>
+                                        <p>&#160;</p>
+                                        <p><b style="font-size: 14pt; color: #000000;">Cause</b>
+                                        </p>
+                                        <p>Le dysfonctionnement provient d'une configuration sur le périphérique d'impression : lors de l'installation du WES, le paramètre "Activer l'Authentification hors-ligne" est activée.<br /></p>
+                                        <p>&#160;</p>
+                                        <p><b style="color: #000000; font-size: 14pt;">Résolution</b>
+                                        </p>
+                                        <p>Après avoir installé le WES,</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>rendez-vous dans l'interface de configuration du périphérique ;</p>
+                                            </li>
+                                            <li style="font-size: 12pt;" value="2">sous l'onglet <b>Réglages système</b>, cliquez sur <b>Réglages d'authentification</b> &gt;&#160;<b>Réglages par défaut</b></li>
+                                            <li style="font-size: 12pt;" value="3">dans la section <strong>Paramètres d'utilisation des Informations d'authentificatio</strong>n, décochez la case <strong>Activer l'authentification Hors-Ligne avec les Informations utilisateur stockées...<br /><br /><img src="ADE_WES_Sharp_Authent.png" style="width: 700px;height: auto;" /></strong></li>
                                         </ol>
                                     </div>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">

@@ -559,6 +559,13 @@
                                             </div>
                                         </div>
                                         <p>&#160;</p>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false">Les pages des documents numérisés ne sont pas classées dans l'ordre</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> lorsqu'un utilisateur numérise un document comportant plusieurs pages, ces pages ne sont pas classées dans l'ordre.<br /><strong>Cause :</strong> si le paramètre Nom du fichier n'est pas modifié dans la destination de scan, le fichier numérisé portera le nom Scan et ses occurences Scan, Scan (1), Scan (2), etc. Comme Windows utilise le tri ASCII, Scan (1) est considéré comme le premier dans la liste, avant Scan.</p>
+                                                <p><strong>Résolution :</strong> il convient de modifier le paramètre <strong>Nom de fichier</strong> pour lui attribuer une variable permettant le tri, comme $LONGDATE, par exemple, qui tiendra compte de l'heure, de la minute et la seconde de numérisation de la page (cf.&#160;<a href="../C_Configurer/ConfigWEScan/WEScan_Config_Profil_DestScanToMe.htm#Nom_du_fichier" target="_blank">Configurer une destination de scan</a>).&#160;</p>
+                                            </div>
+                                        </div>
+                                        <p>&#160;</p>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false">Taille de fichier dépassée.</a></span>
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> après envoi d'un document scanné avec WEScan, l'utilisateur reçoit un mail l'informant que la taille du fichier est dépassée et que le document scanné n'a pas été envoyé.</p>
@@ -850,6 +857,15 @@
                                         </div>
                                         <p>&#160;</p>
                                         <h3 id="WESSharp" data-magellan-target="WESSharp"><a name="WES_Sharp"></a>WES&#160;Sharp</h3>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false">WES Sharp. Message d'erreur  : Impossible de joindre le serveur d'auth.</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> alors que le WES&#160;a été correctement installé sur un modèle de périphérique v.6, le message Impossible de joindre le serveur d'auth. s'affiche lorsqu'un utilisateur tente de s'identifier sur le périphérique.</p>
+                                                <p> </p>
+                                                <p><strong>Cause :</strong> un paramétrage relatif à l'authentification est activé lors de l'installation.&#160;</p>
+                                                <p><strong>Résolution :</strong> une fois le WES&#160;installé, il est nécessaire de modifier un paramètre dans la configuration du périphérique d'impression (cf. <a href="../W_WES/10_Sharp/06_Sharp_Depannages.htm#serveur_d'auth" target="_blank" alt="Lien vers l'article de dépannage WES Sharp - Applications non-installées" title="Lien vers l'article de dépannage WES Sharp - Applications non-installées">WES Sharp - Impossible de joindre le serveur auth.</a>).</p>
+                                            </div>
+                                        </div>
+                                        <p>&#160;</p>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false">WES Sharp. Installation du WES&#160;impossible - WES Java request to [IP Adress] failed with statuts.&#160; 404 Not Found Login failed (check credentials)</a></span>
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> ce message d'erreur apparaît dans le rapport d'installation du WES sur les périphériques Sharp MX-M2651, MX-M3051, MX-M3551, MX-M4051, MX-M5051 ou MX-M605.</p>

@@ -206,98 +206,134 @@
                                         <p>Pour permettre la gestion des homonymes,</p>
                                         <ul>
                                             <li>
-                                                <p class="Liste_puce_1"> il est impératif que le pilote (driver) du périphérique soit capable d'inscrire le domaine de l'utilisateur dans le fichier de spool ;</p>
+                                                <p class="Liste_puce_1">il est préférable que le pilote (driver) du périphérique soit capable d'inscrire le domaine de l'utilisateur dans le fichier de spool ;</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1"> si le domaine n'est pas inscrit dans le spool, il est possible de configurer la gestion de l'homonymie uniquement sur des périphériques associés à un même domaine ;</p>
                                             </li>
                                             <li>
                                                 <p class="Liste_puce_1">il est nécessaire d'établir un audit de faisabilité tenant compte du contexte technique et organisationnel dans lequel la problématique d'homonymie s'inscrit (architecture réseau, marques et modèles des périphériques, nombre d'annuaires, politique d'impression, etc.).</p>
                                             </li>
                                         </ul>
                                         <h2>Principe</h2>
-                                        <p>Généralement, lors de la création des comptes dans un annuaire (domaine), l'administrateur réseau différencie les utilisateurs qui portent le même nom en ajoutant l'initiale de leur prénom dans le login (ou l'adresse mail). </p>
-                                        <p>Ainsi, Adrien Dupont a le login a.dupont et Emma Dupont a le login e.dupont. Et si les initiales des prénoms sont identiques, l'administrateur trouve un élément permettant de discriminer les comptes (par exemple, Alexandre Dupont, arrivé après Adrien, se verra attribuer le compte al.dupont ou a.dupont2).</p>
+                                        <p>Généralement, lors de la création des comptes dans un annuaire (domaine), l'administrateur réseau différencie les utilisateurs qui portent le même nom en ajoutant l'initiale de leur prénom dans le login (ou l'adresse mail). Ainsi, Adrien Dupont a le login a.dupont et Emma Dupont a le login e.dupont. Et si les initiales des prénoms sont identiques, l'administrateur trouve un élément permettant de discriminer les comptes (par exemple, Alexandre Dupont, arrivé après Adrien, se verra attribuer le compte al.dupont ou a.dupont2).</p>
                                         <p>&#160;</p>
-                                        <p>Chaque utilisateur peut ainsi imprimer ses documents sans ambiguïté.&#160;</p>
+                                        <p>Chaque utilisateur peut ainsi s'identifier sur un WES&#160;sans être confondu&#160;avec un utilisateur portant le même nom.</p>
                                         <p>&#160;</p>
-                                        <p>Or, il arrive que l'homonymie n'ait pas été anticipée (rare) ou, plus fréquemment, qu'il soit nécessaire de fusionner en un seul annuaire plusieurs annuaires distincts. C'est le cas lors du rapprochement de plusieurs entreprises qui mutualisent leurs ressources informatiques.</p>
+                                        <p>Or, il arrive que:</p>
+                                        <ul>
+                                            <li>
+                                                <p> l'homonymie n'ait pas été anticipée (rare) </p>
+                                            </li>
+                                            <li>
+                                                <p>ou, plus fréquemment, qu'il soit nécessaire de fusionner  plusieurs annuaires distincts en un seul annuaire. C'est le cas lors du rapprochement de plusieurs entreprises qui mutualisent leurs ressources informatiques.</p>
+                                            </li>
+                                        </ul>
                                         <p>&#160;</p>
-                                        <p>Dans ce cas de figure, il risque d'y avoir confusion en termes de gestion des impressions si aucune modification n'est possible au niveau des comptes utilisateurs.&#160;</p>
-                                        <p>En effet, lors du traitement des impressions par Watchdoc, les comptes utilisateurs étant tous versés dans l'annuaire META, deux comptes homonymes ne peuvent plus être distingués l'un de l'autre car leur domaine (annuaire) initial est  remplacé par le nom de domaine META. </p>
+                                        <p>Dans ce cas de figure, s'il n'est pas possible de modifier les comptes utilisateurs (SAMAccountName), la fusion des annuaires dans l'annuaire unique META&#160;de Watchdoc risque de générer des homonymes.&#160;</p>
                                         <p>&#160;</p>
-                                        <p>Ne pas tenir compte de l'homonymie exposerait les utilisateurs au risque de voir leurs demandes d'impressions débloquées par leur homonyme ce qui, pour certains documents sensibles, poserait problème.</p>
-                                        <p>&#160;</p>
-                                        <p>A partir de la v5.2, Watchdoc  intègre une fonction permettant de définir les différentes manières de gérer les domaines afin de tenir compte des homonymes.</p>
-                                        <fieldset>L'homonymie évoquée ici n'est pas une homonymie pure portant sur des utilisateurs ayant les mêmes prénoms et nom, mais sur l'homonymie des comptes utilisateurs plus précisément (Adrien ou Alice Dupont, qui ne sont pas des homonymes, possèdent tous deux un compte a.dupont).&#160;</fieldset>
-                                        <p style="text-align: left;">
-                                            <img src="../Z_Resources/Images/03_Schemas/WD52_SCH_Homonymie.png" style="height: auto;width: 700px;" />
-                                            <br /><i>Cas d'une homonymie de comptes après la fusion de deux annuaires en un seul</i>
+                                        <p>L'homonymie évoquée ici n'est pas une homonymie pure portant sur des utilisateurs ayant les mêmes prénoms et noms, mais sur l'homonymie des comptes utilisateurs (SAMAccount Name). Ainsi, Adrien ou Alice Dupont, qui ne sont pas des homonymes, possèdent tous deux un compte (SAMAccoutnName) a.dupont similaire.&#160;</p>
+                                        <p>
+                                            <br />
+                                            <img src="../Z_Resources/Images/03_Schemas/Homonymie.png" style="width: 700px;height: auto;" />
                                         </p>
-                                        <p style="text-align: left;">
+                                        <p>&#160;</p>
+                                        <p>&#160;</p>
+                                        <p>Si l'entreprise A d'Adrien Dupont fusionne avec l'entreprise B d'Alice,  deux comptes <strong>a.dupont</strong> seront présents dans l'annuaire META de l'entreprise C née de cette fusion.&#160;Ne pas tenir compte de l'homonymie exposerait les utilisateurs au risque de débloquer des impressions appartenant à un utilisateur homonyme. Ce qui, pour certains documents sensibles, poserait problème :</p>
+                                        <p>&#160;</p>
+                                        <p> <img src="../Z_Resources/Images/03_Schemas/Homonymie3.png" style="width: 700px;height: auto;" /></p>
+                                        <p>
                                             <br />
-                                            <img src="../Z_Resources/Images/03_Schemas/WD52_SCH_HomonymieDomaines.png" style="height: auto;width: 700px;" />
-                                            <br /><i>Résolution du problème d'homonymie de comptes après la fusion de deux annuaires grâce au domaine</i>
-                                            <br />
+                                        </p>
+                                        <p>Pour résoudre ce problème, Watchdoc  intègre une fonction permettant d'ajouter un domaine au compte utilisateur dans l'annuaire META afin de distinguer les comptes homonymes.</p>
+                                        <p>&#160;</p>
+                                        <p>
+                                            <img src="../Z_Resources/Images/03_Schemas/Homonymie4.png" style="width: 700px;height: auto;" />
                                         </p>
                                         <h2>Procédure</h2>
-                                        <p>Pour activer la gestion de l'homonymie dans Watchdoc, il est nécessaire d'activer la gestion dans l'annuaire META (et dans CARDS&#160;si vous utilisez cet annuaire), puis de configurer les files ou groupes de files pour préciser le mode de gestion des homonymes.</p>
-                                        <p>&#160;</p>
+                                        <p>Pour activer la gestion de l'homonymie dans Watchdoc, il est nécessaire :</p>
                                         <ol>
                                             <li value="1">
-                                                <p class="Liste_num_1">depuis le <strong>Menu principal</strong> de Watchdoc, section <strong>Exploitation</strong>, cliquez sur <strong>Annuaires utilisateurs</strong> ; </p>
+                                                <p>de configurer l'<b>annuaire META</b> pour le préparer à gérer des homonymes (et dans CARDS&#160;si vous utilisez cet annuaire) ; </p>
                                             </li>
                                             <li value="2">
-                                                <p class="Liste_num_1">dans la liste des annuaires, cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Modifier.png" style="width: 17px;height: 18px;" /> de l'annuaire <strong>META&#160;</strong>pour en éditer les propriétés&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/Config_Annuaire_META_Homonymie_Acces.png" style="width: 700px;" /></p>
+                                                <p> de configurer les <b>files </b>(ou groupes de files) pour préciser le mode de gestion des homonymes.</p>
+                                            </li>
+                                        </ol>
+                                        <h3>Configurer l'annuaire META</h3>
+                                        <ol>
+                                            <li value="1">
+                                                <p class="Liste_num_1">Depuis le <strong>Menu principal</strong> de Watchdoc, section <strong>Exploitation</strong>, cliquez sur <strong>Annuaires utilisateurs</strong>. </p>
+                                            </li>
+                                            <li value="2">
+                                                <p class="Liste_num_1">Dans la liste des annuaires, éditez les propriétés de l'annuaire META en cliquant sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Modifier.png" style="width: 17px;height: 18px;" />&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/Config_Annuaire_META_Homonymie_Acces.png" style="width: 700px;" /></p>
                                                 <p>&#160;</p>
                                             </li>
                                         </ol>
                                         <ol data-mc-continue="true">
                                             <li value="3">
-                                                <p class="Liste_num_1">dans l'interface <strong>Configuration de l'annuaire</strong>, section <strong>Sous-annuaires</strong>, cochez la case <strong>Conserver le domaine initial des utilisateurs</strong> (afin de ne pas remplacer le domaine initial par le domaine META, ce qui risquerait de créer des homonymes impossibles à discriminer (EntA\a.dupont et EntB\a.dupont ne deviennent pas tous deux META\a.dupont) ;</p>
+                                                <p class="Liste_num_1">dans l'interface <strong>Configuration de l'annuaire</strong>, section <strong>Sous-annuaires</strong>, cochez la case <strong>Conserver le domaine initial des utilisateurs</strong>.&#160;Ainsi, le domaine initial n'est pas remplacé par le domaine META et on évite de créer des homonymes impossibles à discriminer (par exemple, EntA\a.dupont et EntB\a.dupont pourraient devenir tous deux META\a.dupont si on ne conserve pas le domaine initial) ;</p>
                                             </li>
                                             <li value="4">
-                                                <p class="Liste_num_1">cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Valider.png" style="width: 25px;height: 24px;" /> pour valider la configuration de l'annuaire <strong>META</strong>&#160;;</p>
+                                                <p class="Liste_num_1">cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Valider.png" style="width: 25px;height: 24px;" /> pour valider la configuration de l'annuaire <strong>META.</strong></p>
                                             </li>
+                                        </ol>
+                                        <h3>Configurer la file (ou groupe de files)</h3>
+                                        <ol data-mc-continue="false">
+                                            <li value="1">
+                                                <p class="Liste_num_1">Depuis le <strong>Menu principal, </strong>section <strong>Exploitation</strong>, cliquez sur <strong>Files d'impression.</strong></p>
+                                            </li>
+                                            <li value="2">
+                                                <p class="Liste_num_1">Dans la liste <strong>Files d'impression</strong>, sélectionnez soit le groupe de files, soit la file à configurer.&#160;</p>
+                                                <p class="Liste_num_1">Si vous choisissez un groupe de files sa configuration s'appliquera à l'ensemble des files incluses dans ce groupe.&#160;Vous pourrez cependant modifier le paramétrage de chaque file ultérieurement.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p class="Liste_num_1"> Cliquez sur le bouton  <strong>Editer les propriétés</strong> <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_EditerProprietes.png" style="width: 26px;height: 30px;" />.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p class="Liste_num_1"> Dans l'interface <strong>Propriétés de la file </strong>(ou propriétés du groupe)<strong>,</strong> section <strong>Mode Expert</strong>, configurez le paramètre <strong>Domaine. </strong>Cinq options sont présentées, qui dépendent grandement du contexte dans lequel est installé Watchdoc et de la capacité du pilote à inscrire le domaine dans le spool :</p>
+                                                <p class="Liste_num_1">&#160;</p>
+                                                <p class="Liste_num_1">
+                                                    <img src="../Z_Resources/Images/02_Captures/WD_FPR_Homonymie_Domaine.png" />
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_num_1"><strong>Utiliser le même domaine que le groupe</strong> (paramètre uniquement disponible pour une file)&#160;: si la file appartient à un groupe, sélectionnez cette option si vous souhaitez que la file hérite du domaine attribué à ce groupe.</p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Ignorer le domaine du spool et toujours utiliser le domaine par défaut </strong>: cochez cette case pour ne pas tenir compte du domaine initial. Il s'agit du paramètre par défaut.</p>
+                                                        <p>Dans ce cas, comme les comptes enregistrés dans l'annuaire META dépendent tous du domaine META, les homonymes ne seront pas détectés. </p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_num_1"><strong>Utiliser le domaine du spool si présent, utiliser le domaine par défaut sinon</strong> : avec cette option, Watchdoc tient compte en priorité du domaine initial (ou du domaine par défaut si le domaine initial n'existe pas).&#160;Cette option n'est donc utile que si le domaine est inscrit dans le fichier de spool. Les comptes enregistrés dans l'annuaire META gardent  l'information de leur domaine initial (ou  par défaut), qui constitue un élément de distinction important.</p>
+                                                        <p>C'est l'option privilégiée lorsque le pilote des périphériques est capable d'inscrire le domaine dans le fichier de spool.<br />Cependant, dans le cas où le pilote ne peut pas inscrire le domaine dans le spool, cette option expose au risque qu'un utilisateur débloque le travail d'impression d'un utilisateur homonyme qui a lancé l'impression.</p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <p><strong>Utiliser le domaine du spool si présent, rejeter le travail sinon : </strong>avec cette option, Watchdoc tient compte  du domaine initial de l'utilisateur (ou du domaine par défaut si le domaine initial n'existe pas).&#160;Cette option n'est donc utile que si le domaine est inscrit dans le fichier de spool. Les comptes enregistrés dans l'annuaire META gardent  l'information de leur domaine initial (ou  par défaut), qui constitue un élément de distinction important.<br />Dans le cas contraire, Watchdoc considère qu'il ne dispose pas d'éléments suffisants pour établir l'identité du propriétaire du travail d'impression au moment où il s'identifie.&#160;En conséquence, Watchdoc n'imprime pas le travail d'impression.</p>
+                                                        <p>C'est l'option qui offre la garantie maximale de distinguer les homonymes, mais qui présente l'inconvénient de faire échouer une impression. De plus, l'information relative à l'échec de l'impression ne peut être communiquée à l'utilisateur, puisque ce dernier ne peut pas être distingué de son (ou ses) homonyme.</p>
+                                                    </li>
+                                                </ul>
+                                                <p>&#160;</p>
+                                                <ul>
+                                                    <li>
+                                                        <p><strong>Toujours utiliser le domaine suivant : </strong>cochez ce bouton et sélectionnez dans la liste déroulante un domaine spécifique à utiliser en priorité.</p>
+                                                        <p>La file n'autorise alors que les travaux d'impression des utilisateurs appartenant à ce domaine.</p>
+                                                    </li>
+                                                </ul>
+                                                <p>&#160;</p>
+                                            </li>
+                                        </ol>
+                                        <p class="Liste_num_1">Par ailleurs, vous pouvez choisir d'autres options en fonction de vos exigences :</p>
+                                        <ol data-mc-continue="true">
                                             <li value="5">
-                                                <p class="Liste_num_1">revenez au <strong>Menu principal</strong> de Watchdoc<sup>®</sup>, puis, dans la section <strong>Exploitation</strong>, cliquez sur <strong>Files d'impression</strong> ;</p>
-                                            </li>
-                                            <li value="6">
-                                                <p class="Liste_num_1">dans la liste <strong>Files d'impression</strong>, sélectionnez soit un groupe de files, soit une file en particulier.&#160;Si vous choisissez un groupe de files, la configuration s'appliquera à l'ensemble des files incluses dans le groupe, mais vous pourrez modifier le paramétrage de chaque file ultérieurement.</p>
-                                            </li>
-                                            <li value="7">
-                                                <p class="Liste_num_1"> cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_EditerProprietes.png" style="width: 33px;height: 30px;" /> <strong>Editer les propriétés</strong>&#160;; </p>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="8">
-                                                <p class="Liste_num_1"> dans l'interface <strong>Propriétés du groupe de files</strong> ou <strong>Propriétés de la file</strong>, section <strong>Mode Expert</strong>, configurez le paramètre <strong>Domaine</strong> en sélectionnant le bouton correspondant à votre choix&#160;:<br /><br /></p>
-                                            </li>
-                                        </ol>
-                                        <p style="text-align: left;">
-                                            <img src="../Z_Resources/Images/02_Captures/Config_Files_Domaine_Homonymie.png" />
-                                        </p>
-                                        <p>&#160;</p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Utiliser le même paramètre que le groupe </strong>(paramètre uniquement disponible pour une file) : si la file appartient à un groupe, cochez cette case pour que la file hérite des paramètres du groupe et se comporte donc de la même manière pour gérer les homonymes ; </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Ignorer le domaine du spool et toujours utiliser le domaine par défaut :</strong> cochez cette case pour ne pas tenir compte du domaine initial.&#160;Les comptes enregistrés dans l'annuaire META&#160;dépendent tous du domaine META.&#160;Cette option ne permet donc pas de distinguer les homonymes ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>utiliser le domaine du spool si présent, utiliser le domaine par défaut sinon :</strong> cochez cette case pour tenir compte du domaine initial en priorité ou du domaine par défaut si le domaine initial n'existe pas.&#160;Les comptes enregistrés dans l'annuaire META gardent ou non l'information de leur domaine initial. Cette option expose au risque de faire débloquer un travail d'impression par un utilisateur homonyme à l'utilisateur qui a lancé l'impression ; </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>utiliser le domaine du spool si présent, rejeter le travail sinon : </strong>cochez cette case pour conserver en toute circonstance l'information du domaine initial.&#160;Dans le cas où l'information relative au domaine initial est absente (car certains pilotes ne permettent pas de conserver cette information), Watchdoc<sup>®</sup> considère qu'il ne peut discriminer le propriétaire et n'imprime donc pas le travail. C'est l'option qui offre la garantie maximale de distinguer les homonymes, mais qui présente l'inconvénient de faire échouer une impression. De plus, l'information relative à l'échec de l'impression ne peut être communiquée au demandeur, puisque ce dernier ne peut être distingué de son (ou ses) homonyme ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>toujours utiliser le domaine suivant : </strong>cochez ce bouton et sélectionnez dans la liste déroulante un domaine spécifique à utiliser en priorité.&#160;Cette option permet de distinguer les utilisateurs de différents domaines en imposant un domaine.</p>
-                                            </li>
-                                        </ul>
-                                        <p>&#160;</p>
-                                        <ol data-mc-continue="true">
-                                            <li value="9">
                                                 <p class="Liste_num_1">Cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Valider.png" style="width: 27px;height: 25px;" /> pour valider le paramétrage du groupe de file ou de la file.</p>
                                             </li>
-                                            <li value="10">
+                                            <li value="6">
                                                 <p class="Liste_num_1">Testez l'impression à partir de comptes homonymes pour vérifier l'efficacité du paramétrage.</p>
                                             </li>
                                         </ol>

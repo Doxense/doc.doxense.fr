@@ -232,7 +232,7 @@
                                                 </p>
                                                 <ul style="list-style-type: circle;">
                                                     <li>
-                                                        <p class="Liste_puce_2"><strong>Nom du fichier :</strong> indiquez dans ce champ le nom attribué au document numérisé (devenu fichier) joint au mail.</p>
+                                                        <p class="Liste_puce_2"><strong><a name="Nom_du_fichier"></a>Nom du fichier :</strong> indiquez dans ce champ le nom attribué au document numérisé (devenu fichier) joint au mail (vous pouvez vous servir pour cela des <a href="#Variables">variables citées ci-dessous</a>).</p>
                                                     </li>
                                                     <li>
                                                         <p class="Liste_puce_2"><strong>Peut être modifié(e) par l'utilisateur sur l'interface WES</strong> (cette case à cocher concerne d'autres paramètres) : cochez cette case pour autoriser l'utilisateur à modifier le paramètre auquel il se rapporte depuis l'interface installée sur le périphérique (WES).</p>
@@ -275,7 +275,11 @@
                                                                 <p class="Liste_puce_2"><strong>Envoyé depuis l'e-mail de l'utilisateur ; </strong>cochez cette case pour que l'adresse e-mail de l'utilisateur apparaisse comme adresse d'expédition du mail.</p>
                                                             </li>
                                                             <li>
-                                                                <p><strong>Peut être modifié par l'utilisateur sur l'interface WES&#160;: </strong>cochez la case pour autoriser l'utilisateur à modifier l'adresse mail par défaut depuis le WES :<br></br><img src="../../Z_Resources/Images/02_Captures/Admin_WEScan_Config_DestinationScan_MonEmail.png" style="width: 700px;"></img></p>
+                                                                <p><strong>Peut être modifié par l'utilisateur sur l'interface WES&#160;: </strong>cochez la case pour autoriser l'utilisateur à modifier l'adresse mail par défaut depuis le WES :</p>
+                                                                <p>
+                                                                    <br />
+                                                                    <img src="../../Z_Resources/Images/02_Captures/Admin_WEScan_Config_DestinationScan_MonEmail.png" style="width: 700px;" />
+                                                                </p>
                                                             </li>
                                                         </ul>
                                                     </li>
@@ -283,7 +287,7 @@
                                             </li>
                                         </ul>
                                         <fieldset>
-                                            <p class="Liste_puce_2"><span style="font-weight: normal;">Pour chacun des champs du formulaire, vous pouvez saisir des valeurs fixes et/ou les variables (appelées "mots-clés") suivantes :</span>
+                                            <p class="Liste_puce_2"><span style="font-weight: normal;">Pour chacun des champs du formulaire, vous pouvez saisir des<a name="Variables"></a> valeurs fixes et/ou les variables (appelées "mots-clés") suivantes :</span>
                                             </p>
                                             <ul>
                                                 <li>
@@ -320,20 +324,21 @@
                                                     </p>
                                                 </li>
                                             </ul>
-                                            <p>Vous pouvez compbiner les valeurs fixes et les variables afin de concevoir des messages personnalisés explicites.&#160;Par exemple, dans le champ "Objet de l'e-mail"&#160;: <strong> $USER, voici votre document numérisé du $DATE</strong>, ce qui se traduirait dans l'objet de l'e-mail par "<strong>Jean Dupont, voici votre document numérisé du 04/11/2020</strong>".</p>
+                                            <p>&#160;</p>
+                                            <p>Vous pouvez combiner les valeurs fixes et les variables afin de concevoir des messages personnalisés explicites.&#160;Par exemple, dans le champ "Objet de l'e-mail"&#160;: <strong> $USER, voici votre document numérisé du $DATE</strong>, ce qui se traduirait dans l'objet de l'e-mail par "<strong>Jean Dupont, voici votre document numérisé du 04/11/2020</strong>".</p>
                                         </fieldset>
                                         <ul>
                                             <li>
                                                 <p><strong>Section Restreindre cette destination :</strong> cochez cette case pour que la destination puisse n'être utilisée que par certains utilisateurs ou groupes d'utilisateurs : </p>
                                                 <ul style="list-style-type: circle;">
                                                     <li>
-                                                        <p><strong>Mode :</strong> choisissez si la destination peut être utilisée par tous les utilisateurs (par défaut) ou cochez  <strong>Tous les utilisateurs définis ci-après ne pourront pas utiliser cette destination</strong> pour restreindre.&#160;<br />Puis précisez :</p>
+                                                        <p><strong>Mode :</strong> choisissez si la destination peut être utilisée par tous les utilisateurs (par défaut) ou cochez  <strong>Tous les utilisateurs définis ci-après ne pourront pas utiliser cette destination</strong> pour restreindre.&#160;<br />Puis précisez&#160;:</p>
                                                         <ul style="list-style-type: circle;">
                                                             <li>
-                                                                <p>un ou des <strong>Groupes d'utilisateurs</strong> dans la liste : ces groupes d'utilisateurs ne pourront pas utiliser cette destination ; </p>
+                                                                <p>un ou des <strong>Groupes d'utilisateurs</strong> dans la liste : ces groupes d'utilisateurs ne pourront pas utiliser cette destination&#160;; </p>
                                                             </li>
                                                             <li>
-                                                                <p>un ou des <strong>Utilisateurs</strong> dans la liste : ces utilisateurs ne pourront pas utiliser cette destination.<br /><br /><img src="../../Z_Resources/Images/02_Captures/Admin_WEScan_Config_DestinationScan_SectionRestreindre.png" style="width: 700px;" /></p>
+                                                                <p>un ou des <strong>Utilisateurs</strong> dans la liste : ces utilisateurs ne pourront pas utiliser cette destination.<br /><br /><img src="../../Z_Resources/Images/02_Captures/Admin_WEScan_Config_DestinationScan_Restr.png" style="width: 700px;" /><br /><br /></p>
                                                             </li>
                                                         </ul>
                                                     </li>

@@ -208,10 +208,10 @@
                                                 <p class="Liste_num_1">Depuis le <strong>Menu principal</strong> de WSC, cliquez sur <strong>Configuration avancée</strong> ;</p>
                                             </li>
                                             <li value="2">
-                                                <p class="Liste_num_1">Dans l'interface Configuration avancée, cliquez sur <strong>Maintenance des serveurs</strong> : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_MaintServeurs_Acces.png" style="width: 700px;" /><br /><br /></p>
+                                                <p class="Liste_num_1">Dans l'interface Configuration avancée, cliquez sur <strong>Opérations de maintenance</strong>&#160;: <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_MaintServeurs_Acces.png" style="width: 700px;" /><br /><br /></p>
                                             </li>
                                             <li value="3">
-                                                <p class="Resultat">Vous accédez à l'interface <strong>Maintenance des serveurs</strong>, dans laquelle s'affichent les sections de maintenance :<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Maintenance_Interface.png" style="width: 700px;" /></p>
+                                                <p class="Resultat">Vous accédez à l'interface <strong>Opérations de maintenance</strong>, dans laquelle s'affichent les sections de maintenance :<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Maintenance_Interface.png" style="width: 700px;" /></p>
                                             </li>
                                         </ol>
                                         <h2>Configurer la maintenance</h2>
@@ -222,7 +222,7 @@
                                                 <p class="Liste_puce_1"><strong>Activation :</strong> cochez cette case pour activer la maintenance automatique des serveurs ; </p>
                                             </li>
                                             <li value="2">
-                                                <p class="Liste_puce_1"><strong>Fréquence :</strong>: dans ce champ, indiquez (au format Crontab) la fréquence à laquelle vous souhaitez excécuter la maintenance.&#160;</p>
+                                                <p class="Liste_puce_1"><strong>Fréquence :</strong> dans ce champ, indiquez (au format Crontab) la fréquence à laquelle vous souhaitez excécuter la maintenance.&#160;</p>
                                             </li>
                                             <li value="3">
                                                 <p class="Liste_puce_1">Cliquez sur le <strong>bouton Lancer l'assistant </strong>de configuration pour être aidé dans la saisie de la tâche planifiée : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Maintenance_Frequence.png" style="width: 700px;height: auto;" /><br /></p>
@@ -366,6 +366,29 @@ Le spool d'impression désigne le fichier d'édition envoyé au périphérique d
                                             </li>
                                             <li value="4">
                                                 <p>Cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Bouton_Valider_WSC.png" style="width: 53px;height: 22px;" /> pour enregistrer les paramètres de maintenance.</p>
+                                            </li>
+                                        </ol>
+                                        <p>&#160;</p>
+                                        <h3>Gérer <a name="audit_des_utilisateurs"></a>l'audit des utilisateurs pour la suppression des badges</h3>
+                                        <p>L'interface <strong>Audit des utilisateurs</strong> permet de vérifier périodiquement le lien entre badges et utilisateurs.&#160;Ainsi, les badges associés à des comptes utilisateurs supprimés peuvent être détectés.</p>
+                                        <p>Il devient alors possible de supprimer ces badges de la base des badges utilisés, puis de les réattribuer ultérieurement à de nouveaux utilisateurs.</p>
+                                        <p>&#160;</p>
+                                        <p>Pour activer l'audit des utilisateurs : </p>
+                                        <ol>
+                                            <li value="1">
+                                                <p><strong>Activer la vérification :</strong>  cochez la case pour activer l'opération d'audit. WSC vérifie alors que chaque badge enregistré dans la base des badges est toujours associés à un utilisateur. </p>
+                                            </li>
+                                            <li value="2">
+                                                <p class="Liste_puce_1"><strong>Fréquence :</strong> dans ce champ, indiquez (au format Crontab) la fréquence à laquelle vous souhaitez excécuter la maintenance.&#160;Si nécessaire, cliquez sur le bouton<strong> Lancer l'assistant </strong>de configuration pour être aidé dans la saisie de la tâche planifiée&#160;; </p>
+                                            </li>
+                                            <li value="3">
+                                                <p><strong>Inclure les comptes utilisateurs désactivés :</strong> cochez cette case pour prendre en compte les comptes utilisateurs désactivés ;</p>
+                                            </li>
+                                            <li value="4">
+                                                <p><strong>Inclure les comptes utilisateurs expirés :</strong> cochez cette case pour prendre en compte les comptes utilisateurs expirés ;</p>
+                                            </li>
+                                            <li value="5">
+                                                <p><strong>Activer la suppression des badges :</strong> cochez la case pour que WSC&#160;supprime les badges qui ne sont plus associés à un compte utilisateur :<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_MaintenanceUtilisateurs.png" style="width: 700px;height: auto;" /></p>
                                             </li>
                                         </ol>
                                     </div>
