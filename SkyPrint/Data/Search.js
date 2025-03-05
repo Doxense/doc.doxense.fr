@@ -1,1 +1,1 @@
-define({r:0.5,st:'Stem',n:1,t:[0],m:[],u:['../A_Introduction Topics/Presentation_SkyPrint.htm'],s:['0'],p:[['0',1],['envoie',21],['pour',5]]});
+define({r:0.5,st:'Stem',n:1,t:[0],m:[],u:['../A_Introduction Topics/Presentation_SkyPrint.htm'],s:['0','watchdocskyprint'],p:[['0',1],['en',5],['partir',17]]});

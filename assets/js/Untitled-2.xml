@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xml:lang="fr">
+    <head><title></title>
+        <meta name="Personnalisation WPC" content="" />
+        <meta name="Personnaliser WPC" content="" />
+        <meta name="description" content="Procédure de configuration de Watchdoc Print Client for Windows en mode normal et en mode haute-disponibilité (impression directe)." metaTagSet="General.flmeta" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="WPC" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />Watchdoc Print Client for Windows<sup>®</sup> - Configuration</h1>
+        <h2>Accéder à l'interface de configuration</h2>
+        <p>Pour configurer Watchdoc Print Client for Windows, </p>
+        <ol>
+            <li>
+                <p>accéder à l'interface d'administration de Watchdoc en tant qu'administrateur</p>
+            </li>
+            <li>
+                <p>depuis le <strong>Menu principal</strong>, section <strong>Configuration</strong>, cliquez sur <strong>Configuration avancée</strong> ; </p>
+            </li>
+            <li>
+                <p>dans l'interface <strong style="font-weight: normal;">Configuration avancée</strong>, cliquez sur <strong>Configuration Client Windows</strong> :<br /><br /><img src="../../Z_Resources/Images/02_Captures/WPC/WPC_Admin_acces.png" style="width: 700px;height: auto;" /></p>
+                <p>&#160;</p>
+            </li>
+            <p>
+                <p><span style="font-family: 'Wingdings'">è</span>Vous accédez à l'interface <strong>Configuration Client Windows</strong>.</p>
+            </p>
+        </ol>
+        <h2>Configurer Watchdoc Print Client for Windows</h2>
+        <ul>
+            <li>
+                <p><strong>Propriétés :</strong> rassemble les propriétés du client, dont un identifiant interne, non-modifiable.</p>
+                <ul>
+                    <li>
+                        <p><strong>Nom :</strong> saisissez, si nécessaire, un nom pour le Client ;</p>
+                    </li>
+                    <li>
+                        <p><strong>Description :</strong> si nécessaire,  saisissez des informations complémentaires relatives au Client.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p><strong>Interface utilisateur :</strong> précisez les caractéristiques de l'interface utilisateur.</p>
+                <ul>
+                    <li>
+                        <p><strong>Mode silence :</strong> cochez la case si vous souhaitez que WPC for Windows fonctionne en mode silencieux.&#160;Ce mode vous permet de masquer aux utilisateurs les onglets "Périphériques", "Travaux" et "Emplacements" pour ne laisser que l'onglet "Profil". Cet onglet affiche le profil de l'utilisateur ainsi que ses statistiques d'impression.</p>
+                    </li>
+                    <li>
+                        <p><strong>Montrer les statistiques :</strong> cochez la case si vous souhaitez afficher les statistiques d'utilisation à l'utilisateur, dans l'onglet "Profil".</p>
+                    </li>
+                    <li>
+                        <p><strong>Niveau de logs :</strong> dans la liste, sélectionnez le niveau d'information que vous souhaitez tracer dans les journaux d'événements de WPC.&#160;<br />Ces traces requérant des ressources ainsi qu'un espace de stockage importants, nous vous recommandons de ne les activer qu'à des fins d'analyse en cas d'audit ou de problème et de les désactiver une fois le diagnostic établi.&#160;</p>
+                    </li>
+                    <li>
+                        <p><strong>Couleur :</strong> dans le champ, saisissez le code hexadécimal de la couleur que vous souhaitez appliquer dans l'interface utilisateur (cf. <a href="WPCW_Personnalisation.htm" target="_blank" title="Lien vers la procédure de personnalisation" alt="Lien vers la procédure de personnalisation">Personnaliser WPC</a>) ; </p>
+                    </li>
+                    <li>
+                        <p><strong>Chemin vers les images personnalisées :</strong>dans le champ, saisissez le chemin d'accès aux images permettant de personnaliser l'interface utilisateur  (cf. <a href="WPCW_Personnalisation.htm" target="_blank" title="Lien vers la procédure de personnalisation" alt="Lien vers la procédure de personnalisation">Personnaliser WPC</a>).</p>
+                    </li>
+                    <li>
+                        <p><strong>Historique d'impression :</strong> indiquez les paramètres de l'historique des travaux d'impression demandés (affiché sous l'onglet <strong>Travaux d'impression</strong>) : </p>
+                        <ul>
+                            <li>
+                                <p><strong>nombre maximum : </strong>indiquez le nombre de travaux envoyés qui doivent être conservés sur le disque et affichés dans l'historique (50 max.) ;</p>
+                            </li>
+                            <li>
+                                <p><strong>durée maximale de conservation :</strong> indiquez, en heures, la durée maximale de conservation des travaux affichés dans l'historique (1 mois max.).</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p><strong>Service : </strong>
+                    <br />
+                </p>
+                <ul>
+                    <li>
+                        <p><strong>Niveau de logs :</strong> dans la liste, sélectionnez le niveau d'information que vous souhaitez tracer dans les journaux d'événements de WPC.&#160;<br />Ces traces requérant des ressources ainsi qu'un espace de stockage importants, nous vous recommandons de ne les activer qu'à des fins d'analyse en cas d'audit ou de problème et de les désactiver une fois le diagnostic établi.&#160;</p>
+                    </li>
+                    <li>
+                        <p><strong>Impression directe :</strong> cochez la case pour autoriser l'utilisateur à imprimer en direct (sans passer par Watchdoc) si le service Watchdoc est défaillant.&#160;L'impression directe s'applique jusqu'à ce que le serveur soit de nouveau opérationnel.</p>
+                        <p>Ce mode suppose deux prérequis : </p>
+                        <ul>
+                            <li>
+                                <p>la base interserveur doit être activée (cf.&#160;<a href="../../C_Configurer/ConfigAvancee/ConfigAvancee_Systeme.htm#Configurer_la_section_Impression_interserveur" target="_blank" title="Lien vers l'article d'administration" alt="Lien vers l'article d'administration">Configuration système - Section Impression interserveur</a>) et accessible de tous les serveurs ;</p>
+                            </li>
+                            <li>
+                                <p>l'utilisateur doit s'être authentifié au-moins une fois sur le WES&#160;du périphérique d'impression désigné pour l'impression directe.<br />En cas de panne, l'utilisateur choisit d'attendre que le serveur soit de nouveau disponible ou d'imprimer directement.&#160;Dans ce cas : </p>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <p>si WPC fonctionne avec une file universelle, l'utilisateur peut choisir le périphérique sur lequel il souhaite imprimer;&#160;</p>
+                            </li>
+                            <li>
+                                <p>si WPC&#160;fonctionne avec une file physique, l'utilisateur peut imprimer directement sur ce périphérique.</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p><a name="USB"></a><strong>Périph. USB</strong> : cochez la case pour autoriser WPC&#160;à comptabiliser les travaux des périphériques connectés en USB&#160;et non pas en réseau.</p>
+                <p>Dans ce cas, les travaux d'impression figurent dans la base de données configurée (en master s'il s'agit d'une configuration en domaine) ainsi que dans les fichiers traces du service Windows de WPC.</p>
+            </li>
+            <li>
+                <p><a name="ICMP"></a><strong>Désactiver <MadCap:glossaryTerm glossTerm="Glossary.Term117" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">ICMP</MadCap:glossaryTerm> :</strong> cochez la case pour désactiver les requêtes ICMP afin de ne pas saturer le serveur dans le cas où WPC for Windows est installé sur un grand nombre de postes.</p>
+            </li>
+            <li>
+                <p><strong><MadCap:glossaryTerm glossTerm="Glossary.Term76" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">Port monitor</MadCap:glossaryTerm> : </strong>indiquez les caractéristiques relatives aux journaux d'événements du Port Monitor WPC : </p>
+                <ul>
+                    <li>
+                        <p><strong>Taille limite : </strong>saisissez, en mégabits, la taille maximale des fichiers de log du port monitor sur le disque ;<br /></p>
+                    </li>
+                    <li>
+                        <p><strong>Chemin du fichier : </strong>indiquez le chemin du dossier dans lequel seront stockés les fichiers de logs du port monitor ;</p>
+                    </li>
+                    <li>
+                        <p><strong>Niveau de logs : </strong>dans la liste, sélectionnez le niveau des logs relatifs au Port monitor : </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>
+				<strong><a name="Rétention_de_spools">Rétention de spools :</a></strong> cochez cette case pour activer la rétention de spools.<br />Cette rétention permet aux utilisateurs de réimprimer les travaux d'impression qui ont été précédemment envoyés au serveur. <br />Les spools sont ensuite stockés <strong> sur le poste de travail </strong>et sont consultables sous l'onglet <strong>Travaux d'impression</strong>. Spécifiez les paramètres de cette rétention de spool dans les champs suivants&#160;:</p>
+                <ul>
+                    <li>
+                        <p><strong>Nombre : </strong>indiquez le nombre maximum de spools conservés sur le disque ;</p>
+                    </li>
+                    <li>
+                        <p><strong>Taille :</strong> indiquez la taille maximale des octets alloués à la rétention du spool ;</p>
+                    </li>
+                    <li>
+                        <p><strong>Durée:</strong> indiquez, en heures, la durée maximale de la rétention (720 heures pour 30 jours par défaut).</p>
+                    </li>
+				</ul>
+				</li>	
+                <fieldset>N.B. : les paramètres définis dans l'<strong>Historique des impressions</strong> sont prioritaires sur ceux de la rétention de spools. Les paramètres de l'historique doivent donc être pris en compte lors de la configuration de la section Rétention.
+				</fieldset>
+               
+			
+       <h2>Préciser un environnement d'exploitation</h2>
+        <MadCap:snippetBlock src="WPCW_Config_ExclureFilePhysiq.flsnp" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <h2 MadCap:conditions="General.Note interne" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">Configuration avancée en mode "debug"</h2>
+        <p MadCap:conditions="General.Note interne" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">Les paramètres de traitement des travaux d'impression par WPC&#160;sont configurés par défaut.&#160;Pour des raisons d'analyse ou pour résoudre des problèmes de performances, il peut être nécessaire d'activer le mode "Debug" pour accéder à ces paramètres et en changer.&#160;<br /></p>
+        <fieldset MadCap:conditions="General.Note interne" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">N.B. : ces paramètres ayant un fort impact sur le fonctionnement de WPC, nous vous recommandons de sauvegarder la configuration initiale de Watchdoc avant de les modifier.&#160;(cf. <a href="../../H_HowTo/WD5_GestionCourante_Sauvegarder_WD.htm" target="_blank" title="lien vers l'article de procédure" alt="lien vers l'article de procédure">Effectuer une sauvegarde de Watchdoc</a>).</fieldset>
+        <p MadCap:conditions="General.Note interne" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">Pour accéder au mode "debug" :</p>
+        <ol MadCap:conditions="General.Note interne" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+            <li>
+                <p>rendez-vous dans l'interface de la Configuration Client Windows ;</p>
+            </li>
+            <li>
+                <p>dans la zone d'adresse, saississez la mention <strong>&amp;Debugstatus=true</strong> à la suite de l'adresse affichée ;</p>
+                <p><span style="font-family: 'Wingdings'">è</span> de nouveaux paramètres s'affichent en-dessous de la section Installation.</p>
+            </li>
+        </ol>
+    </body>
+</html>
