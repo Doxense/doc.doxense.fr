@@ -198,12 +198,14 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1 data-mc-conditions="General.Online" id="HistoriquedesnotesdeversionsWatchdoc" data-magellan-target="HistoriquedesnotesdeversionsWatchdoc"><a name="Haut"></a><a name="aanchor78"></a>
+                                        <h1 data-mc-conditions="General.Online" id="HistoriquedesnotesdeversionsWatchdoc" data-magellan-target="HistoriquedesnotesdeversionsWatchdoc"><a name="Haut"></a><a name="aanchor89"></a>
                                             <MadCap:concept term="RNO" />Historique des notes de versions Watchdoc</h1>
                                         <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
                                             <li class="tree-node"><a href="#HistoriquedesnotesdeversionsWatchdoc">Historique des notes de versions Watchdoc</a>
                                                 <ul>
                                                     <li class="tree-node"><a href="#Watchdoc61">Watchdoc 6.1</a>
+                                                    </li>
+                                                    <li class="tree-node"><a href="#WatchdocWSC6105178etWPCforWindows70486306032025">Watchdoc/WSC 6.1.0.5178 et WPC for Windows 7.0.4863 - 06/03/2025</a>
                                                     </li>
                                                     <li class="tree-node"><a href="#WatchdocWSC6105164etWPCforWindows70479820022025">Watchdoc/WSC 6.1.0.5164 et WPC for Windows 7.0.4798 - 20/02/2025</a>
                                                     </li>
@@ -260,36 +262,132 @@
                                         <hr width="100%" size="0" align="center" data-mc-conditions="General.Online">
                                         </hr>
                                         <h2 id="Watchdoc61" data-magellan-target="Watchdoc61">Watchdoc 6.1</h2>
-                                        <h2 id="WatchdocWSC6105164etWPCforWindows70479820022025" data-magellan-target="WatchdocWSC6105164etWPCforWindows70479820022025">Watchdoc/WSC 6.1.0.5164 et WPC for Windows 7.0.4798 - 20/02/2025</h2>
-                                        <p style="font-weight: bold;color: #000000;">Nouvelle fonctionnalité</p>
+                                        <h2 id="WatchdocWSC6105178etWPCforWindows70486306032025" data-magellan-target="WatchdocWSC6105178etWPCforWindows70486306032025">Watchdoc/WSC <span>6.1.0.51</span>78 et WPC for Windows 7.0.4863 - 06/03/2025</h2>
+                                        <p style="font-weight: bold;color: #000000;">Améliorations</p>
                                         <ul>
                                             <li>
-                                                <p><strong>WPC :</strong>
+                                                <p><strong>Watchdoc :</strong> </p>
+                                                <ul>
+                                                    <li>
+                                                        <p>suppression des paramètres d'OpenAPI (obsolètes) dans le menu de paramètrage de la file d’impression</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>suppression de l'option <strong style="font-weight: normal;">"Ralentir l'envoi des spools</strong>" dans les  propriétés d’une file d’impression, section Envoi de fichiers spools,  (sauf pour utilisateur expert en mode DEBUG)</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>suppression des options d’obfuscation des titres des documents (obsolètes). Cette option est désormais synchronisée au niveau du groupe.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>mise à jour de la documentation<strong style="font-weight: normal;"> "SNMP Walker"</strong> dans les fichiers d’installations du produit ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>masquage de l'option "Chiffrer le titre des documents dans la file d’attente partagée”, désormais gérée nativement par Windows.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <p><strong>WESCan </strong>: amélioration des logs dans le cas ou aucun profile de scan n’est trouvé afin de faciliter le diagnostic.</p>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <p><b>WSC : </b>
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <p>affichage d'un message d'avertissement lors de l'ajout d'un pilote signé avec une signature WHQL (Windows) et invitation à signer le pilote avec un certificat du domaine client ou par Doxense.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>affichage de l'émetteur du certificat lors de l'ajout d'un pilote.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <p>&#160;</p>
+                                        <p style="font-weight: bold;color: #000000;">Correctifs</p>
+                                        <ul>
+                                            <li>
+                                                <p><strong>Watchdoc </strong>:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>traductions de libellés dans les propriété d’une file d’impression, section "Envoi de fichiers spools"</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>ajout de tranductions manquantes ;</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <p><strong>Cap Monétique</strong> : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p>correction permettant de recharger le compte d’un utilisateur Paybox ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p> amélioration du formulaire de rechargement Paybox pour forcer la saisie de valeurs dans les champs obligatoires ;</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <p><strong>WES Hewlett Packard</strong> : amélioration de la comptabilisation de scans et de photocopies grâce à la prise en compte du domaine des utilisateurs ;</p>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <p><strong>WES Oki / Toshiba</strong> : correction d'un message d'erreur qui s'affichait lors de l'authentification </p>
+                                            </li>
+                                            <li>
+                                                <p><strong>WES Xerox </strong>: correction d’une anomalie qui modifiait l'option d'impression recto-verso "bord court" en "bord long"</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>WSC</strong> :</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>corrections orthographiques dans les interfaces de la console de supervision</p>
+                                                    </li>
+                                                    <li>
+                                                        <p> suppression de la case à cocher  “Redémarrer le service Telemetry” (obsolète) dans l'outil de mise à jour (updater) de WSC.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <h2 id="WatchdocWSC6105164etWPCforWindows70479820022025" data-magellan-target="WatchdocWSC6105164etWPCforWindows70479820022025">Watchdoc/WSC 6.1.0.5164 et WPC for Windows 7.0.4798 - 20/02/2025</h2>
+                                        <p style="font-weight: bold;">Nouvelle fonctionnalité</p>
+                                        <ul>
+                                            <li>
+                                                <p><b>WPC :</b>
                                                 </p>
                                                 <ul>
                                                     <li>
                                                         <p>l’administrateur Watchdoc peut définir une file d’impression par défaut pour un rôle d’utilisateur et pour un emplacement donnés</p>
                                                     </li>
                                                     <li>
-                                                        <p> l’utilisateur peut définir sa file d’impression par défaut si le choix initial de l’administrateur ne lui convient pas</p>
+                                                        <p>l’utilisateur peut définir sa file d’impression par défaut si le choix initial de l’administrateur ne lui convient pas</p>
                                                     </li>
                                                 </ul>
                                             </li>
                                         </ul>
-                                        <p style="font-weight: bold;">&#160;</p>
-                                        <p style="font-weight: bold;color: #000000;">Améliorations</p>
+                                        <p>&#160;</p>
+                                        <p style="font-weight: bold;">Améliorations</p>
                                         <ul>
                                             <li>
-                                                <p><strong>Watchdoc Express :</strong> renforcement de la sécurité du programme d'installation (setup) qui utilise désormais des comptes ayant le moins de privilèges possibles</p>
+                                                <p><b>Watchdoc Express :</b> renforcement de la sécurité du programme d'installation (setup) qui utilise désormais des comptes ayant le moins de privilèges possibles</p>
                                             </li>
                                             <li>
-                                                <p><strong>WSC :</strong> </p>
+                                                <p><b>WSC :</b>
+                                                </p>
                                                 <ul>
                                                     <li>
-                                                        <p>renforcement de la sécurité par minification du Javascript<sup>®</sup> de la Console de Supervision</p>
+                                                        <p>renforcement de la sécurité par minification du Javascript® de la Console de Supervision</p>
                                                     </li>
                                                     <li>
-                                                        <p>amélioration de l'information du délai avant la purge des travaux d'impression, désormais exprimé en heure(s)</p>
+                                                        <p>mélioration de l'information du délai avant la purge des travaux d'impression, désormais exprimé en heure(s)</p>
                                                     </li>
                                                     <li>
                                                         <p>déplacement de la maintenance des badges dans la page de maintenance des serveurs pour plus de cohérence</p>
@@ -299,48 +397,47 @@
                                         </ul>
                                         <ul>
                                             <li>
-                                                <p><strong>WPC</strong> <strong>:</strong> conservation du certificat de la PrintAPI lors de la mise à jour de WPC</p>
+                                                <p><strong>WPC : </strong>conservation du certificat de la PrintAPI lors de la mise à jour de WPC</p>
                                             </li>
                                             <li>
-                                                <p><strong>WES Toshiba : </strong>optimisation de la configuration lors de l’installation</p>
+                                                <p><strong>WES Toshiba :</strong> optimisation de la configuration lors de l’installation</p>
                                             </li>
                                         </ul>
                                         <p>&#160;</p>
-                                        <p style="font-weight: bold;color: #000000;">Correctifs</p>
+                                        <p style="font-weight: bold;">Correctifs</p>
                                         <ul>
                                             <li>
                                                 <p><strong>Watchdoc :</strong> correction et traduction de certains champs de la configuration des emplacements</p>
                                             </li>
                                             <li>
-                                                <p><strong>Watchdoc  :</strong> </p>
+                                                <p><strong>Watchdoc :</strong>
+                                                </p>
                                                 <ul>
                                                     <li>
-                                                        <p>remplacement d'une clé WML&#160;par un libellé clair dans les titres de mails adressés aux utilisateurs ou administrateurs</p>
+                                                        <p>remplacement d'une clé WML par un libellé clair dans les titres de mails adressés aux utilisateurs ou administrateurs</p>
                                                     </li>
-                                                </ul>
-                                                <ul>
                                                     <li>
-                                                        <p>affichage d'un message indiquant que le mot  de passe est incorrect lors d’une tentative de connexion infructueuse</p>
+                                                        <p>affichage d'un message indiquant que le mot de passe est incorrect lors d’une tentative de connexion infructueuse</p>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li>
-                                                <p><strong>WPC&#160;for Chrome :</strong> correction de l’authentification via Google<sup>®</sup>, de nouveau fonctionnelle avec le 2FA</p>
+                                                <p><strong>WPC for Chrome :</strong> correction de l’authentification via Google®, de nouveau fonctionnelle avec le 2FA</p>
                                             </li>
                                             <li>
-                                                <p><strong>WES Hewlett Pakard : </strong>prise en compte du nom de domaine pour la comptabilisation,  ce qui permet de distinguer les scans et photocopies d'utilisateurs homonymes appartenant à deux domaines différents </p>
+                                                <p><strong>WES Hewlett Pakard</strong> : prise en compte du nom de domaine pour la comptabilisation, ce qui permet de distinguer les scans et photocopies d'utilisateurs homonymes appartenant à deux domaines différents</p>
                                             </li>
                                             <li>
-                                                <p><strong>WES Oki </strong>: <span>suppression </span>d'un message d'erreur (édition désactivée) inapproprié</p>
+                                                <p><strong>WES Oki</strong> : suppression d'un message d'erreur (édition désactivée) inapproprié</p>
                                             </li>
                                             <li>
-                                                <p><strong>WES Sharp :</strong> correction de l'enrôlement depuis le WES&#160;Sharp qui indiquait que l'association badge/code avait échoué</p>
+                                                <p><strong>WES Sharp</strong> : correction de l'enrôlement depuis le WES Sharp qui indiquait que l'association badge/code avait échoué</p>
                                             </li>
                                             <li>
-                                                <p><strong>WES Toshiba :</strong> correction d'une anomalie qui supprimait l’annuaire LDAP de la machine lors de l'installation du WES</p>
+                                                <p><strong>WES Toshiba</strong> : correction d'une anomalie qui supprimait l’annuaire LDAP de la machine lors de l'installation du WES</p>
                                             </li>
                                             <li>
-                                                <p><strong>WSC :</strong> corrections orthographiques dans l'interface d'ajout de pilotes et suppression d'un template</p>
+                                                <p><strong>WSC</strong> : corrections orthographiques dans l'interface d'ajout de pilotes et suppression d'un template</p>
                                             </li>
                                         </ul>
                                         <h2 id="WatchdocWSC6105150etWPCforWindows70472306022025" data-magellan-target="WatchdocWSC6105150etWPCforWindows70472306022025">Watchdoc/WSC 6.1.0.5150 et WPC for Windows 7.0.4723 - 06/02/2025</h2>
@@ -1632,11 +1729,17 @@
                                         <hr width="100%" size="0" align="center" />
                                         <h2 id="Watchdoc60" data-magellan-target="Watchdoc60"><span class="span_2">Watchdoc 6.0</span>
                                         </h2>
-                                        <h3>Version 6.0.0.4856 - 18/04/2024</h3>
+                                        <h3>Versions WD/WSC 6.0.0.5178 et WPC&#160;for Windows 7.0.4863 - 06/03/2025<br /></h3>
+                                        <h3>Versions WD/WSC 6.0.0.5094 et WPC&#160;for Windows 7.0.4612 - 12/12/2024<br /></h3>
+                                        <h3>Versions WD/WSC 6.0.0.4968 et WPC&#160;for Windows 7.0.4438 - 07/08/2024</h3>
+                                        <h3>Versions WD/WSC 6.0.0.4940 et WPC&#160;for Windows 7.0.4379 - 10/07/2024</h3>
+                                        <h3>Versions WD/WSC 6.0.0.4898 et WPC&#160;for Windows 7.0.4348 - 29/05/2024</h3>
+                                        <h3>Versions WD/WSC 6.0.0.4884 et WPC&#160;for Windows 7.0.4345 - 16/05/2024</h3>
+                                        <h3>Versions WD/WSC 6.0.0.4856 et WPC&#160;for Windows 7.0.4344 - 18/04/2024</h3>
                                         <p class="Sous-titre-NoteVersion_1">Nouvelle fonctionnalité</p>
                                         <ul class="ul_1">
                                             <li class="NormalWeb_3">
-                                                <p class="NormalWeb_2"><span class="Élevé_1">WATCHDOC</span>
+                                                <p class="NormalWeb_2"><span class="Élevé_1">Watchdoc</span>
                                                 </p>
                                                 <ul class="ul_2">
                                                     <li class="NormalWeb_5">
