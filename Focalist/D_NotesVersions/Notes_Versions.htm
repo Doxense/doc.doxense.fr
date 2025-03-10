@@ -193,19 +193,46 @@
                                     </div>
                                     <div role="main" id="mc-main-content">
                                         <h1>Notes de Versions</h1>
+                                        <h3>9.27.1 - 07.03.2025</h3>
+                                        <ul>
+                                            <li>
+                                                <p>Pour une stratégie de commande proactive, il n'est plus possible de la créer une commande lors d'un changement de stratégie.</p>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <p>Correction des dysfonctionnements des rapports d'approvisionnement pour les périphériques d'impression dont le compteur n'est pas valide et dont la valeur est très élevée.</p>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <p>Les utilisateurs ayant le niveau "Admin" de la permission "Périphériques" peuvent utiliser l'inspection immédiate sans vérification de la validation du compteur pour corriger l'anomalie 'Le compteur est inférieur'.</p>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <p>Correction du filtre de niveau des consommables dans le tableau des commandes (Consommables &gt; Toutes les commandes / Commandes en attente).</p>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <p>L'affectation automatique des périphériques en fonction de l'horaire de surveillance du réseau peut être filtrée par le fabricant du périphérique (Client &gt; Agent &gt; Surveillance du réseau).</p>
+                                            </li>
+                                        </ul>
+                                        <p>&#160;</p>
                                         <h3>9.26.0 - 21.02.2025</h3>
                                         <ul>
                                             <li>
-                                                <p>Remplacement des fournitures manuelles corrigé</p>
+                                                <p>Remplacement manuel des consommables corrigé</p>
                                             </li>
                                             <li>
                                                 <p>Ajout de l'option "Marquer automatiquement la commande bloquée comme nouvelle lorsque l'alarme n'est plus active" dans la configuration de la commande</p>
                                             </li>
                                             <li>
-                                                <p>Ajout de l'option "Marquer les commandes générées lors de la première inspection de l'appareil comme envoyées" dans la configuration de la commande.</p>
+                                                <p>Ajout de l'option "Marquer les commandes générées lors de la première surveillance du périphérique comme envoyées" dans la configuration de la commande.</p>
                                             </li>
                                             <li>
-                                                <p>Correction de l'erreur de la liste des appareils ignorés liée à l'agent partagé entre les sociétés.</p>
+                                                <p>Correction de l'erreur de la liste des périphériques ignorés liée à l'agent partagé entre les sociétés.</p>
                                             </li>
                                             <li>
                                                 <p>Les options d'affichage du tableau sauvegardent également le tri actuellement sélectionné.</p>
@@ -217,13 +244,13 @@
                                                 <p>Ajout de l'adresse IP à l'étiquette de commande (A4 2x2 et B8)</p>
                                             </li>
                                             <li>
-                                                <p>Inclusion des appareils inactifs dans les futurs mois de décompte (Rapports)</p>
+                                                <p>Inclusion des périphériques inactifs dans les futurs mois de décompte (Rapports)</p>
                                             </li>
                                             <li>
                                                 <p>Les colonnes de couverture mono et couleur zéro ont été ajoutées au groupe de compteurs de facturation (Rapports)</p>
                                             </li>
                                             <li>
-                                                <p>Ajout d'un groupe de configuration des commandes aux sources de données relatives aux sociétés et aux fournitures (Rapports)</p>
+                                                <p>Ajout d'un groupe de configuration des commandes aux sources de données relatives aux sociétés et aux consommables (Rapports)</p>
                                             </li>
                                             <li>
                                                 <p>La vérification des commandes bloquées a été corrigée pour les cas où la vérification complète est désactivée.</p>
@@ -250,16 +277,16 @@
                                         <h3>9.23.0 - 14.01.2025</h3>
                                         <ul>
                                             <li>
-                                                <p>ajout d'un filtre pour les appareils découverts par l'agent (appareils &gt; ajouter un appareil) </p>
+                                                <p>ajout d'un filtre pour les périphériques découverts par l'agent (périphériques &gt; ajouter un périphérique) </p>
                                             </li>
                                             <li>
-                                                <p>ordre des paramètres personnalisés fixé (appareil &gt; liste des appareils à droite) </p>
+                                                <p>ordre des paramètres personnalisés fixé (périphérique &gt; liste des périphériques à droite) </p>
                                             </li>
                                             <li>
-                                                <p>possibilité de sauvegarder les colonnes visibles dans la liste des commandes de l'appareil (appareil &gt; commandes) </p>
+                                                <p>possibilité de sauvegarder les colonnes visibles dans la liste des commandes du périphérique (périphérique &gt; commandes) </p>
                                             </li>
                                             <li>
-                                                <p>suppression de l'affectation du modèle d'appareil dans les paramètres avancés fixé (paramètres &gt; paramètres personnalisés &gt; paramètres avancés) </p>
+                                                <p>suppression de l'affectation du modèle de périphériqu  dans les paramètres avancés fixé (paramètres &gt; paramètres personnalisés &gt; paramètres avancés) </p>
                                             </li>
                                             <li>
                                                 <p>mémorisation de l'historique des niveaux d'approvisionnement</p>
@@ -286,7 +313,7 @@
                                                 <p>les horaires des agents ne disparaissent plus lorsque le certificat est révoqué</p>
                                             </li>
                                             <li>
-                                                <p>correction des erreurs liées à l'ignorance des appareils</p>
+                                                <p>correction des erreurs liées à l'ignorance des périphériques</p>
                                             </li>
                                             <li>
                                                 <p>affichage de paramètres personnalisés dans les listes pour les utilisateurs ayant un accès limité à certains sites de l'entreprise</p>
@@ -295,10 +322,10 @@
                                         <h3>9.20.0 - 15.11.2024</h3>
                                         <ul>
                                             <li>
-                                                <p>possibilité d'ignorer un appareil déjà attribué à un lieu (appareil &gt; paramètres de l'appareil &gt; ignorer l'appareil)</p>
+                                                <p>possibilité d'ignorer un périphérique déjà attribué à un lieu (périphérique &gt; paramètres du périphérique &gt; ignorer le périphérique)</p>
                                             </li>
                                             <li>
-                                                <p>ajout d'un filtre sur la raison de l'échec de la dernière inspection dans les filtres avancés des tableaux relatifs aux appareils</p>
+                                                <p>ajout d'un filtre sur la raison de l'échec de la dernière inspection dans les filtres avancés des tableaux relatifs aux périphériques </p>
                                             </li>
                                             <li>
                                                 <p>la typographie du nom de la colonne « alert severityLevel » a été corrigée dans la version 3 de l'API (la colonne s'appelait auparavant « severityLeve »)</p>
@@ -316,7 +343,7 @@
                                         <h3>9.19.0 - 31.10.2024</h3>
                                         <ul>
                                             <li>
-                                                <p>Stratégie de commande proactive sur les fournitures sans capacité en utilisant une prédiction de base basée uniquement sur le niveau d'utilisation</p>
+                                                <p>Stratégie de commande proactive sur les consommables sans capacité en utilisant une prédiction de base basée uniquement sur le niveau d'utilisation</p>
                                             </li>
                                             <li>
                                                 <p>Désactivation de l'intégration des coupures de papier fixe</p>
@@ -328,10 +355,10 @@
                                                 <p>Correction de l'édition du stock local</p>
                                             </li>
                                             <li>
-                                                <p>Réparation du numéro de série pour les fournitures dans le bizhub 4702 de Konica Minolta</p>
+                                                <p>Réparation du numéro de série pour les consommables dans le bizhub 4702 de Konica Minolta</p>
                                             </li>
                                             <li>
-                                                <p>Réparation de la lecture de l'agent de messagerie pour les appareils Kyocera</p>
+                                                <p>Réparation de la lecture de l'agent de messagerie pour les périphériques Kyocera</p>
                                             </li>
                                         </ul>
                                         <h3>9.17.0 - 20.09.2024</h3>
@@ -340,7 +367,7 @@
                                                 <p>Stockage des valeurs pour les types de configuration de commande « Pro active » et « Level ».</p>
                                             </li>
                                             <li>
-                                                <p>Possibilité de définir des jours de décalage pour changer l'état de l'appareil en absence de réponse (paramètres &gt; Options du système)</p>
+                                                <p>Possibilité de définir des jours de décalage pour changer l'état du périphérique en absence de réponse (paramètres &gt; Options du système)</p>
                                             </li>
                                         </ul>
                                         <h3>9.16.0 - 09.08.2024</h3>
@@ -358,7 +385,7 @@
                                         <h3>9.15.0 - 01.08.2024</h3>
                                         <ul>
                                             <li>
-                                                <p>Correction de la configuration manquante du webhook pour les entreprises nouvellement créées</p>
+                                                <p>Correction de la configuration manquante du webhook pour les clients nouvellement créées</p>
                                             </li>
                                             <li>
                                                 <p>Possibilité de sélectionner les colonnes du rapport sur les pièces jointes (société &gt; notifications &gt; personnaliser le message électronique)</p>
@@ -384,10 +411,10 @@
                                             </li>
                                             <li>
                                                 <p>
-Possibilité de générer une étiquette pour l'appareil (appareils &gt; 'Generate label' bulk action)</p>
+Possibilité de générer une étiquette pour le périphérique (périphériques &gt; 'Generate label' bulk action)</p>
                                             </li>
                                             <li>
-                                                <p>Affichage des fournitures avec un niveau partiel comme OK/LOW/EMPTY au lieu d'un pourcentage
+                                                <p>Affichage des consommables avec un niveau partiel comme OK/LOW/EMPTY au lieu d'un pourcentage
 </p>
                                             </li>
                                             <li>
@@ -409,7 +436,7 @@ Format des étiquettes ajouté : A4 24 étiquettes portrait</p>
 </p>
                                             </li>
                                             <li>
-                                                <p>Ajout d'un espace réservé à la liste des fournitures dans les modèles d'avis relatifs aux appareils</p>
+                                                <p>Ajout d'un espace réservé à la liste des consommables  dans les modèles d'avis relatifs aux périphériques</p>
                                             </li>
                                             <li>
                                                 <p>Correction d'un problème de lignes de tableau manquantes lié à la mise à niveau de Firefox vers la version 126.0</p>
@@ -423,7 +450,7 @@ Format des étiquettes ajouté : A4 24 étiquettes portrait</p>
 </p>
                                             </li>
                                             <li>
-                                                <p>Option d'estimation automatique du niveau pour les fournitures ajoutées manuellement (appareil &gt; informations générales &gt; toners et tambours &gt; gérer le traitement des fournitures)
+                                                <p>Option d'estimation automatique du niveau pour les consommables  ajoutées manuellement (périphérique &gt; informations générales &gt; toners et tambours &gt; gérer le traitement des consommables)
 
 </p>
                                             </li>
@@ -437,7 +464,7 @@ Format des étiquettes ajouté : A4 24 étiquettes portrait</p>
                                                 <p>Test de connexion de l'agent de messagerie IMAP</p>
                                             </li>
                                             <li>
-                                                <p>Tri de la liste des appareils par IP fixe</p>
+                                                <p>Tri de la liste des périphériques par IP fixe</p>
                                             </li>
                                             <li>
                                                 <p>Prise en charge des rapports du tableau de bord dans toutes les langues</p>
@@ -458,13 +485,13 @@ Modification du message d'erreur lors de l'ajout d'un dispositif manuel/mail dé
 </p>
                                             </li>
                                             <li>
-                                                <p>Correction de la période de données des rapports de coûts par page pour les entreprises dont la période de règlement est inversée et qui sont envoyées par courrier électronique.</p>
+                                                <p>Correction de la période de données des rapports de coûts par page pour les clients dont la période de règlement est inversée et qui sont envoyées par courrier électronique.</p>
                                             </li>
                                         </ul>
                                         <h3>9.9.0 22.03.2024</h3>
                                         <ul>
                                             <li>
-                                                <p>La liste des appareils ignorés affiche également les appareils supprimés (entreprise &gt; appareils ignorés). </p>
+                                                <p>La liste des périphériques ignorés affiche également les périphériques supprimés (entreprise &gt; périphériques ignorés). </p>
                                             </li>
                                             <li>
                                                 <p>Le préfixe de l'entreprise en majuscules a été supprimé des statistiques de l'entreprise.</p>
@@ -476,7 +503,7 @@ Modification du message d'erreur lors de l'ajout d'un dispositif manuel/mail dé
                                                 <p>Envoi de fichiers tamponnés par l'agent PaperCut </p>
                                             </li>
                                             <li>
-                                                <p>Prise en charge de l'état des fournitures et de l'affichage dans les imprimantes d'étiquettes Toshiba </p>
+                                                <p>Prise en charge de l'état des consommables et de l'affichage dans les imprimantes d'étiquettes Toshiba </p>
                                             </li>
                                             <li>
                                                 <p>Ajout de notifications par Webhook </p>
@@ -488,13 +515,13 @@ Modification du message d'erreur lors de l'ajout d'un dispositif manuel/mail dé
                                         <h3>9.7.0 09.02.2024</h3>
                                         <ul>
                                             <li>
-                                                <p>Collecte d'informations sur les fournitures des appareils Visioneer</p>
+                                                <p>Collecte d'informations sur les consommables des périphériques Visioneer</p>
                                             </li>
                                             <li>
-                                                <p>Possibilité d'ouvrir le panneau de l'appareil à l'aide de la fonction de panneau à distance sur Konica MinoltaSharp OSA en utilisant le logo de marque associé au sous-domaine</p>
+                                                <p>Possibilité d'ouvrir le panneau du périphérique à l'aide de la fonction de panneau à distance sur Konica MinoltaSharp OSA en utilisant le logo de marque associé au sous-domaine</p>
                                             </li>
                                             <li>
-                                                <p>Possibilité de télécharger les pièces jointes .pdf relatives à la maintenance de l'appareil signalées par Sharp OSA</p>
+                                                <p>Possibilité de télécharger les pièces jointes .pdf relatives à la maintenance du périphérique signalées par Sharp OSA</p>
                                             </li>
                                         </ul>
                                         <h3>9.6.1 19.01.2024</h3>
@@ -503,13 +530,13 @@ Modification du message d'erreur lors de l'ajout d'un dispositif manuel/mail dé
                                                 <p>Correction du filtre d'agent sur la notification d'agents déconnectés</p>
                                             </li>
                                             <li>
-                                                <p>Réparation du niveau de réglage sur les fournitures créées manuellement</p>
+                                                <p>Réparation du niveau de réglage sur les consommables créées manuellement</p>
                                             </li>
                                         </ul>
                                         <h3>9.6.0 12.01.2024</h3>
                                         <ul>
                                             <li>
-                                                <p>Suppression des espaces blancs au début et à la fin du numéro de série de l'appareil</p>
+                                                <p>Suppression des espaces blancs au début et à la fin du numéro de série du périphérique</p>
                                             </li>
                                             <li>
                                                 <p>Application OSA Shap pour les demandes de maintenance</p>
@@ -521,7 +548,7 @@ Modification du message d'erreur lors de l'ajout d'un dispositif manuel/mail dé
                                                 <p>Ajout de plusieurs variantes au modèle d'approvisionnement en une seule fois fixed</p>
                                             </li>
                                             <li>
-                                                <p>Ajout d'une sous-vue « agent » aux détails de l'appareil (appareil &gt; agent)</p>
+                                                <p>Ajout d'une sous-vue « agent » aux détails du périphérique (périphérique &gt; agent)</p>
                                             </li>
                                         </ul>
                                         <h3>9.4.3 15.12.2023</h3>
@@ -578,10 +605,10 @@ Modification du message d'erreur lors de l'ajout d'un dispositif manuel/mail dé
                                                 <p>Correction du téléchargement du logo personnalisé</p>
                                             </li>
                                             <li>
-                                                <p>Ajout de l'importation de l'état initial des fournitures dans le formulaire de création de stock local</p>
+                                                <p>Ajout de l'importation de l'état initial des consommables dans le formulaire de création de stock local</p>
                                             </li>
                                             <li>
-                                                <p>Ajout des scans aux appareils non gérés</p>
+                                                <p>Ajout des scans aux périphériques non gérés</p>
                                             </li>
                                         </ul>
                                         <h3>9.1.0 23.10.2023</h3>
@@ -593,7 +620,7 @@ Modification du message d'erreur lors de l'ajout d'un dispositif manuel/mail dé
                                         <h3>9.0.0 06.10.2023</h3>
                                         <ul>
                                             <li>
-                                                <p>Envoi d'un courriel d'instructions d'installation de l'agent en tant qu'action de masse sur la vue des entreprises</p>
+                                                <p>Envoi d'un courriel d'instructions d'installation de l'agent en tant qu'action de masse sur la vue des clients</p>
                                             </li>
                                             <li>
                                                 <p>Amélioration de l'interface utilisateur des modèles d'avis</p>
