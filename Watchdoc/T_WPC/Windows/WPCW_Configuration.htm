@@ -226,9 +226,13 @@
                                                             <p><strong>Nom :</strong> saisissez, si nécessaire, un nom pour le Client ;</p>
                                                         </li>
                                                         <li>
-                                                            <p><strong>Description :</strong> si nécessaire,  saisissez des informations complémentaires relatives au Client.</p>
+                                                            <p><strong>Description :</strong> si nécessaire,  saisissez des informations complémentaires relatives au Client.<br /></p>
+                                                            <p>
+                                                                <img src="WPCW_Config_Proprietes.png" style="width: 700px;height: auto;" />
+                                                            </p>
                                                         </li>
                                                     </ul>
+                                                    <p>&#160;</p>
                                                 </p>
                                             </li>
                                         </ul>
@@ -259,7 +263,10 @@
                                                                     <p><strong>nombre maximum : </strong>indiquez le nombre de travaux envoyés qui doivent être conservés sur le disque et affichés dans l'historique (50 max.) ;</p>
                                                                 </li>
                                                                 <li>
-                                                                    <p><strong>durée maximale de conservation :</strong> indiquez, en heures, la durée maximale de conservation des travaux affichés dans l'historique (1 mois max.).</p>
+                                                                    <p><strong>durée maximale de conservation :</strong> indiquez, en heures, la durée maximale de conservation des travaux affichés dans l'historique (1 mois max.).<br /><br /><img src="WPCW_Config_InterfaceUtil.png" style="width: 700px;height: auto;" /></p>
+                                                                    <p>
+                                                                        <br />
+                                                                    </p>
                                                                 </li>
                                                             </ul>
                                                         </li>
@@ -297,27 +304,20 @@
                                                                 </li>
                                                             </ul>
                                                         </li>
+                                                        <li>
+                                                            <p><a name="USB"></a><strong>Périph. USB</strong> : cochez la case pour autoriser WPC&#160;à comptabiliser les travaux des périphériques connectés en USB&#160;et non pas en réseau.</p>
+                                                            <p>Dans ce cas, les travaux d'impression figurent dans la base de données configurée (en master s'il s'agit d'une configuration en domaine) ainsi que dans les fichiers traces du service Windows de WPC.</p>
+                                                        </li>
+                                                        <li>
+                                                            <p><a name="ICMP"></a><strong>Désactiver <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term117">ICMP<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Internet Control Message Protocol (Protocole de message de contrôle sur Internet) est un protocole de couche réseau (no 3 du modèle OSI) qui contrôle les erreurs de transmission. Ainsi, une machine émettrice sait qu'il y a eu un incident de réseau, par exemple lorsqu’un service ou un hôte est inaccessible. La commande Ping est un exemple d'application utilisant des messages de contrôle ICMP.
+Aucun numéro de port TCP ou UDP n'est associé aux paquets ICMP, car ces numéros sont associés à la couche de transport supérieure[5].
+(Source : Wikipédia)</span></a> :</strong> cochez la case pour désactiver les requêtes ICMP afin de ne pas saturer le serveur dans le cas où WPC for Windows est installé sur un grand nombre de postes.<br /><br /><img src="WPCW_Config_Service.png" style="width: 700px;height: auto;" /><br /></p>
+                                                        </li>
                                                     </ul>
                                                 </p>
                                             </li>
                                         </ul>
-                                        <ul>
-                                            <li>
-                                                <p>
-                                                    <p><a name="USB"></a><strong>Périph. USB</strong> : cochez la case pour autoriser WPC&#160;à comptabiliser les travaux des périphériques connectés en USB&#160;et non pas en réseau.</p>
-                                                    <p>Dans ce cas, les travaux d'impression figurent dans la base de données configurée (en master s'il s'agit d'une configuration en domaine) ainsi que dans les fichiers traces du service Windows de WPC.</p>
-                                                </p>
-                                            </li>
-                                        </ul>
-                                        <ul>
-                                            <li>
-                                                <p>
-                                                    <p><a name="ICMP"></a><strong>Désactiver <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term117">ICMP<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Internet Control Message Protocol (Protocole de message de contrôle sur Internet) est un protocole de couche réseau (no 3 du modèle OSI) qui contrôle les erreurs de transmission. Ainsi, une machine émettrice sait qu'il y a eu un incident de réseau, par exemple lorsqu’un service ou un hôte est inaccessible. La commande Ping est un exemple d'application utilisant des messages de contrôle ICMP.
-Aucun numéro de port TCP ou UDP n'est associé aux paquets ICMP, car ces numéros sont associés à la couche de transport supérieure[5].
-(Source : Wikipédia)</span></a> :</strong> cochez la case pour désactiver les requêtes ICMP afin de ne pas saturer le serveur dans le cas où WPC for Windows est installé sur un grand nombre de postes.</p>
-                                                </p>
-                                            </li>
-                                        </ul>
+                                        <p>&#160;</p>
                                         <ul>
                                             <li>
                                                 <p>
@@ -330,7 +330,10 @@ Aucun numéro de port TCP ou UDP n'est associé aux paquets ICMP, car ces numér
                                                             <p><strong>Chemin du fichier : </strong>indiquez le chemin du dossier dans lequel seront stockés les fichiers de logs du port monitor ;</p>
                                                         </li>
                                                         <li>
-                                                            <p><strong>Niveau de logs : </strong>dans la liste, sélectionnez le niveau des logs relatifs au Port monitor : </p>
+                                                            <p><strong>Niveau de logs : </strong>dans la liste, sélectionnez le niveau des logs relatifs au Port monitor : <br /><br /><img src="WPCW_Config_PortMonitor.png" /></p>
+                                                            <p>
+                                                                <br />
+                                                            </p>
                                                         </li>
                                                     </ul>
                                                 </p>
@@ -348,7 +351,7 @@ Aucun numéro de port TCP ou UDP n'est associé aux paquets ICMP, car ces numér
                                                             <p><strong>Taille :</strong> indiquez la taille maximale des octets alloués à la rétention du spool ;</p>
                                                         </li>
                                                         <li>
-                                                            <p><strong>Durée:</strong> indiquez, en heures, la durée maximale de la rétention (720 heures pour 30 jours par défaut).</p>
+                                                            <p><strong>Durée:</strong> indiquez, en heures, la durée maximale de la rétention (720 heures pour 30 jours par défaut).<br /><br /><img src="WPCW_Config_RetentionSpools.png" /></p>
                                                         </li>
                                                         <fieldset>N.B. : les paramètres définis dans l'<strong>Historique des impressions</strong> sont prioritaires sur ceux de la rétention de spools. Les paramètres de l'historique doivent donc être pris en compte lors de la configuration de la section Rétention.
 				</fieldset>
@@ -356,31 +359,40 @@ Aucun numéro de port TCP ou UDP n'est associé aux paquets ICMP, car ces numér
                                                 </p>
                                             </li>
                                         </ul>
+                                        <p>&#160;</p>
+                                        <p><a name="File_Defaut"></a>
+                                        </p>
                                         <ul>
                                             <li>
                                                 <p>
-                                                    <p><a name="Rétention_de_spools"></a><strong>File par défaut</strong>
-                                                        <br />
+                                                    <p><a name="File_Defaut"></a><strong>File par défaut</strong>
                                                     </p>
-                                                    <p>Il peut être utile de préciser si et comment l'utilisateur est en droit de choisir sa file par défaut.</p>
+                                                    <p>Pour faciliter l'utilisation des files d'impression, l'administrateur peut définir une file d'impression universelle par défaut pour un groupe d'utilisateurs et un emplacement donnés (cf. <a href="WPCW_Config_FileDefaut.htm" target="_blank">Configurer une file par défaut pour un emplacement</a>).<br /></p>
+                                                    <p>Cette fonction est activable lorsque WPC for Windows est installé en mode normal (pas en mode silencieux/silent).<br />Une fois la fonction activée, il est possible de préciser les conditions de modification de cette file par défaut : <br /></p>
                                                 </p>
                                                 <ul>
                                                     <li>
-                                                        <p><strong>Activé : </strong>cochez la case pour autoriser l'utilisateur à choisir sa file par défaut ; </p>
+                                                        <p><strong>Activé : </strong>cochez la case pour appliquer la fonction "file par défaut".</p>
                                                     </li>
                                                     <li>
+                                                        <p><strong>Param. Windows :</strong> ce paramètre se rapporte au paramètre MS&#160;Windows<sup>®</sup> qui lui donne le droit, pour chaque poste utilisateur, de gérer l'imprimante par défaut :<br /><br /><img src="../../Z_Resources/Images/02_Captures/WPC/WPC_Windows_ParamMSW.png" style="width: 500px;height: auto;" /></p>
                                                         <p>&#160;</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p><strong>Conserver le paramètre de Windows :</strong> permet de conserver le paramètre tel que Windows l'a défini sur le poste utilisateur.&#160;Si l'utilisateur coche la case manuellement, c'est ce paramètre MS Windows qui s'appliquera sur son poste de travail ;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Laisser Windows gérer la file d'impression par défaut :  </strong>permet de laisser MS&#160;Windows gérer la file d'impression par défaut ; </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Ne pas laisser Windows gérer l'impression par défaut :</strong> permet d'appliquer le paramètre de WPC.&#160;Dans ce cas, le paramètre "Laisser Windows gérer la file d'impression par défaut" est désactivé et WPC&#160;effectue une surveillance automatique de ce paramètre.&#160;Si l'utilisateur active ce paramètre directement dans Windows, WPC&#160;l'annule pour appliquer son propre paramétrage.&#160;</p>
+                                                            </li>
+                                                        </ul>
                                                     </li>
-                                                    <li>
-                                                        <p>Un paramètre permet à MS&#160;Windows<sup>®</sup> de gérer automatiquement l'imprimante par défaut. <br /><br /><img src="../../Z_Resources/Images/02_Captures/WPC/WPC_Windows_ParamMSW.png" style="width: 500px;height: auto;" /></p>
-                                                    </li>
+                                                    <li><strong style="font-size: 12pt;">Utilisateurs </strong>:<ul><li><p><strong>Autoriser les utilisateurs à spécifier leur file par défaut :</strong> permet de laisser à l'utilisateur le droit de modifier la file par défaut définie par WPC.&#160;Il peut alors le faire de deux manières : </p><ul><li><p>en choisissant  dans la liste une autre file qu'il désigne comme file par défaut ; </p></li><li><p>en imprimant sur une autre file qui devient alors sa file par défaut. </p></li></ul></li><li><p><strong>Changer la file d'impression par défaut lorsque l'utilisateur change d'emplacement : </strong>permet de proposer à l'utilisateur la file par défaut associée à l'emplacement&#160;dans lequel il se trouve. Dans l'interface, la file par défaut est signalée.&#160;</p></li><li><p><strong>Interdire aux utilisateurs de changer leur file d'impression par défaut : </strong> permet d'imposer la file par défaut définie pour chaque emplacement. Dans ce cas, si l'utilisateur tente de contourner l'interdiction en  modifiant directement le paramètre MS&#160;Windows, WPC rétablira automatiquement la file par défaut associée à l'emplacement.&#160;<br /><br /><img src="WPCW_FileDefaut.png" /></p></li></ul></li>
                                                 </ul>
                                             </li>
                                         </ul>
-                                        <p>&#160;</p>
-                                        <p>
-                                            <img src="../../Z_Resources/Images/02_Captures/WPC/WPC_Config_Interface.png" style="width: 700px;" />
-                                        </p>
                                         <h2>Préciser un environnement d'exploitation</h2>
                                         <p>Par défaut, toutes les files physiques sont considérées comme utilisables par WPC.<br />Si vous souhaitez exclure une file physique de WPC, il convient d'appliquer un "tag" spécifique sur cette file : </p>
                                         <ol>

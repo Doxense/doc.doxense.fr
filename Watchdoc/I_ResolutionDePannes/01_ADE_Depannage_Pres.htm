@@ -194,7 +194,7 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <p><a name="aanchor283"></a>
+                                        <p><a name="aanchor284"></a>
                                             <MadCap:concept term="ADE" /><span style="font-size: 24pt; font-weight: bold; color: #ff803b;">Dépannages</span>
                                         </p>
                                         <p>&#160;</p>
@@ -552,17 +552,59 @@
                                             </div>
                                         </div>
                                         <h2 id="WEScan" data-magellan-target="WEScan">WEScan</h2>
-                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false">Impossible de récupérer les paramètres initiaux - NoScanProfiles - Could not find any scan profiles.</a></span>
-                                            <div class="MCDropDownBody dropDownBody">
-                                                <p><strong>Contexte :</strong> ce message apparaît après activation de WEScan dans un domaine (configuration master/slaves). <br /><strong>Cause :</strong> l'impression à la demande interserveur n'est pas activée. </p>
-                                                <p><strong>Résolution :</strong> il convient d'<a href="../H_HowTo/WD52_Interserveur_Principe.htm" target="_blank" alt="Activer l'impression à la demande interserveur">Activer l'impression à la demande interserveur</a>.&#160;</p>
-                                            </div>
-                                        </div>
-                                        <p>&#160;</p>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false">Les pages des documents numérisés ne sont pas classées dans l'ordre</a></span>
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> lorsqu'un utilisateur numérise un document comportant plusieurs pages, ces pages ne sont pas classées dans l'ordre.<br /><strong>Cause :</strong> si le paramètre Nom du fichier n'est pas modifié dans la destination de scan, le fichier numérisé portera le nom Scan et ses occurences Scan, Scan (1), Scan (2), etc. Comme Windows utilise le tri ASCII, Scan (1) est considéré comme le premier dans la liste, avant Scan.</p>
                                                 <p><strong>Résolution :</strong> il convient de modifier le paramètre <strong>Nom de fichier</strong> pour lui attribuer une variable permettant le tri, comme $LONGDATE, par exemple, qui tiendra compte de l'heure, de la minute et la seconde de numérisation de la page (cf.&#160;<a href="../C_Configurer/ConfigWEScan/WEScan_Config_Profil_DestScanToMe.htm#Nom_du_fichier" target="_blank">Configurer une destination de scan</a>).&#160;</p>
+                                            </div>
+                                        </div>
+                                        <p>&#160;</p>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false">Message d'erreur - Impossible de récupérer les paramètres initaux - NoScanProfile /&#160;Pas de profil de scan - Could not find any valid scan profile after constraints application</a><br /></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> après avoir lancé une numérisation, un message d'erreur  s'affiche : "Impossible de récupérer les paramètres initaux - NoScanProfile - Could not find any valid scan profile after constraints application".</p>
+                                                <p>Il peut aussi arriver que ce message apparaisse après l'installation de WEScan dans un domaine (configuration master/slaves). </p>
+                                                <p><strong>Cause :</strong> ce message peut être dû : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p>à une incompatibilité de paramètres entre les paramètres de numérisation du périphérique et les paramètres du profil de numérisation WEScan sélectionné par l'utilisateur ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p>à l'absence du profil de numérisation dans le WES&#160;du périphérique ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p>à la désactivation de WEScan dans le profil WES&#160;du périphérique ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>à la désactivation de la fonction d''impression à la demande interserveur ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>à l'absence des fichiers de profils de scan personnalisés sur les serveurs qui dépendent d'un serveur master</p>
+                                                    </li>
+                                                </ul>
+                                                <p>Les précisions sur la nature du problème figurent dans les fichiers de logs.<br /></p>
+                                                <p><strong>Résolution :</strong> en fonction de la nature de l'erreur, il convient de vérifier :<br /></p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>la comptabilité du périphérique avec la fonction WEScan</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>si le périphérique est compatible, l'activation de WEScan sur le WES&#160;du périphérique ;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>la compatibilité entre les paramètres du périphérique et les paramètres définis dans le profil de numérisation pour lequel le message d'erreur a été envoyé.&#160;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>si les serveurs sont installés dans une configuration en domaine (master/slaves), activez la fonction d'<a href="../H_HowTo/WD52_Interserveur_Principe.htm" target="_blank" alt="Activer l'impression à la demande interserveur">impression à la demande interserveur</a> et dupliquez les profils de numérisation du serveur master dans tous les autres serveurs qui en dépendent.</p>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <p>&#160;</p>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false">WEScan Konica Minolta - Impossible de récupérer les paramètres initaux - NoScanProfile /&#160;Pas de profil de scan - Could not find any valid scan profile after constraints application</a><br /></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> après avoir lancé une numérisation en A4 depuis un périphérique Konica Minolta, un message d'erreur  s'affiche : "Impossible de récupérer les paramètres initaux - NoScanProfile - Could not find any valid scan profile after constraints application".</p>
+                                                <p><strong>Cause :</strong> ce message est peut être dû au paramètre "AutoSize" configuré dans le profil de numérisation WEScan qui n'est pas supporté par le modèle utilisé pour le scan.&#160;</p>
+                                                <p><strong>Résolution :</strong> si vous constatez que certains modèles ne supportent pas le paramétrage par défaut "AutoSize", il convient de créer un profil de scan spécifique pour ces modèles à l'aide de <a href="../B_WEScan/ScanProfilesCustomizer_Presentation.htm" target="_blank">ScanProfilesCustomizer</a>.&#160;Dans ce profil de scan spécifique, le paramètre AutoSize <strong>ne doit pas </strong>être configué par défaut.&#160;</p>
                                             </div>
                                         </div>
                                         <p>&#160;</p>
