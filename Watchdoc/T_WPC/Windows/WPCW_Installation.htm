@@ -69,7 +69,6 @@
 }
 
 </style>
-        <link href="../../Resources/TableSlylesheets/Standard.css" rel="stylesheet" data-mc-stylesheet-type="table" />
         <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
         </script>
         <script src="../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
@@ -207,110 +206,6 @@
                                         <p>&#160;</p>
                                         <p>Il peut être  être déployé automatiquement sur un grand nombre de postes utilisateurs à l'aide d'une stratégie de groupe ou installé manuellement et unitairement par un administrateur sur un poste utilisateur.<br /><br /></p>
                                         <p>Comme WPC repose sur une file universelle (installée par défaut) à laquelle un pilote doit être associé, veillez à télécharger préalablement un pilote depuis WSC (cf. <a href="../../G_WD_Express/WD_Express_Driver.htm" target="_blank" title="Lien vers la procédure" alt="Lien vers la procédure">Charger un pilote dans WSC</a>).</p>
-                                        <h2>Prérequis</h2>
-                                        <p>Pour le bon fonctionnement de WPC for Windows, vérifiez la liste des droits nécessaires au fonctionnement du service MS Windows&#160;:<br /></p>
-                                        <p> </p>
-                                        <table style="width: auto;mc-table-style: url('../../Resources/TableSlylesheets/Standard.css');" class="TableStyle-Standard" cellspacing="0">
-                                            <col class="TableStyle-Standard-Column-Regular" />
-                                            <col class="TableStyle-Standard-Column-Regular" style="width: 651px;" />
-                                            <col class="TableStyle-Standard-Column-Regular" />
-                                            <thead>
-                                                <tr class="TableStyle-Standard-Head-Header1">
-                                                    <td class="TableStyle-Standard-HeadE-Regular-Header1" style="font-weight: bold;">Type</td>
-                                                    <td class="TableStyle-Standard-HeadE-Regular-Header1" style="font-weight: bold;">Détail</td>
-                                                    <td class="TableStyle-Standard-HeadD-Regular-Header1" style="font-weight: bold;">Droits</td>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">Dossiers</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>C:\Program Files\</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                        <p>Read/Write</p>
-                                                    </td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">&#160;</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>C:\Windows\System32\</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                        <p>Read/Write</p>
-                                                    </td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">Clés de registre</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">HKLM\SOFTWARE\Doxense</td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                        <p>Read/Write</p>
-                                                    </td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">&#160;</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">HKU\{UsersSID}\Printers\Settings</td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                        <p>Read/Write</p>
-                                                    </td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">&#160;</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">HKLM\SYSTEM\CurrentControlSet\Control\Print\Environments\Windows x64\Drivers\Version-3</td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                        <p>Read/Write</p>
-                                                    </td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">&#160;</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">HKLM\SYSTEM\CurrentControlSet\Control\Print\Monitors</td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                        <p>Read/Write</p>
-                                                    </td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">&#160;</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">HKLM\SYSTEM\CurrentControlSet\Control\Print\Printers</td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                        <p>Read/Write</p>
-                                                    </td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">&#160;</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1"> HKLM\Software\Xerox\PrinterDriver\V5.0</td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                        <p>Read/Write</p>
-                                                    </td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">Services</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">Stop/Pause/Resume/Start service Spooler</td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">allowed</td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>System</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">Install/Modify/Delete Port Monitor</td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">allowed</td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">&#160;</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2"> Install/Modify/Delete Driver</td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">allowed</td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">&#160;</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">Create/Modify/Remove TCP/IP Port</td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">allowed</td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyB-Regular-Row2">&#160;</td>
-                                                    <td class="TableStyle-Standard-BodyB-Regular-Row2">Install/Modify/Delete Printer</td>
-                                                    <td class="TableStyle-Standard-BodyA-Regular-Row2">allowed</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
                                         <h2>Procédure</h2>
                                         <h3>Installation en masse</h3>
                                         <p>L'installation en masse à l'aide peut être réalisée :</p>

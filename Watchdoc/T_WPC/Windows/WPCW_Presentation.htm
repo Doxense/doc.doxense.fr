@@ -208,11 +208,88 @@
                                             </li>
                                             <li>
                                                 <p>WPC nécessite une file universelle installée automatiquement (cf. <a href="../../C_Configurer/ConfigFiles/ConfigFiles_FileUniv.htm">Configurer une file u</a><a href="../../C_Configurer/ConfigFiles/ConfigFiles_FileUniv.htm">niverselle</a>). Cette file universelle est automatiquement créée lors de l'installation de Watchdoc. Nommée <strong>Impression Universelle</strong> par défaut,&#160;elle est préconfigurée pour rediriger les fichiers de spool vers le <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term68">pool<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Depuis Watchdoc 5.2,  le pool d'impression est un réservoir logique conçu pour lister des travaux en attente d'impression. Le Pool (pool de travauxl) sert notamment lors de la redirection de travaux d'une file d'impression à l'autre en cas de défaillance : ainsi, lorsqu'un périphérique d'impression est indisponible, tous les autres périphériques inclus dans le même pool peuvent être sollicités pour prendre le relais.</span></a> d'impression global (#global). </p>
+                                                <p>Outre cette file universelle par défaut, d'autres files universelles peuvent être crées en fonction des besoins.</p>
                                             </li>
                                             <li>
                                                 <p>WPC nécessite d'être associé à un <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term77">emplacement<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>(anciennement "Géosites" dans les versions antérieures à la V6). Dans Watchdoc, un emplacement est un libellé appartenant à une liste structurée de sites géographiques permettant de localiser physiquement des éléments de configuration du parc d'impression (périphériques d'impression, serveurs, files, etc.). 
 La liste des emplacements est administrable depuis l'interface d'administration de Watchdoc.
 Les emplacements sont nécessaires à la fonctionnalité Watchdoc Print Client.</span></a> (cf. <a href="../../C_Configurer/ConfigEmplacements/ConfigEmplacements.htm" target="_blank" alt="Lien vers la documentation d'administration des emplacements">Gérer les emplacements</a>). </p>
+                                            </li>
+                                            <li>
+                                                <p>WPC&#160;for Windows doit être installé dans le dossier Program Files du poste de travail.</p>
+                                            </li>
+                                            <li>
+                                                <p>WPC&#160;for Windows doit être installé en tant que LocalSystem sur le poste de travail (installation recommandée).</p>
+                                            </li>
+                                            <li>
+                                                <p>WPC&#160;for Windows peut être installé avec des droits plus faibles que le compte LocalSystem sur le poste de travail. Cependant, Doxense ne recommande pas ce type d'installation et ne garantit pas le fonctionnement optimal de WPC installé avec des droits plus faibles que ceux de LocalSystem. Si vous souhaitez cependant installer WPCde cette manière, les droits suivants sont attendus : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p>Service : Folder Read/Write</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>C:\Program Files\</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>C:\Windows\System32\</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p>Registry : Read/Write</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>HKLM\SOFTWARE\Doxense</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>HKU\{UsersSID}\Printers\Settings</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>HKLM\SYSTEM\CurrentControlSet\Control\Print\Environments\Windows x64\Drivers\Version-3</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>HKLM\SYSTEM\CurrentControlSet\Control\Print\Monitors</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>HKLM\SYSTEM\CurrentControlSet\Control\Print\Printers</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>HKLM\Software\Xerox\PrinterDriver\V5.0</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>HKU\{userSID}\Software\Microsoft\Windows NT\CurrentVersion\Windows</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>HKU\{UsersSID}\Printers\Settings</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p>Services</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>Stop/Pause/Resume/Start service Spooler</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p>System</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>Install/Modify/Delete Port Monitor</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Install/Modify/Delete Driver</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Create/Modify/Remove TCP/IP Port</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Install/Modify/Delete Printer</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
                                             </li>
                                         </ul>
                                         <h2>Principe</h2>
