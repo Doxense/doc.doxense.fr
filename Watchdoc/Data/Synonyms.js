@@ -3,6 +3,7 @@ xmlSynonymsData += '<?xml version=\"1.0\" encoding=\"utf-8\"?>';
 xmlSynonymsData += '<MadCapSynonyms xml:lang=\"fr-fr\">';
 xmlSynonymsData += '    <Groups />';
 xmlSynonymsData += '    <Directional>';
+xmlSynonymsData += '        <DirectionalSynonym From=\"transformation de travaux\" To=\"transfo de spool\" />';
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"refacturation\" To=\"analyt\" FromStem=\"refactur\" />';
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"maître\" To=\"mast\" FromStem=\"maîtr\" />';
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"cacher\" To=\"transform\" FromStem=\"cach\" />';

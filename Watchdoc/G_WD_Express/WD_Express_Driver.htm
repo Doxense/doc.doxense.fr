@@ -199,7 +199,7 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor160"></a>
+                                        <h1><a name="aanchor161"></a>
                                             <MadCap:concept term="WSC" />WSC Console de Supervision  - Charger un pilote</h1>
                                         <p>La procédure d'ajout d'un pilote diffère entre les versions 6.0 et 6.1 : choisissez la procédure adéquate :</p>
                                         <h2>Pour la version WSC&#160;v6.0</h2>
@@ -255,7 +255,7 @@
                                         <p data-mc-conditions="General.Online">→ Vous pouvez ensuite <a href="WD_Express_Profil_WES.htm">Activer l'interface WES</a></p>
                                         <h2>Pour la version WSC&#160;v6.1</h2>
                                         <h2>Prérequis</h2>
-                                        <p>Pour préparer les packages des pilotes à télécharger dansWSC&#160;v6.1, il est <strong>obligatoire</strong></p>
+                                        <p>Pour préparer les packages des pilotes à télécharger dans WSC&#160;v6.1, il est <strong>obligatoire</strong> (sauf pour les pilotes Ricoh et Epson) :</p>
                                         <ul>
                                             <li>
                                                 <p>d'utiliser  l'outil <strong>DriverPackageExtractor.exe</strong> fourni par Doxense dans le package d'installation Watchdoc ;</p>
@@ -264,6 +264,17 @@
                                                 <p>d'utliser l'outil 7-Zip<sup>®</sup>(cf.<a href="https://7-zip.org/" target="_blank" title="Lien vers le site de téléchargement de l'outil 7-Zip " alt="Lien vers le site de téléchargement de l'outil 7-Zip ">https://7-zip.org/</a>) </p>
                                             </li>
                                         </ul>
+                                        <p>&#160;</p>
+                                        <p>Pour les pilotes Ricoh et Epson  il est nécessaire de les faire signer : </p>
+                                        <ul>
+                                            <li>
+                                                <p>soit par votre autorité de certification ;</p>
+                                            </li>
+                                            <li>
+                                                <p>soit par Doxense.&#160;</p>
+                                            </li>
+                                        </ul>
+                                        <p>&#160;</p>
                                         <fieldset> Si vous effectuez une mise à jour à partir d'une version précédente, vous devez désinstaller les pilotes existants et les recréer à l'aide de la procédure suivante.<br />Si vous n'avez pas mis à jour les pilotes mais que vous ajoutez un serveur dans le domaine ou un poste utilisateur sur lequel vous installez la dernière version de WPC&#160;for Windows, vous devrez également désinstaller les pilotes existants et les réinstaller à l'aide de DriverPackageExtractor.<br /></fieldset>
                                         <p>&#160;</p>
                                         <p>Si vous n'avez pas l'autorisation d'installer 7-Zip sur le serveur WSC, installez-le sur un autre espace de travail et procédez à la préparation du package de pilote sur cet espace. <br />Pour cela, dans cet espace de travail, installez :
@@ -338,7 +349,7 @@
                                         <h3>Préparer le pilote</h3>
                                         <ol>
                                             <li value="1">
-                                                <p>Accédez à WSC en tant qu'administrateur.</p>
+                                                <p>Accédez au serveur qui héberge WSC en tant qu'administrateur.</p>
                                             </li>
                                             <li value="2">
                                                 <p>Avec l'explorateur, rendez-vous dans le dossier C:\Program Files\Doxense\Watchdoc.</p>
