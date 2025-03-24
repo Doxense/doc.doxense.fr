@@ -68,7 +68,6 @@
 }
 
 </style>
-        <link href="../Resources/TableSlylesheets/Standard.css" rel="stylesheet" data-mc-stylesheet-type="table" />
         <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
         </script>
         <script src="../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
@@ -255,137 +254,140 @@
                                         <p data-mc-conditions="General.Online">→ Vous pouvez ensuite <a href="WD_Express_Profil_WES.htm">Activer l'interface WES</a></p>
                                         <h2>Pour la version WSC&#160;v6.1</h2>
                                         <h2>Prérequis</h2>
-                                        <p>Pour préparer les packages des pilotes à télécharger dans WSC&#160;v6.1, il est <strong>obligatoire</strong> (sauf pour les pilotes Ricoh et Epson) :</p>
+                                        <p>WSC v. 6.1 inclut un module de sécurité pour les pilotes d'impression. A partir de cette version, seuls les pilotes certifiés par Microsoft<sup>®</sup> avec une signature <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term108">WHQL<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Signature numérique attribuée aux packages de pilotes répondant aux exigences des tests HLK  (Windows Hardware Lab Kit) par Microsoft pour garantir la sécurité du pilote.
+(Source : https://learn.microsoft.com)</span></a> valide peuvent être installés sur la console de supervision.  Une exception existe pour les pilotes <strong>Epson</strong><sup>®</sup> et <strong>Ricoh</strong><sup>®</sup>.</p>
+                                        <p>&#160;</p>
+                                        <p>Pour préparer les packages des pilotes à télécharger dans WSC&#160;v 6.1, il est nécessaire&#160;: </p>
                                         <ul>
                                             <li>
-                                                <p>d'utiliser  l'outil <strong>DriverPackageExtractor.exe</strong> fourni par Doxense dans le package d'installation Watchdoc ;</p>
-                                            </li>
-                                            <li>
-                                                <p>d'utliser l'outil 7-Zip<sup>®</sup>(cf.<a href="https://7-zip.org/" target="_blank" title="Lien vers le site de téléchargement de l'outil 7-Zip " alt="Lien vers le site de téléchargement de l'outil 7-Zip ">https://7-zip.org/</a>) </p>
-                                            </li>
-                                        </ul>
-                                        <p>&#160;</p>
-                                        <p>Pour les pilotes Ricoh et Epson  il est nécessaire de les faire signer : </p>
-                                        <ul>
-                                            <li>
-                                                <p>soit par votre autorité de certification ;</p>
-                                            </li>
-                                            <li>
-                                                <p>soit par Doxense.&#160;</p>
-                                            </li>
-                                        </ul>
-                                        <p>&#160;</p>
-                                        <fieldset> Si vous effectuez une mise à jour à partir d'une version précédente, vous devez désinstaller les pilotes existants et les recréer à l'aide de la procédure suivante.<br />Si vous n'avez pas mis à jour les pilotes mais que vous ajoutez un serveur dans le domaine ou un poste utilisateur sur lequel vous installez la dernière version de WPC&#160;for Windows, vous devrez également désinstaller les pilotes existants et les réinstaller à l'aide de DriverPackageExtractor.<br /></fieldset>
-                                        <p>&#160;</p>
-                                        <p>Si vous n'avez pas l'autorisation d'installer 7-Zip sur le serveur WSC, installez-le sur un autre espace de travail et procédez à la préparation du package de pilote sur cet espace. <br />Pour cela, dans cet espace de travail, installez :
-        <ul><li>
-               7-Zip<sup>®</sup></li><li>
-               le package du pilote
-            </li></ul>Dans cet espace de travail, installez également les outils suivants, disponibles dans le package d'installation&#160;de Watchdoc&#160;:        <ul><li>
-                DriverPackageExtractor.exe
-            </li><li>
-                DriverPackageExtractor.exe.config
-            </li><li>
-                CliWrap.dll
-            </li><li>
-                Doxense.Core.dll
-            </li><li>
-               Doxense.IO.Compression.dll
-            </li><li>
-                Doxense.Watchdoc.SpoolMonitor.dll
-            </li><li>
-               UPDPCL6Win_397370MU.zip
-            </li></ul></p>
-                                        <h3>Télécharger le package certifié</h3>
-                                        <p>WSC v6.1 inclut un module de sécurité pour les pilotes d'impression. A partir de cette version, seuls les pilotes certifiés par Microsoft<sup>®</sup> avec une signature <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term108">WHQL<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Signature numérique attribuée aux packages de pilotes répondant aux exigences des tests HLK  (Windows Hardware Lab Kit) par Microsoft pour garantir la sécurité du pilote.
-(Source : https://learn.microsoft.com)</span></a> valide peuvent être installés sur la console de supervision.</p>
-                                        <p>&#160;</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Rendez-vous sur le site officiel du fabricant.</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>Sélectionnez le pilote correspondant au modèle du périphérique d'impression à installer.</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>Téléchargez le package du pilote (généralement, il s'agit d'une archive /fichier compressé).</p>
-                                                <p>S'il ne s'agit pas d'un fichier compressé (un .exe, par exemple), compressez-le car <strong>WSC&#160;traite exclusivement des pilotes présentés au format .zip.</strong><br /><br /></p>
-                                                <table style="width: auto;mc-table-style: url('../Resources/TableSlylesheets/Standard.css');" class="TableStyle-Standard" cellspacing="0">
-                                                    <col class="TableStyle-Standard-Column-Regular" />
-                                                    <col class="TableStyle-Standard-Column-Regular" />
-                                                    <tbody>
-                                                        <tr class="TableStyle-Standard-Body-Row2">
-                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-weight: bold;">Marque </td>
-                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-weight: bold;">Procédure </td>
-                                                        </tr>
-                                                        <tr class="TableStyle-Standard-Body-Row1">
-                                                            <td class="TableStyle-Standard-BodyB-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;">Ricoh</td>
-                                                            <td class="TableStyle-Standard-BodyA-Regular-Row1">
-                                                                <p>Le pilote PCL&#160;6 est téléchargé sous forme d'un .exe</p>
-                                                                <ol>
-                                                                    <li value="1">
-                                                                        <p>décompressez le fichier .zip</p>
-                                                                    </li>
-                                                                    <li value="2">
-                                                                        <p>parmi les éléments décompressés, sélectionnez le dossier disc et le dossier misc</p>
-                                                                    </li>
-                                                                    <li value="3">
-                                                                        <p>recompressez ces deux dossiers </p>
-                                                                    </li>
-                                                                    <li value="4">
-                                                                        <p>renommez-le : ce fichier est considéré comme le nouveau package du pilote.</p>
-                                                                    </li>
-                                                                </ol>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </li>
-                                            <p>&#160;</p>
-                                            <li value="4">
-                                                <p>Enregistrez le package dans le serveur qui héberge WSC.</p>
-                                            </li>
-                                        </ol>
-                                        <h3>Préparer le pilote</h3>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Accédez au serveur qui héberge WSC en tant qu'administrateur.</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>Avec l'explorateur, rendez-vous dans le dossier C:\Program Files\Doxense\Watchdoc.</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>Lancez l'outil <strong>DriverPackageExtractor.exe</strong> en tant qu'administrateur :<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V61_DriverPackageExtractor.png" style="width: 700px;height: auto;" /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p>Dans l'outil <strong>DriverPackageExtractor</strong> :</p>
+                                                <p><strong>pour tous les pilotes</strong> (hormis Epson et Ricoh)&#160;: </p>
                                                 <ul>
                                                     <li>
-                                                        <p><strong>Path to 7Zip</strong> : indiquez le chemin d'accès à l'utilitaire 7-Zip ;</p>
+                                                        <p>d'utiliser  l'outil <strong>DriverPackageExtractor.exe</strong> fourni par Doxense dans le package d'installation Watchdoc.</p>
                                                     </li>
                                                     <li>
-                                                        <p><strong>Driver archive :</strong> indiquez le chemin d'accès vers le fichier compressé du pilote (téléchargé précédemment) ; </p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Temporary folder :</strong> indiquez le chemin vers un dossier dans lequel sont enregistrés temporairement les fichiers extraits du package du pilote et dans le champ <strong>File name</strong>, attribuez un nom à ce fichier final.&#160;</p>
+                                                        <p>de disposer de l'outil de compression  7-Zip<sup>®</sup>(cf.<a href="https://7-zip.org/" target="_blank" title="Lien vers le site de téléchargement de l'outil 7-Zip " alt="Lien vers le site de téléchargement de l'outil 7-Zip ">https://7-zip.org/</a>).&#160;</p>
+                                                        <p>Si vous n'avez pas l'autorisation d'installer 7-Zip sur le serveur WSC, préparez le package dans un autre espace de travail. Sur cet espace, installez 7-Zip ainsi que les outils suivants, disponibles dans le package d'installation&#160;de Watchdoc&#160;:</p>
+                                                        <ul>
+                                                            <li style="font-size: 12pt;">
+                DriverPackageExtractor.exe
+            </li>
+                                                            <li style="font-size: 12pt;">
+                DriverPackageExtractor.exe.config
+            </li>
+                                                            <li style="font-size: 12pt;">
+                CliWrap.dll
+            </li>
+                                                            <li style="font-size: 12pt;">
+                Doxense.Core.dll
+            </li>
+                                                            <li style="font-size: 12pt;">
+               Doxense.IO.Compression.dll
+            </li>
+                                                            <li style="font-size: 12pt;">
+                Doxense.Watchdoc.SpoolMonitor.dll
+            </li>
+                                                            <li style="font-size: 12pt;">
+               UPDPCL6Win_397370MU.zip
+</li>
+                                                        </ul>
                                                     </li>
                                                 </ul>
                                             </li>
-                                            <li value="5">
-                                                <p>Cliquez sur le bouton <strong>Prepare package and analyse</strong>.</p>
-                                            </li>
-                                            <li value="6">
-                                                <p>Indiquez l'endroit où vous souhaitez enregistrer le package du pilote une fois analysé par DriverPackageExtractor et cliquez sur <strong>Save </strong>: <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V61_DriverPackageExtractor_Prepare.png" style="width: 700px;" />-<br /></p>
+                                        </ul>
+                                        <p>
+                                            <br style="font-size: 12pt;" />
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                <p><strong>pour les pilotes Epson et Ricoh</strong>, il est nécessaire de les faire signer au préalable par Doxense, en vous adressant au Support via <a href="https://connect.doxense.com/" target="_blank">Connect</a>.</p>
                                                 <p>&#160;</p>
                                             </li>
-                                            <li value="7">
-                                                <p>Lorsque le package est prêt, cliquez sur <strong>OK </strong>dans l'interface informant du succès de l'opération.. <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V61_DriverPackageExtractor_Save.png" style="width: 700px;height: auto;" /></p>
-                                                <p>&#160;</p>
-                                                <p><span style="font-family: 'Wingdings'">è</span> Dès lors, ce package est conforme aux attente de WSC et vous pouvez l'y ajouter.<br />Si la préparation prend beaucoup de temps ou s'achève par un message d'erreur, il se peut que ce soit à cause du poids de l'archive. Dans ce cas allégez-le (cf. <a href="#All%C3%A9ger_le_package" target="_self">Alléger le dossier d'archive</a>).</p>
+                                        </ul>
+                                        <fieldset><strong>Mise à jour :</strong> si vous effectuez une mise à jour à partir d'une version antérieure à la v. 6.1, vous devez désinstaller les pilotes existants et les recréer à l'aide de la procédure décrite ci-dessous.<br />Si vous n'avez pas mis à jour les pilotes mais que vous ajoutez un serveur dans le domaine ou un poste utilisateur sur lequel vous installez la dernière version de WPC&#160;for Windows, vous devrez également désinstaller les pilotes existants et les réinstaller à l'aide de DriverPackageExtractor.<br /></fieldset>
+                                        <h2>Procédure</h2>
+                                        <h3>Télécharger le package certifié (tous les pilotes sauf Epson et Ricoh)</h3>
+                                        <ol>
+                                            <li value="1">
+                                                <p>En tant qu'administrateur, accédez au serveur qui héberge WSC.</p>
                                             </li>
                                         </ol>
-                                        <h2>Ajouter un pilote </h2>
+                                        <ol data-mc-continue="true">
+                                            <li value="2">
+                                                <p>Via un navigateur, rendez-vous sur le site officiel du fabricant.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Téléchargez le package du pilote  correspondant au modèle du périphérique d'impression à installer : généralement, il s'agit d'une archive /fichier compressé.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>S'il ne s'agit pas d'un fichier compressé (un .exe, par exemple), compressez-le car <strong>WSC&#160;traite exclusivement des pilotes présentés au format .zip.</strong></p>
+                                            </li>
+                                            <li style="font-size: 12pt;" value="5">
+                                                <p>Enregistrez le package sur le serveur.</p>
+                                            </li>
+                                        </ol>
+                                        <h3>Préparer les pilotes</h3>
+                                        <blockquote>
+                                            <h4> Tous les pilotes sauf Epson et Ricoh</h4>
+                                            <ol>
+                                                <li value="1">
+                                                    <p>Avec l'explorateur, rendez-vous dans le dossier C:\Program Files\Doxense\Watchdoc.</p>
+                                                </li>
+                                                <li value="2">
+                                                    <p>Lancez l'outil <strong>DriverPackageExtractor.exe</strong> en tant qu'administrateur :<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V61_DriverPackageExtractor.png" style="width: 700px;height: auto;" /></p>
+                                                    <p>&#160;</p>
+                                                </li>
+                                                <li value="3">
+                                                    <p>Dans l'outil <strong>DriverPackageExtractor</strong> :</p>
+                                                    <ul>
+                                                        <li>
+                                                            <p><strong>Path to 7Zip</strong> : indiquez le chemin d'accès à l'utilitaire 7-Zip ;</p>
+                                                        </li>
+                                                        <li>
+                                                            <p><strong>Driver archive :</strong> indiquez le chemin d'accès vers le fichier compressé du pilote (téléchargé précédemment) ; </p>
+                                                        </li>
+                                                        <li>
+                                                            <p><strong>Temporary folder :</strong> indiquez le chemin vers un dossier dans lequel sont enregistrés temporairement les fichiers extraits du package du pilote et dans le champ <strong>File name</strong>, attribuez un nom à ce fichier final.&#160;</p>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li value="4">
+                                                    <p>Cliquez sur le bouton <strong>Prepare package and analyse</strong>.</p>
+                                                </li>
+                                                <li value="5">
+                                                    <p>Indiquez l'endroit où vous souhaitez enregistrer le package du pilote une fois analysé par DriverPackageExtractor ;</p>
+                                                </li>
+                                                <li value="6">
+                                                    <p>cliquez sur <strong>Save </strong>: <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V61_DriverPackageExtractor_Prepare.png" style="width: 700px;" />-</p>
+                                                    <p>
+                                                        <br />
+                                                    </p>
+                                                </li>
+                                                <li value="7">
+                                                    <p>Lorsque le package est prêt, cliquez sur <strong>OK </strong>dans l'interface informant du succès de l'opération.. <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V61_DriverPackageExtractor_Save.png" style="width: 700px;height: auto;" /></p>
+                                                    <p>&#160;</p>
+                                                    <p><span style="font-family: 'Wingdings'">è</span> Dès lors, ce package est conforme aux attente de WSC et vous pouvez l'y ajouter.<br />Si la préparation prend beaucoup de temps ou s'achève par un message d'erreur, il se peut que ce soit à cause du poids de l'archive. Dans ce cas allégez-le (cf. <a href="#All%C3%A9ger_le_package" target="_self">Alléger le dossier d'archive</a>).</p>
+                                                </li>
+                                            </ol>
+                                        </blockquote>
+                                        <blockquote>
+                                            <h4>Pilotes Epson et Ricoh</h4>
+                                            <ol>
+                                                <li value="1">
+                                                    <p>Via un navigateur, rendez-vous sur le site officiel du fabricant.</p>
+                                                </li>
+                                                <li value="2">
+                                                    <p>Téléchargez le pilote correspondant aux périphériques d'impression à installer.</p>
+                                                </li>
+                                                <li value="3">
+                                                    <p>Envoyez les packages des pilotes téléchargés au Support Doxense via<a href="https://connect.doxense.com/" target="_blank"> Connect</a> en demandant qu'ils soient signés.</p>
+                                                </li>
+                                                <li value="4">
+                                                    <p>Enregistrez le package fourni en retour par Doxense sur le serveur qui héberge WSC.</p>
+                                                </li>
+                                            </ol>
+                                        </blockquote>
+                                        <h3>Ajouter un pilote </h3>
                                         <ol>
                                             <li value="1">
                                                 <p>Accédez à WSC en tant qu'administrateur.&#160;</p>
@@ -400,7 +402,7 @@
                                                 <p>Dans la fenêtre <strong>Ajouter un pilote</strong>,</p>
                                                 <ul>
                                                     <li>
-                                                        <p> glissez le fichier d'archive depuis votre espace de travail ;</p>
+                                                        <p> glissez le package du pilote (fichier compressé zip) depuis votre espace de travail ;</p>
                                                     </li>
                                                     <li>
                                                         <p>ou cliquez dans le cadre pour ouvrir l'explorateur de l'espace de travail et sélectionner le package du pilote à télécharger :</p>
@@ -418,19 +420,22 @@
                                                 <p>Cliquez sur le bouton <strong>Suivant </strong>;</p>
                                             </li>
                                             <li value="6">
-                                                <p>Dans l'interface <strong>Ajouter un pilote d'impression</strong>, si le téléchargement s'est bien passé et si le package est valide, les champs suivants sont complétés :</p>
+                                                <p>Dans l'interface <strong>Ajouter un pilote d'impression</strong>, quand le téléchargement s'est bien passé et que le package est valide, les champs suivants sont complétés :</p>
                                                 <ul>
                                                     <li>
                                                         <p><strong>Chemin vers .inf : </strong> chemin vers le fichier d'installation (.inf) présent dans le package du pilote et dans lequel se trouve la valeur <strong>DriverName</strong>. </p>
                                                     </li>
                                                     <li>
-                                                        <p><strong>Pilote </strong>: nom du pilote ou des pilotes contenus dans le package d'installation. S'il y en a plusieurs, choisissez dans la liste celui qui est compatible avec le(s) périphérique(s) utilisé(s).</p>
+                                                        <p><strong>Pilote :</strong> nom du pilote ou des pilotes contenus dans le package d'installation. S'il y en a plusieurs, choisissez dans la liste celui qui est compatible avec le(s) périphérique(s) utilisé(s).</p>
                                                     </li>
                                                     <li>
-                                                        <p><strong>Version </strong>: version du pilote.</p>
+                                                        <p><strong>Version :</strong> version du pilote.</p>
                                                     </li>
                                                     <li>
-                                                        <p><strong>Systèmes </strong>: version du système sur lequel est installé le pilote :<br /><br /><img src="../Z_Resources/Images/02_Captures/WD55_PnP25_Admin_Pilotes_Ressume.png" style="height: auto;width: 300px;" /></p>
+                                                        <p><strong>Systèmes :</strong> version du système sur lequel est installé le pilote.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Package signé par : </strong>nom de l'émetteur (issuer) de la signature du pilote (Microsoft dans le cas d'un pilote WHQL ou Doxense, dans le cas de pilotes Epson ou Ricoh) :<br /><br /><img src="../Z_Resources/Images/02_Captures/WD55_PnP25_Admin_Pilotes_Ressume.png" style="height: auto;width: 500px;" /></p>
                                                         <p>&#160;</p>
                                                     </li>
                                                 </ul>
@@ -443,7 +448,7 @@
                                         </ol>
                                         <ol data-mc-continue="true">
                                             <li value="8">
-                                                <p>Dans la fenêtre <strong>Créer une file universelle</strong>, </p>
+                                                <p>dans la fenêtre <strong>Créer une file universelle</strong>, </p>
                                                 <ol style="list-style-type: lower-roman;">
                                                     <li value="1">
                                                         <p>cochez la case <strong>Créer</strong> si vous souhaitez créer une <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term71">file universelle<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>File logique créée exclusivement pour la Print API. Elle est créée automatiquement par défaut et nommée "Impression Sécurisée" lors de l'installation de Watchdoc. Elle est préconfigurée pour rediriger les fichiers de spool vers le pool d'impression global (#global).
@@ -464,27 +469,7 @@ Telle qu'elle est configurée à l'orignie, elle ne peut pas servir à WPC for W
                                                 <p>
                                                     <br />
                                                 </p>
-                                                <p><span style="font-family: 'Wingdings'">è</span>Dans le cas contraire, un message d'erreur s'affiche. Cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_WSC_VoirLogs.png" />pour afficher les logs dans lesquels sont listées les erreurs.</p>
-                                            </li>
-                                        </ol>
-                                        <h2><a name="Alléger_le_package"></a>Alléger le package du pilote</h2>
-                                        <p>Le poids d'un dossier contenant le pilote varie entre 10 et 30 Mb. </p>
-                                        <p>Si le dossier est conforme mais trop lourd, il peut arriver que l'étape de préparation prenne beaucoup de temps et s'achève par un message d'erreur (RequestEntityTooLarge ou End of Central Directory record could not be found). <br />Si vous tentez d'importer directement l'archive compressée dans WSC, le message est identique : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V61_DriverPackageExtractor_ErrTropLourd.png" style="width: 400px;height: 0;" /><br /><br />Dans ce cas, il convient d'alléger l'archive. </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>A l'aide de 7-Zip<sup>®</sup>, décompressez l'archive du pilote.</p>
-                                            </li>
-                                            <li value="2">
-                                                <p> Parmi les dossiers décompressés, sélectionnez un dossier de fichiers comportant la mention 64 (bits) (ou 32 bits si vos postes utilisateurs nécessitent cette version).</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>Recompressez cet unique dossier qui devient le package du pilote.</p>
-                                            </li>
-                                            <li value="4">
-                                                <p>Ouvrez <strong>DriverPackageExtractor</strong> en indiquant le dossier 64 bits compressé dans le champ <strong>Driver archive</strong>.</p>
-                                            </li>
-                                            <li value="5">
-                                                <p>Cliquez sur <strong>Repare package and analyse</strong>.</p>
+                                                <p><span style="font-family: 'Wingdings'">è</span>Dans le cas contraire, un message d'erreur s'affiche. Cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_WSC_VoirLogs.png" />pour afficher les logs dans lesquels sont listées les erreurs.<br />Si vous n'arrivez pas à comprendre l'erreur et à réitérer l'opération avec succès, joingnez ces logs à un ticket <a href="https://connect.doxense.com/" target="_blank">Connect</a> adressé au Support Doxense.</p>
                                             </li>
                                         </ol>
                                     </div>
