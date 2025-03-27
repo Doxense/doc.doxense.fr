@@ -198,7 +198,7 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor390"></a>
+                                        <h1><a name="aanchor391"></a>
                                             <MadCap:concept term="WD" />Watchdoc - Configuration Système</h1>
                                         <h2>Accéder à la configuration Système</h2>
                                         <p>Depuis le <strong>Menu principal</strong> de l'interface d'administration, </p>
@@ -281,14 +281,14 @@
                                         </ul>
                                         <ul>
                                             <li>
-                                                <p class="TitreNiveau3"><strong>Chiffrement</strong> : il est possible de sécuriser les mots de passe saisis dans l'interface d'administration Watchdoc en activant un algorithme de chiffrement. Lorsque cette fonction  est activée, les mots de passe n'apparaissent plus en clair dans le fichier de configuration de l'application.</p>
+                                                <p class="TitreNiveau3"><strong>Obfuscation</strong> : il est possible de sécuriser les mots de passe saisis dans l'interface d'administration Watchdoc en activant un algorithme de chiffrement. Lorsque cette fonction  est activée, les mots de passe n'apparaissent plus en clair dans le fichier de configuration de l'application.</p>
                                                 <ul style="list-style-type: circle;">
                                                     <li>
-                                                        <p><strong>Répliquer cette configuration sur tous les serveurs : </strong>si la configuration a lieu sur le serveur maître d'un domaine (configuration maître/esclaves), cochez cette case si vous souhaitez répliquer le chiffrement sur tous les serveurs qui dépendent de ce serveur maître ;</p>
+                                                        <p><strong>Répliquer cette configuration sur tous les serveurs : </strong>si la configuration a lieu sur le serveur maître d'un domaine (configuration maître/esclaves), cochez cette case si vous souhaitez répliquer l'obfuscation sur tous les serveurs qui dépendent de ce serveur maître ;</p>
                                                     </li>
-                                                    <li><strong style="font-size: 12pt;">Activer le chiffrement des mots de passe dans le fichier de configuration&#160;: </strong><span style="font-size: 12pt;">pour des raisons de sécurité, la fonction est cochée par défaut.&#160;Décochez la case si vous souhaitez désactiver le chiffrement des mots de passe</span>&#160;:</li>
+                                                    <li><strong style="font-size: 12pt;">Activer l'obfuscation des mots de passe dans le fichier de configuration&#160;: </strong><span style="font-size: 12pt;">pour des raisons de sécurité, la fonction est cochée par défaut.&#160;Décochez la case si vous souhaitez désactiver l'obfuscation des mots de passe</span>&#160;:</li>
                                                     <li>
-                                                        <p class="Liste_puce_1"><strong>Algorithme utilisé pour le chiffrement&#160;:</strong> sélectionnez dans la liste l'algorithme utilisé pour le chiffrement. L'algorithme <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term103">AES<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Advanced Encryption Standard ou AES (litt. « norme de chiffrement avancé »), aussi connu sous le nom de Rijndael, est un algorithme de chiffrement symétrique.Approuvé par la NSA (National Security Agency) dans sa suite B1 des algorithmes cryptographiques, c' est actuellement le plus utilisé et le plus sûr. (Source : Wikipédia)</span></a> est appliqué par défaut. <br />Le ROT-13 et le Base 64 étant des systèmes de codage simples, nous vous recommandons d'utiliser l'algorithme AES pour plus de sécurité.<br /><br /><img src="../../Z_Resources/Images/02_Captures/WD61_Config_Systeme_SectionSecurite.png" style="width: 688px;height: 109px;" /></p>
+                                                        <p class="Liste_puce_1"><strong>Algorithme utilisé pour le chiffrement&#160;:</strong> l'algorithme <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term103">AES<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Advanced Encryption Standard ou AES (litt. « norme de chiffrement avancé »), aussi connu sous le nom de Rijndael, est un algorithme de chiffrement symétrique.Approuvé par la NSA (National Security Agency) dans sa suite B1 des algorithmes cryptographiques, c' est actuellement le plus utilisé et le plus sûr. (Source : Wikipédia)</span></a> est appliqué par défaut. <br /><br /></p>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -325,7 +325,7 @@
                                                 </ul>
                                             </li>
                                             <li>
-                                                <p class="TitreNiveau3"><strong>Sous-section .Net Remoting</strong>. Ces paramètres ne sont utiles que dans le cas où Watchdoc fonctionne en mode cluster : dans ce cas, indiquez les paramètres de communication via l'outil .Net Remoting :</p>
+                                                <p class="TitreNiveau3"><strong>Sous-section .Net Remoting</strong>. Ces paramètres ne sont utiles que dans le cas où Watchdoc fonctionne en mode cluster ou déporté : dans ce cas, indiquez les paramètres de communication via l'outil .Net Remoting :</p>
                                                 <ul style="list-style-type: circle;">
                                                     <li>
                                                         <p><strong>Nom d'hôte :</strong> indiquez le nom d'hôte du cluster virtuel d'impression à utiliser pour contacter cette instance de Watchdoc.</p>
@@ -336,9 +336,10 @@
                                                         <p><strong>IP Locale : </strong>indiquez l'adresse IP du cluster virtuel d'impression à utiliser pour contacter cette instance de Watchdoc.</p>
                                                     </li>
                                                     <li>
-                                                        <p><strong>Port local :</strong> indiquez le numéro du port permettant au site web Watchdoc de communiquer avec le service Watchdoc (port TCP/UDP 5744 utilisant le protocole Dotnet.</p>
+                                                        <p><strong>Port local :</strong> indiquez le numéro du port permettant au site web Watchdoc de communiquer avec le service Watchdoc (port TCP/UDP 5744 utilisant le protocole Dotnet).</p>
                                                     </li>
                                                 </ul>
+                                                <fieldset>Par souci de sécurité, Doxense ne recommande pas la configuration en mode déporté avec ouverture du port 5744.</fieldset>
                                             </li>
                                         </ul>
                                         <ul>
@@ -382,10 +383,10 @@
                                                 <p class="TitreNiveau3"> <strong>Serveur d'impression</strong>. Indiquez le mode de fonctionnement du serveur :</p>
                                                 <ul style="list-style-type: circle;">
                                                     <li>
-                                                        <p class="Liste_puce_1"><strong>Se connecter au serveur local :</strong> choisissez ce bouton si Watchdoc est installé en mode autonome (cf. article <a href="../../P_Prerequis/Principes_generaux.htm" target="_blank">Prérequis d'installation et de configuration</a>) ; si Watchdoc est installé en mode déporté ou <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term3">Cluster<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Techniques permettant le regroupement d'ordinateurs indépendants (appelés "noeuds") afin de permettre un gestion globale et de dépasser les limitations d'un ordinateur pour en augmenter la disponibilité, faciliter la montée en charge et répartir les charges ou faciliter la gestion des ressources, notamment.</span></a>, décochez la case et indiquez le nom DNS du serveur d'impression.</p>
+                                                        <p class="Liste_puce_1"><strong>Se connecter au serveur local :</strong> choisissez ce bouton si Watchdoc est installé en mode autonome (cf. article <a href="../../P_Prerequis/Principes_generaux.htm" target="_blank">Prérequis d'installation et de configuration</a>) ; si Watchdoc est installé en mode déporté (non-recommandé) ou <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term3">Cluster<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Techniques permettant le regroupement d'ordinateurs indépendants (appelés "noeuds") afin de permettre un gestion globale et de dépasser les limitations d'un ordinateur pour en augmenter la disponibilité, faciliter la montée en charge et répartir les charges ou faciliter la gestion des ressources, notamment.</span></a>, décochez la case et indiquez le nom DNS du serveur d'impression.</p>
                                                     </li>
                                                     <li>
-                                                        <p class="Liste_puce_1"><strong>Nom DNS :</strong>si Wachtdoc est installé en mode déporté ou en cluster, saisissez le nom DNS du serveur d'impression sur lequel est installé le kernel de Watchdoc.&#160;(cf. article <a href="../../P_Prerequis/Principes_generaux.htm" target="_blank">Prérequis d'installation et de configuration</a>).</p>
+                                                        <p class="Liste_puce_1"><strong>Nom DNS :</strong> si Watchdoc est installé en mode déporté (non recommandé) ou en cluster, saisissez le nom DNS du serveur d'impression sur lequel est installé le kernel de Watchdoc.&#160;(cf. article <a href="../../P_Prerequis/Principes_generaux.htm" target="_blank">Prérequis d'installation et de configuration</a>).</p>
                                                     </li>
                                                 </ul>
                                             </li>

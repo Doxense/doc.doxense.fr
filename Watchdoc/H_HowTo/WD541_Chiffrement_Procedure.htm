@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Configurer le chiffrement</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Watchdoc - Chiffrement des fichiers - Configurer</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -199,11 +199,11 @@
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
                                         <h1><a name="aanchor80"></a>
-                                            <MadCap:concept term="WD" />Configurer le chiffrement</h1>
+                                            <MadCap:concept term="WD" />Watchdoc - Chiffrement des fichiers - Configurer</h1>
                                         <h2>Accéder au fichier de configuration</h2>
                                         <ol>
                                             <li value="1">
-                                                <p class="Liste_num_1">En tant qu'administrateur, accédez au serveur d'impression sur lequel est installé de Watchdoc.</p>
+                                                <p class="Liste_num_1">En tant qu'administrateur, accédez au serveur d'impression sur lequel est installé Watchdoc.</p>
                                             </li>
                                             <li value="2">
                                                 <p class="Liste_num_1">Arrêtez le service Watchdoc.</p>
@@ -212,10 +212,37 @@
                                                 <p class="Liste_num_1">Recherchez le fichier <b>config.xml</b> (enregistré par défaut dans C:\Program Files\Doxense\Watchdoc\Data\config.xml).</p>
                                             </li>
                                             <li value="4">
-                                                <p class="Liste_num_1">Effectuez une sauvegarde  ce fichier dans le dossier c:\temp.</p>
+                                                <p class="Liste_num_1">Effectuez une sauvegarde  de ce fichier dans le dossier c:\temp.</p>
                                             </li>
                                         </ol>
                                         <h2>Activer la fonction chiffrement</h2>
+                                        <h3>Pour les spools </h3>
+                                        <ol>
+                                            <li value="1">
+                                                <p class="Liste_num_1">Pour activer le chiffrement des spools, sous le nœud "doxense-spooler/local", ajoutez les balises suivantes&#160;: <br /></p>
+                                                <p style="font-weight: bold;">&lt;secure-storage enabled="true"&gt;</p>
+                                                <p style="font-weight: bold;"> &lt;compression-provider&gt;Zstd&lt;/compression-provider&gt;</p>
+                                                <p style="font-weight: bold;"> &lt;protection-provider&gt;AES&lt;/protection-provider&gt;</p>
+                                                <p style="font-weight: bold;">&lt;/secure-storage&gt;<br /><br /><img src="../Z_Resources/Images/02_Captures/WD_Config_Chiffrement.png" /><br /></p>
+                                                <p style="font-weight: bold;">
+                                                    <br />
+                                                </p>
+                                            </li>
+                                        </ol>
+                                        <ol data-mc-continue="true">
+                                            <li value="2">
+                                                <p class="Liste_num_1">Si vous ne souhaitez activer le chiffrement que pour les spools, enregistrez le fichier <strong>config.xml</strong>.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p class="Liste_num_1">Enregistrez le fichier <strong>config.xml</strong>.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p class="Liste_num_1">Redémarrez le service Watchdoc.</p>
+                                            </li>
+                                            <li value="5">
+                                                <p class="Liste_num_1">Autrement, ajoutez les balises ci-dessous pour chiffrer également les scans avant d'enregistrer le fichier config.xml et redémarrer le service.</p>
+                                            </li>
+                                        </ol>
                                         <h3>Pour les scans</h3>
                                         <ol>
                                             <li value="1">
@@ -224,12 +251,12 @@
                                         </ol>
                                         <blockquote>
                                             <blockquote>
-                                                <p class="MsgSysteme">&lt;local&gt;</p>
-                                                <p class="MsgSysteme">&lt;secure-storage enabled="true"&gt;</p>
-                                                <p class="MsgSysteme">&lt;compression-provider&gt;Zstd&lt;/compression-provider&gt;</p>
-                                                <p class="MsgSysteme">&lt;protection-provider&gt;AES&lt;/protection-provider&gt;</p>
-                                                <p class="MsgSysteme">&lt;/secure-storage&gt;</p>
-                                                <p class="MsgSysteme">&lt;/local&gt;<br /></p>
+                                                <p class="MsgSysteme" style="font-weight: bold;">&lt;local&gt;</p>
+                                                <p class="MsgSysteme" style="font-weight: bold;">&lt;secure-storage enabled="true"&gt;</p>
+                                                <p class="MsgSysteme" style="font-weight: bold;">&lt;compression-provider&gt;Zstd&lt;/compression-provider&gt;</p>
+                                                <p class="MsgSysteme" style="font-weight: bold;">&lt;protection-provider&gt;AES&lt;/protection-provider&gt;</p>
+                                                <p class="MsgSysteme" style="font-weight: bold;">&lt;/secure-storage&gt;</p>
+                                                <p class="MsgSysteme" style="font-weight: bold;">&lt;/local&gt;<br /><br /><img src="../Z_Resources/Images/02_Captures/WD_Config_Chiffrement_Scans.png" /><br /></p>
                                             </blockquote>
                                         </blockquote>
                                         <ol data-mc-continue="true">
@@ -237,43 +264,23 @@
                                                 <p class="Liste_num_1">Si vous ne souhaitez activer le chiffrement que pour les scans, enregistrez le fichier <strong>config.xml</strong>.</p>
                                             </li>
                                             <li value="3">
+                                                <p>Redémarrez le service Watchdoc avant de vérifier.</p>
+                                            </li>
+                                            <li value="4">
                                                 <p class="Liste_num_1">Autrement, ajoutez les balises ci-dessous pour chiffrer également les spools.</p>
                                             </li>
                                         </ol>
-                                        <h3>Pour les spools </h3>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">Pour activer le chiffrement des spools, sous le nœud "doxense-spooler/local", ajoutez la balise suivante : </p>
-                                            </li>
-                                        </ol>
-                                        <blockquote>
-                                            <blockquote>
-                                                <p>&lt;secure-storage enabled="true"&gt;</p>
-                                                <p>&lt;compression-provider&gt;Zstd&lt;/compression-provider&gt;</p>
-                                                <p>&lt;protection-provider&gt;AES&lt;/protection-provider&gt;</p>
-                                                <p>&lt;/secure-storage&gt;</p>
-                                            </blockquote>
-                                        </blockquote>
-                                        <ol data-mc-continue="true">
-                                            <li value="2">
-                                                <p class="Liste_num_1">Enregistrez le fichier <strong>config.xml</strong>.</p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1">Redémarrez le service Watchdoc.</p>
-                                            </li>
-                                        </ol>
-                                        <h2>Vérifier le chiffrement</h2>
+                                        <h2>Vérifier l'activation du chiffrement</h2>
                                         <p style="font-weight: normal;">Pour vérifier que le chiffrement est bien activé : </p>
                                         <ol>
                                             <li value="1">
                                                 <p class="Liste_num_1">en tant qu'administrateur, accédez à l'interface d'administration de Watchdoc.</p>
                                             </li>
                                             <li value="2">
-                                                <p class="Liste_num_1">Depuis le<strong> Menu principal</strong>, section <strong>Configuration</strong>, cliquez sur <strong>Configuration avancée</strong>.</p>
+                                                <p class="Liste_num_1">depuis le<strong> Menu principal</strong>, section <strong>Configuration</strong>, cliquez sur <strong>Configuration avancée</strong>.</p>
                                             </li>
                                         </ol>
-                                        <p class="Resultat"><span style="font-family: 'Wingdings'">è</span> Le parapètre <strong>Stockage sécurisé</strong> indique si le chiffrement est activé et pour quel type de données&#160;: <br /><br /><img src="../Z_Resources/Images/02_Captures/WD541_Chiffrement_Verif.png" style="height: auto;width: 700px;" /></p>
-                                        <p>N.B.&#160;: depuis la version 6.1.0.5052, les paramètres de <strong>Stockage sécurisé </strong>se situent dans la section <strong>Composants</strong>&#160;:<br /><br /><img src="Activer_Chiffrement_nouvelleloc.png" style="width: 300px;" /></p>
+                                        <p class="Resultat"><span style="font-family: 'Wingdings'">è</span> Dans la section <strong>Composants</strong>, le paramètre <strong>Stockage sécurisé</strong> indique si le chiffrement est activé et pour quel type de données&#160;(fichiers spools et/ou scans) : <br /><br /><img src="../../../Docdox_Watchdoc_EN/Content/Z_Resources/Images/02_Captures/WD541_Chiffrement_Verif.png" style="height: auto;width: 700px;" /><br /></p>
                                     </div>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">
