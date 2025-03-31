@@ -220,10 +220,10 @@
                                         <p>En fonction des compatibilités de la marque et du paramétrage défini, l'authentification par clavier est possible en saisissant&#160;: </p>
                                         <ul>
                                             <li>
-                                                <p class="Liste_puce_1">un <strong>code PUK</strong>&#160;<br />Le code PUK comporte entre 6 et 10 chiffres.&#160;Il est généré automatiquement lors de la mise en oeuvre de Watchdoc en fonction de la configuration et mis à disposition de l'utilisateur via la page "Watchdoc - Mon compte" ;</p>
+                                                <p class="Liste_puce_1">un <strong>code PUK&#160;(mode d'authentification non-recommandé)</strong>.<br />Le code PUK comporte entre 6 et 10 chiffres.&#160;Il est généré automatiquement lors de la mise en oeuvre de Watchdoc en fonction de la configuration et mis à disposition de l'utilisateur via la page "Watchdoc - Mon compte" ;</p>
                                             </li>
                                             <li>
-                                                <p>un <strong>code PIN</strong> (de 4 à 6 chiffres) et <strong>login</strong><br />La relation entre le code et le login doit être définie soit dans un fichier CSV, soit dans une table SQL (composée de 2 colonnes : CODE et LOGIN), soit dans un champ Active Directory (stockant le CODE), pour tous les utilisateurs disposant d'identifiants pour copier et imprimer.;</p>
+                                                <p>un <strong>code PIN</strong> (de 4 à 6 chiffres) et <strong>login</strong>. <br />La relation entre le code et le login doit être définie soit dans un fichier CSV, soit dans une table SQL (composée de 2 colonnes : CODE et LOGIN), soit dans un champ Active Directory (stockant le CODE), pour tous les utilisateurs disposant d'identifiants pour copier et imprimer.;</p>
                                             </li>
                                             <li>
                                                 <p class="Liste_puce_1">un <strong>compte utilisateur</strong> (login et mot de passe Active Directory/LDAP/Microsoft Entra ID).<br />Bien qu'il s'agisse d'une solution simple à déployer, elle est rarement utilisée car les utilisateurs ont tendance à utiliser des mots de passe simplistes et les problèmes de mot de passe dus à des erreurs de frappe sur le clavier virtuel peuvent augmenter le nombre d'appels au service d'assistance. Si vous choisissez cette solution, nous vous recommandons vivement d'utiliser le protocole SSL pour toutes les communications entre le serveur et le copieur.. <br /><br /><img src="../../../Z_Resources/Images/02_Captures/WES/Authent_PUK.png" style="width: 500px;" /><br /><br /></p>
@@ -243,7 +243,7 @@
                                                 <p>saisir un identifiant sur l'écran du périphérique (en fonction du paramétrage) : </p>
                                                 <ul>
                                                     <li>
-                                                        <p class="Liste_puce_1">soit son <strong>code PUK</strong> (recommandé) ;</p>
+                                                        <p class="Liste_puce_1">soit son <strong>code PUK</strong>&#160;;</p>
                                                     </li>
                                                     <li>
                                                         <p class="Liste_puce_1">soit son <strong>compte </strong>(login et mot de passe Active Directory/LDAP/Microsoft Azure AD) : <br /><br /><img src="../../../Z_Resources/Images/02_Captures/WES/Authent_autoenrolement.png" style="width: 500px;height: auto;" /><br /></p>
