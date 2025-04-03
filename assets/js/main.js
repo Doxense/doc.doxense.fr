@@ -3,6 +3,11 @@
 let blockNews = document.querySelector('.doc_news--ul');
 
 let arrayContent = [
+{	
+	date: "02 avril 2025",
+	link:"/Watchdoc/A_Getting_Started/Release_610.htm",
+	content: "nouvelles versions Watchdoc et Console de Supervision 6.1.0.5206, ainsi que Watchdoc Print Client for Windows 7.0.4987"
+},
 {
 	date: "21 mars 2025",
 	link:"/Watchdoc/A_Getting_Started/Release_610.htm",
@@ -57,11 +62,6 @@ let arrayContent = [
 	date: "18 octobre 2024",
 	link:"/Watchdoc/A_Getting_Started/Release_610.htm",
     content: "nouvelles versions Watchdoc et Console de Supervision 6.1.0.5038, ainsi que Watchdoc Print Client for Windows 7.0.4506"
-},
-{	
-	date: "19 septembre 2024",
-	link:"/Watchdoc/A_Getting_Started/Release_610.htm",
-    content: "nouvelles versions Watchdoc et Console de Supervision 6.1.0.5025, ainsi que Watchdoc Print Client for Windows 7.0.4499"
 },
 ]
 
