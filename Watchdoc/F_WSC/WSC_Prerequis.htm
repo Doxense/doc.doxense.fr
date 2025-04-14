@@ -198,7 +198,7 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor221"></a>
+                                        <h1><a name="aanchor223"></a>
                                             <MadCap:concept term="WSC" />WSC Console de supervision - Prérequis</h1>
                                         <h2>Prérequis système</h2>
                                         <h3>Dimensionnement</h3>
@@ -218,14 +218,15 @@
                                             </li>
                                         </ul>
                                         <p>Si la configuration comprend un pare-feu (firewall), ce dernier doit autoriser les accès sur le serveur hébergeant Watchdoc et Watchdoc Supervision Console via ces ports.</p>
+                                        <h2>Prérequis organisationnel</h2>
+                                        <p>Pour configurer une file d'impression dans WSC, il est obligatoire d'avoir préalablement configuré un emplacement auquel il est possible d'assigner des imprimantes physiques.&#160;Si vous ne souhaitez pas ajouter d'emplacements spécifiques à la liste des emplacements par défaut, configurez au minimum l'emplacement Monde de sorte que des imprimantes physiques puissent être assignées à cet emplacement (cf.&#160;<a href="../T_WPC/Windows/WPCW_Configurer_dansWD.htm#Appareils" target="_blank">Configurer des emplacements - Paramètre Appareils</a>).&#160;</p>
                                         <h2>Prérequis logiciels</h2>
                                         <h3>Framework</h3>
                                         <ul>
                                             <li>
-                                                <p>Watchdoc exploite la technologie .NET Frameword (4.7.2.) de Microsoft<sup>®</sup>. Ce framework, librement téléchargeable depuis le site de <a href="https://support.microsoft.com/fr-fr/help/4054530/microsoft-net-framework-4-7-2-offline-installer-for-windows?irgwc=1&amp;OCID=AID2000142_aff_7593_1375745&amp;tduid=(ir__1hpbiyrdo9kfthdakk0sohz3xm2xnbqkydkad9tv00)(7593)(1375745)()()&amp;irclickid=_1hpbiyrdo9kfthdakk0sohz3xm2xnbqkydkad9tv00" title="Lien vers le site de téléchargement de .Net Framework 4.7.2" alt="Lien vers le site de téléchargement de .Net Framework 4.7.2">Microsoft<sup>®</sup></a> doit impérativement être installé.</p>
+                                                <p>Watchdoc exploite la technologie <span class="mc-variable Versions.Dotnet_Framework variable">.net Framework 4.8 de Microsoft</span> (<a href="https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48" target="_blank" title="Link to the Microsoft web site" alt="Link to the Microsoft web site">à télécharger ici</a>). Ce framework, librement téléchargeable depuis le site de Microsoft<sup>®</sup> doit impérativement être installé.</p>
                                             </li>
                                         </ul>
-                                        <p>&#160;</p>
                                         <h3>Base de données</h3>
                                         <p class="TitreNiveau3">Les données des badges utilisateurs sont stockées dans un système de gestion de base de données relationnelle. Cette base doit être accessible depuis le serveur et le compte. </p>
                                         <p class="TitreNiveau3">Les serveurs de gestion de bases de données relationnelles supportés sont :</p>
@@ -240,7 +241,7 @@
                                                 <p class="Liste_puce_1">SQLite</p>
                                             </li>
                                         </ul>
-                                        <fieldset style="text-align: left;">Watchdoc<sup>®</sup> peut se connecter à la base Microsoft<sup>®</sup> SQL Server uniquement avec un compte d’utilisateur SQL et non avec un compte d’utilisateur Windows<sup>®</sup>.&#160;<br />Par ailleurs, si serveur SQL est distant, vérifiez que TCP/IP est activé dans SQL Server Configuration Manager.</fieldset>
+                                        <fieldset style="text-align: left;">Watchdoc peut se connecter à la base Microsoft<sup>®</sup> SQL Server uniquement avec un compte d’utilisateur SQL et non avec un compte d’utilisateur Windows<sup>®</sup>.&#160;<br />Par ailleurs, si serveur SQL est distant, vérifiez que TCP/IP est activé dans SQL Server Configuration Manager.</fieldset>
                                         <h3>Annuaire LDAP</h3>
                                         <p>Les informations relatives aux utilisateurs stockées dans la base de statistiques sont obtenues depuis l’annuaire LDAP de l’entreprise. </p>
                                         <p>Cet annuaire doit donc être accessible depuis le serveur hébergeant WSC<sup>®</sup>.</p>

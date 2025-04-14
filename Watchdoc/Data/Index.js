@@ -1,1 +1,1 @@
-define({numchunks:1,prefix:'Index_Chunk',terms:[{t:'authentification',c:0,$:1}]});
+define({numchunks:1,prefix:'Index_Chunk',terms:[{t:'authentification',c:0,$:1},{t:'Déclarer les autres serveurs Watchdoc Serveurs esclaves slaves',c:0,$:1},{t:'PUK',c:0,$:1},{t:'Sortir un serveur du domaine singeify',c:0,$:1},{t:'Supprimer (déclasser) un serveur Master',c:0,$:1}]});
