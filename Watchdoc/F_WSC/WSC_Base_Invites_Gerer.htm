@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr-fr" xml:lang="fr-fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="WSC Supervision|Base Invités (guests)" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr-fr" xml:lang="fr-fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
@@ -193,12 +193,12 @@
                                             </button>
                                         </div>
                                     </div>
-                                    <div class="nocontent">
-                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
-                                        </div>
-                                    </div>
                                     <div class="body-container" role="main" id="mc-main-content">
                                         <h1>WSC - Base Invités (Guests) - Créer et gérer les comptes invités</h1>
+                                        <h2>Accéder à l'interface de gestion</h2>
+                                        <p>Depuis le <strong>Menu principal</strong> de WSC, cliquez sur le bouton <strong>Gérer les invités</strong> :<br /><br /><img src="../Z_Resources/Images/02_Captures/ManageGuests/WSC_Acces_Gestion_Invites.png" style="width: 700px;height: auto;" /></p>
+                                        <p>&#160;</p>
+                                        <p class="Resultat">Vous accédez à l'interface <strong>Gestion des invités</strong>, dans laquelle s'affiche la liste des invités déjà enregistrés&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/ManageGuests/WSC_Invites_Liste.png" style="height: auto;width: 700px;" /></p>
                                         <h2>Créer un compte invité </h2>
                                         <p>Dans l'interface <strong>Gestion des invités</strong>, les invités déjà enregistrés sont affichés&#160;:</p>
                                         <ol>
@@ -229,13 +229,20 @@
                                                         <p class="Liste_puce_1"><strong>Groupe dynamique :</strong> si nécessaire, indiquez le nom d'un groupe dynamique équivalent à l'attribut figurant dans un annuaire LDAP. </p>
                                                     </li>
                                                     <li>
-                                                        <p class="Liste_puce_1"><strong>Code:</strong> si nécessaire, indiquez un Code équivalent à l'attribut figurant dans un annuaire LDAP.&#160;</p>
+                                                        <p class="Liste_puce_1"><strong>Code analytique :</strong> si nécessaire, indiquez un code analytique permettant d'associer l'invité à un compte spécifique afin de faciliter l'analyse  de ses coûts d'impression (cf.&#160;<a href="WSC_CodeAnalytiq_Presentation.htm" target="_blank">Codes analytiques</a>).</p>
                                                     </li>
                                                     <li>
-                                                        <p class="Liste_puce_1"><strong>Dossier utilisateur </strong>: indiquez </p>
+                                                        <p class="Liste_puce_1"><strong>Dossier utilisateur </strong>: indiquez le dossier dans lequel l'utilisateur peut enregistrer des documents numérisés lorsqu'il utilise la fonction WEScan (avec la destination ScanToFolder).</p>
                                                     </li>
                                                     <li>
                                                         <p class="Liste_puce_1"><strong>Code PIN :</strong> saisissez le code attribué à l'utilisateur. L'utilisateur saisit ce code si l'authentification depuis le WES&#160;repose sur le code PIN.&#160;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Code <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm glossaryTermPopup MCTextPopupHotSpot_ MCTextPopupHotSpot_Popup" glossTerm="Glossary.Term65">PUK<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Puk = Print User Key.
+Dans Watchdoc, il s'agit d'un code associé à un compte utilisateur pour permettre à ce dernier de s'authentifier dans un WES.
+Le code PUK est généré par un algorithme. 
+L'utilisateur peut le consulter dans la page "Mon compte" de Watchdoc. 
+Par souci de sécurité, nous déconseillons l'utilisation du code PUK et recommandons l'utilisation d'un login (compte utilisateur)/code PIN.</span></a> :</strong> saisissez le code attribué à l'utilisateur. L'utilisateur saisit ce code si l'authentification depuis le WES&#160;repose sur le code PUK. Le format du code PUK est défini dans l'interface de gestion de la base Invités (cf.&#160;<a href="WSC_Base_Invites_Configurer.htm#Section_Code_PUK" target="_blank">Configuration de la base Invités</a>).</p>
                                                     </li>
                                                     <li>
                                                         <p class="Liste_puce_1"><strong>Numéro de carte&#160;:</strong> si un badge est confié à l'invité, indiquez le numéro imprimé sur le badge. Cet identifiant peut être utile dans le cas où les badges serait perdu ou pour gérer un lot de badges dédiés aux invités. prêtés aux This can help for example to identify the owner of a lost card, or to manage a stock of guest cards.</p>
@@ -250,7 +257,7 @@
                                                         <p class="Liste_puce_1"><strong>Désactivé :</strong> précisez si vous activez ou désactivez le compte invité.&#160;S'il est désactivé, l'utilisateur n'accédera à aucun périphérique ;</p>
                                                     </li>
                                                     <li>
-                                                        <p class="Liste_puce_1"><strong>Personne visitée :</strong> indiquez le nom du salarié dont dépend l'invité.&#160;Ce paramètre peut être utile pour savoir si le compte doit être maintenu en vue d'être réactivé ultérieurement.<br /><br /><img src="../Z_Resources/Images/02_Captures/ManageGuests/WD_FPR_WSC_AjoutInvites.png" style="width: 402px;height: 381px;" /></p>
+                                                        <p class="Liste_puce_1"><strong>Personne visitée :</strong> indiquez le nom du salarié dont dépend l'invité.&#160;Ce paramètre peut être utile pour savoir si le compte doit être maintenu en vue d'être réactivé ultérieurement.<br /></p>
                                                     </li>
                                                 </ul>
                                                 <p class="Liste_puce_1">&#160;</p>
@@ -258,13 +265,15 @@
                                         </blockquote>
                                         <ol data-mc-continue="true">
                                             <li value="3">
-                                                <p class="Liste_num_1">cliquez sur le bouton <strong>Valider ;</strong></p>
+                                                <p class="Liste_num_1">cliquez sur le bouton <strong>Valider ;</strong><br /><br /><img src="../Z_Resources/Images/02_Captures/ManageGuests/WD_FPR_WSC_AjoutInvites.png" style="width: 402px;height: 381px;" /></p>
+                                                <p>&#160;</p>
                                             </li>
                                             <li value="4">
                                                 <p class="Liste_num_1">actualisez la page ;</p>
                                             </li>
                                         </ol>
-                                        <p class="Resultat">L'invité nouvellement créé apparaît dans la liste&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/ManageGuests/WD_FPR_WSC_AjoutInvites_OK.png" style="width: 605px;height: 148px;" /></p>
+                                        <p class="Resultat">&#160;</p>
+                                        <p class="Resultat"><span style="font-family: 'Wingdings'">è</span>L'invité nouvellement créé apparaît dans la liste.<br /></p>
                                         <h2>Editer un compte invité</h2>
                                         <p>Pour éditer un compte invité&#160;: </p>
                                         <ol>

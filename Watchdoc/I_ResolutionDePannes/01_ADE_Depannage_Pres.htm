@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr-fr" xml:lang="fr-fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr-fr" xml:lang="fr-fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
@@ -189,12 +189,8 @@
                                             </button>
                                         </div>
                                     </div>
-                                    <div class="nocontent">
-                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
-                                        </div>
-                                    </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <p><a name="aanchor290"></a>
+                                        <p><a name="aanchor154"></a>
                                             <MadCap:concept term="ADE" /><span style="font-size: 24pt; font-weight: bold; color: #ff803b;">Dépannages</span>
                                         </p>
                                         <p>&#160;</p>
@@ -612,7 +608,7 @@
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> après avoir lancé une numérisation en A4 depuis un périphérique Konica Minolta, un message d'erreur  s'affiche : "Impossible de récupérer les paramètres initaux - NoScanProfile - Could not find any valid scan profile after constraints application".</p>
                                                 <p><strong>Cause :</strong> ce message est peut être dû au paramètre "AutoSize" configuré dans le profil de numérisation WEScan qui n'est pas supporté par le modèle utilisé pour le scan.&#160;</p>
-                                                <p><strong>Résolution :</strong> si vous constatez que certains modèles ne supportent pas le paramétrage par défaut "AutoSize", il convient de créer un profil de scan spécifique pour ces modèles à l'aide de <a href="../B_WEScan/ScanProfilesCustomizer_Presentation.htm" target="_blank">ScanProfilesCustomizer</a>.&#160;Dans ce profil de scan spécifique, le paramètre AutoSize <strong>ne doit pas </strong>être configué par défaut.&#160;</p>
+                                                <p><strong>Résolution :</strong> si vous constatez que certains modèles ne supportent pas le paramétrage par défaut "AutoSize", il convient de créer un profil de scan spécifique pour ces modèles à l'aide de <a href="../C_Configurer/ConfigWEScan/WEScan_Config_Profil_SPC_Presentation.htm" target="_blank">ScanProfilesCustomizer</a>.&#160;Dans ce profil de scan spécifique, le paramètre AutoSize <strong>ne doit pas </strong>être configué par défaut.&#160;</p>
                                             </div>
                                         </div>
                                         <p>&#160;</p>
@@ -746,6 +742,14 @@
                                         </div>
                                         <p>&#160;</p>
                                         <h3 id="WESHewlettPackard" data-magellan-target="WESHewlettPackard">WES&#160;Hewlett Packard</h3>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WES&#160;HP. Echec d'envoi des données USB</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> après un incident interrompant la connexion entre le périphérique d'impression et le serveur ou entre le périphérique et la base de données, alors que la connexion est rétablie, le message <strong>Echec d'envoi des données USB</strong> s'affiche sur les écrans des périphériques équipés d'un lecteur de badge ;</p>
+                                                <p><strong>Cause :</strong>lors de la panne, la connexion entre le lecteur de badges et le serveur a été interrompue et n'est pas automatiquement réablie, même après réinstallation du WES.&#160;</p>
+                                                <p><strong>Résolution :</strong> Pour résoudre ce problème, il convient de réenregistrer le lecteur de badge après résolution de la panne (cf. <a href="../W_WES/10_HP/06_WES_Depannage.htm#Echec_USB" target="_blank">Dépanner le WES</a>). </p>
+                                            </div>
+                                        </div>
+                                        <p>&#160;</p>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WES&#160;HP. Problème d'installation du lecteur de badge : aucune application n'est supportée par ce périphérique USB.</a></span>
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> lors de la configuration du WES, si vous connectez le lecteur de badge avant d'avoir installé le WES, le périphérique délivre un message d'erreur informant qu' "aucune application n'est supportée par ce périphérique USB".</p>
@@ -757,11 +761,18 @@
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WES&#160;HP. Problème de mise à jour de l'écran d'accueil</a></span>
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> après modification du mode de verrouillage de l'écran dans le profil WES (Complet - écran d'accueil / Complet écran de login), la modification n'est pas prise en compte sur l'écran du périphérique d'impression.</p>
-                                                <p><strong>Cause :</strong>cette anomalie peut être due à une configuration sur le périphérique et/ou à un problème de cache.</p>
+                                                <p><strong>Cause :</strong> cette anomalie peut être due à une configuration sur le périphérique et/ou à un problème de cache.</p>
                                                 <p><strong>Résolution :</strong> il convient de vérifier un paramètre sur le périphérique d'impression, de stopper puis de redémarrer la file d'impression (cf.&#160;<a href="../W_WES/10_HP/06_WES_Depannage.htm#EcranAccueil" target="_blank">Problème de mise à jour de l'écran d'accueil</a>).</p>
                                             </div>
                                         </div>
                                         <p>&#160;</p>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WES&#160;HP. Services SOAP - Impossible de communiquer avec les services SOAP</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong>Lors de l'installation du WES, le message "Impossible de communiquer avec les services SOAP" s'affiche dans le rapport d'installation, empêchant l'installation du WES.</p>
+                                                <p><strong>Cause :</strong> cette erreur peut être due aux compte / mot de passe saisis dans le profil WES. Si ces informations sont inexactes, le WES&#160;n'arrive pas à communiquer avec le périphérique..</p>
+                                                <p><strong>Résolution :</strong> il convient de vérifier l'adéquation entre le compte d'accès configuré dans les propriétés de la file avec le compte d'accès du périphérique (cf.&#160;<a href="../W_WES/10_HP/06_WES_Depannage.htm#Services_SOAP" target="_blank">Dépanner le WESl</a>).</p>
+                                            </div>
+                                        </div>
                                         <h3 id="WESKonicaMinolta" data-magellan-target="WESKonicaMinolta">WES&#160;Konica Minolta</h3>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WES Konica-Minolta. The remote OpenAPI device has failed with an InvalidArgument (3) error : ApplicationID.</a></span>
                                             <div class="MCDropDownBody dropDownBody">
@@ -973,6 +984,14 @@
                                         </div>
                                         <p>&#160;</p>
                                         <h3 id="WESToshiba" data-magellan-target="WESToshiba">WES&#160;Toshiba</h3>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WES Toshiba Open Platform.&#160;Message d'erreur dans le rapport d'installation du WES&#160;: "Set security settings : the remote SOAP service failed while processing request '&amp;lt:unknown&amp;gt': internal server error</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> lors de l'installation du WES&#160;sur la file, le rapport d'installation indique qu'une erreur est survenue à l'étape "Set security settings".<br />Dans les logs, on peut lire le message "Server responded with a 'SOAP-ENV:Fault'"</p>
+                                                <p><strong>Cause :</strong> sur le périphérique d'impression, le mode MDS&#160;n'est pas configuré selon le prérequis attendu.</p>
+                                                <p><strong>Résolution :</strong> sur le périphérique d'impression, configurez le mode Service conformément au prérequis du manuel d'installation (cf. <a href="../W_WES/10_Toshiba/02_Toshiba_PrerequisInstallation.htm#Mode_Service" target="_blank" alt="Lien vers la fiche pratique de configuration de l'impression interserveur" title="Lien vers la fiche pratique de configuration de l'impression interserveur">Prérequis d'installation</a>).</p>
+                                            </div>
+                                        </div>
+                                        <p>&#160;</p>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WES Toshiba.&#160;Données utilisateurs masquées dans l'historique des impressions Watchdoc, remplacées par les valeurs <b>?\META\**********</b> ou <b>Anonymous</b></a></span>
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> dans l'historique des impressions et/ou des numérisations (scans) Watchdoc, les données utilisateurs sont masquées, remplacées par des étoiles <b>?\META\**********</b> ou par la valeur <b>Anonymous</b>.</p>

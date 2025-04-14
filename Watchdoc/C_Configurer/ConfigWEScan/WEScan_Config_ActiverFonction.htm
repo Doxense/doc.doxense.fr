@@ -198,7 +198,7 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor175"></a>
+                                        <h1><a name="aanchor88"></a>
                                             <MadCap:concept term="WEScan;CFG" />
                                             <MadCap:conditionalText data-mc-conditions="General.Online">WEScan - </MadCap:conditionalText>Activer </h1>
                                         <h2>Activer WEScan dans le profil WES</h2>
@@ -216,43 +216,74 @@
                                         <blockquote>
                                             <ul>
                                                 <li>
-                                                    <p class="Liste_puce_1"><strong>Mode d'affichage par défaut :</strong>
+                                                    <p class="Liste_puce_1"><strong>Préférences d'affichage :</strong>
                                                     </p>
-                                                    <ul style="list-style-type: circle;">
+                                                    <ul>
                                                         <li>
-                                                            <p class="Liste_puce_2"><strong>profils de numérisation : </strong>permet de proposer des profils (paramètres prédéfinis) de numérisation à l'utilisateur, ce qui permet de gagner du temps lorsque les usages de numérisation sont souvent les mêmes ; </p>
+                                                            <p class="Liste_puce_1"><strong>Utiliser les dernières valeurs choisies par les utilisateurs par défaut :</strong> permet de proposer par défaut les profils choisis par les utilisateurs lors de leur précédente utilisation, ce qui fait gagner du temps lorsque les usages de numérisation sont souvent les mêmes. Définissez ensuite l'ordre de classement de ces profils : </p>
+                                                            <ul>
+                                                                <li>
+                                                                    <p>soit par date d'utilisation ;</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p>soit par type de profil (paramètres prédéfinis)</p>
+                                                                </li>
+                                                            </ul>
                                                         </li>
                                                         <li>
-                                                            <p class="Liste_puce_2"><strong>paramètres de numérisation :</strong> permet de proposer une interface dans laquelle l'utilisateur a le choix entre tous les paramètres de numérisation, ce qui est utile lorsque les usages de numérisation sont très variés.</p>
+                                                            <p><strong>Ouvrir le volet de sélection des profils par défaut : </strong>permet de proposer des profils (paramètres de numérisation prédéfinis)  à l'utilisateur, de manière à ce qu'il puisse choisir entre tous les profils proposés (quels que soient ses usages précédents). Définissez ensuite le mode d'affichage : </p>
+                                                            <ul>
+                                                                <li>
+                                                                    <p>soit par paramètre (ce qui est utile lorsque les usages de numérisation sont très variés) ; </p>
+                                                                </li>
+                                                                <li>
+                                                                    <p>soit par profil (ensemble de paramètres prédéfinis).</p>
+                                                                </li>
+                                                            </ul>
                                                         </li>
                                                     </ul>
                                                 </li>
                                                 <li>
-                                                    <p class="Liste_puce_1"><strong>[Type de document (photo, papier, couleur, etc.)]</strong> : définissez les options pour chaque type de document :</p>
+                                                    <p><strong>Autoriser les utilisateurs à changer de mode d'affichage :</strong> cochez cette case si vous autorisez les utilisateurs à choisir eux-mêmes le mode d'affichage qu'ils préfèrent.</p>
                                                 </li>
                                                 <li>
-                                                    <p class="Liste_puce_2"><strong>Profil activé :</strong> cochez la case pour mettre le profil à disposition des utilisateurs ; </p>
-                                                </li>
-                                                <li>
-                                                    <p class="Liste_puce_2"><strong>Les utilisateurs peuvent définir... : </strong>cochez la case pour donner à l'utilisateur la possibilité de modifier le profil par défaut.</p>
-                                                </li>
-                                                <li>
-                                                    <p class="Liste_puce_2"><strong>Scan to folder, Scan to Mail, Scan to Me : </strong>pour chaque destination, indiquez si elle est <strong>activée</strong>, <strong>désactivée </strong>ou s'il s'agit de la <strong>destination par défaut</strong>.<br /><br /><img src="../../Z_Resources/Images/02_Captures/WD53_Admin_WEScan_Config_Numerisation_options.png" style="width: 641px;height: 586px;" /></p>
+                                                    <p class="Liste_puce_2"><strong>Profils de numérisation :</strong> dans cette section, indiquez quels sont les profils mis à disposition des utilisateurs :</p>
+                                                    <ul>
+                                                        <li>
+                                                            <p class="Liste_puce_2"><strong>Toujours actif : </strong>cette information indique si le profil est actif quels que soient les paramètres supportés par le périphérique d'impression&#160;;</p>
+                                                        </li>
+                                                        <li>
+                                                            <p><strong>Activation :</strong> cochez la case pour activer le profil et le mettre à disposition des utilisateurs&#160;;</p>
+                                                        </li>
+                                                        <li>
+                                                            <p><strong>Héritage :</strong> (activé par défaut lorsque la case Activation est cochée) cochez la case pour mettre tous les paramètres du profil à disposition de l'utilisateur qui peut les utiliser pour créer son propre profil ;</p>
+                                                        </li>
+                                                        <li>
+                                                            <p><strong>Traitement post-scan :</strong> pour des profils WES&#160;Kyocera, sélectionnez l'un des traitements post-scan configuré (cf.&#160;<a href="WEScan_Config_TraitPostScan.htm" target="_blank">Configurer un traitement post-scan</a>)&#160;;</p>
+                                                        </li>
+                                                        <li>
+                                                            <p><strong>Destination :</strong> choisissez la destination.</p>
+                                                            <p> Une <strong>Destination </strong>est l'endroit où est envoyé le document numérisé.&#160;WEScan propose par défaut les destinations suivantes :</p>
+                                                            <ul>
+                                                                <li>
+                                                                    <p class="Liste_puce_1"><strong>Numériser vers mon E-Mail (ScanToMe) :</strong> numérise et envoie la numérisation à l'adresse mail de l'utilisateur (ce dernier doit disposer d'un compte dans l'annuaire (Active Directory) avec une adresse e-mail valide).</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p class="Liste_puce_1"><strong>Numériser vers E-Mail (ScanToMail) :</strong> numérise et envoie la numérisation à une adresse e-mail précisée par l'utilisateur ; </p>
+                                                                </li>
+                                                                <li>
+                                                                    <p class="Liste_puce_1"><strong>Numériser vers Dossier (ScanTofolder) :</strong> numérise et envoie la numérisation dans un dossier prédéfini de l'espace de travail accessible à l'utilisateur ;</p>
+                                                                </li>
+                                                            </ul>
+                                                            <p class="Liste_puce_2">
+                                                                <br />
+                                                                <img src="../../Z_Resources/Images/02_Captures/WD_Admin_WEScan_Config_Numerisation_options.png" style="width: 641px;height: auto;" />
+                                                            </p>
+                                                        </li>
+                                                    </ul>
                                                 </li>
                                             </ul>
                                         </blockquote>
-                                        <p> Une <strong>Destination </strong>est l'endroit où est envoyé le document numérisé.&#160;WEScan propose par défaut les destinations suivantes :</p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Numériser vers mon E-Mail (scan to me) :</strong> numérise et envoie la numérisation à l'adresse mail de l'utilisateur (ce dernier doit disposer d'un compte dans l'annuaire (Active Directory) avec une adresse e-mail valide) ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Numériser vers E-Mail (scan to e-mail) :</strong> numérise et envoie la numérisation à une adresse e-mail précisée par l'utilisateur ; </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Numériser vers Dossier (scan to folder) :</strong> numérise et envoie la numérisation dans un dossier prédéfini de l'espace de travail accessible à l'utilisateur ;</p>
-                                            </li>
-                                        </ul>
                                         <h2>Activer la fonction Scan sur la file d'impression</h2>
                                         <p>Pour activer la fonction Scan : </p>
                                         <ol>
