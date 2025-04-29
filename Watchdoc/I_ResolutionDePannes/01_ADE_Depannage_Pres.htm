@@ -285,6 +285,13 @@
                                             </li>
                                         </ul>
                                         <h2 id="Watchdoc" data-magellan-target="Watchdoc"><a name="Watchdoc"></a>Watchdoc</h2>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Après mise à jour en v. 6.1.0.5221 d'un domaine avec serveur web déporté , les interfaces web des serveurs slaves sont inacessibles : Watchdoc is not responding.</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> après mise à jour de Watchdoc dans un <b>domaine (configuration master/slaves) avec un serveur IIS&#160;déporté,</b> on constate que les interfaces web (interface administrateur ou page "Mon Compte") des serveurs slaves ne sont plus accessibles.&#160;Après un long moment de chargement, un message d'erreur s'affiche : "A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond".&#160;Diagnostic : le service est momentanément indisponible.</p>
+                                                <p><strong>Cause : </strong>ce problème est probablement dû à la gestion du port 5744 par le Firewall du serveur slave.</p>
+                                                <p><strong>Résolution :</strong> dans l'outil de gestion du firewall du serveur slave, autorisez les entrées sur le port 5744 (inbound rules).</p>
+                                            </div>
+                                        </div>
                                         <p>&#160;</p>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Deleted. No reason.</a></span>
                                             <div class="MCDropDownBody dropDownBody">
