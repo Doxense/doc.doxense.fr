@@ -198,7 +198,7 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor390"></a>
+                                        <h1><a name="aanchor391"></a>
                                             <MadCap:concept term="WES" />
                                             <MadCap:conditionalText data-mc-conditions="General.Online">WES&#160;Toshiba - </MadCap:conditionalText>Configurer le profil WES</h1>
                                         <h2>Créer le profil WES</h2>
@@ -317,7 +317,6 @@ Par souci de sécurité, nous déconseillons l'utilisation du code PUK et recomm
                                         </blockquote>
                                         <h3>Configurer la section Connexion anonyme</h3>
                                         <p>Cochez cette section pour activer la connexion anonyme afin de permettre à un utilisateur non-authentifié d'accéder au périphérique en cliquant sur un bouton.spécifique.</p>
-                                        <p>&#160;</p>
                                         <p>Il est possible de restreindre les fonctionnalités auxquelles l'utilisateur anonyme peut accéder en appliquant une politique de droits sur la file, sur le groupe ou sur le serveur et en utilisant le filtre Utilisateur anonyme.</p>
                                         <ul>
                                             <li>
@@ -476,6 +475,9 @@ Par souci de sécurité, nous déconseillons l'utilisation du code PUK et recomm
                                                 <p><strong>Email : Destinations</strong>&#160;: si nécessaire, sélectionnez la restriction posée sur la destination lors d'un envoi par email ;</p>
                                             </li>
                                             <li>
+                                                <p><b>Tolérance aux pannes :</b> cochez cette case pour activer la fonction de tolérance aux pannes reposant sur un principe de répartition de charge (load-balancing).&#160;Si vous activez cette fonction, il est nécessaire de configurer l'impression interserveur (cf. <a href="../../H_HowTo/WD52_Interserveur_Procedure.htm" target="_blank">Configurer l'impression interserveur</a>). S'il n'existe pas de système de répartition de charge dans la configuration, cette fonction est inutile.</p>
+                                            </li>
+                                            <li>
                                                 <p><strong>Réseau</strong> :</p>
                                                 <ul>
                                                     <li>
@@ -496,7 +498,7 @@ Par souci de sécurité, nous déconseillons l'utilisation du code PUK et recomm
                                             </li>
                                             <li><strong>LDAP </strong>: saisissez le chemin vers le fichier dans lequel sont configurés les rôles<ul><li><strong>compte LDAP&#160;</strong>: saisissez le compte utilisé par le périphérique pour toute requête 'Bind' vers le serveur LDAP intégré:</li><li><strong>MdP LDAP</strong> : complétez le paramètre précédent en saisissant le mot de passe correspondant au compte.</li></ul></li>
                                             <li>
-                                                <p><strong>SOAP :</strong> saisissez les informations dédiées aux requêtes SOAP si elles ne correspondent pas aux paramètres par défaut.<br /><img src="../../Z_Resources/Images/02_Captures/WES/Config_WES_Profil_Toshiba_Section_Periph.png" /></p>
+                                                <p><strong>SOAP :</strong> saisissez les informations dédiées aux requêtes SOAP si elles ne correspondent pas aux paramètres par défaut.<br /><br /><img src="../../Z_Resources/Images/02_Captures/WES/Config_WES_Profil_Toshiba_Section_Periph.png" /></p>
                                             </li>
                                         </ul>
                                         <fieldset>L'activation du SSL peut provoquer des lenteurs ou des alertes en cas de certificats non reconnus. <br />Lorsque le SSL est désactivé, il est recommandé de ne pas utiliser l'authentification ou l'enrôlement du badge par compte et mot de passe.</fieldset>

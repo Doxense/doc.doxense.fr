@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Console de Supervision (WSC) - Créer une file d'impression à partir d'un template</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Console de Supervision (WSC) - Créer et configurer une file d'impression</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -199,11 +199,13 @@
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
                                         <h1><a name="aanchor258"></a>
-                                            <MadCap:concept term="WSC" />Console de Supervision (WSC) - Créer une file d'impression à partir d'un template</h1>
+                                            <MadCap:concept term="WSC" />Console de Supervision (WSC) - Créer et configurer une file d'impression</h1>
                                         <h2>Principe</h2>
-                                        <p class="TitreNiveau3">Lors de l'ajout d'un pilote d'impression dans WSC, si vous choisissez de créer une nouvelle file avec le pilote, un <strong>Template d'imprimantes</strong> est créé.&#160;</p>
-                                        <p class="TitreNiveau3">Ce <strong>template</strong> est un modèle à partir duquel vous pouvez créer d'autres files d'impression utilisant le même pilote.&#160;</p>
-                                        <h2>Accéder à l'interface de création de files</h2>
+                                        <p class="TitreNiveau3">Dans WSC, vous pouvez créer une file d'impression ex-nihilo ou à partir d'un template (cf.&#160;<a href="WSC_Files_Creer_DepuisTemplate.htm" target="_blank">Créer une file à partir d'un template</a>).</p>
+                                        <p class="TitreNiveau3">Pour créer une file ex-nihilo, il est nécessaire d'avoir ajouté un pilote (driver) adapté à la file au préalable.</p>
+                                        <p class="TitreNiveau3">.</p>
+                                        <h2>Procédure</h2>
+                                        <h3>Accéder à l'interface de création de files</h3>
                                         <ol>
                                             <li value="1">
                                                 <p class="Liste_num_1">Depuis le <strong>Menu principal</strong> de WSC, cliquez sur bouton <strong>Files d'impression</strong> :<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_FilesImpression_Acces.png" style="width: 700px;height: auto;" /><br /></p>
@@ -214,13 +216,11 @@
                                                 <p class="Resultat">Vous accédez à l'interface de gestion <strong>Files d'impression</strong> :<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Files_Liste.png" style="width: 700px;" /></p>
                                             </li>
                                         </ol>
-                                        <h2>Procédure</h2>
+                                        <h3>Créer la file</h3>
                                         <ol>
                                             <li value="1">
                                                 <p class="Liste_num_1">Dans l'interface <strong>Files d'impression</strong>,dans l'encart de droite, cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Bouton_CreerNouvelleFile_orange.png" style="width: 137px;height: 31px;" /></p>
                                             </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
                                             <li value="2">
                                                 <p class="Liste_num_1">dans la boîte <strong>Créer une nouvelle file d'impression</strong>, complétez les champs suivants&#160;: </p>
                                                 <ul style="text-align: left;">
@@ -287,11 +287,29 @@ Comme tous les protocoles basés sur IP, IPP peut être utilisé localement ou s
                                                             <li><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term14">RAW<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>"Raw" signifie "brut" en anglais. En impression, il désigne un format de fichier pour les images numériques. Il ne s'agit pas d'un format standard, mais d'un type de fichier créé par des dispositifs tels que les appareils photo numériques ou les scanners et caractérisé par le fait de n'avoir subi que peu de traitement informatique, proche, donc du format natif.</span></a> : </li>
                                                         </ul>
                                                     </li>
-                                                    <li><strong><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term9">CSR<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Client Side Rendering. Dans une infrastructure Client/serveur, le Client-side rendering est la prise en charge du spool par le poste client et non par le serveur. Le poste client envoie donc au serveur un fichier de spool finalisé.</span></a> : </strong>indiquez si vous souhaitez activer CSR sur la file<ul><li>forcé :</li><li>désactivé : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Files_VoirPlus.png" /><br /><br /></li></ul></li>
+                                                    <li><strong><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term9">CSR<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Client Side Rendering. Dans une infrastructure Client/serveur, le Client-side rendering est la prise en charge du spool par le poste client et non par le serveur. Le poste client envoie donc au serveur un fichier de spool finalisé.</span></a> : </strong>indiquez si vous souhaitez activer CSR sur la file<ul><li>forcé :</li><li>désactivé : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Files_VoirPlus.png" /><br /></li></ul></li>
                                                 </ul>
                                             </li>
+                                        </ol>
+                                        <h3>Configurer la file d'impression</h3>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Une fois la file d'impression ajoutée, accédez au serveur d'impression en tant qu'administrateur&#160;;</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>lancez le gestionnaire d'impression Microsoft Windows<sup>®</sup> (Print Management)&#160;;</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>depuis le gestionnaire, sélectionnez le  périphérique correspondant à la file d'impression créée (la version du périphérique et non pas la version"Shadow" du périphérique)&#160;; </p>
+                                            </li>
+                                            <li value="4">
+                                                <p>cliquez-droit pour accéder aux propriétés du périphérique d'impression, puis aux paramètres d'impression (options, préférences, paramètres, selon les modèles)&#160;;</p>
+                                            </li>
                                             <li value="5">
-                                                <p>Cliquez sur <strong>Créer </strong>pour créer la file à partir du template.<br /></p>
+                                                <p>définissez précisément tous les paramètres d'impression de ce périphérique (couleur ou noir &amp; blanc, recto ou recto-verso, format, etc.)&#160;en fonction des paramètres souhaités&#160;;</p>
+                                            </li>
+                                            <li value="6">
+                                                <p>appliquez puis enregistrez les propriétés du périphérique d'impression.</p>
                                             </li>
                                         </ol>
                                     </div>

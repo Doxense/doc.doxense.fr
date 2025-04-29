@@ -204,7 +204,7 @@
                                         <p>&#160;</p>
                                         <p>Depuis la version 6.1, WSC&#160;n'accepte que les pilotes certifiés.&#160;Il est donc nécessaire de réinstaller les pilotes existants (cf.&#160;<a href="WSC6.1_Ajouter_Pilote.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">WSC&#160;- Créer les pilotes d'impression</a>).&#160;</p>
                                         <p>&#160;</p>
-                                        <fieldset>Les actions de supervision des serveurs, des files d'impression et des consommables envoient vers l'interface d'administration de Watchdoc<sup>®</sup> dans laquelle vous devrez vous authentifier en tant qu'administrateur pour accéder aux informations détaillées.</fieldset>
+                                        <fieldset>Les actions de supervision des serveurs, des files d'impression et des consommables envoient vers l'interface d'administration de Watchdoc dans laquelle vous devrez vous authentifier en tant qu'administrateur pour accéder aux informations détaillées.</fieldset>
                                         <h2>Accéder à WSC</h2>
                                         <ol>
                                             <li value="1">
@@ -306,47 +306,60 @@
                                                 <p class="Liste_puce_2"><strong>Profils de sécurité : </strong>permet d'accéder aux droits d'accès et profils d'administration&#160;;</p>
                                             </li>
                                         </ul>
-                                        <p>&#160;</p>
-                                        <h2>Modifier l'apparence d'une liste</h2>
-                                        <p>Pour personnaliser l'apparence d'une liste de résultats dans WSC (quel que soit l'objet de la liste) : </p>
+                                        <h2>Modifier l'apparence d'un tableau de résultats <a name="Creer_vues"></a>(créer des vues)</h2>
+                                        <p>Vous pouvez personnaliser l'apparence d'un tableau de résultats dans WSC (quel que soit l'objet de la liste) en créant de nouvelles vues.<br />Pour ajouter des vues&#160;:</p>
                                         <ol>
                                             <li value="1">
-                                                <p class="Liste_num_1">dans l'interface<strong> Gestion</strong>, rendez-vous dans l'encart de droite affichant les actions <img src="../Z_Resources/Images/02_Captures/Icone_Actions.png" style="width: 22px;height: 19px;" /> : la liste des actions s'affiche complètement ; </p>
+                                                <p class="Liste_num_1">depuis le tableau de résultats, dans l'encart des actions (en haut à droite), cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Bouton_Modifier_Tableau.png" style="width: 149px;height: 20px;" />&#160;;</p>
+                                                <p class="Liste_num_1">Si le bouton n'est pas dans la liste, cliquez d'abord sur la roue dentée <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_RoueDentee.png" style="width: 35px;height: 31px;" /> pour faire apparaître tous les boutons d'action.<br /></p>
                                             </li>
                                             <li value="2">
-                                                <p class="Liste_num_1">dans la liste d'actions, cliquez sur <img src="../Z_Resources/Images/02_Captures/Bouton_Modifier_Tableau.png" style="width: 149px;height: 20px;" /> :<br /><br /><img src="../Z_Resources/Images/02_Captures/ManageCards/WSC_Modifier_Tableau_Badges.png" style="width: 551px;height: 173px;" /></p>
-                                                <p>&#160;</p>
+                                                <p class="Liste_num_1">dans l'interface <strong>Modification du tableau,</strong> cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Ajouter_Vue.png" style="width: 114px;height: 19px;" /> :</p>
+                                                <p class="Liste_num_1">&#160;</p>
+                                                <p class="Liste_num_1"><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/ManageGuests/WD_FPR_WSC_Modifier_Tableau.png"><img class="MCPopupThumbnail img" data-mc-width="1876" data-mc-height="784" src="../Z_Resources/Images/02_Captures/ManageGuests/WD_FPR_WSC_Modifier_Tableau_thumb_700_0.png" style="width: 700px;height: auto;mc-thumbnail: link;mc-thumbnail-max-width: 700px;" tabindex="" /></a>
+                                                </p>
                                             </li>
                                             <li value="3">
-                                                <p class="Liste_num_1">dans l'interface <strong>Modification du tableau,</strong> cliquez sur l'en-tête d'une colonne pour la sélectionner, puis déplacez-la vers un autre emplacement à l'aide de la souris&#160;;<br /><br /><img src="../Z_Resources/Images/02_Captures/ManageCards/WSC_Modifier_Tableau_Badges_Deplacer.png" style="width: 557px;height: 126px;" /><br /></p>
-                                                <p>&#160;</p>
+                                                <p class="Liste_num_1">Saisissez ensuite un nom dans le champ <b>Nom de la nouvelle vue.</b><br />Un contrôle s'applique sur le champ pour empêcher la saisie de caractères interdits (tels que \";alert('xss');//, par exemple).</p>
                                             </li>
                                             <li value="4">
-                                                <p class="Liste_num_1">si vous souhaitez ne pas afficher une colonne, cliquez sur son en-tête : ce dernier est alors grisé&#160;;</p>
+                                                <p class="Liste_num_1">glissez-déposez les colonnes à l'endroit où vous souhaitez les voir s'afficher&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/ManageGuests/WSC_Modifier_Tableau_Badges_Deplacer.png"><img class="MCPopupThumbnail img" data-mc-width="1867" data-mc-height="517" src="../Z_Resources/Images/02_Captures/ManageGuests/WSC_Modifier_Tableau_Badges_Deplacer_thumb_1000_0.png" style="height: auto;width: 700px;mc-thumbnail: link;mc-thumbnail-max-width: 1000px;" tabindex="" /></a><br /><br /><br /></p>
                                             </li>
                                             <li value="5">
-                                                <p class="Liste_num_1">cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Bouton_Valider.png" style="width: 34px;height: 32px;" /> pour confirmer la modification de la liste ;</p>
+                                                <p class="Liste_num_1">pour ne plus afficher une colonne dans le tableau, cliquez sur son en-tête : ce dernier est alors grisé&#160;;</p>
                                             </li>
                                             <li value="6">
-                                                <p class="Liste_num_1">pour créer une nouvelle liste, cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Bouton_Ajouter_Vue.png" style="width: 103px;height: 21px;" />&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Tableau_Ajouter.png" style="width: 540px;height: 89px;" /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="7">
-                                                <p class="Liste_num_1">dans l'interface<strong> Modification du tableau</strong>, saisissez le nom de la nouvelle vue dans le champ, ordonnez les colonnes telles que vous souhaitez les voir s'afficher et cliquez sur <img src="../Z_Resources/Images/02_Captures/Bouton_Valider.png" style="width: 31px;height: 29px;" /> pour valider la création de la vue.<br /></p>
-                                                <p>&#160;</p>
+                                                <p class="Liste_num_1">dès que le tableau correspond à celui que vous souhaitez, cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Valider_WSC.png" />.</p>
+                                                <p class="Liste_num_1"><span style="font-family: 'Wingdings'">è</span>La vue créée est alors celle qui s'affiche par défaut.<br /></p>
                                             </li>
                                         </ol>
-                                        <p class="Liste_num_1">→ Une fois la vue créée, vous pourrez la choisir en cliquant sur <img src="../Z_Resources/Images/02_Captures/Bouton_Modifier_Tableau.png" style="width: 165px;height: 23px;" /></p>
-                                        <h2>Exporter une liste</h2>
-                                        <p>Pour exporter une liste, quel qu'en soit l'objet&#160;:</p>
+                                        <h2>Modifier la vue affichée</h2>
+                                        <p class="Liste_num_1">La vue "Default" s'affiche par défaut.&#160;<br />S'il existe plusieurs vues, c'est la dernière vue créée qui s'affiche par défaut.</p>
+                                        <p class="Liste_num_1">Pour modifier cette vue, </p>
                                         <ol>
                                             <li value="1">
-                                                <p class="Liste_num_1">dans la liste, rendez-vous sur l'encart de droite affichant les actions <img src="../Z_Resources/Images/02_Captures/Icone_Actions.png" style="width: 26px;height: 22px;" />&#160;;</p>
+                                                <p class="Liste_num_1">cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Bouton_Modifier_Tableau.png" style="width: 165px;height: 23px;" />, </p>
                                             </li>
                                             <li value="2">
-                                                <p class="Liste_num_1">cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Bouton_Exporter.png" style="width: 122px;height: 19px;" />&#160;;</p>
+                                                <p class="Liste_num_1">dans l'interface <strong>Modification du tableau</strong>, sélectionnez la <strong>Vue actuelle</strong> dans la liste des vues disponibles&#160;;</p>
                                             </li>
                                             <li value="3">
+                                                <p class="Liste_num_1">cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Valider_WSC.png" />.<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/ManageGuests/WD_FPR_WSC_SelectionnerVue.png"><img class="MCPopupThumbnail img" data-mc-width="1869" data-mc-height="522" src="../Z_Resources/Images/02_Captures/ManageGuests/WD_FPR_WSC_SelectionnerVue_thumb_1000_0.png" style="width: 700px;height: auto;mc-thumbnail: link;mc-thumbnail-max-width: 1000px;" tabindex="" /></a></p>
+                                            </li>
+                                        </ol>
+                                        <h2>Exporter un tableau</h2>
+                                        <p>Pour exporter le contenu d'un tableau, quel qu'en soit l'objet&#160;:</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p class="Liste_num_1">dans le tableau, rendez-vous sur l'encart de droite affichant les actions ;</p>
+                                            </li>
+                                            <li value="2">
+                                                <p class="Liste_num_1">si elle est affichée, cliquez sur la roue dentée <img src="../Z_Resources/Images/02_Captures/Icone_Actions.png" style="width: 26px;height: 22px;" /> pour afficher la totalité des boutons d'action&#160;;</p>
+                                            </li>
+                                            <li value="3">
+                                                <p class="Liste_num_1">cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Bouton_Exporter.png" style="width: 122px;height: 19px;" />&#160;;</p>
+                                            </li>
+                                            <li value="4">
                                                 <p class="Liste_num_1">cliquez sur le fichier  <b>export.csv</b> téléchargé par le navigateur ou enregistrez-le dans votre espace de travail&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_FilesImpression_Exporter.png" style="width: 543px;height: 285px;" /></p>
                                             </li>
                                         </ol>

@@ -204,12 +204,9 @@
                                         <p>Dans une architecture comportant un serveur master et d'autres serveurs, l'ensemble des serveurs Watchdoc communiquent entre eux. <br />En particulier, le serveur master communique vers les autres serveurs de Watchdoc pour leur envoyer sa configuration lors des synchronisations.</p>
                                         <p>Le mode de synchronisation par défaut est <b>bidirectionnel</b>.</p>
                                         <p>&#160;</p>
-                                        <fieldset><strong>Mode MailBox </strong>
-                                            <br />
-                                            <p>Dans le cas de sites distants reliés par un réseau Internet ne disposant pas de VPN, la communication du server master vers les serveurs slaves de Watchdoc n'est pas possible car elle présente une faille de sécurité.</p>
-                                            <p>Pour gérer ce cas de figure, la synchronisation peut être forcée en mode <b>unidirectionnel</b>&#160;<strong>(mailbox)</strong>.&#160;</p>
-                                            <p>Dans ce mode, un serveur Watchdoc appelle le master et ce dernier peut alors répondre dans la session de communication établie par le serveur. </p>
-                                        </fieldset>
+                                        <p>Cependant, un autre mod peut être activé : le <strong>mode MailBox </strong>: dans le cas de sites distants reliés par un réseau Internet ne disposant pas de VPN, la communication du server master vers les autres serveurs de Watchdoc n'est pas possible car elle présente une faille de sécurité.</p>
+                                        <p>Pour gérer ce cas de figure, la synchronisation peut être forcée en mode <b>unidirectionnel</b>&#160;<strong>(mailbox)</strong>.&#160;</p>
+                                        <p>Dans ce mode, un serveur Watchdoc appelle le master et ce dernier peut alors répondre dans la session de communication établie par le serveur. </p>
                                         <h2>Procédure</h2>
                                         <h3>Configurer le mode de synchronisation</h3>
                                         <ol>
@@ -260,6 +257,31 @@
                                                 <img src="../../Z_Resources/Images/02_Captures/Config_Domaine_mailbox2.png" style="width: 700px;" />
                                             </p>
                                         </blockquote>
+                                        <h3>Configurer les <a name="délais_de_communication"></a>délais de communication</h3>
+                                        <p>La gestion en domaine génère un grand nombre de communications entre le serveur master et les autres serveurs.&#160;<br />Il arrive que ce grand nombre de communications simultanées provoque des latences de réponses du serveur entraînant des perturbations dans le traitement des travaux d'impression.&#160;<br />En cas de perturbations de ce genre, modifiez les délais de communications des serveurs avec le serveur master&#160;: </p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>cliquez sur le lien "Afficher les options avancées"&#160;:</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>saisissez les délais de communication des serveurs souhaités&#160;:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p><strong>Au démarrage&#160;:</strong> au démarrage du serveur slave, délai d'attente avant que le serveur ait le droit de le contacter&#160;le serveur master&#160;;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Quand connecté&#160;: </strong>lorsqu'une communicationn est établie entre le serveur master et le serveur slave, délai entre 2 communications pour se synchroniser ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Quand déconnecté&#160;:</strong>  lorsque le serveur est déconnecté du serveur master, intervalle durant lequel il peut recontacter le serveur master pour rétablir la connexion et se synchroniser&#160;:<br /><br /><img src="ConfigDomaineDelaisCommunication.png" style="width: 700px;height: auto;" /></p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                        <p>
+                                            <br />
+                                            <br />
+                                        </p>
                                     </div>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">
