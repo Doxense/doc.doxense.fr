@@ -194,7 +194,7 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <p><a name="aanchor292"></a>
+                                        <p><a name="aanchor291"></a>
                                             <MadCap:concept term="ADE" /><span style="font-size: 24pt; font-weight: bold; color: #ff803b;">Dépannages</span>
                                         </p>
                                         <p>&#160;</p>
@@ -571,7 +571,7 @@
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Les pages des documents numérisés ne sont pas classées dans l'ordre</a></span>
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> lorsqu'un utilisateur numérise un document comportant plusieurs pages, ces pages ne sont pas classées dans l'ordre.<br /><strong>Cause :</strong> si le paramètre Nom du fichier n'est pas modifié dans la destination de scan, le fichier numérisé portera le nom Scan et ses occurences Scan, Scan (1), Scan (2), etc. Comme Windows utilise le tri ASCII, Scan (1) est considéré comme le premier dans la liste, avant Scan.</p>
-                                                <p><strong>Résolution :</strong> il convient de modifier le paramètre <strong>Nom de fichier</strong> pour lui attribuer une variable permettant le tri, comme $LONGDATE, par exemple, qui tiendra compte de l'heure, de la minute et la seconde de numérisation de la page (cf.&#160;<a href="../C_Configurer/ConfigWEScan/WEScan_Config_Profil_DestScanToMe.htm#Nom_du_fichier" target="_blank">Configurer une destination de scan</a>).&#160;</p>
+                                                <p><strong>Résolution :</strong> il convient de modifier le paramètre <strong>Nom de fichier</strong> pour lui attribuer une variable permettant le tri, comme $LONGDATE, par exemple, qui tiendra compte de l'heure, de la minute et la seconde de numérisation de la page (cf.&#160;Configurer une destination de scan).&#160;</p>
                                             </div>
                                         </div>
                                         <p>&#160;</p>
@@ -620,7 +620,7 @@
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> après avoir lancé une numérisation en A4 depuis un périphérique Konica Minolta, un message d'erreur  s'affiche : "Impossible de récupérer les paramètres initaux - NoScanProfile - Could not find any valid scan profile after constraints application".</p>
                                                 <p><strong>Cause :</strong> ce message est peut être dû au paramètre "AutoSize" configuré dans le profil de numérisation WEScan qui n'est pas supporté par le modèle utilisé pour le scan.&#160;</p>
-                                                <p><strong>Résolution :</strong> si vous constatez que certains modèles ne supportent pas le paramétrage par défaut "AutoSize", il convient de créer un profil de scan spécifique pour ces modèles à l'aide de <a href="../C_Configurer/ConfigWEScan/WEScan_Config_Profil_SPC_Presentation.htm" target="_blank">ScanProfilesCustomizer</a>.&#160;Dans ce profil de scan spécifique, le paramètre AutoSize <strong>ne doit pas </strong>être configué par défaut.&#160;</p>
+                                                <p><strong>Résolution :</strong> si vous constatez que certains modèles ne supportent pas le paramétrage par défaut "AutoSize", il convient de créer un profil de scan spécifique pour ces modèles à l'aide de ScanProfilesCustomizer.&#160;Dans ce profil de scan spécifique, le paramètre AutoSize <strong>ne doit pas </strong>être configué par défaut.&#160;</p>
                                             </div>
                                         </div>
                                         <p>&#160;</p>
@@ -767,6 +767,14 @@
                                                 <p><strong>Contexte :</strong> lors de la configuration du WES, si vous connectez le lecteur de badge avant d'avoir installé le WES, le périphérique délivre un message d'erreur informant qu' "aucune application n'est supportée par ce périphérique USB".</p>
                                                 <p><strong>Cause :</strong> ce message survient lorsque le lecteur de badge est connecté alors que le WES Watchdoc n'est pas encore installé.</p>
                                                 <p><strong>Résolution :</strong> il convient de ne connecter le lecteur de badge qu'au moment de l'installation du WES sur la file (cf.&#160;<a href="../W_WES/10_HP/05_HP_Install_WES.htm" target="_blank" title="Lien vers la procédure d'installation du WES sur la file" alt="Lien vers la procédure d'installation du WES sur la file">Installer le WES&#160;sur la file</a>). </p>
+                                            </div>
+                                        </div>
+                                        <p>&#160;</p>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WES&#160;HP.Problème d'utilisation du badge - Echec d'envoi des données USB.</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> lorsqu'un utilisateur tente de s'authentifier sur le WES&#160;avec son badge , un message d'erreur l'informe de l'échec d'envoi des données USB. Ce dysfonctionnement survient notamment après un incident ayant nécessité l'activation de la fonction interserveur.</p>
+                                                <p><strong>Cause :</strong> ce message survient lorsque le périphérique d'impression redémarre pendant que la base de données interserveur était hors-service.</p>
+                                                <p><strong>Résolution :</strong> il convient de se rendre dans l'interface d'administration de la file et de cliquer sur le bouton "Réenregistrer le lecteur de bagde"  (cf.&#160;<a href="../W_WES/10_HP/05_HP_Install_WES.htm#Reenregistrer" target="_blank" title="Lien vers la procédure d'installation du WES sur la file" alt="Lien vers la procédure d'installation du WES sur la file">Installer le WES&#160;sur la file</a>). </p>
                                             </div>
                                         </div>
                                         <p>&#160;</p>

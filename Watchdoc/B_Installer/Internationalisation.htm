@@ -4,7 +4,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Watchdoc - Internationalisation</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="Présentation de la procédure permettant de modifier la version linguistique de Watchdoc." /><title>Watchdoc - Internationalisation</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -197,33 +198,33 @@
                                             <MadCap:concept term="INS;WD" />Watchdoc - Internationalisation</h1>
                                         <h2>Contexte</h2>
                                         <p>Les bases de données SQL&#160;de Watchdoc sont configurées  pour supporter la langue française par défaut. </p>
-                                        <p>Lorsque Watchdoc<sup>®</sup> est installé dans un pays autre que la France, il convient de lancer un script qui permet de modifier la configuration de la base SQL de manière à tenir compte du contexte linguistique du pays utilisateur.</p>
+                                        <p>Lorsque Watchdocest installé dans un pays autre que la France, il convient de lancer un script qui permet de modifier la configuration de la base SQL de manière à tenir compte du contexte linguistique du pays utilisateur.</p>
                                         <h2>Accès au script</h2>
                                         <p>…\watchdoc\Powershell\scripts</p>
                                         <h2>Procédure</h2>
                                         <ol>
                                             <li value="1">
-                                                <p>Après installation de Watchdoc<sup>®</sup>, accédez en tant qu'administrateur au serveur qui héberge la base SQL&#160;de Watchdoc avec une instance dédiée à Watchdoc (sans changer la collation de bases non destinées à Watchdoc<sup>®</sup>)&#160;;&#160;</p>
+                                                <p>Après installation de Watchdoc, accédez en tant qu'administrateur au serveur qui héberge la base SQL&#160;de Watchdoc avec une instance dédiée à Watchdoc (sans changer la collation de bases non destinées à Watchdoc)&#160;;&#160;</p>
                                             </li>
                                             <li value="2">
                                                 <p>installez MS SQL&#160;express en local sur le serveur d’impression&#160;;</p>
                                             </li>
                                             <li value="3">
-                                                <p>lancez Windows PowerShell en tant qu'administrateur&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/Install_11_SQL_PowerShell_Access.png" /><br /><br /> </p>
+                                                <p>lancez Windows PowerShell en tant qu'administrateur&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/Install_11_SQL_PowerShell_Access.png" /><br /><br /></p>
                                             </li>
                                             <li value="4">
-                                                <p>Accédez au script. Il est possible que les scripts non signés bloquent l’exécution de ce script. Dans ce cas, il convient de lancer la ligne de commande suivante : <br /><img src="../Z_Resources/Images/02_Captures/Install_11_SQL_PowerShell_LigneCommande.png" /><br /></p>
+                                                <p>Accédez au script. Il est possible que les scripts non signés bloquent l’exécution de ce script. Dans ce cas, il convient de lancer la ligne de commande suivante : <br /><br /><img src="../Z_Resources/Images/02_Captures/Install_11_SQL_PowerShell_LigneCommande.png" /><br /></p>
                                                 <p>&#160;</p>
                                             </li>
                                             <li value="5">
-                                                <p>Exécutez le script "change_sqlcollation.ps1"&#160;:<br /><img src="../Z_Resources/Images/02_Captures/Install_11_SQL_PowerShell_lancerScript.png" style="width: 836px;height: 27px;" /><br /><br /></p>
+                                                <p>Exécutez le script "change_sqlcollation.ps1"&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/Install_11_SQL_PowerShell_lancerScript.png" style="width: 836px;height: 27px;" /><br /><br /></p>
                                             </li>
                                             <li value="6">
-                                                <p>Si l'instance Watchdoc n'est pas détectée, indiquez au script l'instance utilisée&#160;:<br /><img src="../Z_Resources/Images/02_Captures/Install_11_SQL_PowerShell_ChoixInstance.png" /><br /></p>
+                                                <p>Si l'instance Watchdoc n'est pas détectée, indiquez au script l'instance utilisée&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/Install_11_SQL_PowerShell_ChoixInstance.png" /><br /></p>
                                                 <p>&#160;</p>
                                             </li>
                                             <li value="7">
-                                                <p>Indiquez ensuite la collation correspondant à la langue choisie et confirmez avant de quitter le script&#160;:<br /><img src="../Z_Resources/Images/02_Captures/install_11_SQL_PowerShell_ChoixLangue.png" style="width: 624px;height: 204px;" /></p>
+                                                <p>Indiquez ensuite la collation correspondant à la langue choisie et confirmez avant de quitter le script&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/install_11_SQL_PowerShell_ChoixLangue.png" style="width: 624px;height: 204px;" /></p>
                                             </li>
                                         </ol>
                                     </div>
