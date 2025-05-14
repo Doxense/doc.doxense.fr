@@ -4,7 +4,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Watchdoc - Configurer le mode de synchronisation entre master et autres serveurs</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="Procédure d'activation et de configuration de la synchronisation entre le serveur master et les serveurs esclaves d'un Domaine." /><title>Watchdoc - Configurer le mode de synchronisation entre master et autres serveurs</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -204,9 +205,10 @@
                                         <p>Dans une architecture comportant un serveur master et d'autres serveurs, l'ensemble des serveurs Watchdoc communiquent entre eux. <br />En particulier, le serveur master communique vers les autres serveurs de Watchdoc pour leur envoyer sa configuration lors des synchronisations.</p>
                                         <p>Le mode de synchronisation par défaut est <b>bidirectionnel</b>.</p>
                                         <p>&#160;</p>
-                                        <p>Cependant, un autre mod peut être activé : le <strong>mode MailBox </strong>: dans le cas de sites distants reliés par un réseau Internet ne disposant pas de VPN, la communication du server master vers les autres serveurs de Watchdoc n'est pas possible car elle présente une faille de sécurité.</p>
+                                        <p>Cependant, un autre mode peut être activé : le <strong>mode MailBox</strong>. </p>
+                                        <p>Dans le cas de sites distants reliés par un réseau Internet ne disposant pas de VPN, la communication du server master vers les autres serveurs de Watchdoc n'est pas possible car elle présente une faille de sécurité.</p>
                                         <p>Pour gérer ce cas de figure, la synchronisation peut être forcée en mode <b>unidirectionnel</b>&#160;<strong>(mailbox)</strong>.&#160;</p>
-                                        <p>Dans ce mode, un serveur Watchdoc appelle le master et ce dernier peut alors répondre dans la session de communication établie par le serveur. </p>
+                                        <p>Dans ce mode, un serveur slave Watchdoc appelle le master et ce dernier peut alors répondre dans la session de communication établie par le serveur slave. </p>
                                         <h2>Procédure</h2>
                                         <h3>Configurer le mode de synchronisation</h3>
                                         <ol>
