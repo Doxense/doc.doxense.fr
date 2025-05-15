@@ -9,6 +9,7 @@ xmlSynonymsData += '        <DirectionalSynonym From=\"Scan to mail\" To=\"scan2
 xmlSynonymsData += '        <DirectionalSynonym From=\"Scan to folder\" To=\"scan2fold\" />';
 xmlSynonymsData += '        <DirectionalSynonym From=\"Restreindre\" To=\"restrict\" />';
 xmlSynonymsData += '        <DirectionalSynonym From=\"Améliorer\" To=\"amélior\" />';
+xmlSynonymsData += '        <DirectionalSynonym From=\"Glossaire\" To=\"lexiqu\" />';
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"refacturation\" To=\"analyt\" FromStem=\"refactur\" />';
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"maître\" To=\"mast\" FromStem=\"maîtr\" />';
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"cacher\" To=\"transform\" FromStem=\"cach\" />';
