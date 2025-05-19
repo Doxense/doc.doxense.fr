@@ -234,7 +234,15 @@
                                                         <p><strong>Emplacement : </strong>dans la liste hiérarchique, sélectionnez l'emplacement auquel vous souhaitez associer cette file (cf. <a href="../C_Configurer/ConfigEmplacements/ConfigEmplacements_Procedure.htm" target="_blank" title="Lien vers la procédure de création des emplacements" alt="Lien vers la procédure de création des emplacements">Gérer les emplacements</a>). </p>
                                                     </li>
                                                     <li>
-                                                        <p class="Liste_puce_1"><strong>Serveur :</strong>dans la liste,  sélectionnez le serveur dont dépend la file d'impression&#160;;</p>
+                                                        <p class="Liste_puce_1"><strong>Serveur :</strong>dans la liste,  sélectionnez le serveur dont dépend la file d'impression.<br />Le choix de la valeur "Automatique" déclenche le comportement suivant : </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p class="Liste_puce_1">si le serveur est le seul de la configuration (configuration StandAlone), la file dépend nécessairement de ce serveur ; </p>
+                                                            </li>
+                                                            <li>
+                                                                <p>si le serveur appartient à un domaine (configuration master/slaves), Watchdoc déduit l'emplacement du périphérique d'impression grâce à son adresse IP et aux informations de configuration de sous-réseaux des emplacements.&#160;Il compare ensuite l'adresse IP&#160;de chaque serveur avec celle des emplacements pour établir la correspondance  avec le serveur dont l'adresse IP&#160;correspond. <br />S'il aucun serveur ne dispose d'adresse IP&#160;correspondante, Watchdoc renvoie la file vers le serveur qui gère le moins de files.</p>
+                                                            </li>
+                                                        </ul>
                                                     </li>
                                                     <li>
                                                         <p class="Liste_puce_1"><strong>Marque :</strong> dans la liste, sélectionnez la marque de la file créée ; </p>
