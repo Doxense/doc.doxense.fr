@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr-fr" xml:lang="fr-fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="Fiches pratiques" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr-fr" xml:lang="fr-fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="WSC Supervision|Badges" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Watchdoc -  Paramétrer un attribut de l'AD contenant le numéro de badge</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="Fiche pratique : configuration de l'annuaire LDAP pour indiquer à Watchdoc le champ dans lequel est enregistré le numéro de badge dans le cas où ce numéro est enregistré dans l'AD et non dans la base de données Cards (WSCà." /><title>Watchdoc -  Paramétrer un attribut de l'AD contenant le numéro de badge</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -214,7 +215,7 @@
                                                 <p>Depuis le <strong>Menu</strong> principal, dans la section <strong>Configuration</strong>, cliquez sur <strong>Annuaires </strong>utilisateurs.</p>
                                             </li>
                                             <li value="3">
-                                                <p>Dans la liste des annuaires, cliquez sur <strong>Modifier l'annuaire LDAP</strong> dans lequel se trouvent les utilisateurs et leurs badges</p>
+                                                <p>Dans la liste des annuaires, repérez l'annuaire LDAP&#160;dans lequel se trouvent les utilisateurs et leurs badges et cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Editer.png" /> pour le modifier. </p>
                                             </li>
                                             <li value="4">
                                                 <p>Dans l'interface de configuration de l'annuaire, dans la section <strong>Avancé</strong>, dans le champ <strong>Attr. Search</strong>, saisissez la valeur suivante : <strong>sAMAccountName|VotreAttribuLDAP</strong>.</p>
@@ -223,13 +224,13 @@
                                                 <p>Validez la modification apportée à l'annuaire utilisateur.</p>
                                             </li>
                                             <li value="6">
-                                                <p>Sur le serveur dont dépendent les périphériques concernés par l'authentification par badge, videz ensuite le cache de l’annuaire utilisateurs Watchdoc.</p>
+                                                <p>Sur le serveur dont dépendent les périphériques concernés par l'authentification par badge, videz ensuite le cache de l’annuaire des utilisateurs Watchdoc.</p>
                                             </li>
                                             <li value="7">
-                                                <p>Testez la recherche d’un login Windows, puis le numéro de carte de l’utilisateur présent dans l’attribut afin de valider la recherche inversée.</p>
+                                                <p>Testez la recherche d’un compte utiilisateur Windows, puis testez la recherche de ce compte à l'aide du  numéro de badge attribué à cet utilisateur  afin de valider la recherche inversée.</p>
                                             </li>
                                             <li value="8">
-                                                <p>Retournez dans l'interface d'administrateur Watchdoc</p>
+                                                <p>Retournez dans l'interface d'administration de Watchdoc.</p>
                                             </li>
                                             <li value="9">
                                                 <p>Depuis le <strong>Menu principal</strong>, section <strong>Configuration</strong>, cliquez sur<strong> Web, WES &amp; Destinations de numérisation</strong>.</p>
@@ -238,20 +239,16 @@
                                                 <p>Editez le WES concerné.</p>
                                             </li>
                                             <li value="11">
-                                                <p>Dans l'interface de configuration du WES, section <strong>Authentification</strong> &gt; <strong>Authentification par Badge</strong>,</p>
+                                                <p>Dans l'interface de configuration du WES, section <strong>Authentification</strong> &gt; <strong>Authentification par Badge</strong>, sélectionnez  l'annuaire utilisé (l'annuaire LDAP ou, plus généralement , l'annuaire META qui englobe l'annuaire LDAP modifié).</p>
                                             </li>
                                             <li value="12">
-                                                <p>Sélectionnez dans la liste déroulante l'annuaire utilisé (généralement META qui doit obligatoirement appeler l'annuaire LDAP modifié).</p>
-                                            </li>
-                                            <li value="13">
                                                 <p>Décochez les cases cochées dans la section <strong>Association auto</strong> puis validez le profil WES :<br /><br /><img src="../Z_Resources/Images/02_Captures/WES_Modifier_AttributAd.png" /><br /><br /></p>
                                             </li>
-                                            <li value="14">
+                                            <li value="13">
                                                 <p>Installez le WES sur les périphériques et testez une authentification par badge.</p>
-                                                <p>N.B.: si le numéro du badge lu est différent du numéro de badge enregistré dans l'attribut, reportez-vous à la documentation permettant de <a href="WES_Changer_Format_Badge.htm" target="_blank">modifier le format des numéros de badges</a>).</p>
+                                                <p>N.B.: si le numéro du badge lu est différent du numéro de badge de l'attribut de l'annuaire, reportez-vous à la documentation permettant de <a href="WES_Changer_Format_Badge.htm" target="_blank">modifier le format des  badges</a>.</p>
                                             </li>
                                         </ol>
-                                        <p>&#160;</p>
                                     </div>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

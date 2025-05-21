@@ -5,7 +5,7 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="Procédure de configuration des notifications par e-mails et MS Windows." /><title>Watchdoc - Notifications - Configurer la notification</title>
+        <meta name="description" content="Procédure de configuration des notifications par e-mails et notirications MS Windows." /><title>Watchdoc - Notifications - Configurer la notification</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -221,6 +221,22 @@
                                         <p>Lorsque les serveurs sont organisés en Domaine (configuration master/slaves), une case à cocher <strong>Global </strong>permet de répliquer les droits définis pour le serveur maître sur les autres serveurs qui en dépendent (esclaves). Cette fonction permet un gain de temps et de cohérence lors de la configuration initiale.<br /><br /><img src="../../Z_Resources/Images/02_Captures/Admin_Notifs_Replication.png" style="width: 500px;" /></p>
                                         <p>&#160;</p>
                                         <p>N.B. : s'il existe des configurations propres aux serveurs esclaves, cocher cette case sur le serveur maître provoquera le remplacement de la configuration des serveurs esclaves par la configuration du serveur maître.</p>
+                                        <h2>Configurer la section Contact</h2>
+                                        <p>Dans cette section, vous pouvez configurer les informations du contact considéré comme l'émetteur des notifications envoyées aux utilisateurs.&#160;Ces informations sont facultatives : </p>
+                                        <ul>
+                                            <li>
+                                                <p><strong>Nom :</strong> saisissez l'identité (ou la qualité) de la personne en charge des notifications ;</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>e-mail :</strong> saisissez l'adresse e-mail de la personne en charge des notifications si vou souhaitez que les utilisateurs puissent répondre aux notifications en cas de besoin ; </p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Téléphone :</strong> saisissez le numéro de téléphone de la personne en charge des notifications ;</p>
+                                            </li>
+                                            <li>
+                                                <p>Message : saisissez le message qui accompagne l'envoi des notifications :<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Notifs_Contacts.png" style="width: 700px;height: auto;" /></p>
+                                            </li>
+                                        </ul>
                                         <h2>Configurer la <a name="section_E-mails"></a>section E-mails</h2>
                                         <p>Dans cette section, vous configurez les informations relatives aux modalités de notification par courriel lors de l'impression. <br />Cette fonction permet d'envoyer des messages aux utilisateurs ou aux administrateurs de Watchdoc via un serveur <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term6">SMTP<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Simple Mail Transfer Protocol (Protocole simple de transfert de courrier). Protocole de communication utilisé pour transférer le courrier électronique (courriel) vers les serveurs de messagerie électronique.</span></a>.</p>
                                         <p>&#160;</p>
@@ -279,30 +295,35 @@
                                                         <p class="Liste_puce_1"><strong>Consommables </strong>: saisissez dans ce champ l'adresse courriel de la personne chargée de gérer les consommables des périphériques et qui pourra donc intervenir dès qu'il sera nécessaire de réapprovisionner les périphériques en cartouches d'encre ou en papier, par exemple ;</p>
                                                     </li>
                                                     <li>
-                                                        <p class="Liste_puce_1"><strong>Resp. Quotas </strong>: saisissez dans ce champ l'adresse courriel de la personne chargée de gérer les quotas d'impression (ou Porte-Monnaie Virtuels (PMV)).</p>
+                                                        <p class="Liste_puce_1"><strong>Resp. Quotas </strong>: saisissez dans ce champ l'adresse courriel de la personne chargée de gérer les quotas d'impression (ou Porte-Monnaie Virtuels (PMV)).<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Notifs_EMails.png" style="width: 700px;height: auto;" /></p>
                                                     </li>
                                                 </ul>
                                             </li>
                                         </ul>
                                         <h2>Configurer la section Planification de rapports</h2>
-                                        <p>Cette section permet de planifier les rapports gérés par le Communicateur de rapports (cf.&#160;<a href="../../H_HowTo/WD53_Communicateur_Rapports_Procedure.htm" target="_blank" title="Lien vers la procédure de configuration" alt="Lien vers la procédure de configuration">Communicateur de rapports - Procédure de création et de configuration</a>).&#160;</p>
+                                        <p>Cette section permet de planifier les rapports gérés par le Communicateur de rapports (cf.&#160;<a href="../../H_HowTo/WD53_Communicateur_Rapports_Procedure.htm" target="_blank" title="Lien vers la procédure de configuration" alt="Lien vers la procédure de configuration">Communicateur de rapports - Procédure de création et de configuration</a>).</p>
                                         <h2>Configurer la section Notification Windows</h2>
-                                        <p>Cette section permet de configurer les notifications envoyées via MS&#160;Windows sous forme de pop-up utilisant le protocole RDS (via MSG.exe).</p>
-                                        <p>Pour activer ce service, il est nécessaire d'autoriser les appels RPC en passant la valeur 'AllowRemoteRPC' à 1 dans la clé de registre "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Terminal Server".</p>
+                                        <p>Dans cette section, vous configurez les informations relatives aux notifications gérées par le service MSG.exe de MS Window.</p>
+                                        <fieldset><tt><span style="font-family: helvetica;">La notification par popup Windows n'est pas compatible avec MS Windows<sup>®</sup> 2000.</span><br /><span style="font-family: helvetica;">A partir de MS Windows® XP SP2, il est obligatoire d'autoriser les appels RPC en passant la valeur 'AllowRemoteRPC' à 1 dans la clé de registre du poste client "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Terminal Server". </span><br style="font-family: helvetica;" /><span style="font-family: helvetica;">Cette clé peut être déployée par GPO sur les postes utilisateurs. </span></tt>
+                                            <br />
+                                        </fieldset>
                                         <ul>
                                             <li>
-                                                <p><strong>Notifications : </strong>cochez la case pour activer la fonction. Le service Watchdoc Notification Proxy qui doit être installé et actif.</p>
+                                                <p class="Liste_puce_1">case <strong>Notifications</strong> : cochez la case pour activer l'envoi de messages d'alerte utilisant le protocole Remote Desktop Services (<a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term7">RDS<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Remote Desktop Services est un protocole qui permet à un utilisateur de se connecter sur un ordinateur faisant tourner Microsoft Terminal Services. Il est le successeur de Remote Desktop Protocol (RDP) et est implémenté à partir de la version R2 de Windows Server 2008. Il remplace complètement le Terminal Services.</span></a>), via l'outil de commande MSG.exe de MS Windows. Si vous cochez la case, complétez le champ suivant : </p>
+                                                <ul style="list-style-type: circle;">
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Proxy server :</strong> adresse du serveur où est activé le service Watchdoc Notification Serveur (en règle générale, installé sur le serveur web IIS).</p>
+                                                    </li>
+                                                </ul>
                                             </li>
                                             <li>
-                                                <p><strong>Serveur proxy : </strong>si le service WatchdocNotificationProxy n'est pas installé localement, il est nécessaire de préciser l'URL du service&#160;:"https://IP_ADDRESS:5751/services/msgq", par défaut.</p>
+                                                <p class="Liste_puce_1"><strong>Cible par défaut :</strong> saisissez dans ce champ le nom du poste sur lequel les notifications "Administrateur" seront envoyées ;</p>
                                             </li>
                                             <li>
-                                                <p><strong>Cible par défaut :</strong> conservez la valeur par défaut ;</p>
-                                            </li>
-                                            <li>
-                                                <p><strong>Nom du service : </strong>attribuez un nom au service d'envoi de notification (ou conservez le nom du service par défaut).<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Notifs_Configuration.png" style="width: 700px;height: auto;" /></p>
+                                                <p class="Liste_puce_1"><strong>Nom du service :</strong> saisissez dans ce champ le nom qui s'affichera comme celui de l'expéditeur du message envoyé au poste client. Il peut s'agir, par exemple, du libellé&#160;: "Watchdoc, gestion des impressions" permettant une identification facile du message.<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Notifs_MSWindows.png" style="width: 700px;height: auto;" /><br /></p>
                                             </li>
                                         </ul>
+                                        <fieldset style="text-align: left;"> MSG.exe est un outil en ligne de commande natif dans les systèmes d'exploitation MS Windows<sup>®</sup> qui permet d'envoyer des messages à un ou plusieurs utilisateurs du réseau ayant une session Windows active.<br />MSG. exe remplace Net Send depuis la version MS Vista<sup>®</sup><br />Pour utiliser ce service, il est nécessaire d'activer le Service MS Windows<sup>®</sup> Affichage des messages sur les postes clients (désactivé par défaut sur les postes MS XP<sup>®</sup> ).</fieldset>
                                         <h2>Valider la configuration </h2>
                                         <ol>
                                             <li value="1">
