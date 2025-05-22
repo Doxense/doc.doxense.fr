@@ -209,7 +209,7 @@
                                             <col style="width: auto;" class="TableStyle-Standard-Column-Regular" />
                                             <col style="width: auto;" class="TableStyle-Standard-Column-Regular" />
                                             <col style="width: auto;" class="TableStyle-Standard-Column-Regular" />
-                                            <col style="width: auto;" class="TableStyle-Standard-Column-Regular" />
+                                            <col style="width: 263px;" class="TableStyle-Standard-Column-Regular" />
                                             <thead>
                                                 <tr class="TableStyle-Standard-Head-Header1">
                                                     <td style="text-align: center;font-weight: bold;color: #ffffff;" class="TableStyle-Standard-HeadE-Regular-Header1"><span style="color: #ffffff;">Source</span>
@@ -230,18 +230,9 @@
                                                     <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">
                                                         <p>Site web Watchdoc (IIS) <br /></p>
                                                     </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">TCP 5744</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">TCP 5744<sup style="font-weight: bold;">1</sup></td>
                                                     <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Dotnet protocole</td>
                                                     <td class="TableStyle-Standard-BodyD-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc (kernel)</td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;background-color: #f5f5f5;" colspan="4">Par souci de sécurité, Doxense <strong>déconseille</strong> la configuration en <strong>mode déporté</strong> nécessitant l'ouverture du port 5744.&#160;<br />Si le port 5744 doit rester ouvert, nous recommandons de n'autoriser que les communications provenant des serveurs du domaine Watchdoc. </td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row1" style="height: 5px;">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 1pt;">&#160;</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 1pt;">&#160;</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 1pt;">&#160;</td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 1pt;">&#160;</td>
                                                 </tr>
                                                 <tr class="TableStyle-Standard-Body-Row2">
                                                     <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">WES&#160;- Watchdoc Embedded Solution </td>
@@ -326,6 +317,8 @@
                                                 </tr>
                                             </tbody>
                                         </table>
+                                        <p>&#160;</p>
+                                        <p><b style="vertical-align: super;">1</b> Par souci de sécurité, Doxense<strong> déconseille la configuration en mode déporté nécessitant l'ouverture du port 5744</strong>.&#160;<br />En conséquence, ce port est automatiquement bloqué dans le firewall lors de l'installation de Watchdoc.&#160;Si le service IIS&#160;est déporté, il est donc nécessaire de modifier les règles du firewall pour ouvrir ce port (cf.&#160;<a href="../I_ResolutionDePannes/ADE_Domaine_SlaveNotResponding.htm" target="_blank">Dépannage - Watchdoc is not responding</a>).&#160;<br />Si le port 5744 doit rester ouvert, nous recommandons de n'autoriser que les communications provenant des serveurs du domaine Watchdoc. <br /></p>
                                         <p>&#160;</p>
                                         <fieldset>
 		Si l'architecture réseau inclut un pare-feu, il est nécessaire que ce pare-feu autorise ces accès sur le <br />serveur hébergeant Watchdoc. <br />La technologie WSD (Web Services for Devices) n’est pas supportée par Watchdoc.

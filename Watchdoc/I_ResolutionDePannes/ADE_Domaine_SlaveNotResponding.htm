@@ -4,7 +4,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Erreur Watchdoc is not responding</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="Article de dépannage permettant de résoudre l'anomalie signalée par le message d'erreur &quot;Watchdoc is not responding&quot;." /><title>Watchdoc - Erreur "Watchdoc is not responding" après une mise à jour</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -195,7 +196,7 @@
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
                                         <h1><a name="aanchor296"></a>
-                                            <MadCap:concept term="ADE" />Erreur Watchdoc is not responding</h1>
+                                            <MadCap:concept term="ADE" />Watchdoc - Erreur "Watchdoc is not responding" après une mise à jour</h1>
                                         <p><b>Contexte</b>
                                         </p>
                                         <p>Alors que Watchdoc est installé </p>
@@ -209,7 +210,17 @@
                                         </ul>
                                         <p>on constate qu'après la mise à jour dans la version  6.1.0.5221,  les interfaces web des serveurs slaves sont inacessibles.&#160;En effet, à la place de l'interface d'administration et de la page "Mon compte", le  message suivant s'affiche dans le navigateur : </p>
                                         <p>"Watchdoc is not responding. A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond."</p>
-                                        <p>"Diagnostic : le service est momentanément indisponible" : <br /><br /><img src="../Z_Resources/Images/02_Captures/ADE_Domaine_ReglesFirewall.png" /><br /><br /></p>
+                                        <p>"Diagnostic : le service est momentanément indisponible" : <br /></p>
+                                        <p>&#160;</p>
+                                        <p>Ou,</p>
+                                        <p>on vient d'installer Watchdoc en mode déporté(serveur web IIS installé sur un autre serveur) et lorsque l'on clique sur le raccourci permettant d'accéder à l'interface de configuration de Watchdoc, on accède au messager d'erreur suivant :</p>
+                                        <p>
+                                            <br />
+                                            <img src="../Z_Resources/Images/02_Captures/ADE_Domaine_ReglesFirewall.png" />
+                                            <br />
+                                            <br />
+                                        </p>
+                                        <p>&#160;</p>
                                         <p><b>Cause</b>
                                         </p>
                                         <p>De nouvelles recommandations de sécurité sont en vigueur depuis la version Watchdoc 6.1.0.5122 : pour sécuriser les communications entre les serveurs, nous déconseillons l'installation de Watchdoc en mode "déporté", c'est-à-dire avec un serveur web IIS&#160;situé sur un autre serveur que le serveur d'impression Watchdoc (cf.&#160;<a href="../B_Installer/WD_Standard.htm" target="_blank">Watchdoc standard - Présentation</a>).</p>

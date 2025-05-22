@@ -4,7 +4,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Watchdoc</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="Articles de dépannage : liste des messages d'erreur courants, causes et procédures de résolution abrégées, avec liens vers les procédures de résolution détaillées." /><title>Watchdoc</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -1185,8 +1186,16 @@ dans la boîte de dialogue, activez le <strong>protocole SOAP.</strong></p>
                                                 </ol>
                                             </div>
                                         </div>
-                                        <h2 id="WPCWatchdocPrintClient" data-magellan-target="WPCWatchdocPrintClient">WPC - Watchdoc Print Client</h2>
-                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WPC&#160;n'arrive pas à se connecter et affiche un spinner infini.</a></span>
+                                        <h2 id="WPCWatchdocPrintClient" data-magellan-target="WPCWatchdocPrintClient">WPC - Watchdoc Print Client<br /></h2>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WPC&#160;for Windows avec des périphériques d'impression Hewlett Packard - Perte de fonctionnalités.</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> en tant qu'administrateur, je constate que, lorsqu'il installe un périphérique HP à l'aide de WPC sur son poste de travail, l'utilisateur perd certaines fonctionnalités définies dans les paramètres du périphérique d'impression (par exemple, le filigrane dans le document imprimé).</p>
+                                                <p><strong>Cause :</strong> par défaut, WPC&#160;utilise le processeur d'impression winprint.&#160;Si c'est un autre processeur d'impression qui a été configuré pour un périphérique d'impression, il est donc remplacé par winprint lors de la synchronisation de WPC, entraînant la suppression de paramètres définis pour un autre processeur d'impression.</p>
+                                                <p><strong>Résolution :</strong> pour résoudre cette anomalie, il convient de préciser quel est le processeur d'impression (driver"s print processor) que l'on souhaite appliquer si l'on ne souhaite pas winprint.</p>
+                                            </div>
+                                        </div>
+                                        <p>&#160;</p>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WPC&#160;for Windows n'arrive pas à se connecter et affiche un spinner infini.</a></span>
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> lors de la mise à jour de WPC for Windows à l'aide d'une version du msi comprise entre 7.0. 4165 et 7.0.4197, WPC&#160;n'arrive plus à se connecter et affiche un spinner (sablier) infini.</p>
                                                 <p><strong>Cause :</strong> lors de la mise à jour, le msi perd l'url de discovery et la remplace par la valeur https://discover.</p>
@@ -1220,6 +1229,7 @@ Aucun numéro de port TCP ou UDP n'est associé aux paquets ICMP, car ces numér
                                                 <p><strong>Résolution :</strong> pour résoudre ce problème, rendez-vous dans l'interface de configuration de Chrome et autorisez l'accès aux API (cf.&#160;<a href="../T_WPC/Chrome/WPCC_Configurer_dansGoogle.htm" target="_blank">Configurer WPC&#160;for Chrome</a> dans Chrome).</p>
                                             </div>
                                         </div>
+                                        <p>&#160;</p>
                                         <h2 id="WCLIWatchdocCommandInLine" data-magellan-target="WCLIWatchdocCommandInLine">WCLI - Watchdoc Command In-Line</h2>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Failed to obtain server information.</a></span>
                                             <div class="MCDropDownBody dropDownBody">
@@ -1281,7 +1291,6 @@ Aucun numéro de port TCP ou UDP n'est associé aux paquets ICMP, car ces numér
                                                 <p><strong>Contexte :</strong> Il arrive que l'installation automatique de Watchdoc ScanCare sur un périphérique Lexmark échoue. <br /><strong>Résolution :</strong>il est nécessaire de procéder à l'installation manuelle de ScanCare (cf.&#160;Enregistrer manuellement Watchdoc ScanCare sur un périphérique Lexmark).</p>
                                             </div>
                                         </div>
-                                        <p>&#160;</p>
                                         <h2 id="ServicedimpressionMicrosoftWindows" data-magellan-target="ServicedimpressionMicrosoftWindows">Service d'impression Microsoft Windows</h2>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Activer les logs du service d'impression Microsoft Windows</a></span>
                                             <div class="MCDropDownBody dropDownBody">

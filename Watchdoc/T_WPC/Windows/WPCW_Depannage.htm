@@ -291,6 +291,19 @@ Aucun numéro de port TCP ou UDP n'est associé aux paquets ICMP, car ces numér
                                         <p><strong style="font-size: 14pt;">Résolution</strong>
                                         </p>
                                         <p>Pour résoudre ce problème, il convient de désactiver ICMP dans la configuration de WPC&#160;for Windows (cf. <a href="WPCW_Configuration.htm#ICMP" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Configurer WPC for Windows</a>).</p>
+                                        <h2>Gestion du processeur d'impression du pilote</h2>
+                                        <p style="font-size: 14pt;"><strong>Contexte</strong>
+                                        </p>
+                                        <p>Lorsque l'utilisateur installe un périphérique d'impression à l'aide de WPC&#160;for Windows, c'est le Processeur d'impression winprint qui lui est attribué par défaut.&#160;</p>
+                                        <p>En conséquence, il est possible que l'utilisateur ne dispose pas de fonctions configurées spécifiquement dans le pilote et perde des fonctions qui fonctionnaient précédemment (par exemple, le filigrane sur les impressions).</p>
+                                        <p>&#160;</p>
+                                        <p><strong style="font-size: 14pt;">Cause</strong>
+                                        </p>
+                                        <p>Ce comportement est lié au paramètre définissant "winprint" comme processeur d'impression par défaut lors de l'installation d'un périphérique via WPC for Windows.</p>
+                                        <p>&#160;</p>
+                                        <p><strong style="font-size: 14pt;">Résolution</strong>
+                                        </p>
+                                        <p>Pour résoudre ce problème, il convient de configurer le Processeur d'impression souhaité lors de la configuration de WPC&#160;for Windows (cf. Configurer WPC for Windows, section Windows, paramètre <a href="WPCW_Configuration.htm#Print_proc" target="_blank">Processeur d'impression du pilote</a>).</p>
                                     </div>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">
