@@ -4,7 +4,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Watchdoc - Désactiver le Rapport Remote Desktop Services Printer</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="Fiche pratique - Procédure de désactivation du rapport automatique des pilotes du Viewer PDF envoyés sur le poste des administrateurs quand ils se connectent au serveur d'impression par le biais d'un utilitaire d'accès distant." /><title>Watchdoc - Désactiver le Rapport Remote Desktop Services Printer</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -198,11 +199,11 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor134"></a>
-                                            <MadCap:concept term="ADE" /><a name="aanchor135"></a>
+                                        <h1><a name="aanchor133"></a>
+                                            <MadCap:concept term="ADE" /><a name="aanchor134"></a>
                                             <MadCap:concept term="WD" />Watchdoc - Désactiver le Rapport Remote Desktop Services Printer</h1>
                                         <h2>Procédure</h2>
-                                        <p>Dans le journal d'événements d'un serveur (EventLog), il arrive que plusieurs événements se rapportent au TerminalServices-Printers mapping :</p>
+                                        <p>Dans le journal d'événements d'un serveur (EventLog), il arrive que plusieurs événements se rapportent à la source "TerminalServices-Printers" mapping :</p>
                                         <p>&#160;</p>
                                         <p>
                                             <img src="../Z_Resources/Images/02_Captures/ADE_RapportRemoteDesktopServicesPrinter_Desactiver.png" />
@@ -212,7 +213,7 @@
                                         <p>La plupart de ces événements sont dus aux rapports automatiques des pilotes du Viewer PDF envoyés sur le poste des administrateurs quand ils se connectent au serveur d'impression par le biais d'un utilitaire d'accès distant (type Remote Desktop Services).</p>
                                         <p>&#160;</p>
                                         <p>Ce type de problème peut causer une instabilité du serveur d'impression. Additionné à d'autres dysfonctionnements, il est susceptible d'accélérer une panne du spouleur.</p>
-                                        <h2>Resolution</h2>
+                                        <h2>Résolution</h2>
                                         <p>Pour résoudre ce problème, il est nécessaire de désactiver le rapport sur le serveur d'impression.</p>
                                         <p>&#160;</p>
                                         <p>Procédez comme suit&#160;:</p>
@@ -231,7 +232,7 @@
                                                 <p>dans la section, sélectionnez&#160;Configuration ordinateur &gt; Modèles d'administration &gt; Composants Windows &gt; Services Bureau à distance &gt; Hôte de la session Bureau à distance &gt; <strong>Redirection de l'imprimante</strong> ;</p>
                                             </li>
                                             <li value="5">
-                                                <p>sélectionnez l'option "<strong>Ne pas autoriser la redirection de l'imprimante client</strong>" dans l'encart de droite et cliquez sur le lien&#160;<strong>Editer les paramètres de sécurité</strong> ;</p>
+                                                <p>sélectionnez l'option <strong>Ne pas autoriser la redirection de l'imprimante client</strong> dans l'encart de droite et cliquez sur le lien&#160;<strong>Editer les paramètres de sécurité</strong> ;</p>
                                             </li>
                                             <li value="6">
                                                 <p>dans la fenêtre <strong>Ne pas autoriser la redirection de l'imprimante client</strong>, tick <strong>Activé</strong>, puis cliquez sur le bouton <strong>Appliquer</strong>.</p>

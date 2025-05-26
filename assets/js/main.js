@@ -4,6 +4,16 @@ let blockNews = document.querySelector('.doc_news--ul');
 
 let arrayContent = [
 {	
+	date: "26 mai 2025",
+	link:"/Focalist/D_NotesVersions/Notes_Versions.htm",
+	content: "nouvelle version Focalist 9.28.0"
+},
+{	
+	date: "14 mai 2025",
+	link:"/Watchdoc/A_Getting_Started/Release_610.htm",
+	content: "nouvelles versions Watchdoc et Console de Supervision 6.1.0.5249, ainsi que Watchdoc Print Client for Windows 7.0.5242"
+},
+{	
 	date: "30 avril 2025",
 	link:"/Watchdoc/A_Getting_Started/Release_610.htm",
 	content: "nouvelles versions Watchdoc et Console de Supervision 6.1.0.5234, ainsi que Watchdoc Print Client for Windows 7.0.5194"
