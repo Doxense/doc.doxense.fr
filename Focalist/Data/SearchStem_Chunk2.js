@@ -1,1 +1,1 @@
-define({"éven":{"évènements":[14],},"éventuel":{"éventuellement":[14],},"évit":{"éviter":[3],},"évolu":{"évolution":[7],},"ête":{"êtes":[5,10,11,16],},"être":{"être":[0,2,3,4,5,6,7,9,10,11,12,14,15],},"œuvr":{"œuvre":[5,12,14],},"ﬁltre":{"ﬁltres":[5],},"ﬂexibil":{"ﬂexibilité":[5],},});
+define({"éventuel":{"éventuellement":[14],},"évit":{"éviter":[3],},"évolu":{"évolution":[7],},"ête":{"êtes":[5,10,11,16],},"être":{"être":[0,2,3,4,5,6,7,9,10,11,12,14,15],},"œuvr":{"œuvre":[5,12,14],},"ﬁltre":{"ﬁltres":[5],},"ﬂexibil":{"ﬂexibilité":[5],},});
