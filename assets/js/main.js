@@ -6,7 +6,7 @@ let arrayContent = [
 {	
 	date: "26 mai 2025",
 	link:"/Focalist/D_NotesVersions/Notes_Versions.htm",
-	content: "nouvelle version Focalist 9.28.0"
+	content: "nouvelle version Focalist 9.30.0"
 },
 {	
 	date: "14 mai 2025",
