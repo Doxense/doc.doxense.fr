@@ -206,6 +206,8 @@
                                                 <ul>
                                                     <li class="tree-node"><a href="#Watchdoc61">Watchdoc 6.1</a>
                                                     </li>
+                                                    <li class="tree-node"><a href="#WatchdocWSC6105262etWPCforWindows70528928052025">Watchdoc/WSC 6.1.0.5262 et WPC for Windows 7.0.5289 - 28/05/2025</a>
+                                                    </li>
                                                     <li class="tree-node"><a href="#WatchdocWSC6105249etWPCforWindows70524214052025">Watchdoc/WSC 6.1.0.5249 et WPC for Windows 7.0.5242 - 14/05/2025</a>
                                                     </li>
                                                     <li class="tree-node"><a href="#WatchdocWSC6105234etWPCforWindows70519430042025">Watchdoc/WSC 6.1.0.5234 et WPC for Windows 7.0.5194 - 30/04/2025</a>
@@ -273,6 +275,100 @@
                                         <hr width="100%" size="0" align="center" data-mc-conditions="General.Online">
                                         </hr>
                                         <h2 id="Watchdoc61" data-magellan-target="Watchdoc61">Watchdoc 6.1</h2>
+                                        <h2 id="WatchdocWSC6105262etWPCforWindows70528928052025" data-magellan-target="WatchdocWSC6105262etWPCforWindows70528928052025">Watchdoc/WSC 6.1.0.<span>5262</span> et WPC for Windows<span> </span>7.0.5289<span> -</span> 28/05/2025</h2>
+                                        <p style="font-weight: bold; color: #000000;">Nouveautés</p>
+                                        <ul>
+                                            <li>
+                                                <p><b>Watchdoc :</b>
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <p>possibilité de configurer un port DSP alternatif auquel on associe un certificat SSL dédié pour le déploiement d'un WES. Ceci afin de faciliter le déploiement des WES  et de simplifier la gestion des certificats ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>dans un profil WES, possibilité de créer des ports personnalisés auxquels on peut associer un certificat SSL. Ceci afin de faciliter les déploiements de WES et de simplifier la gestion des certificats ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>création d'une interface de gestion du serveur DSP qui remplace la page de gestion des certificats ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>possibilité de configurer le terminal (endpoint = port ou certificat) utilisé lors de l'édition d'un profil WES.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <p style="font-weight: bold; color: #000000;">Améliorations</p>
+                                        <ul>
+                                            <li>
+                                                <p><b>Watchdoc :</b>
+                                                </p>
+                                                <ul>
+                                                    <li>&#160;</li>
+                                                    <li>
+                                                        <p>lors de la configuration d'un profil WES, le mode d’authentification par défaut devient Nom d'utilisateur / Code Pin au lieu de Code PUK (mode d'authentification non-recommandé).</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p><strong>WSC : </strong>
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <p>possibilité de redéfinir le chemin du dossier vers lequel les archives décompressées sont envoyées afin d'éviter d'éventuels  problèmes de droits. Cette configuration s'effectue point de configuration ne dispose pas d’interface. Il faudra éditer general/driver-store-path-unzip. Par exemple : &lt;driver-store-path-unzip&gt;%data%/DriverStore/.reserved&lt;/driver-store-path-unz</p>
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <p>lors de l'édition des détails d'un pilote géré dans WSC, la mention “Signé” devient “Signé par Doxense” afin de préciser la provenance du certificat.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p><strong>WPC:</strong> mise à jour de la  version du framework de développement Flutter<sup>®</sup>.</p>
+                                            </li>
+                                        </ul>
+                                        <p style="font-weight: bold; color: #000000;">Correctifs</p>
+                                        <ul>
+                                            <li>
+                                                <p><b>Watchdoc :</b>
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <p>correction de la taille d'une icone dans l'édition d'un profil WES : la taille de l’icône “ + “ a été normalisée</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>correction orthographique dans la fenêtre d'édition d’un profil WESMUL-4753</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>correction orthographique dans la fenêtre d’erreur générique</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>stabilisation de la mise à jour dans le cas où seul le site Web est installé sans le service Watchdoc</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p><b>WES&#160;Lexmark :</b> évitement d'une erreur de connexion dans le  cas où l’on fait usage d’un certificat intermédiaire</p>
+                                            </li>
+                                            <li>
+                                                <p><b>Cap Monétique :</b>
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <p>Batterie de tests portant sur le  fonctionnement d’Izly avec Toshiba pour Sharp.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>correction de l'auto enrôlement avec un badge IZLY.l</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p><strong>WPC </strong>: On se prémunit d’une erreur de routage potentielle dans le cas ou un travail d’impression était envoyé depuis un compte possédant un homonyme dans un annuaire utilisateur différent</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>WSC :</strong> correction orthographique dans la fenêtre d’ajout d’un compte invité dans le cas où le compte existe déjà.</p>
+                                            </li>
+                                        </ul>
                                         <h2 id="WatchdocWSC6105249etWPCforWindows70524214052025" data-magellan-target="WatchdocWSC6105249etWPCforWindows70524214052025">Watchdoc/WSC 6.1.0.<span>5249</span> et WPC for Windows 7.0.5242<span> </span>- 14/05/2025</h2>
                                         <p style="font-weight: bold; color: #000000;">Améliorations</p>
                                         <ul>
