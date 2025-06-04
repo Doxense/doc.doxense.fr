@@ -199,7 +199,7 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor84"></a>
+                                        <h1><a name="aanchor85"></a>
                                             <MadCap:concept term="WES" />
                                             <MadCap:conditionalText data-mc-conditions="General.Online">WES&#160;Xerox - </MadCap:conditionalText>Configurer le profil WES</h1>
                                         <h2>Créer le profil WES</h2>
@@ -245,13 +245,13 @@
                                                         <p><strong>Couleur&#160;: </strong>entrez la valeur hexadécimale de la couleur correspondant à la couleur du bouton WES. Par défaut, les boutons sont  orange (#FF901). Une fois la valeur saisie, la couleur s'affiche dans le champ.</p>
                                                     </li>
                                                     <li>
-                                                        <p><strong>Images&#160;: </strong>si vous souhaitez personnaliser les images WES, entrez le chemin du dossier dans lequel sont enregistrées les images que vous souhaitez afficher à la place des images par défaut (stockées dans C:\Program Files\Doxense\Watchdoc\Images\Embedded\Brands\[Nom_du_fabricant] par défaut).<br /><span style="color: #000000;">N.B.&#160;: pour plus d'informations sur la procédure de personnalisation, cf.&#160;chapitre <a href="../Installation/WESV3_PersonnaliserWESV3_Principe.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Personnaliser les boutons et l'image du WES</a>.</span></p>
+                                                        <p><strong>Images&#160;: </strong>si vous souhaitez personnaliser les images WES, entrez le chemin du dossier dans lequel sont enregistrées les images que vous souhaitez afficher à la place des images par défaut (stockées dans C:\Program Files\Doxense\Watchdoc\Images\Embedded\Brands\[Nom_du_fabricant] par défaut).<br /><span style="color: #000000;">N.B.&#160;: pour plus d'informations sur la procédure de personnalisation, cf.&#160;chapitre <a href="../Installation/WESV3_PersonnaliserWESV3_Principe.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Personnaliser les boutons et l'image du WES</a>.</span><br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Z_Resources/Images/02_Captures/WES/Config_WES_Profil_Xerox_SectionProprietes_V60.png"><img class="MCPopupThumbnail img" data-mc-width="825" data-mc-height="289" src="../../Z_Resources/Images/02_Captures/WES/Config_WES_Profil_Xerox_SectionProprietes_V60.png" tabindex="" style="mc-thumbnail: popup;mc-thumbnail-max-width: 15cm;max-width: 15cm;" /></a></p>
                                                     </li>
                                                 </ul>
                                             </li>
                                         </ul>
                                         <p>
-                                            <br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Z_Resources/Images/02_Captures/WES/Config_WES_Profil_Xerox_SectionProprietes_V60.png"><img class="MCPopupThumbnail img" data-mc-width="825" data-mc-height="289" src="../../Z_Resources/Images/02_Captures/WES/Config_WES_Profil_Xerox_SectionProprietes_V60.png" tabindex="" style="mc-thumbnail: popup;mc-thumbnail-max-width: 15cm;max-width: 15cm;" /></a>
+                                            <br />
                                         </p>
                                         <fieldset style="color: #ffff00;"><span style="color: #000000;">Pour plus d'informations sur la procédure de personnalisation, cf.&#160;chapitre Personnaliser les boutons et l'image du WES.</span>
                                         </fieldset>
@@ -594,8 +594,19 @@ partie de la valeur. <br /><br /><img src="../../Z_Resources/Images/02_Captures/
                                                 <p><strong>Adresse du serveur
 : </strong>ce paramètre permet de préciser si les périphériques d'impression se connectent via l'adresse IP ou le nom DNS (déterminés au démarrage du service) du server Watchdoc. Si le serveur possède plusieurs adresses IP ou si vous voulez spécifier manuellement l'adresse, sélectionnez "Adresse ci-contre" et remplissez le champ.</p>
                                                 <p>
-                                                    <fieldset>Si le serveur possède plusieurs adresses IP, Watchdoc® utilise la première qu'il trouve. Si le périphérique se trouve sur un autre VLAN, il arrive que le WES n'arrive pas à contacter Watchdoc®. Dans ce cas, créez un profil WES par adresse IP et optez pour <strong>Adresse ci-contre</strong> en précisant une IP pour chaque profil. Lors de l'association WES- file d'impression, sélectionnez le WES qui correspond au VLAN du périphérique.</fieldset>
+                                                    <fieldset>Si le serveur possède plusieurs adresses IP, Watchdoc utilise la première qu'il trouve. Si le périphérique se trouve sur un autre VLAN, il arrive que le WES n'arrive pas à contacter Watchdoc. Dans ce cas, créez un profil WES par adresse IP et optez pour <strong>Adresse ci-contre</strong> en précisant une IP pour chaque profil. Lors de l'association WES- file d'impression, sélectionnez le WES qui correspond au VLAN du périphérique.</fieldset>
                                                 </p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Point d'accès sécurisé : </strong>si vous avez sélectionné un mode de connexion SSL ou Mixte, depuis la v.&#160;6.1.0.5262, vous pouvez préciser si vous souhaitez utiliser&#160;:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p><strong>le point d'accès personnalisé</strong> (préalablement configuré dans la section DSP (cf.&#160;<a href="../../C_Configurer/ConfigServeurWeb/ConfigAvancee_ServeurWeb.htm" target="_blank">Configurer le Serveur web</a>) :</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>le port 5753 par défaut </strong>du serveur Watchdoc ;</p>
+                                                    </li>
+                                                </ul>
                                             </li>
                                             <li>
                                                 <p><strong>Travaux </strong>: indiquez, en minutes, le temps durant lequel les travaux d'impression sont conservés en cas de suspension.</p>
@@ -607,7 +618,7 @@ partie de la valeur. <br /><br /><img src="../../Z_Resources/Images/02_Captures/
                                                 <p><strong>Utiliser le SSL&#160;pour les pages WEB :</strong> cochez cette case pour sécuriser les pages web affichées sur l'écran du périphérique ; </p>
                                             </li>
                                             <li>
-                                                <p><strong>Utiliser le SSL&#160;pour les requêtes SOAP : </strong> cochez cette case pour sécuriser les requêtes SOAP servant à configurer le périphérique ; </p>
+                                                <p><strong>Utiliser le SSL&#160;pour les requêtes SOAP : </strong> cochez cette case pour sécuriser les requêtes SOAP servant à configurer le périphérique&#160;; </p>
                                             </li>
                                             <li>
                                                 <p><strong>Verrouillage du périphérique : </strong>dans la liste, sélectionnez l'aspect de l'écran du périphérique lorsqu'il est verrouillé :</p>
@@ -702,13 +713,14 @@ partie de la valeur. <br /><br /><img src="../../Z_Resources/Images/02_Captures/
                                         <ul>
                                             <p>
                                                 <br />
-                                                <img src="../../Z_Resources/Images/02_Captures/WES/Config_WES_Profil_SectionPeripherique_Xerox.png" />
+                                                <img src="Config_WES_Profil_SectionPeripherique_Xerox.png" style="width: 700px;height: auto;" />
+                                                <br />
                                             </p>
                                         </ul>
                                         <p>Dans cette section, vous configurez  le comportement des périphériques d'impression dans le cas où le  serveur Watchdoc<sup>®</sup> ne répond pas. </p>
                                         <ul>
                                             <li>
-                                                <p class="Liste_puce_1"><strong>Délai de ping :</strong> indiquez, en secondes, la fréquence à laquelle  le périphérique interroge le serveur pour vérifier sa configuration et l'informer qu'il fonctionne correctement ;</p>
+                                                <p class="Liste_puce_1"><strong>Délai de ping :</strong> indiquez, en secondes, la fréquence à laquelle  le périphérique interroge le serveur pour vérifier sa configuration et l'informer qu'il fonctionne correctement.</p>
                                             </li>
                                             <li>
                                                 <p class="Liste_puce_1"><strong>Nombre d'essais :</strong> indiquez le nombre de connexions que le périphérique doit tenter vers le serveur principal avant de passer au serveur de secours.</p>
@@ -760,7 +772,6 @@ Ce mode est configuré dans le profil WES appliqué sur le périphérique.</span
                                         <p>Dans cette section sont affichées les informations relatives au profil WES&#160;configuré et aux modifications qui y ont été apportées.<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Z_Resources/Images/02_Captures/WES/Config_WES_Profil_Kyocera_SectionHistoriq_V60.png"><img class="MCPopupThumbnail img" data-mc-width="754" data-mc-height="101" src="../../Z_Resources/Images/02_Captures/WES/Config_WES_Profil_Kyocera_SectionHistoriq_V60.png" tabindex="" style="mc-thumbnail: popup;mc-thumbnail-max-width: 15cm;width: 700px;height: auto;max-width: 15cm;" /></a></p>
                                         <p><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Z_Resources/Images/02_Captures/WES/Config_WES_Profil_Kyocera_SectionHistoriq_V60.png"><img class="MCPopupThumbnail img" data-mc-width="754" data-mc-height="101" src="../../Z_Resources/Images/02_Captures/WES/Config_WES_Profil_Kyocera_SectionHistoriq_V60.png" tabindex="" style="width: 500px;mc-thumbnail: popup;mc-thumbnail-max-width: 15cm;max-width: 15cm;" /></a>
                                         </p>
-                                        <p>&#160;</p>
                                         <h2>Valider le profil</h2>
                                         <p>1.	Cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Valider.png" style="width: 34px;height: 33px;" />  pour valider la configuration du profil WES.</p>
                                         <p>→ Une fois validé, le profil WES&#160;peut être appliqué sur une file d'impression.&#160;</p>

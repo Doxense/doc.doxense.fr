@@ -199,7 +199,7 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor281"></a>
+                                        <h1><a name="aanchor282"></a>
                                             <MadCap:concept term="WES" />
                                             <MadCap:conditionalText data-mc-conditions="General.Online">WES Canon - </MadCap:conditionalText>Configurer le profil WES</h1>
                                         <h2>Créer le profil WES</h2>
@@ -245,7 +245,7 @@
                                                         <p><strong>Couleur&#160;: </strong>entrez la valeur hexadécimale de la couleur correspondant à la couleur du bouton WES. Par défaut, les boutons sont  orange (#FF901). Une fois la valeur saisie, la couleur s'affiche dans le champ.</p>
                                                     </li>
                                                     <li>
-                                                        <p><strong>Images&#160;: </strong>si vous souhaitez personnaliser les images WES, entrez le chemin du dossier dans lequel sont enregistrées les images que vous souhaitez afficher à la place des images par défaut (stockées dans C:\Program Files\Doxense\Watchdoc\Images\Embedded\Brands\[Nom_du_fabricant] par défaut).<br /><span style="color: #000000;">N.B.&#160;: pour plus d'informations sur la procédure de personnalisation, cf.&#160;chapitre <a href="../Installation/WESV3_PersonnaliserWESV3_Principe.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Personnaliser les boutons et l'image du WES</a>.</span></p>
+                                                        <p><strong>Images&#160;: </strong>si vous souhaitez personnaliser les images WES, entrez le chemin du dossier dans lequel sont enregistrées les images que vous souhaitez afficher à la place des images par défaut (stockées dans C:\Program Files\Doxense\Watchdoc\Images\Embedded\Brands\[Nom_du_fabricant] par défaut).<br /><span style="color: #000000;">N.B.&#160;: pour plus d'informations sur la procédure de personnalisation, cf.&#160;chapitre <a href="../Installation/WESV3_PersonnaliserWESV3_Principe.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Personnaliser les boutons et l'image du WES</a>.</span><br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Z_Resources/Images/02_Captures/WES/Config_WES_Profil_Xerox_SectionProprietes_V60.png"><img class="MCPopupThumbnail img" data-mc-width="825" data-mc-height="289" src="../../Z_Resources/Images/02_Captures/WES/Config_WES_Profil_Xerox_SectionProprietes_V60.png" tabindex="" style="mc-thumbnail: popup;mc-thumbnail-max-width: 15cm;max-width: 15cm;" /></a></p>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -394,7 +394,7 @@
                                             </li>
                                         </ul>
                                         <p>&#160;</p>
-                                        <h3>Configurer la section Périphérique</h3>
+                                        <h3>Configurer la <a name="section_Périphérique"></a>section Périphérique</h3>
                                         <p>Cette section permet de définir le mode de connexion entre le serveur et les périphériques d'impression.</p>
                                         <ul>
                                             <li>
@@ -410,8 +410,6 @@ Au-delà, la requête échoue et Watchdoc relance la requête.</p>
                                                     </li>
                                                 </ul>
                                             </li>
-                                        </ul>
-                                        <ul>
                                             <li>
                                                 <p><strong>Adresse du serveur
 : </strong>ce paramètre permet de préciser si les périphériques d'impression se connectent via l'adresse IP ou le nom DNS (déterminés au démarrage du service) du server Watchdoc. Si le serveur possède plusieurs adresses IP ou si vous voulez spécifier manuellement l'adresse, sélectionnez "Adresse ci-contre" et remplissez le champ.<br /></p>
@@ -425,20 +423,27 @@ Au-delà, la requête échoue et Watchdoc relance la requête.</p>
                                                     </li>
                                                     <li value="3">
                                                         <p>lors de l'installation du WES sur la file d'impression, sélectionnez le WES qui correspond au VLAN du périphérique.
-</p>
+<br /></p>
                                                     </li>
                                                 </ol>
-                                                <p>
-                                                </p>
                                             </li>
-                                            <li style="font-size: 12pt;"><strong>Mode de connexion</strong> : permet de sélectionner le mode de communication entre le WES&#160;et lWatchdoc : <ul><li><p><strong>Mixte :</strong> le WES&#160;utilise SSL pour les données sensibles (Code PUK, login/mdp, ...) et non SSL pour les données non sensibles ;
-</p></li><li><p><strong>SSL désactivé :</strong> le WES&#160;n'utilise jamais le SSL pour communiquer avec le serveur. <br />Il est recommandé de ne pas utiliser la connexion ou l'enrôlement par login/mot de passe avec ce paramètre.
+                                            <li style="font-size: 12pt;"><strong>Mode de connexion</strong> : permet de sélectionner le mode de communication entre le WES&#160;et lWatchdoc pour préciser si l'accès est sécurisé ou non&#160;:<ul><li><p><strong>SSL :</strong> le WES&#160;utilise exclusivement le SSL&#160;pour communiquer avec le serveur ;</p></li><li><p><strong>Mixte :</strong> le WES&#160;utilise SSL pour les données sensibles (Code PUK, login/mdp, ...) et non SSL pour les données non sensibles ;
+</p></li><li><p><strong>SSL désactivé :</strong> le WES&#160;n'utilise jamais le SSL pour communiquer avec le serveur. Il est recommandé de ne pas utiliser la connexion ou l'enrôlement par login/mot de passe avec ce paramètre.
 </p></li></ul></li>
+                                            <li>
+                                                <p><strong>Point d'accès sécurisé :</strong> si vous avez sélectionné un mode de connexion SSL ou Mixte, depuis la v.&#160;6.1.0.5262, vous pouvez préciser si vous souhaitez utiliser :</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>le point d'accès personnalisé (préalablement configuré dans la section DSP (cf.&#160;<a href="../../C_Configurer/ConfigServeurWeb/ConfigAvancee_ServeurWeb.htm#DSP" target="_blank">Configurer le Serveur web</a>) :</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>le port 5753 par défaut du serveur Watchdoc ;</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
                                             <li>
                                                 <p><strong>Sécurité du périphérique</strong>: indiquez le Compte (login) et le mot de passe administrateur du périphérique dont Watchdoc a besoin pour communiquer avec lui lors de certaines opérations (installation automatique, requêtes SOAP...).</p>
                                             </li>
-                                        </ul>
-                                        <ul>
                                             <li>
                                                 <p><strong>Gestion des fichiers de licence :</strong> ces champs servent à gérer les licences Canon dans le cas où elles doivent être appliquées en masse sur un grand nombre de périphériques (au delà de 11 simultanément). Dans ce cas, il convient d'avoir préalablement téléchargé et enregistré les 2 fichiers de licences. Vous pouvez alors cocher la case et indiquer dans les 2 champs suivants le dossier dans lequel sont enregistrés les fichiers de licences :</p>
                                                 <ul>
@@ -448,12 +453,9 @@ Au-delà, la requête échoue et Watchdoc relance la requête.</p>
                                                 </ul>
                                                 <ul>
                                                     <li>
-                                                        <p><strong>Nom du fichier d'impression à la demande :</strong> indiquez dans ce champ le nom du sfichier de licence permettant l'impression à la demande.<br /><br /></p>
+                                                        <p><strong>Nom du fichier d'impression à la demande :</strong> indiquez dans ce champ le nom du sfichier de licence permettant l'impression à la demande.<br /><br /><img src="Config_WES_Canon_Profil_SectionPeripherique.png" /><br /><br /></p>
                                                     </li>
                                                 </ul>
-                                                <p>
-                                                    <img src="Config_WES_Canon_Profil_SectionPeripherique.png" />
-                                                </p>
                                             </li>
                                         </ul>
                                         <h3>Configurer la section Scan vers dossier personnel</h3>
@@ -533,7 +535,7 @@ Ce mode est configuré dans le profil WES appliqué sur le périphérique.</span
                                                 <p>
                                                     <ul>
                                                         <li>
-                                                            <p class="Liste_puce_2"><strong>Désactiver l'authentification des utilisateurs :</strong> cochez cette case si le   serveur de secours n'authentifie pas les utilisateurs. Pour chaque demande, il renvoie les informations d'un utilisateur anonyme avec les droits définis pour un utilistateur de type anonoyme sur le serveur principal. Les travaux réalisés sont alors comptabilisés sous le compte "anonymous" ; </p>
+                                                            <p class="Liste_puce_2"><strong>Désactiver l'authentification des utilisateurs :</strong> cochez cette case si le   serveur de secours n'authentifie pas les utilisateurs. Pour chaque demande, il renvoie les informations d'un utilisateur anonyme avec les droits définis pour un utilistateur de type anonoyme sur le serveur principal. Les travaux réalisés sont alors comptabilisés sous le compte "anonymous"&#160;; </p>
                                                         </li>
                                                         <li>
                                                             <p class="Liste_puce_2"><strong>Désactiver l'accounting :</strong> cochez cette case si le  serveur de secours ne traite pas les informations de comptabilisation. Ces informations sont enregistrées localement sur le périphérique et sont envoyées au serveur principal dès que la connexion avec ce serveur est rétablie ; </p>

@@ -199,7 +199,7 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor260"></a>
+                                        <h1><a name="aanchor261"></a>
                                             <MadCap:concept term="WES" />
                                             <MadCap:conditionalText data-mc-conditions="General.Online">WES&#160;Toshiba - </MadCap:conditionalText>Configurer le profil WES</h1>
                                         <h2>Créer le profil WES</h2>
@@ -245,7 +245,7 @@
                                                         <p><strong>Couleur&#160;: </strong>entrez la valeur hexadécimale de la couleur correspondant à la couleur du bouton WES. Par défaut, les boutons sont  orange (#FF901). Une fois la valeur saisie, la couleur s'affiche dans le champ.</p>
                                                     </li>
                                                     <li>
-                                                        <p><strong>Images&#160;: </strong>si vous souhaitez personnaliser les images WES, entrez le chemin du dossier dans lequel sont enregistrées les images que vous souhaitez afficher à la place des images par défaut (stockées dans C:\Program Files\Doxense\Watchdoc\Images\Embedded\Brands\[Nom_du_fabricant] par défaut).<br /><span style="color: #000000;">N.B.&#160;: pour plus d'informations sur la procédure de personnalisation, cf.&#160;chapitre <a href="../Installation/WESV3_PersonnaliserWESV3_Principe.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Personnaliser les boutons et l'image du WES</a>.</span></p>
+                                                        <p><strong>Images&#160;: </strong>si vous souhaitez personnaliser les images WES, entrez le chemin du dossier dans lequel sont enregistrées les images que vous souhaitez afficher à la place des images par défaut (stockées dans C:\Program Files\Doxense\Watchdoc\Images\Embedded\Brands\[Nom_du_fabricant] par défaut).<br /><span style="color: #000000;">N.B.&#160;: pour plus d'informations sur la procédure de personnalisation, cf.&#160;chapitre <a href="../Installation/WESV3_PersonnaliserWESV3_Principe.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Personnaliser les boutons et l'image du WES</a>.</span><br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Z_Resources/Images/02_Captures/WES/Config_WES_Profil_Xerox_SectionProprietes_V60.png"><img class="MCPopupThumbnail img" data-mc-width="825" data-mc-height="289" src="../../Z_Resources/Images/02_Captures/WES/Config_WES_Profil_Xerox_SectionProprietes_V60.png" tabindex="" style="mc-thumbnail: popup;mc-thumbnail-max-width: 15cm;max-width: 15cm;" /></a></p>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -486,6 +486,17 @@ Par souci de sécurité, nous déconseillons l'utilisation du code PUK et recomm
 : </strong>ce paramètre permet de préciser si les périphériques d'impression se connectent via l'adresse IP ou le nom DNS (déterminés au démarrage du service) du server Watchdoc. Si le serveur possède plusieurs adresses IP ou si vous voulez spécifier manuellement l'adresse, sélectionnez "Adresse ci-contre" et remplissez le champ.</p>
                                                     </li>
                                                     <li>
+                                                        <p><strong>Point d'accès sécurisé :</strong> si vous sélectionnez un mode de connexion SSL ou Mixte, depuis la v.&#160;6.1.0.5262, vous pouvez préciser le point d'accès que vous souhaitez utiliser :</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p><strong>point d'accès personnalisé</strong> (préalablement configuré dans la section DSP (cf.&#160;<a href="../../C_Configurer/ConfigServeurWeb/ConfigAvancee_ServeurWeb.htm" target="_blank">Configurer le Serveur web</a>) :</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>le <strong>port 5753 par défaut</strong> du serveur Watchdoc ;</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
                                                         <p><a name="Reseau_SSL"></a><strong>Utiliser SSL pour les pages Web affichées sur le périphérique :</strong> par défaut, le SSL est activé pour sécuriser les pages du WES sur le périphérique afin de générer  des alertes en cas de faille de sécurité (certificats non- reconnus, par exemple). </p>
                                                         <p>N.B.&#160;: si vous désactivez le SSL (pour régler des problèmes de lenteur, par exemple), nous vous recommandons de ne pas utiliser l'authentification ou l'enrôlement du badge par compte et mot de passe.</p>
                                                     </li>
@@ -499,7 +510,7 @@ Par souci de sécurité, nous déconseillons l'utilisation du code PUK et recomm
                                             </li>
                                             <li><strong>LDAP </strong>: saisissez le chemin vers le fichier dans lequel sont configurés les rôles<ul><li><strong>compte LDAP&#160;</strong>: saisissez le compte utilisé par le périphérique pour toute requête 'Bind' vers le serveur LDAP intégré:</li><li><strong>MdP LDAP</strong> : complétez le paramètre précédent en saisissant le mot de passe correspondant au compte.</li></ul></li>
                                             <li>
-                                                <p><strong>SOAP :</strong> saisissez les informations dédiées aux requêtes SOAP si elles ne correspondent pas aux paramètres par défaut.<br /><br /><img src="../../Z_Resources/Images/02_Captures/WES/Config_WES_Profil_Toshiba_Section_Periph.png" /></p>
+                                                <p><strong>SOAP :</strong> saisissez les informations dédiées aux requêtes SOAP si elles ne correspondent pas aux paramètres par défaut.<br /><br /><img src="Config_WES_Profil_Toshiba_SectionPeripherique.png" /><br /><br /></p>
                                             </li>
                                         </ul>
                                         <fieldset>L'activation du SSL peut provoquer des lenteurs ou des alertes en cas de certificats non reconnus. <br />Lorsque le SSL est désactivé, il est recommandé de ne pas utiliser l'authentification ou l'enrôlement du badge par compte et mot de passe.</fieldset>
