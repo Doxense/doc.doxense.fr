@@ -199,7 +199,7 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor85"></a>
+                                        <h1><a name="aanchor84"></a>
                                             <MadCap:concept term="WES" />
                                             <MadCap:conditionalText data-mc-conditions="General.Online">WES&#160;Xerox - </MadCap:conditionalText>Configurer le profil WES</h1>
                                         <h2>Créer le profil WES</h2>
@@ -245,7 +245,7 @@
                                                         <p><strong>Couleur&#160;: </strong>entrez la valeur hexadécimale de la couleur correspondant à la couleur du bouton WES. Par défaut, les boutons sont  orange (#FF901). Une fois la valeur saisie, la couleur s'affiche dans le champ.</p>
                                                     </li>
                                                     <li>
-                                                        <p><strong>Images&#160;: </strong>si vous souhaitez personnaliser les images WES, entrez le chemin du dossier dans lequel sont enregistrées les images que vous souhaitez afficher à la place des images par défaut (stockées dans C:\Program Files\Doxense\Watchdoc\Images\Embedded\Brands\[Nom_du_fabricant] par défaut).<br /><span style="color: #000000;">N.B.&#160;: pour plus d'informations sur la procédure de personnalisation, cf.&#160;chapitre <a href="../Installation/WESV3_PersonnaliserWESV3_Principe.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Personnaliser les boutons et l'image du WES</a>.</span><br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Z_Resources/Images/02_Captures/WES/Config_WES_Profil_Xerox_SectionProprietes_V60.png"><img class="MCPopupThumbnail img" data-mc-width="825" data-mc-height="289" src="../../Z_Resources/Images/02_Captures/WES/Config_WES_Profil_Xerox_SectionProprietes_V60.png" tabindex="" style="mc-thumbnail: popup;mc-thumbnail-max-width: 15cm;max-width: 15cm;" /></a></p>
+                                                        <p><strong>Images&#160;: </strong>si vous souhaitez personnaliser les images WES, entrez le chemin du dossier dans lequel sont enregistrées les images que vous souhaitez afficher à la place des images par défaut (stockées dans C:\Program Files\Doxense\Watchdoc\Images\Embedded\Brands\[Nom_du_fabricant] par défaut).<br /><span style="color: #000000;">N.B.&#160;: pour plus d'informations sur la procédure de personnalisation, cf.&#160;chapitre <a href="../Installation/WESV3_PersonnaliserWESV3_Principe.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Personnaliser les boutons et l'image du WES</a>.</span></p>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -298,29 +298,27 @@
                                                         <p class="Liste_puce_1"><strong>Activer l'option&#160;:</strong> cochez la case pour autoriser l'authentification de l'utilisateur depuis un clavier physique ou tactile de l'écran, puis  précisez les modalités de cette authentification&#160;:</p>
                                                     </li>
                                                     <li>
-                                                        <p><strong>Annuaire :</strong> dans la liste, sélectionnez l'annuaire qui doit être interrogé lors de l'authentification par clavier. Si aucun annuaire n'est précisé, Watchdoc<sup>®</sup> interroge l'annuaire par défaut&#160;;</p>
+                                                        <p><strong>Annuaire :</strong> dans la liste, sélectionnez l'annuaire qui doit être interrogé lors de l'authentification par clavier. Si aucun annuaire n'est précisé, Watchdoc interroge l'annuaire par défaut&#160;;</p>
                                                     </li>
                                                     <li>
                                                         <p><strong>Mode&#160;: </strong>
                                                         </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p><strong>Code PUK :</strong> le code PUK est un code (compris entre 6 et 10 chiffres) automatiquement généré par Watchdoc selon des paramètres définis dans l'annuaire&#160;et communiqué à l’utilisateur dans la page "Mon compte"&#160;;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Compte et code PIN</strong> : l'utilisateur s'authentifie à l'aide de son nom d'utilisateur ainsi que de son code PIN '1234, par exemple), enregistré comme attribut LDAP&#160;ou dans un fichier de type CVS&#160;;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Compte et mot de passe :</strong> l'utilisateur s'authentifie à l'aide de son compte LDAP (login et mot de passe) ;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Code et code d'impression&#160;:</strong> l'utilisateur s'authentifie à l'aide de son compte LDAP ainsi que d'un code d'impression. Ce code (alphanumérique) est saisi au préalable par l'utilisateur dans la page "Mon Compte"&#160;;<br /><br /><img src="../../Z_Resources/Images/02_Captures/WES/Config_WES_Profil_SectionAuthClavier_Xerox.png" /></p>
+                                                            </li>
+                                                        </ul>
                                                     </li>
                                                 </ul>
-                                                <blockquote>
-                                                    <ul>
-                                                        <li>
-                                                            <p><strong>Code PUK :</strong> le code PUK est un code (compris entre 6 et 10 chiffres) automatiquement généré par Watchdoc selon des paramètres définis dans l'annuaire&#160;et communiqué à l’utilisateur dans la page "Mon compte"&#160;;</p>
-                                                        </li>
-                                                        <li>
-                                                            <p><strong>Compte et code PIN</strong> : l'utilisateur s'authentifie à l'aide de son nom d'utilisateur ainsi que de son code PIN '1234, par exemple), enregistré comme attribut LDAP&#160;ou dans un fichier de type CVS&#160;;</p>
-                                                        </li>
-                                                        <li>
-                                                            <p><strong>Compte et mot de passe :</strong> l'utilisateur s'authentifie à l'aide de son compte LDAP (login et mot de passe) ;</p>
-                                                        </li>
-                                                        <li>
-                                                            <p><strong>Code et code d'impression&#160;:</strong> l'utilisateur s'authentifie à l'aide de son compte LDAP ainsi que d'un code d'impression. Ce code (alphanumérique) est saisi au préalable par l'utilisateur dans la page "Mon Compte"&#160;;<br /><br /><img src="../../Z_Resources/Images/02_Captures/WES/Config_WES_Profil_SectionAuthClavier_Xerox.png" /></p>
-                                                        </li>
-                                                    </ul>
-                                                </blockquote>
                                             </li>
                                         </ul>
                                         <fieldset class="astuce"> Nous ne recommandons pas l'authentification par login et mot de passe. Néanmoins, si vous optez pour ce mode,  assurez-vous que l'écran et le clavier du périphérique sont configurés dans la langue de l'utilisateur et qu'ils permettent de saisir tous les caractères, même les caractères spéciaux (accents, cédille, tilde).</fieldset>
@@ -328,55 +326,52 @@
                                         <p><![CDATA[  ]]><strong>Authentification par badge :</strong> cochez la case  pour autoriser l'authentification de l'utilisateur à l'aide d'un badge, puis  précisez les modalités de cette authentification&#160;:</p>
                                         <ul>
                                             <li>
-                                                <p class="Liste_puce_1"><strong>Annuaire :</strong> dans la liste, sélectionnez l'annuaire qui doit être interrogé lors de l'authentification par badge, en fonction de l'endroit où sont enregistrés les codes des badges (par ex.; si le code du badge est enregistré dans l'Active Directory, sélectionnez <strong>[utiliser l'annuaire par défaut]</strong> ; si les badges sont stockés dans la table SQL CARDS, sélectionnez <strong>CARDS&#160;</strong>, etc.) ;</p>
+                                                <p class="Liste_puce_1"><strong>Annuaire :</strong> dans la liste, sélectionnez l'annuaire qui doit être interrogé lors de l'authentification par badge, en fonction de l'endroit où sont enregistrés les codes des badges.&#160;Par ex., si le code du badge est enregistré dans l'Active Directory, sélectionnez <strong>utiliser l'annuaire par défaut</strong>&#160;; si les badges sont stockés dans la table SQL CARDS, sélectionnez <strong>CARDS&#160;</strong>, etc.</p>
                                             </li>
-                                        </ul>
-                                        <ul>
                                             <li>
                                                 <p class="Liste_puce_1"><strong>Association auto :</strong> si vous autorisez l'<a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term35">enrôlement <img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Action au cours de laquelle un compte utilisateur est associé au numéro de badge qui lui appartient. L'enrôlement est réalisé lors de la première utilisation d'un badge. L'enrôlement peut être réalisé par le responsable informatique lorsqu'il délivre le badge à un utilisateur ou par l'utilisateur lui-même qui saisit son identifiant (code PIN, code PUK ou identifiant et mot de passe) qui est alors associé à son numéro de badge. Une fois l'enrôlement réalisé, le numéro de badge est associé définitivement à son propriétaire.</span></a> depuis le WES, précisez de quelle manière l'utilisateur associe son badge à son compte lors de la première utilisation : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Désactivé :</strong> l'enrôlement depuis le WES&#160;n'est pas autorisé. Si l'utilisateur n'est pas déjà connu, un message d'erreur est affiché sur l'écran du périphérique. L'enrôlement est alors effectué par l'administrateur.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Code PUK :</strong> l'utilisateur saisit son code PUK pour enrôler son badge.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Compte  et code PIN:</strong> l'utilisateur saisit ses nom et code PIN&#160;pour enrôler son badge.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Compte et mot de passe :</strong> l'utilisateur saisit son compte LDAP (login et mot de passe) pour enrôler son badge.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Compte et code d'impression :</strong> l'utilisateur s'authentifie à l'aide du nom de son compte LDAP ainsi que d'un code d'impression. Ce code (alphanumérique) est saisi au préalable par l'utilisateur dans la page "Mon Compte".</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p><strong>Envoyer une notification à l'utilisateur :</strong> cochez la case pour notifier l'utilisateur une fois son badge enrôlé.&#160;</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Seconde authentification : </strong>cochez la case si vous souhaitez configurer une double authentification sur le périphérique. Indiquez ensuite le mode d'authentification attendu.</p>
+                                                <ul>
+                                                    <li>
+                                                        <p><strong>Groupes d'utilisateurs concernés : </strong>si la double authentification ne concerne qu'un groupe d'utilisateurs précis, cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Parcourir.png" /> pour parcourir l'annuaire et sélectionnez-y le ou les groupes d'utilisateurs concernés par la double authentification. </p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p><strong>Désactiver la vérification</strong> si la base interserveur est hors ligne : cochez la case pour éviter des blocages de l'authentification lorsque la base interserveur est hors-ligne.</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_2" data-mc-conditions="WES.Ricoh"><strong>Format :</strong> indiquez, si nécessaire, de quelle manière la chaîne de caractères du numéro du badge lu doit être transformée. Ex : raw;cut(0,8);swap.</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>Délai d'affichage :</strong> indiquez, en secondes, le délai d'attente avant prise en compte d'un deuxième passage de badge (5s &lt; Délai &lt; 15s) (cf. <a href="../../H_HowTo/WES_Changer_Format_Badge.htm" target="_blank">Changer le format du badge</a>).</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>Déconnexion :</strong> cochez la case pour autoriser Watchdoc à désactiver un badge actif si un autre utilisateur tente de s'authentifier par badge.<br /><br /><br /><img src="Config_WES_Profil_Xerox_SectionAuthentBadge.png" style="width: 700px;height: auto;" /><br /><br /></p>
                                             </li>
                                         </ul>
-                                        <blockquote>
-                                            <ul>
-                                                <li>
-                                                    <p class="Liste_puce_2"><strong>Désactivé :</strong> l'enrôlement depuis le WES&#160;n'est pas autorisé. Si l'utilisateur n'est pas déjà connu, un message d'erreur est affiché sur l'écran du périphérique&#160;;</p>
-                                                </li>
-                                                <li>
-                                                    <p class="Liste_puce_2"><strong>Code PUK :</strong> l'utilisateur saisit son code PUK pour enrôler son badge;</p>
-                                                </li>
-                                                <li>
-                                                    <p class="Liste_puce_2"><strong>Compte  et code PIN:</strong> l'utilisateur saisit ses nom et code PIN&#160;pour enrôler son badge ;</p>
-                                                </li>
-                                                <li>
-                                                    <p class="Liste_puce_2"><strong>Compte et mot de passe :</strong> l'utilisateur saisit son compte LDAP (login et mot de passe) pour enrôler son badge ;</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>Compte et code d'impression :</strong> l'utilisateur s'authentifie à l'aide du nom de son compte LDAP ainsi que d'un code d'impression. Ce code (alphanumérique) est saisi au préalable par l'utilisateur dans la page "Mon Compte";</p>
-                                                </li>
-                                                <li>
-                                                    <p>Seconde authentification : cochez la case si vous souhaitez configurer une double authentification sur le périphérique et indiquez ensuite le mode d'authentification attendue ; </p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>Groupes d'utilisateurs concernés : </strong>si la double authentification ne concerne qu'un groupe d'utilisateurs précis, cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Parcourir.png" /> pour parcourir l'annuaire et y sélectionner le ou les groupes d'utilisateurs concernés par la double authentification ; </p>
-                                                </li>
-                                                <li>
-                                                    <p class="Liste_puce_2"><strong>Envoyer une notification </strong>: cochez la case pour notifier l'utilisateur une fois son badge enrôlé.&#160;</p>
-                                                </li>
-                                            </ul>
-                                            <ul>
-                                                <li>
-                                                    <p class="Liste_puce_2" data-mc-conditions="WES.Ricoh"><strong>Format :</strong> indiquez, si nécessaire, de quelle manière la chaîne de caractères du numéro du badge lu doit être transformée. Ex : raw;cut(0,8);swap.</p>
-                                                </li>
-                                            </ul>
-                                            <ul>
-                                                <li>
-                                                    <p class="Liste_puce_1"><strong>Délai d'affichage :</strong> indiquez, en secondes, le délai d'attente avant prise en compte d'un deuxième passage de badge (5s &lt; Délai &lt; 15s) (cf. <a href="../../H_HowTo/WES_Changer_Format_Badge.htm" target="_blank">Changer le format du badge</a>).</p>
-                                                </li>
-                                                <li>
-                                                    <p class="Liste_puce_1"><strong>Déconnexion :</strong> cochez la case pour autoriser Watchdoc à désactiver un badge actif si un autre utilisateur tente de s'authentifier par badge.<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Z_Resources/Images/02_Captures/WES/Config_WES_Profil_Kyocera_SectionAuthentBadge_V60.png"><img class="MCPopupThumbnail img" data-mc-width="759" data-mc-height="228" src="../../Z_Resources/Images/02_Captures/WES/Config_WES_Profil_Kyocera_SectionAuthentBadge_V60.png" tabindex="" style="width: 500px;mc-thumbnail: popup;mc-thumbnail-max-width: 15cm;max-width: 15cm;" /></a></p>
-                                                </li>
-                                            </ul>
-                                        </blockquote>
                                         <h3>Configurer la section Comptabilisation</h3>
                                         <ul>
                                             <li>
@@ -601,7 +596,7 @@ partie de la valeur. <br /><br /><img src="../../Z_Resources/Images/02_Captures/
                                                 <p><strong>Point d'accès sécurisé : </strong>si vous avez sélectionné un mode de connexion SSL ou Mixte, depuis la v.&#160;6.1.0.5262, vous pouvez préciser si vous souhaitez utiliser&#160;:</p>
                                                 <ul>
                                                     <li>
-                                                        <p><strong>le point d'accès personnalisé</strong> (préalablement configuré dans la section DSP (cf.&#160;<a href="../../C_Configurer/ConfigServeurWeb/ConfigAvancee_ServeurWeb.htm" target="_blank">Configurer le Serveur web</a>) :</p>
+                                                        <p><strong>le point d'accès personnalisé</strong> (préalablement configuré dans la section DSP (cf.&#160;<a href="../../C_Configurer/ConfigServeurWeb/Config_ServeurWeb_Presentation.htm" target="_blank">Configurer le Serveur web</a>) :</p>
                                                     </li>
                                                     <li>
                                                         <p><strong>le port 5753 par défaut </strong>du serveur Watchdoc ;</p>

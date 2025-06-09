@@ -204,43 +204,42 @@
                                         <p>La table document contient toutes les informations collectées par Watchdoc dans les spools Windows. Cette table est la plus importante de la solution Watchdoc.</p>
                                         <p>Chaque document imprimé représente une ligne.</p>
                                         <p>Chaque document possède plusieurs identifiants : </p>
-                                        <ul class="ul_1">
-                                            <li class="li_1">
-                                                <p class="p_3"><span class="Élevé">docID</span> est un compteur SQL auto-incrémenté utilisé pour désigner une ligne ;</p>
+                                        <ul>
+                                            <li>
+                                                <p>docID est un compteur SQL auto-incrémenté utilisé pour désigner une ligne ;</p>
                                             </li>
-                                            <li class="li_1">
-                                                <p class="p_3"><span class="Élevé">docJOBID</span> est l’identifiant interne à Windows ou au copieur, qui peut être réutilisé plusieurs fois ;</p>
+                                            <li>
+                                                <p>docJOBID est l’identifiant interne à Windows ou au copieur, qui peut être réutilisé plusieurs fois ;</p>
                                             </li>
-                                            <li class="li_1">
-                                                <p class="p_3"><span class="Élevé">docKEY</span> est une clé de découpage générée de manière reproductible à partir des attributs du document (titre, taille, user, date, ...) afin de pouvoir retrouver un document non imprimé suite à un redémarrage serveur (pour éviter de rajouter un doublon dans les statistiques). Il faut normalement utiliser <span class="Élevé">docID</span> pour désigner une ligne de la table, les autres identifiants n’étant pas significatifs. </p>
+                                            <li>
+                                                <p>docKEY est une clé de découpage générée de manière reproductible à partir des attributs du document (titre, taille, user, date, ...) afin de pouvoir retrouver un document non imprimé suite à un redémarrage serveur (pour éviter de rajouter un doublon dans les statistiques). Il faut normalement utiliser docID pour désigner une ligne de la table, les autres identifiants n’étant pas significatifs.</p>
                                             </li>
-                                            <li class="li_1">
-                                                <p class="p_3"><span class="Élevé">docPRINTED</span> permet de déterminer si un document a réellement été imprimé (et doit être refacturé) ou non (ignoré) ;</p>
+                                            <li>
+                                                <p>docPRINTED permet de déterminer si un document a réellement été imprimé (et doit être refacturé) ou non (ignoré) ;</p>
                                             </li>
-                                            <li class="li_1">
-                                                <p class="p_3"><span class="Élevé">docCOLOR</span> permet de savoir si le document contenait au moins 1 page couleur ;</p>
+                                            <li>
+                                                <p>docCOLOR permet de savoir si le document contenait au moins 1 page couleur ;</p>
                                             </li>
-                                            <li class="li_1">
-                                                <p class="p_3"><span class="Élevé">docPAGES</span> contient le nombre de <span class="Accentuation">feuilles</span> physiques, alors que le champ <span class="Élevé">docLPAGES</span> contient le nombre de pages logiques (côtés imprimés). Ils sont normalement égaux sauf en mode duplex (<span class="Accentuation">recto/verso</span>). Le champ <span class="Élevé">docCPAGES</span> contient le nombre de pages du document contenant de la couleur, et ne peut pas dépasser <span class="Élevé">docLPAGES</span>. Normalement, si <span class="Élevé">docCOLOR</span> vaut 0, <span class="Élevé">docCPAGES</span> vaut 0 également. </p>
+                                            <li>
+                                                <p>docPAGES contient le nombre de feuilles physiques, alors que le champ docLPAGES contient le nombre de pages logiques (côtés imprimés). Ils sont normalement égaux sauf en mode duplex (recto/verso). Le champ docCPAGES contient le nombre de pages du document contenant de la couleur, et ne peut pas dépasser docLPAGES. Normalement, si docCOLOR vaut 0, docCPAGES vaut 0 également. </p>
                                             </li>
-                                            <li class="li_1">
-                                                <p class="p_3"><span class="Élevé">docDATESPOOLED</span>, <span class="Élevé">docDATEUNBLOCKED</span> et <span class="Élevé">docDATEOPERATION</span> permettent de déterminer le temps de traitement global du document. La durée d’attente d’impression du document est normalement de (<span class="Élevé">docDATEOPERATION - docDATEUNBLOCKED</span>). Le temps d’attente sur le serveur est normalement de (<span class="Élevé">docDATEOPERATION - docDATESPOOLED</span>). </p>
-                                                <p class="p_3">Attention : certains copieurs ne sont pas à l’heure et il est possible que <span class="Élevé">docDATESPOOLED</span> et <span class="Élevé">docDATEOPERATION</span> soient dans le futur, et supérieur à <span class="Élevé">docDATEOPERATION</span>&#160;!!! </p>
+                                            <li>
+                                                <p>docDATESPOOLED, docDATEUNBLOCKED et docDATEOPERATION permettent de déterminer le temps de traitement global du document. La durée d’attente d’impression du document est normalement de (docDATEOPERATION - docDATEUNBLOCKED). Le temps d’attente sur le serveur est normalement de (docDATEOPERATION - docDATESPOOLED). </p>
+                                                <p>Attention : certains copieurs ne sont pas à l’heure et il est possible que docDATESPOOLED et docDATEOPERATION soient dans le futur, et supérieur à docDATEOPERATION&#160;!!! </p>
                                             </li>
-                                            <li class="li_1">
-                                                <p class="p_3"><span class="Élevé">docCACHEYEAR</span>, <span class="Élevé">docCACHEMONTH</span>, <span class="Élevé">docCACHEDAY</span>, et <span class="Élevé">docCACHEHOUR</span> sont utilisés pour accélérer l’affichage des statistiques. Ils sont calculés par rapport au champ <span class="Élevé">docDATEOPERATION</span> et servent à optimiser les requêtes GROUP BY. </p>
+                                            <li>
+                                                <p>docCACHEYEAR, docCACHEMONTH, docCACHEDAY, et docCACHEHOUR sont utilisés pour accélérer l’affichage des statistiques. Ils sont calculés par rapport au champ docDATEOPERATION et servent à optimiser les requêtes GROUP BY. </p>
                                             </li>
-                                            <li class="li_1">
-                                                <p class="p_3"><span class="Élevé">docVCOST</span>, <span class="Élevé">docRCOST</span> servent au calcul du coût à la page et sont apparus à partir de la version 4.0. <span class="Élevé">docRCOST</span> contient le coût à la page (en €) du document imprimé (ou 0) et <span class="Élevé">docVCOST</span> le coût à la page initial du même document. Dans le cas d’une redirection sur une autre file, les deux peuvent être différents. Dans tout les cas, <span class="Élevé">docVCOST - docRCOST</span> correspond à l’économie réalisée sur ce document. A noter également que l’économie peut être négative si la redirection est effectuée sur une imprimante plus chère. </p>
+                                            <li>
+                                                <p>docVCOST, docRCOST servent au calcul du coût à la page et sont apparus à partir de la version 4.0. docRCOST contient le coût à la page (en €) du document imprimé (ou 0) et docVCOST le coût à la page initial du même document. Dans le cas d’une redirection sur une autre file, les deux peuvent être différents. Dans tout les cas, docVCOST - docRCOST correspond à l’économie réalisée sur ce document. A noter également que l’économie peut être négative si la redirection est effectuée sur une imprimante plus chère. </p>
                                             </li>
-                                            <li class="li_1">
-                                                <p class="p_3">champs <span class="Élevé">docIN…</span> indiquent un état initial relevé dans le spool avant opération de transformation et permettent une comparaison après transformation éventuelle du spool.</p>
+                                            <li>
+                                                <p>champs docIN… indiquent un état initial relevé dans le spool avant opération de transformation et permettent une comparaison après transformation éventuelle du spool.</p>
                                                 <p>&#160;</p>
                                             </li>
                                         </ul>
-                                        <h4><span class="span_3">Schéma</span>
-                                        </h4>
-                                        <table style="width: 100%;border-left-style: solid;border-left-width: 0px;border-left-color: #000000;border-right-style: solid;border-right-width: 0px;border-right-color: #000000;border-top-style: solid;border-top-width: 0px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 0px;border-bottom-color: #000000;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableSlylesheets/Standard.css');" class="TableStyle-Standard_test TableStyle-Standard" cellspacing="0">
+                                        <h4>Schéma</h4>
+                                        <table style="width: 100%;border-left-style: solid;border-left-width: 0px;border-left-color: #000000;border-right-style: solid;border-right-width: 0px;border-right-color: #000000;border-top-style: solid;border-top-width: 0px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 0px;border-bottom-color: #000000;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableSlylesheets/Standard.css');" class="TableStyle-Standard" cellspacing="0">
                                             <col class="TableStyle-Standard-Column-Regular" />
                                             <col style="width: 164px;" class="TableStyle-Standard-Column-Regular" />
                                             <col style="width: 52px;" class="TableStyle-Standard-Column-Regular" />
@@ -249,23 +248,23 @@
                                             <tbody>
                                                 <tr class="TableStyle-Standard-Body-Row2">
                                                     <td style="font-weight: bold;" class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p class="p_5"><strong>Champ</strong>
+                                                        <p><strong>Champ</strong>
                                                         </p>
                                                     </td>
                                                     <td style="font-weight: bold;" class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p class="p_5"><strong>Type</strong>
+                                                        <p><strong>Type</strong>
                                                         </p>
                                                     </td>
                                                     <td style="font-weight: bold;" class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p class="p_5"><b>Requis</b>
+                                                        <p><b>Requis</b>
                                                         </p>
                                                     </td>
                                                     <td style="font-weight: bold;" class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p class="p_5"><b>CléPrimaire</b>
+                                                        <p><b>CléPrimaire</b>
                                                         </p>
                                                     </td>
                                                     <td style="font-weight: bold;" class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                        <p class="p_5"><b>Description</b>
+                                                        <p><b>Description</b>
                                                         </p>
                                                     </td>
                                                 </tr>
@@ -1235,15 +1234,15 @@
                                             </tbody>
                                         </table>
                                         <p>&#160;</p>
-                                        <table style="mc-table-style: url('../Resources/TableSlylesheets/Standard.css');" class="TableStyle-Standard_test TableStyle-Standard" cellspacing="0">
+                                        <table style="mc-table-style: url('../Resources/TableSlylesheets/Standard.css');" class="TableStyle-Standard" cellspacing="0">
                                             <col class="TableStyle-Standard-Column-Regular" />
                                             <col class="TableStyle-Standard-Column-Regular" />
                                             <col class="TableStyle-Standard-Column-Regular" />
                                             <col class="TableStyle-Standard-Column-Regular" />
                                             <col class="TableStyle-Standard-Column-Regular" />
                                             <tr class="TableStyle-Standard-Body-Row2">
-                                                <td colspan="5" class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>Les champs <span class="Élevé">IN</span> contiennent des valeurs relatives au document initial, avant transformation éventuelle. Comparées aux valeurs relatives au document traité, ces données permettent de savoir si le document a subi des transformations avant impression :</p>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                    <p>Les champs IN contiennent des valeurs relatives au document initial, avant transformation éventuelle. Comparées aux valeurs relatives au document traité, ces données permettent de savoir si le document a subi des transformations avant impression :</p>
                                                 </td>
                                             </tr>
                                             <tr class="TableStyle-Standard-Body-Row1">
@@ -1493,48 +1492,11 @@
                                             </tr>
                                             <tr class="TableStyle-Standard-Body-Row2">
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_2"><span class="span_2">docCOMPLETED</span>
-                                                    </p>
+                                                    <p>docCOMPLETED
+                    </p>
                                                 </td>
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_2">tinyint</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p class="p_2"><span class="span_2">docMODIFIED </span>
-                                                    </p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p class="p_2"><span class="span_2">smallint</span>
-                                                    </p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_2">docPHYSICALIN</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_2"><span class="span_2">Tinyint</span>
-                                                    </p>
+                                                    <p>tinyint</p>
                                                 </td>
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row2">
                                                     <p>&#160;</p>
@@ -1548,12 +1510,12 @@
                                             </tr>
                                             <tr class="TableStyle-Standard-Body-Row1">
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p class="p_2"><span class="span_2">docPHYSICALOUT</span>
-                                                    </p>
+                                                    <p>docMODIFIED 
+                    </p>
                                                 </td>
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p class="p_2"><span class="span_2">Tinyint</span>
-                                                    </p>
+                                                    <p>smallint
+                    </p>
                                                 </td>
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row1">
                                                     <p>&#160;</p>
@@ -1567,10 +1529,11 @@
                                             </tr>
                                             <tr class="TableStyle-Standard-Body-Row2">
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_2">docSAVING</p>
+                                                    <p>docPHYSICALIN</p>
                                                 </td>
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_2">tinyint</p>
+                                                    <p>Tinyint
+                    </p>
                                                 </td>
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row2">
                                                     <p>&#160;</p>
@@ -1584,12 +1547,12 @@
                                             </tr>
                                             <tr class="TableStyle-Standard-Body-Row1">
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p class="p_2"><span class="span_2">docTRANSFOPROFIL</span>
-                                                    </p>
+                                                    <p>docPHYSICALOUT
+                    </p>
                                                 </td>
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p class="p_2"><span class="span_2">Varchar (128)</span>
-                                                    </p>
+                                                    <p>Tinyint
+                    </p>
                                                 </td>
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row1">
                                                     <p>&#160;</p>
@@ -1603,12 +1566,10 @@
                                             </tr>
                                             <tr class="TableStyle-Standard-Body-Row2">
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_2"><span class="span_2">docSPLRJobid</span>
-                                                    </p>
+                                                    <p>docSAVING</p>
                                                 </td>
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_2"><span class="span_2">Varchar (64)</span>
-                                                    </p>
+                                                    <p>tinyint</p>
                                                 </td>
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row2">
                                                     <p>&#160;</p>
@@ -1622,12 +1583,12 @@
                                             </tr>
                                             <tr class="TableStyle-Standard-Body-Row1">
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p class="p_2"><span class="span_2">docSPLRUserid</span>
-                                                    </p>
+                                                    <p>docTRANSFOPROFIL
+                    </p>
                                                 </td>
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p class="p_2"><span class="span_2">Varchar (128)</span>
-                                                    </p>
+                                                    <p>Varchar (128)
+                    </p>
                                                 </td>
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row1">
                                                     <p>&#160;</p>
@@ -1641,12 +1602,12 @@
                                             </tr>
                                             <tr class="TableStyle-Standard-Body-Row2">
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_2"><span class="span_2">docSPLRSrvid</span>
-                                                    </p>
+                                                    <p>docSPLRJobid
+                    </p>
                                                 </td>
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_2"><span class="span_2">Varchar (64)</span>
-                                                    </p>
+                                                    <p>Varchar (64)
+                    </p>
                                                 </td>
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row2">
                                                     <p>&#160;</p>
@@ -1660,12 +1621,12 @@
                                             </tr>
                                             <tr class="TableStyle-Standard-Body-Row1">
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p class="p_2"><span class="span_2">DocSPLRSrvtype</span>
-                                                    </p>
+                                                    <p>docSPLRUserid
+                    </p>
                                                 </td>
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p class="p_2"><span class="span_2">Varchar (16)</span>
-                                                    </p>
+                                                    <p>Varchar (128)
+                    </p>
                                                 </td>
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row1">
                                                     <p>&#160;</p>
@@ -1679,12 +1640,12 @@
                                             </tr>
                                             <tr class="TableStyle-Standard-Body-Row2">
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_2"><span class="span_2">DocSPLRSrvver</span>
-                                                    </p>
+                                                    <p>docSPLRSrvid
+                    </p>
                                                 </td>
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_2"><span class="span_2">Varchar (32)</span>
-                                                    </p>
+                                                    <p>Varchar (64)
+                    </p>
                                                 </td>
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row2">
                                                     <p>&#160;</p>
@@ -1698,12 +1659,12 @@
                                             </tr>
                                             <tr class="TableStyle-Standard-Body-Row1">
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p class="p_2"><span class="span_2">DocSPLRDate</span>
-                                                    </p>
+                                                    <p>DocSPLRSrvtype
+                    </p>
                                                 </td>
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p class="p_2"><span class="span_2">Datetime</span>
-                                                    </p>
+                                                    <p>Varchar (16)
+                    </p>
                                                 </td>
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row1">
                                                     <p>&#160;</p>
@@ -1717,11 +1678,12 @@
                                             </tr>
                                             <tr class="TableStyle-Standard-Body-Row2">
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_2"><span class="span_2">DocSPLRretries</span>
-                                                    </p>
+                                                    <p>DocSPLRSrvver
+                    </p>
                                                 </td>
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_2">smallint</p>
+                                                    <p>Varchar (32)
+                    </p>
                                                 </td>
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row2">
                                                     <p>&#160;</p>
@@ -1735,12 +1697,12 @@
                                             </tr>
                                             <tr class="TableStyle-Standard-Body-Row1">
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p class="p_2"><span class="span_2">docACTORType</span>
-                                                    </p>
+                                                    <p>DocSPLRDate
+                    </p>
                                                 </td>
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p class="p_2"><span class="span_2">Varchar (32)</span>
-                                                    </p>
+                                                    <p>Datetime
+                    </p>
                                                 </td>
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row1">
                                                     <p>&#160;</p>
@@ -1754,12 +1716,11 @@
                                             </tr>
                                             <tr class="TableStyle-Standard-Body-Row2">
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_2"><span class="span_2">docACTORVer</span>
-                                                    </p>
+                                                    <p>DocSPLRretries
+                    </p>
                                                 </td>
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_2"><span class="span_2">Varchar (32)</span>
-                                                    </p>
+                                                    <p>smallint</p>
                                                 </td>
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row2">
                                                     <p>&#160;</p>
@@ -1773,12 +1734,12 @@
                                             </tr>
                                             <tr class="TableStyle-Standard-Body-Row1">
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p class="p_2"><span class="span_2">docACTOROrigin</span>
-                                                    </p>
+                                                    <p>docACTORType
+                    </p>
                                                 </td>
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p class="p_2"><span class="span_2">Varchar (32)</span>
-                                                    </p>
+                                                    <p>Varchar (32)
+                    </p>
                                                 </td>
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row1">
                                                     <p>&#160;</p>
@@ -1792,12 +1753,12 @@
                                             </tr>
                                             <tr class="TableStyle-Standard-Body-Row2">
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_2"><span class="span_2">docACTORUserID</span>
-                                                    </p>
+                                                    <p>docACTORVer
+                    </p>
                                                 </td>
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_2"><span class="span_2">Varchar (128)</span>
-                                                    </p>
+                                                    <p>Varchar (32)
+                    </p>
                                                 </td>
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row2">
                                                     <p>&#160;</p>
@@ -1811,12 +1772,12 @@
                                             </tr>
                                             <tr class="TableStyle-Standard-Body-Row1">
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p class="p_2"><span class="span_2">docACTORTargetTYPE</span>
-                                                    </p>
+                                                    <p>docACTOROrigin
+                    </p>
                                                 </td>
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p class="p_2"><span class="span_2">Varchar (32)</span>
-                                                    </p>
+                                                    <p>Varchar (32)
+                    </p>
                                                 </td>
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row1">
                                                     <p>&#160;</p>
@@ -1830,12 +1791,50 @@
                                             </tr>
                                             <tr class="TableStyle-Standard-Body-Row2">
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_2"><span class="span_2">docACTORTargetInto</span>
-                                                    </p>
+                                                    <p>docACTORUserID
+                    </p>
                                                 </td>
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_2"><span class="span_2">Varchar (128)</span>
-                                                    </p>
+                                                    <p>Varchar (128)
+                    </p>
+                                                </td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                    <p>&#160;</p>
+                                                </td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                    <p>&#160;</p>
+                                                </td>
+                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                    <p>&#160;</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Standard-Body-Row1">
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                    <p>docACTORTargetTYPE
+                    </p>
+                                                </td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                    <p>Varchar (32)
+                    </p>
+                                                </td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                    <p>&#160;</p>
+                                                </td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                    <p>&#160;</p>
+                                                </td>
+                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                    <p>&#160;</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="TableStyle-Standard-Body-Row2">
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                    <p>docACTORTargetInto
+                    </p>
+                                                </td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                    <p>Varchar (128)
+                    </p>
                                                 </td>
                                                 <td class="TableStyle-Standard-BodyE-Regular-Row2">
                                                     <p>&#160;</p>
@@ -1849,28 +1848,28 @@
                                             </tr>
                                         </table>
                                         <p>&#160;</p>
-                                        <h4><span class="span_4">Index</span>
-                                        </h4>
-                                        <h4><span class="span_3">Mode "Production"</span>
-                                        </h4>
+                                        <h4>Index
+        </h4>
+                                        <h4>Mode "Production"
+        </h4>
                                         <p>Le mode "Production" correspond à l’insertion des travaux et la manipulation de base de l’historique par le service, ainsi que les pages de l’administration dédiées à la gestion au jour le jour des travaux (historique, incidents, helpdesk). </p>
-                                        <p class="p_3">Les index sont faits pour être les plus légers possibles et limiter le plafonnement lors de l’insertion des données dans la base. </p>
-                                        <p class="PréformatéHTML_1">CREATE INDEX IX_KeyJob ON dbo.documents (docKEY, docJOBID) ON PRIMARY</p>
-                                        <p class="PréformatéHTML_1">CREATE INDEX IX_Queue ON dbo.documents (docQUEUE) ON PRIMARY</p>
-                                        <p class="PréformatéHTML_1">CREATE INDEX IX_QGroup ON dbo.documents (docQGROUP) ON PRIMARY</p>
-                                        <p class="PréformatéHTML_1">CREATE INDEX IX_Status ON dbo.documents (docSTATUS) ON PRIMARY</p>
-                                        <p class="PréformatéHTML_1">CREATE INDEX IX_DateOp ON dbo.documents(docDATEOPERATION DESC ) ON PRIMARY</p>
-                                        <p class="p_3">La taille estimée est d’environ 10% de la taille de la base de données. </p>
-                                        <h4><span class="span_3">Mode "Consultation"</span>
-                                        </h4>
+                                        <p>Les index sont faits pour être les plus légers possibles et limiter le plafonnement lors de l’insertion des données dans la base. </p>
+                                        <p>CREATE INDEX IX_KeyJob ON dbo.documents (docKEY, docJOBID) ON PRIMARY</p>
+                                        <p>CREATE INDEX IX_Queue ON dbo.documents (docQUEUE) ON PRIMARY</p>
+                                        <p>CREATE INDEX IX_QGroup ON dbo.documents (docQGROUP) ON PRIMARY</p>
+                                        <p>CREATE INDEX IX_Status ON dbo.documents (docSTATUS) ON PRIMARY</p>
+                                        <p>CREATE INDEX IX_DateOp ON dbo.documents(docDATEOPERATION DESC ) ON PRIMARY</p>
+                                        <p>La taille estimée est d’environ 10% de la taille de la base de données. </p>
+                                        <h4>Mode "Consultation"
+        </h4>
                                         <p>Le mode "consultation&#160;» correspond à un usage occasionnel des pages de statistiques et bilan sur des bases de données de taille moyenne. </p>
                                         <p>Les index sont faits pour être les plus légers possible, tout en optimisant suffisamment les requêtes SQL. </p>
                                         <p class="PréformatéHTML">CREATE INDEX IX_Graphes ON dbo.documents (docQGROUP, docQUEUE, docDATEOPERATION, docCACHEHOUR, </p>
                                         <p class="PréformatéHTML">docPRINTED, docSTATUS, docMEDIA, docCOLOR, docPAGES, docLPAGES) on PRIMARY</p>
-                                        <h4><span class="span_3">Mode "Statistiques"</span>
-                                        </h4>
-                                        <p class="p_3">Le mode "statistiques" correspond à un usage intensif des statistiques/bilans sur des bases de données de grosse taille, lorsqu’on dispose d’un serveur de fédération de statistiques dédié (avec import journalier à partir des serveurs de production).</p>
-                                        <p class="p_3">Les index sont faits pour être les plus optimisés possible, au détriment de l’espace disque consommé. </p>
+                                        <h4>Mode "Statistiques"
+        </h4>
+                                        <p>Le mode "statistiques" correspond à un usage intensif des statistiques/bilans sur des bases de données de grosse taille, lorsqu’on dispose d’un serveur de fédération de statistiques dédié (avec import journalier à partir des serveurs de production).</p>
+                                        <p>Les index sont faits pour être les plus optimisés possible, au détriment de l’espace disque consommé. </p>
                                     </div>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

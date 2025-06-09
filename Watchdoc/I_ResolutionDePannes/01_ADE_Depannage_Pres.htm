@@ -505,6 +505,14 @@
                                         </div>
                                         <p>&#160;</p>
                                         <h2 id="WSCWatchdocSupervisionConsole" data-magellan-target="WSCWatchdocSupervisionConsole">WSC&#160;- Watchdoc Supervision Console</h2>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Impossible d'ajouter un pilote d'impression - An unexpected error occured while trying to get infos about package. TypeError: t.json.Favorite is undefined.</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> lors de l'ajout d'un pilote, le message d'erreur suivant s'affiche dans l'interface <b>Ajouter un pilote d'impression</b> :  An unexpected error occured while trying to get infos about package. TypeError: t.json.Farorite is undefined.</p>
+                                                <p><strong>Cause :</strong> ce comportement survient lorsque l'environnement dans lequel est installé le pilote est fortement sécurisé. Le dossier dans lequel WSC doit décompresser l'archive est dans doute verrouillé.&#160;</p>
+                                                <p><strong>Résolution :</strong> contactez le Support Doxense via <a href="https://doxense.zendesk.com/" target="_blank">Connect</a> pour recevoir la procédure de résolution.</p>
+                                            </div>
+                                        </div>
+                                        <p>&#160;</p>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Impossible de mettre à jour un domaine à l'aide de l'outil de propagation des mises à jour (v.&#160;6.1.x)</a></span>
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> lors d'une mise à jour des serveurs d'un domaine à partir de la mise à jour du serveur maître, lorsque l'on clique sur le bouton <strong>Propager </strong>ou le bouton <strong>Appliquer</strong>, WSC&#160;ouvre systématiquement l'interface <strong>Ajouter une nouvelle mise à jour</strong>.</p>
@@ -1186,12 +1194,27 @@ dans la boîte de dialogue, activez le <strong>protocole SOAP.</strong></p>
                                                 </ol>
                                             </div>
                                         </div>
-                                        <h2 id="WPCWatchdocPrintClient" data-magellan-target="WPCWatchdocPrintClient">WPC - Watchdoc Print Client<br /></h2>
+                                        <h2 id="WPCWatchdocPrintClient" data-magellan-target="WPCWatchdocPrintClient">WPC - Watchdoc Print Client</h2>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WPC&#160;for Windows avec des périphériques d'impression Hewlett Packard - Perte de fonctionnalités.</a></span>
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> en tant qu'administrateur, je constate que, lorsqu'il installe un périphérique HP à l'aide de WPC sur son poste de travail, l'utilisateur perd certaines fonctionnalités définies dans les paramètres du périphérique d'impression (par exemple, le filigrane dans le document imprimé).</p>
                                                 <p><strong>Cause :</strong> par défaut, WPC&#160;utilise le processeur d'impression winprint.&#160;Si c'est un autre processeur d'impression qui a été configuré pour un périphérique d'impression, il est donc remplacé par winprint lors de la synchronisation de WPC, entraînant la suppression de paramètres définis pour un autre processeur d'impression.</p>
                                                 <p><strong>Résolution :</strong> pour résoudre cette anomalie, il convient de préciser quel est le processeur d'impression (driver"s print processor) que l'on souhaite appliquer si l'on ne souhaite pas winprint.</p>
+                                            </div>
+                                        </div>
+                                        <p>&#160;</p>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WPC&#160;for Windows 5289 avec Watchdoc v 6.1.0.5262 - WPC&#160;for Windows n'arrive pas à se connecter et affiche un spinner infini.</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> en tant qu'utilisateur, je constate que WPC&#160;for Windowsn'arrive plus à se connecter et affiche un spinner (sablier) infini. Ce problème survient après mise à jour de Watchdoc en v 6.1.0.5262.</p>
+                                                <p><strong>Résolution :</strong> pour résoudre cette anomalie, il convient :</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>de suspendre les ports non-sécurisés sur le serveur Watchdoc ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>ou de mettre à jour Watchdoc  en v 6.1.0.5268 (qui contient un correctif).</p>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
                                         <p>&#160;</p>

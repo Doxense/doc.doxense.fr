@@ -5,7 +5,7 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="Présentation des types et des fonctions des annuaires dans Watchdoc." /><title>Annuaires - Présentation</title>
+        <meta name="description" content="Présentation des types et des fonctions des annuaires dans Watchdoc." /><title>Watchdoc - Annuaires - Présentation</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -199,13 +199,13 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor122"></a>
-                                            <MadCap:concept term="CFG" />Annuaires - Présentation</h1>
+                                        <h1><a name="aanchor121"></a>
+                                            <MadCap:concept term="CFG" />Watchdoc - Annuaires - Présentation</h1>
                                         <h2>Principes  relatifs aux annuaires dans Watchdoc</h2>
                                         <h3>Prérequis organisationnels</h3>
                                         <p>Pour fonctionner,  Watchdoc a besoin d'un annuaire utilisateurs. L'annuaire permet de répertorier les différents utilisateurs du système d'information et d'y stocker les informations complémentaires comme l'adresse mail, l'appartenance à des groupes, les droits d'accès etc. L'annuaire permet donc d'établir une politique d’impression en fonction de groupes d’utilisateurs, mais aussi éventuellement d'entités de votre organisation et d'établir des statistiques d'utilisation en fonction de ces groupes et utilisateurs.</p>
                                         <p>&#160;</p>
-                                        <p>Watchdoc s'appuie sur le ou les annuaires existants de l'organisation en temps réel et ne nécessite pas leur duplication. Si votre organisation dispose d'un annuaire, il convient donc de le configurer, de sorte que <span class="mc-variable Document.Produit variable">Watchdoc</span> puisse y trouver vos utilisateurs.</p>
+                                        <p>Watchdoc s'appuie sur le ou les annuaires qui existent dans l'organisation sans qu'il soit nécessaire de les dupliquer. Si votre organisation dispose d'un annuaire, il convient donc de le configurer, de sorte que Watchdoc puisse y trouver vos utilisateurs.</p>
                                         <p>&#160;</p>
                                         <p>Si votre organisation ne dispose pas d'annuaire propre, il est possible d'utiliser la base <strong>Invités</strong> (ou Guests) générée par défaut dans Watchdoc et fondé sur une base de données  (SQL Server ou PostgreSQL). Dans le cas où votre organisme dispose d'un annuaire, cet annuaire est exploité en priorité. La base <strong>Invités </strong>sert alors à inscrire les personnes de passage non-présentes dans l'annuaire de votre organisation et qui ont besoin d'imprimer (cf.&#160;<a href="../../F_WSC/WSC_Base_Invites_Presentation.htm" target="_blank" title="Lien vers l'article de présentation" alt="Lien vers l'article de présentation">Base Invités</a>).</p>
                                         <p>&#160;</p>
@@ -230,10 +230,19 @@
                                         <ul>
                                             <li>
                                                 <p class="Liste_puce_1" style="text-align: justify;"><strong>META :</strong> il s'agit d'un annuaire virtuel regroupant l'ensemble des autres annuaires déclarés dans Watchdoc. Son rôle est de faciliter la recherche d'un utilisateur dans l'ensemble des annuaires utilisés par <span class="mc-variable Document.Produit variable">Watchdoc</span>. L'annuaire META est installé par défaut, même s'il n'existe qu'un seul annuaire "Utilisateurs" déclaré.&#160;Cette installation préventive permet de faciliter la gestion d'un autre annuaire qui serait déclaré ultérieurement.</p>
-                                                <p class="Liste_puce_1" style="text-align: justify;">En règle générale, c'est l'annuaire META qui est configuré comme l'annuaire par défaut.<br /></p>
+                                                <p class="Liste_puce_1" style="text-align: justify;">En règle générale, c'est l'annuaire META qui est configuré comme l'annuaire par défaut.</p>
                                             </li>
                                         </ul>
-                                        <fieldset>Lors de l'installation et de la configuration initiale de Watchdoc, si vous avez coché la case "<strong>WES&#160;: Création automatique des annuaires et des instances WES</strong>" dans la section <strong>Configuration automatique</strong>, tous les annuaires de Watchdoc (Users (LDAP), Meta, Guests et Cards) sont automatiquement créés , que vous en ayez besoin ou non.</fieldset>
+                                        <ul>
+                                            <li>
+                                                <p class="Liste_puce_1" style="text-align: justify;"><strong>CODE PUK : </strong>il s'agit d'un annuaire (reposant sur une table SQL) dans lequel sont enregistrés les codes PUK des utilisateurs référencés dans un annuaire MS Entra ID&#160;principalement.&#160;Mais cet annuaire peut également être utilisé pour enregitrer les codes PUK d'utilisateurs enregistrés dans un annuaire autre que MS entra ID.</p>
+                                            </li>
+                                        </ul>
+                                        <p class="Liste_puce_1" style="text-align: justify;">&#160;</p>
+                                        <fieldset>Par souci de sécurité, nous ne recommandons pas l'authentification par code PUK, mais plutôt l'authentification par compte utilisateur (login)/code PIN.<br /></fieldset>
+                                        <p>&#160;</p>
+                                        <p>Lors de l'installation et de la configuration initiale de Watchdoc, si vous avez coché la case "<strong>WES&#160;: Création automatique des annuaires et des instances WES</strong>" dans la section <strong>Configuration automatique</strong>, tous les annuaires de Watchdoc (Users (LDAP), Meta, Cards, Code PUK et/ou utilisateurs invités (Guests)) sont automatiquement créés, que vous en ayez besoin ou non.<br /><br /><img src="../../../../Docdox_Watchdoc_EN/Content/Z_Resources/Images/02_Captures/Admin_Annuaire_Annuaires_EN.png" style="width: 700px;height: auto;" /></p>
+                                        <p>&#160;</p>
                                         <p>Par défaut, Watchdoc conserve en mémoire (cache) les informations de l'annuaire relatives aux utilisateurs. Il évite ainsi de solliciter trop fréquemment l'annuaire et continue de fonctionner normalement, même en cas de panne de l’annuaire. <br />Les informations SQL, elles, peuvent être stockées dans un tampon local ou sur le serveur d’impression afin de parer à une défaillance du serveur SQL. </p>
                                         <h3>Annuaires supportés </h3>
                                         <ul>

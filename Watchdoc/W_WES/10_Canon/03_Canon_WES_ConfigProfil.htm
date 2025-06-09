@@ -245,15 +245,18 @@
                                                         <p><strong>Couleur&#160;: </strong>entrez la valeur hexadécimale de la couleur correspondant à la couleur du bouton WES. Par défaut, les boutons sont  orange (#FF901). Une fois la valeur saisie, la couleur s'affiche dans le champ.</p>
                                                     </li>
                                                     <li>
-                                                        <p><strong>Images&#160;: </strong>si vous souhaitez personnaliser les images WES, entrez le chemin du dossier dans lequel sont enregistrées les images que vous souhaitez afficher à la place des images par défaut (stockées dans C:\Program Files\Doxense\Watchdoc\Images\Embedded\Brands\[Nom_du_fabricant] par défaut).<br /><span style="color: #000000;">N.B.&#160;: pour plus d'informations sur la procédure de personnalisation, cf.&#160;chapitre <a href="../Installation/WESV3_PersonnaliserWESV3_Principe.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Personnaliser les boutons et l'image du WES</a>.</span><br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Z_Resources/Images/02_Captures/WES/Config_WES_Profil_Xerox_SectionProprietes_V60.png"><img class="MCPopupThumbnail img" data-mc-width="825" data-mc-height="289" src="../../Z_Resources/Images/02_Captures/WES/Config_WES_Profil_Xerox_SectionProprietes_V60.png" tabindex="" style="mc-thumbnail: popup;mc-thumbnail-max-width: 15cm;max-width: 15cm;" /></a></p>
+                                                        <p><strong>Images&#160;: </strong>si vous souhaitez personnaliser les images WES, entrez le chemin du dossier dans lequel sont enregistrées les images que vous souhaitez afficher à la place des images par défaut (stockées dans C:\Program Files\Doxense\Watchdoc\Images\Embedded\Brands\[Nom_du_fabricant] par défaut).<br /><span style="color: #000000;">N.B.&#160;: pour plus d'informations sur la procédure de personnalisation, cf.&#160;chapitre <a href="../Installation/WESV3_PersonnaliserWESV3_Principe.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Personnaliser les boutons et l'image du WES</a>.</span></p>
                                                     </li>
                                                 </ul>
                                             </li>
                                         </ul>
                                         <p>
-                                            <br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="Config_WES_Canon_Profil_SectionProprietes_V60.png"><img class="MCPopupThumbnail img" data-mc-width="1125" data-mc-height="343" src="Config_WES_Canon_Profil_SectionProprietes_V60.png" tabindex="" style="mc-thumbnail: popup;mc-thumbnail-max-width: 15cm;max-width: 15cm;" /></a>
+                                            <br />
+                                            <img src="Config_WES_Canon_Profil_SectionProprietes_V60.png" style="width: 700px;" />
                                         </p>
-                                        <p>&#160;</p>
+                                        <p>
+                                            <br />
+                                        </p>
                                         <h3>Configurer la section Authentification par clavier</h3>
                                         <ul>
                                             <li>
@@ -295,35 +298,30 @@
                                         <ul>
                                             <li>
                                                 <p class="Liste_puce_1"><strong>Association auto :</strong> si vous autorisez l'<a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term35">enrôlement <img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Action au cours de laquelle un compte utilisateur est associé au numéro de badge qui lui appartient. L'enrôlement est réalisé lors de la première utilisation d'un badge. L'enrôlement peut être réalisé par le responsable informatique lorsqu'il délivre le badge à un utilisateur ou par l'utilisateur lui-même qui saisit son identifiant (code PIN, code PUK ou identifiant et mot de passe) qui est alors associé à son numéro de badge. Une fois l'enrôlement réalisé, le numéro de badge est associé définitivement à son propriétaire.</span></a> depuis le WES, précisez de quelle manière l'utilisateur associe son badge à son compte lors de la première utilisation : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Désactivé :</strong> l'enrôlement depuis le WES&#160;n'est pas autorisé. Si l'utilisateur n'est pas déjà connu, un message d'erreur est affiché sur l'écran du périphérique&#160;;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Code PUK :</strong> l'utilisateur saisit son code PUK pour enrôler son badge;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Nom d'utilisateur et code PIN:</strong> l'utilisateur saisit ses nom et code PIN&#160;pour enrôler son badge ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Nom d'utilisateur et mot de passe :</strong> l'utilisateur saisit son compte LDAP (login et mot de passe) pour enrôler son badge ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Envoyer une notification </strong>: cochez la case pour notifier l'utilisateur une fois son badge enrôlé.&#160;</p>
+                                                    </li>
+                                                </ul>
                                             </li>
                                         </ul>
-                                        <blockquote>
-                                            <ul>
-                                                <li>
-                                                    <p class="Liste_puce_2"><strong>Désactivé :</strong> l'enrôlement depuis le WES&#160;n'est pas autorisé. Si l'utilisateur n'est pas déjà connu, un message d'erreur est affiché sur l'écran du périphérique&#160;;</p>
-                                                </li>
-                                                <li>
-                                                    <p class="Liste_puce_2"><strong>Code PUK :</strong> l'utilisateur saisit son code PUK pour enrôler son badge;</p>
-                                                </li>
-                                                <li>
-                                                    <p class="Liste_puce_2"><strong>Nom d'utilisateur et code PIN:</strong> l'utilisateur saisit ses nom et code PIN&#160;pour enrôler son badge ;</p>
-                                                </li>
-                                                <li>
-                                                    <p class="Liste_puce_2"><strong>Nom d'utilisateur et mot de passe :</strong> l'utilisateur saisit son compte LDAP (login et mot de passe) pour enrôler son badge ;</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>Groupes d'utilisateurs concernés : </strong>si la double authentification ne concerne qu'un groupe d'utilisateurs précis, cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Parcourir.png"></img> pour parcourir l'annuaire et y sélectionner le ou les groupes d'utilisateurs concernés par la double authentification ; </p>
-                                                </li>
-                                                <li>
-                                                    <p class="Liste_puce_2"><strong>Envoyer une notification </strong>: cochez la case pour notifier l'utilisateur une fois son badge enrôlé.&#160;</p>
-                                                </li>
-                                            </ul>
-                                            <ul>
-                                                <li>
-                                                    <p class="Liste_puce_2"><strong>Format :</strong> indiquez, si nécessaire, de quelle manière la chaîne de caractères du numéro du badge lu doit être transformée. Ex : raw;cut(0,8);swap.  (cf. <a href="../../H_HowTo/WES_Changer_Format_Badge.htm" target="_blank">Changer le format du badge</a>).<br /><br /><img src="Config_WES_Canon_Profil_SectionAuthBadge.png" /></p>
-                                                </li>
-                                            </ul>
-                                        </blockquote>
+                                        <ul>
+                                            <li>
+                                                <p class="Liste_puce_2"><strong>Format :</strong> indiquez, si nécessaire, de quelle manière la chaîne de caractères du numéro du badge lu doit être transformée. Ex : raw;cut(0,8);swap.  (cf. <a href="../../H_HowTo/WES_Changer_Format_Badge.htm" target="_blank">Changer le format du badge</a>).<br /><br /><img src="Config_WES_Canon_Profil_SectionAuthBadge.png" /></p>
+                                            </li>
+                                        </ul>
                                         <h3>Configurer la section Comptabilisation</h3>
                                         <ul>
                                             <li>
@@ -434,7 +432,7 @@ Au-delà, la requête échoue et Watchdoc relance la requête.</p>
                                                 <p><strong>Point d'accès sécurisé :</strong> si vous avez sélectionné un mode de connexion SSL ou Mixte, depuis la v.&#160;6.1.0.5262, vous pouvez préciser si vous souhaitez utiliser :</p>
                                                 <ul>
                                                     <li>
-                                                        <p>le point d'accès personnalisé (préalablement configuré dans la section DSP (cf.&#160;<a href="../../C_Configurer/ConfigServeurWeb/ConfigAvancee_ServeurWeb.htm#DSP" target="_blank">Configurer le Serveur web</a>) :</p>
+                                                        <p>le point d'accès personnalisé (préalablement configuré dans la section DSP (cf.&#160;<a href="../../C_Configurer/ConfigServeurWeb/Config_ServeurWeb_Presentation.htm#DSP" target="_blank">Configurer le Serveur web</a>) :</p>
                                                     </li>
                                                     <li>
                                                         <p>le port 5753 par défaut du serveur Watchdoc ;</p>
