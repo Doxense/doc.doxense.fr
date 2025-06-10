@@ -897,6 +897,22 @@
                                             </div>
                                         </div>
                                         <h3 id="WESLexmark" data-magellan-target="WESLexmark"><a name="WESLexmark"></a>WES&#160;Lexmark</h3>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WES Lexmark. Message d'erreur "No server available.&#160;Please try again in a few moments. If the problem persists, please contact the administrator.</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> si le certificat DSP est signé par une autorité de certification intermédiaire, lorsqu'on installe le WES&#160;sur le périphérique, le message d'erreur suivant s'affiche sur le panneau du périphérique&#160;:  <code>"No server available.&#160;Please try again in a few moments. If the progem persists, please contact the administrator".</code><br />Par ailleurs, les logs Java contiennent le message d'erreur suivant : <br /><code>"Caused by: javax.net.ssl.SSLHandshakeException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target".</code></p>
+                                                <p>Si l'on saisit l'url depuis le serveur slave http:/, on constate que/ le certificat web est valide et le chemin de certification est correct.<br /></p>
+                                                <p><strong>Cause :</strong> le nouveau firmware mis à disposition par Lexmark nécessite un certificat avec l’extension CA=TRUE qui signifie qu’il est marqué comme une autorité de certification (CA).</p>
+                                                <p><strong>Résolution :</strong> pour résoudre ce problème, vous pouvez&#160;:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>mettre à jour Watchdoc (version 6.1.0.5268 min.) ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>ou mettre à jour l'application commune Lexmark <b>WesCommonAppSDK6.fls</b> (dans  C:\Program Files\Doxense\Watchdoc\Redist par défaut) à partir d'un package d'installation Watchdoc récent (v. 6.1.0.5268 min. par défaut).<br /></p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                         <p>&#160;</p>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WES Lexmark. Impossible d'installer le WES après la mise à jour avec du firmware</a></span>
                                             <div class="MCDropDownBody dropDownBody">
