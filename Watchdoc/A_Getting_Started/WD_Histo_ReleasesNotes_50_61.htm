@@ -206,6 +206,8 @@
                                                 <ul>
                                                     <li class="tree-node"><a href="#Watchdoc61">Watchdoc 6.1</a>
                                                     </li>
+                                                    <li class="tree-node"><a href="#WatchdocWSC6105276etWPCforWindows70535212062025">Watchdoc/WSC 6.1.0.5276 et WPC for Windows 7.0.5352 - 12/06/2025</a>
+                                                    </li>
                                                     <li class="tree-node"><a href="#WatchdocWSC6105268etWPCforWindows70528904062025">Watchdoc/WSC 6.1.0.5268 et WPC for Windows 7.0.5289 - 04/06/2025</a>
                                                     </li>
                                                     <li class="tree-node"><a href="#WatchdocWSC6105262etWPCforWindows70528928052025">Watchdoc/WSC 6.1.0.5262 et WPC for Windows 7.0.5289 - 28/05/2025</a>
@@ -277,6 +279,59 @@
                                         <hr width="100%" size="0" align="center" data-mc-conditions="General.Online">
                                         </hr>
                                         <h2 id="Watchdoc61" data-magellan-target="Watchdoc61">Watchdoc 6.1</h2>
+                                        <h2 id="WatchdocWSC6105276etWPCforWindows70535212062025" data-magellan-target="WatchdocWSC6105276etWPCforWindows70535212062025">Watchdoc/WSC 6.1.0.5276 et WPC for Windows 7.0.5352<span> -</span> 12/06/2025</h2>
+                                        <p style="font-weight: bold; color: #000000;">Nouveautés</p>
+                                        <ul>
+                                            <li>
+                                                <p><b>WES :</b>
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <p>mise à disposition du mot de passe comme mode d’authentification pour les WES&#160;Epson, Hewlett Packard, Konica Minolta, Sharp, Toshiba et Xerox.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>WES&#160;Sharp : mise à disposition d'un écran d'accueil supportant l'option AMX2</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <p style="font-weight: bold; color: #000000;">Améliorations</p>
+                                        <ul>
+                                            <li>
+                                                <p><b>Watchdoc :</b>
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <p>lecture de la clé de registre pour vérifier qu’elle n'est pas déjà utilisée dans le cas où l'on souhaite spécifier, via une clé de registre, le chemin vers une configuration (.xml) pour une file d’impression Xerox afin de minimiser les problèmes de droits liés à l'édition de clé de registre.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Lexmark (notamment sur le modèle Lexmark CX961) : correction de l'interprétation des données SNMP "0/0". Lorsqu'il s'agit d'une information relative à une propriété  non prise en charge par le périphérique, Watchdoc ne considère plus l'information comme KO. En conséquence, Watchdoc ne génère plus d’alerte injustifiée.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>création automatique d'une copie de la configuration lorsqu’on singularise un serveur à l'aide de la commande  “Singleify” via WCLI de manière à pouvoir restaurer la configuration initiale en cas d'erreur.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <p><b style="color: #000000;">Correctif</b>
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                <p><b>Watchdoc :</b>
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <p>rétablissement de la fonction de dissociation de badge (désenrôlement) des badges depuis le WES.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>rétablissement de la fonction d'association de badge (enrôlement) après authentification à l'aide du  nom d’utilisateur et code d’impression.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p><strong>WES Hewlett Packard</strong> : rétabllissement de l'accès aux applications depuis le WES&#160;sur les périphériques Hewlett Packard.</p>
+                                            </li>
+                                        </ul>
                                         <h2 id="WatchdocWSC6105268etWPCforWindows70528904062025" data-magellan-target="WatchdocWSC6105268etWPCforWindows70528904062025">Watchdoc/WSC 6.1.0.<span>5268</span> et WPC for Windows 7.0.5289<span> -</span> 04/06/2025</h2>
                                         <p><b style="color: #000000;">Correctif</b>
                                         </p>
@@ -313,7 +368,6 @@
                                                 <p><b>Watchdoc :</b>
                                                 </p>
                                                 <ul>
-                                                    <li>&#160;</li>
                                                     <li>
                                                         <p>lors de la configuration d'un profil WES, le mode d’authentification par défaut devient Nom d'utilisateur / Code Pin au lieu de Code PUK (mode d'authentification non-recommandé).</p>
                                                     </li>
