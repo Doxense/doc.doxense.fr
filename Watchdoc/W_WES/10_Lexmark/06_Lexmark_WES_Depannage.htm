@@ -199,7 +199,7 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1 style="text-align: justify;" id="WESLexmarkDépannerleWES" data-magellan-target="WESLexmarkDépannerleWES"><a name="aanchor197"></a>
+                                        <h1 style="text-align: justify;" id="WESLexmarkDépannerleWES" data-magellan-target="WESLexmarkDépannerleWES"><a name="aanchor150"></a>
                                             <MadCap:concept term="WES;ADE" />
                                             <MadCap:conditionalText data-mc-conditions="General.Online">WES&#160;Lexmark - </MadCap:conditionalText>Dépanner le WES</h1>
                                         <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
@@ -210,6 +210,10 @@
                                                     <li class="tree-node"><a href="#ActiverlestracesduWESWEStraces">Activer les traces du WES (WEStraces)</a>
                                                     </li>
                                                     <li class="tree-node"><a href="#Travauxdenum%C3%A9risationfaxetphotocopienoncomptabilis%C3%A9s">Travaux de numérisation, fax et photocopie non comptabilisés</a>
+                                                    </li>
+                                                    <li class="tree-node"><a href="#WESLexmarkAnomalierelativeauxconsommablessurlesmod%C3%A8lesCX961Messagedalerteinformantquelunit%C3%A9detransfertest%C3%A00Juin2025">WES Lexmark. Anomalie relative aux consommables sur les modèles CX961 - Message d'alerte informant que l'unité de transfert est à 0% - Juin 2025</a>
+                                                    </li>
+                                                    <li class="tree-node"><a href="#WESLexmarkMessagederreurNoserveravailablePleasetryagaininafewmomentsIftheproblempersistspleasecontacttheadministratorJuin2025">WES Lexmark. Message d'erreur "No server available.&#160;Please try again in a few moments. If the problem persists, please contact the administrator - Juin 2025</a>
                                                     </li>
                                                     <li class="tree-node"><a href="#Probl%C3%A8medeconfiguration">Problème de configuration</a>
                                                     </li>
@@ -312,6 +316,44 @@
                                                 <p class="Resultat" style="text-align: justify;">vérifiez que la procédure a réglé le problème.</p>
                                             </li>
                                         </ol>
+                                        <hr width="100%" size="0" align="center" />
+                                        <h2 id="WESLexmarkAnomalierelativeauxconsommablessurlesmodèlesCX961Messagedalerteinformantquelunitédetransfertestà0Juin2025" data-magellan-target="WESLexmarkAnomalierelativeauxconsommablessurlesmodèlesCX961Messagedalerteinformantquelunitédetransfertestà0Juin2025">WES Lexmark. Anomalie relative aux consommables sur les modèles CX961 - Message d'alerte informant que l'unité de transfert est à 0% - Juin 2025</h2>
+                                        <p><strong style="font-size: 14pt;">Contexte</strong> </p>
+                                        <p style="text-align: left;">Sur les modèles CX961, un message d'alerte SNMP&#160;informe l'administrateur que le niveau du module de transfert "transfer module" est en-dessous de 10%.&#160;</p>
+                                        <p>
+                                            <br />
+                                        </p>
+                                        <p><strong><span style="font-size: 14pt;">Cause</span></strong> </p>
+                                        <p>Le problème est lié à une mauvaise interprétation des données renvoyées par le périphérique d'impression : les données du compteur doivent être interprétées à l'envers, 0% étant un état normal et 100% nécessitant une intervention d'un technicien Lexmark.</p>
+                                        <p>&#160;</p>
+                                        <p><strong><span style="font-size: 14pt;">Résolution</span></strong>
+                                        </p>
+                                        <p style="text-align: left;">il est recommandé de mettre à jour le firmware Lexmark du périphérique d'impression.<br />Par ailleurs, Watchdoc v 6.1.0.5276 comporte un correctif permettant d'interpréter correctement les données SNMP de ce modèle et, en conséquence, de ne pas déclencher d'alerte.</p>
+                                        <hr width="100%" size="0" align="center" />
+                                        <h2 id="WESLexmarkMessagederreurNoserveravailablePleasetryagaininafewmomentsIftheproblempersistspleasecontacttheadministratorJuin2025" data-magellan-target="WESLexmarkMessagederreurNoserveravailablePleasetryagaininafewmomentsIftheproblempersistspleasecontacttheadministratorJuin2025">WES Lexmark. Message d'erreur "No server available.&#160;Please try again in a few moments. If the problem persists, please contact the administrator - Juin 2025</h2>
+                                        <p style="text-align: left;"><strong style="color: #000000; font-size: 14pt;">Contexte</strong> </p>
+                                        <p style="text-align: left;">Si le certificat DSP est signé par une autorité de certification intermédiaire, lorsqu'on installe le WES&#160;sur le périphérique, le message d'erreur suivant s'affiche sur le panneau du périphérique&#160;:  <code>"No server available.&#160;Please try again in a few moments. If the progem persists, please contact the administrator".</code><br />Par ailleurs, les logs Java contiennent le message d'erreur suivant : <br /><code>"Caused by: javax.net.ssl.SSLHandshakeException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target".</code></p>
+                                        <p style="text-align: left;">Si l'on saisit l'url depuis le serveur slave http:/, on constate que/ le certificat web est valide et le chemin de certification est correct.</p>
+                                        <p style="text-align: left;">
+                                            <br />
+                                        </p>
+                                        <p style="text-align: left;"><strong><span style="color: #000000; font-size: 14pt;">Cause</span></strong>
+                                        </p>
+                                        <p style="text-align: left;">Le nouveau firmware mis à disposition par Lexmark nécessite un certificat avec l’extension CA=TRUE qui signifie qu’il est marqué comme une autorité de certification (CA).</p>
+                                        <p style="text-align: left;">&#160;</p>
+                                        <p style="text-align: left;"><strong style="font-size: 14pt; color: #000000;">Résolution</strong>
+                                            <br />Pour résoudre ce problème, vous pouvez&#160;:</p>
+                                        <ul style="text-align: left;">
+                                            <li>
+                                                <p>mettre à jour Watchdoc (version 6.1.0.5268 min.) ;</p>
+                                            </li>
+                                            <li>
+                                                <p>ou mettre à jour l'application commune Lexmark <b>WesCommonAppSDK6.fls</b> (dans  C:\Program Files\Doxense\Watchdoc\Redist par défaut) à partir d'un package d'installation Watchdoc récent (v. 6.1.0.5268 min.).</p>
+                                                <p>
+                                                    <br />
+                                                </p>
+                                            </li>
+                                        </ul>
                                         <hr width="100%" size="0" align="center" />
                                         <h2 id="Problèmedeconfiguration" data-magellan-target="Problèmedeconfiguration">Problème de configuration</h2>
                                         <p style="font-size: 14pt;"><strong>Contexte</strong>

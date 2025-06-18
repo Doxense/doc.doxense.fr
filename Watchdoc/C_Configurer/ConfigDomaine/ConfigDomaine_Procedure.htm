@@ -201,7 +201,7 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor369"></a>
+                                        <h1><a name="aanchor146"></a>
                                             <MadCap:concept term="CFG" />Watchdoc - Domaine - Créer et géer un domaine (master/slave)</h1>
                                         <h2>Etapes</h2>
                                         <p>Pour mettre en œuvre un domaine comprenant un serveur master et d'autres serveurs&#160;:</p>
@@ -308,7 +308,7 @@
                                             </li>
                                         </ol>
                                         <p>→ Vous pouvez compléter les informations du serveur master, mais aussi ajouter d'autres serveurs dans le domaine.</p>
-                                        <h2><a name="kanchor3"></a>Déclarer les autres serveurs Watchdoc</h2>
+                                        <h2><a name="kanchor1"></a>Déclarer les autres serveurs Watchdoc</h2>
                                         <h3>Déclarer les autres serveurs depuis Watchdoc </h3>
                                         <p>Une fois  le master déclaré et le domaine créé, vous pouvez l'enrichir d'autres serveurs&#160;:</p>
                                         <ol>
@@ -350,7 +350,7 @@
                                                 <p>dans l'interface de<strong> Gestion du domaine</strong>, les autres serveurs s'ajoutent dans la liste des serveurs, sous le serveur master.<br /></p>
                                             </li>
                                         </ol>
-                                        <h2><a name="kanchor4"></a>Supprimer (déclasser) un serveur Master</h2>
+                                        <h2><a name="kanchor2"></a>Supprimer (déclasser) un serveur Master</h2>
                                         <p>Ponctuellement, il peut être nécessaire de déclasser un serveur master, c'est-à-dire lui enlever son rôle de master. </p>
                                         <fieldset>Déclasser un serveur master est une opération dont les conséquences sont importantes, notamment pour les autres serveurs qui en dépendent.&#160;</fieldset>
                                         <p>Cette opération doit être réalisée à l'aide de WCLI.<br /></p>
@@ -368,7 +368,7 @@
                                                 <p class="Liste_num_1">confirmez votre demande de déclassement par "<strong style="font-family: 'Courier New';">y</strong>" ;</p>
                                             </li>
                                         </ol>
-                                        <p class="Liste_num_1"><span style="font-family: 'Wingdings'">è</span> l'outil procède au déclassement du master : il vous informe que le serveur est devenu "single master" et vous rend la main.&#160;</p>
+                                        <p class="Liste_num_1"><span style="font-family: 'Wingdings'">è</span> l'outil procède au déclassement du master : il vous informe que le serveur est devenu "single master" et vous rend la main.<br />Par ailleurs, depuis la version&#160;6.1.0.5276, Watchdoc génère automatiquement une sauvegarde du fichier de configuration permettant une restauration en cas d'erreur lors de l'opération.&#160;Ce fichier de sauvegarde est enregistré par défaut dans C:Program Files\Doxense\Watchdoc\Data\ et porte la date de sa création.</p>
                                         <ol data-mc-continue="true">
                                             <li value="5">
                                                 <p class="Liste_num_1">lancez la commande permettant de redémarrer le serveur : &gt; <code style="font-family: 'Courier New';"><b style="font-family: 'Courier New';">net start watchdoc</b></code>:<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Domaine_DeclasserMasterWCLI.png" style="width: 700px;" /></p>
@@ -378,7 +378,7 @@
                                             </li>
                                         </ol>
                                         <p class="Liste_num_1"><span style="font-family: 'Wingdings'">è</span> une fois Watchdoc redémarré, vérifiez dans <strong>Gestion du domaine</strong> que le serveur n'a plus le rôle de master.&#160;</p>
-                                        <h2><a name="kanchor5"></a>Sortir un serveur du domaine</h2>
+                                        <h2><a name="kanchor3"></a>Sortir un serveur du domaine</h2>
                                         <p>Ponctuellement, il peut être nécessaire de supprimer un serveur esclave (slave), ce qui oblige à casser le lien qui le relie au serveur master (maître).</p>
                                         <p>Cette opération doit être réalisée à l'aide de WCLI&#160;:<br></br></p>
                                         <ol>
