@@ -204,26 +204,43 @@
                                             <MadCap:concept term="WES" />WES - Transformation de spools</h1>
                                         <fieldset>Les fonctionnalités présentées dans ce chapitre ne sont pas toutes compatibles avec toutes les marques et tous les modèles des périphériques d'impression.&#160;<br />Consultez le tableau de fonctionnalités du WES&#160;dans les pages dédiées pour connaître les fonctions compatibles.</fieldset>
                                         <h2>Principe</h2>
-                                        <p>En fonctionnement normal, lorsqu'un utilisateur lance un travail d'impression, Watchdoc l'analyse pour en extraire les informations essentielles et parcourt le fichier de spool pour en définir les caractéristiques (noir &amp; blanc ou couleur, recto ou recto-verso, nombre de copies, nombre de pages, etc.). </p>
-                                        <p>&#160;</p>
-                                        <p>Watchdoc compare ensuite les caractéristiques du travail d'impression et du profil utilisateur avec les règles établies afin de vérifier s'il existe des actions spécifiques à appliquer (blocage de l'impression, courriel de notification, etc.) puis envoie le travail vers le périphérique pour impression.</p>
-                                        <p>&#160;</p>
-                                        <p>Depuis Watchdoc v5.1, la fonction <strong>Transformation de spools</strong> (ou transformation des travaux d'impression) permet  d'informer l'utilisateur de ces règles définies par la politique d'impression et peut, soit lui imposer, soit lui suggérer de modifier ces critères d'impression initiaux&#160;:</p>
+                                        <p>En fonctionnement normal, lorsqu'un utilisateur lance un travail d'impression, Watchdoc l'analyse pour en extraire les informations essentielles et parcourt le fichier de spool pour en définir les caractéristiques (noir &amp; blanc ou couleur, recto ou recto-verso, nombre de copies, nombre de pages, etc.).</p>
+                                        <p>
+                                            <br /> 
+
+Watchdoc compare ensuite les caractéristiques du travail d'impression et du profil utilisateur avec les règles établies afin de vérifier s'il existe des actions spécifiques à appliquer (blocage de l'impression, courriel de notification, etc.) puis envoie le travail vers le périphérique pour impression.
+
+ 
+
+<br /><br />Depuis Watchdoc v5.1, la fonction <strong>Transformation de spools</strong> (ou transformation des travaux d'impression) permet d'informer l'utilisateur de ces règles définies par la politique d'impression et peut, soit lui imposer, soit lui suggérer de modifier ses critères d'impression initiaux :
+</p>
                                         <ul>
                                             <li>
-                                                <p class="Liste_puce_1">impression couleur transformée en impression Noir&amp;Blanc&#160;;</p>
+                                                <p>impression couleur transformée en impression Noir&amp;Blanc ;
+</p>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1">impression recto transformée en impression recto-verso&#160;;</p>
+                                                <p>impression recto transformée en impression recto-verso ;
+
+</p>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1">impression recto-versot ransformée en impression recto ;</p>
+                                                <p>impression recto-versot ransformée en impression recto ;
+</p>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1">réduction du nombre de copies demandées.<br /><br /><img src="SCH_TransfoSpool.png" style="width: 700px;" /><br /></p>
+                                                <p>réduction du nombre de copies demandées.
+
+</p>
                                             </li>
                                         </ul>
-                                        <p class="Liste_puce_1">&#160;</p>
+                                        <p>
+                                            <br />
+                                        </p>
+                                        <p class="Liste_puce_1">
+                                            <img src="SCH_TransfoSpool.png" style="width: 700px;" />
+                                            <br />
+                                        </p>
                                         <ul>
                                             <li>
                                                 <p>Si la transformation est <strong>imposée</strong>, Watchdoc convertit automatiquement le travail d'impression.&#160;<br />L'utilisateur est alors invité à confirmer ses impressions en cliquant sur le bouton <strong>Imprimer</strong>.&#160;<br />Il ne peut pas modifier les paramètres d'impression.&#160;<br />En fonction du paramétrage, Watchdoc l'informe, ou non, des modifications apportées. Nous vous recommandons néanmoins d'informer vos utilisateurs sur la politique d'impression mise en oeuvre, de sorte qu'ils ne soient pas surpris que leurs critères initiaux n'aient pas été respectés :<br /> <br /><img src="Config_WES_TransfoSpool_impos_V3.png" style="width: 500px;" /><br /><cite style="font-size: 10pt;">Information relative à la transformation des travaux d'impression</cite></p>
