@@ -4,7 +4,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>WES&#160;Sharp - Prérequis et configuration préalable</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="Présentation des prérequis et de la configuration préalable des périphériques d'impression Sharp avant installation du WES : ports réseau, modules MX AMX2 et AMX3, authentification utilisateur." /><title>WES&#160;Sharp - Prérequis et configuration préalable</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -205,7 +206,7 @@
                                         <h2>Configurer les ports</h2>
                                         <p>Les ports réseau à ouvrir pour permettre le fonctionnement des WES&#160;sont les suivants&#160;:</p>
                                         <p>&#160;</p>
-                                        <table style="mc-table-style: url('../../Resources/TableSlylesheets/Standard.css');border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-left-style: none;border-left-width: 0px;border-left-color: ;border-right-style: none;border-right-width: 0px;border-right-color: ;border-top-style: none;border-top-width: 0px;border-top-color: ;border-bottom-style: none;border-bottom-width: 0px;border-bottom-color: ;margin-left: 0;margin-right: auto;width: auto;" class="TableStyle-Standard_test TableStyle-Standard" cellspacing="0">
+                                        <table style="mc-table-style: url('../../Resources/TableSlylesheets/Standard.css');border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-left-style: none;border-left-width: 0px;border-left-color: ;border-right-style: none;border-right-width: 0px;border-right-color: ;border-top-style: none;border-top-width: 0px;border-top-color: ;border-bottom-style: none;border-bottom-width: 0px;border-bottom-color: ;margin-left: 0;margin-right: auto;width: auto;" class="TableStyle-Standard" cellspacing="0">
                                             <col style="width: auto;" class="TableStyle-Standard-Column-Regular" />
                                             <col class="TableStyle-Standard-Column-Regular" style="width: auto;" />
                                             <col class="TableStyle-Standard-Column-Regular" style="width: auto;" />
@@ -227,23 +228,27 @@
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        <h2>Installer les modules MX&#160;AMX</h2>
-                                        <p data-mc-conditions="Langues.FR">Watchdoc et le WES Sharp sont compatibles avec les modèles suivants ainsi que toutes les versions OSA 3.5 et supérieures. <br></br>Le WES v.3 n'est compatible qu'avec les modèles équipés du navigateur G2. <br></br>Les modules suivants doivent être installés sur les périphériques d'impression MX-M265, MX-M3051, MX-M3551, MX-M4051, MX-M5051 et MXM6051 pour permettre un bon fonctionnement de Watchdoc :</p>
-                                        <ul data-mc-conditions="Langues.FR">
+                                        <h2>Installer les modules MX&#160;AMX / BP-AM</h2>
+                                        <p data-mc-conditions="Langues.FR">Le WES v.3 est compatible avec les modèles équipés du navigateur G2. </p>
+                                        <p data-mc-conditions="Langues.FR">
+                                            <br />La technologie OSA&#160;est composée d'options dont les 2 suivantes doivent être installées sur les périphériques d'impression MX-M265, MX-M3051, MX-M3551, MX-M4051, MX-M5051 et MXM6051 pour permettre un bon fonctionnement de Watchdoc :</p>
+                                        <ul>
                                             <li>
-                                                <p>MX AMX2 : module de communication avec une application ;</p>
+                                                <p>AMX2 (ou BP-AM11) : module de communication avec des applications tierces permettant notamment d'accéder à Watchdoc et/ou WEScal depuis l'écran du périphérique, par exemple) ; </p>
                                             </li>
                                         </ul>
-                                        <ul data-mc-conditions="Langues.FR">
+                                        <ul>
                                             <li>
-                                                <p>MX AMX3 : module de comptabilisation externe.</p>
+                                                <p>AMX3 (ou BP-AM10) : option permettant l'authentification des utilisateurs sur les périphériques d'impression ;</p>
                                             </li>
                                         </ul>
                                         <p data-mc-conditions="Langues.FR">Lorsque ces modules ne sont pas installés, un message d'erreur apparaît lors de l'installation du WES, empêchant la finalisation de l'installation.</p>
-                                        <p data-mc-conditions="Langues.FR">Ils sont installés par défaut sur les modèles MX-M3071, MXM3071S, MX- M3571, MX- M3571S, MX- M4071, MX- M4071S, MX- M5071, MXM5071S, MX-M6071, MX-M6071S.</p>
-                                        <p data-mc-conditions="Langues.FR">A partir de Watchdoc v5.x, le module AMX3 est également requis pour chaque périphérique. </p>
+                                        <p data-mc-conditions="Langues.FR">Ces modules sont installés par défaut sur les modèles MX-M3071, MXM3071S, MX- M3571, MX- M3571S, MX- M4071, MX- M4071S, MX- M5071, MXM5071S, MX-M6071, MX-M6071S.</p>
+                                        <p data-mc-conditions="Langues.FR">&#160;</p>
+                                        <p data-mc-conditions="Langues.FR,General.Note interne">A partir de la version 6.1.0.<span style="background-color: #ffff00;">5276</span>, seul le module BP-AM10 est nécessaire pour permettre d'installer le WES&#160;v. 3 sur les périphériques Sharp de manière à accéder, depuis l'écran du périphérique, aux applications Watchdoc et <span style="background-color: #ffff00;">WEScan.</span>?</p>
                                         <h2 data-mc-conditions="Langues.FR">Activer l'authentification utilisateur</h2>
-                                        <p data-mc-conditions="Langues.FR">Pour certains périphériques d'impression Sharp, la configuration de l'authentification préalable est nécessaire avant d'installer le&#160;WES.&#160;Lorsque cette configuration n'a pas été effectuée, l'écran d'accueil du WES&#160;Watchdoc n'apparaît pas.</p>
+                                        <p data-mc-conditions="Langues.FR">Pour certains périphériques d'impression Sharp, la configuration de l'authentification préalable sur le périphérique d'impression est nécessaire avant d'installer le&#160;WES.&#160;Lorsque cette configuration n'a pas été effectuée, l'écran d'accueil du WES&#160;Watchdoc n'apparaît pas.</p>
+                                        <p data-mc-conditions="Langues.FR">&#160;</p>
                                         <p data-mc-conditions="Langues.FR">Pour activer l'authentification : </p>
                                         <ol>
                                             <li value="1" data-mc-conditions="Langues.FR">
