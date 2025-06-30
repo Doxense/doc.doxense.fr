@@ -218,13 +218,13 @@
                                             </li>
                                         </ul>
                                         <h2>Connexion</h2>
-                                        <p>Les informations saisies permettent d'établir la communication entre Watchdoc<sup>®</sup> et la base de données:</p>
+                                        <p>Les informations saisies permettent d'établir la communication entre Watchdoc et la base de données:</p>
                                         <ul>
                                             <li>
                                                 <p class="Liste_puce_1"><strong>Type :</strong> sélectionnez, dans la liste, le type de la base SQL&#160;(SQL&#160;Server, Postgresql ou SQLite)</p>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1"><strong>Serveur SQL&#160;</strong>: indiquez dans la zone le serveur où est localisée la base SQL hébergeant l'annuaire.&#160;Cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Parcourir.png" style="width: 26px;height: 20px;" /><strong>Parcourir </strong>pour parcourir votre espace de travail afin d'y sélectionner le serveur parmi les serveurs SQL&#160;détectés dans votre réseau</p>
+                                                <p class="Liste_puce_1"><strong>Serveur SQL&#160;</strong>: indiquez dans la zone le serveur où est localisée la base SQL hébergeant l'annuaire.&#160;Cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Parcourir.png" style="width: 26px;height: 20px;" /> <strong>Parcourir </strong>pour parcourir votre espace de travail afin d'y sélectionner le serveur parmi les serveurs SQL&#160;détectés dans votre réseau</p>
                                             </li>
                                             <li>
                                                 <p><strong>Authentification:</strong> dans la liste, sélectionnez le mode d'authentification au serveru SQL&#160;: SQL&#160;Serveur ou Windows <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term92">SSPI<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Interface du fournisseur de support de sécurité (Security Support Provider Interface). L'interface SSPI est une interface universelle, normalisée par l'industrie, pour les applications distribuées sécurisées.
@@ -237,7 +237,7 @@
                                                 <p class="Liste_puce_1"><strong>Mot de passe :  </strong>saisissez dans la zone le mot de passe du compte utilisateur habilité à gérer la base SQL ;</p>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1"><strong>Base de données : </strong>indiquez le nom de la base de données dans laquelle doivent être enregistrées les codes PUK associés aux utilisateurs inscrits dans l'annuaire Entra ID ( <strong style="font-weight: normal;">watchdocstats, la plupart du temps).</strong>Cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Parcourir.png" style="width: 26px;height: 20px;"></img><strong>Parcourir </strong>pour parcourir le serveur SQL&#160;déclaré précédemment afin d'y sélectionner les tables statistiques qui y sont déclarées. Par défaut, les codes PUK sont enregistrés dans la base des badges (cards). </p>
+                                                <p class="Liste_puce_1"><strong>Base de données : </strong>indiquez le nom de la base de données dans laquelle doivent être enregistrées les codes PUK associés aux utilisateurs inscrits dans l'annuaire Entra ID ( <strong style="font-weight: normal;">watchdocstats, la plupart du temps).</strong>Cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Parcourir.png" style="width: 25px;height: 19px;"></img> <strong>Parcourir </strong>pour parcourir le serveur SQL&#160;déclaré précédemment afin d'y sélectionner les tables statistiques qui y sont déclarées. Par défaut, les codes PUK sont enregistrés dans la base des badges (cards). </p>
                                             </li>
                                         </ul>
                                         <h2>Options</h2>
@@ -274,7 +274,7 @@
                                                 <p class="Liste_puce_1"><strong>Récupération du compte:</strong> saisissez dans ce champ la requête SQL&#160;permettant la récupération du compte utilisateur à l'aide de son code PUK&#160;;</p>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1"><strong>Générer un code PUK :</strong> cochez la case pour permettre à Watchdoc<sup>®</sup> de générer un code PUK&#160;à partir de la valeur trouvée dans la colonne login et précisez pour cela l'algorithme utilisé et la variabilité ; </p>
+                                                <p class="Liste_puce_1"><strong>Générer un code PUK :</strong> cochez la case pour permettre à Watchdoc de générer un code PUK&#160;à partir de la valeur trouvée dans la colonne login et précisez pour cela l'algorithme utilisé et la variabilité ; </p>
                                             </li>
                                             <li>
                                                 <p class="Liste_puce_1"><strong>Algorithme : </strong>sélectionnez dans la liste le type d'algorithme sur lequel est fondé le code PUK&#160;(cette information relève de l'administration de l'annuaire).&#160;:</p>
@@ -304,21 +304,23 @@
                                             </li>
                                         </ul>
                                         <h2>Durée de vie du cache</h2>
-                                        <p>Watchdoc<sup>®</sup> peut conserver un cache des informations propres aux utilisateurs afin d'accélérer le temps de traitement. Les informations saisies permettent de définir la durée de conservation des caches.</p>
+                                        <p>Watchdoc peut conserver un cache des informations propres aux utilisateurs afin d'accélérer le temps de traitement. Les informations saisies permettent de définir la durée de conservation des caches.</p>
                                         <p>&#160;</p>
                                         <ul>
                                             <li>
                                                 <p class="Liste_puce_1"><strong>TTL&#160;Infos : </strong>saisissez le temps (en secondes, minutes, heures ou jours), de la durée de conservation des informations utilisateurs.</p>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1"><strong>TTL NotFound :</strong> saisissez le temps (en secondes, minutes, heures ou jours), de la durée de conservation des informations relatives aux utilisateurs qui se sont authentifiés dans l'application Watchdoc<sup>®</sup> que cette dernière n'a pas trouvés dans l'annuaire.</p>
+                                                <p class="Liste_puce_1"><strong>TTL NotFound :</strong> saisissez le temps (en secondes, minutes, heures ou jours), de la durée de conservation des informations relatives aux utilisateurs qui se sont authentifiés dans l'application Watchdoc que cette dernière n'a pas trouvés dans l'annuaire.</p>
                                             </li>
                                         </ul>
                                         <p>
                                             <br />
                                             <img src="../../Z_Resources/Images/02_Captures/Config_Annuaires_SQL_Timeout.png" />
+                                            <br />
                                         </p>
-                                        <fieldset>Durant le délai indiqué, Watchdoc<sup>®</sup> ne sollicite pas l'annuaire mais son cache. Il n'est donc pas recommandé de définir une durée de conservation trop longue, notamment pour les utilisateurs non trouvés.</fieldset>
+                                        <p>&#160;</p>
+                                        <fieldset>Durant le délai indiqué, Watchdoc ne sollicite pas l'annuaire mais son cache. Il n'est donc pas recommandé de définir une durée de conservation trop longue, notamment pour les utilisateurs non trouvés.</fieldset>
                                         <h2>Cache</h2>
                                         <p>Watchdoc peut conserver en cache les requêtes sur l'annuaire  afin d'en accélérer l'exécution.<br />Par défaut, la durée de vie (<a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term123">TTL<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>La durée de vie (TTL - Time To Live) est la durée pendant laquelle un objet est stocké dans un système de mise en cache avant d’être supprimé ou actualisé.</span></a>) des données d'annuaire mise en cache est de 72 heures.</p>
                                         <p> Cochez les cases des caches que vous souhaitez activer : </p>
@@ -347,7 +349,7 @@
                                         <p class="Liste_puce_1"><strong>Badges :</strong> si les utilisateurs disposent d'un badge, sélectionnez dans la liste l'annuaire duquel ils proviennent.</p>
                                         <p class="Liste_puce_1">&#160;</p>
                                         <h2>E-mail</h2>
-                                        <p>Pour communiquer avec les utilisateurs (lorsque la notification par e-mail est activée), Watchdoc<sup>®</sup> doit disposer de leur adresse mail. Ce paramètre permet de définir la manière dont Watchdoc<sup>®</sup> détermine l'adresse mail des utilisateurs :</p>
+                                        <p>Pour communiquer avec les utilisateurs (lorsque la notification par e-mail est activée), Watchdoc doit disposer de leur adresse mail. Ce paramètre permet de définir la manière dont Watchdoc détermine l'adresse mail des utilisateurs :</p>
                                         <ul>
                                             <li>
                                                 <p class="Liste_puce_1"><strong>stockée dans l'annuaire :</strong> optez pour ce choix si l'annuaire comporte un attribut permettant propre à l'adresse mail ; </p>
@@ -373,13 +375,13 @@
                                         <p>Dans ce cas de figure, il peut être utile d'activer un "fusible logique", qui se déclenche en cas de ralentissement majeur du système, afin de stopper les requêtes envoyées au serveur défaillant.</p>
                                         <fieldset style="text-align: left;">Attention: il est important de bien considérer l'impact de l'activation d'un fusible sur le bon fonctionnement du service !
 <br />Afin de protéger efficacement le serveur de tout dysfonctionnement de l'annuaire distant, il est important de calibrer correctement le fusible. <br />Il est recommandé de tester le paramétrage du fusible avant de le configurer en environnement de production.<br /></fieldset>
-                                        <p>Saisissez dans les champs les valeurs au-delà desquelles Watchdoc<sup>®</sup> cesse d'envoyer des requêtes au serveur d'annuaire pour éviter une surcharge de travail : </p>
+                                        <p>Saisissez dans les champs les valeurs au-delà desquelles Watchdoc cesse d'envoyer des requêtes au serveur d'annuaire pour éviter une surcharge de travail : </p>
                                         <ul>
                                             <li>
                                                 <p class="Liste_puce_1"><strong>Erreurs max. :</strong> il s'agit du nombre d'erreurs "graves" successives tolérées. Une erreur "grave" est, par exemple, un problème de communication réseau, un timeout, un dysfonctionnement du serveur distant. Ces erreurs sont généralement rares et peuvent parfois se régler naturellement (fin d'une période de pointe, redémarrage du serveur distant). Les erreurs "logiques" (comme un échec d'identification, de syntaxe ou de configuration de l'annuaire) sont ignorées.</p>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1"><strong>Durée max. : </strong>il s'agit de la durée moyenne maximale tolérée pour l'exécution des 10 dernières requêtes. En cas de fort ralentissement du serveur distant (période de pointe, timeout réseau,...), cette durée est rallongée.
+                                                <p class="Liste_puce_1"><strong>Durée max. :</strong> il s'agit de la durée moyenne maximale tolérée pour l'exécution des 10 dernières requêtes. En cas de fort ralentissement du serveur distant (période de pointe, timeout réseau,...), cette durée est rallongée.
 </p>
                                             </li>
                                             <li>
@@ -387,7 +389,7 @@
 </p>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1"><strong>Délai attente :</strong>après déclenchement du fusible, délai d'attente avant réactivation.&#160;Au terme de ce délai, Watchdoc<sup>®</sup> relance les requêtes afin de "sonder" l'état du serveur. Si les requêtes aboutissent, le fusible est réactivé, sinon il attend à nouveau l'expiration du délai.
+                                                <p class="Liste_puce_1"><strong>Délai attente :</strong> après déclenchement du fusible, délai d'attente avant réactivation.&#160;Au terme de ce délai, Watchdoc relance les requêtes afin de "sonder" l'état du serveur. Si les requêtes aboutissent, le fusible est réactivé, sinon il attend à nouveau l'expiration du délai.
 A tout moment, l'administrateur peut manuellement désactiver le fusible. Le fusible reste alors coupé jusqu'à ce qu'il soit réactivé manuellement. Pensez à utiliser cette fonctionnalité afin de tester l'impact d'une panne sur le serveur d'impression.<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Fusible.png" /><br /><br /></p>
                                             </li>
                                         </ul>
@@ -407,7 +409,7 @@ A tout moment, l'administrateur peut manuellement désactiver le fusible. Le fus
                                             </li>
                                         </ul>
                                         <h2>Validation de la configuration </h2>
-                                        <p class="Liste_num_1">Cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/icon_Declarer.png" style="width: 26px;height: 24px;" /> <strong>Créer </strong>pour valider la configuration de votre annuaire.</p>
+                                        <p class="Liste_num_1">Cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/icon_Declarer.png" style="width: 26px;height: 24px;" /> <strong>Créer</strong> pour valider la configuration de votre annuaire.</p>
                                     </div>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

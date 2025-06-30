@@ -290,23 +290,40 @@
                                             </li>
                                         </ul>
                                         <h2 id="Watchdoc" data-magellan-target="Watchdoc"><a name="Watchdoc"></a>Watchdoc</h2>
-                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Message d'erreur "JSE Error: XSLT transform failed" sur les pages web Watchdoc après mise à jour</a><a name="24H2"></a><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" aria-expanded="false"> 24H2 d'un serveur  MS Windows - juin 2025</a></span>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Message d'erreur"JSE Error: XSLT transform failed" sur les pages web Watchdoc après mise à jour</a><a name="24H2"></a><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" aria-expanded="false"> 24H2 d'un serveur  MS Windows - juin 2025</a></span>
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> alors que la version Watchdoc 6.1.0.5267 est installée et fonctionne correctement, après une mise à jour 24H2 du serveur MS Windows, on constate que l'authentification fonctionne, mais qu'il est ensuite  impossible d'accéder à l'interface d'administration ou à la page "Mon compte".&#160;<br />Un message d'erreur <strong>JSE Error: XSLT Transform failed - XSLT Error : catastrophic faillure</strong> s'affiche.&#160;</p>
                                                 <p><strong>Cause : </strong>ce problème est  probablement dû à une nouvelle politique de gestion de l'accès mémoire par les processus.</p>
-                                                <p><strong>Résolution :</strong> pour résoudre ce problème, il convient de modifier le fichier JSEConst.asp du serveur Watchdoc&#160;: </p>
+                                                <p><strong>Résolution :</strong> pour résoudre ce problème, il convient de mettre à jour une clé de registre liée à Internet Explorer : </p>
                                                 <ol>
                                                     <li value="1">
-                                                        <p>en tant qu'administrateur du serveur hébergeant Watchdoc, ouvrez le fichier <strong>JSEConst.asp</strong> (présent dans C:\inetpub\wwwroot\watchdoc\toolkit\JSE\&#160;par défaut) ;</p>
+                                                        <p>à l'aide dun compte disposant des droits d'édition, rendez-vous dans la base de registre du serveur qui héberge Watchdoc ; </p>
                                                     </li>
                                                     <li value="2">
-                                                        <p>en ligne 12, remplacez la mention JS_CACHE_LEVEL = JS_CACHE_ALL par JS_CACHE_LEVEL = JS_CACHE_<strong>NOTHING</strong>&#160;;</p>
+                                                        <p>dans la base de registre, rendez-vous dans le dossier HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Internet Explorer\Main\, </p>
                                                     </li>
                                                     <li value="3">
-                                                        <p>enregistrez le fichier modifié&#160;;</p>
+                                                        <p>dans ce dossier, créez la clé suivante : </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>Nom : JScriptReplacement</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Type : REG_DWORD</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Données 0x00000000 (0)</p>
+                                                            </li>
+                                                        </ul>
                                                     </li>
                                                     <li value="4">
-                                                        <p>vérifiez que vous accédez de nouveau aux interfaces web (interface d'admiinistration et page Mon compte) après authentification.</p>
+                                                        <p>Enregistrez cette clé.</p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p>Redémarrez le service Watchdoc.&#160;</p>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p>Vérifiez que vous accédez de nouveau aux interfaces web (interface d'admiinistration et page Mon compte) après authentification.</p>
                                                         <p>&#160;</p>
                                                     </li>
                                                 </ol>
@@ -1074,6 +1091,15 @@
                                         </div>
                                         <p>&#160;</p>
                                         <h3 id="WESToshiba" data-magellan-target="WESToshiba">WES&#160;Toshiba</h3>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WES Toshiba Open Platform.&#160;Message d'erreur The remote SOAP&#160;service failed while processing request '&amp;lt;unknown&amp;gt;': User is operating the panel
+</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> lors de la désinstallation du WES&#160;Toshiba Open Platform, l'opération se déroule bien jusqu'à la ligne Set MDS&#160;settings qui affiche le message d'erreur suivant&#160;: The remote SOAP&#160;service failed while processing request '&amp;lt;unknown&amp;gt;': User is operating the panel:</p>
+                                                <p><strong>Cause :</strong> le WES&#160;étant opérationnel, il est interprété comme étant utilisé.<br /></p>
+                                                <p><strong>Résolution :</strong> sur l'écran du périphérique d'impression, appuyez 2&#160;fois consécutives sur le bouton <strong>Interrupt </strong>pour revenir à l'écran d'accueil d'origine (cf. <a href="../W_WES/10_Toshiba/07_Toshiba_WES_Depanner.htm#Desinstall" target="_blank" alt="Lien vers la fiche pratique de configuration de l'impression interserveur" title="Lien vers la fiche pratique de configuration de l'impression interserveur">Dépanner le WES Toshiba</a>).</p>
+                                            </div>
+                                        </div>
+                                        <p>&#160;</p>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WES Toshiba Open Platform.&#160;Message d'erreur dans le rapport d'installation du WES&#160;: "Set security settings : the remote SOAP service failed while processing request '&amp;lt:unknown&amp;gt': internal server error</a></span>
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> lors de l'installation du WES&#160;sur la file, le rapport d'installation indique qu'une erreur est survenue à l'étape "Set security settings".<br />Dans les logs, on peut lire le message "Server responded with a 'SOAP-ENV:Fault'"</p>

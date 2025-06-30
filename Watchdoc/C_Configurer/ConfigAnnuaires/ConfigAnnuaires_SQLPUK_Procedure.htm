@@ -340,13 +340,13 @@
                                         <p>Dans ce cas de figure, il peut être utile d'activer un "fusible logique", qui se déclenche en cas de ralentissement majeur du système, afin de stopper les requêtes envoyées au serveur défaillant.</p>
                                         <fieldset style="text-align: left;">Attention: il est important de bien considérer l'impact de l'activation d'un fusible sur le bon fonctionnement du service !
 <br />Afin de protéger efficacement le serveur de tout dysfonctionnement de l'annuaire distant, il est important de calibrer correctement le fusible. <br />Il est recommandé de tester le paramétrage du fusible avant de le configurer en environnement de production.<br /></fieldset>
-                                        <p>Saisissez dans les champs les valeurs au-delà desquelles Watchdoc<sup>®</sup> cesse d'envoyer des requêtes au serveur d'annuaire pour éviter une surcharge de travail : </p>
+                                        <p>Saisissez dans les champs les valeurs au-delà desquelles Watchdoc cesse d'envoyer des requêtes au serveur d'annuaire pour éviter une surcharge de travail : </p>
                                         <ul>
                                             <li>
                                                 <p class="Liste_puce_1"><strong>Erreurs max. :</strong> il s'agit du nombre d'erreurs "graves" successives tolérées. Une erreur "grave" est, par exemple, un problème de communication réseau, un timeout, un dysfonctionnement du serveur distant. Ces erreurs sont généralement rares et peuvent parfois se régler naturellement (fin d'une période de pointe, redémarrage du serveur distant). Les erreurs "logiques" (comme un échec d'identification, de syntaxe ou de configuration de l'annuaire) sont ignorées.</p>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1"><strong>Durée max. : </strong>il s'agit de la durée moyenne maximale tolérée pour l'exécution des 10 dernières requêtes. En cas de fort ralentissement du serveur distant (période de pointe, timeout réseau,...), cette durée est rallongée.
+                                                <p class="Liste_puce_1"><strong>Durée max. :</strong> il s'agit de la durée moyenne maximale tolérée pour l'exécution des 10 dernières requêtes. En cas de fort ralentissement du serveur distant (période de pointe, timeout réseau,...), cette durée est rallongée.
 </p>
                                             </li>
                                             <li>
@@ -354,7 +354,7 @@
 </p>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1"><strong>Délai attente :</strong>après déclenchement du fusible, délai d'attente avant réactivation.&#160;Au terme de ce délai, Watchdoc<sup>®</sup> relance les requêtes afin de "sonder" l'état du serveur. Si les requêtes aboutissent, le fusible est réactivé, sinon il attend à nouveau l'expiration du délai.
+                                                <p class="Liste_puce_1"><strong>Délai attente :</strong> après déclenchement du fusible, délai d'attente avant réactivation.&#160;Au terme de ce délai, Watchdoc relance les requêtes afin de "sonder" l'état du serveur. Si les requêtes aboutissent, le fusible est réactivé, sinon il attend à nouveau l'expiration du délai.
 A tout moment, l'administrateur peut manuellement désactiver le fusible. Le fusible reste alors coupé jusqu'à ce qu'il soit réactivé manuellement. Pensez à utiliser cette fonctionnalité afin de tester l'impact d'une panne sur le serveur d'impression.<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Fusible.png" /><br /><br /></p>
                                             </li>
                                         </ul>
