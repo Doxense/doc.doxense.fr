@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr-fr" xml:lang="fr-fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr-fr" xml:lang="fr-fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="Mettre à jour / restaurer Watchdoc" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="description" content="Présentation de la procédure de mise à jour et de restauration de Watchdoc" />
-        <meta name="description" content="Prérequis d'installation de mise à jour Watchdoc" /><title>Watchdoc v6.1 - Mettre à jour - Prérequis</title>
+        <meta name="description" content="Prérequis d'installation de mise à jour Watchdoc" /><title>Watchdoc v. 6.1 - Mettre à jour - Prérequis et préparation</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -196,7 +196,7 @@
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
                                         <h1><a name="aanchor100"></a>
-                                            <MadCap:concept term="WD" />Watchdoc v6.1 - Mettre à jour - Prérequis</h1>
+                                            <MadCap:concept term="WD" />Watchdoc v. 6.1 - Mettre à jour - Prérequis et préparation</h1>
                                         <p>Avant de mettre à jour Watchdoc, veuillez procéder aux vérifications suivantes.</p>
                                         <h2>Licence</h2>
                                         <p>Pour mettre à jour Watchdoc en version 6.1, vous avez besoin d'une nouvelle licence.</p>
@@ -221,7 +221,7 @@
                                                 <p class="Liste_num_1">dans l'éditeur de base de registre (Registry Editor), cliquez sur HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework&#160;;</p>
                                             </li>
                                             <li value="3">
-                                                <p class="Liste_num_1">sélectionnez le dernier dossier préfixé par <b>"v"</b> dans lequel sont enregistrés les dossiers de versions, cliquez sur <strong>SKUs</strong> et déployez l'arborescence pour connaître la dernière version installée&#160;;<br /><br /><img src="../Z_Resources/Images/02_Captures/MAJ_WD_Verif_Version_DotNet472.png" style="width: 699px;height: 443px;" /><br /></p>
+                                                <p class="Liste_num_1">sélectionnez le dernier dossier préfixé par <b>"v"</b> dans lequel sont enregistrés les dossiers de versions, cliquez sur <strong>SKUs</strong> et déployez l'arborescence pour connaître la dernière version installée&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/MAJ_WD_Verif_Version_DotNet472.png" style="width: 699px;height: 443px;" /><br /></p>
                                             </li>
                                         </ol>
                                         <h2>Droits</h2>
@@ -252,27 +252,52 @@
                                                 <p>d'un logiciel de gestion de la base de données (Microsoft SQL&#160;Server Management Studio pour MS SQL<sup>®</sup>, par exemple).&#160;</p>
                                             </li>
                                         </ul>
-                                        <h2>Etapes</h2>
-                                        <p>Les étapes de la mise à jour sont les suivantes : </p>
+                                        <h2><a name="Preparation"></a>Préparer la mise à jour</h2>
                                         <ol>
                                             <li value="1">
-                                                <p class="Liste_num_1">arrêt du service Watchdoc&#160;; </p>
+                                                <p class="Liste_num_1">Téléchargez le package d'installation de la nouvelle version depuis la <a href="../A_Getting_Started/Versions_FR.htm" target="_blank" title="Lien vers la page de téléchargement du package d'installation" alt="Lien vers la page de téléchargement du package d'installation">page dédiée.</a></p>
                                             </li>
                                             <li value="2">
-                                                <p>sauvegarde du fichier de profils de scans personnalisés si utilisez WEScan et en avez personnalisé les profils</p>
+                                                <p class="Liste_num_1">Connecté en tant qu'administrateur sur le serveur d'impression Watchdoc, créez un dossier temporaire (C:\TEMPWD).</p>
                                             </li>
                                             <li value="3">
-                                                <p class="Liste_num_1">mise à jour de la base de données&#160;(si la version de départ est antérieure à la v6.0) ; </p>
+                                                <p class="Liste_num_1">Copiez l'archive <strong>Watchdoc_Update_[Nouvelle_Version].zip</strong> dans le dossier C:\TEMPWD et décompressez-la&#160;dans ce dossier (<strong>clic droit&#160;&gt;&#160;extraire tout</strong>).</p>
                                             </li>
                                             <li value="4">
-                                                <p class="Liste_num_1">mise à jour de Watchdoc ;</p>
-                                                <p>N.B.&#160;: si vous utilisez les droits d'accès et rôles d'administration et que Watchdoc est installé en domaine (master/slaves); cochez la case "global" des droits et rôles à répliquer sur tous les serveurs lors de la mise à jour (cf.&#160;<a href="../C_Configurer/ConfigDroits/ConfigDroits_Procedure.htm#Global" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Configurer les droits et rôles</a>)&#160;;</p>
+                                                <p class="Liste_num_1">Vérifiez le contenu du dossier décompressé :</p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>KernelXX.zip</strong> : contient les nouveaux fichiers pour le service Watchdoc&#160;;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>WatchdocUpdate.exe </strong>: exécutable pour la mise à jour&#160;; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>WatchdocUpdate.exe.config </strong>: fichier contenant le fichier de configuration de l'exécutable&#160;;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2" style="text-align: left;"><strong>WebXX.zip :</strong> contient les nouveaux fichiers pour le site web Watchdoc&#160;:<br></br><br></br><img src="../Z_Resources/Images/02_Captures/WD60_MMJ_ContenuFichierMaJ.png" style="width: 717px;height: 265px;"></img></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                </ul>
                                             </li>
                                             <li value="5">
-                                                <p>mise à jour de WSC&#160;- Console de Supervision (si vous l'utilisez) ;<br />Attention : la mise à jour vers WSC&#160;v6.1 nécessite une désinstallation puis une réinstallation des pilotes d'impression (cf.&#160;<a href="../F_WSC/WSC6.1_Ajouter_Pilote.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Procédure de création d'un pilote d'impression</a>).</p>
-                                                <p>&#160;</p>
+                                                <p>Si vous utilisez WEScan et avez personnalisé les profils de scan directement dans le dossier des profils par défaut (fichiers JSON), faites-en une sauvegarde que vous pourrez rétablir après la mise à jour.Ce dossier est en effet écrasé au cours de la mise à jour. Pour information, il est recommandé de créer un dossier spécifique pour les profils personnalisés <a name="MaJ_WEScan" href="../C_Configurer/ConfigWEScan/WEScan_Config_Profil_SPC_utilisation.htm" target="_blank">(cf.&#160;Utiliser ScanProfilesCustomizer).</a></p>
                                             </li>
                                         </ol>
+                                        <h2>Note relative à la migration des données</h2>
+                                        <p>Le schéma de la base de données de Watchodcet celui de la  a été modifié : </p>
+                                        <ul>
+                                            <li>
+                                                <p>en v. 5.4</p>
+                                            </li>
+                                            <li>
+                                                <p>en v. 6.0</p>
+                                            </li>
+                                        </ul>
+                                        <p>&#160;</p>
+                                        <p>Donc, si vous partez d'une version antérieure à ces versions, il est nécessaire d'effectuer une migration des données lors de la mise à jour.&#160;<br />Logiquement, si vous partez d'une version 5.4, une seule migration est nécessaire, mais si vous partez d'une version antérieure à la v. 5.4,  2 migrations sont nécessaires.</p>
+                                        <p>&#160;</p>
                                         <fieldset>Notez que la mise à jour nécessite un arrêt de production.<br />Il convient donc de la programmer à un moment où l'impact sur l'activité d'impression n'est pas trop important (idéalement HNO).&#160;</fieldset>
                                     </div>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy_First mc-component nocontent">

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr-fr" xml:lang="fr-fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr-fr" xml:lang="fr-fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="Dépannages" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="Article de dépannage permettant de résoudre l'anomalie signalée par le message d'erreur &quot;Watchdoc is not responding&quot;." /><title>Watchdoc - Erreur "Watchdoc is not responding" après une mise à jour</title>
+        <meta name="description" content="Article de dépannage permettant de résoudre l'anomalie signalée par le message d'erreur &quot;Watchdoc is not responding&quot;." /><title>Watchdoc - Gestion des flux du firewall</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -194,54 +194,62 @@
                                             </button>
                                         </div>
                                     </div>
+                                    <div class="nocontent">
+                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
+                                        </div>
+                                    </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor288"></a>
-                                            <MadCap:concept term="ADE" />Watchdoc - Erreur "Watchdoc is not responding" après une mise à jour</h1>
-                                        <p><b>Contexte</b>
+                                        <h1><a name="aanchor290"></a>
+                                            <MadCap:concept term="ADE" />Watchdoc - Gestion des flux du firewall</h1>
+                                        <p><strong>Mai 2025</strong>
                                         </p>
-                                        <p>Alors que Watchdoc est installé </p>
+                                        <h2><b>Contexte</b>
+                                        </h2>
+                                        <p>Alors que Watchdoc est déjà installé et fonctionne correctement </p>
                                         <ul>
                                             <li>
-                                                <p>dans un domaine (configuration master/slaves) </p>
+                                                <p>dans un domaine (configuration master/slaves) ;</p>
                                             </li>
                                             <li>
                                                 <p>en mode déporté (serveur web IIS installé sur un autre serveur), </p>
                                             </li>
                                         </ul>
-                                        <p>on constate qu'après la mise à jour dans la version  6.1.0.5221,  les interfaces web des serveurs slaves sont inacessibles.&#160;En effet, à la place de l'interface d'administration et de la page "Mon compte", le  message suivant s'affiche dans le navigateur : </p>
+                                        <p>on constate qu'après la mise à jour dans la version  6.1.0.5221,  les interfaces web des serveurs slaves sont inacessibles.&#160;<br />En effet, à la place de l'interface d'administration et de la page "Mon compte", le  message suivant s'affiche dans le navigateur : </p>
                                         <p>"Watchdoc is not responding. A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond."</p>
                                         <p>"Diagnostic : le service est momentanément indisponible" : <br /></p>
                                         <p>&#160;</p>
                                         <p>Ou,</p>
-                                        <p>on vient d'installer Watchdoc en mode déporté(serveur web IIS installé sur un autre serveur) et lorsque l'on clique sur le raccourci permettant d'accéder à l'interface de configuration de Watchdoc, on accède au messager d'erreur suivant :</p>
+                                        <p>on vient d'installer Watchdoc en mode déporté (serveur web IIS installé sur un autre serveur) et lorsque l'on clique sur le raccourci <img src="../Z_Resources/Images/01_Generiques/Racc_Watchdoc.png" style="width: 34px;height: 32px;" /> installé sur le bureau du serveur, on accède au messager d'erreur suivant :</p>
                                         <p>
                                             <br />
-                                            <img src="../Z_Resources/Images/02_Captures/ADE_Domaine_ReglesFirewall.png" />
+                                            <img src="../Z_Resources/Images/02_Captures/ADE_Domaine_ReglesFirewall.png" style="width: 700px;height: auto;" />
                                             <br />
                                             <br />
                                         </p>
-                                        <p>&#160;</p>
-                                        <p><b>Cause</b>
-                                        </p>
+                                        <h2><b>Cause</b>
+                                        </h2>
                                         <p>De nouvelles recommandations de sécurité sont en vigueur depuis la version Watchdoc 6.1.0.5122 : pour sécuriser les communications entre les serveurs, nous déconseillons l'installation de Watchdoc en mode "déporté", c'est-à-dire avec un serveur web IIS&#160;situé sur un autre serveur que le serveur d'impression Watchdoc (cf.&#160;<a href="../B_Installer/WD_Standard.htm" target="_blank">Watchdoc standard - Présentation</a>).</p>
                                         <p>&#160;</p>
-                                        <p>En conséquence, de nouvelles règles de sécurité ont été ajoutées depuis Watchdoc v 6.1.0.5122 pour sécuriser les communications entre les serveurs : le port 5744 est bloqué pour toutes les communications ne provenant pas de localhost.</p>
-                                        <p>&#160;</p>
-                                        <p><b>Résolution</b>
-                                        </p>
+                                        <p>En conséquence, de nouvelles règles ont été ajoutées depuis Watchdoc v 6.1.0.5122 pour sécuriser les communications entre les serveurs : le port 5744 est bloqué pour toutes les communications ne provenant pas du serveur "localhost".</p>
+                                        <h2><b>Résolution</b>
+                                        </h2>
                                         <p>Pour résoudre ce problème, il convient d'ajouter une règle dans le firewall afin d'ouvrir le port TCP 5744 sur les serveurs slaves :</p>
                                         <ol>
                                             <li value="1">
-                                                <p>accédez au serveur slave en tant qu'administrateur ;</p>
+                                                <p>en tant qu'administrateur, accédez au serveur slave&#160;;</p>
                                             </li>
                                             <li value="2">
                                                 <p>accédez à l'outil de gestion du firewall ;</p>
                                             </li>
                                             <li value="3">
-                                                <p>dans la liste des règles "entrantes", ajoutez une règle autorisant les entrées sur le port 5744 (inbound rules) ; </p>
+                                                <p>dans la liste des règles "entrantes" (inbound rules), ajoutez une règle autorisant les entrées sur le port 5744 ; </p>
                                             </li>
                                             <li value="4">
-                                                <p>depuis le serveur slave, relancez un navigateur et vérifiez que les interfaces sont de nouveau accessibles.<br /><br /><img src="../Z_Resources/Images/02_Captures/ADE_WDNotResponding_RegleFirewall.png" style="width: 700px;height: auto;" /></p>
+                                                <p>validez l'ajout de cette règle dans le firewall :<br /><br /><img src="../Z_Resources/Images/02_Captures/ADE_WDNotResponding_RegleFirewall.png" style="width: 700px;height: auto;" /></p>
+                                                <p>&#160;</p>
+                                            </li>
+                                            <li value="5">
+                                                <p>depuis le serveur slave, relancez un navigateur et vérifiez que les interfaces sont de nouveau accessibles.<br /></p>
                                             </li>
                                         </ol>
                                     </div>

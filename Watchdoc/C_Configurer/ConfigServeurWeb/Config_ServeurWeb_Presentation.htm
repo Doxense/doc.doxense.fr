@@ -199,7 +199,7 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor15"></a>
+                                        <h1><a name="aanchor14"></a>
                                             <MadCap:concept term="CFG" />Wathdoc - Serveur web - Configurer les sections DSP et certificats</h1>
                                         <h2>Principe</h2>
                                         <p>Apparue dans la version 6.1.0.5262, cette section rassemble les paramètres relatifs au serveur Web de Watchdoc et aux certificats qui en sécurisent l'accès.</p>
@@ -393,7 +393,7 @@
                                         <h3>Désigner le certificat comme certificat courant</h3>
                                         <ol>
                                             <li value="1">
-                                                <p> Dans la liste des certificats, cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Certificat_Courant.png" style="width: 28px;height: 28px;" /> situé à droite du certificat que vous venez de faire signer&#160;;</p>
+                                                <p>Dans la liste des certificats, cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Certificat_Courant.png" style="width: 28px;height: 28px;" /> situé à droite du certificat que vous venez de faire signer&#160;;</p>
                                             </li>
                                             <li value="2">
                                                 <p>Vérifiez que la coche verte <img src="../../Z_Resources/Images/02_Captures/Boutons/icon_Coche_verte.png" /> s'affiche à droite du certificat désigné comme certificat courant :<br /><br /><img src="../ConfigCertificats/WD_Config_Certif_Courant.png" /></p>
@@ -401,120 +401,6 @@
                                             </li>
                                         </ol>
                                         <p><span style="font-family: 'Wingdings'">è</span>Vous pouvez dès lors supprimer les autres certificats si vous le souhaitez.</p>
-                                        <h2>Configurer la  section <a name="DSP"></a>DSP</h2>
-                                        <p>Les paramètres de la section DSP&#160;s'appliquent au serveur web de Watchdoc.</p>
-                                        <ul>
-                                            <li>
-                                                <p><strong>Point d'entrée du serveur web</strong> : pour les WES, si vous souhaitez utiliser un port SSL différent du port par défaut (notamment pour l'associer à un certificat spécifique), ajoutez un point d'entrée spécifique :</p>
-                                                <ul>
-                                                    <li>
-                                                        <p><strong>Identifiant : </strong>l'identifiant est généré par défaut. Renommez-le si nécessaire.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Port d'écoute : </strong>indiquez le numéro du port chargé d'établir la communication.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Port public : </strong>indiquez le numéro du port public s'il est différent du port d'écoute. Ce paramètre est nécessaire si un proxy sécurise l'accès au serveur Watchdoc. Attention, cette information est uniquement déclarative : si le port public est différent du port d'écoute, la correspondance est configurée dans le proxy.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>HTTPS : </strong>cochez la case si le point est sécurisé.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Certificat :</strong> sélectionnez dans la liste le certificat associé au point d'entrée (cf.&#160;<a href="../ConfigCertificats/ConfigCertificats_Procedure.htm" target="_blank">Générer les certificats</a>).</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Protocoles de sécurisation :</strong> dans la liste, sélectionnez le protocole de sécurisation associé au point d'entrée.</p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                        <ul>
-                                            <li>
-                                                <p class="TitreNiveau3"><strong>Serveur Web</strong>
-                                                </p>
-                                                <ul style="list-style-type: circle;">
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Activer le serveur web <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term47">DSP<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Les fichiers SHD appartiennent principalement à Print Spooler de Microsoft. Un fichier SHD est un travail d'impression fantôme contenant des informations d'en-tête sur un travail d'impression lancé par le service Print Spooler sur Windows système d'exploitation. Les informations enregistrées dans un fichier SHD incluent une copie des paramètres de travail d'impression enregistrés dans le document spoule réel (fichier SPL). 
-(source : https://filext.com/)</span></a> :</strong> cochez la case pour activer le serveur web Watchdoc qui permet les interactions avec les WES.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Port SSL :</strong> indiquez le port d'accès au serveur DSP&#160;(5753 par défaut) ; </p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>N'autoriser que les connexions SSL :</strong> cochez cette case pour obliger le serveur à fonctionner de manière sécurisée avec le protocole SSL ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Utiliser uniquement les protocoles TLS :</strong>
-                                                        </p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                        <ul>
-                                            <li>
-                                                <p class="TitreNiveau3"><strong>Protocoles de sécurisation</strong>
-                                                </p>
-                                                <ul style="list-style-type: circle;">
-                                                    <li>
-                                                        <p class="TitreNiveau3"><strong>Utiliser les protocoles autorisés par le Système d'administration : </strong>choisissez cette option pour permettre au système d'administration d'utiliser ses propres paramètres SSL&#160;et TLS&#160;plutôt que ceux qui sont paramétrés.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Utiliser les paramètres suivants : </strong>choisissez cette option pour utiliser les paramètres qui sont listés ensuite, puis cochez les cases des protocoles que vous souhaitez utiliser (SSL ou TLS v. 1.0, v1.1, v1.2) : </p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <p class="TitreNiveau3"><strong>Journaux</strong>. </p>
-                                                <ul style="list-style-type: circle;">
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Historiser les requêtes entrantes (dans le journal du serveur web) :</strong> cochez la case si vous souhaitez enregistrer l'activité réseau ( chaque packet request et response) sur le serveur DSP. Par défaut, chaque requête web traitée par le serveur (syntaxe compatible W3C Log) est enregistrée dans un fichier log sur le disque. </p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Enregistrer toute l'activité réseau sur le disque (un fichier par requête ou réponse) :</strong>
-                                                        </p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Chemin :</strong> précisez dans ce champ le chemin d'accès au dossier dans lequel doivent être enregistrés les fichiers de logs.</p>
-                                                    </li>
-                                                </ul>
-                                                <p>Les fichiers trace nécessitant de l'espace sur le serveur, nous vous recommandons d'activer l'historisation temporairement, afin d'établir un diagnostic relatif à l'activité réseau sur le serveur DSP et de la désactiver une fois les traces collectées</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Paramètres avancés</strong>
-                                                </p>
-                                            </li>
-                                        </ul>
-                                        <ul style="list-style-type: circle;">
-                                            <ul style="list-style-type: circle;">
-                                                <li>
-                                                    <p class="Liste_puce_1"><strong>Nombre de clients maximum :</strong> indiquez dans ce champ le nombre maximum de clients autorisés à se connecter au serveur.</p>
-                                                </li>
-                                                <li>
-                                                    <p class="Liste_puce_1"><strong>Optimiser le serveur pour un usage principalement depuis le Réseau Local (Ethernet)</strong> : cochez la case pour activer l'optimisation</p>
-                                                </li>
-                                            </ul>
-                                            <ul style="list-style-type: circle;">
-                                                <li>
-                                                    <p class="Liste_puce_1"><strong>Optimiser le serveur pour un grand nombre de clients connectés : </strong>cochez la case pour activer...</p>
-                                                </li>
-                                                <li>
-                                                    <p class="Liste_puce_1"><strong>Taille requête POST maximum :</strong> indiquez, en Gb (Mb ?), la taille des requêtes POST acceptées par le serveur </p>
-                                                </li>
-                                                <li>
-                                                    <p class="Liste_puce_1"><strong>Autoriser les connexions Keep-Alive (nécessaire pour certaines fonctionnalités)&#160;:</strong> cochez cette case pour permettre </p>
-                                                </li>
-                                                <li>
-                                                    <p class="Liste_puce_1"><strong>Activer la compression automatique des réponses (consomme des ressources CPU) </strong>: cochez cette case pour compresser les réponses fournies par le serveur aux requêtes qui lui sont envoyées par les applications tierces.</p>
-                                                </li>
-                                            </ul>
-                                        </ul>
-                                        <ul>
-                                            <li>
-                                                <p><strong>Proxy inverse :</strong> cochez cette case si le réseau est doté d'un reverse proxy et indiquez l'IP du proxy (par exemple http://localhost:8000)<br /><br /><img src="../../Z_Resources/Images/02_Captures/Configurer_GestAvancee_DSP.png" style="width: 700px;" /></p>
-                                            </li>
-                                        </ul>
-                                        <p>&#160;</p>
-                                        <p>&#160;</p>
                                     </div>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

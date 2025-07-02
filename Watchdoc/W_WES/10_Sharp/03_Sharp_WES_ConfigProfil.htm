@@ -233,9 +233,6 @@
                                                 <p><strong>Nom&#160;:</strong> saisissez le nom du profil WES. Ce nom explicite n'est affiché que dans les interfaces d'administration.</p>
                                             </li>
                                             <li>
-                                                <p><strong>Application OSA - option AMX2 :</strong> cochez obligatoirement la case lors de l'activation du WES&#160;V3 (optionnelle en V2).</p>
-                                            </li>
-                                            <li>
                                                 <p><strong>Global&#160;:</strong> dans le cas d'une configuration de domaine (maître/esclaves), cochez cette case pour répliquer ce profil du serveur maître vers les autres serveurs.</p>
                                             </li>
                                             <li>
@@ -273,9 +270,6 @@ Par souci de sécurité, nous déconseillons l'utilisation du code PUK et recomm
                                                     </li>
                                                     <li>
                                                         <p><strong>Standard - Nom d'utilisateur et mot de passe : </strong>autoriser l'authentification par nom d'utilisateur et mot de passe.<br />N.B.&#160;: nous<strong> ne recommandons pas</strong> l'authentification par login et mot de passe. Néanmoins, si vous optez pour ce mode, assurez-vous que l'écran et le clavier du périphérique sont configurés dans la langue de l'utilisateur et qu'ils permettent de saisir tous les caractères, même les diacritiques (accents, cédille, tilde).<br /><br /><img src="Config_WES_Profil_Sharp_SectionAuthClavier_V61.png" /></p>
-                                                        <p>
-                                                            <br />
-                                                        </p>
                                                     </li>
                                                 </ul><a name="Mode_Galerie"></a>
                                                 <ul>
@@ -395,19 +389,11 @@ Par souci de sécurité, nous déconseillons l'utilisation du code PUK et recomm
                                                 <p><strong>Mot de passe obIigatoire :</strong> cochez cette case pour obliger les utilisateurs à saisir leur mot de passe dans les paramètres du pilote ou de l'application mobile Sharp. Si le mot de passe est absent, l'impression est considérée comme anonyme et sera rejetéesi l'impression anonyme n'est pas autorisée.</p>
                                             </li>
                                         </ul>
-                                        <h3>Configurer la section Impression à la demande</h3>
-                                        <p style="text-align: justify;">Dans cette section, précisez les paramètres liés à la fonction d'impression à la demande, c'est-à-dire l'interface depuis laquelle l'utilisateur accède à ses travaux en attente et depuis laquelle il supprime ou valide les impressions&#160;:</p>
+                                        <h3>Configurer la section Gestion de la redirection (depuis v. 6.1.0.5290)</h3>
+                                        <p>Configurez ici le fonctionnement du WES&#160;avec ou sans l'option AMX2 / BP-AM10 (cf.&#160;<a href="02_Sharp_WES_ConfigPrea.htm#Options" target="_parent">Prérequis d'installation</a>).</p>
                                         <ul>
                                             <li>
-                                                <p class="Liste_puce_1" style="text-align: justify;"><strong>Ordre de tri </strong>: dans la liste, sélectionnez l'ordre dans lequel les impressions doivent être présentées sur le WES : </p>
-                                                <ul>
-                                                    <li>
-                                                        <p class="Liste_puce_2" style="text-align: justify;"><strong>Chronologique inverse:</strong> du plus récent au plus ancien&#160;;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_2" style="text-align: justify;"><strong>Chronologique:</strong> du plus ancien au plus récent.</p>
-                                                    </li>
-                                                </ul>
+                                                <p><strong>Application OSA - option AMX2- BP-AM10</strong> : cochez la case pour utiliser le WES&#160;avec l'option AMX2 / BP-AM10.&#160;Dans ce cas, un écran spécifique s'affiche après l'authentification pour donner accès aux fonctions Watchdoc, WEScan et les fonctions du périphérique.&#160;<br />Si vous ne cochez pas la case, le WES&#160;utilise l'option AMX3 /&#160;BP-AM11 avec les fonctions du WES&#160;v. 3 classiques (mais sans accès à WEScan).</p>
                                             </li>
                                             <li>
                                                 <p><strong>Redirection :</strong> si l'utilisateur n'a pas de travaux d'impression en attente, précisez le comportement du WES :</p>
@@ -420,7 +406,7 @@ Par souci de sécurité, nous déconseillons l'utilisation du code PUK et recomm
                                                 </ul>
                                                 <ul>
                                                     <li>
-                                                        <p><strong>Demander à l'utilisateur : </strong>le WES&#160;accède directement à la page des travaux en attente s'il y en a ou au menu du périphérique s'il n'y a pas de travaux en attente.&#160;</p>
+                                                        <p><strong>Demander à l'utilisateur : </strong>s'il y en a, le WES&#160;accède directement à la page des travaux en attente  ou,  s'il n'y a pas de travaux en attente, au menu du périphérique.&#160;</p>
                                                     </li>
                                                     <li>
                                                         <p>
@@ -443,6 +429,51 @@ Par souci de sécurité, nous déconseillons l'utilisation du code PUK et recomm
                                                     </li>
                                                 </ul>
                                             </li>
+                                            <li>
+                                                <p><strong>Contenu du menu :</strong> cliquez sur <strong>Ajouter une entrée</strong> pour sélectionner la ou les applications à afficher sur l'écran du périphérique.<br /><br /><img src="Config_WES_Profil_Sharp_SectionRedirec_V61.png" style="width: 602px;height: 171px;" /> <img src="Config_WES_Profil_Sharp_SectionRedirec_Ecran_V61.png" style="width: 256px;height: 160px;" /><br /></p>
+                                            </li>
+                                        </ul>
+                                        <h3>Configurer la section Impression à la demande</h3>
+                                        <p style="text-align: justify;">Dans cette section, précisez les paramètres liés à la fonction d'impression à la demande, c'est-à-dire l'interface depuis laquelle l'utilisateur accède à ses travaux en attente et depuis laquelle il supprime ou valide les impressions&#160;:</p>
+                                        <ul>
+                                            <li>
+                                                <p class="Liste_puce_1" style="text-align: justify;"><strong>Ordre de tri </strong>: dans la liste, sélectionnez l'ordre dans lequel les impressions doivent être présentées sur le WES : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_2" style="text-align: justify;"><strong>Chronologique inverse:</strong> du plus récent au plus ancien&#160;;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2" style="text-align: justify;"><strong>Chronologique:</strong> du plus ancien au plus récent.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p><strong>Application OSA :</strong>
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <p><strong>Durée maximum des requêtes : </strong>indiquez, en secondes, la durée d'inactivité au-delà de laquelle les requêtes ne sont plus exécutées&#160;; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Durée de session :</strong> indiquez, en secondes, la durée d'inactivité au-delà de laquelle l'utilisateur qui s'est identifié sur le WES&#160;en est automatiquement déconnecté.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p><strong>Pages optionnelles :</strong>
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <p><strong>Activer la page Zoom :</strong> cochez cette case pour que l'utilisateur puisse activer le zoom sur les travaux en attente d'impression ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Activer la transformation de spools :</strong> cochez cette case pour activer la fonction de transformation de spools ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Activer les prévisualisations dans la page des jobs :</strong> cochez cette case pour que l'utilisateur puisse prévisualiser les travaux en attente avant de valider l'impression. </p>
+                                                    </li>
+                                                </ul>
+                                            </li>
                                         </ul>
                                         <ul>
                                             <li>
@@ -455,7 +486,7 @@ Par souci de sécurité, nous déconseillons l'utilisation du code PUK et recomm
                                                         <p><strong>Utiliser un logo personnalisé :</strong>(pour le WES&#160;V2 uniquement) cochez la case si vous souhaitez afficher un logo personnalisé à la place du logo Watchdoc par défaut.&#160;</p>
                                                     </li>
                                                     <li>
-                                                        <p><strong>Afficher les messages d'avertissement :</strong> cochez cette case si vous souhaitez informer les utilisateurs de la politique d'impression mise en place qui pourrait modifier leurs choix initiaux.<br /><br /><img src="../../Z_Resources/Images/02_Captures/WES/Config_WES_Profil_Sharp_SectionImpressDemande_V60.png" /></p>
+                                                        <p><strong>Afficher les messages d'avertissement :</strong> cochez cette case si vous souhaitez informer les utilisateurs de la politique d'impression mise en place qui pourrait modifier leurs choix initiaux.<br /><br /><img src="../../Z_Resources/Images/02_Captures/WES/Config_WES_Profil_Sharp_SectionImpressDemande_V60.png" /><br /></p>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -602,7 +633,7 @@ Par souci de sécurité, nous déconseillons l'utilisation du code PUK et recomm
                                                 <p class="Liste_puce_1"><strong>Délai de ping :</strong> indiquez, en secondes, la fréquence à laquelle  le périphérique interroge le serveur pour vérifier sa configuration et l'informer qu'il fonctionne correctement :<br /><br /><img src="../../Z_Resources/Images/02_Captures/WES/Config_WES_Sharp_Divers.png" style="width: 700px;height: auto;" /></p>
                                             </li>
                                         </ul>
-                                        <h3>Configurer la section Historique</h3>
+                                        <h3>Section Historique</h3>
                                         <p>Dans cette section sont affichées les informations relatives au profil WES&#160;configuré et aux modifications qui y ont été apportées.<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Z_Resources/Images/02_Captures/WES/Config_WES_Profil_Kyocera_SectionHistoriq_V60.png"><img class="MCPopupThumbnail img" data-mc-width="754" data-mc-height="101" src="../../Z_Resources/Images/02_Captures/WES/Config_WES_Profil_Kyocera_SectionHistoriq_V60.png" tabindex="" style="mc-thumbnail: popup;mc-thumbnail-max-width: 15cm;width: 700px;height: auto;max-width: 15cm;" /></a></p>
                                         <h2>Valider le profil</h2>
                                         <p>1.	Cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Valider.png" style="width: 23px;height: 22px;" />  pour valider la configuration du profil WES.</p>
