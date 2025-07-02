@@ -622,6 +622,14 @@
                                             </div>
                                         </div>
                                         <h2 id="WEScan" data-magellan-target="WEScan"><a name="WEScan"></a>WEScan</h2>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WES Kyocera. WEScan - Erreur lors de la numérisation, le traitement OCR n'est pas appliqué.</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> lorsqu'un utilisateur lance une numérisation à l'aide de WEScan en demandant un traitement OCR, il reçoit le scan, mais pas l'OCR.</p>
+                                                <p><strong>Cause :</strong> l'anomalie est liée à des paramètres du périphérique d'impression non pris en compte..</p>
+                                                <p><strong>Résolution :</strong> pour résoudre ce problème, il est possible de mettre à jour en v.6.1.0.5290, version qui comporte un correctif.&#160;</p>
+                                            </div>
+                                        </div>
+                                        <p>&#160;</p>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Les pages des documents numérisés ne sont pas classées dans l'ordre</a></span>
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> lorsqu'un utilisateur numérise un document comportant plusieurs pages, ces pages ne sont pas classées dans l'ordre.<br /><strong>Cause :</strong> si le paramètre Nom du fichier n'est pas modifié dans la destination de scan, le fichier numérisé portera le nom Scan et ses occurences Scan, Scan (1), Scan (2), etc. Comme Windows utilise le tri ASCII, Scan (1) est considéré comme le premier dans la liste, avant Scan.</p>
@@ -1089,7 +1097,6 @@
                                                 <p><strong>Résolution :</strong> il convient de mettre à jour Watchdoc en version 6.1.0.4940 (avec une licence Watchdoc incluant des WES&#160;Sharp).&#160;Si cette mise à jour n'est pas possible, il convient de modifier le fichier de configuration de Watchdoc (config.xml) en ajoutant la balise &lt;config/dsp/web/timeout-receive&gt; et en y précisant une durée (en secondes) acceptable pour le traitement des numérisations longues (par exemple, 600, soit 10 min.). Notez cependant que cette opération n'est pas recommandée et qu'elle ne doit être utilisée que temporairement en attendant la mise à jour en 6.1.0.4940.</p>
                                             </div>
                                         </div>
-                                        <p>&#160;</p>
                                         <h3 id="WESToshiba" data-magellan-target="WESToshiba">WES&#160;Toshiba</h3>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WES Toshiba Open Platform.&#160;Message d'erreur The remote SOAP&#160;service failed while processing request '&amp;lt;unknown&amp;gt;': User is operating the panel
 </a></span>
