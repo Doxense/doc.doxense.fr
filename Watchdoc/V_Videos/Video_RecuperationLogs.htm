@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr-fr" xml:lang="fr-fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="Fiches pratiques" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr-fr" xml:lang="fr-fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="Présentation du principe et des prérequis de l'Agent SSO de Watchdoc, outil installé sur un poste de travail commun afin de permettre de collecter les données d'impression de chaque compte utilisateur connecté sur le poste." /><title>Watchdoc - Watchdoc Agent SSO - Présentation</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Configuration d'un tarif d'impression</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
-        <!-- Tableau triable
-        <link rel="stylesheet" type="text/css" href="../DataTables/DataTables-1.10.20/css/jquery.dataTables.css" /> -->
+        <!-- Script tableau triable -->
         <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
@@ -43,24 +41,6 @@
 .button.collapse-all-button
 {
 	-pie-background: linear-gradient(transparent, transparent);
-}
-
-.needs-pie
-{
-	behavior: url('../Resources/Scripts/PIE-no-motw.htc');
-}
-
-</style>
-        <style>/*&lt;meta /&gt;*/
-
-.button.previous-topic-button
-{
-	-pie-background: linear-gradient(transparent, #fcfaf8);
-}
-
-.button.next-topic-button
-{
-	-pie-background: linear-gradient(#ffffff, #fcfaf8);
 }
 
 .needs-pie
@@ -194,70 +174,12 @@
                                             </button>
                                         </div>
                                     </div>
-                                    <div class="nocontent">
-                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
-                                        </div>
-                                    </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor212"></a>
-                                            <MadCap:concept term="WD" />Watchdoc - Watchdoc Agent SSO - Présentation</h1>
-                                        <h2>Principe</h2>
-                                        <p>Dans certains contextes professionnels, il arrive qu'une session générique soit ouverte sur un poste informatique pour permettre à tout un groupe de l'utiliser. Par exemple, dans un service hospitalier, tout le personnel médical tels que secrétaires, aide-soignants, infirmiers et médecins.</p>
-                                        <p>&#160;</p>
-                                        <p>Dans ce cas, pour permettre à chaque utilisateur de travailler dans un environnement personnalisé, le poste peut être équipé d'un logiciel d'authentification tiers (type SSOx<sup>®</sup> d'Avencis).</p>
-                                        <p>&#160;</p>
-                                        <p>Dans une telle configuration, l'authentification ne reposant sur aucun annuaire, Watchdoc ne peut assurer une impression sécurisée. Il est donc nécessaire d'installer l'outil Watchoc Agent SSO développé spécifiquement pour ce besoin. Grâce aux données collectées sur le poste client par le logiciel SSO et envoyées à Watchdoc, l'Agent SSO établit une correspondance entre les demandes d'impression issues du poste client et son annuaire utilisateurs (A.D.). Les données contenues dans les spools permettent d'associer les travaux d'impression demandés à leurs utilisateurs (authentifiés dans l'A.D.) et, ainsi, de débloquer les impressions en toute sécurité.</p>
-                                        <h2>Prérequis</h2>
-                                        <p>Avant d'installer l'Agent SSO de Watchdoc, vérifiez les prérequis suivants :</p>
-                                        <ul>
-                                            <li>
-                                                <p>.NET 4.6.1 (min.) ou 4.7.2 (recommandé) est installé sur les postes clients ;</p>
-                                            </li>
-                                            <li>
-                                                <p>Watchdoc V5.1.1 min. ;</p>
-                                            </li>
-                                            <li>
-                                                <p>capacité du logiciel SSO à envoyer à Watchdoc  le SAM AccountName de l'utilisateur ;</p>
-                                            </li>
-                                            <li>
-                                                <p>dans le cas d'un environnement multi-domaine, capacité du logiciel SSO à envoyer à Watchdoc le nom de domaine dont dépend l'utilisateur ;</p>
-                                            </li>
-                                            <li>
-                                                <p>capacité du logiciel SSO à appeler un exécutable avec les arguments suivants :</p>
-                                                <ul>
-                                                    <li>
-                                                        <p>lors de l'authentification de l’utilisateur : “PATH_ TO_EXECUTABLE\WatchdocSSOAgent.exe” /standalone /event LogOn/user “USER_LOGIN”</p>
-                                                    </li>
-                                                </ul>
-                                                <ul>
-                                                    <li>
-                                                        <p>Lors de la déconnexion de l’utilisateur : “PATH_ TO_EXECUTABLE\WatchdocSSOAgent.exe” /standalone /event LogOff"<br />Le LogOff est optionnel dans la mesure où l'authentification suivante (LogOn) déconnecte automatiquement l'utilisateur précédemment connecté.</p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                        <p>&#160;</p>
+                                        <h1><a name="aanchor36"></a>
+                                            <MadCap:concept term="VID" />Vidéo - Comment récupérer les logs dans Watchdoc ? </h1>
+                                        <p>
+			Dans ce tuto, nous vous expliquons comment récupérer les logs de Watchdoc.<br /><br /></p><iframe width="560" height="315" src="https://www.youtube.com/embed/sgJaOkMKoiw?si=bFx92BI9XOndREY8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="allowfullscreen"></iframe>
                                     </div>
-                                    <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
-                                        <div class="button-group-container-left">
-                                            <button class="button elearning-button needs-pie previous-topic-button" title="Précédent" disabled="true">
-                                                <div>
-                                                    <div role="img" class="button-icon-wrapper" aria-label="Précédent">
-                                                        <div class="button-icon"> </div>
-                                                    </div><span class="button-text">Précédent</span>
-                                                </div>
-                                            </button>
-                                            <button class="button elearning-button needs-pie next-topic-button" title="Suivant" disabled="true">
-                                                <div>
-                                                    <div role="img" class="button-icon-wrapper" aria-label="Suivant">
-                                                        <div class="button-icon"> </div>
-                                                    </div><span class="button-text">Suivant</span>
-                                                </div>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <p><span style="font-size: 10pt;">Une suggestion ? Une demande de correction ? <a href="mailto:documentations@doxense.com?subject=Doxdoc.fr" target="_blank" title="Envoyer un email à documentations@doxense.com" alt="Envoyer un email à documentations@doxense.com">Exprimez-vous !</a></span>
-                                    </p>
                                 </div>
                             </div>
                         </div>
