@@ -53,36 +53,6 @@ let arrayContent = [
 	link:"/Watchdoc/A_Getting_Started/Release_610.htm",
 	content: "nouvelles versions Watchdoc et Console de Supervision 6.1.0.5206, ainsi que Watchdoc Print Client for Windows 7.0.4987"
 },
-{
-	date: "21 mars 2025",
-	link:"/Watchdoc/A_Getting_Started/Release_610.htm",
-	content: "nouvelles versions de Watchdoc et Console de Supervision 6.1.0.5194, ainsi que Watchdoc Print Client for Windows 7.0.4907"
-},	
-{
-	date: "06 mars 2025",
-	link:"/Watchdoc/A_Getting_Started/Release_610.htm",
-	content: "nouvelles versions de Watchdoc et Console de Supervision 6.1.0.5178, ainsi que Watchdoc Print Client for Windows 7.0.4863"
-},
-	{
-	date: "20 février 2025",
-	link:"/Watchdoc/A_Getting_Started/Release_610.htm",
-	content: "nouvelles versions de Watchdoc et Console de Supervision 6.1.0.5164, ainsi que Watchdoc Print Client for Windows 7.0.4798"
-},
-{
-	date: "11 février 2025",
-	link:"/ScanCare/C_Release_Notes/Release_Notes.htm",
-	content: "nouvelle version de Watchdoc ScanCare 9.10.625"
-},
-{
-	date: "06 février 2025",
-	link:"/Watchdoc/A_Getting_Started/Release_610.htm",
-	content: "nouvelles versions de Watchdoc et Console de Supervision 6.1.0.5150, ainsi que Watchdoc Print Client for Windows 7.0.4723"
-},
-{	
-	date: "09 janvier 2025",
-	link:"/Watchdoc/A_Getting_Started/Release_610.htm",
-    content: "nouvelles versions Watchdoc et Console de Supervision 6.1.0.5122, ainsi que Watchdoc Print Client for Windows 7.0.4631"
-},
 ]
 
 arrayContent.forEach(c => {
