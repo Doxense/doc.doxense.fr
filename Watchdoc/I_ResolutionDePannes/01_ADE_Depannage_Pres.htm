@@ -244,8 +244,6 @@
                                                     </li>
                                                     <li class="tree-node"><a href="#WSCWatchdocSupervisionConsole">WSC&#160;- Watchdoc Supervision Console</a>
                                                     </li>
-                                                    <li class="tree-node"><a href="#WEScan">WEScan</a>
-                                                    </li>
                                                     <li class="tree-node"><a href="#WES">WES</a>
                                                         <ul>
                                                             <li class="tree-node"><a href="#WESCanon">WES&#160;Canon</a>
@@ -621,78 +619,6 @@
                                                 <p><strong>Contournement:</strong> il convient d'installer le pilote à l'aide d'un outil de GPO ou via Intune, sans utiliser le DriverPackageExtractor en attendant une correction de cet utilitaire.&#160;</p>
                                             </div>
                                         </div>
-                                        <h2 id="WEScan" data-magellan-target="WEScan"><a name="WEScan"></a>WEScan</h2>
-                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WES Kyocera. WEScan - Erreur lors de la numérisation, le traitement OCR n'est pas appliqué.</a></span>
-                                            <div class="MCDropDownBody dropDownBody">
-                                                <p><strong>Contexte :</strong> lorsqu'un utilisateur lance une numérisation à l'aide de WEScan en demandant un traitement OCR, il reçoit le scan, mais pas l'OCR.</p>
-                                                <p><strong>Cause :</strong> l'anomalie est liée à des paramètres du périphérique d'impression non pris en compte..</p>
-                                                <p><strong>Résolution :</strong> pour résoudre ce problème, il est possible de mettre à jour en v.6.1.0.5290, version qui comporte un correctif.&#160;</p>
-                                            </div>
-                                        </div>
-                                        <p>&#160;</p>
-                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Les pages des documents numérisés ne sont pas classées dans l'ordre</a></span>
-                                            <div class="MCDropDownBody dropDownBody">
-                                                <p><strong>Contexte :</strong> lorsqu'un utilisateur numérise un document comportant plusieurs pages, ces pages ne sont pas classées dans l'ordre.<br /><strong>Cause :</strong> si le paramètre Nom du fichier n'est pas modifié dans la destination de scan, le fichier numérisé portera le nom Scan et ses occurences Scan, Scan (1), Scan (2), etc. Comme Windows utilise le tri ASCII, Scan (1) est considéré comme le premier dans la liste, avant Scan.</p>
-                                                <p><strong>Résolution :</strong> il convient de modifier le paramètre <strong>Nom de fichier</strong> pour lui attribuer une variable permettant le tri, comme $LONGDATE, par exemple, qui tiendra compte de l'heure, de la minute et la seconde de numérisation de la page (cf.&#160;Configurer une destination de scan).&#160;</p>
-                                            </div>
-                                        </div>
-                                        <p>&#160;</p>
-                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Message d'erreur - Impossible de récupérer les paramètres initaux - NoScanProfile /&#160;Pas de profil de scan - Could not find any valid scan profile after constraints application</a><br /></span>
-                                            <div class="MCDropDownBody dropDownBody">
-                                                <p><strong>Contexte :</strong> après avoir lancé une numérisation, un message d'erreur  s'affiche : "Impossible de récupérer les paramètres initaux - NoScanProfile - Could not find any valid scan profile after constraints application".</p>
-                                                <p>Il peut aussi arriver que ce message apparaisse après l'installation de WEScan dans un domaine (configuration master/slaves). </p>
-                                                <p><strong>Cause :</strong> ce message peut être dû : </p>
-                                                <ul>
-                                                    <li>
-                                                        <p>à une incompatibilité de paramètres entre les paramètres de numérisation du périphérique et les paramètres du profil de numérisation WEScan sélectionné par l'utilisateur ; </p>
-                                                    </li>
-                                                    <li>
-                                                        <p>à l'absence du profil de numérisation dans le WES&#160;du périphérique ; </p>
-                                                    </li>
-                                                    <li>
-                                                        <p>à la désactivation de WEScan dans le profil WES&#160;du périphérique ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>à la désactivation de la fonction d''impression à la demande interserveur ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>à l'absence des fichiers de profils de scan personnalisés sur les serveurs qui dépendent d'un serveur master</p>
-                                                    </li>
-                                                </ul>
-                                                <p>Les précisions sur la nature du problème figurent dans les fichiers de logs.<br /></p>
-                                                <p><strong>Résolution :</strong> en fonction de la nature de l'erreur, il convient de vérifier :<br /></p>
-                                                <ol>
-                                                    <li value="1">
-                                                        <p>la comptabilité du périphérique avec la fonction WEScan</p>
-                                                    </li>
-                                                    <li value="2">
-                                                        <p>si le périphérique est compatible, l'activation de WEScan sur le WES&#160;du périphérique ;</p>
-                                                    </li>
-                                                    <li value="3">
-                                                        <p>la compatibilité entre les paramètres du périphérique et les paramètres définis dans le profil de numérisation pour lequel le message d'erreur a été envoyé.&#160;</p>
-                                                    </li>
-                                                    <li value="4">
-                                                        <p>si les serveurs sont installés dans une configuration en domaine (master/slaves), activez la fonction d'<a href="../H_HowTo/WD52_Interserveur_Principe.htm" target="_blank" alt="Activer l'impression à la demande interserveur">impression à la demande interserveur</a> et dupliquez les profils de numérisation du serveur master dans tous les autres serveurs qui en dépendent.</p>
-                                                    </li>
-                                                </ol>
-                                            </div>
-                                        </div>
-                                        <p>&#160;</p>
-                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WEScan Konica Minolta - Impossible de récupérer les paramètres initaux - NoScanProfile /&#160;Pas de profil de scan - Could not find any valid scan profile after constraints application</a><br /></span>
-                                            <div class="MCDropDownBody dropDownBody">
-                                                <p><strong>Contexte :</strong> après avoir lancé une numérisation en A4 depuis un périphérique Konica Minolta, un message d'erreur  s'affiche : "Impossible de récupérer les paramètres initaux - NoScanProfile - Could not find any valid scan profile after constraints application".</p>
-                                                <p><strong>Cause :</strong> ce message est peut être dû au paramètre "AutoSize" configuré dans le profil de numérisation WEScan qui n'est pas supporté par le modèle utilisé pour le scan.&#160;</p>
-                                                <p><strong>Résolution :</strong> si vous constatez que certains modèles ne supportent pas le paramétrage par défaut "AutoSize", il convient de créer un profil de scan spécifique pour ces modèles à l'aide de ScanProfilesCustomizer.&#160;Dans ce profil de scan spécifique, le paramètre AutoSize <strong>ne doit pas </strong>être configué par défaut.&#160;</p>
-                                            </div>
-                                        </div>
-                                        <p>&#160;</p>
-                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Taille de fichier dépassée.</a></span>
-                                            <div class="MCDropDownBody dropDownBody">
-                                                <p><strong>Contexte :</strong> après envoi d'un document scanné avec WEScan, l'utilisateur reçoit un mail l'informant que la taille du fichier est dépassée et que le document scanné n'a pas été envoyé.</p>
-                                                <p><strong>Cause :</strong> ce message est dû au paramètre "Taille maximale du fichier" défini dans la configuration d'une Destination de scan.</p>
-                                                <p><strong>Résolution :</strong> il convient de modifier la taille maximale des documents scannés (cf.&#160;<a href="ADE_WEScan_TailleFichierDepassee.htm" target="_blank" alt="Lien vers l'article de dépannanage">WEScan - Message d'erreur "Taille de fichier dépassée"</a>).</p>
-                                            </div>
-                                        </div>
                                         <h2 id="WES" data-magellan-target="WES">WES</h2>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WES. Travail d'impression fantôme en liste d'attente.</a></span>
                                             <div class="MCDropDownBody dropDownBody">
@@ -771,6 +697,62 @@
                                                 <p><strong>Contexte :</strong> lorsque l'utilisateur souhaite valider son impression sur un WES pour lequel les quotas ont été activés, le message d'erreur suivant s'affiche "Internal Server Error" s'affiche.&#160;Dans les fichiers de traces du WES, on trouve le message "Error while starting a newformat breakdown: Invalid object name 'dbo.formatbreakdown'"</p>
                                                 <p><strong>Cause :</strong>ce message s'affiche si la  base de données SQL&#160;spécifique dédiée à la gestion des quotas n'existe pas.</p>
                                                 <p><strong>Résolution :</strong> il convient de créer la base de données SQL spécifique (cf. <a href="../W_WES/10_Toshiba/07_Toshiba_WES_Depanner.htm#formatbreakdown" target="_blank" alt="Lien vers l'article de dépannage" title="Lien vers l'article de dépannage">Dépanner le WES  - dbo.formatbreakdown</a>).</p>
+                                            </div>
+                                        </div>
+                                        <p>&#160;</p>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WEScan - Les pages des documents numérisés ne sont pas classées dans l'ordre</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> lorsqu'un utilisateur numérise un document comportant plusieurs pages, ces pages ne sont pas classées dans l'ordre.<br /><strong>Cause :</strong> si le paramètre Nom du fichier n'est pas modifié dans la destination de scan, le fichier numérisé portera le nom Scan et ses occurences Scan, Scan (1), Scan (2), etc. Comme Windows utilise le tri ASCII, Scan (1) est considéré comme le premier dans la liste, avant Scan.</p>
+                                                <p><strong>Résolution :</strong> il convient de modifier le paramètre <strong>Nom de fichier</strong> pour lui attribuer une variable permettant le tri, comme $LONGDATE, par exemple, qui tiendra compte de l'heure, de la minute et la seconde de numérisation de la page (cf.&#160;Configurer une destination de scan).&#160;</p>
+                                            </div>
+                                        </div>
+                                        <p>&#160;</p>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WEScan - Message d'erreur - Impossible de récupérer les paramètres initaux - NoScanProfile /&#160;Pas de profil de scan - Could not find any valid scan profile after constraints application</a><br /></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> après avoir lancé une numérisation, un message d'erreur  s'affiche : "Impossible de récupérer les paramètres initaux - NoScanProfile - Could not find any valid scan profile after constraints application".</p>
+                                                <p>Il peut aussi arriver que ce message apparaisse après l'installation de WEScan dans un domaine (configuration master/slaves). </p>
+                                                <p><strong>Cause :</strong> ce message peut être dû : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p>à une incompatibilité de paramètres entre les paramètres de numérisation du périphérique et les paramètres du profil de numérisation WEScan sélectionné par l'utilisateur ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p>à l'absence du profil de numérisation dans le WES&#160;du périphérique ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p>à la désactivation de WEScan dans le profil WES&#160;du périphérique ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>à la désactivation de la fonction d''impression à la demande interserveur ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>à l'absence des fichiers de profils de scan personnalisés sur les serveurs qui dépendent d'un serveur master</p>
+                                                    </li>
+                                                </ul>
+                                                <p>Les précisions sur la nature du problème figurent dans les fichiers de logs.<br /></p>
+                                                <p><strong>Résolution :</strong> en fonction de la nature de l'erreur, il convient de vérifier :<br /></p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>la comptabilité du périphérique avec la fonction WEScan</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>si le périphérique est compatible, l'activation de WEScan sur le WES&#160;du périphérique ;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>la compatibilité entre les paramètres du périphérique et les paramètres définis dans le profil de numérisation pour lequel le message d'erreur a été envoyé.&#160;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>si les serveurs sont installés dans une configuration en domaine (master/slaves), activez la fonction d'<a href="../H_HowTo/WD52_Interserveur_Principe.htm" target="_blank" alt="Activer l'impression à la demande interserveur">impression à la demande interserveur</a> et dupliquez les profils de numérisation du serveur master dans tous les autres serveurs qui en dépendent.</p>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <p>&#160;</p>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WEScan - Message d'erreur - Taille de fichier dépassée</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> après envoi d'un document scanné avec WEScan, l'utilisateur reçoit un mail l'informant que la taille du fichier est dépassée et que le document scanné n'a pas été envoyé.</p>
+                                                <p><strong>Cause :</strong> ce message est dû au paramètre "Taille maximale du fichier" défini dans la configuration d'une Destination de scan.</p>
+                                                <p><strong>Résolution :</strong> il convient de modifier la taille maximale des documents scannés (cf.&#160;<a href="ADE_WEScan_TailleFichierDepassee.htm" target="_blank" alt="Lien vers l'article de dépannanage">WEScan - Message d'erreur "Taille de fichier dépassée"</a>).</p>
                                             </div>
                                         </div>
                                         <h3 id="WESCanon" data-magellan-target="WESCanon">WES&#160;Canon</h3>
@@ -864,6 +846,14 @@
                                             </div>
                                         </div>
                                         <h3 id="WESKonicaMinolta" data-magellan-target="WESKonicaMinolta">WES&#160;Konica Minolta</h3>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WEScan Konica Minolta - Impossible de récupérer les paramètres initaux - NoScanProfile /&#160;Pas de profil de scan - Could not find any valid scan profile after constraints application</a><br /></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> après avoir lancé une numérisation en A4 depuis un périphérique Konica Minolta, un message d'erreur  s'affiche : "Impossible de récupérer les paramètres initaux - NoScanProfile - Could not find any valid scan profile after constraints application".</p>
+                                                <p><strong>Cause :</strong> ce message est peut être dû au paramètre "AutoSize" configuré dans le profil de numérisation WEScan qui n'est pas supporté par le modèle utilisé pour le scan.&#160;</p>
+                                                <p><strong>Résolution :</strong> si vous constatez que certains modèles ne supportent pas le paramétrage par défaut "AutoSize", il convient de créer un profil de scan spécifique pour ces modèles à l'aide de ScanProfilesCustomizer.&#160;Dans ce profil de scan spécifique, le paramètre AutoSize <strong>ne doit pas </strong>être configué par défaut.&#160;</p>
+                                            </div>
+                                        </div>
+                                        <p>&#160;</p>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WES Konica-Minolta. The remote OpenAPI device has failed with an InvalidArgument (3) error : ApplicationID.</a></span>
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> lors de l'installation du WES sur la file d'impression, le message d'erreur s'affiche et bloque la finalisation de l'installation du WES. </p>
@@ -942,6 +932,14 @@
                                             </div>
                                         </div>
                                         <h3 id="WESKyocera" data-magellan-target="WESKyocera"><a name="WES_Kyocera"></a>WES&#160;Kyocera</h3>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WES Kyocera. WEScan - Erreur lors de la numérisation, le traitement OCR n'est pas appliqué.</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> lorsqu'un utilisateur lance une numérisation à l'aide de WEScan en demandant un traitement OCR, il reçoit le scan, mais pas l'OCR.</p>
+                                                <p><strong>Cause :</strong> l'anomalie est liée à des paramètres du périphérique d'impression non pris en compte..</p>
+                                                <p><strong>Résolution :</strong> pour résoudre ce problème, il est possible de mettre à jour en v.6.1.0.5290, version qui comporte un correctif.&#160;</p>
+                                            </div>
+                                        </div>
+                                        <p>&#160;</p>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WES Kyocera. Erreur de numérisation - Les documents numérisés n'arrivent pas dans le dossier de destination</a></span>
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> des utilisateurs numérisent des documents à l'aide de WEScan mais ne voient jamais arriver les fichiers numérisés dans le dossier de destination. Dans les logs, un message informe qu'une erreur est survenue en rapport avec la base JsonDB.&#160;On y trouve la mention suivante : "[...] the file was probably locked. You should consider switching local storage to SQL".</p>
