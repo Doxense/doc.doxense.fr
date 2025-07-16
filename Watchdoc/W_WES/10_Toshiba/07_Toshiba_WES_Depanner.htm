@@ -211,6 +211,8 @@
                                                     </li>
                                                     <li class="tree-node"><a href="#Travauxdenum%C3%A9risationfaxetphotocopienoncomptabilis%C3%A9s">Travaux de numérisation, fax et photocopie non comptabilisés</a>
                                                     </li>
+                                                    <li class="tree-node"><a href="#MessagedanslinterfacedadministrationTopAccessDonn%C3%A9esdejournaleffac%C3%A9es">Message dans l'interface d'administration TopAccess : Données de journal effacées</a>
+                                                    </li>
                                                     <li class="tree-node"><a href="#MessagederreurTheremoteSOAPservicefailedwhileprocessingrequestltunknowngtUserisoperatingthepanel">Message d'erreur - The remote SOAP&#160;service failed while processing request '&amp;lt;unknown&amp;gt;': User is operating the panel</a>
                                                     </li>
                                                     <li class="tree-node"><a href="#MessagederreurErrorwhilestartinganewformatbreakdownInvalidobjectnamedboformatbreakdownmessageInternalServerErrorsurleWES">Message d'erreur - Error while starting a newformat breakdown: Invalid object name 'dbo.formatbreakdown'" + message "Internal Server Error" sur le WES</a>
@@ -312,6 +314,22 @@
                                                 <p class="Resultat" style="text-align: justify;">vérifiez que la procédure a réglé le problème.</p>
                                             </li>
                                         </ol>
+                                        <hr width="100%" size="0" align="center" />
+                                        <h2 id="MessagedanslinterfacedadministrationTopAccessDonnéesdejournaleffacées" data-magellan-target="MessagedanslinterfacedadministrationTopAccessDonnéesdejournaleffacées">Message dans l'interface d'administration TopAccess : Données de journal effacées</h2>
+                                        <p style="font-weight: bold;">Juin 2025</p>
+                                        <p><strong style="color: #000000;">Contexte</strong>
+                                        </p>
+                                        <p style="text-align: left;">Dans l'interface d'administration d'un périphérique Toshiba TopAccess, sous l'onglet Journaux &gt;&#160;Afficher les journaux, l'administrateurqui souhaite consulter le journal des impressions (job logs). Or, il constate que le journal a été effacé : message "Données de journal effacées" :<br /><br /><img src="Depanner_WES_TopAccessJobLogsL.png" /><br /></p>
+                                        <p>&#160;</p>
+                                        <p><strong style="color: #000000;">Cause</strong>
+                                        </p>
+                                        <p>Il s'agit d'un fonctionnement automatique du WES&#160;qui efface systématiquement les journaux des impressions (job logs).</p>
+                                        <p>
+                                            <br />
+                                        </p>
+                                        <p><strong style="color: #000000;">Résolution</strong>
+                                        </p>
+                                        <p style="text-align: left;">Ce fonctionnement automatique a été modifié. <br />Pour résoudre ce dysfonctionnement, il convient donc de mettre Watchdoc à jour en v. 6.1.0.5290 min.</p>
                                         <hr width="100%" size="0" align="center" />
                                         <h2 id="MessagederreurTheremoteSOAPservicefailedwhileprocessingrequestltunknowngtUserisoperatingthepanel" data-magellan-target="MessagederreurTheremoteSOAPservicefailedwhileprocessingrequestltunknowngtUserisoperatingthepanel"><a name="Desinstall"></a>Message d'erreur - The remote SOAP&#160;service failed while processing request '&amp;lt;unknown&amp;gt;': User is operating the panel</h2>
                                         <p><strong style="color: #000000;">Contexte</strong>
