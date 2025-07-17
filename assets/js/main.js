@@ -10,7 +10,7 @@ let arrayContent = [
 },
 {	
 	date: "30 juin 2025",
-	link: "/Focalist/A_Getting_Started/Release_610.htm",
+	link: "/Focalist/D_NotesVersions/Notes_Versions.htm",
 	content: "nouvelle version Focalist 9.30.0"
 },
 {	
