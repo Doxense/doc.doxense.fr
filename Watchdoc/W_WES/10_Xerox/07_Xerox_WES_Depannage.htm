@@ -239,6 +239,8 @@
                                                     </li>
                                                     <li class="tree-node"><a href="#V%C3%A9rifierlesparam%C3%A8tresdeconnexionsurlep%C3%A9riph%C3%A9rique">Vérifier les paramètres de connexion sur le périphérique</a>
                                                     </li>
+                                                    <li class="tree-node"><a href="#Probl%C3%A8medencodageenalphabetcyrillique">Problème d'encodage en alphabet cyrillique.</a>
+                                                    </li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -767,7 +769,22 @@
                                                 <p>authentifiez-vous en tant qu'administrateur ;</p>
                                             </li>
                                             <li value="3">
-                                                <p>sous l'onglet Propriétés &gt; Login/Droits/Comptes &gt; Méthode de connexion, vérifiez que la case "retrouver automatiquement les information utilisateur à partir du LDAP" est décochée.<br /><br /><img src="Config_WES_Xerox_TroubleShooting_MethodeConnexion.png" style="width: 581px;height: 290px;" /><br /></p>
+                                                <p>sous l'onglet Propriétés &gt; Login/Droits/Comptes &gt; Méthode de connexion, vérifiez que la case "retrouver automatiquement les information utilisateur à partir du LDAP" est décochée.<br /><br /><img src="Config_WES_Xerox_TroubleShooting_MethodeConnexion.png" style="width: 581px;height: 290px;" /></p>
+                                                <p>&#160;</p>
+                                                <hr width="100%" size="0" align="center" />
+                                                <h2 style="color: #000000;" id="Problèmedencodageenalphabetcyrillique" data-magellan-target="Problèmedencodageenalphabetcyrillique">Problème d'encodage en alphabet cyrillique.</h2>
+                                                <p style="font-weight: bold;font-size: 14pt;"><strong style="color: #000000;">Contexte</strong>
+                                                </p>
+                                                <p>Sur des périphérique d'impression Xerox installés dans un pays utilisant l'alphabet cyrillique, on constate que tous les caractères ne sont pas correctement encodés sur le WES.</p>
+                                                <p>&#160;</p>
+                                                <p><span style="font-size: 14pt; font-weight: bold; color: #000000;">Cause</span>
+                                                    <br />Cette anomalie dépend de l'encodage défini dans la section <a href="../../C_Configurer/ConfigFiles/ConfigFiles_Procedure.htm#SNMP" target="_blank">Configuration SNMP</a> de la file d'impression.</p>
+                                                <p>&#160;</p>
+                                                <p><strong style="font-size: 14pt; color: #000000;">Résolution</strong>
+                                                    <br />Il convient de vérifier que l'encodage paramétré dans le profil WES&#160;est bien UTF-8.&#160;Après avoir vérifié et corrigé, au besoin, ce paramètre, il est parfois nécessaire d'éteindre puis de rallumer le périphérique di'mpression pour qu'il tienne compte de cette modification.&#160;</p>
+                                                <p>
+                                                    <br />
+                                                </p>
                                             </li>
                                         </ol>
                                     </div>

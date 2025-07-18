@@ -632,13 +632,15 @@ Comme tous les protocoles basés sur IP, IPP peut être utilisé localement ou s
                                         <p class="Liste_puce_1"><strong>Redirection</strong>
                                         </p>
                                         <p>Rendre visible les travaux imprimés dans le pool suivant : dans la liste, sélectionnez l'un des pools existants pour permettre à Watchdoc d'envoyer les travaux d'impression vers d'autres files en cas d'indisponibilité de la file que vous configurez.</p>
-                                        <fieldset>Lorsqu'il est utilisé, ce paramètre  s'applique depuis d'une file partagée vers une file virtuelle.&#160;Il permet, par exemple, de rediriger les demandes d'impression couleur vers une file d'impression monochrome.&#160;Notez que ce paramètre doit principalement être utilisé en mode Comptabilisation.&#160;En effet, comme l'impression est redirigée vers une file shadow non contrôlee par Watchdoc, les travaux sont imprimés sans validation de l'utilisateur.</fieldset>
+                                        <fieldset>Lorsqu'il est utilisé, ce paramètre  s'applique depuis d'une file partagée vers une file virtuelle.&#160;Il permet, par exemple, de rediriger les demandes d'impression couleur vers une file d'impression monochrome.&#160;Notez que ce paramètre doit principalement être utilisé en mode <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term15">Comptabilisation<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Dynamic Link Library (bibliothèque de liens dynamiques) est une bibliothèque logicielle dont les fonctions sont chargées en mémoire par un programme lors de son exécution, par opposition aux bibliothèques logicielles statiques ou partagées dont les fonctions sont chargées en mémoire avant le début de l'exécution du programme.
+(Source : Wikipédia).</span></a>.&#160;En effet, comme l'impression est redirigée vers une file shadow non contrôlee par Watchdoc, les travaux sont imprimés sans validation de l'utilisateur.</fieldset>
                                         <p class="Liste_puce_1"><strong>Sources </strong>: par défaut, les files héritent de la configuration du groupe de files auquel elles appartiennent. </p>
                                         <p class="Liste_puce_2"> <strong>Ne pas utiliser</strong> : cochez la case pour appliquer à la file que vous paramétrez la configuration d'une ou plusieurs sources de redirection spécifiques.</p>
                                         <p class="Liste_puce_2"><strong>Source(s) </strong>: dans le cas où vous avez coché la case précédente, indiquez dans ce champ la ou les files sources susceptibles d'envoyer leurs travaux sur la file configurée&#160;;</p>
                                         <ul>
                                             <li>
-                                                <p>Si Watchdoc est utilisé en mode Comptabilisation simple, la redirection ne peut reposer sur les pools, puisque l'utilisateur ne débloque pas ses impressions depuis un périphérique qu'il aurait choisi. Il convient cependant d'indiquer le ou lespériphériphériques vers lesquels les travaux peuvent être redirigés en cas d'indisponibilité du périphérique habituel :</p>
+                                                <p>Si Watchdoc est utilisé en mode <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term15">Comptabilisation<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Dynamic Link Library (bibliothèque de liens dynamiques) est une bibliothèque logicielle dont les fonctions sont chargées en mémoire par un programme lors de son exécution, par opposition aux bibliothèques logicielles statiques ou partagées dont les fonctions sont chargées en mémoire avant le début de l'exécution du programme.
+(Source : Wikipédia).</span></a> simple, la redirection ne peut reposer sur les pools, puisque l'utilisateur ne débloque pas ses impressions depuis un périphérique qu'il aurait choisi. Il convient cependant d'indiquer le ou lespériphériphériques vers lesquels les travaux peuvent être redirigés en cas d'indisponibilité du périphérique habituel :</p>
                                             </li>
                                             <li>
                                                 <p class="Liste_puce_1"><strong>Périphérique de secours - Forcer la redirection :</strong> cochez cette case pour diriger obligatoirement les travaux d'impression vers un autre périphérique quand, ponctuellement, le périphérique ne doit plus être utilisé, mais ne peut être mis hors-service.&#160;C'est le cas, notamment, lors d'une intervention de maintenance lorsque le technicien doit mener des tests sur la machine et risque donc d'en fausser les statistiques d'utilisation.</p>
@@ -688,7 +690,7 @@ Comme tous les protocoles basés sur IP, IPP peut être utilisé localement ou s
                                         <blockquote>
                                             <fieldset>Les données renvoyées par la fonction <strong>Monitoring </strong>de Watchdoc sont visibles dans les onglets <strong>Etat du périphérique</strong> et <strong>Incidents </strong>de l'interface d'administration ainsi que dans la base SQL servant à générer les statistiques d'impression.</fieldset>
                                         </blockquote>
-                                        <h3 id="SectionConfigurationSNMP" data-magellan-target="SectionConfigurationSNMP">Section Configuration SNMP</h3>
+                                        <h3 id="SectionConfigurationSNMP" data-magellan-target="SectionConfigurationSNMP">Section Configuration <a name="SNMP"></a>SNMP</h3>
                                         <p>Si vous avez activé le monitoring SNMP, complétez-en la configuration (disponible depuis la v6.1.4898)&#160;: </p>
                                         <ul>
                                             <li>
@@ -721,10 +723,17 @@ Comme tous les protocoles basés sur IP, IPP peut être utilisé localement ou s
                                                                 <p><strong>Authentification </strong>: sélectionnez l'algorithme utilisé (MD5 or SHA), puis saisissez le mot de passe d'authentification ; </p>
                                                             </li>
                                                             <li>
-                                                                <p><strong>Confidentialité </strong>: sélectionnez l'algorithme utilisé, puis saisissez le mot de passe d'authentification . Pour les tâches d'administration de serveurs sensibles via SNMP (reboot, etc.), il est recommandé d'utiliser AES.<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Files_SNMP.png" style="height: auto;width: 700px;" /></p>
+                                                                <p><strong>Confidentialité </strong>: sélectionnez l'algorithme utilisé, puis saisissez le mot de passe d'authentification . Pour les tâches d'administration de serveurs sensibles via SNMP (reboot, etc.), il est recommandé d'utiliser AES.</p>
+                                                                <p>
+                                                                    <br />
+                                                                    <img src="../../Z_Resources/Images/02_Captures/Config_Files_SNMP.png" style="height: auto;width: 700px;" />
+                                                                </p>
                                                                 <p>&#160;</p>
                                                             </li>
                                                         </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p><b>Encodage :</b> dans la liste, sélectionnez le format d'encodage des caractères, si l'alphabet utilisé n'est pas l'alphabet latin.&#160;Ce paramètre n'est visible qu'en mode débogage (debug) (cf.&#160;<a href="../../H_HowTo/WD_Activer_ModeDebug.htm" target="_blank">Activer le mode débogage</a>) : <br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Files_SNMP_Encodage.png" style="width: 700px;height: auto;" /><br /><br /></p>
                                                     </li>
                                                 </ul>
                                             </li>

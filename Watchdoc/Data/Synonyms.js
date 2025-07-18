@@ -28,6 +28,7 @@ xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"Scan to me\
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"spouler\" To=\"spool\" FromStem=\"spoul\" />';
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"transformation de travaux\" To=\"transformation de spool\" FromStem=\"transformation de traval\" />';
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"travaux d\'impression\" To=\"spool\" FromStem=\"travaux d\'impress\" />';
+xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"encodage\" To=\"encoding\" FromStem=\"encodag\" />';
 xmlSynonymsData += '    </Directional>';
 xmlSynonymsData += '</MadCapSynonyms>';
 MadCap.Utilities.Xhr._FilePathToXmlStringMap.Add('Synonyms', xmlSynonymsData);
