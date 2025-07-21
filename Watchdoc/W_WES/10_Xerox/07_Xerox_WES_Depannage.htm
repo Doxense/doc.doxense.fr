@@ -211,19 +211,7 @@
                                                     </li>
                                                     <li class="tree-node"><a href="#Travauxdenum%C3%A9risationfaxetphotocopienoncomptabilis%C3%A9s">Travaux de numérisation, fax et photocopie non comptabilisés</a>
                                                     </li>
-                                                    <li class="tree-node"><a href="#Impossibilit%C3%A9deseconnecterdepuisleclavierC60C70avecFiery">Impossibilité de se connecter depuis le clavier (C60/C70 avec Fiery®)</a>
-                                                    </li>
-                                                    <li class="tree-node"><a href="#ErreurlorsdelinstallationduWESIPLockedOut">Erreur lors de l'installation du WES - IPLockedOut</a>
-                                                    </li>
-                                                    <li class="tree-node"><a href="#Erreurli%C3%A9eauXeroxSecureAccessmod%C3%A8leXerox7855">Erreur liée au Xerox Secure Access (modèle Xerox 7855).</a>
-                                                    </li>
-                                                    <li class="tree-node"><a href="#Impossibilit%C3%A9deseconnecter%C3%A0laideduclavier">Impossibilité de se connecter à l'aide du clavier</a>
-                                                    </li>
-                                                    <li class="tree-node"><a href="#FonctionJobassemblysurmod%C3%A8lesXeroxWorkCenter78xx">Fonction Job assembly sur modèles Xerox WorkCenter 78xx</a>
-                                                    </li>
-                                                    <li class="tree-node"><a href="#ScantoMailimpossibledepuislesWorkCenter7845limitedecomptabilisation">ScantoMail impossible depuis les WorkCenter® 7845 - limite de comptabilisation</a>
-                                                    </li>
-                                                    <li class="tree-node"><a href="#Internalservererror">Internal server error</a>
+                                                    <li class="tree-node"><a href="#MessagederreurInternalservererrorFailedtosendprintcommandtoremoteServer">Message d'erreur : Internal server error "Failed to send print command to remote Server"</a>
                                                     </li>
                                                     <li class="tree-node"><a href="#MessagederreurlorsdelinstallationLeWESnestpasinstall%C3%A9int%C3%A9gralement">Message d'erreur lors de l'installation - Le WES&#160;n'est pas installé intégralement</a>
                                                     </li>
@@ -327,190 +315,10 @@
                                             </li>
                                         </ol>
                                         <hr width="100%" size="0" align="center" />
-                                        <h2 id="ImpossibilitédeseconnecterdepuisleclavierC60C70avecFiery" data-magellan-target="ImpossibilitédeseconnecterdepuisleclavierC60C70avecFiery">Impossibilité de se connecter depuis le clavier (C60/C70 avec Fiery<sup>®</sup>)</h2>
-                                        <p><strong style="font-size: 14pt; color: #000000;">Contexte</strong>
-                                        </p>
-                                        <p>Après installation d'un WES Xerox sur des périphériques C60 ouC70 avec Fiery<sup>®</sup>, il arrive que le bouton permettant de se connecter ne s'affiche pas sur le clavier.</p>
-                                        <p>&#160;</p>
-                                        <p><strong style="font-size: 14pt; color: #000000;">Résolution</strong>
-                                        </p>
-                                        <p>Pour régler ce problème :</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>rendez-vous dans l'interface web d'administration du périphérique ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>cliquez sur <strong>Properties &gt; Security &gt; Xerox Secure Access Settings</strong> ;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>dans la section <strong>Xerox Secure Access Server</strong>, vérifiez que la case correspondant au paramètre <strong>Local Login </strong>est cochée (enabled) ;<br /><br /><img src="Config_WES_Xerox_TroubleShooting_XSA_Settings.png" style="width: 500px;height: auto;" /><br /></p>
-                                            </li>
-                                        </ol>
-                                        <hr />
-                                        <h2 style="text-align: justify;" id="ErreurlorsdelinstallationduWESIPLockedOut" data-magellan-target="ErreurlorsdelinstallationduWESIPLockedOut">Erreur lors de l'installation du WES - IPLockedOut</h2>
-                                        <p style="text-align: justify;"><strong style="font-size: 14pt; color: #000000;">Contexte</strong>
-                                        </p>
-                                        <p style="text-align: justify;">Lors de l'installation d'un WES Xerox il arrive qu'un message d'erreur s'affiche au moment du dialogue avec le kit de sécurité jba (Job Base Accounting).</p>
-                                        <p style="text-align: justify;">Un message d'erreur indique que la requête au service SOAP a été rejetée en raison de l'impossibilité d'authentifier l'utilisateur&#160;("unable to authenticate user"). </p>
-                                        <p style="text-align: justify;">&#160;</p>
-                                        <p style="text-align: justify;"><strong style="font-size: 14pt; color: #000000;">Cause</strong>
-                                        </p>
-                                        <p style="text-align: justify;">Ce problème survient notamment après désinstallations et réinstallations successives du WES : le service d'administration, considérant ces tentatives comme des anomalies (IPLockedOut: Excessive Failure Attempts), verrouille la connexion aux services web.</p>
-                                        <p>
-                                            <img src="Config_WES_Xerox_TroubleShooting_IPLockOut_Msg.png" style="width: 0;height: auto;" />
-                                        </p>
-                                        <p><strong style="font-size: 14pt; color: #000000;">Résolution</strong>
-                                        </p>
-                                        <p style="text-align: justify;">Pour résoudre ce problème, il convient d'annuler la restriction de connexion aux services web depuis l'interface d'administration du périphérique en appliquant la procédure suivante :</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1" style="text-align: justify;">rendez-vous sur l'interface web d'administration du périphérique ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1" style="text-align: justify;">cliquez sur l'onglet <strong>Propriétés </strong>;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1" style="text-align: justify;">dans le menu, cliquez sur <strong>Services &gt; Impression &gt; Service Web d'impression</strong> ;</p>
-                                            </li>
-                                            <li style="text-align: left;" value="4">
-                                                <p class="Liste_num_1" style="text-align: justify;">dans la section <strong>Verrouillage IP des services Web</strong>, cliquez sur le bouton <strong>Annuler le verrouillage</strong> :<br /><br /><img src="Config_WES_Xerox_TroubleShooting_IPLockOut_Resol.png" style="width: 700px;height: auto;" /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="5">
-                                                <p class="Liste_num_1" style="text-align: justify;">réitérez l'installation du WES dans Watchdoc et vérifiez qu'elle s'opère correctement.</p>
-                                            </li>
-                                        </ol>
-                                        <hr />
-                                        <h2 style="text-align: justify;" id="ErreurliéeauXeroxSecureAccessmodèleXerox7855" data-magellan-target="ErreurliéeauXeroxSecureAccessmodèleXerox7855">Erreur liée au Xerox Secure Access (modèle Xerox 7855).</h2>
-                                        <p style="text-align: justify;"><strong style="font-size: 14pt; color: #000000;">Contexte</strong>
-                                        </p>
-                                        <p style="text-align: left;">Lors de l'installation du WES sur la file d'impression, après avoir cliqué sur le bouton <strong>Installer</strong>, deux pastilles rouges s'affichent et le message d'erreur suivant s'affiche&#160;: <strong>"xsaws : implementation problem. Please do it manually"</strong>.<br /><br /><img src="Config_WES_Xerox_TroubleShooting_Xsaws.png" /></p>
-                                        <p style="text-align: justify;"><strong style="font-size: 14pt; color: #000000;">Cause</strong>
-                                        </p>
-                                        <p style="text-align: justify;">Cette erreur est due au fait que le Xerox Secure Access Web Service (xsaws) n'est pas actif.</p>
-                                        <p style="text-align: justify;">&#160;</p>
-                                        <p><strong style="font-size: 14pt; color: #000000;">Résolution</strong>
-                                        </p>
-                                        <p style="text-align: justify;">Pour résoudre ce problème, </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p style="text-align: justify;">rendez-vous dans l'interface de configuration du périphérique Xerox 7855</p>
-                                            </li>
-                                            <li value="2">
-                                                <p style="text-align: justify;">vérifiez que  la case <strong>Xerox Secure Access </strong>est bien activée. Si elle n'est pas activée, cochez-la.&#160;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p style="text-align: justify;">Si la case est déjà activée, désactivez puis réactivez <strong>Xerox Secure Access</strong>&#160;: </p>
-                                            </li>
-                                            <li value="4">
-                                                <p class="Liste_num_1" style="text-align: justify;">décochez la case <strong> Xerox Secure Access</strong> ; </p>
-                                            </li>
-                                            <li value="5">
-                                                <p class="Liste_num_1" style="text-align: justify;">cliquez sur le bouton <strong>Save </strong>pour valider ; </p>
-                                            </li>
-                                            <li value="6">
-                                                <p class="Liste_num_1" style="text-align: justify;">recochez la case  <strong>Xerox Secure Access</strong>&#160;;</p>
-                                            </li>
-                                            <li value="7">
-                                                <p class="Liste_num_1" style="text-align: justify;">cliquez sur le bouton <strong>Save </strong>pour valider ;</p>
-                                            </li>
-                                            <li value="8">
-                                                <p class="Liste_num_1" style="text-align: justify;"> réinstallez le WES en suivant la procédure.</p>
-                                            </li>
-                                        </ol>
-                                        <hr />
-                                        <h2 id="Impossibilitédeseconnecteràlaideduclavier" data-magellan-target="Impossibilitédeseconnecteràlaideduclavier">Impossibilité de se connecter à l'aide du clavier</h2>
-                                        <p><strong style="font-size: 14pt; color: #000000;">Contexte</strong>
-                                        </p>
-                                        <p>Il arrive qu'un message invite l'utilisateur à se connecter à l'aide d'un badge et n'offre aucun autre moyen d'authentification.</p>
-                                        <p>&#160;</p>
-                                        <p><strong style="font-size: 14pt; color: #000000;">Résolution</strong>
-                                        </p>
-                                        <p>Il convient de vérifier les paramètres d'accès sécurisé :</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>depuis l'interface d'administration du périphérique, cliquez dans le menu<strong> Securité&gt;&#160;Authentification à distance &gt;&#160;Paramètres d'accès sécurisé Xerox</strong></p>
-                                            </li>
-                                            <li value="2">
-                                                <p>dans l'interface des <strong>Paramètres d'accès sécurisé Xerox</strong>, cochez la case <strong>Local Login</strong> :<br /><br /><img src="Config_WES_Xerox_Config_C60_70_LocalLogin.png" style="width: 500px;height: auto;" /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                        </ol>
-                                        <p><span style="font-family: 'Wingdings'">è</span> Après validation de la modification, un bouton apparaît sur l'écran pour autoriser l'authentification à l'aide du clavier du périphérique.</p>
-                                        <hr />
-                                        <h2 id="FonctionJobassemblysurmodèlesXeroxWorkCenter78xx" data-magellan-target="FonctionJobassemblysurmodèlesXeroxWorkCenter78xx">Fonction Job assembly sur modèles Xerox WorkCenter 78xx</h2>
-                                        <p><strong style="font-size: 14pt; color: #000000;">Contexte</strong>
-                                        </p>
-                                        <p>Sur les modèles de MFP WorkCenter 78xx, la fonction Job Assembly permet au périphérique de numériser plusieurs documents pour les convertir en un seul .pdf. </p>
-                                        <p>&#160;</p>
-                                        <p><strong style="font-size: 14pt; color: #000000;">Procédure</strong>
-                                        </p>
-                                        <p>Pour configurer cette fonction&#160;: <br /></p>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1" style="text-align: left;">accédez à l'interface web de gestion du périphérique en tant qu'administrateur&#160;;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1" style="text-align: left;">depuis l'interface d'administration, dans le menu, cliquez sur <strong>Login&gt;Permissions&gt;Accounting&gt;Accounting Methods</strong> ;<br /></p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1" style="text-align: left;">dans l'interface <strong>Accounting Methods</strong>, section Touch and Web User Interfaces, cliquez sur le bouton <strong>Edit </strong>; <br /><br /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="4">
-                                                <p class="Liste_num_1" style="text-align: left;">dans la liste <strong>Job Types</strong>, dans la colonne<strong> Accounting Workflow</strong>, sélectionnez l'option <strong>Capture Usage</strong> ;</p>
-                                            </li>
-                                            <li value="5">
-                                                <p class="Liste_num_1" style="text-align: left;">cliquez sur <strong>Save </strong>pour valider le paramétrage de la fonction.<br /><br /></p>
-                                            </li>
-                                        </ol>
-                                        <hr />
-                                        <h2 style="text-align: justify;" id="ScantoMailimpossibledepuislesWorkCenter7845limitedecomptabilisation" data-magellan-target="ScantoMailimpossibledepuislesWorkCenter7845limitedecomptabilisation">ScantoMail impossible depuis les WorkCenter<sup>®</sup> 7845 - limite de comptabilisation</h2>
-                                        <h3>Contexte</h3>
-                                        <p style="text-align: justify;">Il arrive que des numérisations (fonction ScantoMail) effectuées depuis le WES Xerox<sup>®</sup> des modèles WordkCenter<sup>®</sup> 7845 ne soient pas transmises.</p>
-                                        <p style="text-align: justify;">La numérisation est transmise au périphérique, puis supprimée (avant d'être envoyée au destinataire) et une page d'erreur est imprimée avec le message "Supprimé&#160;: Une ou plusieurs limites de comptabilisation ont été atteintes".</p>
-                                        <p style="text-align: justify;">Dans le relevé de transfert SMTP, le message concernant ces travaux est le suivant : "Etat du travail : échec - travail annulé par le système".</p>
-                                        <p style="text-align: justify;">Lorsque le WES Watchdoc est désinstallé sur ce périphérique, la numérisation avec envoi par mail (ScanToMail) fonctionne de nouveau.</p>
-                                        <h3>Cause</h3>
-                                        <p style="text-align: justify;">Le problème est dû à une incompatibilité entre la fonction ScantoMe et la gestion des droits sur le périphérique dans Watchdoc<sup>®</sup>.</p>
-                                        <h3>Résolution</h3>
-                                        <p style="text-align: justify;">Pour résoudre ce problème, il convient de désactiver le contrôle des droits sur le périphérique :</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1" style="text-align: justify;">rendez vous dans l'administration du profil WES Xerox :<strong>&#160;Watchdoc&gt;Menu Principal&gt; section Configuration</strong>,&#160;cliquez sur <strong>Web &amp; WES profils</strong>&#160;;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1" style="text-align: justify;">dans la liste des WES, sélectionnez le WES Xerox activé sur les périphériques qui présentent le problème ;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1" style="text-align: justify;">accédez à l'interface de configuration du WES ;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p class="Liste_num_1" style="text-align: left;">dans la section <strong>Authentification</strong>, paramètre <strong>Gestion des droits</strong>,&#160;décochez les cases permettant un contrôle des fonctions du périphérique (<strong>photocopies, numérisation vers email, autres numérisations, impression</strong>) :<br /><br /><img src="Config_WES_Profil_SectionModeAuthentification_WESV3.png" style="width: 500px;" /></p>
-                                            </li>
-                                        </ol>
-                                        <p>&#160;</p>
-                                        <ol data-mc-continue="true">
-                                            <li value="5">
-                                                <p class="Liste_num_1" style="text-align: justify;">validez ensuite le paramétrage du profil WES :</p>
-                                            </li>
-                                            <li value="6">
-                                                <p class="Liste_num_1" style="text-align: justify;">Réinstallez le WES sur les périphériques concernés ;</p>
-                                            </li>
-                                            <li value="7">
-                                                <p class="Liste_num_1" style="text-align: justify;">vérifiez le fonctionnement du ScanToMail.</p>
-                                            </li>
-                                        </ol>
-                                        <fieldset class="astuce" style="text-align: justify;"> Si votre parc est composé d'autres modèles que WorkCenter 7845, nous vous conseillons de créer deux profils WES&#160;: l'un spécifique aux WorkCenter<sup>®</sup> 7845 (sur lequel les droits seront désactivés) ; l'autre pour tous les autres périphériques (sur lequel les droits seront activés).</fieldset>
-                                        <fieldset class="astuce" style="text-align: justify;"> Lorsque les clients utilisent Office 365<sup>®</sup>, les périphériques Xerox<sup>®</sup> doivent disposer d'un compte e-mail générique déjà paramétré (SMTP du périphérique). Il faut alors passer Watchdoc en mode&#160;DEBUG&#160;et indiquer dans le profil WES Xerox l'adresse e-mail du périphérique.</fieldset>
                                         <p>
                                             <hr width="100%" size="0" align="center">
                                             </hr>
-                                            <h2 id="Internalservererror" data-magellan-target="Internalservererror">Internal server error</h2>
+                                            <h2 id="MessagederreurInternalservererrorFailedtosendprintcommandtoremoteServer" data-magellan-target="MessagederreurInternalservererrorFailedtosendprintcommandtoremoteServer">Message d'erreur : Internal server error "Failed to send print command to remote Server"</h2>
                                             <p style="font-size: 14pt;font-weight: normal;"><strong style="color: #000000;">Contexte</strong>
                                             </p>
                                             <p>Le WES Xerox est installé en mode interserveur avec une file virtuelle.&#160;L'utilisateur envoie un travail d'impression sur la file virtuelle et souhaite le libérer via le WES.&#160;</p>
@@ -613,7 +421,7 @@
                                             </p>
                                         </p>
                                         <h2 id="Délaiavantimpressionoutimeout500Internalservererror" data-magellan-target="Délaiavantimpressionoutimeout500Internalservererror">Délai avant impression ou timeout - 500 Internal server error</h2>
-                                        <p><strong>Contexte</strong>
+                                        <p style="font-size: 14pt;"><strong>Contexte</strong>
                                         </p>
                                         <p>
                                             <p>Quand un utilisateur envoie un document sur une imprimante réseau ciblant un serveur d'impression, il faut attendre un délai d'une vingtaine de secondes avant que le document ne commence à être spoulé puis envoyé au serveur.</p>
@@ -624,11 +432,11 @@
                                             <p style="text-indent: 0.5in;">UPLEX of device</p>
                                             <p style="text-indent: 0.5in;">MAXEXTENT of device</p>
                                             <p>&#160;</p>
-                                            <p><strong>Cause</strong>
+                                            <p style="font-size: 14pt;"><strong>Cause</strong>
                                             </p>
                                             <p>Ce problème est dû au pilote qui envoie des requêtes SNMP au serveur d'impression en pensant qu'il s'agit d'un périphérique. Chaque requête provoque un temps d'attente avant arrêt.<br></br><br></br><img src="../../Z_Resources/Images/01_Generiques/ADE_WES_Toshiba_Delai_Impression_1.png" style="width: 500px;height: auto;"></img></p>
                                             <p>&#160;</p>
-                                            <p><strong>Résolution</strong>
+                                            <p style="font-size: 14pt;"><strong>Résolution</strong>
                                             </p>
                                             <p>Pour résoudre ce problème, désactivez la bidirectionnalité dans les propriétés de la file d'impression à partir de son interface de configuration :</p>
                                             <ol>
@@ -656,11 +464,13 @@
                                         </p>
                                         <hr width="100%" size="0" align="center" />
                                         <h2 id="ErreurlorsdelinstallationduWESXSAServerbadValue" data-magellan-target="ErreurlorsdelinstallationduWESXSAServerbadValue"><a name="XSA_Server"></a>Erreur lors de l'installation du WES - XSAServer : badValue</h2>
-                                        <h3>Contexte</h3>
+                                        <p style="font-weight: bold;font-size: 14pt;">Contexte</p>
                                         <p>Lors de l'installation du WES Xeros, le message d'erreur suivant s'affiche dans le rapport d'installation :&#160;<br /><br /><img src="../../Z_Resources/Images/02_Captures/ADE_WESXerox_XSAServer_BadValue_ErrorMsg.png" style="width: 500px;" /></p>
-                                        <h3>Cause</h3>
+                                        <p style="font-weight: bold;font-size: 14pt;">&#160;</p>
+                                        <p style="font-weight: bold;font-size: 14pt;">Cause</p>
                                         <p>La connexion ne peut être établie&#160; entre le périphérique et Watchdoc car l'adresse du serveur n'est pas trouvée. Ce problème se produit souvent lorsque c'est une adresse DNS qui a été indiquée lors de la configuration du profil WES.</p>
-                                        <h3>Résolution</h3>
+                                        <p>&#160;</p>
+                                        <p style="font-weight: bold;font-size: 14pt;">Résolution</p>
                                         <p>Pour résoudre ce problème, il convient de modifier l'adresse du serveur dans l'interface de configuration du WES :</p>
                                         <ol>
                                             <li value="1">
@@ -771,22 +581,22 @@
                                             <li value="3">
                                                 <p>sous l'onglet Propriétés &gt; Login/Droits/Comptes &gt; Méthode de connexion, vérifiez que la case "retrouver automatiquement les information utilisateur à partir du LDAP" est décochée.<br /><br /><img src="Config_WES_Xerox_TroubleShooting_MethodeConnexion.png" style="width: 581px;height: 290px;" /></p>
                                                 <p>&#160;</p>
-                                                <hr width="100%" size="0" align="center" />
-                                                <h2 style="color: #000000;" id="Problèmedencodageenalphabetcyrillique" data-magellan-target="Problèmedencodageenalphabetcyrillique">Problème d'encodage en alphabet cyrillique.</h2>
-                                                <p style="font-weight: bold;font-size: 14pt;"><strong style="color: #000000;">Contexte</strong>
-                                                </p>
-                                                <p>Sur des périphérique d'impression Xerox installés dans un pays utilisant l'alphabet cyrillique, on constate que tous les caractères ne sont pas correctement encodés sur le WES.</p>
-                                                <p>&#160;</p>
-                                                <p><span style="font-size: 14pt; font-weight: bold; color: #000000;">Cause</span>
-                                                    <br />Cette anomalie dépend de l'encodage défini dans la section <a href="../../C_Configurer/ConfigFiles/ConfigFiles_Procedure.htm#SNMP" target="_blank">Configuration SNMP</a> de la file d'impression.</p>
-                                                <p>&#160;</p>
-                                                <p><strong style="font-size: 14pt; color: #000000;">Résolution</strong>
-                                                    <br />Il convient de vérifier que l'encodage paramétré dans le profil WES&#160;est bien UTF-8.&#160;Après avoir vérifié et corrigé, au besoin, ce paramètre, il est parfois nécessaire d'éteindre puis de rallumer le périphérique di'mpression pour qu'il tienne compte de cette modification.&#160;</p>
-                                                <p>
-                                                    <br />
-                                                </p>
                                             </li>
                                         </ol>
+                                        <hr width="100%" size="0" align="center" />
+                                        <h2 style="color: #000000;" id="Problèmedencodageenalphabetcyrillique" data-magellan-target="Problèmedencodageenalphabetcyrillique">Problème d'encodage en alphabet cyrillique.</h2>
+                                        <p style="font-weight: bold;font-size: 14pt;"><strong style="color: #000000;">Contexte</strong>
+                                        </p>
+                                        <p>Sur des périphérique d'impression Xerox installés dans un pays utilisant l'alphabet cyrillique, on constate que tous les caractères ne sont pas correctement encodés sur le WES.</p>
+                                        <p>&#160;</p>
+                                        <p><span style="font-size: 14pt; font-weight: bold; color: #000000;">Cause</span>
+                                            <br />Cette anomalie dépend de l'encodage défini dans la section <a href="../../C_Configurer/ConfigFiles/ConfigFiles_Procedure.htm#SNMP" target="_blank">Configuration SNMP</a> de la file d'impression.</p>
+                                        <p>&#160;</p>
+                                        <p><strong style="font-size: 14pt; color: #000000;">Résolution</strong>
+                                            <br />Il convient de vérifier que l'encodage paramétré dans le profil WES&#160;est bien UTF-8.&#160;Après avoir vérifié et corrigé, au besoin, ce paramètre, il est parfois nécessaire d'éteindre puis de rallumer le périphérique di'mpression pour qu'il tienne compte de cette modification.&#160;</p>
+                                        <p>
+                                            <br />
+                                        </p>
                                     </div>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">
