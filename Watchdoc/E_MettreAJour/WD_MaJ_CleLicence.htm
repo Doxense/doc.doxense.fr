@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr-fr" xml:lang="fr-fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="Mettre à jour / restaurer Watchdoc" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr-fr" xml:lang="fr-fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="Procédure de restauration d'une version antérieure de Watchdoc" /><title>Watchdoc - Restaurer une version antérieure de Watchdoc</title>
+        <meta name="description" content="Procédure de mise à jour de la clé de licence après modification du parc d'impression." /><title>Watchdoc - Mettre à jour la clé de licence</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -56,11 +56,6 @@
 .button.previous-topic-button
 {
 	-pie-background: linear-gradient(transparent, #fcfaf8);
-}
-
-.button.next-topic-button
-{
-	-pie-background: linear-gradient(#ffffff, #fcfaf8);
 }
 
 .needs-pie
@@ -199,97 +194,72 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor18"></a>
-                                            <MadCap:concept term="WD" />Watchdoc - Restaurer une version antérieure de Watchdoc</h1>
-                                        <h2>Principe</h2>
-                                        <p>Après mise à jour   de Watchdoc, il peut arriver que l'on souhaite revenir à la version antérieure.&#160;Il est alors nécessaire de restaurer la version précédemment installée.&#160;</p>
+                                        <h1><a name="aanchor210"></a>
+                                            <MadCap:concept term="WD" />Watchdoc - Mettre à jour la clé de licence</h1>
+                                        <h2>Contexte</h2>
+                                        <p>Si vous mettez à jour Watchdoc /&#160;WSS à partir d'une version antérieure à la 6.1.0 ou lorsque la configuration de votre parc d'impression change (ajout de serveurs, de périphériques, de WES, notamment), Doxense<sup>®</sup> vous fournit une nouvelle licence associée à la nouvelle version ou aux nouveaux modules livrés (WES, FIL, FIR, etc.) répondant à vos besoins.</p>
                                         <p>&#160;</p>
-                                        <p>Cette opération est possible car, lorsqu'on lance une mise à jour, l'assistant génère automatiquement des fichiers de sauvegarde de la version précédemment installée. Par défaut, les fichiers de sauvegarde sont générés et enregistrés dans le dossier contenant les fichiers d'installation de la nouvelle version :<br /><br /><img src="../Z_Resources/Images/02_Captures/WD_Admin_Restaurer_BackupsAuto.png" /><br /><br /></p>
-                                        <p>A partir de la version 6.1.0.5122, vous pouvez aussi lancer la mise à jour en ligne de commande en précisant le dossier dans lequel vous souhaitez enregistrer les fichiers de sauvegarde (cf.&#160;<a href="WD61_MaJ_WD_Procedure_cmd.htm" target="_blank">Mettre à jour en ligne de commande</a>).</p>
-                                        <p>&#160;</p>
-                                        <p>La restauration consiste à copier les fichiers de l'ancienne version pour les coller dans les dossiers de la mise à jour afin de les remplacer.</p>
-                                        <h2>Prérequis</h2>
-                                        <p>Pour restaurer une version antérieure de Watchdoc, il est impératif d'avoir conservé les deux fichiers de sauvegarde<strong> backup_kernel_[n°version_date].zip</strong> et <strong>backup_web_[n°version_date].zip</strong> automatiquement générés par l'assistant lors de la mise à jour  et d'y avoir accès.</p>
-                                        <h2>Procédure </h2>
+                                        <p>Cette nouvelle licence doit être enregistrée en lieu et place de la précédente. </p>
+                                        <h2>Procédure</h2>
+                                        <h3>Prérequis</h3>
+                                        <p>Enregistrez le fichier de licence (..wlk) fourni par Doxense sur le serveur hébergeant Watchdoc ou dans un espace de travail librement accessible depuis ce serveur.&#160;</p>
+                                        <h3>Mettre à jour la licence automatiquement</h3>
+                                        <p>Pour mettre à jour la licence Watchdoc&#160;:</p>
                                         <ol>
                                             <li value="1">
-                                                <p>En tant qu'administrateur, accédez au serveur sur lequel est hébergé Watchdoc  ;</p>
+                                                <p>accédez à l'interface d'administration de Watchdoc en tant qu'administrateur ;</p>
                                             </li>
                                             <li value="2">
-                                                <p>accédez au dossier dans lequel sont enregistrés les 2 fichiers de sauvegarde&#160;;</p>
+                                                <p>depuis le Menu <strong>Principal</strong>, section <strong>Configuration</strong>, cliquez sur <strong>Configuration Avancée</strong> ;</p>
                                             </li>
                                             <li value="3">
-                                                <p>décompressez l'archive <strong>backup_kernel_[n°version_date].zip</strong> ;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p>décompressez ensuite l'archive <strong>backup_web_[n°version_date].zip</strong>&#160;; </p>
-                                            </li>
-                                            <li value="5">
-                                                <p>depuis la console des services (ou depuis l'invite de commande), stoppez les services suivants&#160;: </p>
-                                                <ul>
-                                                    <li>
-                                                        <p>Watchdoc.exe </p>
-                                                    </li>
-                                                    <li>
-                                                        <p>WatchdocPrivilegedService.exe</p>
-                                                    </li>
-                                                    <li>
-                                                        <p> Windows Process Activation Service (WAS)</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>World Wide Web Publishing Service (W3SVC) : <br /><br /><img src="../Z_Resources/Images/02_Captures/WD_Admin_Restaurer_StopServices.png" /><br /></p>
-                                                    </li>
-                                                </ul>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="6">
-                                                <p>rendez-vous dans le dossier décompressé <strong>backup_kernel_[n°version_date]</strong> et copiez tous les fichiers qui y figurent ; </p>
-                                            </li>
-                                            <li value="7">
-                                                <p>collez tous les fichiers dans le dossier <strong>Watchdoc </strong>(installé par défaut dans C:\Program Files\Doxense\Watchdoc)&#160;pour remplacer tous les fichiers de la nouvelle version par ceux de l'ancienne : <br /><br /><img src="../Z_Resources/Images/02_Captures/WD_Admin_Restaurer_CopieWD.png" /><br /><br /></p>
-                                            </li>
-                                            <li value="8">
-                                                <p>rendez-vous dans le dossier décompressé <strong>backup_web_[n°version_date]</strong> et copiez tous les fichiers qui y figurent ; </p>
-                                            </li>
-                                            <li value="9">
-                                                <p>collez tous les fichiers dans le dossier web de Watchdoc (par défaut <strong>C:\inetpub\wwwroot\watchdoc</strong>) pour remplacer tous les fichiers de la nouvelle version par ceux de l'ancienne :<br /><br /><img src="../Z_Resources/Images/02_Captures/WD_Admin_Restaurer_CopieWeb.png" /><br /><br /></p>
-                                            </li>
-                                            <li value="10">
-                                                <p>lorsque tous les fichiers ont été remplacés, retournez dans la console  (ou avec une invite de commande) pour relancer les services suivants : </p>
-                                                <ul>
-                                                    <li>
-                                                        <p>Watchdoc.exe </p>
-                                                    </li>
-                                                    <li>
-                                                        <p>WatchdocPrivilegedService.exe</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>Windows Process Activation Service (WAS)</p>
-                                                    </li>
-                                                    <li>
-                                                        <p> World Wide Web Publishing Service (W3SVC) : </p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li value="11">
-                                                <p>Accédez à l'interface d'administration Watchdoc pour vérifier que le numéro de version est bien celui de l'ancienne qui vient d'être restaurée.&#160;</p>
+                                                <p>dans l'interface Configuration avancée, cliquez sur <strong>Licence serveur</strong> :<br /><br /><img src="../Z_Resources/Images/02_Captures/WD_Admin_Licences_Acces.png" style="width: 700px;height: auto;" /></p>
                                             </li>
                                         </ol>
+                                        <p>&#160;</p>
+                                        <p><span style="font-family: 'Wingdings'">è</span>Vous accédez à l'interface<strong> Licence serveur</strong> dans laquelle sont détaillées les licences en cours et la configuration réseau.</p>
+                                        <ol data-mc-continue="true">
+                                            <li value="4">
+                                                <p>dans la section <strong>Modes d'activation</strong>, paramètre <strong>Fichier de licence</strong>, cliquez sur le bouton <strong>Parcourir </strong>;
+                </p>
+                                            </li>
+                                            <li value="5">
+                                                <p>parcourez votre espace de travail et sélectionnez le fichier de licence fourni par Doxense (extension .wlk) :<br /><br /><img src="../Z_Resources/Images/02_Captures/WD_Admin_Licences_Envoyer.png" style="width: 700px;height: auto;" /></p>
+                                            </li>
+                                        </ol>
+                                        <p>&#160;</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>une fois le fichier sélectionné, cliquez sur le bouton<strong> Envoyer le certificat de licence.</strong>.</p>
+                                            </li>
+                                        </ol>
+                                        <p>&#160;</p>
+                                        <p><span style="font-family: 'Wingdings'">è</span>Lorsque l'opération se déroule correctement, Watchdoc vous renvoie à l'interface d'administration principale.</p>
+                                        <p><span style="font-family: 'Wingdings'">è</span>Lorsque l'opération échoue, un message vous informant qu'un problème est sur- venu s'affiche dans l'interface. Dans ce cas, vous pouvez tenter de procéder à la mise à jour manuelle de la licence.</p>
+                                        <h3>Mettre à jour la licence manuellement</h3>
+                                        <p>Si l'opération a échoué, vous pouvez procéder à la mise à jour manuelle de la licence :</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>ouvrez le fichier de licence (extension .wlk) fourni par Doxense à l'aide d'un éditeur de texte (type notepad.exe) ;</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>dans l'encart <strong>Saisie manuelle</strong>, copiez le bloc de texte compris entre les mentions # BEGIN LICENSE et # END LICENSE incluses&#160;;</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>cliquez sur le bouton <strong>Enregistrer le certificat de licence</strong> pour valider la saisie de la licence&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WD_Admin_Licences_SaisieManuelle.png" /></p>
+                                            </li>
+                                        </ol>
+                                        <p>&#160;</p>
+                                        <p><span style="font-family: 'Wingdings'">è</span>Lorsque&#160; l'opération&#160; se&#160; déroule&#160; correctement,&#160; Watchdoc vous renvoie à l'interface d'administration principale.</p>
+                                        <p><span style="font-family: 'Wingdings'">è</span>Lorsque l'opération échoue, un message vous informant qu'un problème est survenu s'affiche dans l'interface. Dans ce cas, contactez le Support Doxense via <a href="https://doxense.zendesk.com/" target="_blank" title="Lien vers le site Connect - Support Doxense" alt="Lien vers le site Connect - Support Doxense">Connect</a>.</p>
                                     </div>
-                                    <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
+                                    <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy_Last mc-component nocontent">
                                         <div class="button-group-container-left">
                                             <button class="button elearning-button needs-pie previous-topic-button" title="Précédent" disabled="true">
                                                 <div>
                                                     <div role="img" class="button-icon-wrapper" aria-label="Précédent">
                                                         <div class="button-icon"> </div>
                                                     </div><span class="button-text">Précédent</span>
-                                                </div>
-                                            </button>
-                                            <button class="button elearning-button needs-pie next-topic-button" title="Suivant" disabled="true">
-                                                <div>
-                                                    <div role="img" class="button-icon-wrapper" aria-label="Suivant">
-                                                        <div class="button-icon"> </div>
-                                                    </div><span class="button-text">Suivant</span>
                                                 </div>
                                             </button>
                                         </div>

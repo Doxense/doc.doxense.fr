@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr-fr" xml:lang="fr-fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr-fr" xml:lang="fr-fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="Présentation de la procédure de mise à jour à l'aiide de l'assistant Watchdoc" /><title>Watchdoc - Mettre à jour Watchdoc et WSC v. 6.1.1 en mode déporté à l'aide de l'assistant (wizard)</title>
+        <meta name="description" content="Présentation de la procédure de mise à jour à l'aiide de l'assistant Watchdoc" /><title>Watchdoc - Mettre à jour Watchdoc et WSC à l'aide de l'assistant (wizard) sur le serveur master</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -194,30 +194,67 @@
                                             </button>
                                         </div>
                                     </div>
+                                    <div class="nocontent">
+                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
+                                        </div>
+                                    </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1>Watchdoc - Mettre à jour Watchdoc et WSC v. 6.1.1 en mode déporté à l'aide de l'assistant (wizard)</h1>
-                                        <h2>Postulat</h2>
-                                        <p>Le postulat de départ est que l'installation précédente a été réalisée par défaut, sans modification des chemins d'accès fournis par défaut.&#160;</p>
-                                        <p>Si la précédente installation ne respecte pas ce postulat, vous devrez modifier les chemins par défaut pour les adapter aux chemins spécifiques de votre précédente installation.<br /></p>
-                                        <h2>Principe</h2>
-                                        <p>En v. 6.1.1, le site web (service IIS) communique avec un serveur Watchdoc à l'aide d'une <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term15">dll<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Dynamic Link Library (bibliothèque de liens dynamiques) est une bibliothèque logicielle dont les fonctions sont chargées en mémoire par un programme lors de son exécution, par opposition aux bibliothèques logicielles statiques ou partagées dont les fonctions sont chargées en mémoire avant le début de l'exécution du programme.
-(Source : Wikipédia).</span></a> spécifique (Doxense.Watchdoc.CrystalProxy.dll ) qui doit être présente sur le serveur IIS <br />ainsi que ses références Doxense.Watchdoc.SpoolMonitor.dll entre autres).</p>
-                                        <p>Cette dll permet au protocole <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term43">RPC<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>RPC (Remote Procedure Call) est un protocole réseau permettant de faire des appels de procédures sur un ordinateur distant à l'aide d'un serveur d'applications. Ce protocole est utilisé dans le modèle client-serveur pour assurer la communication entre le client, le serveur et d’éventuels intermédiaires.</span></a>&#160;d'établir la communication entre le serveur Watchdoc et le serveur IIS (qu'il soit local ou déporté).</p>
-                                        <p>
-C:\Program Files\Doxense\Watchdoc\Doxense.Watchdoc.CrystalProxy.dll de présente sur le poste (</p>
-                                        <p>C’est cette DLL qui fera du RPC (Remote Procedure Call) sur le/les serveur/s Watchdoc (qu’il soit local ou remote)</p>
+                                        <h1>Watchdoc - Mettre à jour Watchdoc et WSC à l'aide de l'assistant (wizard) sur le serveur master</h1>
+                                        <fieldset>Si Watchdoc est installé en <a href="../P_Prerequis/Architecture_serveur.htm" target="_blank">mode déporté</a> (serveur IIS différent du serveur Watchdoc), suivez la procédure Mettre à jour Watchdoc et WSC v. 6.1.1 en mode déporté.</fieldset>
                                         <h2>Etapes</h2>
                                         <p>Lorsque vous avez préparé la mise à jour (cf.&#160;<a href="WD61_MaJ_WD_Prerequis.htm#Preparation" target="_blank">Mise à jour - Prérequis et préparation</a>), passez aux étapes suivantes :</p>
-                                        <p style="background-color: #ffff00;">1. mettez à jour de la base de données si la version installée est antérieure à une 6.0.&#160;Si vous partez d'une v.&#160;6.0.+, <strong>il n'est pas nécessaire</strong> de mettre à jour la base de données ;</p>
-                                        <p style="background-color: #ffff00;">2. mettez à jour Watchdoc ;</p>
-                                        <p style="background-color: #ffff00;">3. vérifiez la mise à jour ;</p>
-                                        <p style="background-color: #ffff00;">4. migrez les données ;</p>
-                                        <p style="background-color: #ffff00;">5. mettez à jour WSC.</p>
-                                        <p style="background-color: #ffff00;">6. si Watchdoc est installé en domaine, mettez à jour les autres serveurs.</p>
+                                        <p>1.  mettez à jour Watchdoc sur le serveur master ;</p>
+                                        <p>2. mettez à jour de la base de données si la version installée est antérieure à une 6.0.&#160;Si vous partez d'une v.&#160;6.0.+, <strong>il n'est pas nécessaire</strong> de mettre à jour la base de données ;</p>
+                                        <p>3. vérifiez la mise à jour ;</p>
+                                        <p>4. migrez les données (dans le cas où vous avez mis à jour la base de données) ;</p>
+                                        <p>5. mettez à jour WSC sur le erveur master ;</p>
+                                        <p>6. si Watchdoc est installé en domaine, mettez à jour les autres serveurs à l'aide de WSC.</p>
+                                        <h2>Procédure </h2>
+                                        <h3><a name="WD"></a>Mettre à jour Watchdoc</h3>
+                                        <ol>
+                                            <li value="1">
+                                                <p class="Liste_num_1">Dans le dossier où ont été décompressés les fichiers, double-cliquez sur <strong>WatchdocUpdate.exe</strong> pour lancer l'exécutable de mise à jour&#160;:<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../Z_Resources/Images/02_Captures/MAJ_WD_Update_60.png"><img class="MCPopupThumbnail img" data-mc-width="790" data-mc-height="242" src="../Z_Resources/Images/02_Captures/MAJ_WD_Update_60.png" tabindex="" style="width: 700px;mc-thumbnail: popup;mc-thumbnail-max-width: 1000px;max-width: 1000px;" /></a></p>
+                                            </li>
+                                        </ol>
                                         <p>&#160;</p>
-                                        <h2><a name="BDD"></a>Mettre à jour la base de données </h2>
-                                        <fieldset>Si vous mettez à jour depuis une version 6.0.x ou 6.1.x , il <strong>n'est pas nécessaire</strong> de mettre à jour la base de données. Cette étape n'est nécessaire que si la version installée est <b>antérieure à la v. 6.0.</b></fieldset>
-                                        <p class="Liste_num_1">Rendez-vous dans le dossier où ont été extraits les fichiers de l'archive.</p>
+                                        <ol data-mc-continue="true">
+                                            <li value="2">
+                                                <p class="Liste_num_1">Approuvez le message qui vous informe qu'une <strong>nouvelle clé de licence</strong> est nécessaire.&#160;</p>
+                                            </li>
+                                        </ol>
+                                        <ol data-mc-continue="true">
+                                            <li value="3">
+                                                <p class="Liste_num_1">Dans l'interface affichée, vérifiez les chemins d'accès des paramètres, puis cliquez sur le bouton <strong>Update Watchdoc !</strong>&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/MAJ_WD_LancerMaJ_60.png" style="width: 349px;height: 391px;" /></p>
+                                                <p>&#160;</p>
+                                                <p class="Resultat"><span style="font-family: 'Wingdings'">è</span> Un curseur indique la progression de la mise à jour.</p>
+                                                <p>&#160;</p>
+                                            </li>
+                                            <li value="4">
+                                                <p class="Liste_num_1">Si vous n'avez pas coché les cases empêchant leur redémarrage, le service IIS&#160;et le spouleur sont arrêtés puis redémarrés.</p>
+                                            </li>
+                                            <li value="5">
+                                                <p class="Liste_num_1">Confirmez le redémarrage du  service IIS dans la boîte de dialogue affichée&#160;: <br /><br /><img src="../Z_Resources/Images/02_Captures/MAJ_WD_RedemarrageIIS.png" style="width: 345px;height: 153px;" /></p>
+                                            </li>
+                                        </ol>
+                                        <p class="Resultat">&#160;</p>
+                                        <p class="Resultat"><span style="font-family: 'Wingdings'">è</span> un message vous informe de la fin et du succès de la mise à jour&#160;: <br /><br /><img src="../Z_Resources/Images/02_Captures/WD53_MaJ_UpdateComplete.png" style="width: 338px;height: 130px;" /></p>
+                                        <p>&#160;</p>
+                                        <h3><a name="MaJ_WSC"></a>Mettre à jour la Console de Supervision (WSC)&#160;</h3>
+                                        <p>Si vous l'utilisez, mettez à jour WSC.</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p class="Liste_num_1">Dans le dossier où  les fichiers ont été décompressés, double-cliquez sur <strong>SupervisionUpdater.exe</strong> pour lancer l'exécutable de mise à jour&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V6_Updater.png" style="width: 700px;height: auto;" /><br /><br /></p>
+                                            </li>
+                                        </ol>
+                                        <ol style="font-size: 12pt;" data-mc-continue="true">
+                                            <li value="2"><span style="font-size: 12pt;">Dans l'interface Supervision Console Update affichée, vérifiez les chemins d'accès des paramètres, puis cliquez sur le bouton </span><strong style="font-size: 12pt;">Update</strong><span style="font-size: 12pt;">&#160;:</span>
+                                            </li>
+                                        </ol>
+                                        <p class="Resultat"><span style="font-family: 'Wingdings'">è</span> un message vous informe de la fin et du succès de la mise à jour&#160;: <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V6_Updater_Succes.png" style="width: 338px;height: 130px;" /><br /></p>
+                                        <p>&#160;</p>
+                                        <h3><a name="BDD"></a>Mettre à jour la base de données </h3>
+                                        <p style="font-weight: bold;">Titre non-publié - Mettre à jour la base de données </p>
+                                        <p class="Liste_num_1">Rendez-vous dans le dossier où ont été extraits les fichiers de l'archive d'installation.</p>
                                         <ol>
                                             <li value="1">
                                                 <p class="Liste_num_1">Décompressez le dossier <strong>kernelXX</strong>.</p>
@@ -226,13 +263,23 @@ C:\Program Files\Doxense\Watchdoc\Doxense.Watchdoc.CrystalProxy.dll de présente
                                                 <p class="Liste_num_1">Dans le dossier <strong>kernelXX</strong>, ouvrez le dossier <strong>SQL</strong>.</p>
                                             </li>
                                             <li value="3">
-                                                <p class="Liste_num_1">En fonction du type de votre base de données (MSSQL, PostgreSQL ou SQLite), repérez le fichier ou les fichiers de mise à jour <strong>[type_bdd]_update-XX</strong>.</p>
+                                                <p class="Liste_num_1">En fonction du type de votre base de données (MSSQL, PostgreSQL ou SQLite), repérez le ou les fichiers de mise à jour <strong>[type_bdd]_update-XX</strong>.</p>
                                             </li>
                                             <li value="4">
-                                                <p class="Liste_num_1">Effectuez la mise à jour par étapes&#160;: depuis le dossier <strong>Kernel[n°version].zip\SQL</strong>, exécutez toutes les mises à jour de versions <strong>[Type_bdd]_update_[version]</strong> comprises entre la version installée dans votre environnement et la nouvelle version.&#160;<br /><br /><img src="../Z_Resources/Images/02_Captures/WD_Update_MSSQL.png" style="height: auto;width: 600px;text-align: left;" /></p>
+                                                <p class="Liste_num_1">Effectuez la mise à jour par étapes&#160;: depuis le dossier <strong>Kernel[n°version].zip\SQL</strong>, exécutez toutes les mises à jour de versions <strong>[Type_bdd]_update_[version]</strong> comprises entre la version installée dans votre environnement et la nouvelle version. Par exemple&#160;: &#160;</p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_num_1">si vous partez d'une v 5.4, vous effectuez 1&#160;mise à jour (en v. 6.0) ;</p>
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_num_1">si vous partez d'une v 5.2 ou v. 5.3, vous effectuez 2 mises à jour (en v. 5.4, puis en v. 6.0) ;<br /><br /><img src="../Z_Resources/Images/02_Captures/WD_Update_MSSQL.png" style="height: auto;width: 600px;text-align: left;" /></p>
+                                                        <p class="Liste_num_1">&#160;</p>
+                                                    </li>
+                                                </ul>
                                             </li>
                                         </ol>
-                                        <p>&#160;</p>
                                         <p>Les fichiers de mise à jour mssql_updateXX.sql peuvent être exécutés  avec deux outils :</p>
                                         <ol>
                                             <li value="1">
@@ -262,60 +309,15 @@ C:\Program Files\Doxense\Watchdoc\Doxense.Watchdoc.CrystalProxy.dll de présente
                                                     </li>
                                                 </ul>
                                             </li>
-                                        </ol>
-                                        <h2>Mettre à jour  Watchdoc</h2>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">Dans le dossier où ont été décompressés les fichiers, double-cliquez sur <strong>WatchdocUpdate.exe</strong> pour lancer l'exécutable de mise à jour&#160;:<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../Z_Resources/Images/02_Captures/MAJ_WD_Update_60.png"><img class="MCPopupThumbnail img" data-mc-width="790" data-mc-height="242" src="../Z_Resources/Images/02_Captures/MAJ_WD_Update_60.png" tabindex="" style="width: 700px;mc-thumbnail: popup;mc-thumbnail-max-width: 1000px;max-width: 1000px;" /></a></p>
+                                            <li value="3">
+                                                <p>Une fois la base de données mise à jour, redémarrez le service Watchdoc, de sorte qu'il puisse prendre en compte le changement de base de données.</p>
                                             </li>
                                         </ol>
                                         <p>&#160;</p>
-                                        <ol data-mc-continue="true">
-                                            <li value="2">
-                                                <p class="Liste_num_1">Approuvez le message qui vous informe qu'une <strong>nouvelle clé de licence</strong> est nécessaire.&#160;</p>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="3">
-                                                <p class="Liste_num_1">Dans l'interface affichée, vérifiez les chemins d'accès des paramètres, puis cliquez sur le bouton <strong>Update Watchdoc !</strong>&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/MAJ_WD_LancerMaJ_60.png" style="width: 349px;height: 391px;" /></p>
-                                                <p>&#160;</p>
-                                                <p class="Resultat"><span style="font-family: 'Wingdings'">è</span> Un curseur indique la progression de la mise à jour.</p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p class="Liste_num_1">Si vous n'avez pas coché les cases empêchant leur redémarrage, le service IIS&#160;et le spouleur sont arrêtés puis redémarrés.</p>
-                                            </li>
-                                            <li value="5">
-                                                <p class="Liste_num_1">Confirmez le redémarrage du  service IIS dans la boîte de dialogue affichée&#160;: <br /><br /><img src="../Z_Resources/Images/02_Captures/MAJ_WD_RedemarrageIIS.png" style="width: 345px;height: 153px;" /></p>
-                                            </li>
-                                        </ol>
-                                        <p class="Resultat">&#160;</p>
-                                        <p class="Resultat"><span style="font-family: 'Wingdings'">è</span> un message vous informe de la fin et du succès de la mise à jour&#160;: <br /><br /><img src="../Z_Resources/Images/02_Captures/WD53_MaJ_UpdateComplete.png" style="width: 338px;height: 130px;" /><br /><br /></p>
-                                        <h2>Vérifier la mise à jour de Watchdoc</h2>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">Dans la page d'accueil de l'interface web d'administration de Watchdoc, vérifiez que le numéro de version a été mis à jour&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WD61_MMJ_VerifVersion.png" style="width: 700px;" /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="2">
-                                                <p class="Liste_num_1">Dans l'interface web d'administration de Watchdoc, vérifiez que la nouvelle version de Watchdoc parvient toujours à communiquer avec la base de données (<strong>Menu principal, </strong>section<strong> Configuration &gt; Configuration avancée &gt; Base de statistiques</strong>) :</p>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="3">
-                                                <p class="Liste_num_2">cliquez sur  <strong>Editer la configuration</strong>&#160;; </p>
-                                            </li>
-                                            <li value="4">
-                                                <p class="Liste_num_2">cliquez sur <strong>Vérifier la base de données</strong>. <br /></p>
-                                            </li>
-                                        </ol>
-                                        <p class="Resultat"><span style="font-family: 'Wingdings'">è</span> un message vous indique si Watchdoc parvient à contacter la base de données&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WD60_MaJ_VerifBDDStat.png" style="width: 739px;height: 433px;" /><br /><br />Logiquement, les mises à jour vers les versions<strong> 5.4</strong> et <strong>6.0</strong> nécessitent une migration de la base de données (cf.&#160;ci-dessous : Migrer les données).<br /></p>
-                                        <h2>Migrer les données</h2>
-                                        <p>Le schéma de la base de données de Watchodc v. 5.4 et celui de la v. 6.0 a été modifié.&#160;<br />Donc, si vous partez d'une version antérieure à ces versions, il est nécessaire d'effectuer une migration des données lors de la mise à jour.&#160;<br />Logiquement, si vous partez d'une version 5.4, une seule migration est nécessaire, mais si vous partez d'une version antérieure à la v. 5.4,  2 migrations sont nécessaires.</p>
+                                        <h3><a name="MaJ_WD_Verif"></a>Migrer les données de la base de données</h3>
+                                        <p style="font-weight: bold;">Titre non-publié - Migrer les données</p>
+                                        <p>Après avoir mis à jour la base de données, il est nécessaire de procéder à la migration des données.<br />Procédez par étape, comme pour la mise à jour de la base de données&#160;:</p>
                                         <p>&#160;</p>
-                                        <p>Pour procéder à la migration des données&#160;: </p>
                                         <ol>
                                             <li value="1">
                                                 <p class="Liste_num_1">dans l'interface d'administration de Watchdoc, depuis le <strong>Menu Principal</strong>, section <strong>Configuration &gt; Configuration avancée &gt; Base de statistiques</strong>.<br /></p>
@@ -336,7 +338,7 @@ C:\Program Files\Doxense\Watchdoc\Doxense.Watchdoc.CrystalProxy.dll de présente
                                                         <p>si vous partez d'une v.&#160;5.4, exécutez la migration de la v. 5.4 vers la v. 6.0 ;</p>
                                                     </li>
                                                     <li>
-                                                        <p>si vous partez d'une version antérieure à la v. 5.4, exécutez la migration  vers la v5.4, puis de v5.4 vers v6.0.</p>
+                                                        <p>si vous partez d'une version antérieure à la v. 5.4, exécutez la migration  vers la v. 5.4, puis de v. 5.4 vers v. 6.0.</p>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -346,36 +348,45 @@ C:\Program Files\Doxense\Watchdoc\Doxense.Watchdoc.CrystalProxy.dll de présente
                                                 <p>Lorsque le message <strong>Base de données à jour, aucune migration requise</strong> s'affiche, la migration est terminée. </p>
                                             </li>
                                         </ol>
-                                        <h2>Mettre à jour <a name="WSC"></a>WSC</h2>
-                                        <p>Si vous l'utilisez, mettez à jour WSC.</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">Dans le dossier où  les fichiers ont été décompressés, double-cliquez sur <strong>SupervisionUpdater.exe</strong> pour lancer l'exécutable de mise à jour&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V6_Updater.png" style="width: 700px;height: auto;" /><br /><br /></p>
+                                        <p>&#160;</p>
+                                        <h3><a name="MaJ_WD_Verif"></a>Vérifier la mise à jour de Watchdoc</h3>
+                                        <ol data-mc-continue="true">
+                                            <li value="5">
+                                                <p class="Liste_num_1">Dans la page d'accueil de l'interface web d'administration de Watchdoc, vérifiez que le numéro de version a été mis à jour&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WD61_MMJ_VerifVersion.png" style="width: 700px;" /></p>
+                                                <p>&#160;</p>
+                                            </li>
+                                            <li value="6">
+                                                <p class="Liste_num_1">Dans l'interface web d'administration de Watchdoc, vérifiez que la nouvelle version de Watchdoc parvient toujours à communiquer avec la base de données (<strong>Menu principal, </strong>section<strong> Configuration &gt; Configuration avancée &gt; Base de statistiques</strong>) :</p>
+                                            </li>
+                                            <li value="7">
+                                                <p class="Liste_num_2">cliquez sur  <strong>Editer la configuration</strong>&#160;; </p>
+                                            </li>
+                                            <li value="8">
+                                                <p class="Liste_num_2">cliquez sur <strong>Vérifier la base de données</strong>. </p>
+                                                <p><span style="font-family: 'Wingdings'">è</span> un message vous indique si Watchdoc parvient à contacter la base de données&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WD60_MaJ_VerifBDDStat.png" style="width: 739px;height: 433px;" /></p>
+                                                <p>&#160;</p>
+                                            </li>
+                                            <li value="9">
+                                                <p>Si Watchdoc ne parvient pas à contacter la base de données, redémarrez le service Watchdoc. </p>
                                             </li>
                                         </ol>
-                                        <ol style="font-size: 12pt;" data-mc-continue="true">
-                                            <li value="2"><span style="font-size: 12pt;">Dans l'interface Supervision Console Update affichée, vérifiez les chemins d'accès des paramètres, puis cliquez sur le bouton </span><strong style="font-size: 12pt;">Update</strong><span style="font-size: 12pt;">&#160;:</span>
-                                            </li>
-                                        </ol>
-                                        <p class="Resultat"><span style="font-family: 'Wingdings'">è</span> un message vous informe de la fin et du succès de la mise à jour&#160;: <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V6_Updater_Succes.png" style="width: 338px;height: 130px;" /><br /></p>
-                                        <p>
-                                            <br />Attention : la mise à jour vers WSC&#160;v6.1 nécessite une désinstallation puis une réinstallation des pilotes d'impression (cf.&#160;<a href="../F_WSC/WSC6.1_Ajouter_Pilote.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Procédure de création d'un pilote d'impression v. 6.1.1</a>).</p>
-                                        <h2>Vérifier la mise à jour de WSC</h2>
+                                        <p>&#160;</p>
+                                        <h3><a name="MaJ_WSC_Verif"></a>Vérifier la mise à jour de WSC</h3>
+                                        <p>Dans la page d'aide de l'interface web d'administration de WSC  vérifiez que le numéro de version a été mis à jour&#160;:</p>
                                         <ol>
                                             <li value="1">
-                                                <p>Dans la page d'aide de l'interface web d'administration de WSC  vérifiez que le numéro de version a été mis à jour&#160;:</p>
+                                                <p>Depuis le menu principal, cliquez sur l'entrée <b>Aide</b> du menu vertical.</p>
                                             </li>
                                             <li value="2">
-                                                <p>Depuis le menu principal, cliquez sur l'entrée Aide du menu vertical</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>La section A propos de la Console de supervision affiche le numéro de version : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V61_VerifVersion.png" style="width: 700px;height: auto;" /></p>
+                                                <p>La section<strong> A propos de la Console de supervision</strong> affiche le numéro de version : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V61_VerifVersion.png" style="width: 700px;height: auto;" /></p>
                                             </li>
                                         </ol>
-                                        <h2>Mettre à jour les autres serveurs du domaine</h2>
-                                        <p>Si Watchdoc est installé dans un domaine (configuration master/slaves), il est nécessaire de mettre également à jour les serveurs slaves.&#160;</p>
-                                        <p>Pour les versions antérieures à v6.1, mettez à jour chaque serveur slave qui dépend du master en suivant la procédure ci-dessus.&#160;</p>
-                                        <p>Une fois la v6.1 installée dans votre domaine, vous pouvez procéder à la mise à jour vers les versions supérieures à l'aide de l'updater de WSC : cet outil permet de propager et d'appliquer les mises à jour sur les serveurs du domaine une fois le master actualisé (cf.&#160;<a href="../F_WSC/WSC_Gestion_MettreAJour_Domaine.htm" target="_blank" title="Procédure de mise à jour" alt="Procédure de mise à jour">Mise à jour d'un domaine</a>).&#160;</p>
+                                        <p>&#160;</p>
+                                        <h3><a name="MaJ_WD_Propager"></a>Propager la mise à jour sur les autres serveurs du domaine</h3>
+                                        <p>Lorsque Watchdoc / WSC est installé en domaine (configuration master/slaves), une fois que le serveur master est à jour, il est nécessaire de mettre à jour tous les autres serveurs qui en dépendent.&#160;</p>
+                                        <p>&#160;</p>
+                                        <p>Vous pouvez procéder de manière unitaire : appliquez les étapes précédentes sur chaque serveur du domaine.&#160;</p>
+                                        <p>Vous pouvez également procéder en masse : propagez  la mise à jour du serveur master vers les autres serveurs à l'aide de la fonction  "Updater"de  WSC   (cf.&#160;<a href="WSC_Gestion_MettreAJour_Domaine.htm" target="_blank" title="Procédure de mise à jour" alt="Procédure de mise à jour">Mise à jour d'un domaine</a>).&#160;</p>
                                     </div>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

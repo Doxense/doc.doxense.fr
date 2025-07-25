@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr-fr" xml:lang="fr-fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="Mettre à jour / restaurer Watchdoc" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr-fr" xml:lang="fr-fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="WSC Supervision|Serveurs" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="Présentation de la procédure de mise à jour à l'aiide de l'assistant Watchdoc" /><title>Watchdoc - Mettre à jour Watchdoc et WSC à l'aide de l'assistant (wizard)</title>
+        <meta name="description" content="Présentation du principe de mise à jour d'un domaine depuis WSC et procédure : accès à l'interface, ajout d'une mise à jour, propagation, application et vérification." /><title>WSC Console de supervision  - Mettre à jour un domaine&#160;: propager la mise à jour du serveur master vers les serveurs slaves</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -199,179 +199,110 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1>Watchdoc - Mettre à jour Watchdoc et WSC à l'aide de l'assistant (wizard)</h1>
-                                        <fieldset>Si Watchdoc est installé en <a href="../P_Prerequis/Architecture_serveur.htm" target="_blank">mode déporté</a> (serveur IIS différent du serveur Watchdoc), suivez la procédure <a href="WD61_MaJ_WD_Procedure_Deport.htm" target="_blank">Mettre à jour Watchdoc et WSC v. 6.1.1 en mode déporté.</a></fieldset>
+                                        <h1><a name="aanchor0"></a>
+                                            <MadCap:concept term="WaWSC" />WSC Console de supervision  - Mettre à jour un domaine&#160;: propager la mise à jour du serveur master vers les serveurs slaves</h1>
+                                        <h2>Principe</h2>
+                                        <p>La Console de Supervision permet de mettre à jour Watchdoc.&#160;<br />A partir de la version 6.1, lorsque Watchdoc est configuré en Domaine (un serveur master et un ou plusieurs serveurs dépendants), WSC&#160;permet de propager la mise à jour du serveur master vers l'ensemble des autres serveurs qui en dépendent.&#160;<br />Cette procédure est valable lorsque le mode de synchronisation entre master et slaves est bidirectionnel ou unidirectionnel (aussi appelé mode <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term116">mailbox<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Dans Watchdoc, mode de synchronisation unidirectionnel. 
+Dans ce mode, c'est un serveur slave qui appelle le master et ce dernier peut alors répondre dans la session de communication établie par le serveur.</span></a>).</p>
                                         <h2>Etapes</h2>
-                                        <p>&#160;</p>
-                                        <p>Lorsque vous avez préparé la mise à jour (cf.&#160;<a href="WD61_MaJ_WD_Prerequis.htm#Preparation" target="_blank">Mise à jour - Prérequis et préparation</a>), passez aux étapes suivantes :</p>
-                                        <p>1. mettez à jour de la base de données si la version installée est antérieure à une 6.0.&#160;Si vous partez d'une v.&#160;6.0.+, <strong>il n'est pas nécessaire</strong> de mettre à jour la base de données ;</p>
-                                        <p>2. mettez à jour Watchdoc ;</p>
-                                        <p>3. vérifiez la mise à jour ;</p>
-                                        <p>4. migrez les données ;</p>
-                                        <p>5. mettez à jour WSC.</p>
-                                        <p>6. si Watchdoc est installé en domaine, mettez à jour les autres serveurs.</p>
-                                        <p>&#160;</p>
-                                        <h2><a name="BDD"></a>Mettre à jour la base de données </h2>
-                                        <fieldset>Si vous mettez à jour depuis une version 6.0.x ou 6.1.x , il <strong>n'est pas nécessaire</strong> de mettre à jour la base de données. Cette étape n'est nécessaire que si la version installée est <b>antérieure à la v. 6.0.</b></fieldset>
-                                        <p class="Liste_num_1">Rendez-vous dans le dossier où ont été extraits les fichiers de l'archive.</p>
+                                        <p>Afin de pouvoir propager la mise à jour sur les serveurs slaves, il est nécessaire d'avoir d'abord mis à jour le serveur master manuellement.</p>
                                         <ol>
                                             <li value="1">
-                                                <p class="Liste_num_1">Décompressez le dossier <strong>kernelXX</strong>.</p>
+                                                <p>mise à jour de Watchdoc sur le serveur master ;</p>
                                             </li>
                                             <li value="2">
-                                                <p class="Liste_num_1">Dans le dossier <strong>kernelXX</strong>, ouvrez le dossier <strong>SQL</strong>.</p>
+                                                <p>mise à jour de WSC sur le serveur master ;</p>
                                             </li>
                                             <li value="3">
-                                                <p class="Liste_num_1">En fonction du type de votre base de données (MSSQL, PostgreSQL ou SQLite), repérez le fichier ou les fichiers de mise à jour <strong>[type_bdd]_update-XX</strong>.</p>
-                                            </li>
-                                            <li value="4">
-                                                <p class="Liste_num_1">Effectuez la mise à jour par étapes&#160;: depuis le dossier <strong>Kernel[n°version].zip\SQL</strong>, exécutez toutes les mises à jour de versions <strong>[Type_bdd]_update_[version]</strong> comprises entre la version installée dans votre environnement et la nouvelle version.&#160;<br /><br /><img src="../Z_Resources/Images/02_Captures/WD_Update_MSSQL.png" style="height: auto;width: 600px;text-align: left;" /></p>
+                                                <p>propagation de la mise à jour de Watchdoc depuis le serveur master vers les serveurs slaves. </p>
                                             </li>
                                         </ol>
-                                        <p>&#160;</p>
-                                        <p>Les fichiers de mise à jour mssql_updateXX.sql peuvent être exécutés  avec deux outils :</p>
+                                        <h2>Mise à jour du serveur Master</h2>
+                                        <p>Procédez à la mise à jour de Watchdoc et WSC&#160;sur le serveur master (cf.&#160;<a href="WD61_MaJ_WD_Procedure.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Mettre à jour  Watchdoc</a> et <a href="WD61_MaJ_WD_Procedure.htm#WSC" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Mettre à jour  WSC</a>).</p>
+                                        <h2>Accéder aux outils de propagation</h2>
                                         <ol>
                                             <li value="1">
-                                                <p>avec l'outil MS SQL Server Management Studio<sup>®</sup>&#160;:<br /></p>
+                                                <p>Une fois le serveur master mis à jour, accédez à l'interface d'administration du WSC en tant qu'administrateur.</p>
                                             </li>
                                             <li value="2">
-                                                <p class="Liste_num_1">avec l'outil en ligne de commande <strong><a href="https://learn.microsoft.com/fr-fr/sql/tools/sqlcmd/sqlcmd-utility?view=sql-server-ver16&amp;tabs=go%2Cwindows&amp;pivots=cs1-bash" target="_blank" title="Lien vers la documentation de l'outil sqlcmd (Microsoft SQL)" alt="Lien vers la documentation de l'outil sqlcmd (Microsoft SQL)">sqlcmd</a></strong> intégré à la base de données.</p>
-                                                <p>Exemple de commande pour exécuter un script de mise à jour&#160;:<br /><code>sqlcmd -S localhost\watchdoc -U sa -d watchdocstats -i mssql_update_XX.sql -o QueryResults.txt -e</code></p>
-                                                <ul>
-                                                    <li>
-                                                        <p><strong>-S</strong> : nom du serveur SQLServer</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>-U</strong> : login</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>-d</strong> : nom de la base de données</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>-i</strong> : nom du script à exécuter</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>-o</strong> : fichier de sortie</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>-e</strong> : ajout les commandes exécutées dans le fichier de script</p>
-                                                    </li>
-                                                </ul>
+                                                <p>Depuis le <strong>Menu Principal</strong>, click <strong>Print Serveurs d'impression</strong> de WSC :<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V6_Admin_Serveurs_Acces.png" style="width: 700px;" /></p>
+                                                <p>&#160;</p>
                                             </li>
-                                        </ol>
-                                        <h2>Mettre à jour  Watchdoc</h2>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">Dans le dossier où ont été décompressés les fichiers, double-cliquez sur <strong>WatchdocUpdate.exe</strong> pour lancer l'exécutable de mise à jour&#160;:<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../Z_Resources/Images/02_Captures/MAJ_WD_Update_60.png"><img class="MCPopupThumbnail img" data-mc-width="790" data-mc-height="242" src="../Z_Resources/Images/02_Captures/MAJ_WD_Update_60.png" tabindex="" style="width: 700px;mc-thumbnail: popup;mc-thumbnail-max-width: 1000px;max-width: 1000px;" /></a></p>
-                                            </li>
-                                        </ol>
-                                        <p>&#160;</p>
-                                        <ol data-mc-continue="true">
-                                            <li value="2">
-                                                <p class="Liste_num_1">Approuvez le message qui vous informe qu'une <strong>nouvelle clé de licence</strong> est nécessaire.&#160;</p>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
                                             <li value="3">
-                                                <p class="Liste_num_1">Dans l'interface affichée, vérifiez les chemins d'accès des paramètres, puis cliquez sur le bouton <strong>Update Watchdoc !</strong>&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/MAJ_WD_LancerMaJ_60.png" style="width: 349px;height: 391px;" /></p>
-                                                <p>&#160;</p>
-                                                <p class="Resultat"><span style="font-family: 'Wingdings'">è</span> Un curseur indique la progression de la mise à jour.</p>
-                                                <p>&#160;</p>
+                                                <p>L'interface <strong>Serveurs d'impression</strong> affiche tous les serveurs supervisés.</p>
                                             </li>
                                             <li value="4">
-                                                <p class="Liste_num_1">Si vous n'avez pas coché les cases empêchant leur redémarrage, le service IIS&#160;et le spouleur sont arrêtés puis redémarrés.</p>
+                                                <p>Devant les noms des serveurs, la lettre <strong>M </strong>indique les serveurs master  et la lettre <strong>S</strong> les serveurs slaves.</p>
                                             </li>
                                             <li value="5">
-                                                <p class="Liste_num_1">Confirmez le redémarrage du  service IIS dans la boîte de dialogue affichée&#160;: <br /><br /><img src="../Z_Resources/Images/02_Captures/MAJ_WD_RedemarrageIIS.png" style="width: 345px;height: 153px;" /></p>
+                                                <p>Vérifiez l'état des serveurs du domaine (maîtres et esclaves) : ils doivent être accessibles (coche verte ou orange).</p>
                                             </li>
                                         </ol>
-                                        <p class="Resultat">&#160;</p>
-                                        <p class="Resultat"><span style="font-family: 'Wingdings'">è</span> un message vous informe de la fin et du succès de la mise à jour&#160;: <br /><br /><img src="../Z_Resources/Images/02_Captures/WD53_MaJ_UpdateComplete.png" style="width: 338px;height: 130px;" /><br /><br /></p>
-                                        <h2>Vérifier la mise à jour de Watchdoc</h2>
-                                        <ol>
+                                        <h2>Ajouter une mise à jour</h2>
+                                        <ol start="1">
                                             <li value="1">
-                                                <p class="Liste_num_1">Dans la page d'accueil de l'interface web d'administration de Watchdoc, vérifiez que le numéro de version a été mis à jour&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WD61_MMJ_VerifVersion.png" style="width: 700px;" /></p>
-                                                <p>&#160;</p>
+                                                <p>Cliquez sur le bouton <strong>Ajouter une mise à jour</strong> :</p>
                                             </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
                                             <li value="2">
-                                                <p class="Liste_num_1">Dans l'interface web d'administration de Watchdoc, vérifiez que la nouvelle version de Watchdoc parvient toujours à communiquer avec la base de données (<strong>Menu principal, </strong>section<strong> Configuration &gt; Configuration avancée &gt; Base de statistiques</strong>) :</p>
+                                                <p>dans l'interface Ajouter une mise à jour, cliquez dans le cadre <strong>Package</strong>, pour parcourir votre espace de travail à la recherche du package ;</p>
                                             </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
                                             <li value="3">
-                                                <p class="Liste_num_2">cliquez sur  <strong>Editer la configuration</strong>&#160;; </p>
+                                                <p>une fois le package validé (coche verte) attribuez un  <strong>Nom</strong>.</p>
+                                                <p>N.B.&#160;: attention à ne pas ajouter un espace après le nom, ce qui provoquerait une erreur lors du chargement de la mise à jour ;</p>
                                             </li>
                                             <li value="4">
-                                                <p class="Liste_num_2">cliquez sur <strong>Vérifier la base de données</strong>. <br /></p>
+                                                <p>cliquez sur <strong>Valider </strong>:<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Updater_Charger.png" style="width: 700px;" /></p>
                                             </li>
                                         </ol>
-                                        <p class="Resultat"><span style="font-family: 'Wingdings'">è</span> un message vous indique si Watchdoc parvient à contacter la base de données&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WD60_MaJ_VerifBDDStat.png" style="width: 739px;height: 433px;" /><br /><br />Logiquement, les mises à jour vers les versions<strong> 5.4</strong> et <strong>6.0</strong> nécessitent une migration de la base de données (cf.&#160;ci-dessous : Migrer les données).<br /></p>
-                                        <h2>Migrer les données</h2>
-                                        <p>Le schéma de la base de données de Watchodc v. 5.4 et celui de la v. 6.0 a été modifié.&#160;<br />Donc, si vous partez d'une version antérieure à ces versions, il est nécessaire d'effectuer une migration des données lors de la mise à jour.&#160;<br />Logiquement, si vous partez d'une version 5.4, une seule migration est nécessaire, mais si vous partez d'une version antérieure à la v. 5.4,  2 migrations sont nécessaires.</p>
                                         <p>&#160;</p>
-                                        <p>Pour procéder à la migration des données&#160;: </p>
+                                        <p><span style="font-family: 'Wingdings'">è</span> Le curseur indique en vert la progression du chargement du package de mise à jour :<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Updater_Succes.png" style="width: 500px;height: auto;" /></p>
+                                        <p>&#160;</p>
+                                        <p><span style="font-family: 'Wingdings'">è</span> Si le chargement échoue, le curseur devient rouge et un message informe de la nature du problème : par exemple "Ce package de mise à jour n'est pas sécurisé" (cf.&#160;dépannage "<a href="../I_ResolutionDePannes/ADE_WSC_MaJImpossible.htm" target="_blank">Impossible de mettre à jour&#160;: package non-sécurisé</a>"). <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Updater_Erreur.png" style="width: 500px;height: auto;" /><br /></p>
+                                        <h2><a name="Propager_"></a>Propager la mise à jour</h2>
                                         <ol>
                                             <li value="1">
-                                                <p class="Liste_num_1">dans l'interface d'administration de Watchdoc, depuis le <strong>Menu Principal</strong>, section <strong>Configuration &gt; Configuration avancée &gt; Base de statistiques</strong>.<br /></p>
+                                                <p>Une fois le fichier de mise à jour ajouté, cliquez sur le bouton <strong>Propager </strong>une mise à jour (situé sous le bouton <strong>Ajouter une mise à jour</strong>).<br /></p>
+                                                <p>N.B.&#160;: si le bouton Propager renvoie vers l'interface Ajouter une nouvelle mise à jour, c'est que WSC n'a pas fini de vérifier la validité du package de la nouvelle version (notamment son certificat) ou que je package téléchargé est corrompu.</p>
                                             </li>
                                             <li value="2">
-                                                <p class="Liste_num_1">Dans la section  <strong>Migration des bases de données</strong>, cliquez sur <strong>Démarrer la migration immédiatement</strong>&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/MAJ_WD_Maj_Mig_Demarrer_54.png" style="width: 567px;height: 112px;" /></p>
-                                                <p>&#160;</p>
+                                                <p>Dans l'interface <strong>Propager une mise à jour</strong>, sélectionnez le fichier de mise à jour à appliquer.</p>
                                             </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
                                             <li value="3">
-                                                <p>Réitérez l'opération tant que le message <strong>"Migration de données nécessaire"</strong> s'affiche. Cette migration doit être effectuée de manière progressive, par étape.&#160;Ainsi : </p>
-                                                <ul>
-                                                    <li>
-                                                        <p>si vous partez d'une v. 6.0, il n'est pas nécessaire de migrer les données ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>si vous partez d'une v.&#160;5.4, exécutez la migration de la v. 5.4 vers la v. 6.0 ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>si vous partez d'une version antérieure à la v. 5.4, exécutez la migration  vers la v5.4, puis de v5.4 vers v6.0.</p>
-                                                    </li>
-                                                </ul>
+                                                <p>Sélectionnez ensuite le serveur ou l'ensemble des serveurs sur lesquels propager le fichier de mise à jour.</p>
                                             </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
                                             <li value="4">
-                                                <p>Lorsque le message <strong>Base de données à jour, aucune migration requise</strong> s'affiche, la migration est terminée. </p>
+                                                <p>Cliquez sur le bouton <strong>Valider </strong>pour lancer la propagation des fichiers de mise à jour sur les serveurs désignés.<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Updater_Propager.png" style="width: 500px;height: auto;" /><br /><br /></p>
                                             </li>
                                         </ol>
-                                        <h2>Mettre à jour <a name="WSC"></a>WSC</h2>
-                                        <p>Si vous l'utilisez, mettez à jour WSC.</p>
+                                        <p><span style="font-family: 'Wingdings'">è</span> un rapport vous informe du succès de l'opération.</p>
+                                        <h2>Appliquer la mise à jour</h2>
                                         <ol>
                                             <li value="1">
-                                                <p class="Liste_num_1">Dans le dossier où  les fichiers ont été décompressés, double-cliquez sur <strong>SupervisionUpdater.exe</strong> pour lancer l'exécutable de mise à jour&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V6_Updater.png" style="width: 700px;height: auto;" /><br /><br /></p>
-                                            </li>
-                                        </ol>
-                                        <ol style="font-size: 12pt;" data-mc-continue="true">
-                                            <li value="2"><span style="font-size: 12pt;">Dans l'interface Supervision Console Update affichée, vérifiez les chemins d'accès des paramètres, puis cliquez sur le bouton </span><strong style="font-size: 12pt;">Update</strong><span style="font-size: 12pt;">&#160;:</span>
-                                            </li>
-                                        </ol>
-                                        <p class="Resultat"><span style="font-family: 'Wingdings'">è</span> un message vous informe de la fin et du succès de la mise à jour&#160;: <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V6_Updater_Succes.png" style="width: 338px;height: 130px;" /><br /></p>
-                                        <p>
-                                            <br />Attention : la mise à jour vers WSC&#160;v6.1 nécessite une désinstallation puis une réinstallation des pilotes d'impression (cf.&#160;<a href="../F_WSC/WSC6.1_Ajouter_Pilote.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Procédure de création d'un pilote d'impression v. 6.1.1</a>).</p>
-                                        <h2>Vérifier la mise à jour de WSC</h2>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Dans la page d'aide de l'interface web d'administration de WSC  vérifiez que le numéro de version a été mis à jour&#160;:</p>
+                                                <p>Une fois le fichier de mise à jour ajouté, cliquez sur le bouton <strong>Appliquer </strong>une mise à jour (situé sous le bouton Propager une mise à jour).<br /></p>
+                                                <p>N.B.&#160;: si le bouton Appliquer renvoie vers l'interface Ajouter une nouvelle mise à jour, c'est que WSC n'a pas fini de vérifier la validité du package de la nouvelle version (notamment son certificat) ou que je package téléchargé est corrompu.</p>
                                             </li>
                                             <li value="2">
-                                                <p>Depuis le menu principal, cliquez sur l'entrée Aide du menu vertical</p>
+                                                <p>Dans l'interface <strong>Appliquer une mise à jour</strong>, sélectionnez le fichier de mise à jour à appliquer.</p>
                                             </li>
                                             <li value="3">
-                                                <p>La section A propos de la Console de supervision affiche le numéro de version : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V61_VerifVersion.png" style="width: 700px;height: auto;" /></p>
+                                                <p>Sélectionnez ensuite le serveur ou l'ensemble des serveurs sur lesquels appliquer le fichier de mise à jour.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Cliquez sur le bouton <strong>Valider </strong>pour lancer la mise à jour des serveurs désignés.<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Updater_Appliquer.png" style="width: 500px;height: auto;" /></p>
                                             </li>
                                         </ol>
-                                        <h2>Mettre à jour les autres serveurs du domaine</h2>
-                                        <p>Si Watchdoc est installé dans un domaine (configuration master/slaves), il est nécessaire de mettre également à jour les serveurs slaves.&#160;</p>
-                                        <p>Pour les versions antérieures à v6.1, mettez à jour chaque serveur slave qui dépend du master en suivant la procédure ci-dessus.&#160;</p>
-                                        <p>Une fois la v6.1 installée dans votre domaine, vous pouvez procéder à la mise à jour vers les versions supérieures à l'aide de l'updater de WSC : cet outil permet de propager et d'appliquer les mises à jour sur les serveurs du domaine une fois le master actualisé (cf.&#160;<a href="../F_WSC/WSC_Gestion_MettreAJour_Domaine.htm" target="_blank" title="Procédure de mise à jour" alt="Procédure de mise à jour">Mise à jour d'un domaine</a>).&#160;</p>
+                                        <p>&#160;</p>
+                                        <p><span style="font-family: 'Wingdings'">è</span> un rapport vous informe du succès de l'opération.</p>
+                                        <h2><a name="Verifier"></a>Vérifier la mise à jour</h2>
+                                        <p>Pour vérifier la mise à jour sur l'ensemble du domaine, vous pouvez procéder de 2 manières : </p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>soit vous rendre dans la liste des serveurs (<strong>Menu principal &gt; Serveurs d'impression</strong>) pour y vérifier les numéros de version.&#160;Si la mise à jour s'est bien déroulée, tous les serveurs du domaine ont la même version ;</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>soit vous rendre dans les opérations Plug and Print (<strong>Menu principal &gt;&#160;Opérations Plug and Print</strong>) pour y repérer l'opération de propagation de la mise à jour et accéder au rapport d'opération :<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V6_Updater_Rapport.png" style="width: 700px;height: auto;" /></p>
+                                            </li>
+                                        </ol>
                                     </div>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

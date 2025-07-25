@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr-fr" xml:lang="fr-fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="Mettre à jour / restaurer Watchdoc" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr-fr" xml:lang="fr-fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="Procédure de mise à jour / restauration de Watchdoc à l'aide de WCLI, outil en ligne de commande" /><title>Watchdoc - Mettre à jour Watchdoc  en ligne de commande</title>
+        <meta name="description" content="Présentation de la procédure de mise à jour et de restauration de Watchdoc" />
+        <meta name="description" content="Prérequis d'installation de mise à jour Watchdoc" /><title>Watchdoc v. 6.1.x - Mettre à jour - Prérequis et préparation</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -52,11 +53,6 @@
 
 </style>
         <style>/*&lt;meta /&gt;*/
-
-.button.previous-topic-button
-{
-	-pie-background: linear-gradient(transparent, #fcfaf8);
-}
 
 .button.next-topic-button
 {
@@ -199,61 +195,118 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor13"></a>
-                                            <MadCap:concept term="WD" />Watchdoc - Mettre à jour Watchdoc  en ligne de commande</h1>
-                                        <h2>Principe</h2>
-                                        <p>Il est possible de lancer une mise à jour de Watchdoc en ligne de commande sans utiliser l'assistant de mise à jour. Lors de cette mise à jour, deux fichiers de sauvegarde de la précédente version sont créés automatiquement (backup_kernel_[n°version_date].zip et backup_web_[n°version_date].zip). Par défaut, ces fichiers sont enregistrés dans le dossier d'où est lancée la mise à jour.&#160;</p>
-                                        <p>
-                                            <br />Depuis depuis la version v 6.1.0.5122, il est possible d'ajouter dans la commande le chemin du dossier dans lequel on souhaite enregistrer les fichiers de sauvegarde. Ce qui permet de ne pas mélanger les fichiers de sauvegarde de la version antérieure avec les fichiers d'installation de la nouvelle version.&#160;</p>
+                                        <h1><a name="aanchor260"></a>
+                                            <MadCap:concept term="WD" />Watchdoc v. 6.1.x - Mettre à jour - Prérequis et préparation</h1>
                                         <p>&#160;</p>
-                                        <p>En outre, les fichiers de sauvegarde comportent le numéro de version en plus de la date et l'heure où ils ont été générés. Ainsi, il est aisé de retrouver les fichiers de sauvegarde à utiliser lorsque la restauration d'une version antérieure est nécessaire.</p>
-                                        <h2>Procédure </h2>
+                                        <fieldset class="orange">La version 6.1.1 sera  disponible  fin juillet. <br />Si vous possédez une version 6.0 ou 6.1, vous pourrez mettre à jour Watchdoc en suivant la procédure habituelle (cf. <a href="WD61_MaJ_WD_Procedure.htm" target="_blank">Mettre à jour Watchdoc et WSC à l'aide de l'assistant</a>).&#160;<br />Si vous possédez une version antérieure à la v. 6.0, (qui n'est plus supportée par Doxense), vous devez préparer votre mise à jour.&#160;Pour cela,  contactez votre partenaire ou formulez votre demande à l'équipe Support de Doxense en déclarant un ticket dans <a href="https://connect.doxense.com/hc/fr" target="_blank">Connect</a> (précisez le type "tâche").<br /></fieldset>
+                                        <p>&#160;</p>
+                                        <p>Avant de mettre à jour Watchdoc, veuillez procéder aux vérifications suivantes.</p>
+                                        <h2>Licence</h2>
+                                        <p>Pour mettre à jour Watchdoc en version 6.1.x, vous avez besoin d'une nouvelle licence.<br />C'est aussi le cas si la composition de votre architecture a changé (nouveaux serveurs, nouveaux périphériques d'impression, changement de marque de périphériques, notamment).</p>
+                                        <p>Pour connaître la version Watchdoc installée sur votre serveur :</p>
                                         <ol>
                                             <li value="1">
-                                                <p>en tant qu'administrateur, accédez au serveur sur lequel est hébergé Watchdoc  ;</p>
+                                                <p class="Liste_num_1">connectez-vous en tant qu'administrateur dans l'interface web d'administration de Watchdoc&#160;; </p>
                                             </li>
                                             <li value="2">
-                                                <p>téléchargez les fichiers de la nouvelle version à installer depuis <a href="https://doc.doxense.fr/fr/Watchdoc/Content/A_Getting_Started/Versions_FR.htm" target="_blank">doc.doxense ;</a></p>
+                                                <p class="Liste_num_1">depuis le <strong>Menu Principal</strong>, vérifiez le numéro de version affiché&#160;:.<br /><br /><img src="../Z_Resources/Images/02_Captures/WD61_Admin_VerifLicence.png" style="width: 700px;height: auto;" /></p>
+                                                <p class="Liste_num_1">Si nécessaire, consultez la procédure <a href="WD_MaJ_CleLicence.htm" target="_blank">Mettre à jour la clé de licence.</a></p>
+                                                <p class="Liste_num_1">Si nécessaire, <a href="https://downloads.doxense.fr/doc.doxense/DOX_SUP_FDL_FormulaireDemandeLicences_FR.docx">téléchargez le formulaire de demande de licence</a> et communiquez-le au Support Doxense via site <a href="https://connect.doxense.com/hc/fr" target="_blank">Connect</a>.<br /></p>
+                                            </li>
+                                        </ol>
+                                        <h2>Version de Microsoft<sup>®</sup> .Net</h2>
+                                        <p>Le serveur d'impression et le serveur web&#160;doivent tous deux être équipés au minimum de la version <span class="mc-variable Versions.Dotnet_Framework variable">.net Framework 4.8 de Microsoft</span>  (<a href="https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48" target="_blank" title="Link to the Microsoft web site" alt="Link to the Microsoft web site">à télécharger ici</a>).<br /></p>
+                                        <p class="Liste_puce_1">&#160;</p>
+                                        <p class="Liste_puce_1">Pour connaître la version du .Net Framework installée sur votre serveur&#160;: </p>
+                                        <ol>
+                                            <li value="1">
+                                                <p class="Liste_num_1">lancez l'outil de gestion de la base de registre (<strong>regedit</strong>)&#160;;</p>
+                                            </li>
+                                            <li value="2">
+                                                <p class="Liste_num_1">dans l'éditeur de base de registre (Registry Editor), cliquez sur HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework&#160;;</p>
                                             </li>
                                             <li value="3">
-                                                <p>décompressez l'archive contenant la nouvelle version ;</p>
+                                                <p class="Liste_num_1">sélectionnez le dernier dossier préfixé par <b>"v"</b> dans lequel sont enregistrés les dossiers de versions, cliquez sur <strong>SKUs</strong> et déployez l'arborescence pour connaître la dernière version installée&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/MAJ_WD_Verif_Version_DotNet472.png" style="width: 699px;height: 443px;" /><br /></p>
+                                            </li>
+                                        </ol>
+                                        <h2>Droits</h2>
+                                        <p>Vérifiez que vous disposez des droits suivants&#160;:</p>
+                                        <ul>
+                                            <li>
+                                                <p class="Liste_puce_1">droits d’administrateur sur les serveurs d’impression et d’application&#160;;</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1">droits SQL de modification de la base de données utilisée par Watchdoc ;</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1">droits d’accès Watchdoc en mode maintenance afin d’appliquer la nouvelle licence ou la licence de migration.</p>
+                                            </li>
+                                            <li>
+                                                <p>compte de service (dont le mot de passe n'expire jamais) possédant le droit de lecture et d'écriture sur un dossier en partage réseau si vous comptez utiliser la destination ScanToFolder de WEScan.</p>
+                                            </li>
+                                        </ul>
+                                        <h2>Antimalware, antivirus et outils de sécurité</h2>
+                                        <p>Les antimalware, antivirus et autres outils garantissant la sécurité du serveur d'impression (Windows<sup>®</sup> Defender, Bit Defender<sup>®</sup>, Kaspersky<sup>®</sup>, MacAfee<sup>®</sup>, par exemple, doivent être désactivés sur le dossier d'installation de Watchdoc ainsi que sur le dossier contenant les spools.&#160;Cette désactivation repose sur des règles d'exclusion pour que l'activité d'impression de Watchdoc ne soit pas ralentie par l'analyse effectuée par ces outils.&#160;</p>
+                                        <h2>Base de données SQL</h2>
+                                        <p>Vérifiez que vous disposez :</p>
+                                        <ul>
+                                            <li>
+                                                <p>d'un droit d'accès à la base de données SQL de Watchdoc ; </p>
+                                            </li>
+                                            <li>
+                                                <p>d'un logiciel de gestion de la base de données (Microsoft SQL&#160;Server Management Studio pour MS SQL<sup>®</sup>, par exemple).&#160;</p>
+                                            </li>
+                                        </ul>
+                                        <h2><a name="Preparation"></a>Préparer la mise à jour</h2>
+                                        <ol>
+                                            <li value="1">
+                                                <p class="Liste_num_1">Téléchargez le package d'installation de la nouvelle version depuis la <a href="../A_Getting_Started/Versions_FR.htm" target="_blank" title="Lien vers la page de téléchargement du package d'installation" alt="Lien vers la page de téléchargement du package d'installation">page dédiée.</a></p>
+                                            </li>
+                                            <li value="2">
+                                                <p class="Liste_num_1">Connecté en tant qu'administrateur sur le serveur d'impression Watchdoc, créez un dossier temporaire (C:\TEMPWD).</p>
+                                            </li>
+                                            <li value="3">
+                                                <p class="Liste_num_1">Copiez l'archive <strong>Watchdoc_Update_[Nouvelle_Version].zip</strong> dans le dossier C:\TEMPWD et décompressez-la&#160;dans ce dossier (<strong>clic droit&#160;&gt;&#160;extraire tout</strong>).</p>
                                             </li>
                                             <li value="4">
-                                                <p>dans la barre d'adresse du dossier où l'archive a été décompressée, saisissez <strong>cmd </strong>pour lancer l'invite de commande ;<br /></p>
-                                            </li>
-                                            <li value="5">
-                                                <p>dans l'invite de commande saisissez :</p>
+                                                <p class="Liste_num_1">Vérifiez le contenu du dossier décompressé :</p>
                                                 <ul>
                                                     <li>
-                                                        <p><strong>WatchdocUpdate.exe</strong> pour lancer la mise à jour&#160;;</p>
+                                                        <p class="Liste_puce_2"><strong>KernelXX.zip</strong> : contient les nouveaux fichiers pour le service Watchdoc&#160;;</p>
                                                     </li>
                                                     <li>
-                                                        <p><strong>/backup "c:\[chemin_du_dossier_de_sauvegarde]" </strong>pour indiquer le chemin du dossier dans lequel doivent être enregistrés les fichiers de sauvegarde de la version installée ;<br /></p>
+                                                        <p class="Liste_puce_2"><strong>WatchdocUpdate.exe </strong>: exécutable pour la mise à jour&#160;; </p>
                                                     </li>
                                                     <li>
-                                                        <p><strong>/q</strong> (quiet) pour faire en sorte que la mise à jour soit invisible&#160;;</p>
+                                                        <p class="Liste_puce_2"><strong>WatchdocUpdate.exe.config </strong>: fichier contenant le fichier de configuration de l'exécutable&#160;;</p>
                                                     </li>
                                                     <li>
-                                                        <p><strong>/f</strong> (force) pour faire en sorte que la mise à jour soit automatique&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WD_Admin_MaJ_Cmd_commande.png" style="width: 700px;height: auto;" /><br /><br /></p>
+                                                        <p class="Liste_puce_2" style="text-align: left;"><strong>WebXX.zip :</strong> contient les nouveaux fichiers pour le site web Watchdoc&#160;:<br></br><br></br><img src="../Z_Resources/Images/02_Captures/WD60_MMJ_ContenuFichierMaJ.png" style="width: 717px;height: 265px;"></img></p>
+                                                        <p>&#160;</p>
                                                     </li>
                                                 </ul>
                                             </li>
-                                            <li value="6">
-                                                <p>une fois la mise à jour effectuée, rendez-vous dans le dossier de sauvegarde indiqué pour vérifier que les fichiers backup_kernel_[n°version_date].zip et backup_web_[n°version_date].zip y figurent :<br /><br /><img src="../Z_Resources/Images/02_Captures/WD_Admin_Maj_Cmd_verif.png" style="width: 700px;height: auto;" /><br /><br /></p>
-                                                <p>
-                                                    <br /><span style="font-family: 'Wingdings'">è</span> Vous pouvez ainsi utiliser ces fichiers de sauvegarde pour restaurer la version antérieure de Watchdoc si nécessaire (cf. <a href="WD61_Restaurer_WD_Procedure.htm" target="_blank">Restaurer une version antérieure de Watchdoc</a>).&#160;</p>
+                                            <li value="5">
+                                                <p>Si vous utilisez WEScan et avez personnalisé les profils de scan directement dans le dossier des profils par défaut (fichiers JSON), faites-en une sauvegarde que vous pourrez rétablir après la mise à jour.Ce dossier est en effet écrasé au cours de la mise à jour. Pour information, il est recommandé de créer un dossier spécifique pour les profils personnalisés <a name="MaJ_WEScan" href="../C_Configurer/ConfigWEScan/WEScan_Config_Profil_SPC_utilisation.htm" target="_blank">(cf.&#160;Utiliser ScanProfilesCustomizer).</a></p>
                                             </li>
                                         </ol>
+                                        <h2>Note relative à la migration des données</h2>
+                                        <p>Le schéma de la base de données de Watchdoc  a été modifié : </p>
+                                        <ul>
+                                            <li>
+                                                <p>en v. 5.4</p>
+                                            </li>
+                                            <li>
+                                                <p>en v. 6.0</p>
+                                            </li>
+                                        </ul>
+                                        <p>&#160;</p>
+                                        <p>Donc, si vous partez d'une version antérieure à ces versions, il est nécessaire d'effectuer une migration des données lors de la mise à jour.&#160;<br />Logiquement, si vous partez d'une version 5.4, une seule migration est nécessaire, mais si vous partez d'une version antérieure à la v. 5.4,  2 migrations sont nécessaires.</p>
+                                        <p>&#160;</p>
+                                        <fieldset>Notez que la mise à jour nécessite un arrêt de production.<br />Il convient donc de la programmer à un moment où l'impact sur l'activité d'impression n'est pas trop important (idéalement HNO).&#160;</fieldset>
                                     </div>
-                                    <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
+                                    <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy_First mc-component nocontent">
                                         <div class="button-group-container-left">
-                                            <button class="button elearning-button needs-pie previous-topic-button" title="Précédent" disabled="true">
-                                                <div>
-                                                    <div role="img" class="button-icon-wrapper" aria-label="Précédent">
-                                                        <div class="button-icon"> </div>
-                                                    </div><span class="button-text">Précédent</span>
-                                                </div>
-                                            </button>
                                             <button class="button elearning-button needs-pie next-topic-button" title="Suivant" disabled="true">
                                                 <div>
                                                     <div role="img" class="button-icon-wrapper" aria-label="Suivant">
