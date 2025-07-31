@@ -199,9 +199,9 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor265"></a>
+                                        <h1><a name="aanchor267"></a>
                                             <MadCap:concept term="PRT" />
-                                            <MadCap:conditionalText data-mc-conditions="General.Online"><a name="aanchor266"></a>
+                                            <MadCap:conditionalText data-mc-conditions="General.Online"><a name="aanchor268"></a>
                                                 <MadCap:concept term="WD" />Watchdoc - </MadCap:conditionalText>Prérequis serveurs</h1>
                                         <h2>Editions de MS Windows Server<sup>®</sup> compatibles</h2>
                                         <ul>
@@ -215,14 +215,14 @@
                                                 <p>MS Windows Server<sup>®</sup> 2022</p>
                                             </li>
                                             <li>
-                                                <p>MS Windows Server<sup>®</sup> 2025</p>
+                                                <p>MS Windows Server<sup>®</sup> 2025 (à partir de v.&#160;6.1.1)</p>
                                             </li>
                                         </ul>
                                         <p>Watchdoc est également compatible avec les environnements virtuels (notamment VMWare<sup>®</sup> et Hyper-V<sup>®</sup>).</p>
                                         <p>&#160;</p>
                                         <p>La version Core de MS Windows Server<sup>®</sup> n'est pas supportée.&#160;<br /></p>
                                         <p>&#160;</p>
-                                        <p>Microsoft Visual<sup>®</sup> C++ 2013 est requis.<br />Microsoft<sup>®</sup> .NET Framework 4.8 est obligatoire.<br /></p>
+                                        <p>Microsoft Visual<sup>®</sup> C++ 2013 est requis.<br />Microsoft<sup>®</sup> .NET Framework 4.8 est obligatoire (l'installation requiert un redémarrage du serveur et donc une interruption du service d'impression).<br /></p>
                                         <h2>Langages analysés</h2>
                                         <p>Watchdoc prend en charge les pilotes d'impression de type 3. Les pilotes de type 4 ne sont pas supportés.</p>
                                         <p>Watchdoc analyse les langages suivants&#160;:</p>
@@ -270,7 +270,7 @@
                                                 <p class="Liste_puce_1">Web-Windows-Auth</p>
                                             </li>
                                         </ul>
-                                        <p>Microsoft .NET Framework 4.8 doit obligatoirement être installé sur ce serveur.<br /></p>
+                                        <p>Microsoft .NET Framework 4.8 doit obligatoirement être installé sur ce serveur  (cette installation requiert un redémarrage du serveur et donc une interruption du service d'impression).<br /></p>
                                         <h2>Serveur d'annuaire</h2>
                                         <p>Les serveurs d'annuaires compatibles sont les suivants :</p>
                                         <ul>
@@ -352,7 +352,8 @@
                                         </p>
                                         <h3>Procédure automatisée</h3>
                                         <p>Si votre parc de postes est sous MS Windows 7 <sup>®</sup> ou MS&#160;Windows 8<sup>®</sup>, nous vous conseillons de changer la valeur de la clé de registre suivante en la passant de de 1 à 0 :</p>
-                                        <p class="MsgSysteme" style="font-size: 11pt;text-align: left;">HKEY_CURRENT_USERS\Printers\Settings\EnableBalloonNotificationsRemote</p>
+                                        <p class="MsgSysteme" style="font-size: 11pt;text-align: left;"><span style="font-size: 12pt;">HKEY_CURRENT_USERS\Printers\Settings\EnableBalloonNotificationsRemote</span>
+                                        </p>
                                         <p class="MsgSysteme" style="text-align: center; font-size: 11pt;">&#160;</p>
                                         <p>Cette action (déployée sur tous les postes concernés) désactivera les infobulles pour les impressions envoyées sur le serveur d'impression.</p>
                                         <h3>Procédure manuelle</h3>

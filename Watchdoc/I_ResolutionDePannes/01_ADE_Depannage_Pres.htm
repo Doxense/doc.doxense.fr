@@ -195,7 +195,7 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <p><a name="aanchor246"></a>
+                                        <p><a name="aanchor247"></a>
                                             <MadCap:concept term="ADE" /><span style="font-size: 24pt; font-weight: bold; color: #ff803b;">Dépannages</span>
                                         </p>
                                         <p>&#160;</p>
@@ -328,12 +328,20 @@
                                                 <p>Notez qu'en raison de cette gestion de caches spécifiques à la mise à jour 24H2, il est possible que l'affichage des  pages web de Watchdoc soit plus long qu'avec la précédente version de MS&#160;Windows server.</p>
                                             </div>
                                         </div>
-                                        <p style="font-size: 10pt;">&#160;</p>
-                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Après mise à jour en v. 6.1.0.5221 d'un domaine avec serveur web déporté, les interfaces web des serveurs slaves sont inacessibles&#160;: Watchdoc is not responding.</a></span>
+                                        <p>&#160;</p>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Watchdoc / WSC : lors de la suppression ou modification d'une file, ses statistiques sont supprimées. Juillet 2025</a></span>
                                             <div class="MCDropDownBody dropDownBody">
-                                                <p><strong>Contexte :</strong> après mise à jour de Watchdoc dans un <b>domaine (configuration master/slaves) avec un serveur IIS&#160;déporté,</b> on constate que les interfaces web (interface administrateur ou page "Mon Compte") des serveurs slaves ne sont plus accessibles.&#160;Après un long moment de chargement, un message d'erreur s'affiche : "A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond".&#160;Diagnostic : le service est momentanément indisponible.</p>
-                                                <p><strong>Cause : </strong>ce problème est probablement dû à la gestion du port 5744 par le Firewall du serveur slave.</p>
-                                                <p><strong>Résolution :</strong> dans l'outil de gestion du firewall du serveur slave, autorisez les entrées sur le port 5744 (inbound rules) (cf. <a href="ADE_Domaine_SlaveNotResponding.htm" target="_blank">Erreur Watchdoc is not responding</a>).</p>
+                                                <p><strong>Contexte :</strong> après avoir supprimé ou modifié une file d'impression depuis Wathdoc ou WSC, l'administrateur se rend compte que les statistiques de cette file d'impression n'apparaissent plus dans l'interface de consultation des statistiques.</p>
+                                                <p><strong>Cause : </strong>ce problème est dû à un dysfonctionnement de Watchdoc / WSC qui entraîne la suppression des statistiques d'une file supprimée ou modifiée.&#160;</p>
+                                                <p><strong>Résolution :</strong> pour résoudre cette anomalie, il convient de mettre à jour en version v. 6.1.0.5318 qui contient un correctif. Ce correctif repose sur la création d'une file externe dans laquelle sont archivées  les statistiques.</p>
+                                            </div>
+                                        </div>
+                                        <p>&#160;</p>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Après mise à jour en v. 6.1.0.5221 en mode déporté, les interfaces web  sont inacessibles&#160;: Watchdoc is not responding.</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> après mise à jour de Watchdoc en v. 6.1.0.5221 dans une configuration <strong>en mode déporté</strong> (serveur IIS&#160;et serveur Watchdoc sur 2&#160;serveurs différents),  on constate que les interfaces web (interface d'administration ou page "Mon Compte")  ne sont plus accessibles.&#160;Lorsqu'on tente d'y accéder, après un long moment de chargement, un message d'erreur s'affiche : "A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond".&#160;<br />Diagnostic : le service est momentanément indisponible.</p>
+                                                <p><strong>Cause : </strong>ce problème est probablement dû aux règles de sécurisation du port 5744 automatiquement appliquées par la nouvelle version.</p>
+                                                <p><strong>Résolution :</strong> il convient d'ajouter une règle dans le firewall c afin d'autoriser le site web à accéder à Watchdoc (cf. <a href="ADE_Gestion_Port5744.htm" target="_blank">Erreur Watchdoc is not responding</a>).</p>
                                             </div>
                                         </div>
                                         <p>&#160;</p>
@@ -1312,6 +1320,16 @@ dans la boîte de dialogue, activez le <strong>protocole SOAP.</strong></p>
                                             </div>
                                         </div>
                                         <h2 id="WPCWatchdocPrintClient" data-magellan-target="WPCWatchdocPrintClient">WPC - Watchdoc Print Client</h2>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WPC&#160;for Windows - Erreur de détection d'emplacements dans un environnement utilisant un proxy inverse - Juillet 2025</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> dans un environnement réseau utilisant un proxy inverse (reverse proxy) lorsqu'un utilisateur ouvre WPC for Windows, ce dernier ne parvient pas à trouver l'emplacement associé à l'adresse IP du poste utilisateur. Pourtant, la configuration des emplacements comporte bien des adresses IP&#160;publiques.</p>
+                                                <p><strong>Cause :</strong> l'adresse du proxy n'est pas correctement renseignée dans les paramètres du serveur web. En conséquence, WPC&#160;exploite l'adresse du serveur proxy au lieu de l'adresse du serveur d'impression pour lancer sa requête et échoue.</p>
+                                                <p><strong>Résolution :</strong> pour résoudre cette anomalie, il convient de saisir l'adresse du proxy inverse dans l'interface de configuration serveur web (cf. <a href="../C_Configurer/ConfigServeurWeb/Config_ServeurWeb_Presentation.htm#Proxy_inverse" target="_blank">Serveur web - Configurer les sections DSP et Certificats</a>).</p>
+                                            </div>
+                                        </div>
+                                        <p>
+                                            <br />
+                                        </p>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WPC&#160;for Windows avec des périphériques d'impression Hewlett Packard - Perte de fonctionnalités.</a></span>
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> en tant qu'administrateur, je constate que, lorsqu'il installe un périphérique HP à l'aide de WPC sur son poste de travail, l'utilisateur perd certaines fonctionnalités définies dans les paramètres du périphérique d'impression (par exemple, le filigrane dans le document imprimé).</p>

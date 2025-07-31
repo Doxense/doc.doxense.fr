@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr-fr" xml:lang="fr-fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="Administrer Watchdoc" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr-fr" xml:lang="fr-fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-searchable="False" data-mc-toc-path="Administrer Watchdoc|Rapports" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="Présentation de la fonction &quot;Communicateur de rapports&quot; qui permet d'envoyer aux utilisateurs un rapport relatif à leur activité d'impression selon une fréquence préalablement définie par l'administrateur Watchdoc." /><title>Watchdoc - Communicateur de rapports - Présentation</title>
+        <meta name="description" content="Procédure de création et de configuration du communicateur de rapports : planification de l'envoi des rapports et configuration de la notification par e-mail." /><title>Watchdoc - Planificateur de rapports - Procédure de création et de configuration</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -56,11 +56,6 @@
 .button.previous-topic-button
 {
 	-pie-background: linear-gradient(transparent, #fcfaf8);
-}
-
-.button.next-topic-button
-{
-	-pie-background: linear-gradient(#ffffff, #fcfaf8);
 }
 
 .needs-pie
@@ -199,42 +194,157 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor127"></a>
-                                            <MadCap:concept term="WD" />Watchdoc - Communicateur de rapports - Présentation</h1>
-                                        <h2>Principe</h2>
-                                        <p>Le communicateur de rapports est une fonction de Watchdoc 5.3 conçue pour envoyer aux utilisateurs un rapport relatif à leur activité d'impression. Ce rapport est envoyé par mail à une fréquence préalablement prédéfinie par l'administrateur de Watchdoc.</p>
-                                        <fieldset>Dans les précédentes versions de Watchdoc, il existait une fonction reposant sur l'outil Watchdoc Reporting Services (WRS) et exploitant SQL<sup>®</sup> Reporting Services, permettant l'envoi de rapports sous la forme d'une pièce jointe à un mail.&#160; La fonction développée pour la version 5.3, quant à elle, permet de se passer de WRS&#160;et d'envoyer les données directement dans le mail, sans avoir à ouvrir une pièce jointe.</fieldset>
-                                        <p style="text-align: left;">&#160;</p>
-                                        <p style="text-align: left;"><a href="../Z_Resources/Images/02_Captures/Admin_Communic_Rapports_Mail.png"><img src="../Z_Resources/Images/02_Captures/Admin_Communic_Rapports_Mail.png" style="width: 370px;height: 513px;" /></a>
-                                        </p>
-                                        <p>&#160;</p>
-                                        <p>Les rapports étant envoyés par mail, il est impératif que Watchdoc soit associé à un serveur SMTP.</p>
-                                        <p>Dans une configuration en domaine (master/slaves maître/esclaves), le communicateur de rapports est configuré sur le serveur maître.</p>
-                                        <h2>Etapes</h2>
-                                        <p>La communication des rapports nécessite : </p>
+                                        <h1><a name="aanchor254"></a>
+                                            <MadCap:concept term="WD" />Watchdoc - Planificateur de rapports - Procédure de création et de configuration</h1>
+                                        <h2>Accéder à l'interface de configuration</h2>
+                                        <p class="Liste_num_1">Pour accéder à l'interface de configuration du Communicateur de rapports, accédez à l'interface d'administration de  Watchdoc en tant qu'administrateur&#160;;</p>
                                         <ol>
                                             <li value="1">
-                                                <p class="Liste_num_1">de paramétrer le service d'envoi ; </p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1">de planifier l'envoi du rapport.</p>
+                                                <p class="Liste_num_1">depuis le <strong>Menu principal</strong>, section <strong>Configuration</strong>, cliquez sur <strong>Configuration avancée</strong>&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/Config_Avancee_AccesInterface.png" style="height: auto;width: 700px;" /><br /><br /></p>
                                             </li>
                                         </ol>
+                                        <ol data-mc-continue="true">
+                                            <li value="2">
+                                                <p class="Liste_num_1">dans l'interface <strong>[Serveur]&gt; Configuration avancée</strong>, cliquez sur <strong>Planification de rapports</strong>&#160;; <br /><br /><img src="../Z_Resources/Images/02_Captures/Config_Planif_Rapports_AccesInterface.png" style="width: 700px;height: auto;" /><br /><br /></p>
+                                            </li>
+                                        </ol>
+                                        <p class="Resultat">Vous accédez à l'interface de planification des rapports. <br />Dans cette interface figure la liste des rapports déjà planifiés, avec leurs propriétés : </p>
+                                        <ul>
+                                            <li>
+                                                <p class="Liste_puce_2">le modèle sur lequel repose le rapport conçu ; </p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_2">la périodicité de l'envoi, </p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_2">la date de la dernière exécution ; </p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_2">le rapport d'exécution informant de la réussite ou de l'échec de l'opération.</p>
+                                            </li>
+                                        </ul>
+                                        <p>&#160;</p>
+                                        <p>En dernière colonne figurent des outils permettant : </p>
+                                        <ul>
+                                            <li>
+                                                <p class="Liste_puce_2">
+                                                    <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Executer.png" style="width: 16px;height: 14px;" /> de  lancer manuellement l'exécution du rapport ;</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_2">
+                                                    <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Editer.png" style="width: 17px;height: 17px;" /> d'éditer les paramètres de la planification ; </p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_2">
+                                                    <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Dupliquer.png" style="width: 21px;height: 18px;" /> de dupliquer la planification de sorte de la réutiliser pour un autre usage ;</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_2">
+                                                    <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Supprimer.png" style="width: 13px;height: 13px;" /> de supprimer la planification.</p>
+                                            </li>
+                                        </ul>
+                                        <p class="Liste_puce_2">&#160;</p>
+                                        <p>La planification de rapports repose sur la configuration de la  notification par e-mail.&#160;Si la notification n'est pas activée, un message vous invite à l'activer : <br /><br /></p>
+                                        <p>
+                                            <img src="../Z_Resources/Images/02_Captures/Admin_Rapports_SectionPlanif_Msg.png" />
+                                        </p>
+                                        <p>&#160;</p>
+                                        <p>Au-dessus de la liste figurent deux boutons : </p>
+                                        <ul>
+                                            <li>
+                                                <p class="Liste_puce_2">
+                                                    <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_ParametrerNotif.png" style="width: 29px;height: 27px;" /> <strong>Paramètres de notification</strong> donne accès au formulaire de configuration du service d'envoi de rapports: </p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_2">
+                                                    <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Creer_Planification.png" style="width: 40px;height: 32px;" /> <strong>Créer une planification</strong> donne accès au formulaire de planification de l'envoi de rapports.</p>
+                                            </li>
+                                        </ul>
+                                        <h2>Paramétrer les notifications pour les rapports</h2>
+                                        <p>Pour paramétrer une notification, depuis l'interface <strong>Planification de rapports</strong>, cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_ParametrerNotif.png" style="width: 29px;height: 27px;" /><strong>Paramètres de notification</strong>&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/Admin_Communic_Rapports_Parametrer.png" /><br /><br /></p>
+                                        <p class="Liste_num_1">Dans le formulaire <strong>Configuration des notifications</strong>, s'ils sont vides, complétez les champs de la section <strong>Contact&#160;</strong>permettant d'identifier la personne en charge de ce service&#160;:</p>
+                                        <blockquote>
+                                            <ul>
+                                                <li>
+                                                    <p class="Liste_puce_2"><strong>Administrateur :</strong> saisissez le nom de l'administrateur du service ;</p>
+                                                </li>
+                                                <li>
+                                                    <p class="Liste_puce_2"><strong>E-mail :</strong> saisissez l'adresse mail de l'administrateur du service ;</p>
+                                                </li>
+                                                <li>
+                                                    <p class="Liste_puce_2"><strong>Téléphone :</strong> indiquez le numéro de téléphone de l'administrateur du service&#160;;</p>
+                                                </li>
+                                                <li>
+                                                    <p class="Liste_puce_2" style="color: #000000;"><strong style="color: #696969;">Message :</strong><span style="color: #696969;">: saisissez dans cette zone des informations supplémentaires qui s'afficheront dans l'entête du mail présentant le rapport.</span>
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p class="Liste_num_1">section <strong>Planification de rapports :</strong> </p>
+                                                    <ul>
+                                                        <li>
+                                                            <p class="Liste_puce_2"><strong>Notifications :</strong> cochez la case pour activer le service ;</p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="Liste_puce_2"><strong>Thème :</strong> personnalisez graphiquement les e-mails de rapports :</p>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <blockquote>
+                                                <blockquote>
+                                                    <ul style="list-style-type: circle;">
+                                                        <li>
+                                                            <p class="Liste_puce_2"><strong>logo </strong>: saisissez dans le champ le chemin d'accès un fichier image personnalisant le bandeau du mail d'information:</p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="Liste_puce_2"><strong>couleur primaire :</strong> saisissez le code hexadécimal précisant la couleur des libellés principaux et de l'encart des pages couleurs imprimées&#160;;</p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="Liste_puce_2"><strong>couleur secondaire :</strong> saisissez un code hexadécimal précisant la couleur de l'encart des pages simples imprimées.<br /><br /><img src="../Z_Resources/Images/02_Captures/Admin_Communic_Rapports_SectionPlanif.png" style="width: 483px;height: 90px;" /><br /><br /><img src="../Z_Resources/Images/02_Captures/Admin_Communic_Rapports_Personnalisation.png" style="width: 306px;height: 363px;" /><br /><br /></p>
+                                                        </li>
+                                                    </ul>
+                                                </blockquote>
+                                            </blockquote>
+                                        </blockquote>
+                                        <h2>Planifier l'envoi d'un rapport</h2>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Pour planifier l'envoi d'un rapport depuis l'interface <strong>Planification de rapports</strong>, cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Creer_Planification.png" style="width: 26px;height: 21px;" /> <strong>Créer une planification</strong>&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/Admin_Communicateur_Rapports_Creer.png" /><br /><br /></p>
+                                            </li>
+                                        </ol>
+                                        <ol data-mc-continue="true">
+                                            <li value="2">
+                                                <p class="Liste_num_1">Dans le formulaire <strong>Créer une planification de rapports</strong> :</p>
+                                                <ul>
+                                                    <li>
+                                                        <p><strong>Activité </strong>: cochez la case pour activer la planification ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Modèle </strong>: sélectionnez dans la liste le modèle de rapport sur lequel se fonde le rapport configuré ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Périodicité </strong>: dans la liste, sélectionnez la fréquence à laquelle vous souhaitez envoyer votre rapport ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Message </strong>: saisissez dans cette zone le message du mail accompagnant le rapport et permettant de le présenter :<br /><br /><img src="../Z_Resources/Images/02_Captures/Admin_Communic_Rapports_CreerFormulaire.png" /><br /></p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                        <ol data-mc-continue="true">
+                                            <li value="3">
+                                                <p class="Liste_num_1">cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Creer.png" style="width: 30px;height: 26px;" /> <strong>Créer</strong> pour valider la création du rapport.</p>
+                                            </li>
+                                        </ol>
+                                        <p class="Resultat"><span style="font-family: 'Wingdings'">è</span> Le rapport créé s'ajoute à la liste des rapports existants. Toutes les informations relatives à son envoi sont affichées dans le tableau. Vous pouvez ainsi en contrôler la bonne exécution.</p>
                                     </div>
-                                    <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
+                                    <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy_Last mc-component nocontent">
                                         <div class="button-group-container-left">
                                             <button class="button elearning-button needs-pie previous-topic-button" title="Précédent" disabled="true">
                                                 <div>
                                                     <div role="img" class="button-icon-wrapper" aria-label="Précédent">
                                                         <div class="button-icon"> </div>
                                                     </div><span class="button-text">Précédent</span>
-                                                </div>
-                                            </button>
-                                            <button class="button elearning-button needs-pie next-topic-button" title="Suivant" disabled="true">
-                                                <div>
-                                                    <div role="img" class="button-icon-wrapper" aria-label="Suivant">
-                                                        <div class="button-icon"> </div>
-                                                    </div><span class="button-text">Suivant</span>
                                                 </div>
                                             </button>
                                         </div>
