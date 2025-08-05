@@ -199,7 +199,7 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor263"></a>
+                                        <h1><a name="aanchor261"></a>
                                             <MadCap:concept term="INS;WD" />Watchdoc - Installer le kernel </h1>
                                         <p>En <strong>mode déporté</strong> (configuration <strong>non-recommandée</strong>), les composants <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term0">kernel<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>En anglais, Kernel signifie "noyau". Dans nos documents, il désigne le service de Watchdoc chargé de la gestion des impressions hors Site web.</span></a> et site web (IIS) de Watchdoc sont installés sur des serveurs distincts&#160;:<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../Z_Resources/Images/03_Schemas/WD_WD5_SCH_SchemaModeDeporte.png"><img class="MCPopupThumbnail img" data-mc-width="1863" data-mc-height="1455" src="../Z_Resources/Images/03_Schemas/WD_WD5_SCH_SchemaModeDeporte.png" tabindex="" style="mc-thumbnail-max-width: 1000px;height: 250px;mc-thumbnail: popup;width: auto;max-width: 1000px;" /></a></p>
                                         <p style="text-align: left;"> <cite style="font-size: 10pt;">Cliquez sur l'image pour l'agrandir</cite></p>
@@ -222,21 +222,23 @@
                                         <p>Avant de procéder à l'installation de Watchdoc, il convient de vérifier que les prérequis nécessaires sont respectés :</p>
                                         <ul>
                                             <li>
-                                                <p class="Liste_puce_1"> le rôle Serveur Web est installé ;</p>
+                                                <p class="Liste_puce_1">le rôle Serveur Web est installé ;</p>
                                             </li>
                                             <li>
                                                 <p class="Liste_puce_1">le rôle Services de documents et d'impression est installé ;</p>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1">Microsoft<sup>®</sup> .NET Framework 4.7.2 est installé&#160;;</p>
+                                                <p class="Liste_puce_1">Microsoft<sup>®</sup> .NET Framework 4.8 est installé&#160;;</p>
                                             </li>
                                             <li>
                                                 <p class="Liste_puce_1">le gestionnaire de base de données est installé ; </p>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1">un compte de service (doté d'un mot de passe qui n'expire pas) est disponible  pour activer WEScan.</p>
+                                                <p class="Liste_puce_1">un compte de service (doté d'un mot de passe qui n'expire pas) est disponible  pour activer WEScan</p>
                                             </li>
                                         </ul>
+                                        <p>&#160;</p>
+                                        <fieldset>Dans les versions antérieures à la v.6.1.1, les communications entre le serveur web IIS&#160;en mode déporté et le serveur Watchdoc transitent via le <b>port 5744</b> à l'aide du protocole Microsoft <b>.NET Remoting</b>.<br /><br />Ce mode d'installation étant déconseillé pour des raisons de sécurité, entre les <b>v. 6.0.1.5221</b> et  <b> v. 6.0.1.5318</b>, le port 5744 port est<b> automatiquement fermé</b>&#160;lors de l'installation ou lors d'une mise à jour.&#160;Il convient donc de configurer ce port pour que Watchdoc fonctionne correctement (cf. <a href="../I_ResolutionDePannes/ADE_Gestion_Port5744.htm" target="_blank">Configurer le port 5744 dans le pare-feu</a>). <br /><br />A&#160;partir de la v.&#160;6.1.1, le port 5744 est sécurisé (https).</fieldset>
                                         <h2>Décompresser l'archive</h2>
                                         <p>L'outil d'installation est enregistré dans un dossier d'archive nommé <strong>Watchdoc[…].zip</strong>. Il doit être décompressé dans un dossier du serveur.</p>
                                         <ol>

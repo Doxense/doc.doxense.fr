@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr-fr" xml:lang="fr-fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="Administrer Watchdoc" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr-fr" xml:lang="fr-fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="Présentation de la fonction &quot;Communicateur de rapports&quot; qui permet d'envoyer aux utilisateurs un rapport relatif à leur activité d'impression selon une fréquence préalablement définie par l'administrateur Watchdoc." /><title>Watchdoc - Communicateur de rapports - Présentation</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Mettre à jour la base de données</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -52,6 +51,11 @@
 
 </style>
         <style>/*&lt;meta /&gt;*/
+
+.button.previous-topic-button
+{
+	-pie-background: linear-gradient(transparent, #fcfaf8);
+}
 
 .button.next-topic-button
 {
@@ -189,35 +193,82 @@
                                             </button>
                                         </div>
                                     </div>
-                                    <div class="nocontent">
-                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
-                                        </div>
-                                    </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor90"></a>
-                                            <MadCap:concept term="WD" />Watchdoc - Communicateur de rapports - Présentation</h1>
-                                        <h2>Principe</h2>
-                                        <p>Le communicateur de rapports est une fonction de Watchdoc 5.3 conçue pour envoyer aux utilisateurs un rapport relatif à leur activité d'impression. Ce rapport est envoyé par mail à une fréquence préalablement prédéfinie par l'administrateur de Watchdoc.</p>
-                                        <fieldset>Dans les précédentes versions de Watchdoc, il existait une fonction reposant sur l'outil Watchdoc Reporting Services (WRS) et exploitant SQL<sup>®</sup> Reporting Services, permettant l'envoi de rapports sous la forme d'une pièce jointe à un mail.&#160; La fonction développée pour la version 5.3, quant à elle, permet de se passer de WRS&#160;et d'envoyer les données directement dans le mail, sans avoir à ouvrir une pièce jointe.</fieldset>
-                                        <p style="text-align: left;">&#160;</p>
-                                        <p style="text-align: left;"><a href="../Z_Resources/Images/02_Captures/Admin_Communic_Rapports_Mail.png"><img src="../Z_Resources/Images/02_Captures/Admin_Communic_Rapports_Mail.png" style="width: 370px;height: 513px;" /></a>
-                                        </p>
-                                        <p>&#160;</p>
-                                        <p>Les rapports étant envoyés par mail, il est impératif que Watchdoc soit associé à un serveur SMTP.</p>
-                                        <p>Dans une configuration en domaine (configuration master / slaves), le communicateur de rapports est configuré sur le serveur maître.</p>
-                                        <h2>Etapes</h2>
-                                        <p>La communication des rapports nécessite : </p>
+                                        <h2>Mettre à jour la base de données</h2>
+                                        <p>Pour connaître la version de votre base de données, depuis l'interface web d'administration de Watchdoc, rendez-vous dans <strong>Menu principal</strong>, section <strong>Configuration</strong>, &gt; <strong>Configuration avancée</strong> &gt; <strong>Base de statistiques</strong>.&#160;<br />Dans la section <strong>Statistiques</strong>, la version de la base s'affiche dans l'encart <strong>Base de données principale</strong> : <br /><img src="WD_MaJ_Bdd_verif.png" style="width: 332px;height: 213px;" /><br /><br /></p>
+                                        <p class="Liste_num_1">Si la base de données doit être mise à jour :</p>
                                         <ol>
                                             <li value="1">
-                                                <p class="Liste_num_1">de paramétrer le service d'envoi ; </p>
+                                                <p class="Liste_num_1">rendez-vous dans le dossier où ont été extraits les fichiers du package d'installation ;</p>
                                             </li>
                                             <li value="2">
-                                                <p class="Liste_num_1">de planifier l'envoi du rapport.</p>
+                                                <p class="Liste_num_1">décompressez le dossier <strong>kernelXX</strong>&#160;;</p>
+                                            </li>
+                                            <li value="3">
+                                                <p class="Liste_num_1">dans le dossier <strong>kernelXX</strong>, ouvrez le dossier <strong>SQL</strong>&#160;;</p>
+                                            </li>
+                                            <li value="4">
+                                                <p class="Liste_num_1">en fonction du type de votre base de données (MSSQL, PostgreSQL ou SQLite), repérez le ou les fichiers de mise à jour <strong>[type_bdd]_update-XX</strong>&#160;;</p>
+                                            </li>
+                                            <li value="5">
+                                                <p class="Liste_num_1">Effectuez la mise à jour par étapes&#160;: depuis le dossier <strong>Kernel[n°version].zip\SQL</strong>, exécutez toutes les mises à jour de versions <strong>[Type_bdd]_update_[version]</strong> comprises entre la version installée dans votre environnement et la nouvelle version. </p>
+                                                <p class="Liste_num_1">Par exemple&#160;: &#160;</p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_num_1">si vous partez d'une v. 5.4 ou v. 5.5, vous effectuez 1&#160;mise à jour (en v. 6.0) ;</p>
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_num_1">si vous partez d'une  v. 5.2 ou v. 5.3, vous effectuez 2 mises à jour (en v. 5.4, puis en v. 6.0) ;<br /><br /><img src="../Z_Resources/Images/02_Captures/WD_Update_MSSQL.png" style="height: auto;width: 600px;text-align: left;" /></p>
+                                                        <p class="Liste_num_1">&#160;</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                        <p>Les fichiers de mise à jour mssql_updateXX.sql peuvent être exécutés  avec deux outils :</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>avec l'outil MS SQL Server Management Studio<sup>®</sup>&#160;:<br /></p>
+                                            </li>
+                                            <li value="2">
+                                                <p class="Liste_num_1">avec l'outil en ligne de commande <strong><a href="https://learn.microsoft.com/fr-fr/sql/tools/sqlcmd/sqlcmd-utility?view=sql-server-ver16&amp;tabs=go%2Cwindows&amp;pivots=cs1-bash" target="_blank" title="Lien vers la documentation de l'outil sqlcmd (Microsoft SQL)" alt="Lien vers la documentation de l'outil sqlcmd (Microsoft SQL)">sqlcmd</a></strong> intégré à la base de données.</p>
+                                                <p>Exemple de commande pour exécuter un script de mise à jour&#160;:<br /><code>sqlcmd -S localhost\watchdoc -U sa -d watchdocstats -i mssql_update_XX.sql -o QueryResults.txt -e</code></p>
+                                                <ul>
+                                                    <li>
+                                                        <p><strong>-S</strong> : nom du serveur SQLServer</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>-U</strong> : login</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>-d</strong> : nom de la base de données</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>-i</strong> : nom du script à exécuter</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>-o</strong> : fichier de sortie</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>-e</strong> : ajout les commandes exécutées dans le fichier de script</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li value="3">
+                                                <p>Une fois la base de données mise à jour, redémarrez le service Watchdoc, de sorte qu'il puisse prendre en compte le changement de base de données.</p>
                                             </li>
                                         </ol>
                                     </div>
-                                    <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy_First mc-component nocontent">
+                                    <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">
+                                            <button class="button elearning-button needs-pie previous-topic-button" title="Précédent" disabled="true">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Précédent">
+                                                        <div class="button-icon"> </div>
+                                                    </div><span class="button-text">Précédent</span>
+                                                </div>
+                                            </button>
                                             <button class="button elearning-button needs-pie next-topic-button" title="Suivant" disabled="true">
                                                 <div>
                                                     <div role="img" class="button-icon-wrapper" aria-label="Suivant">
