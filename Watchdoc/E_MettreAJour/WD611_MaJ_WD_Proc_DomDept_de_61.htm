@@ -5,7 +5,7 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="Présentation de la procédure de mise à jour à l'aiide de l'assistant Watchdoc" /><title>Watchdoc / WSC&#160;- Mettre à jour en v. 6.1.1 à l'aide de l'assistant depuis une v. 5.5 ou antérieure simple en mode déporté</title>
+        <meta name="description" content="Présentation de la procédure de mise à jour à l'aiide de l'assistant Watchdoc" /><title>Watchdoc / WSC&#160;- Mettre à jour en v. 6.1.1 à l'aide de l'assistant depuis une v. 6.1.x en domaine et en mode déporté</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -195,38 +195,40 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1>Watchdoc / WSC&#160;- Mettre à jour en v. 6.1.1 à l'aide de l'assistant depuis une v. 5.5 ou antérieure simple en mode déporté</h1>
+                                        <h1>Watchdoc / WSC&#160;- Mettre à jour en v. 6.1.1 à l'aide de l'assistant depuis une v. 6.1.x en domaine et en mode déporté</h1>
                                         <h2>Contexte</h2>
-                                        <p>La version de Watchdoc / WSC installée est une <b>v. 5.5</b> ou <b>antérieure</b>.</p>
-                                        <p>Watchdoc est installé en <strong>configuration simple</strong> (pas de domaine master/slave) et  <a href="../P_Prerequis/Architecture_serveur.htm" target="_blank">mode déporté</a>* (Watchdoc et IIS installés sur des serveurs différents).</p>
+                                        <p>La version de Watchdoc / WSC installée est une <b>6.1.x.</b></p>
+                                        <p>Watchdoc est installé en domaine (configuration master/slave) et  <a href="../P_Prerequis/Architecture_serveur.htm" target="_blank">mode déporté</a>* (Watchdoc et IIS installés sur des serveurs différents).</p>
                                         <fieldset>* Par souci de sécurité, nous déconseillons l'installation en mode déporté.</fieldset>
                                         <h2>Etapes</h2>
-                                        <p>Lorsque vous avez préparé la mise à jour (cf.&#160;<a href="WD61_MaJ_WD_Prerequis.htm#Preparation" target="_blank">Mise à jour - Prérequis et préparation</a>), passez aux étapes suivantes :</p>
+                                        <p>Lorsque vous avez préparé la mise à jour (cf.&#160;<a href="WD61_MaJ_WD_Prerequis.htm#Preparation" target="_blank">Mise à jour - Prérequis et préparation</a>), passez aux étapes suivantes :<br /></p>
                                         <ol>
                                             <li value="1">
-                                                <p>mettez à jour la dll</p>
+                                                <p style="font-size: 12pt;">sauvegarder la précédente version du site web</p>
                                             </li>
                                             <li value="2">
-                                                <p>mettez à jour Watchdoc  </p>
+                                                <p style="font-size: 12pt;">vérifier la disponibilité de l'ancien site web<br /></p>
                                             </li>
                                             <li value="3">
-                                                <p>mettez à jour WSC</p>
+                                                <p style="font-size: 12pt;">mettre à jour Watchdoc sur le master<br /></p>
                                             </li>
                                             <li value="4">
-                                                <p>mettez à jour la clé de licence</p>
+                                                <p>vérifier la mise à jour de Watchdoc</p>
                                             </li>
                                             <li value="5">
-                                                <p>vérifiez la mise àj our de la dll</p>
+                                                <p>mettre à jour WSC sur le master</p>
                                             </li>
                                             <li value="6">
-                                                <p>vérifiez la mise à jour de Watchdoc</p>
+                                                <p>vérifier la mise à jour de WSC</p>
                                             </li>
                                             <li value="7">
-                                                <p>vérifiez la mise à jour de WSC.</p>
+                                                <p style="font-size: 12pt;">mettre à jour les autres serveurs (slaves) automatiquement
+								<br />ou
+							 mettre à jour les autres serveurs (slaves) manuellement</p>
                                             </li>
                                         </ol>
                                         <h2>Procédure</h2>
-                                        <h3>Mettre à jour la dll</h3>
+                                        <h3>Sauvegarder la précédente version du site web</h3>
                                         <h4>Principe</h4>
                                         <p>Cette procédure vise à sauvegarder la précédente version du site web de Watchdoc de manière à ce qu'elle reste opérationnelle durant la mise à jour. Il est possible de continuer à administrer les serveurs qui n'ont pas été  mis à jour par via l'ancien site web.</p>
                                         <p>&#160;</p>
@@ -314,7 +316,8 @@
                                         <p>&#160;</p>
                                         <p><span style="font-family: 'Wingdings'">è</span> Cette opération modifie la base de registre. Désormais, pour instancier la classe <b>Doxense.Watchdoc.Proxy61</b>, la dll est recherchée dans le dossier temporaire spécifique qui a été créé.&#160;<br /></p>
                                         <p> </p>
-                                        <h3>Mettre à jour Watchdoc</h3>
+                                        <h3>Vérifiez la disponibilité de l'ancien site web</h3>
+                                        <h3>Mettre à jour Watchdoc sur le master</h3>
                                         <ol>
                                             <li value="1">
                                                 <p class="Liste_num_1">Dans le dossier où ont été décompressés les fichiers, double-cliquez sur <strong>WatchdocUpdate.exe</strong> pour lancer l'exécutable de mise à jour&#160;:<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../Z_Resources/Images/02_Captures/MAJ_WD_Update_60.png"><img class="MCPopupThumbnail img" data-mc-width="790" data-mc-height="242" src="../Z_Resources/Images/02_Captures/MAJ_WD_Update_60.png" tabindex="" style="width: 700px;mc-thumbnail: popup;mc-thumbnail-max-width: 1000px;max-width: 1000px;" /></a></p>
@@ -343,7 +346,29 @@
                                         <p class="Resultat">&#160;</p>
                                         <p class="Resultat"><span style="font-family: 'Wingdings'">è</span> un message vous informe de la fin et du succès de la mise à jour&#160;: <br /><br /><img src="../Z_Resources/Images/02_Captures/WD53_MaJ_UpdateComplete.png" style="width: 338px;height: 130px;" /></p>
                                         <p>&#160;</p>
-                                        <h3><a name="WSC"></a>Mettre à jour la Console de Supervision Watchdoc (WSC)</h3>
+                                        <h3>Vérifier la mise à jour de Watchdoc</h3>
+                                        <ol data-mc-continue="true">
+                                            <li value="6">
+                                                <p class="Liste_num_1">Dans la page d'accueil de l'interface web d'administration de Watchdoc, vérifiez que le numéro de version a été mis à jour&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WD61_MMJ_VerifVersion.png" style="width: 700px;" /></p>
+                                                <p>&#160;</p>
+                                            </li>
+                                            <li value="7">
+                                                <p class="Liste_num_1">Dans l'interface web d'administration de Watchdoc, vérifiez que la nouvelle version de Watchdoc parvient toujours à communiquer avec la base de données (<strong>Menu principal, </strong>section<strong> Configuration &gt; Configuration avancée &gt; Base de statistiques</strong>) :</p>
+                                            </li>
+                                            <li value="8">
+                                                <p class="Liste_num_2">cliquez sur  <strong>Editer la configuration</strong>&#160;; </p>
+                                            </li>
+                                            <li value="9">
+                                                <p class="Liste_num_2">cliquez sur <strong>Vérifier la base de données</strong>. </p>
+                                                <p><span style="font-family: 'Wingdings'">è</span> un message vous indique si Watchdoc parvient à contacter la base de données&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WD60_MaJ_VerifBDDStat.png" style="width: 739px;height: 433px;" /></p>
+                                                <p>&#160;</p>
+                                            </li>
+                                            <li value="10">
+                                                <p>Si Watchdoc ne parvient pas à contacter la base de données, redémarrez le service Watchdoc. </p>
+                                            </li>
+                                        </ol>
+                                        <p>&#160;</p>
+                                        <h3><a name="WSC"></a>Mettre à jour la Console de Supervision Watchdoc (WSC) sur le master</h3>
                                         <p>Si vous l'utilisez, mettez à jour WSC.</p>
                                         <ol>
                                             <li value="1">
@@ -356,77 +381,6 @@
                                         </ol>
                                         <p class="Resultat"><span style="font-family: 'Wingdings'">è</span> un message vous informe de la fin et du succès de la mise à jour&#160;: <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V6_Updater_Succes.png" style="width: 338px;height: 130px;" /><br /></p>
                                         <p>&#160;</p>
-                                        <h3>Mettre à jour la clé de licence</h3>
-                                        <p>Pour mettre à jour la licence Watchdoc&#160;:</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>accédez à l'interface d'administration de Watchdoc en tant qu'administrateur ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>depuis le Menu <strong>Principal</strong>, section <strong>Configuration</strong>, cliquez sur <strong>Configuration Avancée</strong> ;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>dans l'interface Configuration avancée, cliquez sur <strong>Licence serveur</strong> :<br /><br /><img src="../Z_Resources/Images/02_Captures/WD_Admin_Licences_Acces.png" style="width: 700px;height: auto;" /></p>
-                                            </li>
-                                        </ol>
-                                        <p>&#160;</p>
-                                        <p><span style="font-family: 'Wingdings'">è</span>Vous accédez à l'interface<strong> Licence serveur</strong> dans laquelle sont détaillées les licences en cours et la configuration réseau.</p>
-                                        <ol data-mc-continue="true">
-                                            <li value="4">
-                                                <p>dans la section <strong>Modes d'activation</strong>, paramètre <strong>Fichier de licence</strong>, cliquez sur le bouton <strong>Parcourir </strong>;
-                </p>
-                                            </li>
-                                            <li value="5">
-                                                <p>parcourez votre espace de travail et sélectionnez le fichier de licence fourni par Doxense (extension .wlk) :<br /><br /><img src="../Z_Resources/Images/02_Captures/WD_Admin_Licences_Envoyer.png" style="width: 700px;height: auto;" /></p>
-                                            </li>
-                                        </ol>
-                                        <p>&#160;</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>une fois le fichier sélectionné, cliquez sur le bouton<strong> Envoyer le certificat de licence.</strong>.</p>
-                                            </li>
-                                        </ol>
-                                        <p>&#160;</p>
-                                        <p><span style="font-family: 'Wingdings'">è</span>Lorsque l'opération se déroule correctement, Watchdoc vous renvoie à l'interface d'administration principale.</p>
-                                        <p><span style="font-family: 'Wingdings'">è</span>Lorsque l'opération échoue, un message vous informant qu'un problème est sur- venu s'affiche dans l'interface. Dans ce cas, vous pouvez tenter de procéder à la mise à jour manuelle de la licence.</p>
-                                        <p>&#160;</p>
-                                        <h3>Vérifier la mise à jour de la dlll</h3>
-                                        <p>Pour vérifier la mise à jour de la base de registre&#160;:</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>rendez-vous dans la base de registre</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>vérifiez que le CLSID 6BA796FF-90C3-43A2-9EE2-4235F64E2415 correspondant au ProgID Doxense.Watchdoc.Proxy611  pointe vers le dossier d’installation Watchdoc 6.1.1 : C:Program Files/Watchdoc/Doxense.Watchdoc.CrysttalProxy.DLL (par défaut) :<br /><br /><img src="WD_MaJ_Depot_verif_Reg611.png" style="width: 700px;" /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                        </ol>
-                                        <p>Par ailleurs, dans un navigateur, si vous saisissez l'url http://[nom_serveur]/<strong>watchdoc61</strong>/watchdoc/admin, le site web d'administration de l'ancienne version de Watchdoc doit fonctionner.&#160;<br /></p>
-                                        <p>&#160;</p>
-                                        <p>Cette vérification vous permet de disposer d'un accès à l'administration de l'ancienne version de Watchdoc durant la mise à jour.&#160;Ce qui peut  être utile lorsque le parc de serveurs est important et que la mise à jour risque de durer longtemps :<br /><br /><img src="WD_MaJ_Deport_InstanceWebVerif.png" /></p>
-                                        <p>&#160;</p>
-                                        <h3>Vérifier la mise à jour de Watchdoc</h3>
-                                        <ol data-mc-continue="true">
-                                            <li value="3">
-                                                <p class="Liste_num_1">Dans la page d'accueil de l'interface web d'administration de Watchdoc, vérifiez que le numéro de version a été mis à jour&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WD61_MMJ_VerifVersion.png" style="width: 700px;" /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p class="Liste_num_1">Dans l'interface web d'administration de Watchdoc, vérifiez que la nouvelle version de Watchdoc parvient toujours à communiquer avec la base de données (<strong>Menu principal, </strong>section<strong> Configuration &gt; Configuration avancée &gt; Base de statistiques</strong>) :</p>
-                                            </li>
-                                            <li value="5">
-                                                <p class="Liste_num_2">cliquez sur  <strong>Editer la configuration</strong>&#160;; </p>
-                                            </li>
-                                            <li value="6">
-                                                <p class="Liste_num_2">cliquez sur <strong>Vérifier la base de données</strong>. </p>
-                                                <p><span style="font-family: 'Wingdings'">è</span> un message vous indique si Watchdoc parvient à contacter la base de données&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WD60_MaJ_VerifBDDStat.png" style="width: 739px;height: 433px;" /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="7">
-                                                <p>Si Watchdoc ne parvient pas à contacter la base de données, redémarrez le service Watchdoc. </p>
-                                            </li>
-                                        </ol>
-                                        <p>&#160;</p>
                                         <h3>Vérifier la mise à jour de la Console de Supervision Watchdoc (WSC)</h3>
                                         <p>Dans la page d'aide de l'interface web d'administration de WSC  vérifiez que le numéro de version a été mis à jour&#160;:</p>
                                         <ol>
@@ -438,7 +392,12 @@
                                             </li>
                                         </ol>
                                         <p>&#160;</p>
+                                        <h3>Mettre à jour les autres serveurs du domaine (slaves) </h3>
+                                        <p>Lorsque Watchdoc / WSC est installé en domaine (configuration master/slaves), une fois que le serveur master est à jour, il est nécessaire de mettre à jour tous les autres serveurs qui en dépendent.&#160;</p>
                                         <p>&#160;</p>
+                                        <p>Vous pouvez procéder de manière manuelle et unitaire : appliquez les étapes précédentes sur chaque serveur du domaine.&#160;</p>
+                                        <p>&#160;</p>
+                                        <p>Vous pouvez également procéder en masse : propagez  la mise à jour du serveur master vers les autres serveurs à l'aide de la fonction  "Updater"de  WSC   (cf.&#160;<a href="WSC_Gestion_MettreAJour_Domaine.htm" target="_blank" title="Procédure de mise à jour" alt="Procédure de mise à jour">Mise à jour d'un domaine</a>).&#160;</p>
                                     </div>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

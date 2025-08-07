@@ -254,56 +254,7 @@
                                         <p>&#160;</p>
                                         <p data-mc-conditions="General.Online">→ Vous pouvez ensuite <a href="WD_Express_Profil_WES.htm">Activer l'interface WES</a></p>
                                         <h2>Pour la version WSC&#160;v6.1</h2>
-                                        <h2>Prérequis</h2>
-                                        <p>WSC v. 6.1 inclut un module de sécurité pour les pilotes d'impression. A partir de cette version, seuls les pilotes certifiés par Microsoft<sup>®</sup> avec une signature <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term108">WHQL<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Signature numérique attribuée aux packages de pilotes répondant aux exigences des tests HLK  (Windows Hardware Lab Kit) par Microsoft pour garantir la sécurité du pilote.
-(Source : https://learn.microsoft.com)</span></a> valide peuvent être installés sur la console de supervision.  Une exception existe pour les pilotes <strong>Epson</strong><sup>®</sup> et <strong>Ricoh</strong><sup>®</sup>.</p>
-                                        <p>&#160;</p>
-                                        <p>Pour préparer les packages des pilotes à télécharger dans WSC&#160;v 6.1, il est nécessaire&#160;: </p>
-                                        <ul>
-                                            <li>
-                                                <p><strong>pour tous les pilotes</strong> (hormis Epson et Ricoh)&#160;: </p>
-                                                <ul>
-                                                    <li>
-                                                        <p>d'utiliser  l'outil <strong>DriverPackageExtractor.exe</strong> fourni par Doxense dans le package d'installation Watchdoc.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>de disposer de l'outil de compression  7-Zip<sup>®</sup>(cf.<a href="https://7-zip.org/" target="_blank" title="Lien vers le site de téléchargement de l'outil 7-Zip " alt="Lien vers le site de téléchargement de l'outil 7-Zip ">https://7-zip.org/</a>).&#160;</p>
-                                                        <p>Si vous n'avez pas l'autorisation d'installer 7-Zip sur le serveur WSC, préparez le package dans un autre espace de travail. Sur cet espace, installez 7-Zip ainsi que les outils suivants, disponibles dans le package d'installation&#160;de Watchdoc&#160;:</p>
-                                                        <ul>
-                                                            <li style="font-size: 12pt;">
-                DriverPackageExtractor.exe
-            </li>
-                                                            <li style="font-size: 12pt;">
-                DriverPackageExtractor.exe.config
-            </li>
-                                                            <li style="font-size: 12pt;">
-                CliWrap.dll
-            </li>
-                                                            <li style="font-size: 12pt;">
-                Doxense.Core.dll
-            </li>
-                                                            <li style="font-size: 12pt;">
-               Doxense.IO.Compression.dll
-            </li>
-                                                            <li style="font-size: 12pt;">
-                Doxense.Watchdoc.SpoolMonitor.dll
-            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                        <p>
-                                            <br style="font-size: 12pt;" />
-                                        </p>
-                                        <ul>
-                                            <li>
-                                                <p><strong>pour les pilotes Epson et Ricoh</strong>, il est nécessaire de les faire signer au préalable par Doxense, en vous adressant au Support via <a href="https://connect.doxense.com/" target="_blank">Connect</a>.</p>
-                                                <p>&#160;</p>
-                                            </li>
-                                        </ul>
-                                        <fieldset><strong>Mise à jour :</strong> si vous effectuez une mise à jour à partir d'une version antérieure à la v. 6.1, vous devez désinstaller les pilotes existants et les recréer à l'aide de la procédure décrite ci-dessous.<br />Si vous n'avez pas mis à jour les pilotes mais que vous ajoutez un serveur dans le domaine ou un poste utilisateur sur lequel vous installez la dernière version de WPC&#160;for Windows, vous devrez également désinstaller les pilotes existants et les réinstaller à l'aide de DriverPackageExtractor.<br /></fieldset>
-                                        <h2>Procédure</h2>
+                                        <fieldset>Si vous effectuez une<strong> mise à jour</strong> à partir d'une version antérieure à la v. 6.1, vous devez <b>désinstaller</b> les pilotes existants puis les <b>réinstaller</b> à l'aide de la procédure décrite ci-dessous.<br /></fieldset>
                                         <h3>Télécharger le package certifié (tous les pilotes sauf Epson et Ricoh)</h3>
                                         <ol>
                                             <li value="1">
