@@ -52,6 +52,11 @@
 </style>
         <style>/*&lt;meta /&gt;*/
 
+.button.previous-topic-button
+{
+	-pie-background: linear-gradient(transparent, #fcfaf8);
+}
+
 .button.next-topic-button
 {
 	-pie-background: linear-gradient(#ffffff, #fcfaf8);
@@ -435,30 +440,34 @@ déporté
                                                     <td style="font-size: 12pt;text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #ffffff;background-color: #dcdcdc;" class="TableStyle-Standard-BodyD-Regular-Row2">
                                                         <ol>
                                                             <li value="1">
-                                                                <li style="font-size: 12pt;"><a href="MAJ_WD_SauvSiteWeb.htm" target="blank">sauvegarder la précédente version du site web</a>
-                                                                </li>
-                                                                <li style="font-size: 12pt;"><a href="MAJ_WD_Deporte_Verif.htm" target="_blank">vérifier la disponibilité de l'ancien site web</a>
-                                                                </li>
+                                                                <p style="font-size: 12pt;"><a href="MAJ_WD_SauvSiteWeb.htm" target="blank">sauvegarder la précédente version du site web</a>
+                                                                </p>
                                                             </li>
-                                                            <li value="2"><a href="MAJ_WD.htm" target="blank" style="font-size: 12pt;">mettre à jour Watchdoc</a>
+                                                            <li value="2">
+                                                                <p style="font-size: 12pt;"><a href="MAJ_WD_Deporte_Verif.htm" target="_blank">vérifier la disponibilité de l'ancien site web</a>
+                                                                </p>
                                                             </li>
                                                             <li value="3">
-                                                                <p><a href="MAJ_WD_Verif.htm" target="blank">vérifier la mise à jour de Watchdoc</a>
+                                                                <p><a href="MAJ_WD.htm" target="blank" style="font-size: 12pt;">mettre à jour Watchdoc</a>
                                                                 </p>
                                                             </li>
                                                             <li value="4">
-                                                                <p><a href="WD_MaJ_CleLicence.htm" target="blank">mettre à jour la licence</a>
+                                                                <p><a href="MAJ_WD_Verif.htm" target="blank">vérifier la mise à jour de Watchdoc</a>
                                                                 </p>
                                                             </li>
                                                             <li value="5">
-                                                                <p><a href="MAJ_WSC.htm" target="blank">mettre à jour WSC</a>
+                                                                <p><a href="WD_MaJ_CleLicence.htm" target="blank">mettre à jour la licence</a>
                                                                 </p>
                                                             </li>
                                                             <li value="6">
-                                                                <p><a href="MAJ_WSC_Verif.htm" target="blank">vérifier la mise à jour de WSC</a>
+                                                                <p><a href="MAJ_WSC.htm" target="blank">mettre à jour WSC</a>
                                                                 </p>
                                                             </li>
                                                             <li value="7">
+                                                                <p><a href="MAJ_WSC_Verif.htm" target="blank">vérifier la mise à jour de WSC</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="8">
                                                                 <p><a href="../F_WSC/WSC6.1.x_Ajouter_Pilote.htm" target="_blank">réinstaller les pilotes dans WSC</a>
                                                                 </p>
                                                             </li>
@@ -708,14 +717,17 @@ déporté
                                                             </li>
                                                             <li value="5">
                                                                 <p><a href="MAJ_WSC_Verif.htm" target="blank">vérifier la mise à jour de WSC</a>
-                                                                    <br />
                                                                 </p>
                                                             </li>
                                                             <li value="6">
-                                                                <p><a href="MAJ_BDD.htm" target="blank">mettre à jour la base de données</a>
+                                                                <p><a href="../F_WSC/WSC6.1.x_Ajouter_Pilote.htm" target="_blank">réinstaller les pilotes dans WSC</a>
                                                                 </p>
                                                             </li>
                                                             <li value="7">
+                                                                <p><a href="MAJ_BDD.htm" target="blank">mettre à jour la base de données</a>
+                                                                </p>
+                                                            </li>
+                                                            <li value="8">
                                                                 <p>
                                                                     <p>
                                                                         <p><a href="MAJ_BDD_Migrer.htm" target="blank">migrer les données </a>
@@ -723,7 +735,7 @@ déporté
                                                                     </p>
                                                                 </p>
                                                             </li>
-                                                            <li value="8">
+                                                            <li value="9">
                                                                 <p>
                                                                     <p style="font-size: 12pt;"><a href="MAJ_Domaine.htm" target="blank"><a href="WSC_Gestion_MettreAJour_Domaine.htm" target="blank">mettre à jour les autres serveurs (slaves) automatiquement</a><br /></a>
                                                                     </p>
@@ -792,10 +804,18 @@ déporté
                                                 </tr>
                                             </tbody>
                                         </table>
+                                        <p>&#160;</p>
                                         <fieldset>* Pour des raisons de sécurité, nous déconseillons l'installation en mode déporté (IIS&#160;et Watchdoc sur des serveurs différents) dans des versions antérieures à la v. 6.1.1<br /></fieldset>
                                     </div>
-                                    <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy_First mc-component nocontent">
+                                    <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">
+                                            <button class="button elearning-button needs-pie previous-topic-button" title="Précédent" disabled="true">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Précédent">
+                                                        <div class="button-icon"> </div>
+                                                    </div><span class="button-text">Précédent</span>
+                                                </div>
+                                            </button>
                                             <button class="button elearning-button needs-pie next-topic-button" title="Suivant" disabled="true">
                                                 <div>
                                                     <div role="img" class="button-icon-wrapper" aria-label="Suivant">
