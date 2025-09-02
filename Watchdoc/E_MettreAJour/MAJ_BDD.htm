@@ -227,11 +227,11 @@
                                             </li>
                                         </ol>
                                         <p>Les fichiers de mise à jour mssql_updateXX.sql peuvent être exécutés  avec deux outils :</p>
-                                        <ol>
-                                            <li value="1">
+                                        <ul>
+                                            <li>
                                                 <p>avec l'outil MS SQL Server Management Studio<sup>®</sup>&#160;:<br /></p>
                                             </li>
-                                            <li value="2">
+                                            <li>
                                                 <p class="Liste_num_1">avec l'outil en ligne de commande <strong><a href="https://learn.microsoft.com/fr-fr/sql/tools/sqlcmd/sqlcmd-utility?view=sql-server-ver16&amp;tabs=go%2Cwindows&amp;pivots=cs1-bash" target="_blank" title="Lien vers la documentation de l'outil sqlcmd (Microsoft SQL)" alt="Lien vers la documentation de l'outil sqlcmd (Microsoft SQL)">sqlcmd</a></strong> intégré à la base de données.</p>
                                                 <p>Exemple de commande pour exécuter un script de mise à jour&#160;:<br /><code>sqlcmd -S localhost\watchdoc -U sa -d watchdocstats -i mssql_update_XX.sql -o QueryResults.txt -e</code></p>
                                                 <ul>
@@ -255,8 +255,14 @@
                                                     </li>
                                                 </ul>
                                             </li>
-                                            <li value="3">
+                                        </ul>
+                                        <p>&#160;</p>
+                                        <ol data-mc-continue="true">
+                                            <li value="6">
                                                 <p>Une fois la base de données mise à jour, redémarrez le service Watchdoc, de sorte qu'il puisse prendre en compte le changement de base de données.</p>
+                                            </li>
+                                            <li value="7">
+                                                <p>Il convient ensuite de <a href="MAJ_WD.htm" target="_blank">mettre à jour Watchdoc</a>, puis de <a href="MAJ_BDD_Migrer.htm" target="_blank">migrer les données</a>.</p>
                                             </li>
                                         </ol>
                                     </div>

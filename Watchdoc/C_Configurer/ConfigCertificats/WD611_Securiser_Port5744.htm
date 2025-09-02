@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Watchdoc - Sécuriser le port 5744 à l'aide d'un certificat CA</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Watchdoc - Sécuriser le port 5744 à l'aide d'un certificat signé - Août 2025 </title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -193,8 +193,7 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1>Watchdoc - Sécuriser le port 5744 à l'aide d'un certificat CA</h1>
-                                        <p>Août 2025 </p>
+                                        <h1>Watchdoc - Sécuriser le port 5744 à l'aide d'un certificat signé - Août 2025 </h1>
                                         <h2>Principe</h2>
                                         <p>En version 6.1.1, par défaut, les échanges entre le serveur web IIS (qu'il soit local ou déporté) et le kernel Watchdoc transitent par le port 5744 en exploitant le protocole HTTPS (TLS 1.3).<br /><br /></p>
                                         <p>Le protocole TLS requérant un certificat pour authentifier le serveur et établir un canal de communication sécurisé, v. 6.1.1 installe par défaut un certificat Watchdoc auto-signé nommé "crystal" :<br /><br /><img src="WD_Config_Port5744_defaut611.png" style="width: 700px;height: auto;" /></p>
@@ -203,13 +202,13 @@
                                         <p>&#160;</p>
                                         <fieldset>N.B. : si vous aviez créé un "Point d'entrée du site web" avec l'identifiant "_crystal" exploitant un port autre que 5744 dans une version antérieure, votre configuration est conservée lors de la mise à jour en 6.1.1.</fieldset>
                                         <h2>Procédure</h2>
-                                        <p>Pour attribuer un certificat CA&#160;au port 5744 :</p>
+                                        <p>Pour attribuer un certificat signé au port 5744 :</p>
                                         <ol>
                                             <li value="1">
                                                 <p>demandez à votre autorité de certification de vous fournir un certificat trusté par le domaine&#160;;</p>
                                             </li>
                                             <li value="2">
-                                                <p>importez le certificat CA dans Watchdoc (cf.&#160;<a href="ConfigCertificats_Importer.htm" target="_blank">Importer un certificat signé</a>)&#160;;</p>
+                                                <p>importez le certificat signé dans Watchdoc (cf.&#160;<a href="ConfigCertificats_Importer.htm" target="_blank">Importer un certificat signé</a>)&#160;;</p>
                                             </li>
                                             <li value="3">
                                                 <p>associez ce certificat au port 5744 ;</p>
