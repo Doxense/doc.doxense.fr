@@ -1,1 +1,1 @@
-define({r:0.5,st:'Stem',n:1,t:[0],m:[],u:['../A_Admin_Manuel/Entreprises.htm'],s:['0','ip','écran'],p:[['0',0],['cliquez',11],['dictionnaires',5],['imprimante',6],['moins',10],['que',14],['une',4]]});
+define({r:0.5,st:'Stem',n:1,t:[0],m:[],u:['../A_Admin_Manuel/Entreprises.htm'],s:['0','interrogent','yoursubdomiannam'],p:[['0',0],['cliquer',4],['devez',5],['ils',4],['modifications',4],['qu\u0027elle',14],['un',4]]});
