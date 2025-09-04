@@ -5,7 +5,7 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="Présentation de Watchdoc Print Client for Android (app. mobile) : principes et schéma." /><title>Watchdoc Print Client for Android® - Présentation</title>
+        <meta name="description" content="Présentation de Watchdoc Print Client for Android (app. mobile) : principes et schéma." /><title>Watchdoc Mobile Client - Présentation</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -200,11 +200,11 @@
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
                                         <h1><a name="aanchor74"></a>
-                                            <MadCap:concept term="WPC" />Watchdoc Print Client for Android<sup>®</sup> - Présentation</h1>
+                                            <MadCap:concept term="WPC" />Watchdoc Mobile Client - Présentation</h1>
                                         <h2>Présentation</h2>
-                                        <p>Watchdoc Print Client for Android<sup>®</sup> permet à un utilisateur équipé d'un mobile Android<sup>®</sup> de lancer une impression d'un <strong>document PDF</strong>&#160;grâce à Watchdoc Print API (protocole propriétaire développé par Doxense permettant de gérer les impressions).</p>
+                                        <p>Watchdoc Mobile Client permet à un utilisateur équipé d'un mobile Android<sup>®</sup> de lancer une impression d'un <strong>document PDF</strong>&#160;grâce à Watchdoc Print API (protocole propriétaire développé par Doxense permettant de gérer les impressions).</p>
                                         <p>&#160;</p>
-                                        <p>Watchdoc Print Client for Android permet :</p>
+                                        <p>Watchdoc Mobile Client permet :</p>
                                         <ul>
                                             <li>
                                                 <p>de sécuriser le flux par chiffrement (https Watchdoc) ;</p>
@@ -220,15 +220,15 @@
                                             </li>
                                         </ul>
                                         <h2>Principe</h2>
-                                        <p>Watchdoc Print Client for Android permet d'envoyer, en https, les travaux d'impression PDF&#160;demandés vers un périphérique d'impression.</p>
+                                        <p>Watchdoc Mobile Client permet d'envoyer, en https, les travaux d'impression PDF&#160;demandés vers un périphérique d'impression.</p>
                                         <p>&#160;</p>
-                                        <p>Tous les flux transitent par le port 5753 et sont chiffrés à l'aide d'un certificat embarqué dans l'API.</p>
+                                        <p>Tous les flux transitent par le port <span>5753 </span>(TLS/SSL).</p>
                                         <p>&#160;</p>
-                                        <p>Watchdoc Print Client s'appuie sur un serveur Watchdoc de découverte (discovery endpoint) chargé de rechercher les files d'impression disponibles sur un serveur d'impression&#160;principal. </p>
+                                        <p>Watchdoc Mobile Client s'appuie sur un serveur Watchdoc chargé de rechercher les files d'impression disponibles. </p>
                                         <p>&#160;</p>
-                                        <p>A&#160;chaque demande d'impression lancée par un utilisateur, le port vérifie la disponibilité du serveur d'impression avant d’envoyer le travail. En cas d’indisponibilité du serveur, il demande au serveur de découverte de trouver un nouveau serveur d'impression disponible.</p>
+                                        <p>A&#160;chaque demande d'impression lancée par un utilisateur, le port vérifie la disponibilité du serveur d'impression avant d’envoyer le travail. En cas d’indisponibilité du serveur, il demande au serveur Watchdoc de trouver un nouveau serveur d'impression disponible.</p>
                                         <p>&#160;</p>
-                                        <p>Si le serveur de découverte est arrêté, Watchdoc Print Client for Android conserve l'information relative aux serveurs d'impression en cache pour assurer une continuité d'impression.</p>
+                                        <p>Si le serveur Watchdoc est arrêté, <span>Watchdoc Mobile Client </span>conserve l'information relative aux serveurs d'impression en cache pour assurer une continuité d'impression.</p>
                                         <h2>Schéma</h2>
                                         <h2><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/03_Schemas/WD6_SCH_WatchdocClientForAndroid_FR.png"><img class="MCPopupThumbnail img" data-mc-width="7301" data-mc-height="3822" src="../../Z_Resources/Images/03_Schemas/WD6_SCH_WatchdocClientForAndroid_FR.png" tabindex="" style="mc-thumbnail: link;height: auto;width: 700px;mc-thumbnail-max-width: 1000px;max-width: 1000px;" /></a>
                                         </h2>
