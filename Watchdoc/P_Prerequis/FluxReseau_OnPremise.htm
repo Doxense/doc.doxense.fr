@@ -236,9 +236,11 @@
                                                         <p>Site web Watchdoc (IIS) <br /></p>
                                                     </td>
                                                     <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">
-                                                        <p>TCP 5744<strong style="font-weight: bold; vertical-align: super;">1</strong></p>
+                                                        <p><i>TCP 5744</i><strong style="font-weight: bold; vertical-align: super;">1</strong>
+                                                        </p>
                                                     </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">MS&#160;.NET Remoting protocole</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;"><i>protocole MS&#160;.NET Remoting</i>
+                                                    </td>
                                                     <td class="TableStyle-Standard-BodyD-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc (kernel)</td>
                                                 </tr>
                                                 <tr class="TableStyle-Standard-Body-Row2">
@@ -291,7 +293,8 @@
                                                 </tr>
                                                 <tr class="TableStyle-Standard-Body-Row1">
                                                     <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc<p>ou poste de travail </p></td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">TCP 5757 (non SSL)<br />TCP&#160;5756 (SSL)</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;"><i>TCP 5757 (non SSL)</i><sup style="font-weight: bold;">2</sup>
+                                                        <br />TCP&#160;5756 (SSL)</td>
                                                     <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">
                                                         <p>HTTP</p>
                                                         <p>HTTPS</p>
@@ -319,7 +322,7 @@
                                             </tbody>
                                         </table>
                                         <p>&#160;</p>
-                                        <p><b style="vertical-align: super;">1</b> Par souci de sécurité, Doxense<strong> déconseille la configuration en mode déporté nécessitant l'ouverture du port 5744</strong> avec les protocole .NET Remoting (versions antérieures à la v.&#160;6.1.1).&#160;<br />En conséquence, ce port est automatiquement bloqué dans le pare-feul lors de l'installation de Watchdoc à partir de la v. 6.1.0.5221.&#160;<br />Pour les versions comprises entre la v. 6.1.0.5221 et 6.1.0.5318, si le serveur web IIS&#160;est déporté, il est donc nécessaire de modifier les règles du pare-feu pour permettre au serveur IIS&#160;distant d'accéder à Watchdoc (cf.&#160;<a href="../I_ResolutionDePannes/ADE_Gestion_Port5744.htm" target="_blank">Configurer le port 5744</a>).  <br /></p>
+                                        <p><b style="vertical-align: super; font-size: 10pt;">1</b> Par souci de sécurité, Doxense<strong> déconseille la configuration en mode déporté nécessitant l'ouverture du port 5744</strong> avec les protocole .NET Remoting (versions antérieures à la v.&#160;6.1.1).&#160;<br />En conséquence, ce port est automatiquement bloqué dans le pare-feul lors de l'installation de Watchdoc à partir de la v. 6.1.0.5221.&#160;<br />Pour les versions comprises entre la v. 6.1.0.5221 et 6.1.0.5318, si le serveur web IIS&#160;est déporté, il est donc nécessaire de modifier les règles du pare-feu pour permettre au serveur IIS&#160;distant d'accéder à Watchdoc (cf.&#160;<a href="../I_ResolutionDePannes/ADE_Gestion_Port5744.htm" target="_blank">Configurer le port 5744</a>). <br /><b style="vertical-align: super; font-size: 10pt;">2</b> Par souci de sécurité, <b>Doxense</b><strong> déconseille</strong> l'utilisation du port 5757 (non-sécurisé) au profil du port 5756 (SSL).<br /></p>
                                         <p>&#160;</p>
                                         <fieldset>
 		Si l'architecture réseau inclut un pare-feu, il est nécessaire que ce pare-feu autorise ces accès sur le serveur hébergeant Watchdoc. <br />La technologie WSD (Web Services for Devices) n’est pas supportée par Watchdoc.
