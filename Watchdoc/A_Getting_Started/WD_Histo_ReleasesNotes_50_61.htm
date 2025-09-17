@@ -291,6 +291,74 @@
                                         <hr width="100%" size="0" align="center" data-mc-conditions="General.Online">
                                         </hr>
                                         <h2 id="Watchdoc61x" data-magellan-target="Watchdoc61x">Watchdoc 6.1.x</h2>
+                                        <p><b style="color: #000000;">Améliorations</b>
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                <p><b style="color: #000000;">Watchdoc</b>
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <p>ajout de logs dans la partie CrystalAWD afin d’aider à certains diagnostics</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>amélioration de la visibilité des boutons dans la page de gestion des serveurs</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>amélioration de la stabilité des sauvegardes de configuration nécessitant une réinitialisation du serveur Web</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>optimisation des requêtes relatives aux statistiques par équipe dans la page “Mon compte"</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>ajout de logs en cas d'arrêt du service Watchdoc afin de faciliter le diagnostic</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>possibilité d’enregistrer les logs de la base "Quotas" (SQL) dans un fichier séparé pour faciliter le diagnostic</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <p>&#160;</p>
+                                        <p style="font-weight: bold;color: #000000;">Correctifs</p>
+                                        <ul>
+                                            <li>
+                                                <p><b style="color: #000000;">Watchdoc</b> :</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>ajout de traductions manquantes dans diverses interfaces d'administration</p>
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <p>validation de la conformité de la donnée saisie dans le champ DNS dans le cadre d'une mise à jour vers 6.1.1 </p>
+                                                    </li>
+                                                    <li style="font-size: 12pt;">conservation de la configuration du port .net remoting tel qu'il était configuré en v. 6.1.0 lors de la mise à jour en 6.1.1</li>
+                                                    <li>
+                                                        <p>possibilité de  configurer les WES sans SSL</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>suppression du message d'erreur affiché lorsque la Base des quotas  n’est pas activée</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p><b>WSC</b> :</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>révision du libellé de  génération de code PUK dans le formulaire de création d'un compte invité</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>ajout d'un champ permettant la création d'un code PIN dans le formulaire de création d'un compte invité</p>
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <p>activation par défaut à l'installation de l’obfuscation du mot de passe</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
                                         <h2 id="WatchdocWSC6115368etWPCforWindows70549611092025" data-magellan-target="WatchdocWSC6115368etWPCforWindows70549611092025">Watchdoc/WSC 6.1.1.5368 et WPC for Windows 7.0.5496 - 11/09/2025</h2>
                                         <p style="font-weight: bold;color: #000000;">Correctifs</p>
                                         <ul>
@@ -298,7 +366,7 @@
                                                 <p><b style="color: #000000;">Watchdoc</b> :</p>
                                                 <ul>
                                                     <li>
-                                                        <p>arrêt de la  négociation SSL lorsque ce paramètre est désactivé dans la configuration</p>
+                                                        <p>arrêt de la  négociation SS lors de l'envoi de mails, lorsque le paramètre SSL&#160;est désactivé dans la configuration</p>
                                                     </li>
                                                     <li>
                                                         <p>lors de la migration de v. 6.1.0 vers v. 6.1.1, conservation du paramètre Port DSP non sécurisé qui reste actif s’il était configuré ainsi dans la précédente version</p>
