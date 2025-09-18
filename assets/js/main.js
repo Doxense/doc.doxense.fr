@@ -6,7 +6,7 @@ let arrayContent = [
 {	
 	date: "17 septembre 2025",
 	link: "/Watchdoc/A_Getting_Started/Release_611.htm",
-	content: "nouvelles versions Watchdoc, Console de Supervision 6.1.1.5374 ("
+	content: "nouvelles versions Watchdoc, Console de Supervision 6.1.1.5374"
 },
 {	
 	date: "12 septembre 2025",
