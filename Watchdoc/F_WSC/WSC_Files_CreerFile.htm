@@ -300,47 +300,24 @@ Comme tous les protocoles basés sur IP, IPP peut être utilisé localement ou s
                                                         <p class="Liste_puce_2"><strong><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term17">SNMP<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Protocole SNMP : Simple Network Management Protocol (en français, "Protocole Simple de Gestion de Réseau") est un protocole de communication qui permet aux administrateurs réseau de gérer les équipements du réseau, de superviser et de diagnostiquer des problèmes réseaux et matériels à distance.</span></a></strong> : si vous avez activé le monitoring <a name="SNMP"></a>SNMP, complétez-en la configuration : </p>
                                                         <ul>
                                                             <li>
-                                                                <p><strong>Configuration du groupe :</strong> cochez la case si la file appartient à un groupe de files et que la configuration du groupe s'applique à la file.Dans ce cas, il n'est pas nécessaire de configurer le SNMP pour la file.</p>
-                                                            </li>
-                                                            <li>
-                                                                <p><strong>Version de SNMP :</strong> sélectionnez la version du protocole SNMP utilisée.&#160;</p>
+                                                                <p><strong>Configuration du groupe :</strong> cochez la case si la file appartient à un groupe de files et que la configuration du groupe s'applique à la file. Dans ce cas, il n'est pas nécessaire de configurer le SNMP pour la file.</p>
+                                                                <p>Décochez la case pour configurer spécifiquement la file et indiquez : </p>
                                                                 <ul>
                                                                     <li>
-                                                                        <p>Pour la <strong>v2</strong>, indiquez :</p>
-                                                                        <ul>
-                                                                            <li>
-                                                                                <p class="Liste_num_1"><strong>Communautés</strong> : indiquez l'identifiant correspondant à la Communauté de lecture et celui de la <b>Communauté d'écriture</b> du protocole SNMP activé sur les périphériques.&#160;<br />Par défaut, la valeur  de communauté est <strong>public</strong> ou <strong>private</strong>.Pour des raisons de sécurité, nous vous recommandons de changer ces valeurs.&#160;</p>
-                                                                            </li>
-                                                                        </ul>
+                                                                        <p><strong>Communauté de lecture :</strong> indiquez l'identifiant correspondant à la Communauté de lecture ;</p>
                                                                     </li>
-                                                                </ul>
-                                                                <ul>
                                                                     <li>
-                                                                        <p>Pour la <strong>v3</strong>, saisissez toutes les valeurs permettant de garantir la sécurité des échanges entre le périphérique et Watchdoc. <br />Ces valeurs doivent correspondre à celles qui ont permis de configurer SNMP v3 sur le périphérique.</p>
-                                                                        <ul>
-                                                                            <li>
-                                                                                <p><strong>Nom d'utilisateur</strong> : saisissez le nom d'utilisateur configuré sur le périphérique ;</p>
-                                                                            </li>
-                                                                            <li>
-                                                                                <p><strong>Contexte </strong>: saisissez le contexte SNMP configuré sur le périphérique ; </p>
-                                                                            </li>
-                                                                            <li>
-                                                                                <p><strong>Authentification </strong>: sélectionnez l'algorithme utilisé (MD5 or SHA), puis saisissez le mot de passe d'authentification ; </p>
-                                                                            </li>
-                                                                            <li>
-                                                                                <p><strong>Confidentialité </strong>: sélectionnez l'algorithme utilisé, puis saisissez le mot de passe d'authentification . Pour les tâches d'administration de serveurs sensibles via SNMP (reboot, etc.), il est recommandé d'utiliser AES.</p>
-                                                                            </li>
-                                                                        </ul>
+                                                                        <p><b>Communauté d'écriture</b>:  indiquez l'identifiant correspondant à la Communauté d'écriture.<br />Par défaut, la valeur  de communauté est <strong>public</strong> ou <strong>private</strong>.Pour des raisons de sécurité, nous vous recommandons de changer ces valeurs.</p>
                                                                     </li>
                                                                 </ul>
+                                                                <p>N.B. ; le SNMP v.3 peut être configuré dans Watchdoc uniquement.&#160;</p>
                                                             </li>
                                                         </ul>
                                                     </li>
-                                                    <li style="font-size: 12pt;"><b>Commentaire(s)</b> : si nécessaire, fournissez des informations supplémentaires relatives à la file.<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Files_VoirPlus.png" /></li>
+                                                    <li style="font-size: 12pt;"><b>Commentaire(s)</b> : si nécessaire, fournissez des informations supplémentaires relatives à la file.<br /></li>
                                                 </ul>
                                             </li>
                                         </ol>
-                                        <p style="font-size: 12pt;">&#160;</p>
                                         <h3><a name="Xerox"></a>Cas spécifique d'une file Xerox<sup>®</sup></h3>
                                         <p>Pour configurer une file d'impression Xerox<sup>®</sup> dans WSC, il convient de disposer du fichier de configuration propre au pilote et à la file Xerox<sup>®</sup>. Ce fichier de configuration, intitulé <strong>CommonConfiguration.xml</strong>, est généré à l'aide de l'outil Xerox<sup>®</sup> Print Configuration Tool (cf.&#160;<a href="https://www.office.xerox.com/latest/SFTHT-01U.PDF" target="_blank">https://www.office.xerox.com/latest/SFTHT-01U.PDF</a> pour la version 2025 ou rechercher "Print Configuration Tool" sur https://www.office.xerox.com). <br />Collez ce ficier de configuration sur le serveur hébergeant WSC ou dans un dossier accessible depuis WSC pour pouvoir l'exploiter lors de la création d'une file d'impression.&#160;</p>
                                         <p>

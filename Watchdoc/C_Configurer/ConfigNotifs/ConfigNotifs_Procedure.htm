@@ -238,14 +238,14 @@
                                             </li>
                                         </ul>
                                         <h2>Configurer la <a name="section_E-mails"></a>section E-mails</h2>
-                                        <p>Dans cette section, vous configurez les informations relatives aux modalités de notification par courriel lors de l'impression. <br />Cette fonction permet d'envoyer des messages aux utilisateurs ou aux administrateurs de Watchdoc via un serveur <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term6">SMTP<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Simple Mail Transfer Protocol (Protocole simple de transfert de courrier). Protocole de communication utilisé pour transférer le courrier électronique (courriel) vers les serveurs de messagerie électronique.</span></a>.</p>
+                                        <p>Dans cette section, vous configurez les informations relatives aux modalités de notification par courriel. <br />Cette fonction permet d'envoyer des messages aux utilisateurs ou aux administrateurs de Watchdoc via un serveur <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term6">SMTP<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Simple Mail Transfer Protocol (Protocole simple de transfert de courrier). Protocole de communication utilisé pour transférer le courrier électronique (courriel) vers les serveurs de messagerie électronique.</span></a>.</p>
                                         <p>&#160;</p>
                                         <ul>
                                             <li>
                                                 <p><strong>Notifications - Activer l'envoi de mails aux administrateurs et utilisateurs</strong> : cochez la case si vous souhaitez que Watchdoc notifie les administrateurs et utilisateurs par courriel. Si vous activez cette fonction, complétez les sections suivantes :</p>
                                             </li>
                                             <li>
-                                                <p><strong><a name="Serveur"></a>Serveur </strong><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term6">SMTP<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Simple Mail Transfer Protocol (Protocole simple de transfert de courrier). Protocole de communication utilisé pour transférer le courrier électronique (courriel) vers les serveurs de messagerie électronique.</span></a> : </p>
+                                                <p><strong><a name="Serveur"></a>Serveur </strong><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term6">SMTP<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Simple Mail Transfer Protocol (Protocole simple de transfert de courrier). Protocole de communication utilisé pour transférer le courrier électronique (courriel) vers les serveurs de messagerie électronique.</span></a> : indiquez au minimum les paramètres suivants : </p>
                                                 <ul>
                                                     <li>
                                                         <p class="Liste_puce_1"><strong>Nom Serveur :</strong> saisissez dans ce champ l'adresse IP du serveur SMTP utilisé par Watchdoc pour envoyer les courriels aux usagers ;</p>
@@ -254,19 +254,41 @@
                                                         <p class="Liste_puce_1"><strong><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term4">TLS<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Protocole de sécurisation des Transport Layer Security. Protocole de sécurisation des échanges sur Internet, remplaçant le protocole SSL en 2001. SSL et le TLS sont des protocoles de chiffrement qui garantissent pleinement la sécurité des communications pour tous les mails échangés. Ces systèmes sont largement utilisés pour garantir la sécurité des communications sur internet.</span></a>/<a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term5">SSL<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Secure Sockets Layer. Protocole de sécurisation des échanges sur Internet, devenu Transport Layer Security (TLS) en 2001.</span></a> :</strong> cochez la case si le serveur SMTP impose le protocole de sécurisation Transport Layer Security (TLS) ou Secure Sockets Layer (SSL).</p>
                                                     </li>
                                                     <li>
-                                                        <p class="Liste_puce_1"><strong>Port : </strong>indiquez le port d'accès au serveur SMTP.</p>
+                                                        <p><strong>Port : </strong>indiquez le port d'accès au serveur SMTP.</p>
+                                                    </li>
+                                                </ul>
+                                                <p>Si nécessaire, précisez les paramètres suivants :</p>
+                                                <ul>
+                                                    <li>
+                                                        <p><strong>Une identification est requise : </strong>cochez cette case si l'utilisation du serveur SMTP nécessite une identification.&#160;Précisez les modalités de cette identification : </p>
                                                     </li>
                                                     <li>
-                                                        <p class="Liste_puce_1"><strong>Case Authentification requise </strong>: cochez la case s'il n'est possible d'accéder au serveur SMTP qu'après authentification. Dans ce cas, indiquez :</p>
+                                                        <p><strong>Mode de connexion : </strong>sélectionnez : </p>
                                                         <ul>
                                                             <li>
-                                                                <p class="Liste_puce_2"><strong>Compte :</strong> le compte d'un utilisateur habilité à accéder au serveur ;</p>
-                                                            </li>
-                                                            <li>
-                                                                <p class="Liste_puce_2"><strong>Mot de passe :</strong> le mot de passe d'un utilisateur habilité à accéder au serveur ;</p>
+                                                                <p><strong>Compte &amp; mot de passe </strong>s'il s'agit du mode d'identification, puis saisissez le <strong>Compte</strong> et le <strong>Mot de passe</strong> d'un utilisateur habilité à accéder au serveur SMTP ;</p>
                                                             </li>
                                                         </ul>
                                                     </li>
+                                                </ul>
+                                                <ul>
+                                                    <ul>
+                                                        <li>
+                                                            <p class="Liste_puce_2"><strong>Exchange Online :</strong> en septembre 2025, MS Exchange a modifié son mode d'authentification.&#160;SMTP&#160;Auth a été remplacé par une  identification OAUTH.&#160;Pour communiquer avec un serveur SMTP Exchange (mis à jour en sept.&#160;2025), il est donc nécessaire de complétez la section <strong>MS&#160;Azure</strong> (MS Entra).&#160;Vous devez donc disposer des paramètres propres à cette application Microsoft<sup>®</sup> :</p>
+                                                            <ul>
+                                                                <li>
+                                                                    <p style="font-weight: bold;">Tenant-Id <span style="font-weight: normal;">:</span> <span style="font-weight: normal;">saisissez l'identifiant de locataire (de l'application MS Azure Exchange Online)</span> ;</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p style="font-weight: bold;">Client-Id <span style="font-weight: normal;">:</span> <span style="font-weight: normal;">saisissez l'identifiant de l'application</span>&#160;;</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p style="font-weight: bold;">Client-Secret <span style="font-weight: normal;">: saisissez le secret de l'application.</span><br /></p>
+                                                                </li>
+                                                            </ul>
+                                                            <p>Cliquez sur le bouton <b>Se connecter</b> pour envoyer un mail de test à l'adresse Service saisie dans la section suivante.</p>
+                                                        </li>
+                                                    </ul>
                                                 </ul>
                                             </li>
                                             <li>
