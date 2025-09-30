@@ -199,7 +199,7 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1 id="WESXeroxDépannerleWES" data-magellan-target="WESXeroxDépannerleWES"><a name="aanchor166"></a>
+                                        <h1 id="WESXeroxDépannerleWES" data-magellan-target="WESXeroxDépannerleWES"><a name="aanchor167"></a>
                                             <MadCap:concept term="WES;ADE" />
                                             <MadCap:conditionalText data-mc-conditions="General.Online">WES Xerox - </MadCap:conditionalText>Dépanner le WES</h1>
                                         <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
@@ -228,6 +228,8 @@
                                                     <li class="tree-node"><a href="#V%C3%A9rifierlesparam%C3%A8tresdeconnexionsurlep%C3%A9riph%C3%A9rique">Vérifier les paramètres de connexion sur le périphérique</a>
                                                     </li>
                                                     <li class="tree-node"><a href="#Probl%C3%A8medencodageenalphabetcyrillique">Problème d'encodage en alphabet cyrillique</a>
+                                                    </li>
+                                                    <li class="tree-node"><a href="#Messagederreurlorsdelanum%C3%A9risation%C3%A0partirdelafonctiondescannative">Message d'erreur lors de la numérisation à partir de la fonction de scan native</a>
                                                     </li>
                                                     <li class="tree-node"><a href="#MessagederreurlorsdelinstallationduWESIPLokedOutException">Message d'erreur lors de l'installation du WES&#160;: IPLokedOut Exception</a>
                                                     </li>
@@ -606,7 +608,31 @@
                                             <br />Il convient de vérifier que l'encodage paramétré dans le profil WES&#160;est bien UTF-8.&#160;Après avoir vérifié et corrigé, au besoin, ce paramètre, il est parfois nécessaire d'éteindre puis de rallumer le périphérique di'mpression pour qu'il tienne compte de cette modification.&#160;</p>
                                         <p>&#160;</p>
                                         <hr width="100%" size="0" align="center" />
+                                        <h2 id="Messagederreurlorsdelanumérisationàpartirdelafonctiondescannative" data-magellan-target="Messagederreurlorsdelanumérisationàpartirdelafonctiondescannative">Message d'erreur lors de la numérisation à partir de la fonction de scan native</h2>
+                                        <p style="font-weight: bold;font-size: 14pt;"><strong style="color: #000000;">Contexte</strong>
+                                        </p>
+                                        <p>Watchdoc est installé sur un serveur géré par MS&#160;Office 365.</p>
+                                        <p>Un utilisateur authentifié via le WES&#160;d'un périphérique Versalink utilise la fonction scan native pour effectuer une numérisation.&#160;<br />Le message d'erreur suivant s'affiche : "Terminé (erreur) 027-504. Une erreur s'est produite lors de la numérisation vers le serveur SMTP.&#160;Contacter l'administrateur système"&#160;: <br /><br /><img src="ADE_WES_Xerox_ScanNatif.png" /><br /><br /></p>
+                                        <p style="font-weight: bold;font-size: 14pt;"><strong style="color: #000000;">Cause</strong>
+                                        </p>
+                                        <p>Cette erreur se produit lorsque l'adresse e-mail du périphérique d'impression est différente du nom d'utilisateur SMTP AUTH, c'est-à-dire l'adresse e-mail Office 365. (cf. Support Xerox https://www.support.xerox.com/en-us/article/KB0232358)</p>
+                                        <p>&#160;</p>
+                                        <p style="font-weight: bold;font-size: 14pt;"><strong style="color: #000000;">Résolution</strong>
+                                        </p>
+                                        <p>Vous pouvez : </p>
+                                        <ul>
+                                            <li>
+                                                <p>faire en sorte que le compte Office 365 utilisé par la machine soit capable d'envoyer des emails à la place de n'importe quel utilisateur ;</p>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <p>configurer une adresse mail "émettrice" dans le profil WES&#160;et forcer le périphérique à utiliser cet émetteur ("de/from") pour toutes les numérisations effectuées depuis le périphérique (cf. <a href="03_Xerox_WES_ConfigProfil.htm#Forcer_emetteur" target="_blank">Configurer le profil WES Xerox</a>).<br />N.B.&#160;:  cette action désactive la fonction "ScanToMe".</p>
+                                            </li>
+                                        </ul>
+                                        <hr width="100%" size="0" align="center" />
                                         <h2 id="MessagederreurlorsdelinstallationduWESIPLokedOutException" data-magellan-target="MessagederreurlorsdelinstallationduWESIPLokedOutException"><a name="IPLokedOut_Exception"></a>Message d'erreur lors de l'installation du WES&#160;: IPLokedOut Exception</h2>
+                                        <p> </p>
                                         <p style="text-align: justify;"><strong style="font-size: 14pt; color: #000000;">Contexte</strong>
                                         </p>
                                         <p style="text-align: left;">Lors de l'installation d'un WES Xerox il arrive qu'un message d'erreur s'affiche au moment du dialogue avec le kit de sécurité jba (Job Base Accounting).</p>

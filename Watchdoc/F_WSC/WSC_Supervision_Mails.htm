@@ -199,37 +199,50 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor119"></a>
+                                        <h1><a name="aanchor120"></a>
                                             <MadCap:concept term="WSC" />Console de Supervision (WSC) - Envoyer des mails d'alerte et de rapports</h1>
                                         <h2>Principe</h2>
                                         <p>La Console de Supervision permet de programmer l'envoi de mails destinés à alerter les administrateurs chargés du parc d'impression en cas de dysfonctionnements des serveurs, files d'impression et niveaux critiques des consommables. </p>
                                         <p>&#160;</p>
-                                        <p>Cette fonction nécessite un serveur SMTP (dédié ou le serveur SMTP de Watchdoc<sup>®</sup>) qu'il convient de configurer. <br />Avant de configurer, veillez à rassembler les données relatives au serveur SMTP sollicité.</p>
-                                        <h2>Accéder à l'interface de supervision</h2>
+                                        <p>Cette fonction nécessite un serveur SMTP (dédié à WSC ou serveur SMTP de Watchdoc) qu'il convient de configurer. <br />Avant de configurer, veillez à rassembler les données relatives au serveur SMTP sollicité.</p>
+                                        <p>&#160;</p>
+                                        <fieldset>Si votre serveur SMTP est de type Exchange Online, vous devez déclarer préalablement une application dans MS&#160;Entra et récupérer les paramètres Tenant-Id, Client-id et Client-Secret afin de paramétrer WSC (cf.&#160;<a href="../C_Configurer/ConfigNotifs/Config_Notifs_ExchangeOnline.htm" target="_blank">Configurer une application dans MS&#160;Entra</a>).
+<br />Si vous avez déjà paramétré le serveur SMTP Exchange Online dans Watchdoc, il n'est pas nécessaire de créer une nouvelle application MS&#160;Entra. Vous pouvez utiliser la même  application MS&#160;Entra dans Watchdoc&#160;et WSC.</fieldset>
+                                        <h2>Accéder à l'interface de supervision<br /></h2>
                                         <ol>
                                             <li value="1">
-                                                <p class="Liste_num_1">Depuis le <strong>Menu principal</strong> de WSC, cliquez sur bouton <strong>Configuration avancée</strong> ;<br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Avancee_Acces.png" style="width: 700px;height: auto;" /> <br /><br /></p>
+                                                <p class="Liste_num_1">Depuis le <strong>Menu principal</strong> de WSC, cliquez sur bouton <strong>Configuration avancée</strong> ;<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Avancee_Acces.png" style="width: 700px;height: auto;" /> <br /></p>
                                             </li>
                                             <li value="2">
                                                 <p>Dans l'interface <strong>Configuration avancée</strong>, cliquez sur <strong>Envois de mails</strong> : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Mails_Acces.png" style="width: 700px;height: auto;" /></p>
-                                                <p>
-                                                    <br />
-                                                </p>
                                             </li>
                                             <li value="3">
                                                 <p>vous accédez à l'interface <strong>Envoi de mails</strong> dans laquelle vous pouvez configurer le serveur SMTP ainsi que les alertes et rapports :<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Mails_Interface.png" style="width: 700px;height: auto;" /></p>
                                             </li>
                                         </ol>
                                         <h2>Configurer le serveur SMTP</h2>
-                                        <p>Dans cette section, paramétrez le serveur SMTP sur lequel repose la fonction d'envoi de mails : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Mails_SectionServeurSMTP.png" style="width: 582px;height: 223px;" /></p>
+                                        <p>Dans cette section, paramétrez le serveur SMTP sur lequel repose la fonction d'envoi de mails : <br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/WSC_Admin_Mails_SectionServeurSMTP.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="756" data-mc-height="268" src="../Z_Resources/Images/02_Captures/WSC_Admin_Mails_SectionServeurSMTP.png" tabindex="" style="width: 582px;height: 223px;max-width: 1000px;" /></a></p>
                                         <p>&#160;</p>
                                         <ul>
                                             <li>
-                                                <p class="Liste_puce_1"><strong>Import :</strong> si vous souhaitez exploiter le serveur SMTP utilisé par Watchdoc<sup>®</sup>, cliquez sur le bouton pour en importer la configuration ;</p>
-                                            </li>
-                                            <li>
                                                 <p class="Liste_puce_1"><strong>Notifications : </strong>cochez la case pour activer globalement la fonction d'envoi de mail&#160;; </p>
                                             </li>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>Identification requise : </strong>cochez cette case si l'utilisation du serveur SMTP nécessite une identification.&#160;Précisez les modalités de cette identification dans les champs dédiés du formulaire (compte/mot de passe ou paramètres Exchange Online)&#160;;</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Type :</strong> sélectionnez : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p><strong>Compte &amp; mot de passe </strong>s'il s'agit du mode d'identification, puis saisissez le <strong>Compte</strong> et le <strong>Mot de passe</strong> d'un utilisateur habilité à accéder au serveur SMTP ;</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <ul>
+                                                <li>
+                                                    <p class="Liste_puce_2"><strong>Exchange Online :</strong> MS Exchange  modifie son mode d'authentification (entre sept.2025 et oct.2026) pour remplacer l'identification basique SMTP&#160;par une  identification oauth2.&#160;Pour communiquer avec un serveur SMTP Exchange, il est donc nécessaire de compléter la section <strong>Azure</strong> (MS Entra-ID)&#160;avec les paramètres propres à cette application Microsoft<sup>®</sup> :</p>
+                                                </li>
+                                            </ul>
                                             <li>
                                                 <p class="Liste_puce_1"><strong>Serveur SMTP : </strong>indiquez dans ce champ le nom DNS&#160;ou l'adresse IP du serveur SMTP ; </p>
                                             </li>
@@ -237,16 +250,20 @@
                                                 <p class="Liste_puce_1"><strong>Port :</strong> indiquez dans ce champ le port d'accès au serveur SMTP ou conservez le port par défaut (25) ; </p>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1"><strong>Se connecter au serveur SMTP&#160;en utilisant TLS/SSL&#160;:</strong> cochez cette case si la connexion au serveur SMTP est sécurisée ; </p>
+                                                <p class="Liste_puce_1"><strong>Se connecter au serveur SMTP&#160;en utilisant <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term4">TLS<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Protocole de sécurisation des Transport Layer Security. Protocole de sécurisation des échanges sur Internet, remplaçant le protocole SSL en 2001. SSL et le TLS sont des protocoles de chiffrement qui garantissent pleinement la sécurité des communications pour tous les mails échangés. Ces systèmes sont largement utilisés pour garantir la sécurité des communications sur internet.</span></a>/<a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term5">SSL<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Secure Sockets Layer. Protocole de sécurisation des échanges sur Internet, devenu Transport Layer Security (TLS) en 2001.</span></a>&#160;:</strong> cochez la case si le serveur SMTP impose le protocole de sécurisation Transport Layer Security (TLS) ou Secure Sockets Layer (SSL). Ce paramètre est obligatoire avec le mode de connexion Exchange Online.cochez cette case si une identification est requise par le serveur SMTP, puis complétez les champs suivants : </p>
+                                            </li>
+                                        </ul>
+                                        <h2>Exchange Online</h2>
+                                        <p>Si vous avez sélectionné le type Exchange Online dans la section précédente, complétez les paramètres suivants : </p>
+                                        <ul>
+                                            <li>
+                                                <p style="font-weight: bold;">Tenant-Id <span style="font-weight: normal;">:</span><span style="font-weight: normal;">saisissez l'identifiant de locataire (de l'application MS Azure Exchange Online)</span> ;</p>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1"><strong>Identification requise : </strong>cochez cette case si une identification est requise par le serveur SMTP, puis complétez les champs suivants : </p>
+                                                <p style="font-weight: bold;">Client-Id <span style="font-weight: normal;">:</span><span style="font-weight: normal;">saisissez l'identifiant de l'application</span>&#160;;</p>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_2"><strong>Compte </strong>: indiquez le compte d'administration habilité à se connecter au serveur SMTP ; </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2" style="font-weight: normal;"><strong>Mot de passe : </strong> indiquez le mot de passe associé au compte habilité à se connecter au serveur SMTP ;</p>
+                                                <p style="font-weight: bold;">Client-Secret <span style="font-weight: normal;">: saisissez le secret de l'application.</span><br /><span style="font-weight: normal;">N.B. : le Secret expire au terme d'un délai prédéfini dans MS Entra. Il est donc nécessaire de le mettre à jour dès qu'il est renouvelé, sous peine de ne plus pouvoir utiliser la fonction de Notifications et d'obtenir le message d'alerte "Failed to get an accessToken from Azure".<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Mails_ExchangeOnline.png" /></span></p>
                                             </li>
                                         </ul>
                                         <h2>Configurer la notification</h2>

@@ -195,7 +195,7 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <p><a name="aanchor247"></a>
+                                        <p><a name="aanchor248"></a>
                                             <MadCap:concept term="ADE" /><span style="font-size: 24pt; font-weight: bold; color: #ff803b;">Dépannages</span>
                                         </p>
                                         <p>&#160;</p>
@@ -547,6 +547,13 @@
                                                 <p>SET crdLOCKED = '0'</p>
                                                 <p>FROM dbo.cards</p>
                                                 <p>WHERE crdLOCKED = '2'</p>
+                                            </div>
+                                        </div>
+                                        <p>&#160;</p>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Notifications Watchdoc - Problème lié aux notifications type Exchange Online - Failed to get an accessToken from Azure</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> les utilisateurs ne reçoivent plus de notifications.&#160;Dans Watchdoc, lorsque la fonction de notification exploite Exchange Online, la section Etat du système des Notifications affiche le message d'alerte suivant : Le dernier e-mail n'a pas été envoyé correctement. L'erreur suivante s'est produite : Failed to get an accessToken from Azure<br /><strong>Cause :</strong> ce dysfonctionnement est sans doute lié au Secret du client permettant d'accéder à l'application, ce Secret étant doté d'une date d'expiration qui nécessite un renouvellement.&#160;</p>
+                                                <p><strong>Résolution :</strong> vérifiez la valeur du Secret-id dans MS&#160;Entra, renouvelez le secret si nécessaire et reportez sa valeur dans l'interface de configuration des Notifications Watchdoc (cf. <a href="../C_Configurer/ConfigNotifs/ConfigNotifs_Procedure.htm">Configurer les notifications</a>).</p>
                                             </div>
                                         </div>
                                         <p>&#160;</p>
@@ -949,7 +956,8 @@
                                                 </ol>
                                             </div>
                                         </div>
-                                        <h3 id="WESKyocera" data-magellan-target="WESKyocera"><a name="WES_Kyocera"></a>WES&#160;Kyocera</h3>
+                                        <h3 id="WESKyocera" data-magellan-target="WESKyocera">
+                                            <br /><a name="WES_Kyocera"></a>WES&#160;Kyocera</h3>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" /></a><a name="WEScan_OCRKO"></a><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" aria-expanded="false">WES Kyocera. WEScan - Erreur lors de la numérisation, le traitement OCR n'est pas appliqué.</a></span>
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> lorsqu'un utilisateur lance une numérisation à l'aide de WEScan en demandant un traitement OCR, il reçoit le scan, mais pas l'OCR.</p>
@@ -973,7 +981,8 @@
                                                 <p><strong>Résolution :</strong> il convient de mettre à jour l'application WESAuthentication v3.0.7, embarquée dans le package d'installation Watchdoc v6.0.0.4843.</p>
                                             </div>
                                         </div>
-                                        <h3 id="WESLexmark" data-magellan-target="WESLexmark"><a name="WESLexmark"></a>WES&#160;Lexmark</h3>
+                                        <h3 id="WESLexmark" data-magellan-target="WESLexmark">
+                                            <br /><a name="WESLexmark"></a>WES&#160;Lexmark</h3>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WES </a><a name="Unite_transfert"></a><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" aria-expanded="false">Lexmark. Anomalie relative aux consommables sur les modèles CX961 - Message d'alerte informant que l'unité de transfert est à 0% - Juin 2025</a></span>
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> sur les modèles CX961, un message d'alerte SNMP&#160;informe l'administrateur que le niveau du module de transfert (unité de transfert ou "transfer module") est en-dessous de 10%.&#160;<br /></p>
@@ -1203,6 +1212,24 @@
                                             <img src="../Z_Resources/Images/01_Generiques/icon_fleche_haut_Release.png" style="width: 62px;height: 38px;" />
                                         </p>
                                         <h3 id="WESXerox" data-magellan-target="WESXerox"><a name="WES_Xerox"></a>WES&#160;Xerox</h3>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WES Xerox.  Erreur lors d'un scan avec la fonction native de scan - Terminé (erreur) 027-504.Terminé (erreur) 027-504. Une erreur s'est produite lors de la numérisation vers le serveur SMTP</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> Watchdoc est installé sur un serveur géré par MS&#160;Office 365. </p>
+                                                <p>Un utilisateur authentifié via le WES&#160;d'un périphérique Versalink utilise la fonction scan native pour effectuer une numérisation.&#160;<br></br>Le message d'erreur suivant s'affiche : "Terminé (erreur) 027-504. Une erreur s'est produite lors de la numérisation vers le serveur SMTP.&#160;Contacter l'administrateur système"&#160;: </p>
+                                                <p><strong>Cause :</strong>cette erreur se produit lorsque l'adresse e-mail du périphérique d'impression est différente du nom d'utilisateur SMTP AUTH, c'est-à-dire l'adresse e-mail Office 365. (cf. Support Xerox https://www.support.xerox.com/en-us/article/KB0232358)</p>
+                                                <p><strong>Résolution :</strong> </p>
+                                                <ul>
+                                                    <li>
+                                                        <p>faire en sorte que le compte Office 365 utilisé par la machine soit capable d'envoyer des emails à la place de n'importe quel utilisateur ;</p>
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <p>configurer une adresse mail "émettrice" dans le profil WES&#160;et forcer le périphérique à utiliser cet émetteur ("de/from") pour toutes les numérisations effectuées depuis le périphérique (cf. <a href="../W_WES/10_Xerox/03_Xerox_WES_ConfigProfil.htm#Forcer_emetteur" target="_blank">Configurer le profil WES Xerox</a>).</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                         <p>&#160;</p>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WES Xerox sur Altalink. </a><a name="WES_Xerox_HDVIP"></a><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" aria-expanded="false">La haute disponibilité ne fonctionne pas.</a></span>
                                             <div class="MCDropDownBody dropDownBody">

@@ -5,7 +5,7 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="Procédure de configuration des notifications par e-mails et notirications MS Windows." /><title>Watchdoc - Notifications - Configurer la notification</title>
+        <meta name="description" content="Procédure de configuration des notifications par e-mails et notirications MS Windows." /><title>Watchdoc - Notifications - Configurer les notifications</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -199,8 +199,8 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor215"></a>
-                                            <MadCap:concept term="WD" />Watchdoc - Notifications - Configurer la notification</h1>
+                                        <h1><a name="aanchor216"></a>
+                                            <MadCap:concept term="WD" />Watchdoc - Notifications - Configurer les notifications</h1>
                                         <h2>Accéder à l'interface de configuration</h2>
                                         <ol>
                                             <li value="1"><span style="font-size: 12pt;">Depuis le </span><strong style="font-size: 12pt;">Menu principal</strong><span style="font-size: 12pt;"> de l'interface d'administration, section </span><strong style="font-size: 12pt;">Configuration</strong><span style="font-size: 12pt;">, cliquez sur </span><strong style="font-size: 12pt;">Configuration avancée </strong>:<br /></li>
@@ -238,11 +238,13 @@
                                             </li>
                                         </ul>
                                         <h2>Configurer la <a name="section_E-mails"></a>section E-mails</h2>
-                                        <p>Dans cette section, vous configurez les informations relatives aux modalités de notification par courriel. <br />Cette fonction permet d'envoyer des messages aux utilisateurs ou aux administrateurs de Watchdoc via un serveur <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term6">SMTP<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Simple Mail Transfer Protocol (Protocole simple de transfert de courrier). Protocole de communication utilisé pour transférer le courrier électronique (courriel) vers les serveurs de messagerie électronique.</span></a>.</p>
+                                        <p>Dans cette section, vous configurez les informations relatives aux modalités de notification par courriel. <br />Cette fonction permet d'envoyer des messages aux utilisateurs ou aux administrateurs de Watchdoc via un serveur <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term6">SMTP<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Simple Mail Transfer Protocol (Protocole simple de transfert de courrier). Protocole de communication utilisé pour transférer le courrier électronique (courriel) vers les serveurs de messagerie électronique.</span></a>.<br /></p>
+                                        <p>&#160;</p>
+                                        <p>Si le serveur mail est de type Exchange Online, il est nécessaire d'avoir préalablement configuré l'application dans Microsoft Entra (cf.&#160;<a href="Config_Notifs_ExchangeOnline.htm" class="MCXref xref">Watchdoc - Notifications - Configurer l'application des Notifications dans Microsoft Entra</a>).</p>
                                         <p>&#160;</p>
                                         <ul>
                                             <li>
-                                                <p><strong>Notifications - Activer l'envoi de mails aux administrateurs et utilisateurs</strong> : cochez la case si vous souhaitez que Watchdoc notifie les administrateurs et utilisateurs par courriel. Si vous activez cette fonction, complétez les sections suivantes :</p>
+                                                <p><strong>Notifications - Activer l'envoi de mails aux administrateurs et utilisateurs</strong> : cochez la case si vous souhaitez que Watchdoc notifie les administrateurs et utilisateurs par courriel. Si vous activez cette fonction, complétez les sections suivantes&#160;:</p>
                                             </li>
                                             <li>
                                                 <p><strong><a name="Serveur"></a>Serveur </strong><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term6">SMTP<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Simple Mail Transfer Protocol (Protocole simple de transfert de courrier). Protocole de communication utilisé pour transférer le courrier électronique (courriel) vers les serveurs de messagerie électronique.</span></a> : indiquez au minimum les paramètres suivants : </p>
@@ -251,12 +253,13 @@
                                                         <p class="Liste_puce_1"><strong>Nom Serveur :</strong> saisissez dans ce champ l'adresse IP du serveur SMTP utilisé par Watchdoc pour envoyer les courriels aux usagers ;</p>
                                                     </li>
                                                     <li>
-                                                        <p class="Liste_puce_1"><strong><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term4">TLS<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Protocole de sécurisation des Transport Layer Security. Protocole de sécurisation des échanges sur Internet, remplaçant le protocole SSL en 2001. SSL et le TLS sont des protocoles de chiffrement qui garantissent pleinement la sécurité des communications pour tous les mails échangés. Ces systèmes sont largement utilisés pour garantir la sécurité des communications sur internet.</span></a>/<a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term5">SSL<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Secure Sockets Layer. Protocole de sécurisation des échanges sur Internet, devenu Transport Layer Security (TLS) en 2001.</span></a> :</strong> cochez la case si le serveur SMTP impose le protocole de sécurisation Transport Layer Security (TLS) ou Secure Sockets Layer (SSL). <br />Ce paramètre est obligatoire avec le mode de connexion Exchante Online.</p>
+                                                        <p class="Liste_puce_1"><strong><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term4">TLS<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Protocole de sécurisation des Transport Layer Security. Protocole de sécurisation des échanges sur Internet, remplaçant le protocole SSL en 2001. SSL et le TLS sont des protocoles de chiffrement qui garantissent pleinement la sécurité des communications pour tous les mails échangés. Ces systèmes sont largement utilisés pour garantir la sécurité des communications sur internet.</span></a>/<a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term5">SSL<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Secure Sockets Layer. Protocole de sécurisation des échanges sur Internet, devenu Transport Layer Security (TLS) en 2001.</span></a> :</strong> cochez la case si le serveur SMTP impose le protocole de sécurisation Transport Layer Security (TLS) ou Secure Sockets Layer (SSL). <br />Ce paramètre est obligatoire avec le mode de connexion Exchange Online.</p>
                                                     </li>
                                                     <li>
                                                         <p><strong>Port : </strong>indiquez le port d'accès au serveur SMTP.</p>
                                                     </li>
                                                 </ul>
+                                                <p>&#160;</p>
                                                 <p>Si nécessaire, précisez les paramètres suivants :</p>
                                                 <ul>
                                                     <li>
@@ -274,7 +277,7 @@
                                                 <ul>
                                                     <ul>
                                                         <li>
-                                                            <p class="Liste_puce_2"><strong>Exchange Online :</strong> en septembre 2025, MS Exchange a modifié son mode d'authentification.&#160;SMTP&#160;Auth a été remplacé par une  identification OAUTH.&#160;Pour communiquer avec un serveur SMTP Exchange (mis à jour en sept.&#160;2025), il est donc nécessaire de complétez la section <strong>MS&#160;Azure</strong> (MS Entra).&#160;Vous devez donc disposer des paramètres propres à cette application Microsoft<sup>®</sup> :</p>
+                                                            <p class="Liste_puce_2"><strong>Exchange Online :</strong> MS Exchange  modifie son mode d'authentification (entre sept.2025 et oct.2026) pour remplacer l'identification basique SMTP&#160;par une  identification oauth2.&#160;Pour communiquer avec un serveur SMTP Exchange, il est donc nécessaire de compléter la section <strong>Azure</strong> (MS Entra-ID)&#160;avec les paramètres propres à cette application Microsoft<sup>®</sup> :</p>
                                                             <ul>
                                                                 <li>
                                                                     <p style="font-weight: bold;">Tenant-Id <span style="font-weight: normal;">:</span> <span style="font-weight: normal;">saisissez l'identifiant de locataire (de l'application MS Azure Exchange Online)</span> ;</p>
@@ -283,13 +286,9 @@
                                                                     <p style="font-weight: bold;">Client-Id <span style="font-weight: normal;">:</span> <span style="font-weight: normal;">saisissez l'identifiant de l'application</span>&#160;;</p>
                                                                 </li>
                                                                 <li>
-                                                                    <p style="font-weight: bold;">Client-Secret <span style="font-weight: normal;">: saisissez le secret de l'application.</span><br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Notifs_Exchange.png" style="width: 700px;height: auto;" /></p>
+                                                                    <p style="font-weight: bold;">Client-Secret <span style="font-weight: normal;">: saisissez le secret de l'application.</span><br /><span style="font-weight: normal;">N.B. : le Secret expire au terme d'un délai prédéfini dans MS Entra. Il est donc nécessaire de le mettre à jour dès qu'il est renouvelé, sous peine de ne plus pouvoir utiliser la fonction de Notifications et d'obtenir le message d'alerte "Failed to get an accessToken from Azure".</span><br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Notifs_Exchange.png" style="width: 700px;height: auto;" /></p>
                                                                 </li>
                                                             </ul>
-                                                            <p style="font-weight: bold;">
-                                                                <br />
-                                                            </p>
-                                                            <p>Cliquez sur le bouton <b>Se connecter</b> pour envoyer un mail de test à l'adresse Service saisie dans la section suivante<br /></p>
                                                             <p>&#160;</p>
                                                         </li>
                                                     </ul>
@@ -357,11 +356,11 @@
                                             </li>
                                         </ol>
                                         <p><span style="font-family: 'Wingdings'">è</span>Une fois la fonction de notification configurée, vous pouvez revenir à la liste des événements en cliquant sur le bouton <strong>Retour</strong>. Dans cette liste, vous configurez les événements qui déclenchent une notification.&#160;</p>
-                                        <h2>Vérifier la configuration de la notification</h2>
+                                        <h2><a name="Verif_Notifs"></a>Vérifier la configuration de la notification</h2>
                                         <p>Une fois les paramètres de la notification configurés, </p>
                                         <ol>
                                             <li value="1">
-                                                <p>vérifiez dans la section<strong> Etat du système</strong> que la notification est activée :<br /><br /><img src="../../Z_Resources/Images/02_Captures/Admin_SMTP_MsgConfig.png" style="width: 700px;height: auto;" /></p>
+                                                <p>Une fois cette opération terminée, vous pouvez vérifier l'état du système dans l'interface <strong>Notifications</strong>, section <strong>Etat du système</strong> :<br /><br /><img src="Config_Notifs_MS365_Verif.png" /></p>
                                             </li>
                                         </ol>
                                         <p>&#160;</p>

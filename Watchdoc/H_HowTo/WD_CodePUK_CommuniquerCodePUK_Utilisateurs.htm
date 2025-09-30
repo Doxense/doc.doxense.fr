@@ -5,7 +5,7 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="Procédure de communication du code PUK d'un utilisateur par mail en tant qu'administrateur." /><title>Watchdoc - Communiquer leur code PUK aux utilisateurs Watchdoc</title>
+        <meta name="description" content="Procédure de communication du code PUK d'un utilisateur par mail en tant qu'administrateur." /><title>Watchdoc - Communiquer le code PUK aux utilisateurs Watchdoc</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -200,25 +200,27 @@
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
                                         <h1><a name="aanchor20"></a>
-                                            <MadCap:concept term="WD" />Watchdoc - Communiquer leur code PUK aux utilisateurs Watchdoc</h1>
+                                            <MadCap:concept term="WD" />Watchdoc - Communiquer le code PUK aux utilisateurs Watchdoc</h1>
                                         <h2>Principe</h2>
                                         <p>Il peut être utile d'envoyer le code PUK aux utilisateurs de Watchdoc, notamment lorsque c'est l'unique code pour s'authentifier sur un <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term21">WES<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>WES (Watchdoc Embedded Solution - Solution Embarquée Watchdoc)
 WES&#160;est le nom donné à l'interface Watchdoc embarquée sur les périphériques d'impression. Il existe des interfaces spécifiques à chaque périphérique tiers et donc autant de WES que de constructeurs de périphériques. Ces interfaces servent à gérer l'impression depuis le périphérique lui-même.</span></a>.</p>
+                                        <p>&#160;</p>
                                         <p>Si vous avez configuré la page  "Mon compte" pour qu'elle soit consultable, l'utilisateur peut y trouver son code PUK (cf. <i><a href="WD_CodePUK_ConsulterCodePUK_Util.htm" target="_blank" alt="Consulter le code PUK d'un utilisateur" title="Consulter le code PUK d'un utilisateur">Consulter le code PUK d'un utilisateur</a></i>).</p>
-                                        <p>L'administrateur peut aussi décider d'envoyer ce code dans deux types de mails : </p>
+                                        <p>&#160;</p>
+                                        <p>Vous pouvez aussi aussi décider d'envoyer ce code par mail grâce à la fonction Notification de Watchdoc.&#160;<br />La notification (envoi de mail) est déclenché par certains événements prédéfinis.&#160;Deux événements peuvent être utilisés pour envoyer le code PUK&#160;à l'utilisateur :</p>
                                         <ul>
                                             <li>
-                                                <p>le mail informant l'utilisateur comment procéder à l'<a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term35">enrôlement<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Action au cours de laquelle un compte utilisateur est associé au numéro de badge qui lui appartient. L'enrôlement est réalisé lors de la première utilisation d'un badge. L'enrôlement peut être réalisé par le responsable informatique lorsqu'il délivre le badge à un utilisateur ou par l'utilisateur lui-même qui saisit son identifiant (code PIN, code PUK ou identifiant et mot de passe) qui est alors associé à son numéro de badge. Une fois l'enrôlement réalisé, le numéro de badge est associé définitivement à son propriétaire.</span></a> de son badge. Ce mail n'est envoyé qu'une seule fois (sauf en cas de perte du bagde et  nécessité d'enrôler un nouveau badge) ;</p>
+                                                <p>lorsque l'utilisateur doit s'authentifier pour la première fois sur le périphérique d'impression à l'aide d'un badge.&#160;Il doit pour cela <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term35">enrôler<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Action au cours de laquelle un compte utilisateur est associé au numéro de badge qui lui appartient. L'enrôlement est réalisé lors de la première utilisation d'un badge. L'enrôlement peut être réalisé par le responsable informatique lorsqu'il délivre le badge à un utilisateur ou par l'utilisateur lui-même qui saisit son identifiant (code PIN, code PUK ou identifiant et mot de passe) qui est alors associé à son numéro de badge. Une fois l'enrôlement réalisé, le numéro de badge est associé définitivement à son propriétaire.</span></a> son badge. Le mail fournit alors la procédure d'<a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term35">enrôlement<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Action au cours de laquelle un compte utilisateur est associé au numéro de badge qui lui appartient. L'enrôlement est réalisé lors de la première utilisation d'un badge. L'enrôlement peut être réalisé par le responsable informatique lorsqu'il délivre le badge à un utilisateur ou par l'utilisateur lui-même qui saisit son identifiant (code PIN, code PUK ou identifiant et mot de passe) qui est alors associé à son numéro de badge. Une fois l'enrôlement réalisé, le numéro de badge est associé définitivement à son propriétaire.</span></a>. Ce mail n'est envoyé qu'une fois (avant l'enrôlement).</p>
                                             </li>
                                             <li>
-                                                <p>le mail informant l'utilisateur qu'il peut débloquer l'impression qu'il a demandée. Ce mail est envoyé à chaque demande d'impression émise par l'utilisateur.</p>
+                                                <p>lorsqu'un utilisateur a envoyé une demande d'impression, un mail peut l'informer qu'il peut  débloquer son impression sur le périphérique.&#160;Ce mail peut être envoyé pour chaque impression, à condition que Watchdoc fonctionne en mode "validation".&#160;</p>
                                             </li>
                                         </ul>
                                         <p>&#160;</p>
                                         <p>Ces envois de mails sont gérés dans l'interface de gestion des Notifications.</p>
                                         <p>N.B.&#160;: par souci de sécurité, nous ne recommandons pas l'authentification par code PUK, mais plutôt l'authentification par compte utilisateur (login)/code PIN.</p>
                                         <h2>Procédure </h2>
-                                        <p>Pour configurer l'envoi du code PUK par mail à utilisateur :</p>
+                                        <p>Vérifiez en prérequis que la fonction de Notification est configurée (cf. <a href="../C_Configurer/ConfigNotifs/ConfigNotifs_Procedure.htm" class="MCXref xref">Watchdoc - Notifications - Configurer les notifications</a>).<br />Pour configurer l'envoi du code PUK par mail à utilisateur :</p>
                                         <ol>
                                             <li value="1">
                                                 <p>depuis le <strong>Menu principal</strong> de Watchdoc, section <strong>Configuration</strong>, cliquez sur<strong> Configuration avancée</strong> ;</p>
@@ -240,10 +242,10 @@ WES&#160;est le nom donné à l'interface Watchdoc embarquée sur les périphér
                                         </ol>
                                         <ol data-mc-continue="true">
                                             <li value="4">
-                                                <p>cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Editer.png" style="width: 14px;height: 14px;" /> pour ouvrir l'interface de configuration de la notification ;<br /></p>
+                                                <p>cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Editer.png" style="width: 18px;height: 18px;" /> pour ouvrir l'interface de configuration de la notification ;<br /></p>
                                             </li>
                                             <li value="5">
-                                                <p>dans l'nterface "Evenement de notification", section E-mail, cochez la case "Envoyer un e-mail lorsque cet événement est déclenché" :<br /><br /><img src="../Z_Resources/Images/02_Captures/Admin_Notifs_ActivationEmail.png" style="width: 629px;height: 322px;" /></p>
+                                                <p>dans l'interface "Evénement de notification", section E-mail, cochez la case "Envoyer un e-mail lorsque cet événement est déclenché" :<br /><br /><img src="../Z_Resources/Images/02_Captures/Admin_Notifs_ActivationEmail.png" style="width: 629px;height: 322px;" /></p>
                                             </li>
                                         </ol>
                                         <p><span style="font-family: 'Wingdings'">è</span> Dès lors, les utilisateurs recevront un mail comportant leur code PUK&#160;:</p>
