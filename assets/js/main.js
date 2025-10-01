@@ -4,6 +4,11 @@ let blockNews = document.querySelector('.doc_news--ul');
 
 let arrayContent = [
 {	
+	date: "1er octobre 2025",
+	link: "/Watchdoc/A_Getting_Started/Release_611.htm",
+	content: "nouvelles versions Watchdoc, Console de Supervision 6.1.1.5388 et Watchdoc Print Client for Windows 7.0.5727"
+},
+{	
 	date: "17 septembre 2025",
 	link: "/Watchdoc/A_Getting_Started/Release_611.htm",
 	content: "nouvelles versions Watchdoc, Console de Supervision 6.1.1.5374"

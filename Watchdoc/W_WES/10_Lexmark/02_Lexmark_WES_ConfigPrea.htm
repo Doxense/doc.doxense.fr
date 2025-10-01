@@ -199,6 +199,7 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
+                                        <p>&#160;</p>
                                         <h1><a name="aanchor65"></a>
                                             <MadCap:concept term="WES" />
                                             <MadCap:conditionalText data-mc-conditions="General.Online">WES&#160;Lexmark - </MadCap:conditionalText>Prérequis et configuration préalable</h1>
@@ -223,42 +224,67 @@
                                         <h2 data-mc-conditions="WES.Canon">Configurer les ports</h2>
                                         <p>Les ports réseau à ouvrir pour permettre le fonctionnement des WES&#160;sont les suivants&#160;:<br /><br /></p>
                                         <table style="border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-left-style: none;border-left-width: 0px;border-left-color: ;border-right-style: none;border-right-width: 0px;border-right-color: ;border-top-style: none;border-top-width: 0px;border-top-color: ;border-bottom-style: none;border-bottom-width: 0px;border-bottom-color: ;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableSlylesheets/Standard.css');" class="TableStyle-Standard" cellspacing="0">
-                                            <col style="width: 250px;" class="TableStyle-Standard-Column-Regular" />
-                                            <col style="width: 340px;" class="TableStyle-Standard-Column-Regular" />
-                                            <col style="width: 154px;" class="TableStyle-Standard-Column-Regular" />
-                                            <col style="width: 172px;" class="TableStyle-Standard-Column-Regular" />
-                                            <col style="width: -34px;" class="TableStyle-Standard-Column-Regular" />
+                                            <col style="width: 250px;" class="TableStyle-Standard-Column-Regular">
+                                            </col>
+                                            <col style="width: 184px;" class="TableStyle-Standard-Column-Regular">
+                                            </col>
+                                            <col style="width: 272px;" class="TableStyle-Standard-Column-Regular">
+                                            </col>
+                                            <col style="width: 201px;" class="TableStyle-Standard-Column-Regular">
+                                            </col>
+                                            <col style="width: 172px;" class="TableStyle-Standard-Column-Regular">
+                                            </col>
                                             <thead>
                                                 <tr class="TableStyle-Standard-Head-Header1">
-                                                    <td style="font-weight: bold;text-align: left;color: #ffffff;" class="TableStyle-Standard-HeadE-Regular-Header1">Marque</td>
+                                                    <td style="font-weight: bold;text-align: left;color: #ffffff;" class="TableStyle-Standard-HeadE-Regular-Header1">Marque / SDK</td>
                                                     <td style="font-weight: bold;text-align: left;color: #ffffff;" class="TableStyle-Standard-HeadE-Regular-Header1">Source</td>
+                                                    <th class="TableStyle-Standard-HeadE-Regular-Header1">Cible</th>
                                                     <td style="font-weight: bold;text-align: left;color: #ffffff;" class="TableStyle-Standard-HeadE-Regular-Header1">Port</td>
-                                                    <td style="font-weight: bold;text-align: left;color: #ffffff;" class="TableStyle-Standard-HeadE-Regular-Header1">Protocole</td>
-                                                    <td style="font-weight: bold;text-align: left;color: #ffffff;" class="TableStyle-Standard-HeadD-Regular-Header1">Cible</td>
+                                                    <td style="font-weight: bold;text-align: left;color: #ffffff;" class="TableStyle-Standard-HeadD-Regular-Header1">Protocole</td>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2"><span style="font-size: 12pt;">Lexmark SDK4</span>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;"><span style="font-size: 12pt;">Lexmark SDK4*</span>
                                                     </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2"><span style="font-size: 12pt;">Site web IIS et WES</span>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;"><span style="font-size: 12pt;"> WES</span>
                                                     </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2"><span style="font-size: 12pt;">TCP&#160;5754</span>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;"><span style="font-size: 12pt;">Service Watchdoc (kernel)</span>
                                                     </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2"><span style="font-size: 12pt;">DotNet Protocole</span>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2"><span style="font-size: 12pt;">Service Watchdoc (kernel)</span>
-                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;"><span style="font-size: 12pt;">TCP&#160;5754</span>
+                                                        <br />TCP&#160;5753</td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-size: 12pt;">HTTP<br />HTTPS</td>
                                                 </tr>
                                                 <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;" class="TableStyle-Standard-BodyB-Regular-Row1">Lexmark</td>
-                                                    <td style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;" class="TableStyle-Standard-BodyB-Regular-Row1">Service Watchdoc</td>
-                                                    <td style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;" class="TableStyle-Standard-BodyB-Regular-Row1">TCP&#160;80<br />TCP&#160;443</td>
-                                                    <td style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;" class="TableStyle-Standard-BodyB-Regular-Row1">HTTP<br />HTTPS</td>
-                                                    <td style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;" class="TableStyle-Standard-BodyA-Regular-Row1">Périphérique d'impression</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">Lexmark SDK6+<br /></td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">WES</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1"><span style="font-size: 12pt;">Service Watchdoc (kernel)</span>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">TCP&#160;5753</td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1" style="font-size: 12pt;">HTTPS</td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;" class="TableStyle-Standard-BodyB-Regular-Row2">
+                                                        <p>Lexmark</p>
+                                                    </td>
+                                                    <td style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;" class="TableStyle-Standard-BodyB-Regular-Row2">Service Watchdoc</td>
+                                                    <td class="TableStyle-Standard-BodyB-Regular-Row2" style="font-size: 12pt;">Périphérique d'impression</td>
+                                                    <td style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;" class="TableStyle-Standard-BodyB-Regular-Row2">TCP&#160;80<br></br>TCP&#160;443</td>
+                                                    <td style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;" class="TableStyle-Standard-BodyA-Regular-Row2">HTTP<br></br>HTTPS</td>
                                                 </tr>
                                             </tbody>
                                         </table>
+                                        <p>&#160;</p>
+                                        <p>* Le SSL&#160;only est impossible avec le SDK4.&#160;<br />En cas de configuration en mode multiserveur (loadbalancing) pour des périphériques équipés de SDK&#160;différents, il est donc nécessaire d'ouvrir&#160;:</p>
+                                        <ul>
+                                            <li>
+                                                <p>le port 5754</p>
+                                            </li>
+                                            <li>
+                                                <p>et le port 5753</p>
+                                                <p>;</p>
+                                            </li>
+                                        </ul>
                                     </div>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">
