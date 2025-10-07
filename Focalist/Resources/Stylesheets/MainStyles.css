@@ -2,14 +2,21 @@
 
 @namespace MadCap url(http://www.madcapsoftware.com/Schemas/MadCap.xsd);
 
-*
+@font-face 
 {
-	font-family: HelveticaNeue;
+	font-family: 'Helvetica';
+	src: url(../Fonts/Helvetica.ttf);
+}
+
+font
+{
+	font-family: 'Helvetica';
 }
 
 body
 {
-	font-size: 11pt;
+	font-size: 12pt;
+	font-family: Helvetica;
 }
 
 h1
@@ -25,12 +32,32 @@ h2
 	font-size: 18.0pt;
 	margin-top: 20px;
 	margin-bottom: 20px;
+	font-color: #00ABC9;
+}
+
+h2_orange
+{
+	font-weight: bold;
+	font-size: 18.0pt;
+	font-color: #00ABC9;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 h3
 {
 	font-weight: bold;
 	font-size: 14.0pt;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-color: #00ABC9;
+}
+
+h3_orange
+{
+	font-weight: bold;
+	font-size: 14.0pt;
+	font-color: #00ABC9;
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
@@ -41,26 +68,24 @@ h4
 	font-size: 12.0pt;
 	margin-top: 10px;
 	margin-bottom: 10px;
-}
-
-h5
-{
-	font-weight: bold;
-	font-size: 10.0pt;
-}
-
-h6
-{
-	font-weight: bold;
-	font-size: 8.0pt;
+	font-color: #00ABC9;
 }
 
 p
 {
 	margin-top: 0pt;
 	margin-bottom: 0pt;
-	color: #7A7A78;
 	font-size: 12pt;
+	color: #696969;
+}
+
+SousTitre_ADE
+{
+	font-weight: bold;
+	font-size: 14.0pt;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-color: #00ABC9;
 }
 
 ol,
@@ -88,17 +113,28 @@ img
 	mc-thumbnail: none;
 }
 
+img.bord
+{
+	border-radius: 5px;
+	max-width: 700px;
+	mc-thumbnail-max-height: auto;
+	mc-thumbnail-max-width: 1000px;
+	mc-thumbnail: Hyperlink;
+	border: solid 1px;
+	border-color: #000000;
+}
+
 div.home-tiles > div
 {
-	width: 25%;
+	width: auto;
 	margin-left: 4%;
 	padding: 20px;
-	background-color: #F1F1F1;
+	background-color: #e2e2e1;
 	color: black;
-	border: none;
+	border: 1px;
 	transition: 0.2s;
 	box-shadow: 12px 18px 40px rgba(0, 0, 0, 0.1);
-	height: 270px;
+	height: auto;
 }
 
 .tile-title
@@ -122,73 +158,151 @@ p.tile-content
 
 MadCap|expandingHead
 {
-	font-style: italic;
 	font-weight: normal;
 	cursor: hand;
 	text-decoration: none;
-	color: #006600;
+	color: #585B58;
 }
 
 MadCap|expandingBody
 {
 	color: #777777;
-	font-style: italic;
 }
 
 MadCap|dropDownHotspot
 {
-	cursor: hand;
 	text-decoration: none;
-	font-weight: normal;
 	font-style: normal;
-	color: #696969;
+	color: #808080;
+	cursor: hand;
 }
 
 .body-container
 {
-	font-family: 'Akkurat Pro', sans-serif;
+	font-family: 'Helvetica';
 	padding-bottom: 50px;
+}
+
+div.cta:hover	/*When hovering over the CTA button the following properties apply*/
+{
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+	transform: scale(1.01);
+}
+
+a.cta:link
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+a.cta:visited
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+/*==Home Tiles section==*/
+
+div.home-tiles	/*This layout was created using the Responsive Layout Editor in MadCap Flare. Go to: Home Ribbon > Styles Section > Responsive Layout*/
+{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 5px auto;
+	padding: 10px 0;
+	width: auto;
+}
+
+div.home-tiles > div:hover	/*When hovering over a home-tile, these properties apply*/
+{
+	transform: scale(1.1);
+}
+
+/*=Elements for text contained within each home-tile=*/
+
+p.tile-title
+{
+	text-align: center;
+	color: #7E8890;
+	font-size: 1.4em;
+}
+
+p.tile-content
+{
+	text-align: center;
+	color: #7E8890;
+	font-size: 0.8em;
+}
+
+div.home-tiles a	/*Complex Selector: Any anchor (links) tags that are within div.home-tiles will have the following properties*/
+{
+	text-decoration: none;
+	color: #565656;
+	transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+a:link
+{
+	color: #000000;
+}
+
+a:visited
+{
+	color: #808080;
+}
+
+div.home-tiles a:hover	/*Complex Selector: When hovering over links within the home tiles the following properties will apply.*/
+{
+	color: #00ABC9;
 }
 
 /*== madcap proxy assigned styles ==*/
 
 MadCap|breadcrumbsProxy
 {
-	border-bottom-width: 0;
 	color: #00ABC9;
+	border-bottom-style: none;
 }
 
 fieldset
 {
 	background-repeat: no-repeat;
-	color: #000000;
-	background-color: #FFEEE5 !important;
 	border-radius: 10px;
-	padding: 30px 30px 30px 60px;
 	border: none;
 	background-image: url('../../Z_Resources/Images/01_Generiques/icon_Info.png');
-	background-size: 30px;
-	background-position: 10px 20px;
 	text-align: left;
-	margin: 20px 0;
-	width: 80%;
+	padding: 15px 15px 20px 40px;
+	margin: 5px 0;
+	background-position: 5px 10px;
+	background-size: 30px;
+	align-items: left;
+	display: block;
+	background-color: #cbc9c9;
+	width: auto;
+	color: #696969;
 }
 
-fieldset > img
+fieldset.orange
 {
+	background-repeat: no-repeat;
+	border-radius: 10px;
+	border: none;
+	background-image: url('../../Z_Resources/Images/01_Generiques/icon_Info.png');
+	text-align: left;
+	padding: 15px 15px 20px 40px;
+	margin: 5px 0;
+	background-position: 5px 10px;
+	background-size: 30px;
+	align-items: left;
 	display: block;
-	margin: 30px auto;
+	background-color: #00ABC9;
+	width: auto;
+	color: #fdfdfd;
 }
 
 table
 {
 	font-size: 11pt;
 	color: #696969;
-}
-
-a:link
-{
-	color: #000000;
 }
 
 ul
@@ -214,26 +328,11 @@ MadCap|dropDownHotspot:focus
 
 MadCap|dropDownHead
 {
-	color: #696969;
-}
-
-MadCap|glossaryTerm.Popup
-{
-	color: #696969;
-	font-weight: bold;
-	font-style: normal;
-}
-
-MadCap|glossaryTerm.Hyperlink
-{
-	color: #808080;
-	font-weight: bold;
-	font-style: normal;
-}
-
-MadCap|glossaryTerm.Expanding
-{
-	color: #808080;
+	font-size: 14pt;
+	font-family: 'Helvetica';
+	color: #000000;
+	font-weight: normal;
+	padding: 5px 10px 5px 10px;
 }
 
 MadCap|glossaryTerm
@@ -243,26 +342,26 @@ MadCap|glossaryTerm
 
 MadCap|bodyProxy
 {
-	
+	background-color: #d3d3d3;
 }
 
 div.GlossaryPageHeading
 {
-	margin-bottom: 0px;
-	border-bottom-color: #000000;
-	border-bottom-style: solid;
-	border-bottom-width: 1px;
+	font-size: 20px;
+	font_weight: bold;
+	font-color: #00ABC9;
+	text-align: left;
+}
+
+div.GlossaryPageTerm
+{
+	font-size: 16px;
+	font-weight: bold;
 }
 
 .height-container-sidenav
 {
 	padding-bottom: 0 !important;
-}
-
-img.simple
-{
-	border: none;
-	max-width: 90%;
 }
 
 .btn_connect__block
@@ -284,6 +383,50 @@ img.simple
 .btn_connect__block:hover
 {
 	transform: scale(1.1);
+}
+
+MadCap|dropDown
+{
+	font-color: inherit;
+	mc-closed-image: url('../Images/plus.png');
+	mc-open-image: url('../Images/minus.png');
+}
+
+MadCap|miniTocProxy
+{
+	border-top-style: none;
+	border-top-width: 0px;
+	border-top-color: transparent;
+	padding-top: 7px;
+	font-size: 10pt;
+	font-weight: normal;
+	margin-top: 5 px;
+	padding-left: 10px;
+	font: 'Helvetica';
+}
+
+div
+{
+	content: inherit;
+}
+
+font-face
+{
+	font: Helvetica Neue 1;
+	font-family: 'Helvetica';
+}
+
+div.GlossaryPageEntry
+{
+	text-indent: 10px;
+}
+
+MadCap|dropDownBody
+{
+	border: solid 2px;
+	border-color: #00ABC9;
+	border-radius: 5px;
+	padding: 10px 10px 10px 10px;
 }
 
 @media only screen and (max-width: 1279px)
@@ -354,6 +497,12 @@ img.simple
 		margin: 20px auto;
 	}
 
+	img-bords
+	{
+		border: solid;
+		margin: 20px auto;
+	}
+
 	.btn_connect__block
 	{
 		margin: 20px auto;
@@ -369,6 +518,78 @@ img.simple
 		border-bottom-width: 0px;
 		border-bottom-color: transparent;
 	}
+
+	MadCap|glossaryTerm.Popup
+	{
+		font-weight: normal;
+		font-style: normal;
+		font-size: 10pt;
+		background-color: #ffffff;
+	}
+
+	MadCap|glossaryTerm
+	{
+		color: #00ABC9;
+		border-color: #00ABC9;
+	}
+
+	MadCap|popupBody
+	{
+		font-size: 10pt;
+		blockquote: 10pt;
+	}
+
+	MadCap|popup
+	{
+		font-size: 10pt;
+	}
+
+	div.GlossaryPageDefinition
+	{
+		font-size: 12pt;
+	}
+
+	div.GlossaryPageEntry
+	{
+		font-size: 12pt;
+	}
+
+	MadCap|glossaryTerm.Expanding
+	{
+		font-weight: normal;
+		font-style: normal;
+		font-size: 10pt;
+	}
+
+	MadCap|glossaryTerm.Hyperlink
+	{
+		font-weight: normal;
+		font-style: normal;
+		font-size: 10pt;
+	}
+
+	MadCap|dropDown
+	{
+		mc-closed-image: url('../../Z_Resources/Images/02_Captures/Boutons/Bouton_Ajouter.png');
+		mc-open-image: url('../../Z_Resources/Images/02_Captures/Boutons/Bouton_Supprimer.png');
+		content: inherit;
+		font-size: 12pt;
+		font-style: inherit;
+		font-weight: bold;
+		font-color: inherit;
+		color: #00ABC9;
+	}
+
+	p.Print_H2
+	{
+		font-size: 18;
+		font-style: bold;
+	}
+
+	p
+	{
+		color: #000000;
+	}
 }
 
 span.SearchHighlight1
@@ -381,16 +602,142 @@ span.SearchHighlight1
 	
 }
 
-p#Title
+@media print
+{
+	fieldset
+	{
+		width: 100%;
+		padding: 10px 10px 10px 10px;
+		padding-bottom: 10px;
+		margin-top: 10px;
+		padding-left: 40px;
+		background-position: 2px 10px;
+		background-size: 25px;
+		margin: 25px;
+	}
+
+	MadCap|footnote
+	{
+		mc-footnote-format: '{n}';
+		font-size: 10pt;
+	}
+
+	.FootnoteNumber
+	{
+		
+	}
+
+	MadCap|footnote.WDFootNoteNumbers
+	{
+		font-size: 9pt;
+		vertical-align: super;
+		color: #00ABC9;
+	}
+
+	p
+	{
+		mc-hyphenate: never;
+	}
+
+	h1
+	{
+		mc-hyphenate: never;
+	}
+
+	h2
+	{
+		mc-hyphenate: never;
+	}
+
+	h3
+	{
+		mc-hyphenate: never;
+	}
+
+	Print_h2
+	{
+		font-weight: bold;
+		font-size: 18.0pt;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		font-color: #00ABC9;
+	}
+
+	MadCap|expandingHead
+	{
+		font-size: 12pt;
+		font-weight: bold;
+		font-style: normal;
+		color: #000000;
+	}
+
+	MadCap|glossaryTerm
+	{
+		mc-image-position: left;
+		font-weight: bold;
+	}
+
+	MadCap|dropDownHead
+	{
+		color: #00ABC9;
+		font-weight: bolder;
+	}
+
+	MadCap|dropDownHotspot
+	{
+		color: #00ABC9;
+		font-weight: bold;
+	}
+
+	MadCap|dropDown
+	{
+		mc-image-position: left;
+		mc-image-spacing: 10px;
+		font: inherit;
+	}
+
+	span.mc-variable
+	{
+		mc-hyphenate: never;
+	}
+
+	MadCap|glossaryTerm.Popup
+	{
+		background-color: #ffffff;
+	}
+}
+
+table#SortTable
 {
 	
 }
 
-h1#PrintTitle
+Print_h2
 {
 	font-weight: bold;
-	font-size: 36pt;
-	text-align: center;
-	color: #ffffff;
+	font-size: 18.0pt;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-color: #00ABC9;
+}
+
+div#util
+{
+	
+}
+
+MadCap|glossaryProxy.title-bar-container
+{
+	mc-glossary-headings: true;
+}
+
+p.H2_Print
+{
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	font-family: helvetica;
+	font-weight: bold;
+	color: #000000;
+	font-size: 18pt;
 }
 
