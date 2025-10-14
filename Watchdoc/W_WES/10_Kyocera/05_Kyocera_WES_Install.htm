@@ -91,12 +91,12 @@
         <div class="foundation-wrap off-canvas-wrapper">
             <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
                 <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
-                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Retour" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Retour" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expanded-event="open.zf.drilldown closed.zf.drilldown" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
                     </ul>
                 </aside>
                 <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
-                    <div data-sticky-container="" class="title-bar-container">
-                        <nav class="title-bar tab-bar sticky" aria-label="Main navigation and search" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Passer au contenu principal</a>
+                    <div>
+                        <nav class="title-bar tab-bar" aria-label="Main navigation and search" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Passer au contenu principal</a>
                             <div class="middle title-bar-section outer-row clearfix">
                                 <div class="menu-icon-container relative clearfix">
                                     <div class="central-account-wrapper">
@@ -202,7 +202,7 @@
                                             <MadCap:concept term="WES;INS" />
                                             <MadCap:conditionalText data-mc-conditions="General.Online">WES&#160;Kyocera - </MadCap:conditionalText>Installer le WES&#160;sur la file</h1>
                                         <h2>Présentation de la section WES</h2>
-                                        <p>Une fois le profil WES&#160;activé sur la file, dans l'interface <strong>Propriétés </strong>de la file apparaît la section <strong>WES Kyocera HyPAS</strong>. Cette section comporte plusieurs boutons :</p>
+                                        <p>Une fois le profil WES&#160;activé sur la file, dans l'interface <strong>Propriétés </strong>de la file apparaît la section <strong>WES Kyocera HyPAS</strong>. <br />Cette section comporte plusieurs boutons :</p>
                                         <ul>
                                             <li>
                                                 <p><strong>Accéder à l'interface WEB du périphérique :</strong> raccourci vers le site web d'administration interne du périphérique&#160;;</p>
@@ -210,7 +210,16 @@
                                         </ul>
                                         <ul>
                                             <li>
+                                                <p><strong>Périphériques WES :</strong> donne accès à la liste des périphériques équipés d'un WES&#160;dans Watchdoc ;</p>
+                                            </li>
+                                            <li>
                                                 <p><strong>Configurer:</strong> permet à Watchdoc d'installer le WES sur le périphérique (peut prendre 30 sec.)&#160;;</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Activer / Désactiver les logs :</strong> permet d'activer les logs spécifiques au WES&#160;en vue d'une analyse ; </p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Télécharger les logs :</strong> permet de télécharger les logs spécifiques au WES&#160;(s'ils ont été activés) en vue d'un diagnostic ; </p>
                                             </li>
                                         </ul>
                                         <ul>
@@ -220,16 +229,18 @@
                                         </ul>
                                         <ul>
                                             <li>
-                                                <p><strong>Editer la configuration :</strong> permet d'accéder à la configuration du WES&#160;sur la file. </p>
+                                                <p><strong>Editer la configuration :</strong> permet d'accéder à la configuration du WES&#160;sur la file.</p>
+                                            </li>
+                                            <li>
+                                                <p><b>Page de configuration du WES : </b>permet d'accéder à l'interface de configuration du WES&#160;dans Watchdoc.</p>
                                             </li>
                                         </ul>
                                         <h2>Procédure</h2>
-                                        <p>N.B. : avant d'installer un WES, vérifiez qu'il n'existe pas déjà ou désinstallez le précédent WES&#160;avant d'installer le nouveau.</p>
+                                        <fieldset>N.B. : avant d'installer un WES, vérifiez qu'il n'existe pas déjà ou désinstallez le précédent WES&#160;avant d'installer le nouveau.</fieldset>
                                         <p>Pour installer le WES automatiquement, dans la section <strong>WES Kyocera HyPAS </strong>cliquez sur le bouton <strong>Configurer</strong>.</p>
-                                        <p>Cette installation se déroule en plusieurs étapes listées dans la section <strong>Etat</strong>.</p>
+                                        <p>Cette installation se déroule en plusieurs étapes listées dans la section <strong>Etat</strong>.<br /><br /><img src="WES_Kyocera_Install_Configure.png" /><br /></p>
                                         <p>
                                             <br />
-                                            <img src="WES_Kyocera_Install_Configure.png" />
                                         </p>
                                         <p>&#160;</p>
                                         <p><span style="font-family: 'Wingdings'">è</span> Lorsque le WES est correctement installé, le message "L'application embarquée a été configurée avec succès" s'affiche.</p>

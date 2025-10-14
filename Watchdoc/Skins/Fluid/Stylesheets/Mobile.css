@@ -21,11 +21,13 @@
 	{
 		background-repeat: no-repeat;
 		background-position: center center;
+		height: 100%;
 	}
 
 	.search-bar .search-filter
 	{
 		background-position: center center;
+		height: 100%;
 		background-repeat: no-repeat;
 		background-color: #ffffff;
 	}
@@ -73,6 +75,7 @@
 
 	.central-dropdown
 	{
+		line-height: 0px;
 		left: auto;
 		right: 35px;
 	}
@@ -94,6 +97,8 @@
 
 	.central-account-image
 	{
+		width: 0px;
+		height: 0px;
 		background: transparent url('Images/icon-user-white.png') no-repeat center center;
 		-pie-background: transparent url('Skins/Fluid/Stylesheets/Images/icon-user-white.png') no-repeat center center;
 	}
@@ -297,7 +302,7 @@
 
 	.off-canvas-wrapper-inner nav.title-bar .outer-row
 	{
-		
+		padding-left: 10px;
 	}
 
 	#knowledge-panel
@@ -762,27 +767,31 @@
 
 	.off-canvas
 	{
-		background-color: #d3d3d3;
+		background: transparent none;
+		-pie-background: transparent;
 	}
 
 	.off-canvas ul ul
 	{
-		background-color: #d3d3d3;
+		background: transparent none;
+		-pie-background: transparent;
 	}
 
 	ul.off-canvas-list li a
 	{
-		
+		line-height: 0.6em;
+		text-align: left;
 	}
 
 	ul.off-canvas-list ul > li > a
 	{
-		
+		text-align: left;
 	}
 
 	ul.off-canvas-list ul ul > li > a
 	{
-		
+		text-align: left;
+		white-space: normal;
 	}
 
 	ul.off-canvas-list ul ul ul > li > a
@@ -973,15 +982,18 @@
 
 	.search-bar .search-field
 	{
+		height: 100%;
+		font-size: 15px;
+		padding-left: 15px;
 		padding-top: 10px;
-		padding-bottom: 10px;
+		padding-bottom: 0px;
 		background-color: #ffffff;
 		padding-right: 50px;
 	}
 
 	.search-filter-content
 	{
-		top: 3em;
+		top: 100%;
 		background-color: #ffffff;
 	}
 

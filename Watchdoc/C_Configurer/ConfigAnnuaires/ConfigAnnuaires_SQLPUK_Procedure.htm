@@ -92,12 +92,12 @@
         <div class="foundation-wrap off-canvas-wrapper">
             <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
                 <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
-                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Retour" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Retour" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expanded-event="open.zf.drilldown closed.zf.drilldown" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
                     </ul>
                 </aside>
                 <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
-                    <div data-sticky-container="" class="title-bar-container">
-                        <nav class="title-bar tab-bar sticky" aria-label="Main navigation and search" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Passer au contenu principal</a>
+                    <div>
+                        <nav class="title-bar tab-bar" aria-label="Main navigation and search" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Passer au contenu principal</a>
                             <div class="middle title-bar-section outer-row clearfix">
                                 <div class="menu-icon-container relative clearfix">
                                     <div class="central-account-wrapper">
@@ -266,10 +266,10 @@
                                                     <p><strong>Serveur SQL :</strong> indiquez le serveur où est localisée la base SQL qui héberge l'annuaire.&#160;Cliquez sur le bouton <strong>Parcourir </strong>pour parcourir votre espace de travail afin d'y sélectionner le serveur parmi les serveurs SQL&#160;détectés sur votre réseau ;</p>
                                                 </li>
                                                 <li>
-                                                    <p><strong>Mot de passe : </strong> saisissez dans la zone le mot de passe du compte utilisateur habilité à gérer la base SQL ;</p>
+                                                    <p><strong>Mot de passe : </strong> saisissez dans la zone le mot de passe du compte utilisateur habilité à gérer la base SQL&#160;;</p>
                                                 </li>
                                                 <li>
-                                                    <p class="Liste_puce_1"><strong>Base de données :</strong> indiquez le nom de la base de données dans laquelle doivent être enregistrées les codes PUK associés aux utilisateurs inscrits dans l'annuaire Entra ID (<strong style="font-weight: normal;">watchdocstats, la plupart du temps).</strong>Cliquez sur le bouton <strong>Parcourir </strong>pour parcourir le serveur SQL&#160;déclaré précédemment afin d'y sélectionner les tables statistiques qui y sont déclarées. Par défaut, les codes PUK sont enregistrés dans la base des badges (cards). <br /><br /><img src="../../Z_Resources/Images/02_Captures/Admin_Annuaire_SQLCodesPUK_Bdd.png" /></p>
+                                                    <p class="Liste_puce_1"><strong>Base de données :</strong> indiquez le nom de la base de données dans laquelle doivent être enregistrées les codes PUK associés aux utilisateurs inscrits dans l'annuaire Entra ID (<strong style="font-weight: normal;">watchdocstats, la plupart du temps).</strong>Cliquez sur le bouton <strong>Parcourir </strong>pour parcourir le serveur SQL&#160;déclaré précédemment afin d'y sélectionner les tables statistiques qui y sont déclarées. Par défaut, les codes PUK sont enregistrés dans la base des badges (cards). <br /><br /><img src="../../Z_Resources/Images/02_Captures/Admin_Annuaire_SQLCodesPUK_Bdd.png" style="width: 700px;height: auto;" /></p>
                                                 </li>
                                             </ul>
                                         </blockquote>
@@ -281,7 +281,7 @@
 (source : Wikipédia)</span></a>" permettant d'initialiser le générateur des codes PUK des utilisateurs.&#160;Ce chiffre est un entier de 32 bits compris entre 1 et 2.147.000.000 ; </p>
                                             </li>
                                             <li>
-                                                <p><strong>Algorithme : </strong>dans la liste, sélectionnez le niveau d'algorithme permettant de générer les codes PUK de vos utilisateurs (6 ou 10 chiffres) ; </p>
+                                                <p><strong><a name="Algorithme_PUK"></a>Algorithme : </strong>dans la liste, sélectionnez le niveau d'algorithme permettant de générer les codes PUK de vos utilisateurs (6 ou 10 chiffres) ; </p>
                                             </li>
                                             <li>
                                                 <p><strong>Variabilité : </strong>dans la liste, sélectionnez (si nécessaire) la fréquence à laquelle l'annuaire de codes PUK sera regénéré. Par défaut, l'annuaire ne change pas.&#160;Regénérer les codes PUK permet d'augmenter la sécurité de ce mode d'authentification.</p>

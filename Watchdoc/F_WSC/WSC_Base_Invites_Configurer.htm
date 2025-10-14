@@ -92,12 +92,12 @@
         <div class="foundation-wrap off-canvas-wrapper">
             <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
                 <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
-                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Retour" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Retour" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expanded-event="open.zf.drilldown closed.zf.drilldown" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
                     </ul>
                 </aside>
                 <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
-                    <div data-sticky-container="" class="title-bar-container">
-                        <nav class="title-bar tab-bar sticky" aria-label="Main navigation and search" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Passer au contenu principal</a>
+                    <div>
+                        <nav class="title-bar tab-bar" aria-label="Main navigation and search" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Passer au contenu principal</a>
                             <div class="middle title-bar-section outer-row clearfix">
                                 <div class="menu-icon-container relative clearfix">
                                     <div class="central-account-wrapper">
@@ -210,7 +210,7 @@
                                         </ol>
                                         <ol data-mc-continue="true">
                                             <li value="2">
-                                                <p>Dans l'interface <strong>Configuration avancée</strong>, cliquez sur le bouton <strong>Base des invités</strong>&#160;;<br /><br /><img src="../Z_Resources/Images/02_Captures/ManageGuests/WSC_Invites_Configuration.png" style="width: 700px;" /><br /><br /><span style="font-family: 'Wingdings'">è</span> Vous accédez à l'interface <strong>Configuration de la base des invités</strong>.<br /></p>
+                                                <p>Dans l'interface <strong>Configuration avancée</strong>, cliquez sur le bouton <strong>Base des invités</strong>&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/ManageGuests/WSC_Invites_Configuration.png" style="height: auto;width: 700px;" /><br /><br /><br /><span style="font-family: 'Wingdings'">è</span> Vous accédez à l'interface <strong>Configuration de la base des invités</strong>.<br /></p>
                                             </li>
                                         </ol>
                                         <h2>Configurer la base des invités<br /></h2>
@@ -247,14 +247,22 @@
                                                 <p>Une fois les champs complétés, cliquez sur le bouton<strong> Tester la connexion </strong>pour vérifier que les informations fournies permettent d'accéder à la base de données utilisée pour enregistrer les comptes invités.</p>
                                             </li>
                                         </ol>
-                                        <h3><a name="Section_Code_PUK"></a>Section Code PUK</h3>
-                                        <p>Dans cette section, indiquez le niveau d'algorithme à appliquer pour générer le code PUK&#160;qui sert aux utilisateurs invités&#160;à s'identifier : </p>
+                                        <h3><a name="Section_Code_PUK"></a>Section Code PUK généré automatiquement</h3>
+                                        <p>L'invité peut disposer d'un code <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm glossaryTermPopup MCTextPopupHotSpot_ MCTextPopupHotSpot_Popup" glossTerm="Glossary.Term65">PUK<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Puk = Print User Key.
+Dans Watchdoc, il s'agit d'un code associé à un compte utilisateur pour permettre à ce dernier de s'authentifier dans un WES.
+Le code PUK est généré par un algorithme. 
+L'utilisateur peut le consulter dans la page "Mon compte" de Watchdoc. 
+Par souci de sécurité, nous déconseillons l'utilisation du code PUK et recommandons l'utilisation d'un login (compte utilisateur)/code PIN.</span></a> ou d'un code <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term44">PIN <img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Le code PIN (Personal Identification Number) est un code comportant au moins 4 chiffres. Il est, par exemple, utilisé sur un téléphone mobile ou un smartphone équipés d'une carte SIM. Dans Watchhdoc, c'est un code qui, associé au nom d'utilisateur, constitue un moyen d'authentification sur un WES.
+Ce code peut être saisi et consulté depuis la page Mon Compte.
+Il est enregistré soit dans une table SQL, soit dans un fichier Json et peut être stocké tel quel ou sécurisé par hachage.</span></a> pour s'authentifier dans Watchdoc.&#160;Ces codes sont saisis dans l'interface de création du compte invité.&#160;Si ces codes ne sont pas saisis manuellement, il sont générés automatiquement lors de la validation du compte invité.&#160;<br />Lors de la génération, WSC&#160;ajoute le chiffre 9 comme préfixe du code PUK&#160;afin de discriminer les codes PUK de la base Invités d'autres codes PUK existants.</p>
+                                        <p>&#160;</p>
+                                        <p>Dans cette section, vous indiquez le niveau d'algorithme à appliquer lors de la génération automatique du code PUK (quand ce code PUK est saisi manuellement lors de la création du compte invité, sa longueur n'est pas contrôlée) :<br /></p>
                                         <ul>
                                             <li>
-                                                <p>soit un algorithme de 6&#160;chiffres (sécurité faible) ; </p>
+                                                <p>soit un algorithme de 7&#160;chiffres (sécurité faible) ; </p>
                                             </li>
                                             <li>
-                                                <p>soit un algorithme de 10&#160;chiffres (sécurité moyenne).<br /><br /><img src="../Z_Resources/Images/02_Captures/ManageGuests/WSC_Invites_Config_CodePuk.png" style="width: 700px;height: auto;" /></p>
+                                                <p>soit un algorithme de 11&#160;chiffres (sécurité moyenne).<br /><img src="../Z_Resources/Images/02_Captures/ManageGuests/WSC_Invites_Config_CodePuk.png" /><br /></p>
                                             </li>
                                         </ul>
                                         <p>&#160;</p>

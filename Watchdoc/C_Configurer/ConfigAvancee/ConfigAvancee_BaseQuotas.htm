@@ -92,12 +92,12 @@
         <div class="foundation-wrap off-canvas-wrapper">
             <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
                 <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
-                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Retour" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Retour" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expanded-event="open.zf.drilldown closed.zf.drilldown" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
                     </ul>
                 </aside>
                 <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
-                    <div data-sticky-container="" class="title-bar-container">
-                        <nav class="title-bar tab-bar sticky" aria-label="Main navigation and search" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Passer au contenu principal</a>
+                    <div>
+                        <nav class="title-bar tab-bar" aria-label="Main navigation and search" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Passer au contenu principal</a>
                             <div class="middle title-bar-section outer-row clearfix">
                                 <div class="menu-icon-container relative clearfix">
                                     <div class="central-account-wrapper">
@@ -344,7 +344,10 @@
                                                 <p><strong>Journalisation </strong>: </p>
                                                 <ul>
                                                     <li>
-                                                        <p><strong>Requêtes SQL</strong> ; cochez cette case pour enregistrer les requêtes SQL&#160;dans les journaux de logs.</p>
+                                                        <p><strong>Requêtes SQL</strong> ; cochez cette case pour enregistrer les requêtes SQL&#160;dans les journaux de logs (niveau DEBUG : traces laissées en cas de bug dans les requêtes SQL).</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Requêtes SQL&#160;dans un fichier séparé&#160;: </strong>cochez cette case pour enregistrer les requêtes SQL dans un fichier nommé <strong>sql_queries_pmv.log</strong> (enregistré par défaut dans C:\Program Files\Doxense\Watchdoc\logs). Ces logs (niveau INFO : toutes les requêtes SQL) facilitent l'analyse des requêtes SQL ;</p>
                                                     </li>
                                                     <li>
                                                         <p><strong>Sélection de quotas</strong> : cochez cette case pour conserver les informations propres aux quotas en mode comptabilisation dans les journaux de logs. </p>
@@ -352,9 +355,12 @@
                                                 </ul>
                                             </li>
                                             <li>
-                                                <p><strong>Performances </strong>: cochez cette case pour chronométrer le temps d'exécution des requêtes et les enregistrer dans les journaux.<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_BddQuotas_Expert.png" /><br /></p>
+                                                <p><strong>Performances </strong>: cochez cette case pour chronométrer le temps d'exécution des requêtes et les enregistrer dans les journaux.<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_BddQuotas_Expert.png" style="width: 700px;height: auto;" /></p>
                                             </li>
                                         </ul>
+                                        <p>
+                                            <br />
+                                        </p>
                                         <p class="Resultat">Cliquez sur <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Valider.png" style="width: 27px;height: 26px;" /> <strong>Valider </strong>pour enregistrer cette configuration.</p>
                                     </div>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">

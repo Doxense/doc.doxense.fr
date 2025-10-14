@@ -88,12 +88,12 @@
         <div class="foundation-wrap off-canvas-wrapper">
             <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
                 <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
-                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Retour" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Retour" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expanded-event="open.zf.drilldown closed.zf.drilldown" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
                     </ul>
                 </aside>
                 <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
-                    <div data-sticky-container="" class="title-bar-container">
-                        <nav class="title-bar tab-bar sticky" aria-label="Main navigation and search" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="only screen and (max-width: 1279px)" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Passer au contenu principal</a>
+                    <div>
+                        <nav class="title-bar tab-bar" aria-label="Main navigation and search" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Passer au contenu principal</a>
                             <div class="middle title-bar-section outer-row clearfix">
                                 <div class="menu-icon-container relative clearfix">
                                     <div class="central-account-wrapper">
@@ -200,12 +200,10 @@
                                             <MadCap:conditionalText data-mc-conditions="General.Online"><a name="aanchor265"></a>
                                                 <MadCap:concept term="WD" />Watchdoc - </MadCap:conditionalText>Architecture réseau</h1>
                                         <h2>Schéma des flux et ports réseaux Watchdoc v. 6.1.1</h2>
-                                        <p>
-                                            <img src="../Z_Resources/Images/03_Schemas/WD611_SCH_FluxReseaux.png" style="width: 700px;height: auto;" />
+                                        <p><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/03_Schemas/WD611_SCH_FluxReseaux.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1330" data-mc-height="976" src="../Z_Resources/Images/03_Schemas/WD611_SCH_FluxReseaux.png" tabindex="" style="max-width: 1000px;" /></a>
                                         </p>
                                         <h2>Schéma des flux et ports réseaux Watchdoc versions antérieures à 6.1.1<br /></h2>
-                                        <p>
-                                            <img src="../Z_Resources/Images/03_Schemas/WD60_SCH_FluxReseaux.png" style="width: 700px;" />
+                                        <p><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/03_Schemas/WD60_SCH_FluxReseaux.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="607" data-mc-height="474" src="../Z_Resources/Images/03_Schemas/WD60_SCH_FluxReseaux.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a>
                                         </p>
                                         <h2>Matrice des flux réseaux</h2>
                                         <p>Les ports réseau à ouvrir pour permettre le fonctionnement sont les suivants&#160;:</p>
@@ -269,7 +267,7 @@
                                                 </tr>
                                                 <tr class="TableStyle-Standard-Body-Row2">
                                                     <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">UDP 161 <br />UDP&#160;162 </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">UDP 161 <br />UDP&#160;162<sup style="font-weight: bold;">2</sup> </td>
                                                     <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">SNMP</td>
                                                     <td class="TableStyle-Standard-BodyD-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">périphérique d'impression</td>
                                                 </tr>
@@ -293,7 +291,7 @@
                                                 </tr>
                                                 <tr class="TableStyle-Standard-Body-Row1">
                                                     <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc<p>ou poste de travail </p></td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;"><i>TCP 5757 (non SSL)</i><sup style="font-weight: bold;">2</sup>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;"><i>TCP 5757 (non SSL)</i><sup style="font-weight: bold;">3</sup>
                                                         <br />TCP&#160;5756 (SSL)</td>
                                                     <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">
                                                         <p>HTTP</p>
@@ -322,7 +320,8 @@
                                             </tbody>
                                         </table>
                                         <p>&#160;</p>
-                                        <p><b style="vertical-align: super; font-size: 10pt;">1</b> Par souci de sécurité, Doxense<strong> déconseille la configuration en mode déporté nécessitant l'ouverture du port 5744</strong> avec les protocole .NET Remoting (versions antérieures à la v.&#160;6.1.1).&#160;<br />En conséquence, ce port est automatiquement bloqué dans le pare-feul lors de l'installation de Watchdoc à partir de la v. 6.1.0.5221.&#160;<br />Pour les versions comprises entre la v. 6.1.0.5221 et 6.1.0.5318, si le serveur web IIS&#160;est déporté, il est donc nécessaire de modifier les règles du pare-feu pour permettre au serveur IIS&#160;distant d'accéder à Watchdoc (cf.&#160;<a href="../I_ResolutionDePannes/ADE_Gestion_Port5744.htm" target="_blank">Configurer le port 5744</a>). <br /><b style="vertical-align: super; font-size: 10pt;">2</b> Par souci de sécurité, <b>Doxense</b><strong> déconseille</strong> l'utilisation du port 5757 (non-sécurisé) au profil du port 5756 (SSL).<br /></p>
+                                        <p><b style="vertical-align: super; font-size: 10pt;">1</b> Par souci de sécurité, Doxense<strong> déconseille la configuration en mode déporté nécessitant l'ouverture du port 5744</strong> avec les protocole .NET Remoting (versions antérieures à la v.&#160;6.1.1).&#160;<br />En conséquence, ce port est automatiquement bloqué dans le pare-feul lors de l'installation de Watchdoc à partir de la v. 6.1.0.5221.&#160;<br />Pour les versions comprises entre la v. 6.1.0.5221 et 6.1.0.5318, si le serveur web IIS&#160;est déporté, il est donc nécessaire de modifier les règles du pare-feu pour permettre au serveur IIS&#160;distant d'accéder à Watchdoc (cf.&#160;<a href="../I_ResolutionDePannes/ADE_Gestion_Port5744.htm" target="_blank">Configurer le port 5744</a>). <br /><b style="vertical-align: super; font-size: 10pt;">2</b> Watchdoc ne gère pas les traps SNMP.</p>
+                                        <p><sup style="font-weight: bold;">3</sup> Par souci de sécurité, <b>Doxense</b><strong> déconseille</strong> l'utilisation du port 5757 (non-sécurisé) au profil du port 5756 (SSL).<br /></p>
                                         <p>&#160;</p>
                                         <fieldset>
 		Si l'architecture réseau inclut un pare-feu, il est nécessaire que ce pare-feu autorise ces accès sur le serveur hébergeant Watchdoc. <br />La technologie WSD (Web Services for Devices) n’est pas supportée par Watchdoc.
