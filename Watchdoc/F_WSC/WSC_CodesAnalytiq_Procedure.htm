@@ -199,7 +199,7 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor333"></a>
+                                        <h1><a name="aanchor342"></a>
                                             <MadCap:concept term="WSC" />Console de supervision (WSC) - Créer et configurer les codes analytiques</h1>
                                         <h2>Procédure</h2>
                                         <p>L'activation de la fonction <strong>Codes analytiques</strong> comprend : </p>
@@ -214,11 +214,42 @@
                                                 <p class="Liste_puce_1">l'activation au niveau du profil WES : pour les marques et modèles dont les WES&#160;sont, compatibles, la fonction doit être paramétrée pour permettre aux utilisateurs de saisir (ou de choisir) leur code analytique depuis l'écran du périphérique. <br />Reportez-vous aux contraintes de compatibilité pour savoir quels sont les WES&#160;qui sont compatibles avec cette fonction.</p>
                                             </li>
                                         </ol>
+                                        <h3>Déclarer la source des codes analytiques</h3>
+                                        <p>Par défaut, les codes analytiques sont enregistrés dans une base de données standard qu'il n'est pas nécessaire de configurer.&#160;<br />Cependant,  il est possible de modifier la source de données dans laquelle sont enregistrés les codes.&#160;</p>
+                                        <p>Notez que cette modification est définitive : une fois désactivée, la source  de données par défaut ne peut pas être réactivée.<br /></p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Accédez à Watchdoc en tant qu'administrateur ;</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>depuis le <b>Menu principal</b>, section <b>Configuration</b>, cliquez sur <b>Source de données</b> ; <br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/Admin_Config_SourceDonnees.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1548" data-mc-height="726" src="../Z_Resources/Images/02_Captures/Admin_Config_SourceDonnees.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                <p>&#160;</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>dans la liste, cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Editer.png" style="width: 23px;height: 23px;" />pour éditer la source de données des codes analytiques : <br /><br /><img src="../Z_Resources/Images/02_Captures/Admin_Config_SourceDonnes_Edit.png" /></p>
+                                                <p>&#160;</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>dans l'interface <strong>Source de données</strong>, sélectionnez le type de la base dans laquelle sont enregistrés les codes&#160;;</p>
+                                            </li>
+                                            <li value="5">
+                                                <p>saisissez un nom et une description permettant d'identifier le fichier ; </p>
+                                            </li>
+                                            <li value="6">
+                                                <p>indiquez les paramètres permettant d'accéder à la base de données ;</p>
+                                            </li>
+                                            <li value="7">
+                                                <p>dans le champ <strong>Fichier</strong>, indiquez le chemin d'accès au fichier .csv contenant les données ; </p>
+                                            </li>
+                                            <li value="8">
+                                                <p>cliquez sur <strong>Valider </strong>pour enregistrer cette source de données.</p>
+                                            </li>
+                                        </ol>
                                         <h3>Créer les codes</h3>
                                         <p>Pour constituer une liste de codes analytiques : </p>
                                         <ol>
                                             <li value="1">
-                                                <p class="Liste_num_1">accédez à la Console de Supervision de Watchdoc<sup>®</sup> (WSC) ;</p>
+                                                <p class="Liste_num_1">accédez à la Console de Supervision de Watchdoc (WSC) ;</p>
                                             </li>
                                             <li value="2">
                                                 <p class="Liste_num_1">depuis le <strong>Menu Principal</strong>, cliquez sur la section <strong>Gestion des codes analytiques</strong>&#160;; <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V6_CodesAnalytic_Acces.png" style="width: 660px;height: 291px;" /></p>
@@ -233,7 +264,7 @@
                                                 <p class="Liste_puce_1">une section regroupant des outils permettant de rechercher des codes analytiques et d'en créer ; </p>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1">une section affichant la liste hiérarchisée des codes analytiques et permettant de les éditer et les compléter.<br /><img src="../Z_Resources/Images/02_Captures/WSC_CodesAnalytiq_InterfaceGestion.png" style="width: 672px;height: 168px;" /></p>
+                                                <p class="Liste_puce_1">une section affichant la liste hiérarchisée des codes analytiques et permettant de les éditer et les compléter.<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_CodesAnalytiq_InterfaceGestion.png" style="width: 672px;height: 168px;" /></p>
                                             </li>
                                         </ul>
                                         <ol>
@@ -242,37 +273,64 @@
                                             </li>
                                             <li value="2">
                                                 <p class="Liste_num_1">dans la fenêtre<strong> Ajout d'un code analytique</strong>, remplissez les champs : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Code :</strong> saisissez un code correspondant à un compte, un département, un service ou une entité ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Désignation :</strong> saisissez l'intitulé du compte, département, service ou entité correspondant au code&#160;;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Sélectionnable&#160;:</strong> cochez la case pour que l'utilisateur puisse sélectionner le code affiché. Cette fonction permet, dans une liste hiérarchisée de rendre un code générique non-sélectionnable, alors que tous ses spécifiques le sont (par exemple, le code 001, Administration n'est pas sélectionnable, mais 0010 Achats, 0011 Comptabilité, 0012 Secrétariat et 0013 Services généraux sont sélectionnables)&#160;;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Code parent&#160;:</strong> dans le cas d'une liste hiérarchisée, indiquez dans ce champ le code dont dépend le code en cours de saisie.<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_CodeRefact_AjoutEnfant.png" style="width: 700px;height: auto;" /><br /></p>
+                                                    </li>
+                                                </ul>
                                             </li>
                                         </ol>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Code :</strong> saisissez un code correspondant à un compte, un département, un service ou une entité ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Désignation :</strong> saisissez l'intitulé du compte, département, service ou entité correspondant au code&#160;;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Sélectionnable&#160;:</strong> cochez la case pour que l'utilisateur puisse sélectionner le code affiché. Cette fonction permet, dans une liste hiérarchisée de rendre un code générique non-sélectionnable, alors que tous ses spécifiques le sont (par exemple, le code 001, Administration n'est pas sélectionnable, mais 0010 Achats, 0011 :Comptabilité, 0012 Secrétariat et 0013 Services généraux sont sélectionnables)&#160;;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Code parent&#160;:</strong> dans le cas d'une liste hiérarchisée, indiquez dans ce champ le code dont dépend le code en cours de saisie.<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_CodeRefact_AjoutEnfant.png" style="width: 700px;height: auto;" /><br /></p>
-                                            </li>
-                                        </ul>
                                         <ol data-mc-continue="true">
                                             <li value="3">
-                                                <p class="Liste_num_1">Au besoin, cliquez sur le lien <strong>Options avancées</strong> pour saisir des spécifiques à vos besoins, autres que le code et la désignation.&#160;Il peut s'agir, par exemple, du nom d'un responsable ou de la localisation du service, etc.</p>
-                                            </li>
-                                            <li value="4">
-                                                <p class="Liste_num_1">Confirmez l'ajout du code en cliquant sur le bouton <strong>Valider</strong>.</p>
+                                                <p class="Liste_num_1">Au besoin, cliquez sur le lien <strong>Options avancées</strong> pour saisir des spécifiques à vos besoins, autres que le code et la désignation.&#160;Il peut s'agir, par exemple, du nom d'un responsable ou de la localisation du service, etc.<br /></p>
                                             </li>
                                         </ol>
+                                        <h3>Sécuriser les codes </h3>
+                                        <p>Il est possible de sécuriser les codes analytiques mis à disposition des utilisateurs, de sorte que ces codes puissent être réservés à certains utilisateurs.&#160;Par exemple, "CMPT", code attribué au service comptabilité peut être sécurisé de manière à n'être utilisé que par les membres du service Comptabilité et par un stagiaire associé à ce service. </p>
+                                        <p>Pour sécuriser un code&#160;:</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p class="Liste_num_1">dans la liste à droite du code, cliquez sur le bouton <strong>Sécurité du code</strong>&#160;; </p>
+                                            </li>
+                                            <li value="2">
+                                                <p class="Liste_num_1">dans l'interface <strong>Liste des règles de sécurité</strong>, cliquez sur le bouton <strong>Ajouter une règle de sécurité </strong>;</p>
+                                            </li>
+                                            <li value="3">
+                                                <p class="Liste_num_1">cliquez sur l'icone <img src="../Z_Resources/Images/02_Captures/Icone_Membre.png" /> pour saisir le nom d'un utilisateur ou <img src="../Z_Resources/Images/02_Captures/Icone_Groupes.png" /> pour saisir le nom d'un groupe d'utilisateurs&#160;; </p>
+                                            </li>
+                                            <li value="4">
+                                                <p class="Liste_num_1">dans le champ, saisissez le nom d'un utilisateur ou le nom d'un groupe&#160;d'utilisateurs ;</p>
+                                            </li>
+                                            <li value="5">
+                                                <p class="Liste_num_1">cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Bouton_Plus.png" /> pour ajouter l'utilisateur ou le groupe saisi ; </p>
+                                            </li>
+                                            <li value="6">
+                                                <p class="Liste_num_1">confirmez l'ajout du code en cliquant sur le bouton <strong>Valider</strong>&#160;;</p>
+                                            </li>
+                                            <li value="7">
+                                                <p class="Liste_num_1">réitérez l'opération si vous souhaitez ajouter des utilisateurs ou un groupe d'utilisateurs :</p>
+                                            </li>
+                                            <li value="8">
+                                                <p>cliquez sur le bouton <strong>Fermer </strong>une fois les utilisateurs / groupes d'utilisateurs associés au code : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V6_CodesAnalytic_Securite.png" style="width: 700px;height: auto;" /></p>
+                                            </li>
+                                        </ol>
+                                        <p>&#160;</p>
                                         <h3>Activer les Codes analytiques dans le profil WES</h3>
-                                        <p>Cette étape consiste à activer dans Watchdoc<sup>®</sup> les codes créés dans la console de Supervision Watchdoc<sup>®</sup> WSC. L'activation doit être effectuée  au niveau de chaque profil WES proposant la fonction.</p>
+                                        <p>Cette étape consiste à activer dans Watchdoc les codes créés dans la console de Supervision Watchdoc WSC. L'activation doit être effectuée  au niveau de chaque profil WES proposant la fonction.</p>
                                         <p>&#160;</p>
                                         <p>Pour activer la fonction : </p>
                                         <ol>
                                             <li value="1">
-                                                <p class="Liste_num_1">accédez à l'interface d'administration de Watchdoc<sup>®</sup>&#160;; </p>
+                                                <p class="Liste_num_1">accédez à l'interface d'administration de Watchdoc&#160;; </p>
                                             </li>
                                             <li value="2">
                                                 <p class="Liste_num_1">depuis le <strong>Menu principal</strong>, dans la section <strong>Configuration</strong>, cliquez sur <strong>Web &amp; WES</strong> ; </p>
