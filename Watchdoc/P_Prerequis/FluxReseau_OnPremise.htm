@@ -22,6 +22,7 @@
         <link href="../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
         <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
         <style>/*&lt;meta /&gt;*/
 
@@ -52,6 +53,11 @@
 
 </style>
         <style>/*&lt;meta /&gt;*/
+
+.button.previous-topic-button
+{
+	-pie-background: linear-gradient(transparent, #fcfaf8);
+}
 
 .button.next-topic-button
 {
@@ -200,7 +206,7 @@
                                             <MadCap:conditionalText data-mc-conditions="General.Online"><a name="aanchor270"></a>
                                                 <MadCap:concept term="WD" />Watchdoc - </MadCap:conditionalText>Architecture réseau</h1>
                                         <h2>Schéma des flux et ports réseaux Watchdoc v. 6.1.1</h2>
-                                        <p><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/03_Schemas/WD611_SCH_FluxReseaux.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1330" data-mc-height="976" src="../Z_Resources/Images/03_Schemas/WD611_SCH_FluxReseaux.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a>
+                                        <p><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/03_Schemas/WD611_SCH_FluxReseaux.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="639" data-mc-height="465" src="../Z_Resources/Images/03_Schemas/WD611_SCH_FluxReseaux.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a>
                                         </p>
                                         <h2>Schéma des flux et ports réseaux Watchdoc versions antérieures à 6.1.1<br /></h2>
                                         <p><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/03_Schemas/WD60_SCH_FluxReseaux.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="607" data-mc-height="474" src="../Z_Resources/Images/03_Schemas/WD60_SCH_FluxReseaux.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a>
@@ -540,25 +546,42 @@
                                             <tbody>
                                                 <tr class="TableStyle-Standard-Body-Row2">
                                                     <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
-                                                        <p>Serveur du domaine</p>
+                                                        <p>Serveur du domaine (slave)</p>
                                                     </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">TCP&#160;5753</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                        <p>TCP&#160;5753</p>
+                                                        <p>&#160;</p>
+                                                    </td>
                                                     <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">HTTPS <br />SSL</td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-size: 12pt;">Serveur du domaine</td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-size: 12pt;">Serveur du domaine (slave)</td>
                                                 </tr>
                                                 <tr class="TableStyle-Standard-Body-Row1">
                                                     <td class="TableStyle-Standard-BodyB-Regular-Row1" style="font-size: 12pt;">
                                                         <p>Service Watchdoc</p>
                                                     </td>
-                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1" style="font-size: 12pt;">9100</td>
-                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1" style="font-size: 12pt;">RAW<br />IPP/IPPS<br /></td>
-                                                    <td class="TableStyle-Standard-BodyA-Regular-Row1" style="font-size: 12pt;">Périphériques d'impression</td>
+                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1" style="font-size: 12pt;">
+                                                        <p>9100</p>
+                                                        <p>631 ou 80</p>
+                                                        <p>443</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1" style="font-size: 12pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;">
+                                                        <p>RAW<br />IPP</p>
+                                                        <p>IPPS<br /></p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyA-Regular-Row1" style="font-size: 12pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;">Périphériques d'impression</td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                     </div>
-                                    <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy_First mc-component nocontent">
+                                    <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">
+                                            <button class="button elearning-button needs-pie previous-topic-button" title="Précédent" disabled="true">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Précédent">
+                                                        <div class="button-icon"> </div>
+                                                    </div><span class="button-text">Précédent</span>
+                                                </div>
+                                            </button>
                                             <button class="button elearning-button needs-pie next-topic-button" title="Suivant" disabled="true">
                                                 <div>
                                                     <div role="img" class="button-icon-wrapper" aria-label="Suivant">
@@ -570,6 +593,12 @@
                                     </div>
                                     <p><span style="font-size: 10pt;">Une suggestion ? Une demande de correction ? <a href="mailto:documentations@doxense.com?subject=Doxdoc.fr" target="_blank" title="Envoyer un email à documentations@doxense.com" alt="Envoyer un email à documentations@doxense.com">Exprimez-vous !</a></span>
                                     </p>
+                                    <script src="../Resources/Scripts/Laguna.js">
+                                    </script>
+                                    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
+                                    </script>
+                                    <script src="../Resources/Scripts/resize-initializer.js">
+                                    </script>
                                 </div>
                             </div>
                         </div>

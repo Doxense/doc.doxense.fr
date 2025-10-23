@@ -181,6 +181,7 @@
 {
 	font-family: 'Helvetica';
 	padding-bottom: 50px;
+	padding-left: 50px;
 }
 
 .micro-response-1836420867 div.cta:hover	/*When hovering over the CTA button the following properties apply*/
@@ -615,20 +616,20 @@
 	font-weight: bold;
 	border: none;
 	outline: none;
-	color: transparent;
 	cursor: pointer;
 	padding: 15px;
 	border-radius: 4px;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-color: var(--Primary);
-	background-image: url('../../Resources/Images/up-arrow-white.png');
+	background-color: yellow;
+	background: yellow;
+	background-size: inherit;
+	background-image: url('../../Resources/Images/logo_doxense.svg');
 }
 
 .micro-response-1836420867 button#myBtn:hover
 {
-	background-color: var(--Lightest);
-	background-image: url('../../Resources/Images/up-arrow-primary.png');
+	background-color: white;
 }
 
 .micro-response-1836420867 div.toolbar-container
@@ -784,5 +785,91 @@
 	font-weight: bold;
 	color: #000000;
 	font-size: 18pt;
+}
+
+@media HTML5
+{
+	.micro-response-1836420867 button#myBtn
+	{
+		background-position: center;
+		background-size: inherit;
+		background-repeat: no-repeat;
+		border-radius: 4px;
+		background: yellow;
+		background-color: yellow;
+		background-image: url('../../Resources/Images/logo_doxense.svg');
+	}
+
+	.micro-response-1836420867 .body-container
+	{
+		padding-left: 50px;
+	}
+
+	.micro-response-1836420867 .bookmark-hotspot:hover a.heading-link
+	{
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 20px 20px;
+		display: inline-block;
+		background-image: url('../../Resources/Images/Link.svg');
+	}
+}
+
+/* Heading Bookmark Styles*/
+
+.micro-response-1836420867 .bookmark-hotspot
+{
+	position: relative;
+}
+
+.micro-response-1836420867 .bookmark-hotspot:hover a.heading-link
+{
+	opacity: 1;
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+	background-position: center;
+	width: 25px;
+	margin-left: -25px;
+	display: inline-block;
+	background-image: url('../../Resources/Images/Link.svg');
+}
+
+.micro-response-1836420867 a.heading-link
+{
+	opacity: 0;
+	text-decoration: none;
+	letter-spacing: 1px;
+	position: relative;
+	display: none;
+}
+
+.micro-response-1836420867 div#anchor-icon
+{
+	display: inline;
+}
+
+.micro-response-1836420867 .bookmark-hotspot.active:after
+{
+	font-size: 10px;
+	margin-left: 10px;
+	padding: 5px;
+	content: 'Copied!';
+	background-color: var(--Dark);
+	color: #fff;
+	border-radius: 5px;
+	position: absolute;
+	top: -20px;
+	left: -20px;
+}
+
+.micro-response-1836420867 h1#results-heading	/* prevent heading in search results from being a bookmark */
+{
+	cursor: auto;
+}
+
+.micro-response-1836420867 h1#results-heading a.heading-link,
+.micro-response-1836420867 html.home-topic div.topic-hero h1 a.heading-link	/* prevent heading in search results and home page from being a bookmark */
+{
+	display: none;
 }
 

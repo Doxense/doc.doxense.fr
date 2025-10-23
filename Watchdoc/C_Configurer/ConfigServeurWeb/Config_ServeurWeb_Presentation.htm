@@ -5,7 +5,7 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="Présentation de l'interface et de la procédure de configuration de la section DSP permettant de préciser les modalités des échanges entre le serveur web de Watchdoc et les composants extérieurs." /><title>Wathdoc - Serveur web - Configurer les sections DSP et certificats</title>
+        <meta name="description" content="Présentation de l'interface et de la procédure de configuration de la section DSP permettant de préciser les modalités des échanges entre le serveur web de Watchdoc et les composants extérieurs." /><title>Wathdoc - Serveur web - Configurer les points d'entrée du serveur web et  certificats associés</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -22,6 +22,7 @@
         <link href="../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
         <link href="../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
         <style>/*&lt;meta /&gt;*/
 
@@ -200,10 +201,29 @@
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
                                         <h1><a name="aanchor17"></a>
-                                            <MadCap:concept term="CFG" />Wathdoc - Serveur web - Configurer les sections DSP et certificats</h1>
+                                            <MadCap:concept term="CFG" />Wathdoc - Serveur web - Configurer les points d'entrée du serveur web et  certificats associés</h1>
                                         <h2>Principe</h2>
                                         <p>Apparue dans la version 6.1.0.5262, cette interface de configuration rassemble les paramètres relatifs au serveur Web (DSP) de Watchdoc et aux certificats qui en sécurisent l'accès.</p>
                                         <p>Dans les versions précédentes, la section DSP se situe dans l'interface Configuration Système (<strong>Menu principal</strong> &gt; section Configuration, <strong>Configuration avancée</strong> &gt;&#160;<strong>Configuration Système</strong> &gt; section <strong>DSP</strong>).</p>
+                                        <p>&#160;</p>
+                                        <p>Cette section comporte les paramètres qui s'appliquent au serveur web de Watchdoc qui gère notamment l'interface d'administration, la page "Mon compte" et les Wes. </p>
+                                        <p>&#160;</p>
+                                        <p>Lors de l'installation de Watchdoc, les 3&#160;points d'entrée suivants sont créés par défaut : </p>
+                                        <ul>
+                                            <li>
+                                                <p><strong> _crystal</strong> (port 5744 HTTPS avec le certificat crystal) : il s'agit du point d'entrée par défaut permettant de sécuriser le serveur web à l'aide d'un certificat auto-signé fourni par Doxense.&#160;Ce point d'entrée peut être sécurisé par un autre certificat signé par une autorité de certification mais ne doit en aucun cas être désactivé, sous peine de rendre Watchdoc inopérant ;</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>_default Secure</strong> (port 5753,  HTTPS, avec le certificat httpServer) : ce point d'entrée assure l'accès de WSC, de WES sécurisés, de la Print API&#160;et Skyprint ainsi que  d'autres API&#160;provenant d'acteurs tiers tels que certains lecteurs de badges, par exemple ; </p>
+                                            </li>
+                                            <li>
+                                                <p><strong>_defaultIUnsecure</strong> (port 5754, non-sécurisé par un certificat) : permet l'accès de certains WES non-sécurisés.&#160;</p>
+                                            </li>
+                                        </ul>
+                                        <p>&#160;</p>
+                                        <p>Ces points d'entrée suffisent au fonctionnement standard de Watchdoc, mais vous pouvez ajouter d'autres points d'entrée, notamment pour tenir compte de périphériques d'impression qui auraient des configurations spécifiques avec différentes versions de TLS, par exemple.</p>
+                                        <p>
+                                            <br />Vous pouvez aussi appliquer d'autres certificats (signés par une autorité de certification) aux points d'entrée existants ou nouvellement créés (cf.&#160;<a href="../ConfigCertificats/ConfigCertificats_Procedure.htm">Gérer les certificats dans Watchdoc</a>).</p>
                                         <p>&#160;</p>
                                         <fieldset class="orange">La modification d'éléments dans cette page peut provoquer l'indisponibilité de quelques secondes de cette interface d'administration. <br />En cas d'erreur,  rechargez la page.</fieldset>
                                         <h2>Accéder à l'interface de configuration</h2>
@@ -217,12 +237,11 @@
                                         </ol>
                                         <p>&#160;</p>
                                         <p class="Resultat"><span style="font-family: 'Wingdings'">è</span> vous accédez à l'interface de gestion du <strong>Serveur Web </strong>de Watchdoc. </p>
-                                        <h2>Configurer la  section <a name="DSP"></a>DSP</h2>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Configurez les paramètres de la section DSP&#160;qui s'appliquent au serveur web de Watchdoc&#160;(interface d'administration et page "Mon compte")&#160;:</p>
-                                            </li>
-                                        </ol>
+                                        <h2>Configurer la  section <a name="DSP"></a>DSP<br /></h2>
+                                        <p>Cette section comporte par défaut 3&#160;points d'entrée créés lors de l'installation.&#160;Vous pouvez modifier ces points d'entrée et en ajouter d'autres.&#160;<br /></p>
+                                        <p>&#160;</p>
+                                        <p>Attention, cependant, à ne pas désactiver le port _crystal sous peine </p>
+                                        <p>&#160;</p>
                                         <ul>
                                             <li>
                                                 <p><strong>Point d'entrée du serveur web</strong> : pour les WES, si vous souhaitez utiliser un port SSL différent du port par défaut (notamment pour l'associer à un certificat spécifique), ajoutez un point d'entrée spécifique :</p>
@@ -307,7 +326,7 @@
             </li>
                                         </ul>
                                         <ol data-mc-continue="true">
-                                            <li value="2">
+                                            <li value="3">
                                                 <p>Cliquez sur <strong>Valider </strong>pour enregistrer les paramètres de la section DSP.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Configurer_GestAvancee_DSP.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1185" data-mc-height="625" src="../../Z_Resources/Images/02_Captures/Configurer_GestAvancee_DSP.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a></p>
                                             </li>
                                         </ol>
@@ -333,7 +352,7 @@
                                                         <p><strong>Signature Alg.&#160;: </strong>dans la liste, sélectionnez l'algorithme de hachage utilisé pour signer le certificat&#160;;</p>
                                                     </li>
                                                     <li>
-                                                        <p><strong>Est autorité de certification : </strong>cochez la case si le certificat possède cet attribut.&#160;Pour des raisons de sécurité, nous ne recommandons pas l'utilisation de tels certificats.<br /><br /><a class="MCPopupThumbnailLink" href="../ConfigCertificats/WD_Config_Certif_Creer.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1193" data-mc-height="683" src="../ConfigCertificats/WD_Config_Certif_Creer.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a></p>
+                                                        <p><strong>Est autorité de certification : </strong>cochez la case si le certificat possède cet attribut.&#160;Pour des raisons de sécurité, nous ne recommandons pas l'utilisation de tels certificats.<br /><br /><a class="MCPopupThumbnailLink" href="../ConfigCertificats/WD_Config_Certif_Creer.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1129" data-mc-height="785" src="../ConfigCertificats/WD_Config_Certif_Creer.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a></p>
                                                         <p>&#160;</p>
                                                     </li>
                                                 </ul>
@@ -406,6 +425,12 @@
                                     </div>
                                     <p><span style="font-size: 10pt;">Une suggestion ? Une demande de correction ? <a href="mailto:documentations@doxense.com?subject=Doxdoc.fr" target="_blank" title="Envoyer un email à documentations@doxense.com" alt="Envoyer un email à documentations@doxense.com">Exprimez-vous !</a></span>
                                     </p>
+                                    <script src="../../Resources/Scripts/Laguna.js">
+                                    </script>
+                                    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
+                                    </script>
+                                    <script src="../../Resources/Scripts/resize-initializer.js">
+                                    </script>
                                 </div>
                             </div>
                         </div>
