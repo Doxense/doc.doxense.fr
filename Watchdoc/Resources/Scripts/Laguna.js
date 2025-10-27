@@ -1,7 +1,7 @@
 ﻿$(document).ready(function() {
 	BackToTop();
 	HeadingBookmarks("h1,h2,h3");
-	CopyPageURL
+	CopyPageURL;
 	$("div.title-bar-container").after($(".toolbar-container"));
 	$("div.toolbar-container, div.sidenav-container").show();
 	$("div.search-bar-icon").prependTo("._Skins_Toolbar_Right ");
@@ -10,8 +10,8 @@
 
 /********* Back to Top Button **********/
 function BackToTop() {
-	if ($(".body-container").length === 1) {
-		var bodyContainer = $('div.body-container')[0];
+	if ($("body-container").length === 1) {
+		var bodyContainer = $('body-container')[0];
 		var mybutton = document.createElement("button");
 		var textnode = document.createTextNode("Top");
 		mybutton.appendChild(textnode);
