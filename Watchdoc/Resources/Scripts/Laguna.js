@@ -148,4 +148,10 @@ function CopyPageURL() {
 
 		$(this).attr("title", "Copied");
 	});
+
+// Run after DOM is ready
+if (document.readyState === "loading") {
+	document.addEventListener("DOMContentLoaded", hideToolbarInPreview);
+} else {
+	hideToolbarInPreview();
 }
