@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Watchdoc SkyPrint - Configurer le serveur d'envoi des documents</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Watchdoc Skyprint - Configurer les conditions d'acceptation des emails</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -21,7 +21,6 @@
         <link href="../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
         <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
         <style>/*&lt;meta /&gt;*/
 
@@ -87,6 +86,10 @@
 			///*<![CDATA[*/
 			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PK49S9NW');
 		///*]]>*/</script>
+        <script src="../Resources/Scripts/ScrollToTop.js">
+        </script>
+        <script src="../Resources/Scripts/Laguna.js">
+        </script>
     </head>
     <body>
         <div class="foundation-wrap off-canvas-wrapper">
@@ -199,97 +202,56 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor314"></a>
-                                            <MadCap:concept term="SP" />Watchdoc SkyPrint - Configurer le serveur d'envoi des documents</h1>
-                                        <h2>Présentation</h2>
-                                        <p>Skyprint reposant sur un serveur  Watchdoc, vous devez configurer la connexion entre Skyprint et ce serveur d'impression qui sera chargé d'envoyer les travaux vers les files d'impression (serveur d'envoi des documents).<br /><br /></p>
-                                        <p>
-                                            <img src="../Z_Resources/Images/03_Schemas/SPv2_SCH_SchemaFonct_ConfigWD.png" style="width: 700px;" />
-                                        </p>
-                                        <h2>Prérequis</h2>
-                                        <p>Cette configuration requiert  un compte utilisateur (login/mot de passe) doté du rôle d'administration Skyprint. Il est donc nécessaire de configurer ce droit d'accès au préalable dans Watchdoc.&#160;</p>
-                                        <p>
-                                            <br />Ce rôle Skyprint permet au compte utilisateur désigné de soumettre des documents à Print API à la place d'un autre utilisateur. Ce rôle soumet donc les travaux d'impression de tous les utilisateurs Skyprint sans que ceux-ci aient besoin de s'authentifier.</p>
-                                        <p>
-                                            <br />Le compte utilisé pour endosser ce rôle peut être un compte utilisateur (ou administrateur) existant ou d'un compte utilisateur dédié. Dans ce cas, il convient de l'avoir créé au préalable dans votre annuaire d'entreprise (LDAP ou annuaire XML).&#160;<br />Dans notre exemple, le compte appelé "skyprint", est un compte dédié préalablement configuré dans l'annuaire AD_ORGA (annuaire XML).</p>
+                                        <h1><a name="aanchor45"></a>
+                                            <MadCap:concept term="SP" />Watchdoc Skyprint - Configurer les conditions d'acceptation des emails</h1>
+                                        <h2>Principe</h2>
+                                        <p>Lorsque l'utilisateur envoie sa demande d'impression  par mail  à l'adresse mail dédiée Skyprint, ce dernier  applique un contrôle des adresses mails autorisées à soumettre leurs travaux.&#160;<br />Si l'adresse mail de l'expéditeur est autorisée, Skyprint vérifie la présence d'un compte utilisateur (associé à l'adresse mail) dans l'annuaire configuré par défaut dans Watchdoc. <br />Si l'utilisateur ne dispose pas de compte dans l'un des annuaires mais que la création d'un compte est autorisée par Skyprint, ce dernier crée un compte dans la base Invités de WSC.<br /><br /><img src="../Z_Resources/Images/03_Schemas/SPv2_SCH_SchemaFonct_ConfigTravaux.png" style="width: 700px;" /></p>
                                         <h2>Procédure</h2>
-                                        <h3>Attribuer le rôle d'administration Skyprint à un compte utilisateur dans Watchdoc</h3>
                                         <ol>
                                             <li value="1">
-                                                <p>En tant qu'administrateur, accédez à l'interface d'administration de Watchdoc&#160;; </p>
+                                                <p>En tant qu'administrateur, accédez à l'interface de configuration de Skyprint. </p>
                                             </li>
                                             <li value="2">
-                                                <p>depuis le <strong>Menu Principal</strong>, section <b>Gestion</b>, cliquez sur <b>Droits d'accès</b> : <br /><br /><img src="../Z_Resources/Images/02_Captures/Config_Droits_AccesInterfaceDroits_V61.png" style="width: 700px;height: auto;" /></p>
-                                                <p>
-                                                    <br />
-                                                </p>
+                                                <p>Dans le menu, cliquez sur <b>Configuration des travaux</b>.</p>
                                             </li>
                                             <li value="3">
-                                                <p>dans la section <strong>Rôles d'administration</strong>, cliquez sur le bouton<img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Editer.png" style="width: 27px;height: 27px;" /> pour éditer le rôle <b>Skyprint&#160;</b>:<br /><br /><img src="Admin_Config_Role_Skyprint.png" style="width: 700px;height: auto;" /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p>dans l'interface <b>Edition d'un droit d'accès</b>, section <b>Membres</b>, sélectionnez&#160;:</p>
-                                                <ol style="list-style-type: lower-roman;">
-                                                    <li value="1">
-                                                        <p>l'annuaire dans lequel se trouve le compte utilisé pour soumettre les travaux d'impression ; </p>
-                                                    </li>
-                                                    <li value="2">
-                                                        <p> puis le(s) compte(s) utilisé(s) pour soumettre les travaux d'impression de Skyprint à Watchdoc&#160;:<br /><br /><img src="Admin_Config_Role_EditRoleSp.png" style="width: 700px;height: auto;" /></p>
-                                                    </li>
-                                                </ol>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="5">
-                                                <p>validez l'ajout de ce compte pour le droit d'accès Skyprint &#160;;</p>
-                                            </li>
-                                            <li value="6">
-                                                <p>rendez-vous dans Skyprint pour y configurer le serveur d'envoi des documents.&#160;<br /></p>
-                                            </li>
-                                        </ol>
-                                        <h3>Configurer le serveur d'envoi des documents dans Skyprint</h3>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Accédez à Skyprint en tant qu'administrateur ; </p>
-                                            </li>
-                                            <li value="2">
-                                                <p>dans le menu, cliquez sur <i style="font-weight: bold; font-style: normal;">Configuration de Watchdoc</i> ; </p>
-                                            </li>
-                                            <li value="3">
-                                                <p>dans la section <b>Serveur utilisé pour l'envoi des documents</b>, vous configurez  le serveur d'impression Watchdoc chargé d'envoyer les travaux  vers les files d'impression (via la Doxense Print API ): </p>
+                                                <p>Dans la section <b>Conditions d'acceptation des emails</b>, complétez les champs de la section <b>Ajouter des conditions</b> : </p>
                                                 <ul>
                                                     <li>
-                                                        <p style="font-weight: bold;">Adresse du serveur : <span style="font-weight: normal;">saisissez l'adresse (IP ou FQDN) du serveur Watchdoc</span></p>
+                                                        <p><b>Domaine</b> : saisissez un  nom de domaine d'utilisateurs autorisés à utiliser Skyprint.&#160;Vous pouvez saisir plusieurs noms de domaines en utilisant le point-virgule (;) comme séparateur&#160;;</p>
                                                     </li>
                                                     <li>
-                                                        <p style="font-weight: normal;"><b>Utiliser une connexion sécurisée : </b><span style="font-weight: normal;">activez le bouton si l'accès au serveur Watchdoc est sécurisé</span>
-                                                        </p>
+                                                        <p><b>Email</b> : saisissez le ou les emails des utilisateurs autorisés à utiliser Skyprint ;</p>
                                                     </li>
                                                     <li>
-                                                        <p style="font-weight: normal;"><b>Port :</b> saisissez le numéro du port d'accès sécurisé à Watchdoc (5753 par défaut)</p>
-                                                    </li>
-                                                    <li>
-                                                        <p style="font-weight: normal;"><b>Compte :</b> saisissez le nom du compte configuré avec le Droit d'accès Skyprint (configuré lors de l'étape précédente)</p>
-                                                    </li>
-                                                    <li>
-                                                        <p style="font-weight: normal;"><b>Mot de passe :</b> saisissez le mot de passe du compte d'accès Skyprint (configuré lors de l'étape précédente).<br /><br /></p>
-                                                        <p>
-                                                            <img src="Admin_Config_Srv_EnvoiDoc.png" />
-                                                        </p>
+                                                        <p><b>Email :</b> saisissez le ou les emails des utilisateurs (appartenant à un domaine autorisé) non-autorisés à utiliser Skyprint. <br />N.B. : cette configuration peut être utile pour interdire l'usage de Skyprint à un ancien salarié  dont l'adresse mail serait toujours opérationnelle. Les adresses du  domaine "@organisation.com" est autorisé, mais l'utilisateur "d.dupont@organisation.com"  est interdit.</p>
                                                     </li>
                                                 </ul>
                                             </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
                                             <li value="4">
-                                                <p>Une fois les données saisies, cliquez sur le bouton <b>Tester</b> pour vérifier la connexion de Watchdoc Skyprint avec le serveur d'impression Watchdoc :<br /><br /><img src="Admin_Config_Srv_EnvoiDoc_Test.png" /></p>
-                                                <p>&#160;</p>
+                                                <p><b>Autoriser la création d'utilisateurs :</b> actionnez le bouton pour autoriser les utilisateurs non-inscrits  à utiliser Watchdoc SkyPrint.&#160;<br />Ainsi, lorsqu'un utilisateur non-inscrit dans l'annuaire ou dans la base Invités (et dont l'adresse mail remplit les conditions d'acceptation) envoie un mail à  Skyprint, ce dernier crée automatiquement un compte Invité dans WSC.&#160;L'utilisateur est alors autorisé à imprimer via Skyprint.</p>
+                                                <p>Si la création d'utilisateurs n'est pas autorisée, seuls les utilisateurs déjà inscrits dans l'annuaire de l'organisation ou dans la base Invités peuvent utiliser Skyprint si leur adresse mail remplit les conditions.</p>
                                             </li>
                                             <li value="5">
-                                                <p>Si le test n'est pas concluant, vérifiez les valeurs saisies et corrigez-les ou vérifiez l'état du serveur Watchdoc.&#160;Si le test est concluant, cliquez sur le bouton <strong>Sauvegarder </strong>pour enregistrer les paramètres.</p>
+                                                <p>Pour chaque domaine ou adresse saisi, cliquez sur le bouton <img src="Admin_Config_BoutonAjouter.png" style="width: 21px;height: 21px;" /> pour confirmer l'ajout.</p>
+                                                <p>Les domaines et adresses ajoutés s'affichent en-dessous dans la <b>Liste des conditions &gt; Domaines/emails acceptés </b>ou<b> Emails refusés</b>&#160;:<br /><br /><img src="Admin_Config_Conditions.png" /></p>
+                                                <p>&#160;</p>
+                                                <p>&#160;</p>
+                                            </li>
+                                            <li value="6">
+                                                <p><span style="font-weight: normal;">Pour tester l'application des conditions, saisissez une adresse mail dans le champ</span> <b>Tester un e-mail</b>, <span style="font-weight: normal;">puis cliquez sur</span> <b>Tester</b>.<br /></p>
+                                            </li>
+                                            <li value="7">
+                                                <p>Vérifiez dans le compte-rendu de test que votre configuration est correcte ou réajustez-la avant de tester à nouveau :</p>
+                                                <p>&#160;</p>
                                                 <p>
-                                                    <br />
+                                                    <img src="Admin_Config_Conditions_Test1.png" />
+                                                    <img src="Admin_Config_Conditions_Test2.png" />
                                                 </p>
+                                                <p>&#160;</p>
+                                            </li>
+                                            <li value="8">
+                                                <p>Lorsque les conditions sont validées, cliquez sur <strong>Sauvegarder</strong> pour valider ces paramètres.</p>
                                             </li>
                                         </ol>
                                     </div>

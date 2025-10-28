@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Watchdoc Skyprint - Configurer les paramètres généraux</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Watchdoc Skyprint - Configurer les boîtes mail supervisées</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -21,7 +21,6 @@
         <link href="../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
         <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
         <style>/*&lt;meta /&gt;*/
 
@@ -87,6 +86,10 @@
 			///*<![CDATA[*/
 			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PK49S9NW');
 		///*]]>*/</script>
+        <script src="../Resources/Scripts/ScrollToTop.js">
+        </script>
+        <script src="../Resources/Scripts/Laguna.js">
+        </script>
     </head>
     <body>
         <div class="foundation-wrap off-canvas-wrapper">
@@ -199,90 +202,163 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor116"></a>
-                                            <MadCap:concept term="SP" />Watchdoc Skyprint - Configurer les paramètres généraux</h1>
+                                        <h1><a name="aanchor351"></a>
+                                            <MadCap:concept term="SP" />Watchdoc Skyprint - Configurer les boîtes mail supervisées</h1>
                                         <h2>Principe</h2>
-                                        <p>L'interface <strong>Configurer les paramètres généraux - Support</strong> donne accès à des statistiques du serveur ainsi que des données utiles pour un diagnostic de Skyprint en cas de dysfonctionnement.</p>
-                                        <h2>Statistiques du serveur</h2>
-                                        <ol>
-                                            <li value="1">
-                                                <p>En tant qu'administrateur, accédez à l'interface de configuration de Skyprint. </p>
-                                            </li>
-                                            <li value="2">
-                                                <p>Dans le menu, cliquez sur <b>Configuration générale</b>.</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>Consultez les données affichées dans la section Statistiques :</p>
-                                            </li>
-                                        </ol>
-                                        <p>
-                                            <img src="Admin_Config_Gen_Stats.png" />
-                                        </p>
+                                        <p>Le rôle de Skyprint est de prendre en charge des travaux d'impression envoyés en pièces jointes d'un  e-mail par des utilisateurs inscrits (dans l'annuaire de l'organisation ou la base Invités de WSC).<br />Vous devez donc configurer la ou les boîtes mails supervisées, c'est-à-dire la (ou les) boîte mail dans laquelle arrivent les demandes d'impression.<br /><br /><img src="../Z_Resources/Images/03_Schemas/SPv2_SCH_SchemaFonctionnel_BoiteMail.png" style="width: 700px;" /><br /></p>
                                         <p>&#160;</p>
-                                        <h2><a name="MotDePasse" id="MotDePasse"></a>Configurer le mot de passe maintenance</h2>
-                                        <p>Vous pouvez modifier le mot de passe permettant d'accéder à l'interface d'administration de Skyprint. </p>
+                                        <p>&#160;</p>
+                                        <fieldset>Assurez-vous de détenir toutes les informations de configuration de la boîte (ou des)  mails communiqués par votre référent informatique.&#160;<br /><br />Pour une boîte de type MS Office 365, une configuration préalable est nécessaire (cf.&#160;<a href="SP_ANX_Config_BoiteOutlookOffice365.htm" target="_blank">Configurer une boîte mail Office 365 dans Microsoft Entra</a>).<br /></fieldset>
+                                        <h2>Configurer la boîte mail</h2>
+                                        <p>Dans cette section, vous configurez  le serveur et l'adresse mail auxquels  les demandes d'impression sont envoyées.<br /></p>
+                                        <p>&#160;</p>
                                         <ol>
                                             <li value="1">
                                                 <p>En tant qu'administrateur, accédez à l'interface de configuration de Skyprint. </p>
                                             </li>
                                             <li value="2">
-                                                <p>Dans le menu, cliquez sur <b>Configuration générale</b>.</p>
+                                                <p>Dans le menu, cliquez sur <b>Configuration des boîtes mail</b>.</p>
                                             </li>
                                             <li value="3">
-                                                <p>Dans la section <b>Changer le mot de passe maintenance</b>, saisissez le nouveau mot de passe en respectant le format attendu : au moins 8 caractères contenant une minuscule, une majuscule, un chiffre et un caractère spécial. Un champ encadré de rouge signale que le mot de passe ne correspond pas au format attendu.</p>
+                                                <p>Dans la liste des boîtes mail supervisées, cliquez sur le bouton <b>Ajouter une adresse email</b> :<br /><br /><a class="MCPopupThumbnailLink" href="Admin_Config_BoiteMail_Liste.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1558" data-mc-height="460" src="Admin_Config_BoiteMail_Liste.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                <p>
+                                                    <br />
+                                                </p>
                                             </li>
                                             <li value="4">
-                                                <p>Saisissez de nouveau le mot de passe.</p>
+                                                <p>Dans l'interface <strong>Editions d'une boîte mail</strong>, sélectionnez dans la liste le type ou protocole de réception utilisé.</p>
                                             </li>
                                             <li value="5">
-                                                <p style="font-weight: bold;"><span style="font-weight: normal;">Cliquez sur</span> Changer le mot de passe.&#160;</p>
+                                                <p>Complétez les paramètres de la boîte mail (variables en fonction du type de boîte).</p>
                                             </li>
                                         </ol>
-                                        <p style="font-weight: bold;">
-                                            <img src="Admin_Config_Gen_MotdePasse.png" />
-                                            <br />
-                                        </p>
-                                        <p style="font-weight: normal;"><span style="font-family: 'Wingdings'">è</span> Un message informe du succès de l'opération.</p>
-                                        <h2>Configurer la gestion des logs</h2>
-                                        <p>Skyprint génère des logs, fichiers traçant l'activité du service qui supervise les boîtes mail.&#160;Ces logs facilitent le diagnostic en cas de dysfonctionnement.</p>
-                                        <p>Par défaut, le niveau de logs est fixé à INFO, mais vous pouvez le modifier pour disposer de données plus ou moins précises.</p>
+                                        <h3>Boîte mail IMAP</h3>
                                         <ol>
                                             <li value="1">
-                                                <p>En tant qu'administrateur, accédez à l'interface de configuration de Skyprint. </p>
+                                                <p>Complétez les champs suivants :</p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Adresse email</strong>&#160;: saisissez l'adresse mail  à laquelle sont envoyés les emails de demandes d'impression (par exemple : print@nom-entreprise.com) ;</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p class="Liste_puce_1"><strong>Adresse du serveur mail</strong>&#160;: saississez l'adresse du serveur gérant les mails ;</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p><b>Port</b> : indiquez le port d'accès au serveur mail&#160;;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><b>Mot de passe :</b> saisissez le mot de passe associé à l'adresse du serveur mail ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>File d'impression cible :</strong> sélectionnez la file d'impression chargée de prendre en charge les travaux d'impression (cf. <a href="#Select_File" target="_blank">ci-dessous</a>).<br /><br /><a class="MCPopupThumbnailLink" href="Admin_Config_BoiteMail.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1223" data-mc-height="391" src="Admin_Config_BoiteMail.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                </ul>
                                             </li>
                                             <li value="2">
-                                                <p>Dans le menu, cliquez sur <b>Configuration générale</b>.</p>
+                                                <p>Cliquez sur <strong>Sauvegarder </strong>pour valider les paramètres de la boîte mail.</p>
+                                            </li>
+                                        </ol>
+                                        <h3>Boîte mail Office 365</h3>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Pour le type Office 365, complétez les champs suivants&#160;(tous ces paramètres vous sont communiqués par votre référent Microsoft Office 365) : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p><strong>Adresse email</strong><span style="font-size: 12pt;">&#160;: saisissez l'adresse mail  à laquelle sont envoyés les emails de demandes d'impression (par exemple : print@organisation.com) ;</span>
+                                                        </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>File d'impression cible :</strong> indiquez l'identifiant de la file d'impression chargée de prendre en charge les travaux d'impression. Cet identifiant est défini dans Watchdoc (ou dans WSC) lors de la configuration de la file (cf.&#160;<a href="../C_Configurer/ConfigFiles/ConfigFiles_Procedure.htm#Identifiant" target="_blank">Configurer une file d'impression</a>).&#160;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Adresse du serveur mail</strong>&#160;: saississez l'adresse du serveur gérant les mails ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><b>Identifiant de tenant (locataire) Microsoft :</b> saisissez l'identifiant du compte d'accès au serveur mail Microsoft (Tenant-id ou ID&#160;de locataire)&#160;;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><b>Identifiant du client (application) Microsoft :</b>saisissez l'identifiant du compte d'accès au serveur mail Microsoft&#160;;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><b>Secret client Microsoft :</b>saisissez le mot de passe correspondant à l'adresse mail ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><b>Port</b> : indiquez le port d'accès au serveur mail&#160;;</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                        <ol data-mc-continue="true">
+                                            <li value="2">
+                                                <p>Une fois les champs complétés, cliquez sur <strong>Associer à ce compte</strong> pour associer les informations saisies à l'adresse mail configurée : <br /><br /><a class="MCPopupThumbnailLink" href="Admin_Config_BoiteMail_Office365.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1484" data-mc-height="553" src="Admin_Config_BoiteMail_Office365.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a></p>
+                                                <p>&#160;</p>
                                             </li>
                                             <li value="3">
-                                                <p>Dans la section <strong>Gestion des logs</strong>, sélectionnez le niveau de détail que vous souhaitez conserver dans les logs&#160;: </p>
+                                                <p><span style="font-size: 12pt;">Lorsque le message "Compte associé avec succès" s'affiche, cliquez sur </span><b style="font-size: 12pt;">Sauvegarder</b><span style="font-size: 12pt;"> pour enregistrer les parapètres de la boîte mail.&#160;</span>
+                                                </p>
+                                            </li>
+                                        </ol>
+                                        <h3>Boîte mail Google Workspace</h3>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Pour le type Google Workspace, complétez les champs suivants) : </p>
                                                 <ul>
                                                     <li>
-                                                        <p>verbose : toutes les traces sur la boite mail supervisée par Skyprint ;</p>
+                                                        <p><strong>Adresse email</strong><span style="font-size: 12pt;">&#160;: saisissez l'adresse mail  à laquelle sont envoyés les emails de demandes d'impression (par exemple : print@nom-entreprise.com) ;</span>
+                                                        </p>
                                                     </li>
                                                     <li>
-                                                        <p>debug :  traces  sur la boîte mail supervisée par Skyprint permettant de comprendre des dysfonctionnements de l'outil ;</p>
+                                                        <p><strong>File d'impression cible :</strong> indiquez l'identifiant de la file d'impression chargée de prendre en charge les travaux d'impression. Cet identifiant est défini dans Watchdoc (ou dans WSC) lors de la configuration de la file (cf.&#160;<a href="../C_Configurer/ConfigFiles/ConfigFiles_Procedure.htm#Identifiant" target="_blank">Configurer une file d'impression</a>).&#160;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Adresse du serveur mail</strong>&#160;: saississez l'adresse du serveur gérant les mails ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><b>Port</b> : indiquez le port d'accès au serveur mail&#160;;</p>
                                                     </li>
                                                 </ul>
-                                                <ul>
-                                                    <li>
-                                                        <p>info : traces  sur la boîte mail supervisée par Skyprint permettant de comprendre l'activité de l'outil ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>warning :traces laissées lorsqu'un problème est détecté (qui n'impacte pas le fonctionnement, mais peut, à terme, devenir gênant pour Skyprint) ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>error : traces laissées lorsqu'une erreur est détectée ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>fatal : traces laissées par le service lors d'une erreur qui rend l'application inutilisable.<br /><br /><img src="Admin_Config_Gen_Logs.png" style="width: 700px;" /></p>
-                                                    </li>
-                                                </ul>
+                                            </li>
+                                        </ol>
+                                        <ol data-mc-continue="true">
+                                            <li value="2">
+                                                <p>Cliquez sur <strong>Associer à ce compte</strong> pour associer les informations saisies à l'adresse mail configurée : <br /><br /><a class="MCPopupThumbnailLink" href="Admin_Config_BoiteMail_GWorkspace.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1254" data-mc-height="446" src="Admin_Config_BoiteMail_GWorkspace.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a><br /><br /></p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Lorsque le message "Compte associé avec succès" s'affiche, cliquez sur <b>Sauvegarder</b> pour enregistrer les parapètres de la boîte mail.</p>
+                                            </li>
+                                        </ol>
+                                        <h2><a name="Select_File"></a>Sélectionner une file d'impression</h2>
+                                        <p>Sélectionnez la file vers laquelle la boîte mail envoie les travaux d'impression à l'aide des outils suivants :</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>dans le champ, saisissez un critère de recherche permettant de trouver la file d'impression (modèle, marque, élément saisi dans les propriétés de la file)&#160;;</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>utilisez au besoin les filtres disponibles pour restreindre le résultat : marques, modèles et/ou emplacement ;</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>sélectionnez la file choisie ; </p>
                                             </li>
                                             <li value="4">
-                                                <p>Lorsque le niveau souhaité est défini, activez le bouton Tracer les communications correspondant aux boîtes dont vous souhaitez récupérer les logs :<br /><br /><img src="Admin_Config_Gen_Traces.png" style="width: 700px;" /></p>
+                                                <p>cliquez sur le bouton <strong>Sélectionner</strong>&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="Admin_Config_SelectFile.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="890" data-mc-height="530" src="Admin_Config_SelectFile.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a></p>
                                             </li>
-                                            <li value="5">
-                                                <p>Cliquez sur <b>Télécharger</b> les logs pour enregistrer ces fichiers traces sur votre poste de travail (dans le dossier Télechargements du navigateur, par défaut).</p>
+                                        </ol>
+                                        <h2>Configurer les options de finition et conditions d'acceptation </h2>
+                                        <p>Les options de finition et les conditions d'acceptation des mails sont configurés dans l'interface Configuration des travaux . Il s'agit alors de paramétrages génériques appliqués à toutes les boîtes mails.&#160;</p>
+                                        <p>&#160;</p>
+                                        <p>Cependant, vous pouvez configurer des options de finition et conditions d'acceptation spécifiques pour la boîte mail en cours de configuration. <br />Dans ce cas, dans l'interface <b>Edition d'une boîte mail</b>, complétez si nécessaire :</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>la section <strong>Options de finition</strong> (de la même manière que pour les options génériques, cf.&#160;<a href="SP_Config_travaux_Options.htm" target="_blank">Configurer les options de finition</a>) ;</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>la section<strong> Conditions d'acceptation</strong> des mails (de la même manière que pour les conditions génériques, cf.&#160;<a href="SP_Config_travaux_Conditions.htm" target="_blank">Configurer les conditions d'acceptation</a>) ;</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>une fois ces paramètres saisis, cliquez sur <b>Sauvegarder</b> pour valider la configuration de la boîte mail :<br /><br /><a class="MCPopupThumbnailLink" href="Admin_Config_BoiteMail_Specifiques.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1255" data-mc-height="657" src="Admin_Config_BoiteMail_Specifiques.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a></p>
                                             </li>
                                         </ol>
                                     </div>

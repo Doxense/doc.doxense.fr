@@ -4,8 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="Présentation du principe et procédure d'installation de Watchdoc Print Client for Windows sur le poste utilisateur : prérequis, installation unitaire et installation en masse." /><title>Watchdoc Print Client for Windows®</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Watchdoc Skyprint - Consulter la liste des travaux</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -22,7 +21,6 @@
         <link href="../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
         <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
         <style>/*&lt;meta /&gt;*/
 
@@ -88,6 +86,10 @@
 			///*<![CDATA[*/
 			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PK49S9NW');
 		///*]]>*/</script>
+        <script src="../Resources/Scripts/ScrollToTop.js">
+        </script>
+        <script src="../Resources/Scripts/Laguna.js">
+        </script>
     </head>
     <body>
         <div class="foundation-wrap off-canvas-wrapper">
@@ -200,81 +202,19 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor42"></a>
-                                            <MadCap:concept term="WPC" />Watchdoc Skyprint - Procédure d'installation</h1>
+                                        <h1><a name="aanchor390"></a>
+                                            <MadCap:concept term="SP" />Watchdoc Skyprint - Consulter la liste des travaux</h1>
                                         <h2>Principe</h2>
-                                        <p>Watchdoc Skyprint doit être installé sur un serveur MS&#160;Windows<sup>®</sup>.&#160;S'il n'est pas installé sur le  même serveur que Watchdoc, il doit être en mesure de communiquer avec Watchdoc et WSC. <br />Le logiciel d'installation est fourni par Doxense sous la forme d'un fichier <strong>msi</strong> nommé <strong>WatchdocSkyprint-x.x.x.x.msi</strong> téléchargeable depuis le <a href="../A_Getting_Started/Release_611.htm" target="_blank">site de documentation</a>. </p>
-                                        <p>&#160;</p>
-                                        <p>Le certificat Watchdoc Skyprint doit être installé sur le serveur qui héberge Watchdoc Skyprint.</p>
-                                        <h2>Procédure</h2>
-                                        <h3>Installer</h3>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Assurez-vous de disposer du fichier d'installation <strong>WatchdocPrintClient-x.x.x.x.msi</strong> (téléchargeable depuis le site de documentation)&#160;;</p>
+                                        <p>Les travaux d'impression envoyés à Skyprint figurent dans une liste consultable dans l'interface d'administration.&#160;</p>
+                                        <p>Pour consulter les travaux d'impression, cliquez sur l'entrée de menu Liste des travaux : </p>
+                                        <ul>
+                                            <li>
+                                                <p>sous l'onglet En attente figurent les travaux envoyés à Skyprint mais qui n'ont pas encore été traités par Watchdoc ; </p>
                                             </li>
-                                            <li value="2">
-                                                <p>connectez-vous en tant qu'administrateur sur le poste utilisateur sur lequel doit être installé  Watchdoc Skyprint ;</p>
+                                            <li>
+                                                <p>sous l'onglet Envoyés figurent les travaux envoyés à Skyprint puis traités par Wathdoc.<br /><br /><a class="MCPopupThumbnailLink" href="Admin_Consult_ListeTravaux.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1842" data-mc-height="545" src="Admin_Consult_ListeTravaux.png" tabindex="" style="max-width: 1000px;" /></a></p>
                                             </li>
-                                            <li value="3">
-                                                <p>copiez le fichier d'installation .msi sur le serveur et cliquez dessus pour lancer l'assistant d'installation ; </p>
-                                            </li>
-                                            <li value="4">
-                                                <p>dans l'assistant, cliquez sur <b>Next</b> pour valider les différentes étapes : <br /><br /><img src="Admin_Install.png" /></p>
-                                            </li>
-                                        </ol>
-                                        <p>&#160;</p>
-                                        <ol data-mc-continue="true">
-                                            <li value="5">
-                                                <p>Lorsque le message de fin d'installation s'affiche, cliquez sur <b>Finish</b> :<br /><span style="font-family: 'Wingdings'">è</span> Skyprint est alors installé et l'icone s'affiche sur le bureau du serveur. </p>
-                                            </li>
-                                        </ol>
-                                        <h3>Ajouter le certificat</h3>
-                                        <p>Il convient ensuite d'ajouter le certificat dans le dossier Skyprint.</p>
-                                        <ol data-mc-continue="false">
-                                            <li value="1">
-                                                <p>Connectez-vous à l'interface d'administration de Watchdoc.</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>Depuis le <strong>Menu Principal</strong>, section <strong>Configuration</strong>, cliquez sur <strong>Configuration avancé&#160;&gt;&#160;Configuration Système</strong>.</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>Dans la section <strong>Divers</strong>, cliquez sur  <strong>Exporter le certificat</strong> : <br></br><br></br><img src="../Z_Resources/Images/02_Captures/WD_Express/wd_express_wpc7.png"></img></p>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="4">
-                                                <p>Le fichier généré est nommé <strong>print_api_cert.der</strong>. </p>
-                                                <p>Enregistrez-le dans le dossier  d'installation de Watchdoc Skyprint (par défaut, <strong>C:\Program Files\Doxense\Skyprint</strong>) :<br /><br /><img src="Admin_Install_Cert.png" /><br /><br /></p>
-                                                <p><span style="font-family: 'Wingdings'">è</span>Vous pouvez alors cliquer sur l'icone Skyprint pour accéder à l'interface. </p>
-                                                <p>
-                                                    <br />
-                                                </p>
-                                            </li>
-                                        </ol>
-                                        <h3>Changer le mot de passe d'accès en mode maintenance</h3>
-                                        <p>Authentifiez-vous à l'aide du compte de maintenance /&#160;changeme pour configurer Skyprint. <br />Nous vous conseillons de modifier le mot de passe du compte de maintenance afin de sécuriser l'accès à Skyprint.<br /></p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>En tant qu'administrateur, accédez à l'interface de configuration de Skyprint. </p>
-                                            </li>
-                                            <li value="2">
-                                                <p>Dans le menu, cliquez sur <b>Configuration générale</b>.</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>Dans la section <b>Changer le mot de passe maintenance</b>, saisissez le nouveau mot de passe en respectant le format attendu : au moins 8 caractères contenant une minuscule, une majuscule, un chiffre et un caractère spécial. Un champ encadré de rouge signale que le mot de passe ne correspond pas au format attendu.</p>
-                                            </li>
-                                            <li value="4">
-                                                <p>Saisissez de nouveau le mot de passe.</p>
-                                            </li>
-                                            <li value="5">
-                                                <p style="font-weight: bold;"><span style="font-weight: normal;">Cliquez sur</span> Changer le mot de passe.&#160;</p>
-                                            </li>
-                                        </ol>
-                                        <p style="font-weight: bold;">
-                                            <img src="Admin_Config_Gen_MotdePasse.png" />
-                                            <br />
-                                        </p>
-                                        <p style="font-weight: normal;"><span style="font-family: 'Wingdings'">è</span> Un message informe du succès de l'opération.</p>
+                                        </ul>
                                     </div>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

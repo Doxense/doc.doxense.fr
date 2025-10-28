@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Watchdoc Skyprint - Etapes de configuration</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Watchdoc Skyprint - Prérequis</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -21,7 +21,6 @@
         <link href="../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
         <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
         <style>/*&lt;meta /&gt;*/
 
@@ -87,6 +86,10 @@
 			///*<![CDATA[*/
 			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PK49S9NW');
 		///*]]>*/</script>
+        <script src="../Resources/Scripts/ScrollToTop.js">
+        </script>
+        <script src="../Resources/Scripts/Laguna.js">
+        </script>
     </head>
     <body>
         <div class="foundation-wrap off-canvas-wrapper">
@@ -199,24 +202,61 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <map id="map1" name="map1">
-                                            <area shape="rectangle" coords="339,735,671,765" dragDirection="0" href="04_Config_Srv_EnvoiDoc.htm" target="_blank" />
-                                            <area shape="rectangle" coords="1190,114,1454,154" dragDirection="0" href="05_Config_Srv_GestionUtils.htm" target="_blank" />
-                                            <area shape="rectangle" coords="23,857,263,955" dragDirection="0" href="06_1_Config_travaux_Options.htm" target="_blank" />
-                                            <area shape="rectangle" coords="383,307,723,376" dragDirection="0" href="07_Config_boitesmail.htm" target="_blank" />
-                                            <area shape="rectangle" coords="333,101,697,168" dragDirection="0" href="../C_Configurer/ConfigNotifs/ConfigNotifs_Evenmts_Procedure.htm" target="_blank" />
-                                        </map>
-                                        <h1><a name="aanchor326"></a>
-                                            <MadCap:concept term="SP" />Watchdoc Skyprint - Etapes de configuration</h1>
-                                        <h2>Etapes</h2>
-                                        <p>Cliquez sur l'étape pour accéder à la documentation associée.&#160;</p>
-                                        <p>
-                                            <br /><a href="../Z_Resources/Images/03_Schemas/SPv2_SCH_SchemaFonctionnel_Interactif.png"><img src="../Z_Resources/Images/03_Schemas/SPv2_SCH_SchemaFonctionnel_Interactif.png" usemap="#map1" /></a>
-                                        </p>
+                                        <h1><a name="aanchor315"></a>
+                                            <MadCap:concept term="SP" />Watchdoc Skyprint - Prérequis</h1>
+                                        <h2>Prérequis</h2>
+                                        <p>Avant d'installer Skyprint, vérifiez que vous disposez des prérequis suivants&#160;:</p>
                                         <p>&#160;</p>
-                                        <h3>Envoi des codes (PUK/PIN) à l'utilisateur</h3>
-                                        <p>Lorsque Watchdoc fonctionne en mode "validation", l'impression est sécurisée : les travaux d'impressions sont bloquées dans le périphérique et les utilisateurs doivent  débloquer leurs impressions après d'être identifiés.&#160;Pour cela, ils ont besoin d'un code (PUK/PIN).</p>
-                                        <p>Pour qu'un utilisateur de Skyprint reçoive un code (PUK/PIN) lors de la première demande d'impression à Skyprint, il convient de configurer une notification spécifique dans Watchdoc(cf.&#160;<a href="../C_Configurer/ConfigNotifs/ConfigNotifs_Evenmts_Procedure.htm" target="_blank"><a href="../H_HowTo/WD_CodePUK_CommuniquerCodePUK_Utilisateurs.htm" class="MCXref xref" xrefformat="{paratext}">Watchdoc - Communiquer le code PUK aux utilisateurs Watchdoc</a></a>).&#160;</p>
+                                        <ul>
+                                            <li>
+                                                <p>Skyprint doit être installé sur un serveur MS Windows<sup>®</sup>;</p>
+                                            </li>
+                                            <li>
+                                                <p>un Watchdoc opérationnel et associé à un emplacement ("Monde/World" au minimum si les emplacements ne sont pas utilisés dans votre organisation)&#160;;</p>
+                                            </li>
+                                            <li>
+                                                <p>une Console de supervision (WSC) intégrant la gestion de la base Invités opérationnelle&#160;;</p>
+                                            </li>
+                                            <li>
+                                                <p>un serveur de mails  (interne ou cloud) opérationnel (et configuré) ;</p>
+                                            </li>
+                                            <li>
+                                                <p>une adresse mail dédiée Skyprint configurée dans le serveur mail (skyprint@mon-organisation.com, par exemple) ;</p>
+                                            </li>
+                                            <li>
+                                                <p>les informations relatives au serveur mail utilisé (adresse mail et mot de passe associé, nom de serveur, port, protocole) ;</p>
+                                            </li>
+                                            <li>
+                                                <p>un compte de l'annuaire chargé du rôle Skyprint (chargé de soumette les documents) : il peut s'agit d'un compte utilisateur configuré avec ce droit d'accès, d'un compte dédié créé spécifiquement dans votre annuaire ou dans la base Invités de WSC ;</p>
+                                            </li>
+                                            <li>
+                                                <p>un compte autorisé à gérer les comptes invités dans WSC (lecture, modification, création, suppression) ;</p>
+                                            </li>
+                                            <li>
+                                                <p>un annuaire par défaut incluant la base Invités de WSC.Généralement, c'est l'annuaire META&#160;qui est utilisé pour cette fonction de méta-annuaire.</p>
+                                            </li>
+                                        </ul>
+                                        <p>&#160;</p>
+                                        <p>Par ailleurs, pour utiliser SkyPrint, l'utilisateur doit disposer d'une adresse mail.</p>
+                                        <h2>Schéma fonctionnel</h2>
+                                        <p><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/03_Schemas/SPv2_SCH_SchemaFonctionnel.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1508" data-mc-height="1230" src="../Z_Resources/Images/03_Schemas/SPv2_SCH_SchemaFonctionnel.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a>
+                                        </p>
+                                        <h2>Vérifications</h2>
+                                        <h3>Vérifier que le serveur Watchdoc est attaché à un emplacement</h3>
+                                        <ol>
+                                            <li value="1">
+                                                <p>accédez au serveur master de Watchdoc en tant qu'administrateur ;</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>depuis le Menu principal, section Configuration, cliquez sur Configuration avancée ;</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>dans l'interface Configuration avancée, cliquez sur Configuration Système ;</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>dans la section Configuration Générale, paramètre Emplacement, véfiriez qu'un emplacement est bien configué pour le serveur : <br /><br /><a class="MCPopupThumbnailLink" href="Admin_Verif_Emplacement.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1132" data-mc-height="455" src="Admin_Verif_Emplacement.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                            </li>
+                                        </ol>
                                     </div>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

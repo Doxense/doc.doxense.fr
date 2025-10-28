@@ -5,7 +5,7 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="Procédure de configuration d'une file d'impression (sections Informations générales, Périphériques, Envoi de fichiers spools, Restrictions, Plateforme, Contacts, Monitoring, Configuration SNMP, Notifications, Archivage, WES, Transformation de spools, Profil du périphérique, Mode expert)." /><title>sWatchdoc - Files d'impression - Configurer une file</title>
+        <meta name="description" content="Procédure de configuration d'une file d'impression (sections Informations générales, Périphériques, Envoi de fichiers spools, Restrictions, Plateforme, Contacts, Monitoring, Configuration SNMP, Notifications, Archivage, WES, Transformation de spools, Profil du périphérique, Mode expert)." /><title>Watchdoc - Files d'impression - Configurer une file</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -22,7 +22,6 @@
         <link href="../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
         <link href="../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
         <style>/*&lt;meta /&gt;*/
 
@@ -88,6 +87,10 @@
 			///*<![CDATA[*/
 			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PK49S9NW');
 		///*]]>*/</script>
+        <script src="../../Resources/Scripts/ScrollToTop.js">
+        </script>
+        <script src="../../Resources/Scripts/Laguna.js">
+        </script>
     </head>
     <body>
         <div class="foundation-wrap off-canvas-wrapper">
@@ -200,10 +203,11 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1 id="sWatchdocFilesdimpressionConfigurerunefile" data-magellan-target="sWatchdocFilesdimpressionConfigurerunefile"><a name="aanchor346"></a>
-                                            <MadCap:concept term="WD">s</MadCap:concept>Watchdoc - Files d'impression - Configurer une file</h1>
+                                        <h1 id="WatchdocFilesdimpressionConfigurerunefile" data-magellan-target="WatchdocFilesdimpressionConfigurerunefile"><a name="aanchor346"></a>
+                                            <MadCap:concept term="WD">
+                                            </MadCap:concept>Watchdoc - Files d'impression - Configurer une file</h1>
                                         <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
-                                            <li class="tree-node"><a href="#sWatchdocFilesdimpressionConfigurerunefile">sWatchdoc - Files d'impression - Configurer une file</a>
+                                            <li class="tree-node"><a href="#WatchdocFilesdimpressionConfigurerunefile">Watchdoc - Files d'impression - Configurer une file</a>
                                                 <ul>
                                                     <li class="tree-node"><a href="#Configurerlafile">Configurer la file</a>
                                                         <ul>
@@ -254,7 +258,7 @@
                                         <p class="Liste_num_1">Complétez les zones suivantes : </p>
                                         <ul>
                                             <li>
-                                                <p class="Liste_puce_1"><strong><a name="Identifiant" id="Identifiant"></a>Identifiant : </strong>par défaut, un identifiant est généré automatiquement par le système. Vous pouvez le modifier pour attribuer votre propre identifiant à la file.&#160;Votre&#160;identifiant peut contenir jusqu'à 64 caractères alphabétiques et chiffres, ainsi que le tiret bas (_) en guise de séparateur. </p>
+                                                <p class="Liste_puce_1"><strong><a name="Identifiant"></a>Identifiant : </strong>par défaut, un identifiant est généré automatiquement par le système. Vous pouvez le modifier pour attribuer votre propre identifiant à la file.&#160;Votre&#160;identifiant peut contenir jusqu'à 64 caractères alphabétiques et chiffres, ainsi que le tiret bas (_) en guise de séparateur. </p>
                                             </li>
                                             <li>
                                                 <p class="Liste_puce_1"><strong>Nom :</strong> attribuez un nom à votre file d'impression.&#160;Ce nom s'affichant dans l'interface de déblocage ou dans les mails de notification, il doit contenir des informations précisant son modèle et sa localisation.</p>
@@ -272,12 +276,12 @@
                                                 <p class="Liste_puce_2"> Mode <strong>Validation </strong>: ce mode suppose que l'utilisateur valide, avant impression, les travaux qu'il a lancés. L'utilisateur dispose pour cela d'une interface de déblocage (WES, <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term34">WXS<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Watchdoc eXternal Solution. Solution de connexion reposant sur l'exploitation d'un lecteur de badge (de marque Elatec®) connecté à un boîtier réseau appelé TCP Conv. Inséré dans la connexion LAN existante de l'appareil grâce à ses 2 ports LAN fonctionnant comme un commutateur de réseau, ce boîtier permet, après lecture du badge, de libérer automatiquement les impressions demandées par le propriétaire du badge.</span></a> ou web) ou d'un  terminal de type <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term12">CopiCode-IP<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Terminal (commercialisé par Cartadis) connecté à un périphérique d'impression qui permet la saisie d'un code PUK ou la lecture d'un badge pour débloquer les impressions en attente. Ce terminal permet le suivi, la facturation et la ventilation par code analytique des copies.</span></a> (ex NetPOD /DSP). Les utilisateurs doivent alors confirmer leurs documents manuellement avant que ceux-ci ne soient imprimés.Mode <strong>Comptabilisation </strong>: ce mode débloque automatiquement les travaux d'impression sans exiger la validation de l'utilisateur. </p>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1"><strong>Virtuelle </strong>: cochez cette cas si la file que vous configurez est virtuelle.<br />La file virtuelle est une file qui n'est associée à aucun périphérique mais qui est chargée de conserver les travaux d'impression en vue de les diriger vers le périphérique réseau qui sera sollicité par l'utilisateur pour l'impression <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term80">"à la demande"<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Fonction qui permet à l'utilisateur de lancer ses travaux d'impression depuis son environnement de travail puis de débloquer ses impressions sur le périphérique de son choix. La validation de ses impressions peut être effectuée soit depuis l'interface web de Watchdoc, soit depuis le WES, après authentification par l'utilisateur.</span></a>. <br /></p>
+                                                <p class="Liste_puce_1"><strong><a name="File_Virtuelle"></a>Virtuelle </strong>: cochez cette cas si la file que vous configurez est virtuelle.<br />La file virtuelle est une file qui n'est associée à aucun périphérique mais qui est chargée de conserver les travaux d'impression en vue de les diriger vers le périphérique réseau qui sera sollicité par l'utilisateur pour l'impression <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term80">"à la demande"<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Fonction qui permet à l'utilisateur de lancer ses travaux d'impression depuis son environnement de travail puis de débloquer ses impressions sur le périphérique de son choix. La validation de ses impressions peut être effectuée soit depuis l'interface web de Watchdoc, soit depuis le WES, après authentification par l'utilisateur.</span></a>. <br />Comme la file virtuelle envoie les travaux d'impression à des  périphériques divers dont les capacités sont très différentes, nous vous recommandons de configurer cette file avec le maximum de capacités (cf.&#160;<a href="#Section_Periph" target="_blank">section Périphériques</a> ci-dessous : impression couleur, recto-verso et grand format) afin d'en optimiser l'efficacité.</p>
                                             </li>
                                         </ul>
                                         <ul>
                                             <li>
-                                                <p class="Liste_puce_1"><strong>Tags </strong>: saisissez au besoin des mots-clés internes permettant de qualifier la file.&#160;Utilisez l'espace en guise de séparateur entre deux mots-clés et le tiret bas (_) en guise de séparateur dans le mot-clé s'il est composé de plusieurs mots.&#160;Ces mots-clés servent principalement à la conception de filtres et sont exploités pour affiner les rapports personnalisés, facilitant ainsi l'exploitation des files.<br /><a name="Tags_WPC" id="Tags_WPC"></a>Certains tags sont utilisés par WPC&#160;for Windows pour déclencher un comportement particulier de la file : </p>
+                                                <p class="Liste_puce_1"><strong>Tags </strong>: saisissez au besoin des mots-clés internes permettant de qualifier la file.&#160;Utilisez l'espace en guise de séparateur entre deux mots-clés et le tiret bas (_) en guise de séparateur dans le mot-clé s'il est composé de plusieurs mots.&#160;Ces mots-clés servent principalement à la conception de filtres et sont exploités pour affiner les rapports personnalisés, facilitant ainsi l'exploitation des files.<br /><a name="Tags_WPC"></a>Certains tags sont utilisés par WPC&#160;for Windows pour déclencher un comportement particulier de la file : </p>
                                                 <ul>
                                                     <li>
                                                         <p class="Liste_puce_1"><strong>remote :</strong> permet d'installer la file d'impression avec le PortMonitor WPC&#160;pour imprimer au format RAW&#160;sur le port 9100 du périphérique d'impression plutôt que d'envoyer la demande d'impression au serveur (permet d'activer l'impression directe avec WPC&#160;for Windows) ; </p>
@@ -286,7 +290,7 @@
                                                         <p class="Liste_puce_1"><strong>tcpip :</strong> permet d'installer la file d'impression avec son port d'impression <strong>TCPIP </strong>de manière à laisser MS&#160;Windows gérer l'impression, sans solliciter Watchdoc (permet l'impression directe par Windows). </p>
                                                     </li>
                                                     <li>
-                                                        <p class="Liste_puce_1"><strong><a name="forceinstall" id="forceinstall"></a>forceinstall :</strong> permet d'installer une file d'impression physique  automatiquement.</p>
+                                                        <p class="Liste_puce_1"><strong><a name="forceinstall"></a>forceinstall :</strong> permet d'installer une file d'impression physique  automatiquement.</p>
                                                     </li>
                                                 </ul>
                                                 <p>Lorsqu'une file est installée sans ces tags, le périphérique d'impression est installé avec le PortMonitor WPC, afin que la demande d'impression soit envoyée à Watchdoc via la PrintAPI.</p>
@@ -305,7 +309,7 @@
                                                 <p>&#160;</p>
                                             </li>
                                         </ul>
-                                        <h3 id="SectionPériphériques" data-magellan-target="SectionPériphériques">Section Périphériques</h3>
+                                        <h3 id="SectionPériphériques" data-magellan-target="SectionPériphériques"><a name="Section_Periph"></a>Section Périphériques</h3>
                                         <p>
                                             <img src="../../Z_Resources/Images/02_Captures/Config_Files_Peripheriques_V52.png" style="width: 700px;height: auto;" />
                                         </p>
@@ -369,7 +373,9 @@
                                                 <p class="Liste_puce_1"><strong style="color: #000000;">Sortie </strong>: par défaut, le nom de la file shadow est indiquée dans le champ de saisie.&#160;Dans la majorité des cas, ce paramètre ne donne lieu à aucun changement.</p>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1"><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term13">EMF<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Enhanced Metafile (ou EMF) est un format d'image numérique pour les systèmes Microsoft Windows et certains pilotes d'impression. Il s'agit d'une amélioration du type de fichier image de type WMF (Windows Metafile) avec des données codées sur 32 bits pour une meilleure qualité.</span></a> :  </p>
+                                                <p class="Liste_puce_1"><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term13">EMF<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Enhanced Metafile (ou EMF) est un format d'image numérique pour les systèmes Microsoft Windows et certains pilotes d'impression. Il s'agit d'une amélioration du type de fichier image de type WMF (Windows Metafile) avec des données codées sur 32 bits pour une meilleure qualité.</span></a> : attention : l'activation de ce type sur une file virtuelle peut en limiter les fonctionnalités (en particulier sur les spools <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term100">XPS<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>XML Paper Specification (XPS) est un langage de description de page, développé par Microsoft, destiné à concurrencer en partie le PDF pour la description de documents fixes et destinés à l'archivage et à l'impression.
+Le format permet d'intégrer des données vectorielles 2D et des polices de caractères, ainsi que des informations pour la protection du document par DRM.
+(Source : Wikipedia)</span></a> pour lesquels la transformation des spools devient alors impossible, par exemple). </p>
                                                 <ul style="list-style-type: circle;">
                                                     <li>
                                                         <p class="Liste_puce_2"><strong>Garder la configuration actuelle du pilote d'impression</strong> : optez pour ce choix afin de conserver la configuration définie par le pilote lors de l'installation ;</p>
@@ -385,7 +391,7 @@
                                         </ul>
                                         <ul>
                                             <li>
-                                                <p class="Liste_puce_1"><a name="CSR" id="CSR"></a><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term9">CSR<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Client Side Rendering. Dans une infrastructure Client/serveur, le Client-side rendering est la prise en charge du spool par le poste client et non par le serveur. Le poste client envoie donc au serveur un fichier de spool finalisé.</span></a> : </p>
+                                                <p class="Liste_puce_1"><a name="CSR"></a><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term9">CSR<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Client Side Rendering. Dans une infrastructure Client/serveur, le Client-side rendering est la prise en charge du spool par le poste client et non par le serveur. Le poste client envoie donc au serveur un fichier de spool finalisé.</span></a> : </p>
                                                 <ul style="list-style-type: circle;">
                                                     <li>
                                                         <p class="Liste_puce_2"><strong>Garder la configuration actuelle du pilote d'impression</strong> : optez pour ce choix afin de conserver la configuration définie par le pilote lors de l'installation ;</p>
@@ -431,7 +437,7 @@ Le fait que les messages soient archivés sur le serveur fait que l'utilisateur 
                                                 </ul>
                                             </li>
                                         </ul>
-                                        <h3 id="SectionEnvoidefichiersspools" data-magellan-target="SectionEnvoidefichiersspools">Section <a name="Envoi_de_fichiers_spools" id="Envoi_de_fichiers_spools"></a>Envoi de fichiers spools</h3>
+                                        <h3 id="SectionEnvoidefichiersspools" data-magellan-target="SectionEnvoidefichiersspools">Section <a name="Envoi_de_fichiers_spools"></a>Envoi de fichiers spools</h3>
                                         <p>Par défaut, l'envoi des spools est géré automatiquement par Watchdoc. Cependant, il peut être nécessaire, dans des configurations très spécifiques, de modifier les paramètres suivants&#160;:</p>
                                         <ul>
                                             <li>
@@ -543,7 +549,7 @@ Comme tous les protocoles basés sur IP, IPP peut être utilisé localement ou s
                                             <img src="../../Z_Resources/Images/02_Captures/Config_Files_Restriction_54.png" />
                                         </p>
                                         <p>&#160;</p>
-                                        <p class="Liste_puce_1"><strong><a name="Expiration" id="Expiration">Expiration</a></strong>
+                                        <p class="Liste_puce_1"><strong><a name="Expiration">Expiration</a></strong>
                                         </p>
                                         <p>Le paramètre fonctionne avec le paramètre <strong>Durée de vie</strong> qui suit.<br />Il permet de définir le traitement qui doit être appliqué aux travaux d'impression au-delà de la durée de vie fixée par défaut :</p>
                                         <ul>
@@ -697,7 +703,7 @@ Le fait que les messages soient archivés sur le serveur fait que l'utilisateur 
                                         <blockquote>
                                             <fieldset>Les données renvoyées par la fonction <strong>Monitoring </strong>de Watchdoc sont visibles dans les onglets <strong>Etat du périphérique</strong> et <strong>Incidents </strong>de l'interface d'administration ainsi que dans la base SQL servant à générer les statistiques d'impression.</fieldset>
                                         </blockquote>
-                                        <h3 id="SectionConfigurationSNMP" data-magellan-target="SectionConfigurationSNMP">Section Configuration <a name="SNMP" id="SNMP"></a>SNMP</h3>
+                                        <h3 id="SectionConfigurationSNMP" data-magellan-target="SectionConfigurationSNMP">Section Configuration <a name="SNMP"></a>SNMP</h3>
                                         <p>Si vous avez activé le monitoring SNMP, complétez-en la configuration (disponible depuis la v6.1.4898)&#160;: </p>
                                         <ul>
                                             <li>
@@ -740,7 +746,7 @@ Le fait que les messages soient archivés sur le serveur fait que l'utilisateur 
                                                         </ul>
                                                     </li>
                                                     <li>
-                                                        <p><b><a name="SNMP_Encodage" id="SNMP_Encodage"></a>Encodage :</b> dans la liste, sélectionnez le format d'encodage des caractères, si l'alphabet utilisé n'est pas l'alphabet latin.&#160;Ce paramètre n'est visible qu'en mode débogage (debug) (cf.&#160;<a href="../../H_HowTo/WD_Activer_ModeDebug.htm" target="_blank">Activer le mode débogage</a>) : <br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Files_SNMP_Encodage.png" style="width: 700px;height: auto;" /><br /><br /></p>
+                                                        <p><b><a name="SNMP_Encodage"></a>Encodage :</b> dans la liste, sélectionnez le format d'encodage des caractères, si l'alphabet utilisé n'est pas l'alphabet latin.&#160;Ce paramètre n'est visible qu'en mode débogage (debug) (cf.&#160;<a href="../../H_HowTo/WD_Activer_ModeDebug.htm" target="_blank">Activer le mode débogage</a>) : <br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Files_SNMP_Encodage.png" style="width: 700px;height: auto;" /><br /><br /></p>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -933,7 +939,7 @@ Le fait que les messages soient archivés sur le serveur fait que l'utilisateur 
                                                 <p class="Liste_puce_1"><strong>Consommation d'énergie :</strong> indiquez, pour les différents états du périphérique, quelle est la consommation estimée en Watts.</p>
                                             </li>
                                         </ul>
-                                        <h3 id="SectionModeexpert" data-magellan-target="SectionModeexpert">Section <a name="Mode_expert" id="Mode_expert"></a>Mode expert</h3>
+                                        <h3 id="SectionModeexpert" data-magellan-target="SectionModeexpert">Section <a name="Mode_expert"></a>Mode expert</h3>
                                         <p>La section regroupe des paramètres permettant de faciliter la détection d'anomalies afin de faciliter l'analyse. </p>
                                         <fieldset>Attention : nous vous recommandons de ne modifier ces paramètres qu'en cas de nécessité.&#160;</fieldset>
                                         <p>&#160;</p>

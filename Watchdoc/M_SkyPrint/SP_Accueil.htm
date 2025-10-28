@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Watchdoc Skyprint - Configurer les conditions d'acceptation des emails</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Watchdoc SkyPrint - Présentation de la page Accueil</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -21,7 +21,6 @@
         <link href="../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
         <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
         <style>/*&lt;meta /&gt;*/
 
@@ -87,6 +86,10 @@
 			///*<![CDATA[*/
 			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PK49S9NW');
 		///*]]>*/</script>
+        <script src="../Resources/Scripts/ScrollToTop.js">
+        </script>
+        <script src="../Resources/Scripts/Laguna.js">
+        </script>
     </head>
     <body>
         <div class="foundation-wrap off-canvas-wrapper">
@@ -199,58 +202,63 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor280"></a>
-                                            <MadCap:concept term="SP" />Watchdoc Skyprint - Configurer les conditions d'acceptation des emails</h1>
+                                        <h1><a name="aanchor106"></a>
+                                            <MadCap:concept term="SP" />Watchdoc SkyPrint - Présentation de la page Accueil</h1>
                                         <h2>Principe</h2>
-                                        <p>Lorsque l'utilisateur envoie sa demande d'impression  par mail  à l'adresse mail dédiée Skyprint, ce dernier  applique un contrôle des adresses mails autorisées à soumettre leurs travaux.&#160;<br />Si l'adresse mail de l'expéditeur est autorisée, Skyprint vérifie la présence d'un compte utilisateur (associé à l'adresse mail) dans l'annuaire configuré par défaut dans Watchdoc. <br />Si l'utilisateur ne dispose pas de compte dans l'un des annuaires mais que la création d'un compte est autorisée par Skyprint, ce dernier crée un compte dans la base Invités de WSC.<br /><br /><img src="../Z_Resources/Images/03_Schemas/SPv2_SCH_SchemaFonct_ConfigTravaux.png" style="width: 700px;" /></p>
-                                        <h2>Procédure</h2>
-                                        <ol>
-                                            <li value="1">
-                                                <p>En tant qu'administrateur, accédez à l'interface de configuration de Skyprint. </p>
+                                        <p>La page Accueil affiche l'état du serveur en précisant :</p>
+                                        <ul>
+                                            <li>
+                                                <p>le statut de la connexion au serveur <span class="mc-variable Document.Produit variable">Watchdoc</span> pour l'envoi de documents</p>
                                             </li>
-                                            <li value="2">
-                                                <p>Dans le menu, cliquez sur <b>Configuration des travaux</b>.</p>
+                                            <li>
+                                                <p>le statut de la connexion au serveur Watchdoc pour la gestion des utilisateurs</p>
                                             </li>
-                                            <li value="3">
-                                                <p>Dans la section <b>Conditions d'acceptation des emails</b>, complétez les champs de la section <b>Ajouter des conditions</b> : </p>
-                                                <ul>
-                                                    <li>
-                                                        <p><b>Domaine</b> : saisissez un  nom de domaine d'utilisateurs autorisés à utiliser Skyprint.&#160;Vous pouvez saisir plusieurs noms de domaines en utilisant le point-virgule (;) comme séparateur&#160;;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><b>Email</b> : saisissez le ou les emails des utilisateurs autorisés à utiliser Skyprint ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><b>Email :</b> saisissez le ou les emails des utilisateurs (appartenant à un domaine autorisé) non-autorisés à utiliser Skyprint. <br />N.B. : cette configuration peut être utile pour interdire l'usage de Skyprint à un ancien salarié  dont l'adresse mail serait toujours opérationnelle. Les adresses du  domaine "@organisation.com" est autorisé, mais l'utilisateur "d.dupont@organisation.com"  est interdit.</p>
-                                                    </li>
-                                                </ul>
+                                            <li>
+                                                <p>Liste des boîtes mails supervisées</p>
                                             </li>
-                                            <li value="4">
-                                                <p><b>Autoriser la création d'utilisateurs :</b> actionnez le bouton pour autoriser les utilisateurs non-inscrits  à utiliser Watchdoc SkyPrint.&#160;<br />Ainsi, lorsqu'un utilisateur non-inscrit dans l'annuaire ou dans la base Invités (et dont l'adresse mail remplit les conditions d'acceptation) envoie un mail à  Skyprint, ce dernier crée automatiquement un compte Invité dans WSC.&#160;L'utilisateur est alors autorisé à imprimer via Skyprint.</p>
-                                                <p>Si la création d'utilisateurs n'est pas autorisée, seuls les utilisateurs déjà inscrits dans l'annuaire de l'organisation ou dans la base Invités peuvent utiliser Skyprint si leur adresse mail remplit les conditions.</p>
+                                            <li>
+                                                <p>Liste des travaux pris en charge par Skyprint</p>
                                             </li>
-                                            <li value="5">
-                                                <p>Pour chaque domaine ou adresse saisi, cliquez sur le bouton <img src="Admin_Config_BoutonAjouter.png" style="width: 21px;height: 21px;" /> pour confirmer l'ajout.</p>
-                                                <p>Les domaines et adresses ajoutés s'affichent en-dessous dans la <b>Liste des conditions &gt; Domaines/emails acceptés </b>ou<b> Emails refusés</b>&#160;:<br /><br /><img src="Admin_Config_Conditions.png" /></p>
-                                                <p>&#160;</p>
-                                                <p>&#160;</p>
+                                        </ul>
+                                        <h2>Statut de la connexion au serveur pour l'envoi de documents</h2>
+                                        <p>Cette section fait état de la connexion au serveur configurée dans l'interface Configuration de Watchdoc &gt; section &#160;<b>Serveur utilisé pour l'envoi des documents</b>.</p>
+                                        <p>Les messages qui peuvent s'y afficher sont les suivants : </p>
+                                        <ul>
+                                            <li>
+                                                <p>emplacement inconnu : Watchdoc ne contient pas d'emplacements.&#160;Configurez au minimum 1&#160;emplacement dans Watchdoc (cf.&#160;<a href="../T_WPC/Windows/WPCW_Configurer_dansWD.htm" target="_blank">Configurer les emplacements</a>).</p>
                                             </li>
-                                            <li value="6">
-                                                <p><span style="font-weight: normal;">Pour tester l'application des conditions, saisissez une adresse mail dans le champ</span> <b>Tester un e-mail</b>, <span style="font-weight: normal;">puis cliquez sur</span> <b>Tester</b>.<br /></p>
+                                            <li>
+                                                <p>Opérationnel : la connexion et l'authentification au serveur est établie.</p>
                                             </li>
-                                            <li value="7">
-                                                <p>Vérifiez dans le compte-rendu de test que votre configuration est correcte ou réajustez-la avant de tester à nouveau :</p>
-                                                <p>&#160;</p>
-                                                <p>
-                                                    <img src="Admin_Config_Conditions_Test1.png" />
-                                                    <img src="Admin_Config_Conditions_Test2.png" />
-                                                </p>
-                                                <p>&#160;</p>
+                                        </ul>
+                                        <h2>Statut de la connexion au serveur pour la gestion des utilisateurs</h2>
+                                        <p>Cette section fait état de la connexion au serveur configuré dans l'interface Configuration de Watchdoc &gt; section &#160;<b>Serveur utilisé pour la gestion des utilisateurs</b>.<br /></p>
+                                        <h2>Liste des boîtes mails supervisées</h2>
+                                        <p>Cette section liste les adresses mails configurées dans l'interface <b>Configuration des boîtes mail</b> et précise :</p>
+                                        <ul>
+                                            <li>
+                                                <p>l'adresse mail utilisée</p>
                                             </li>
-                                            <li value="8">
-                                                <p>Lorsque les conditions sont validées, cliquez sur <strong>Sauvegarder</strong> pour valider ces paramètres.</p>
+                                            <li>
+                                                <p>la file d'impression associée à l'adresse</p>
                                             </li>
-                                        </ol>
+                                            <li>
+                                                <p>le type de serveur d'emails : GoogleWorkspace, Office 365, IMAP, POP3</p>
+                                            </li>
+                                            <li>
+                                                <p>le statut</p>
+                                            </li>
+                                        </ul>
+                                        <h2>Liste des travaux en attente</h2>
+                                        <p>Cette section liste les travaux traités par Skyprint :</p>
+                                        <ul>
+                                            <li>
+                                                <p>En attente : travaux envoyés à l'adresse mail dédiée de Skyrprint, mais pas encore pris en charge par Watchdoc ; </p>
+                                            </li>
+                                            <li>
+                                                <p>Envoyés : travaux envoyés à Skyprint transmis à  Watchdoc.&#160;</p>
+                                            </li>
+                                        </ul>
                                     </div>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

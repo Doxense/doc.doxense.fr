@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Watchdoc SkyPrint - Présentation de la page Accueil</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Watchdoc Skyprint - Configurer le serveur WSC</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -21,7 +21,6 @@
         <link href="../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
         <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
         <style>/*&lt;meta /&gt;*/
 
@@ -87,6 +86,10 @@
 			///*<![CDATA[*/
 			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PK49S9NW');
 		///*]]>*/</script>
+        <script src="../Resources/Scripts/ScrollToTop.js">
+        </script>
+        <script src="../Resources/Scripts/Laguna.js">
+        </script>
     </head>
     <body>
         <div class="foundation-wrap off-canvas-wrapper">
@@ -199,53 +202,115 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor289"></a>
-                                            <MadCap:concept term="SP" />Watchdoc SkyPrint - Présentation de la page Accueil</h1>
-                                        <h2>Principe</h2>
-                                        <p>La page Accueil affiche l'état du serveur en précisant :</p>
-                                        <ul>
-                                            <li>
-                                                <p>le statut de la connexion au serveur <span class="mc-variable Document.Produit variable">Watchdoc</span> pour l'envoi de documents</p>
+                                        <h1><a name="aanchor50"></a>
+                                            <MadCap:concept term="SP" />Watchdoc Skyprint - Configurer le serveur WSC</h1>
+                                        <h2>Présentation</h2>
+                                        <p>Les utilisateurs autorisés à envoyer des demandes d'impression via Skyprint sont gérés dans la base <b>Invités</b> de la Console de Supervision (WSC).Vous devez donc configurer la connexion entre le serveur Skyprint et le serveur WSC&#160;chargé de gérer les utilisateurs.</p>
+                                        <p>&#160;</p>
+                                        <p>Dans cette interface, vous configurez les paramètres du serveur chargé de gérer les utilisateurs de Skyprint. <br />Ces utilisateurs sont gérés dans la base Invités de WSC.&#160; Vous devez au préalable créer dans WSC&#160;un utilisateur doté d'un rôle d'administration de cette base Invités.<br /><br /><img src="../Z_Resources/Images/03_Schemas/SPv2_SCH_SchemaFonct_ConfigWSC.png" style="width: 700px;" /><br /></p>
+                                        <h2>Prérequis </h2>
+                                        <p>Cette configuration requiert  un compte utilisateur (login/mot de passe) appartenant à un profil de sécurité autorisé à lire, ajouter, éditer et supprimer des comptes dans la base Invités de WSC.&#160;<br />Il est donc nécessaire de configurer ce droit d'accès au préalable dans WSC.&#160;<br /></p>
+                                        <h2>Procédure</h2>
+                                        <h3>Créer et configurer le rôle d'administration Skyprint dans WSC</h3>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Accédez à l'interface d'administration de WSC; </p>
                                             </li>
-                                            <li>
-                                                <p>le statut de la connexion au serveur Watchdoc pour la gestion des utilisateurs</p>
+                                            <li value="2">
+                                                <p>depuis le <strong>Menu Principal</strong>,  cliquez sur <b>Configuration avancée</b>, puis sur <strong>Profils de sécurité</strong> : <br /><br /><img src="Admin_Config_Profil_SecuWSC.png" style="width: 700px;height: auto;" /></p>
+                                                <p>
+                                                    <br>
+                                                    </br>
+                                                </p>
                                             </li>
-                                            <li>
-                                                <p>Liste des boîtes mails supervisées</p>
+                                            <li value="3">
+                                                <p>dans la liste des profils de sécurité, cliquez sur <strong>Créer un profil</strong> ;</p>
                                             </li>
-                                            <li>
-                                                <p>Liste des travaux pris en charge par Skyprint</p>
+                                            <li value="4">
+                                                <p>dans l'interface <b>Création d'un profil</b>, complétez les champs : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p style="font-weight: bold;">Nom : <span style="font-weight: normal;">saisissez le nom attribué au profil chargé de gérer les utilisateurs Skyprint (Admin_Skyprint dans notre exemple) ;</span></p>
+                                                    </li>
+                                                    <li>
+                                                        <p style="font-weight: normal;"><strong>Description : </strong>précisez la nature du groupe créé (Administrateurs des comptes invités Skyprint, par exemple) ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p style="font-weight: normal;"><strong>Droits :</strong> dans la liste des droits, indiquez ceux qui sont attribués à ce profil :  ce profil doit disposer au moins des droits suivants : </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p style="font-weight: normal;">Console : Configuration</p>
+                                                            </li>
+                                                            <li>
+                                                                <p style="font-weight: normal;">Invités : Lecture, Ajout, Edition et Suppression ;</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p style="font-weight: bold;">Groupes des utilisateurs (ou utilisateur) : <span style="font-weight: normal;">dans le champ, saisissez le nom d'un groupe d'utilisateurs ou d'un utilisateur spécifique (préfixé par @) inclus dans ce profil d'administration (compte unique @skyprint dans notre exemple).</span></p>
+                                                    </li>
+                                                </ul>
                                             </li>
-                                        </ul>
-                                        <h2>Statut de la connexion au serveur pour l'envoi de documents</h2>
-                                        <p>Cette section fait état de la connexion au serveur configurée dans l'interface Configuration de Watchdoc &gt; section &#160;<b>Serveur utilisé pour l'envoi des documents</b>.</p>
-                                        <p>Les messages qui peuvent s'y afficher sont les suivants : </p>
-                                        <ul>
-                                            <li>
-                                                <p>emplacement inconnu : Watchdoc ne contient pas d'emplacements.&#160;Configurez au minimum 1&#160;emplacement dans Watchdoc (cf.&#160;<a href="../T_WPC/Windows/WPCW_Configurer_dansWD.htm" target="_blank">Configurer les emplacements</a>).</p>
+                                            <li value="5">
+                                                <p style="font-weight: bold;"><span style="font-weight: normal;">Cliquez sur Valider pour confirmer la création du profil de sécurité.</span><a class="MCPopupThumbnailLink" href="Admin_Config_Profil_SecuWSC_creation.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1639" data-mc-height="486" src="Admin_Config_Profil_SecuWSC_creation.png" tabindex="" style="max-width: 1000px;" /></a>
+                                                </p>
+                                                <p style="font-weight: bold;">
+                                                    <br />
+                                                </p>
                                             </li>
-                                            <li>
-                                                <p>Opérationnel : la connexion et l'authentification au serveur est établie.</p>
+                                            <li value="6">
+                                                <p>déconnectez-vous puis reconnectez-vous dans WSC&#160;avec un compte appartenant au profil de sécurité que vous avez créé (compte skyprint, par exemple) ;</p>
                                             </li>
-                                        </ul>
-                                        <h2>Statut de la connexion au serveur pour la gestion des utilisateurs</h2>
-                                        <p>Cette section fait état de la connexion au serveur configuré dans l'interface Configuration de Watchdoc &gt; section &#160;<b>Serveur utilisé pour la gestion des utilisateurs</b>.<br /></p>
-                                        <h2>Liste des boîtes mails supervisées</h2>
-                                        <p>Cette section liste les adresses mails configurées dans l'interface <b>Configuration des boîtes mail</b> et précise :</p>
-                                        <ul>
-                                            <li>
-                                                <p>l'adresse mail utilisée</p>
+                                            <li value="7">
+                                                <p>vérifiez que ce compte accède bien (au minimum) à l'interface de gestion des comptes invités : <br /><br /><img src="Admin_Config_Profil_SecuWSC_Verif.png" style="width: 0;" /></p>
+                                                <p>&#160;</p>
                                             </li>
-                                            <li>
-                                                <p>la file d'impression associée à l'adresse</p>
+                                            <li value="8">
+                                                <p>Une fois cette vérification faite, configurez la connexion entre le serveur Skyprint et la Console de Supervision WSC.</p>
                                             </li>
-                                            <li>
-                                                <p>le type de serveur d'emails : GoogleWorkspace, Office 365, IMAP, POP3</p>
+                                        </ol>
+                                        <h3>Configurer le serveur de gestion des utilisateurs dans Skyprint</h3>
+                                        <p>Dans cette section, vous configurez  l'accès au serveur WSC&#160;chargé de gérer les utilisateurs invités à utiliser Skyprint.&#160;<br />Ces utilisateurs sont gérés dans la base Invités de la Console de supervision WSC. </p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Accédez à l'interface de configuration de Skyprint. </p>
                                             </li>
-                                            <li>
-                                                <p>le statut</p>
+                                            <li value="2">
+                                                <p>Dans le menu, cliquez sur <b>Configuration de Watchdoc</b>.</p>
                                             </li>
-                                        </ul>
+                                            <li value="3">
+                                                <p>Dans la section <b>Serveur utilisé pour la gestion des utilisateurs</b>, indiquez les paramètres d'accès à la Console de Supervision : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p style="font-weight: bold;">Adresse du serveur : <span style="font-weight: normal;">saisissez (IP&#160;ou FQDN) du serveur sur lequel est hébergé WSC</span>.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p style="font-weight: bold;">Utiliser une connexion sécurisée : <span style="font-weight: normal;">activez le bouton si les accès au serveur Watchdoc sont sécurisés.</span></p>
+                                                    </li>
+                                                    <li>
+                                                        <p style="font-weight: bold;"><b>Port :</b> <span style="font-weight: normal;">saisissez le numéro du port d'accès sécurisé à WSC (5756 par défaut) ;</span></p>
+                                                    </li>
+                                                    <li>
+                                                        <p style="font-weight: normal;"><b>Compte :</b> saisissez le nom du compte autorisé à gérer la base Invités de WSC (configuré à l'étape précédente) ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p style="font-weight: normal;"><b>Mot de passe :</b> saisissez le mot de passe du compte  autorisé à gérer la base Invités de WSC (configuré à l'étape précédente).</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                        <ol data-mc-continue="true">
+                                            <li value="4">
+                                                <p>Une fois les données saisies dans les champs, cliquez sur le bouton <b>Tester</b> pour vérifier la connexion de Watchdoc SkyPrint avec le serveur WSC :<br /><br /><img src="Admin_Config_Srv_GestUtil.png" /></p>
+                                            </li>
+                                            <li value="5">
+                                                <p>Une fois les données saisies, cliquez sur le bouton <b>Tester</b> pour vérifier la connexion de Watchdoc Skyprint avec le serveur d'impression Watchdoc :<br /><br /><img src="Admin_Config_Srv_GestUtil_Test.png" /></p>
+                                                <p>&#160;</p>
+                                            </li>
+                                            <li value="6">
+                                                <p>Si le test n'est pas concluant, vérifiez les valeurs saisies et corrigez-les ou vérifiez l'état du serveur Watchdoc.&#160;Si le test est concluant, cliquez sur le bouton <strong>Sauvegarder </strong>pour enregistrer les paramètres.</p>
+                                            </li>
+                                        </ol>
                                     </div>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

@@ -4,7 +4,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Annexe - Configurer une boîte mail Office 365 dans Microsoft Entra</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="Présentation du principe et procédure d'installation de Watchdoc Print Client for Windows sur le poste utilisateur : prérequis, installation unitaire et installation en masse." /><title>Watchdoc Print Client for Windows®</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -21,7 +22,6 @@
         <link href="../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
         <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
         <style>/*&lt;meta /&gt;*/
 
@@ -87,6 +87,10 @@
 			///*<![CDATA[*/
 			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PK49S9NW');
 		///*]]>*/</script>
+        <script src="../Resources/Scripts/ScrollToTop.js">
+        </script>
+        <script src="../Resources/Scripts/Laguna.js">
+        </script>
     </head>
     <body>
         <div class="foundation-wrap off-canvas-wrapper">
@@ -199,162 +203,81 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1>Annexe - Configurer une boîte mail Office 365 dans Microsoft Entra</h1>
+                                        <h1><a name="aanchor64"></a>
+                                            <MadCap:concept term="WPC" />Watchdoc Skyprint - Procédure d'installation</h1>
                                         <h2>Principe</h2>
-                                        <p>Microsoft Outlook365 exige une authentification <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term86">oauth2<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>OAuth est une norme technologique qui vous permet d'autoriser une application ou un service à se connecter à un autre sans divulguer d'informations privées, telles que des mots de passe.
-OAuth est conçu pour fonctionner avec le protocole de transfert hypertexte (HTTP). Il utilise des jetons d'accès pour prouver votre identité et lui permettre d'interagir avec un autre service en votre nom. 
-L'OAuth 1.0 a été développée uniquement pour les sites Web. Il n’est pas largement utilisé aujourd’hui car OAuth 2.0 est conçu à la fois pour les applications et les sites Web, et il est plus rapide et plus facile à mettre en œuvre.
-Source www.microsoft.com</span></a> pour les applications externes qui souhaitent accéder à une boîte mail. <br />Il est donc nécessaire d'enregistrer préalablement Watchdoc Skyprint parmi les applications autorisées à accéder à MS Outlook365, puis de configurer cette application.</p>
-                                        <p>Cette configuration est effectuée dans l'interface de gestion Microsoft Entra.</p>
+                                        <p>Watchdoc Skyprint doit être installé sur un serveur MS&#160;Windows<sup>®</sup>.&#160;S'il n'est pas installé sur le  même serveur que Watchdoc, il doit être en mesure de communiquer avec Watchdoc et WSC. <br />Le logiciel d'installation est fourni par Doxense sous la forme d'un fichier <strong>msi</strong> nommé <strong>WatchdocSkyprint-x.x.x.x.msi</strong> téléchargeable depuis le <a href="../A_Getting_Started/Release_611.htm" target="_blank">site de documentation</a>. </p>
+                                        <p>&#160;</p>
+                                        <p>Le certificat Watchdoc Skyprint doit être installé sur le serveur qui héberge Watchdoc Skyprint.</p>
                                         <h2>Procédure</h2>
-                                        <h3>Enregistrer l'application Watchdoc Skyprint dans Entra</h3>
+                                        <h3>Installer</h3>
                                         <ol>
                                             <li value="1">
-                                                <p>Connectez-vous en tant qu'administrateur dans votre portail MS Entra.</p>
+                                                <p>Assurez-vous de disposer du fichier d'installation <strong>WatchdocPrintClient-x.x.x.x.msi</strong> (téléchargeable depuis le site de documentation)&#160;;</p>
                                             </li>
                                             <li value="2">
-                                                <p>Dans le menu <i style="font-weight: bold; font-style: normal;">Entra ID</i>, cliquez sur <b>Inscription d'applications</b> (App registration) :</p>
+                                                <p>connectez-vous en tant qu'administrateur sur le poste utilisateur sur lequel doit être installé  Watchdoc Skyprint ;</p>
                                             </li>
                                             <li value="3">
-                                                <p>Dans l'interface <b>Inscription d'applications</b>, cliquez sur <strong>Nouvelle inscription </strong>(New registration)&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="Admin_Config_MS365_1.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1625" data-mc-height="548" src="Admin_Config_MS365_1.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a></p>
-                                                <p>
-                                                    <br />
-                                                </p>
+                                                <p>copiez le fichier d'installation .msi sur le serveur et cliquez dessus pour lancer l'assistant d'installation ; </p>
                                             </li>
                                             <li value="4">
-                                                <p>Dans l'interface <strong>Inscrire une application</strong> (Registration)&#160;complétez les champs suivants : </p>
-                                                <ul>
-                                                    <li>
-                                                        <p><strong>Nom</strong> (Name)<strong> :</strong> attribuez un nom à l'application (Watchdoc Skyprint, par exemple). Ce nom ne s'affiche que dans l'interface d'administration Entra.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><b>Types de comptes pris en charge</b> (Account type)<strong> :</strong> sélectionnez <b>Comptes dans cet annuaire d'organisation uniquement - Locataire unique</b> (Single tenant), de manière à limiter l'usage de l'application.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><b>URI de redirection</b> <strong style="font-weight: normal;">(Redirect URI) :</strong></p>
-                                                        <ul>
-                                                            <li>
-                                                                <p>sélectionnez le type <b>Web</b>, </p>
-                                                            </li>
-                                                        </ul>
-                                                        <ul>
-                                                            <li>
-                                                                <p>saisissez l'URI utilisée pour recevoir le jeton d'authentification une fois l'utilisateur authentifié : <strong>http://[IP_serveur_Skyprint:port]/api/v0/oauth/office365/ack</strong> (ex.&#160;http://skyprint:5780/api/v0/oauth/office365/ack - 5760, port par défaut).&#160;<br /></p>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li value="5">
-                                                <p>cliquez sur <b>S'inscrire</b> <strong style="font-weight: normal;">(Register) :</strong><br /><br /><a class="MCPopupThumbnailLink" href="Admin_Config_MS365_Inscript.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1623" data-mc-height="893" src="Admin_Config_MS365_Inscript.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a><br /><br /></p>
-                                            </li>
-                                            <li value="6">
-                                                <p>Dans l'interface <b>Vue d'ensemble</b> de l'application créée (Skyprint)  des informations nécessaires à la configuration ultérieure de la boîte mail Outlook 365 dans Skyprint sont affichées :</p>
-                                                <ul>
-                                                    <li>
-                                                        <p><b>ID d'application (client)</b> (Application (client) ID) :  identifiant de l'application telle qu'enregistrée dans MS Entra</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>ID&#160;de l'annuaire (locataire) </strong>(Directory (tenant) ID) : identifiant de propriété de l'application.</p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ol>
-                                        <h3>Gérer les permissions de l'API</h3>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Dans l'interface <b>Vue d'ensemble</b> de l'application créée (Skyprint) , dans le menu, cliquez sur <strong>API autorisées</strong> ; </p>
-                                            </li>
-                                            <li value="2">
-                                                <p>dans l'interface, cliquez sur<strong> Ajouter une autorisation</strong>.</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>Sélectionnez l'ensemble<strong> API Microsoft Graph</strong> &gt; <strong>Microsoft Graph</strong> :<br /></p>
-                                            </li>
-                                            <li value="4">
-                                                <p>Puis sélectionnez <b>Autorisations déléguées</b>&#160;:</p>
-                                            </li>
-                                            <li value="5">
-                                                <p>dans le moteur de recherche, recherchez et sélectionnez les permissions suivantes&#160;:</p>
-                                                <ul>
-                                                    <li>
-                                                        <p>email (afficher l'adresse e-mail des utilisateurs)</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>IMAP.AccessAsUser.All (Accès en lecture et en écriture aux boîtes aux lettres via IMAP).</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>offline_access (Conserver l'accès aux données auxquelles vous lui avez donné accès),</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>User.Read (Activer la connexion et lire le profil utilisateur).</p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="6">
-                                                <p>puis cliquez sur <b>Ajouter des autorisations</b> : <br /><br /></p>
-                                                <p><a class="MCPopupThumbnailLink" href="Admin_Config_MS365_Perm.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="2263" data-mc-height="784" src="Admin_Config_MS365_Perm.png" tabindex="" style="max-width: 1000px;" /></a>
-                                                </p>
-                                                <p>
-                                                    <br />
-                                                </p>
-                                            </li>
-                                            <li value="7">
-                                                <p>les autorisations ajoutées s'affichent dans l'interface <b>Autorisations configurées</b>&#160;;<br /></p>
-                                            </li>
-                                            <li value="8">
-                                                <p>cliquez sur le bouton <strong>Accorder un consentement d'administrateur pour [Nom_Organisation]</strong> ;</p>
-                                            </li>
-                                            <li value="9">
-                                                <p>confirmez l'accord de consentement&#160;: <br /><br /><a class="MCPopupThumbnailLink" href="Admin_Config_MS365_Perm_Consent.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1842" data-mc-height="795" src="Admin_Config_MS365_Perm_Consent.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a></p>
-                                            </li>
-                                        </ol>
-                                        <h3>Accorder le consentement d'administrateur</h3>
-                                        <p>L'autorisation Office 365 Exchange Online s'affiche dans la liste avec la mention Pas accordé pour [Nom_Organisation].</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>cliquez sur le bouton <strong>Accorder un consentement d'administrateur </strong>pour [Nom_Organisation] :</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>puis confirmez l'accord de consentement d'administrateur :<br /><br /><img src="../C_Configurer/ConfigNotifs/Admin_Config_MS365_Office_Consent.png" style="width: 700px;" /></p>
-                                            </li>
-                                        </ol>
-                                        <h3>Définir un Secret</h3>
-                                        <p>Il convient d'attribuer un mot de passe propre à l'application (Secret). <br /></p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Dans l'interface <b>Vue d'ensemble</b> de l'application (Skyprint), menu Gérer, cliquez sur Certificats &amp; secrets : </p>
-                                            </li>
-                                            <li value="2">
-                                                <p>cliquez sur <b>Nouveau secret client</b> :</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>dans l'interface <b>Ajouter un secret client</b>, complétez les champs suivants&#160;:</p>
-                                                <ul>
-                                                    <li>
-                                                        <p><strong>Description : </strong>saisissez la description du mot de passe (qui sera automatiquement généré par Entra) ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Date d'expiration </strong>(Expiration date)<strong> : </strong>date d'expiration du secret.&#160;Une fois le délai expiré, vous devrez en générer un nouveau puis mettre à jour la configuration de Skyprint.<br /></p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="4">
-                                                <p>Cliquez sur <b>Ajouter</b> (Create) :<br /><br /><a class="MCPopupThumbnailLink" href="Admin_Config_MS365_Secret.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1342" data-mc-height="863" src="Admin_Config_MS365_Secret.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a></p>
-                                                <p>&#160;</p>
-                                                <fieldset><span style="font-size: 12pt;">Attention : une fois le secret créé, il apparaît dans la liste des "Secrets clients" et sert à configuer la boîte MSOffice 365 dans Skyprint.</span>
-                                                    <br style="font-size: 12pt;" /><b style="font-size: 12pt;">Prenez soin de la noter ou de la copier à ce moment précis car cette valeur ne  sera plus accessible ensuite</b><span style="font-size: 12pt;">. </span>
-                                                    <br style="font-size: 12pt;" /><span style="font-size: 12pt;">Si vous n'avez pas copié le secret au moment de la création ou si vous l'avez perdu, cliquez sur <b>Nouveau secret client</b> pour le recréer.</span>
-                                                    <br />
-                                                    <br /><a class="MCPopupThumbnailLink" href="Admin_Config_MS365_SecretCopier.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1333" data-mc-height="704" src="Admin_Config_MS365_SecretCopier.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a>
-                                                </fieldset>
+                                                <p>dans l'assistant, cliquez sur <b>Next</b> pour valider les différentes étapes : <br /><br /><img src="Admin_Install.png" /></p>
                                             </li>
                                         </ol>
                                         <p>&#160;</p>
+                                        <ol data-mc-continue="true">
+                                            <li value="5">
+                                                <p>Lorsque le message de fin d'installation s'affiche, cliquez sur <b>Finish</b> :<br /><span style="font-family: 'Wingdings'">è</span> Skyprint est alors installé et l'icone s'affiche sur le bureau du serveur. </p>
+                                            </li>
+                                        </ol>
+                                        <h3>Ajouter le certificat</h3>
+                                        <p>Il convient ensuite d'ajouter le certificat dans le dossier Skyprint.</p>
+                                        <ol data-mc-continue="false">
+                                            <li value="1">
+                                                <p>Connectez-vous à l'interface d'administration de Watchdoc.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Depuis le <strong>Menu Principal</strong>, section <strong>Configuration</strong>, cliquez sur <strong>Configuration avancé&#160;&gt;&#160;Configuration Système</strong>.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Dans la section <strong>Divers</strong>, cliquez sur  <strong>Exporter le certificat</strong> : <br></br><br></br><img src="../Z_Resources/Images/02_Captures/WD_Express/wd_express_wpc7.png"></img></p>
+                                            </li>
+                                        </ol>
+                                        <ol data-mc-continue="true">
+                                            <li value="4">
+                                                <p>Le fichier généré est nommé <strong>print_api_cert.der</strong>. </p>
+                                                <p>Enregistrez-le dans le dossier  d'installation de Watchdoc Skyprint (par défaut, <strong>C:\Program Files\Doxense\Skyprint</strong>) :<br /><br /><img src="Admin_Install_Cert.png" /><br /><br /></p>
+                                                <p><span style="font-family: 'Wingdings'">è</span>Vous pouvez alors cliquer sur l'icone Skyprint pour accéder à l'interface. </p>
+                                                <p>
+                                                    <br />
+                                                </p>
+                                            </li>
+                                        </ol>
+                                        <h3>Changer le mot de passe d'accès en mode maintenance</h3>
+                                        <p>Authentifiez-vous à l'aide du compte de maintenance /&#160;changeme pour configurer Skyprint. <br />Nous vous conseillons de modifier le mot de passe du compte de maintenance afin de sécuriser l'accès à Skyprint.<br /></p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>En tant qu'administrateur, accédez à l'interface de configuration de Skyprint. </p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Dans le menu, cliquez sur <b>Configuration générale</b>.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Dans la section <b>Changer le mot de passe maintenance</b>, saisissez le nouveau mot de passe en respectant le format attendu : au moins 8 caractères contenant une minuscule, une majuscule, un chiffre et un caractère spécial. Un champ encadré de rouge signale que le mot de passe ne correspond pas au format attendu.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Saisissez de nouveau le mot de passe.</p>
+                                            </li>
+                                            <li value="5">
+                                                <p style="font-weight: bold;"><span style="font-weight: normal;">Cliquez sur</span> Changer le mot de passe.&#160;</p>
+                                            </li>
+                                        </ol>
+                                        <p style="font-weight: bold;">
+                                            <img src="Admin_Config_Gen_MotdePasse.png" />
+                                            <br />
+                                        </p>
+                                        <p style="font-weight: normal;"><span style="font-family: 'Wingdings'">è</span> Un message informe du succès de l'opération.</p>
                                     </div>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

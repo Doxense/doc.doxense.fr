@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Watchdoc Skyprint - Configurer le serveur WSC</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Annexe - Configurer une boîte mail Office 365 dans Microsoft Entra</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -21,7 +21,6 @@
         <link href="../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
         <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
         <style>/*&lt;meta /&gt;*/
 
@@ -87,6 +86,10 @@
 			///*<![CDATA[*/
 			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PK49S9NW');
 		///*]]>*/</script>
+        <script src="../Resources/Scripts/ScrollToTop.js">
+        </script>
+        <script src="../Resources/Scripts/Laguna.js">
+        </script>
     </head>
     <body>
         <div class="foundation-wrap off-canvas-wrapper">
@@ -199,115 +202,162 @@
                                         </div>
                                     </div>
                                     <div class="body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor55"></a>
-                                            <MadCap:concept term="SP" />Watchdoc Skyprint - Configurer le serveur WSC</h1>
-                                        <h2>Présentation</h2>
-                                        <p>Les utilisateurs autorisés à envoyer des demandes d'impression via Skyprint sont gérés dans la base <b>Invités</b> de la Console de Supervision (WSC).Vous devez donc configurer la connexion entre le serveur Skyprint et le serveur WSC&#160;chargé de gérer les utilisateurs.</p>
-                                        <p>&#160;</p>
-                                        <p>Dans cette interface, vous configurez les paramètres du serveur chargé de gérer les utilisateurs de Skyprint. <br />Ces utilisateurs sont gérés dans la base Invités de WSC.&#160; Vous devez au préalable créer dans WSC&#160;un utilisateur doté d'un rôle d'administration de cette base Invités.<br /><br /><img src="../Z_Resources/Images/03_Schemas/SPv2_SCH_SchemaFonct_ConfigWSC.png" style="width: 700px;" /><br /></p>
-                                        <h2>Prérequis </h2>
-                                        <p>Cette configuration requiert  un compte utilisateur (login/mot de passe) appartenant à un profil de sécurité autorisé à lire, ajouter, éditer et supprimer des comptes dans la base Invités de WSC.&#160;<br />Il est donc nécessaire de configurer ce droit d'accès au préalable dans WSC.&#160;<br /></p>
+                                        <h1>Annexe - Configurer une boîte mail Office 365 dans Microsoft Entra</h1>
+                                        <h2>Principe</h2>
+                                        <p>Microsoft Outlook365 exige une authentification <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term86">oauth2<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>OAuth est une norme technologique qui vous permet d'autoriser une application ou un service à se connecter à un autre sans divulguer d'informations privées, telles que des mots de passe.
+OAuth est conçu pour fonctionner avec le protocole de transfert hypertexte (HTTP). Il utilise des jetons d'accès pour prouver votre identité et lui permettre d'interagir avec un autre service en votre nom. 
+L'OAuth 1.0 a été développée uniquement pour les sites Web. Il n’est pas largement utilisé aujourd’hui car OAuth 2.0 est conçu à la fois pour les applications et les sites Web, et il est plus rapide et plus facile à mettre en œuvre.
+Source www.microsoft.com</span></a> pour les applications externes qui souhaitent accéder à une boîte mail. <br />Il est donc nécessaire d'enregistrer préalablement Watchdoc Skyprint parmi les applications autorisées à accéder à MS Outlook365, puis de configurer cette application.</p>
+                                        <p>Cette configuration est effectuée dans l'interface de gestion Microsoft Entra.</p>
                                         <h2>Procédure</h2>
-                                        <h3>Créer et configurer le rôle d'administration Skyprint dans WSC</h3>
+                                        <h3>Enregistrer l'application Watchdoc Skyprint dans Entra</h3>
                                         <ol>
                                             <li value="1">
-                                                <p>Accédez à l'interface d'administration de WSC; </p>
+                                                <p>Connectez-vous en tant qu'administrateur dans votre portail MS Entra.</p>
                                             </li>
                                             <li value="2">
-                                                <p>depuis le <strong>Menu Principal</strong>,  cliquez sur <b>Configuration avancée</b>, puis sur <strong>Profils de sécurité</strong> : <br /><br /><img src="Admin_Config_Profil_SecuWSC.png" style="width: 700px;height: auto;" /></p>
-                                                <p>
-                                                    <br>
-                                                    </br>
-                                                </p>
+                                                <p>Dans le menu <i style="font-weight: bold; font-style: normal;">Entra ID</i>, cliquez sur <b>Inscription d'applications</b> (App registration) :</p>
                                             </li>
                                             <li value="3">
-                                                <p>dans la liste des profils de sécurité, cliquez sur <strong>Créer un profil</strong> ;</p>
+                                                <p>Dans l'interface <b>Inscription d'applications</b>, cliquez sur <strong>Nouvelle inscription </strong>(New registration)&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="Admin_Config_MS365_1.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1625" data-mc-height="548" src="Admin_Config_MS365_1.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a></p>
+                                                <p>
+                                                    <br />
+                                                </p>
                                             </li>
                                             <li value="4">
-                                                <p>dans l'interface <b>Création d'un profil</b>, complétez les champs : </p>
+                                                <p>Dans l'interface <strong>Inscrire une application</strong> (Registration)&#160;complétez les champs suivants : </p>
                                                 <ul>
                                                     <li>
-                                                        <p style="font-weight: bold;">Nom : <span style="font-weight: normal;">saisissez le nom attribué au profil chargé de gérer les utilisateurs Skyprint (Admin_Skyprint dans notre exemple) ;</span></p>
+                                                        <p><strong>Nom</strong> (Name)<strong> :</strong> attribuez un nom à l'application (Watchdoc Skyprint, par exemple). Ce nom ne s'affiche que dans l'interface d'administration Entra.</p>
                                                     </li>
                                                     <li>
-                                                        <p style="font-weight: normal;"><strong>Description : </strong>précisez la nature du groupe créé (Administrateurs des comptes invités Skyprint, par exemple) ; </p>
+                                                        <p><b>Types de comptes pris en charge</b> (Account type)<strong> :</strong> sélectionnez <b>Comptes dans cet annuaire d'organisation uniquement - Locataire unique</b> (Single tenant), de manière à limiter l'usage de l'application.</p>
                                                     </li>
                                                     <li>
-                                                        <p style="font-weight: normal;"><strong>Droits :</strong> dans la liste des droits, indiquez ceux qui sont attribués à ce profil :  ce profil doit disposer au moins des droits suivants : </p>
+                                                        <p><b>URI de redirection</b> <strong style="font-weight: normal;">(Redirect URI) :</strong></p>
                                                         <ul>
                                                             <li>
-                                                                <p style="font-weight: normal;">Console : Configuration</p>
-                                                            </li>
-                                                            <li>
-                                                                <p style="font-weight: normal;">Invités : Lecture, Ajout, Edition et Suppression ;</p>
+                                                                <p>sélectionnez le type <b>Web</b>, </p>
                                                             </li>
                                                         </ul>
-                                                    </li>
-                                                    <li>
-                                                        <p style="font-weight: bold;">Groupes des utilisateurs (ou utilisateur) : <span style="font-weight: normal;">dans le champ, saisissez le nom d'un groupe d'utilisateurs ou d'un utilisateur spécifique (préfixé par @) inclus dans ce profil d'administration (compte unique @skyprint dans notre exemple).</span></p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>saisissez l'URI utilisée pour recevoir le jeton d'authentification une fois l'utilisateur authentifié : <strong>http://[IP_serveur_Skyprint:port]/api/v0/oauth/office365/ack</strong> (ex.&#160;http://skyprint:5780/api/v0/oauth/office365/ack - 5760, port par défaut).&#160;<br /></p>
+                                                            </li>
+                                                        </ul>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li value="5">
-                                                <p style="font-weight: bold;"><span style="font-weight: normal;">Cliquez sur Valider pour confirmer la création du profil de sécurité.</span><a class="MCPopupThumbnailLink" href="Admin_Config_Profil_SecuWSC_creation.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1639" data-mc-height="486" src="Admin_Config_Profil_SecuWSC_creation.png" tabindex="" style="max-width: 1000px;" /></a>
+                                                <p>cliquez sur <b>S'inscrire</b> <strong style="font-weight: normal;">(Register) :</strong><br /><br /><a class="MCPopupThumbnailLink" href="Admin_Config_MS365_Inscript.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1623" data-mc-height="893" src="Admin_Config_MS365_Inscript.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a><br /><br /></p>
+                                            </li>
+                                            <li value="6">
+                                                <p>Dans l'interface <b>Vue d'ensemble</b> de l'application créée (Skyprint)  des informations nécessaires à la configuration ultérieure de la boîte mail Outlook 365 dans Skyprint sont affichées :</p>
+                                                <ul>
+                                                    <li>
+                                                        <p><b>ID d'application (client)</b> (Application (client) ID) :  identifiant de l'application telle qu'enregistrée dans MS Entra</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>ID&#160;de l'annuaire (locataire) </strong>(Directory (tenant) ID) : identifiant de propriété de l'application.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                        <h3>Gérer les permissions de l'API</h3>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Dans l'interface <b>Vue d'ensemble</b> de l'application créée (Skyprint) , dans le menu, cliquez sur <strong>API autorisées</strong> ; </p>
+                                            </li>
+                                            <li value="2">
+                                                <p>dans l'interface, cliquez sur<strong> Ajouter une autorisation</strong>.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Sélectionnez l'ensemble<strong> API Microsoft Graph</strong> &gt; <strong>Microsoft Graph</strong> :<br /></p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Puis sélectionnez <b>Autorisations déléguées</b>&#160;:</p>
+                                            </li>
+                                            <li value="5">
+                                                <p>dans le moteur de recherche, recherchez et sélectionnez les permissions suivantes&#160;:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>email (afficher l'adresse e-mail des utilisateurs)</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>IMAP.AccessAsUser.All (Accès en lecture et en écriture aux boîtes aux lettres via IMAP).</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>offline_access (Conserver l'accès aux données auxquelles vous lui avez donné accès),</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>User.Read (Activer la connexion et lire le profil utilisateur).</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                        <ol data-mc-continue="true">
+                                            <li value="6">
+                                                <p>puis cliquez sur <b>Ajouter des autorisations</b> : <br /><br /></p>
+                                                <p><a class="MCPopupThumbnailLink" href="Admin_Config_MS365_Perm.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="2263" data-mc-height="784" src="Admin_Config_MS365_Perm.png" tabindex="" style="max-width: 1000px;" /></a>
                                                 </p>
-                                                <p style="font-weight: bold;">
+                                                <p>
                                                     <br />
                                                 </p>
                                             </li>
-                                            <li value="6">
-                                                <p>déconnectez-vous puis reconnectez-vous dans WSC&#160;avec un compte appartenant au profil de sécurité que vous avez créé (compte skyprint, par exemple) ;</p>
-                                            </li>
                                             <li value="7">
-                                                <p>vérifiez que ce compte accède bien (au minimum) à l'interface de gestion des comptes invités : <br /><br /><img src="Admin_Config_Profil_SecuWSC_Verif.png" style="width: 0;" /></p>
-                                                <p>&#160;</p>
+                                                <p>les autorisations ajoutées s'affichent dans l'interface <b>Autorisations configurées</b>&#160;;<br /></p>
                                             </li>
                                             <li value="8">
-                                                <p>Une fois cette vérification faite, configurez la connexion entre le serveur Skyprint et la Console de Supervision WSC.</p>
+                                                <p>cliquez sur le bouton <strong>Accorder un consentement d'administrateur pour [Nom_Organisation]</strong> ;</p>
+                                            </li>
+                                            <li value="9">
+                                                <p>confirmez l'accord de consentement&#160;: <br /><br /><a class="MCPopupThumbnailLink" href="Admin_Config_MS365_Perm_Consent.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1842" data-mc-height="795" src="Admin_Config_MS365_Perm_Consent.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a></p>
                                             </li>
                                         </ol>
-                                        <h3>Configurer le serveur de gestion des utilisateurs dans Skyprint</h3>
-                                        <p>Dans cette section, vous configurez  l'accès au serveur WSC&#160;chargé de gérer les utilisateurs invités à utiliser Skyprint.&#160;<br />Ces utilisateurs sont gérés dans la base Invités de la Console de supervision WSC. </p>
+                                        <h3>Accorder le consentement d'administrateur</h3>
+                                        <p>L'autorisation Office 365 Exchange Online s'affiche dans la liste avec la mention Pas accordé pour [Nom_Organisation].</p>
                                         <ol>
                                             <li value="1">
-                                                <p>Accédez à l'interface de configuration de Skyprint. </p>
+                                                <p>cliquez sur le bouton <strong>Accorder un consentement d'administrateur </strong>pour [Nom_Organisation] :</p>
                                             </li>
                                             <li value="2">
-                                                <p>Dans le menu, cliquez sur <b>Configuration de Watchdoc</b>.</p>
+                                                <p>puis confirmez l'accord de consentement d'administrateur :<br /><br /><img src="../C_Configurer/ConfigNotifs/Admin_Config_MS365_Office_Consent.png" style="width: 700px;" /></p>
+                                            </li>
+                                        </ol>
+                                        <h3>Définir un Secret</h3>
+                                        <p>Il convient d'attribuer un mot de passe propre à l'application (Secret). <br /></p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Dans l'interface <b>Vue d'ensemble</b> de l'application (Skyprint), menu Gérer, cliquez sur Certificats &amp; secrets : </p>
+                                            </li>
+                                            <li value="2">
+                                                <p>cliquez sur <b>Nouveau secret client</b> :</p>
                                             </li>
                                             <li value="3">
-                                                <p>Dans la section <b>Serveur utilisé pour la gestion des utilisateurs</b>, indiquez les paramètres d'accès à la Console de Supervision : </p>
+                                                <p>dans l'interface <b>Ajouter un secret client</b>, complétez les champs suivants&#160;:</p>
                                                 <ul>
                                                     <li>
-                                                        <p style="font-weight: bold;">Adresse du serveur : <span style="font-weight: normal;">saisissez (IP&#160;ou FQDN) du serveur sur lequel est hébergé WSC</span>.</p>
+                                                        <p><strong>Description : </strong>saisissez la description du mot de passe (qui sera automatiquement généré par Entra) ;</p>
                                                     </li>
                                                     <li>
-                                                        <p style="font-weight: bold;">Utiliser une connexion sécurisée : <span style="font-weight: normal;">activez le bouton si les accès au serveur Watchdoc sont sécurisés.</span></p>
-                                                    </li>
-                                                    <li>
-                                                        <p style="font-weight: bold;"><b>Port :</b> <span style="font-weight: normal;">saisissez le numéro du port d'accès sécurisé à WSC (5756 par défaut) ;</span></p>
-                                                    </li>
-                                                    <li>
-                                                        <p style="font-weight: normal;"><b>Compte :</b> saisissez le nom du compte autorisé à gérer la base Invités de WSC (configuré à l'étape précédente) ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p style="font-weight: normal;"><b>Mot de passe :</b> saisissez le mot de passe du compte  autorisé à gérer la base Invités de WSC (configuré à l'étape précédente).</p>
+                                                        <p><strong>Date d'expiration </strong>(Expiration date)<strong> : </strong>date d'expiration du secret.&#160;Une fois le délai expiré, vous devrez en générer un nouveau puis mettre à jour la configuration de Skyprint.<br /></p>
                                                     </li>
                                                 </ul>
                                             </li>
                                         </ol>
                                         <ol data-mc-continue="true">
                                             <li value="4">
-                                                <p>Une fois les données saisies dans les champs, cliquez sur le bouton <b>Tester</b> pour vérifier la connexion de Watchdoc SkyPrint avec le serveur WSC :<br /><br /><img src="Admin_Config_Srv_GestUtil.png" /></p>
-                                            </li>
-                                            <li value="5">
-                                                <p>Une fois les données saisies, cliquez sur le bouton <b>Tester</b> pour vérifier la connexion de Watchdoc Skyprint avec le serveur d'impression Watchdoc :<br /><br /><img src="Admin_Config_Srv_GestUtil_Test.png" /></p>
+                                                <p>Cliquez sur <b>Ajouter</b> (Create) :<br /><br /><a class="MCPopupThumbnailLink" href="Admin_Config_MS365_Secret.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1342" data-mc-height="863" src="Admin_Config_MS365_Secret.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a></p>
                                                 <p>&#160;</p>
-                                            </li>
-                                            <li value="6">
-                                                <p>Si le test n'est pas concluant, vérifiez les valeurs saisies et corrigez-les ou vérifiez l'état du serveur Watchdoc.&#160;Si le test est concluant, cliquez sur le bouton <strong>Sauvegarder </strong>pour enregistrer les paramètres.</p>
+                                                <fieldset><span style="font-size: 12pt;">Attention : une fois le secret créé, il apparaît dans la liste des "Secrets clients" et sert à configuer la boîte MSOffice 365 dans Skyprint.</span>
+                                                    <br style="font-size: 12pt;" /><b style="font-size: 12pt;">Prenez soin de la noter ou de la copier à ce moment précis car cette valeur ne  sera plus accessible ensuite</b><span style="font-size: 12pt;">. </span>
+                                                    <br style="font-size: 12pt;" /><span style="font-size: 12pt;">Si vous n'avez pas copié le secret au moment de la création ou si vous l'avez perdu, cliquez sur <b>Nouveau secret client</b> pour le recréer.</span>
+                                                    <br />
+                                                    <br /><a class="MCPopupThumbnailLink" href="Admin_Config_MS365_SecretCopier.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1333" data-mc-height="704" src="Admin_Config_MS365_SecretCopier.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a>
+                                                </fieldset>
                                             </li>
                                         </ol>
+                                        <p>&#160;</p>
                                     </div>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

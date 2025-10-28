@@ -22,7 +22,6 @@
         <link href="../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
         <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
         <style>/*&lt;meta /&gt;*/
 
@@ -88,6 +87,10 @@
 			///*<![CDATA[*/
 			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PK49S9NW');
 		///*]]>*/</script>
+        <script src="../Resources/Scripts/ScrollToTop.js">
+        </script>
+        <script src="../Resources/Scripts/Laguna.js">
+        </script>
     </head>
     <body>
         <div class="foundation-wrap off-canvas-wrapper">
@@ -211,7 +214,7 @@
                                         <p>5. mettez à jour WSC sur le erveur master ;</p>
                                         <p>6. si Watchdoc est installé en domaine, mettez à jour les autres serveurs à l'aide de WSC.</p>
                                         <h2>Procédure </h2>
-                                        <h3><a name="WD" id="WD"></a>Mettre à jour Watchdoc</h3>
+                                        <h3><a name="WD"></a>Mettre à jour Watchdoc</h3>
                                         <ol>
                                             <li value="1">
                                                 <p class="Liste_num_1">Dans le dossier où ont été décompressés les fichiers, double-cliquez sur <strong>WatchdocUpdate.exe</strong> pour lancer l'exécutable de mise à jour&#160;:<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../Z_Resources/Images/02_Captures/MAJ_WD_Update_60.png"><img class="MCPopupThumbnail img" data-mc-width="790" data-mc-height="242" src="../Z_Resources/Images/02_Captures/MAJ_WD_Update_60.png" tabindex="" style="width: 700px;mc-thumbnail: popup;mc-thumbnail-max-width: 1000px;max-width: 1000px;" /></a></p>
@@ -241,7 +244,7 @@
                                         <p class="Resultat">&#160;</p>
                                         <p class="Resultat"><span style="font-family: 'Wingdings'">è</span> un message vous informe de la fin et du succès de la mise à jour&#160;: <br /><br /><img src="../Z_Resources/Images/02_Captures/WD53_MaJ_UpdateComplete.png" style="width: 338px;height: 130px;" /></p>
                                         <p>&#160;</p>
-                                        <h3><a name="MaJ_WSC" id="MaJ_WSC"></a>Mettre à jour la Console de Supervision (WSC)&#160;</h3>
+                                        <h3><a name="MaJ_WSC"></a>Mettre à jour la Console de Supervision (WSC)&#160;</h3>
                                         <p>Si vous l'utilisez, mettez à jour WSC.</p>
                                         <ol>
                                             <li value="1">
@@ -254,7 +257,7 @@
                                         </ol>
                                         <p class="Resultat"><span style="font-family: 'Wingdings'">è</span> un message vous informe de la fin et du succès de la mise à jour&#160;: <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V6_Updater_Succes.png" style="width: 338px;height: 130px;" /><br /></p>
                                         <p>&#160;</p>
-                                        <h3><a name="BDD" id="BDD"></a>Mettre à jour la base de données </h3>
+                                        <h3><a name="BDD"></a>Mettre à jour la base de données </h3>
                                         <p>Pour connaître la version de votre base de données, depuis l'interface web d'administration de Watchdoc, rendez-vous dans <strong>Menu principal</strong>, section <strong>Configuration</strong>, &gt; <strong>Configuration avancée</strong> &gt; <strong>Base de statistiques</strong>.&#160;<br />Dans la section <strong>Statistiques</strong>, la version de la base s'affiche dans l'encart <strong>Base de données principale</strong> : <br /><img src="WD_MaJ_Bdd_verif.png" style="width: 332px;height: 213px;" /><br /><br /></p>
                                         <p class="Liste_num_1">Si la base de données doit être mise à jour :</p>
                                         <ol>
@@ -326,7 +329,7 @@
                                             </li>
                                         </ol>
                                         <p>&#160;</p>
-                                        <h3><a name="MaJ_WD_Verif" id="MaJ_WD_Verif"></a>Migrer les données de la base de données</h3>
+                                        <h3><a name="MaJ_WD_Verif"></a>Migrer les données de la base de données</h3>
                                         <p>Après avoir mis à jour la base de données, il est nécessaire de procéder à la migration des données.<br />Procédez par étape, comme pour la mise à jour de la base de données&#160;:</p>
                                         <p>&#160;</p>
                                         <ol>
@@ -365,7 +368,7 @@
                                             </li>
                                         </ol>
                                         <p>&#160;</p>
-                                        <h3><a name="MaJ_WD_Verif" id="MaJ_WD_Verif"></a>Vérifier la mise à jour de Watchdoc</h3>
+                                        <h3><a name="MaJ_WD_Verif"></a>Vérifier la mise à jour de Watchdoc</h3>
                                         <ol data-mc-continue="true">
                                             <li value="5">
                                                 <p class="Liste_num_1">Dans la page d'accueil de l'interface web d'administration de Watchdoc, vérifiez que le numéro de version a été mis à jour&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WD61_MMJ_VerifVersion.png" style="width: 700px;" /></p>
@@ -387,7 +390,7 @@
                                             </li>
                                         </ol>
                                         <p>&#160;</p>
-                                        <h3><a name="MaJ_WSC_Verif" id="MaJ_WSC_Verif"></a>Vérifier la mise à jour de WSC</h3>
+                                        <h3><a name="MaJ_WSC_Verif"></a>Vérifier la mise à jour de WSC</h3>
                                         <p>Dans la page d'aide de l'interface web d'administration de WSC  vérifiez que le numéro de version a été mis à jour&#160;:</p>
                                         <ol>
                                             <li value="1">
@@ -398,7 +401,7 @@
                                             </li>
                                         </ol>
                                         <p>&#160;</p>
-                                        <h3><a name="MaJ_WD_Propager" id="MaJ_WD_Propager"></a>Propager la mise à jour sur les autres serveurs du domaine</h3>
+                                        <h3><a name="MaJ_WD_Propager"></a>Propager la mise à jour sur les autres serveurs du domaine</h3>
                                         <p>Lorsque Watchdoc / WSC est installé en domaine (configuration master/slaves), une fois que le serveur master est à jour, il est nécessaire de mettre à jour tous les autres serveurs qui en dépendent.&#160;</p>
                                         <p>&#160;</p>
                                         <p>Vous pouvez procéder de manière manuelle et unitaire : appliquez les étapes précédentes sur chaque serveur du domaine.&#160;</p>

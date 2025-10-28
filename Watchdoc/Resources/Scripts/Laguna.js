@@ -10,8 +10,8 @@
 
 /********* Back to Top Button **********/
 function BackToTop() {
-	if ($("body-container").length === 1) {
-		var bodyContainer = $('body-container')[0];
+	if ($(".body-container").length === 1) {
+		var bodyContainer = $('.body-container')[0];
 		var mybutton = document.createElement("button");
 		var textnode = document.createTextNode("Top");
 		mybutton.appendChild(textnode);
