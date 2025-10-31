@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="WSC Supervision" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="HTML5">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="Présentation du principe de configuration du système WSC et accès à l'interface." /><title>Console de Supervision (WSC) - Configurer le système</title>
+        <!-- Google Tag Manager -->
+        <!-- End Google Tag Manager -->
+        <!-- Script tableau triable -->
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.needs-pie
+{
+	behavior: url('../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/javascript"> 
+			///*<![CDATA[*/
+			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PK49S9NW');
+		///*]]>*/</script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expanded-event="open.zf.drilldown closed.zf.drilldown" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div>
+                        <nav class="title-bar tab-bar" aria-label="Main navigation and search" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="https://doc.doxense.fr" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <!-- Google Tag Manager (noscript) -->
+                                    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+                                    </noscript>
+                                    <!-- End Google Tag Manager (noscript) -->
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Toolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Print">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Print">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Remove Highlights">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="nocontent">
+                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                        </div>
+                                    </div>
+                                    <div class=".body-container" role="main" id="mc-main-content">
+                                        <h1><a name="aanchor267"></a>
+                                            <MadCap:concept term="WSC" />Console de Supervision (WSC) - Configurer le système</h1>
+                                        <h2>Principe</h2>
+                                        <p>Lors de l'installation de Watchdoc et de son installation, la Console de Supervision est configurée par défaut.&#160;<br />Vous pouvez avoir besoin de modifier certains paramètres de configuration.</p>
+                                        <h2>Accéder à l'interface de configuration</h2>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Depuis le <strong>Menu principal</strong> de WSC, cliquez sur bouton <strong>Configuration avancée</strong>&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V6_Admin_ConfigAvancee_Acces_700x364.png" style="width: 700;height: 364;" /></p>
+                                                <p>&#160;</p>
+                                                <p>&#160;</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Dans l'interface <strong>Configuration avancée</strong>, cliquez sur <strong>Service</strong>&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V6_Admin_ConfigService_Access_700x366.png" style="width: 700;height: 366;" /><br /></p>
+                                            </li>
+                                        </ol>
+                                        <p>&#160;</p>
+                                        <p>&#160;</p>
+                                        <p class="Resultat">→ Vous accédez à l'interface <strong>Configuration Système</strong>.&#160;<br />Les champs sont remplis à l'aide des paramètres indiqués lors de l'installation initiale à l'aide de l'assistant. Modifiez ou complétez ces paramètres si nécessaire.&#160;<br />Une fois les modifications apportées, sauvegardez-les en cliquant sur <strong>Enregistrer les modifications</strong> en fin de page.&#160;<br /></p>
+                                        <h2>Configurez le système</h2>
+                                        <h3>Section Configuration générale</h3>
+                                        <ul>
+                                            <li>
+                                                <p class="Liste_puce_2"><strong>Données</strong> : par défaut, les données de WSC&#160;sont enregistrées dans un dossier préconfiguré.&#160;Si vous souhaitez enregistrer les données dans un autre dossier, indiquez le chemin vers ce dossier dans le champ&#160;: </p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>Obfuscation </strong>: cochez la case pour activer l'obfuscation des mots de passe d'accès à WSC et sélectionnez dans la liste suivante l'algorithme utilisé pour le chiffrement.</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>Super Utilisateur</strong> : le Super Utilisateur est un administrateur disposant du droit d'accéder à l'interface d'administration en mode maintenance et habilité, de ce fait, à modifier toute la configuration de WSC. Saisissez dans ce champ le mot de passe  permettant d'accéder à l'interface d'administration en tant que Super Utilisateur.</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>Langue : </strong>dans la liste, sélectionnez la langue d'utilisation de WSC ; </p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>Expiration de session : IP </strong>: complétez les champs pour indiquer, en minutes le délai au-delà duquel la session d'administration et la session d'utilisation doivent expirer. Au-delà, les administrateurs ou utilisateurs devront s'authentifier de nouveau.</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Connexion :</strong> cochez la case pour activer la passerelle <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term92">SSPI<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Interface du fournisseur de support de sécurité (Security Support Provider Interface). L'interface SSPI est une interface universelle, normalisée par l'industrie, pour les applications distribuées sécurisées.
+(Source : https://learn.microsoft.com/)</span></a>/<a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term111">NTLM<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>L’authentification NTLM désigne un ensemble de protocoles d’authentification inclus dans la bibliothèque Windows Msv1_0.dll. Les protocoles d’authentification NTLM comprennent les versions 1 et 2 de LAN Manager et les versions 1 et 2 de NTLM.
+
+Ils ont pour but d’authentifier des utilisateurs et des ordinateurs sur la base d’un mécanisme de stimulation/réponse destiné à prouver à un serveur ou un contrôleur de domaine qu’un utilisateur connaît le mot de passe associé à un compte. (Source : https://learn.microsoft.com/fr-fr/windows-server/security/kerberos/ntlm-overview)</span></a> de manière à ce que l'opérateur/administrateur puisse se connecter à l'aide de son compte de domaine : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V6_ConfigSystem_ConfigGen.png" /></p>
+                                            </li>
+                                        </ul>
+                                        <h3>Serveur</h3>
+                                        <p>Vous disposez de différents outils permettant d'affiner la consultation&#160;:</p>
+                                        <ul>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>Serveur web : </strong>
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Nom ou adresse IP&#160;du serveur :</strong> qui héberge WSC ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Ports sécurisés : </strong>SSL ou SSLT</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>N'autoriser que les connexions sécurisées</strong> : cochez la case pour sécuriser les accès à WSC</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Autoriser les connexion </strong><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term112">Keep-Alive<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Un keepalive (KA) est un message envoyé par un appareil à un autre pour vérifier que le lien entre les deux est actif, ou pour empêcher que le lien soit brisé.
+(source : https://fr.wikipedia.org/wiki)</span></a> : cochez la case pour faire en sorte que la connexion entre le serveur Watchdoc et le serveur WSC&#160;soit maintenue suivant le protocole keep-alive.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Activer la compression automatique des réponses : </strong>cochez cette case pour optimiser la place occupée par les réponses.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p><strong>Protocole de sécurisation </strong>: </p>
+                                                <ul>
+                                                    <li>
+                                                        <p><strong>Utiliser la configuration du serveur :</strong> cochez cette case pour autoriser que WSC&#160;soit sécurisé de la même manière que le serveur.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term5">SSL/TLS<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Secure Sockets Layer. Protocole de sécurisation des échanges sur Internet, devenu Transport Layer Security (TLS) en 2001.</span></a> : cochez la case correspondant à la version du protocole que vous souhaitez utiliser pour sécuriser WSC. WSC&#160;est compatible TLS&#160;v1.3 depuis la version 6.1.0.4855.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p><strong>Journaux :</strong> cochez la case <strong>Activer le logging </strong><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term47">DSP<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Les fichiers SHD appartiennent principalement à Print Spooler de Microsoft. Un fichier SHD est un travail d'impression fantôme contenant des informations d'en-tête sur un travail d'impression lancé par le service Print Spooler sur Windows système d'exploitation. Les informations enregistrées dans un fichier SHD incluent une copie des paramètres de travail d'impression enregistrés dans le document spoule réel (fichier SPL). 
+(source : https://filext.com/)</span></a> pour conserver les traces de l'activité DSP de la Console de Supervision. <br />Indiquez ensuite le chemin du dossier dans lequel ces journaux doivent être conservés si vous ne souhaitez pas les conserver dans le dossier par défaut.&#160;</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Profiling :</strong> cochez la case si, suite à des problèmes de performance sur certaines pages, le Support Doxense vous recommande d'activer le profiling à des fins de diagnostic.&#160;</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Enregistrer toute l'activité réseau sur le disque : </strong>cochez la case pour conserver la trace des échanges entre Watchdoc et WSC.</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Activer la REST&#160;API : </strong>cochez la case pour autoriser des applications tierces à utiliser l'application REST&#160;pour communiquer avec  WSC, puis complétez les informations de connexion :</p>
+                                                <ul>
+                                                    <li>
+                                                        <p><strong>Nom d'utilisateur :</strong> saisissez le nom du compte autorisé activer la REST&#160;API;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Mot de passe :</strong> saisissez le mot de passe du compte autorisé à activer la REST&#160;API.<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V6_ConfigSystem_Serveur.png" /></p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <h3>Serveur distant</h3>
+                                        <p>Ces paramètres concernent la configuration entre WSC et Watchdoc.</p>
+                                        <ul>
+                                            <li>
+                                                <p><strong>REST API :</strong> cochée par défaut, cette case sert à autoriser la communication entre Watchdoc et WSC.</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Port : </strong>indiquez le port d'accès au serveur Watchdoc s'il ne s'agit pas du port par défaut 5753.</p>
+                                            </li>
+                                            <li>
+                                                <p>Cochez la case si le service REST&#160;est en <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term5">SSL<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Secure Sockets Layer. Protocole de sécurisation des échanges sur Internet, devenu Transport Layer Security (TLS) en 2001.</span></a>.</p>
+                                            </li>
+                                            <li>
+                                                <p>Cochez la case pour autoriser les connexion <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term112">Keep-Alive<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Un keepalive (KA) est un message envoyé par un appareil à un autre pour vérifier que le lien entre les deux est actif, ou pour empêcher que le lien soit brisé.
+(source : https://fr.wikipedia.org/wiki)</span></a>.</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Timeout : </strong>saisissez, en secondes les délais pour établir une connexion, exécuter une requête et envoyer le corps de la requête au serveur. Lorsque ce délai est dépassé, vous recevez un message d'erreur. Nous vous recommandons de ne modifier ces paramètres qu'à la demande du Support Doxense à des fins d'analyse en cas de problème.</p>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <p><strong>Serveur distant </strong>: indiquez l'adresse (DNS ou IP) de Watchdoc s'il est situé sur un ou des serveurs distants. Conservez la valeur par défaut localhost dans le cas où WSC&#160;et Watchdoc sont installés sur les mêmes serveurs : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V6_ConfigSystem_ServeurDistant.png" /> </p>
+                                            </li>
+                                        </ul>
+                                        <h3>Envoi automatique des informations des périphériques dans la base de données</h3>
+                                        <ul>
+                                            <li>
+                                                <p><strong>Activation : </strong>cochez la case pour autoriser l'envoi des données des périphériques d'impression gérés dans WSC vers la base de données de Watchdoc. </p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Fréquence :</strong> dans ce champ, indiquez (au format Crontab) la fréquence à laquelle vous souhaitez excécuter l'envoi.</p>
+                                                <p>Cliquez sur le bouton<strong> Lancer l'assistant</strong> de configuration pour être aidé dans la saisie de la tâche planifiée :<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V6_ConfigSystem_EnvoiAuto.png" /></p>
+                                            </li>
+                                        </ul>
+                                        <h3>Divers</h3>
+                                        <p>Dans cette section, précisez : </p>
+                                        <ul>
+                                            <li>
+                                                <p><strong>Seuil : </strong>le seuil de consommables en-deça duquel WSC&#160;envoie une alerte ; <br /></p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Suffixe DNS :</strong> dans le cas où la connexion entre WSC&#160;et Watchdoc ne fonctionne pas (message d'erreur selon lequel WSC ne connaît pas le serveur Watchdoc lorsque vous cliquez sur un serveur dans WSC&#160;pour accéder à son paramétrage dans Watchdoc), il peut être nécessaire d'indiquer le suffixe DNS à la place du nom NetBIOS afin de faciliter la connexion.&#160;</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Passage en erreur :</strong> indiquez, en secondes, le temps d'inactivité  avant que le(s) serveur(s) Wachdoc interrogé(s) soient considérés comme défaillants.&#160;Au-delà de ce délai, vous recevez un message d'erreur.&#160;</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>NTLM :</strong> cochez la case si les serveurs IIS autorisent le <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term111">NTLM<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>L’authentification NTLM désigne un ensemble de protocoles d’authentification inclus dans la bibliothèque Windows Msv1_0.dll. Les protocoles d’authentification NTLM comprennent les versions 1 et 2 de LAN Manager et les versions 1 et 2 de NTLM.
+
+Ils ont pour but d’authentifier des utilisateurs et des ordinateurs sur la base d’un mécanisme de stimulation/réponse destiné à prouver à un serveur ou un contrôleur de domaine qu’un utilisateur connaît le mot de passe associé à un compte. (Source : https://learn.microsoft.com/fr-fr/windows-server/security/kerberos/ntlm-overview)</span></a>. Si le <strong>NTLM </strong>est autorisé, l'authentification n'est plus nécessaire lorsque vous passez de WSC&#160;à Watchdoc et inversement.&#160;</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Liens externes : </strong>si la connexion entre WSC et Watchdoc est problématique,  il peut être nécessaire d'ajouter ce nom de domaine pour établir la connexion.&#160;</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Oeufs de Pâques :</strong> cochez la case pour désactiver les oeufs de Pâques existants : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V6_ConfigSystem_Divers.png" />ll<br /></p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
+                                    </script>
+                                    <script src="../Resources/Scripts/Laguna.js">
+                                    </script>
+                                    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
+                                    </script>
+                                    <script src="../Resources/Scripts/resize-initializer.js">
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="HTML5">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="Présentation de l'architecture technique et fonctionnelle de Watchdoc et WSC, des fonctions clés et bénéfices du produit." /><title>Présentation de Watchdoc</title>
+        <!-- Google Tag Manager -->
+        <!-- End Google Tag Manager -->
+        <!-- Script tableau triable -->
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.needs-pie
+{
+	behavior: url('../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/javascript"> 
+			///*<![CDATA[*/
+			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PK49S9NW');
+		///*]]>*/</script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expanded-event="open.zf.drilldown closed.zf.drilldown" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div>
+                        <nav class="title-bar tab-bar" aria-label="Main navigation and search" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="https://doc.doxense.fr" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <!-- Google Tag Manager (noscript) -->
+                                    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+                                    </noscript>
+                                    <!-- End Google Tag Manager (noscript) -->
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Toolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Print">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Print">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Remove Highlights">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="nocontent">
+                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                        </div>
+                                    </div>
+                                    <div class=".body-container" role="main" id="mc-main-content">
+                                        <h1>Présentation de Watchdoc</h1>
+                                        <p>mise à jour : mai 2024</p>
+                                        <h2>Qu'est-ce que Watchdoc ?</h2>
+                                        <p>Watchdoc est une solution de gestion et d’optimisation des impressions, développée grâce aux dernières technologies Microsoft<sup>®</sup>, qui vous permet d'appliquer une politique d'impression éco-responsable.</p>
+                                        <p>Outre ses fonctionnalités standard, telles que la comptabilisation et la gestion des quotas, Watchdoc dispose des options suivantes&#160;:</p>
+                                        <ul>
+                                            <li>
+                                                <p class="Liste_puce_2">WRS&#160;: Watchdoc for Reporting Services</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_2">WSC : Watchdoc Supervision Console</p>
+                                            </li>
+                                            <li>
+                                                <p>FIL&#160;: file d’impression locale</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_2">Connecteur Paybox</p>
+                                            </li>
+                                        </ul>
+                                        <h2>Architecture technique et fonctionnelle</h2>
+                                        <p>
+                                            <img src="../Z_Resources/Images/03_Schemas/WD_SCH_SchemaLogiqueFonctionnel.jpg" alt="" title="" />
+                                        </p>
+                                        <p>&#160;</p>
+                                        <p>
+                                            <p><strong style="color: #ff8c00; background-color: #ffffff;">1.</strong> 	L'utilisateur lance une demande d'impression depuis son poste de travail.</p>
+                                            <p><strong style="color: #ff8c00;">2.</strong> Cette demande d'impression est envoyée dans la file partagée du serveur d'impression habituel. La seule différence visible, par rapport à une impression non contrôlée par Watchdoc, est que les files d'impression de ce serveur sont "en pause". Lorsque le travail d'impression est soumis au serveur par un poste client, le spool d'impression est placé en attente dans la file d'impression du serveur.</p>
+                                            <p><strong style="color: #ff8c00;">3.	</strong>Watchdoc analyse le travail d'impression pour en extraire les informations essentielles et parcourt le fichier de spool pour en définir les caractéristiques (noir &amp; blanc ou couleur, nombre de pages, etc.).</p>
+                                            <p><strong style="color: #ff8c00;">4.</strong>	Watchdoc compare les caractéristiques du travail d'impression et du profil utilisateur avec les règles établies afin de vérifier s'il existe des actions spécifiques à appliquer (blocage de l'impression, courriel de notification, etc.). Par défaut, en mode comptabilisation, le travail est prêt à être imprimé immédiatement. En mode validation (Print-on-Demand), le travail est gardé en sécurité jusqu'à ce que l'utilisateur le libère depuis l'interface web ou après s'être identifié ou avoir badgé sur le périphérique.</p>
+                                            <p><strong style="color: #ff8c00;">5.</strong> Si la transformation de spools est disponible (fonction soumise à compatibilité du périphérique) et activée, elle est appliquée : en fonction du paramétrage défini, Watchdoc suggère ou force l'utilisateur à modifier ses choix d'impression initiaux pour adopter des choix d'impression plus économiques et écologiques : recto-verso plutôt que recto simple, N&amp;B plutôt que couleur, réduction du nombre d'exemplaires.</p>
+                                            <p><![CDATA[	]]><strong style="color: #ff8c00;">6.</strong> Si nécessaire, l'utilisateur est informé par mail que son travail est en attente, ou qu'il n'a pas été imprimé s'il ne répond pas aux règles définies par la politique d'impression.</p>
+                                            <p><strong style="color: #ff8c00;">7.</strong> 	L'activité d'impression est enregistrée dans la base de données statistiques.</p>
+                                            <p><strong style="color: #ff8c00;">8.	</strong> En mode "validation", l'utilisateur s'authentifie sur le périphérique d'impression de son choix.</p>
+                                            <p><strong style="color: #ff8c00;">9.	</strong> Watchdoc dirige le travail d'impression vers le périphérique choisi par l'utilisateur et recueille les données fournies par le périphérique.</p>
+                                            <p><strong style="color: #ff8c00;">10.	</strong> Lorsque le travail d'impression est libéré, Watchdoc le déplace dans la file d'impression (shadow) du périphérique d'impression.</p>
+                                            <p><strong style="color: #ff8c00;">11.</strong>	 Le travail est imprimé sur le périphérique.</p>
+                                        </p>
+                                        <h2>Fonctions clés</h2>
+                                        <ul>
+                                            <li>
+                                                <p class="Liste_puce_1">Audit en temps réel et analyse détaillée de votre activité d’impression mono ou multi-site (qui imprime quel type de document, sur quel périphérique, quand et à quel coût ?).</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1">Une interface 100% web accessible depuis tous les postes de travail.</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1">Redirection des impressions vers un autre périphérique en cas d'indisponibilité du périphérique initialement sollicité.</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1">Libération automatique de vos travaux sur le point d’impression de votre choix grâce à votre badge ou code PIN : déplacement de Watchdoc sur l’ensemble des écrans des périphériques multifonctions (WES).</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1">Gestion centralisée du parc de périphériques, même lorsque les points d’impression sont géographiquement distants.</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1">Déploiement facile d'une politique d’impression grâce à l’instauration de règles (analyse de la demande, reroutage et suppression) et mesure de l'efficacité de cette politique.</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1">Suivi des dépenses d’impression et de copies avec précisions sur le  coût papier et le coût énergétique des périphériques dans le coût global d'impression.</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1">Sauvegarde des impressions et statistiques associées en cas d’inaccessibilité des ressources (annuaires ou bases de données).</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1"> Gestion de quotas et de la refacturation.</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1">Remontées analytiques des impressions effectuées sur vos imprimantes locales (parallèle, USB, direct IP) et un comptage précis des impressions effectuées sur les périphériques réseau.</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1">Gestion des comptes invités.</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1">Accès facilité aux périphériques d'impression pour tous les utilisateurs hors annuaire (prestataires externes ou invités), grâce à la gestion d’une base de données indépendante de l’annuaire AD, permettant à ces utilisateurs d'accéder à l’ensemble des fonctions</p>
+                                            </li>
+                                        </ul>
+                                        <h2>Bénéfices</h2>
+                                        <ul>
+                                            <li>
+                                                <p class="Liste_puce_1">Réduction des dépenses liées au poste "impression".</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1">Protection de l'environnement en réduisant le nombre d'impressions. </p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1">Augmentation de la qualité de service auprès des utilisateurs.</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1">Rationalisation des parcs de périphériques.</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1">Optimisation de la gestion des consommables.</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
+                                    </script>
+                                    <script src="../Resources/Scripts/Laguna.js">
+                                    </script>
+                                    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
+                                    </script>
+                                    <script src="../Resources/Scripts/resize-initializer.js">
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

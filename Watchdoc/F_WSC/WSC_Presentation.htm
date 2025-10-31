@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="HTML5">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="Présentation de la Console de Supervision, accès à l'interface et présentation des modules présents dans WSC." /><title>WSC Console de supervision - Présentation</title>
+        <!-- Google Tag Manager -->
+        <!-- End Google Tag Manager -->
+        <!-- Tableau triable
+        <link rel="stylesheet" type="text/css" href="../DataTables/DataTables-1.10.20/css/jquery.dataTables.css" /> -->
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.needs-pie
+{
+	behavior: url('../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <style>/*&lt;meta /&gt;*/
+
+.button.next-topic-button
+{
+	-pie-background: linear-gradient(#ffffff, #fcfaf8);
+}
+
+.needs-pie
+{
+	behavior: url('../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/javascript"> 
+			///*<![CDATA[*/
+			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PK49S9NW');
+		///*]]>*/</script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expanded-event="open.zf.drilldown closed.zf.drilldown" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div>
+                        <nav class="title-bar tab-bar" aria-label="Main navigation and search" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="https://doc.doxense.fr" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
+                                    </script>
+                                    <!-- Google Tag Manager (noscript) -->
+                                    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+                                    </noscript>
+                                    <!-- End Google Tag Manager (noscript) -->
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Toolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Print">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Print">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Remove Highlights">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="nocontent">
+                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                        </div>
+                                    </div>
+                                    <div class=".body-container" role="main" id="mc-main-content">
+                                        <h1><a name="aanchor376"></a>
+                                            <MadCap:concept term="WSC" />WSC Console de supervision - Présentation</h1>
+                                        <h2>Principe</h2>
+                                        <p>Watchdoc Supervision Console (WSC) est un outil permettant, à partir d'une seule interface, de superviser l'activité de tous les composants du parc d'impression pilotés par Watchdoc (serveurs, files, WES et consommables).&#160;Cet outil facilite ainsi la gestion du parc d'impression, notamment dans le cas où ce parc est important.</p>
+                                        <p> </p>
+                                        <p>Depuis la version 6, WSC n'est plus soumis à licence spécifique : la licence Watchdoc suffit.&#160;Si vous disposiez d'une licence WSC pour une version WSC&#160;antérieure à la v6, pensez à réinitialiser la licence WSC. </p>
+                                        <p>&#160;</p>
+                                        <p>Depuis la version 6.1, WSC&#160;est sécurisée contre les <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term109">Attaques par force-brute<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Une attaque par force brute (bruteforce attack) consiste à tester, l’une après l’autre, chaque combinaison possible d’un mot de passe ou d’une clé pour un identifiant donné afin se connecter au service ciblé. Il s’agit d’une méthode ancienne et répandue chez les pirates. Le temps nécessaire à celle-ci dépend du nombre de possibilités, de la vitesse que met l’attaquant pour tester chaque combinaison et des défenses qui lui sont opposées. Ce type d’attaque étant relativement simple, un organisme peut disposer de systèmes permettant de se protéger de ce type de comportement. La première ligne du système de défense est le blocage de comptes après un nombre limité d’échecs d’authentification pour un même identifiant. Le fonctionnement de l’attaque par force brute est proche de l’attaque par credential stuffing, mais est moins élaborée. (Source : https://www.cnil.fr/)</span></a> : un délai d'attente incrémental est imposé après chaque tentative d'authentification infructueuse.</p>
+                                        <p>&#160;</p>
+                                        <p>Depuis la version 6.1, WSC&#160;n'accepte que les pilotes certifiés.&#160;Il est donc nécessaire de réinstaller les pilotes existants (cf.&#160;<a href="WSC6.1.x_Ajouter_Pilote.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">WSC&#160;- Créer les pilotes d'impression</a>).&#160;</p>
+                                        <p>&#160;</p>
+                                        <p data-mc-conditions="General.Obsolète">[Mention supprimée le 23/10/2023 pour la V6] Ce module complémentaire est soumis à une licence spécifique payante (<strong>WSC&#160;Télémétrie</strong>) et suppose que la licence Watchdoc<sup>®</sup> comprenne l'option <strong>Télémétrie</strong>, activée dans Watchdoc<sup>®</sup>.</p>
+                                        <p data-mc-conditions="General.Obsolète">Par ailleurs, cet outil permet également la gestion des badges et des comptes invités, à l'aide de deux modules fournis, eux, gratuitement.<br /><br /></p>
+                                        <fieldset>Les actions de supervision des serveurs, des files d'impression et des consommables envoient vers l'interface d'administration de Watchdoc dans laquelle vous devrez vous authentifier en tant qu'administrateur pour accéder aux informations détaillées.</fieldset>
+                                        <h2>Accéder à WSC</h2>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Pour accéder à la console de supervision, ouvrez votre navigateur à l'adresse de votre serveur d'impression et ajoutez le numéro de port 5756 (https://server_name:5756) ou cliquez sur le raccourci ajouté automatiquement sur le bureau en phase d'installation (si vous avez accepté cette option).<br /></p>
+                                            </li>
+                                        </ol>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Authentifiez-vous, soit depuis :</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>l'accès <strong>opérateur </strong>vous permet de vous connecter avec vos identifiants Windows. C'est la méthode préférée.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>l'accès <strong>maintenance</strong>, qui ne nécessite qu'un mot de passe, est réservé aux opérations de maintenance ou lorsque vous ne pouvez pas vous connecter avec la première méthode.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                        <ol data-mc-continue="true">
+                                            <li value="2">
+                                                <p>cliquez sur <strong>Se connecter</strong> pour accéder au <strong>Menu Principal</strong>.</p>
+                                                <p>&#160;</p>
+                                                <p>Depuis la version 6.0.4770, il est possible de modifier la langue d'affichage de WSC&#160;depuis la page d'authentification :<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Authent_Langue.png" /><br /></p>
+                                            </li>
+                                        </ol>
+                                        <h2>Présentation des modules</h2>
+                                        <p>Les modules de supervision disponibles dans la Console de Supervision de Watchdoc<sup>®</sup> sont les suivants : </p>
+                                        <blockquote>
+                                            <p style="text-align: left;">
+                                                <img src="../Z_Resources/Images/02_Captures/WSC_Admin_MenuPrincipal_V6_700x315.png" style="width: 700;height: 315;" />
+                                            </p>
+                                        </blockquote>
+                                        <ul>
+                                            <li>
+                                                <p class="Liste_puce_2"><strong>Serveurs d'impression : </strong>permet d'accéder à la supervision de tous les serveurs contrôlés par Watchdoc<sup>®</sup> ;</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_2"><strong>Files d'impression : </strong>permet d'accéder à la supervision de toutes les files contrôlées par Watchdoc<sup>®</sup> ;</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_2"><strong>Opérations Plug and Print :</strong> permet d'accéder à l'outil de création des files contrôlées par Watchdoc ;</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Templates d'imprimantes : </strong>permet d'accéder à l'outil d'association entre template d'imprimante et pilote ;</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_2"><strong>Consommables : </strong>permet d'accéder à la supervision des consommables de toutes les files contrôlées par Watchdoc<sup>®</sup> ;</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_2"><strong>Gestion des spoolers Watchdoc : </strong>permet d'accéder à la supervision des files et travaux en attente sur le spooler Watchdoc<sup>®</sup> ; </p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_2"><strong>Gestion des badges : </strong>permet d'accéder à la gestion des badges permettant aux utilisateurs de s'authentifier dans Watchdoc<sup>®</sup> ; </p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_2"><strong>Gestion des invités : </strong>permet d'accéder à la gestion de l'annuaire des invités autorisés à s'authentifier dans Watchdoc<sup>®</sup> ;</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_2"><b>Configuration avancée :</b> permet d'accéder à d'autres modules de gestion destinés à l'administration avancée de WSC ;</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_2"><strong>Gestion des codes analytiques : </strong>permet de gérer les codes analytiques utilisés par la fonction "Codes de refacturation".</p>
+                                            </li>
+                                        </ul>
+                                        <p>&#160;</p>
+                                        <p>La <strong>Configuration Avancée</strong> contient les modules d'administration suivants : </p>
+                                        <blockquote>
+                                            <p style="text-align: left;">
+                                                <img src="../Z_Resources/Images/02_Captures/WSC_Admin_MenuGestionAvancee_V6_700x264.png" style="width: 700;height: 264;" />
+                                                <br />
+                                            </p>
+                                        </blockquote>
+                                        <ul>
+                                            <li>
+                                                <p class="Liste_puce_2"><strong>Service :</strong> permet d'accéder aux outils de configuration générale de la Console de Supervision ;</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Configuration PnP :</strong> permet d'accéder au module Plug And Print permettant la détection automatique des nouvelles files d'impression ; </p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_2"><strong>Base de badges :</strong> permet d'accéder à la configuration de la base de données dans laquelle sont enregistrés les badges ;</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_2"><strong>Annuaires utilisateurs :</strong> permet d'accéder à la liste de tous les annuaires, de les synchroniser, mais aussi de déclarer de nouveaux annuaires&#160;;</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_2"><b>Gestion de la licence&#160;:</b> permet d'accéder aux informations relatives à la licence WSC&#160;et à son interface de gestion (ce module ne concerne que les versions WSC installées avec les versions Watchdoc antérieures V5.5).</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_2"><strong>Maintenance des serveurs :</strong> permet d'accéder à l'interface d'activation et de définition de la fréquence des opérations de maintenance ;</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_2"><strong>Envois de mails :</strong> permet d'accéder à l'interface de configuration&#160;des notifications par mails&#160;; </p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_2"><strong>Base des invités : </strong>permet d'accéder aux informations de gestion de la base de données dans laquelle sont enregistrés les invités&#160;; </p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_2"><strong>Profils de sécurité : </strong>permet d'accéder aux droits d'accès et profils d'administration&#160;;</p>
+                                            </li>
+                                        </ul>
+                                        <h2>Modifier l'apparence d'un tableau de résultats <a name="Creer_vues"></a>(créer des vues)</h2>
+                                        <p>Vous pouvez personnaliser l'apparence d'un tableau de résultats dans WSC (quel que soit l'objet de la liste) en créant de nouvelles vues.<br />Pour ajouter des vues&#160;:</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p class="Liste_num_1">depuis le tableau de résultats, dans l'encart des actions (en haut à droite), cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Bouton_Modifier_Tableau_149x20.png" style="width: 149;height: 20;" />&#160;;</p>
+                                                <p class="Liste_num_1">Si le bouton n'est pas dans la liste, cliquez d'abord sur la roue dentée <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_RoueDentee_35x31.png" style="width: 35;height: 31;" /> pour faire apparaître tous les boutons d'action.<br /></p>
+                                            </li>
+                                            <li value="2">
+                                                <p class="Liste_num_1">dans l'interface <strong>Modification du tableau,</strong> cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Ajouter_Vue_114x19.png" style="width: 114;height: 19;" /> :</p>
+                                                <p class="Liste_num_1">&#160;</p>
+                                                <p class="Liste_num_1"><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/ManageGuests/WD_FPR_WSC_Modifier_Tableau.png"><img class="MCPopupThumbnail img" data-mc-width="1876" data-mc-height="784" src="../Z_Resources/Images/02_Captures/ManageGuests/WD_FPR_WSC_Modifier_Tableau.png" tabindex="" style="width: 700px;height: auto;mc-thumbnail: link;mc-thumbnail-max-width: 700px;max-width: 700px;" /></a>
+                                                </p>
+                                            </li>
+                                            <li value="3">
+                                                <p class="Liste_num_1">Saisissez ensuite un nom dans le champ <b>Nom de la nouvelle vue.</b><br />Un contrôle s'applique sur le champ pour empêcher la saisie de caractères interdits (tels que \";alert('xss');//, par exemple).</p>
+                                            </li>
+                                            <li value="4">
+                                                <p class="Liste_num_1">glissez-déposez les colonnes à l'endroit où vous souhaitez les voir s'afficher&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/ManageGuests/WSC_Modifier_Tableau_Badges_Deplacer.png"><img class="MCPopupThumbnail img" data-mc-width="1867" data-mc-height="517" src="../Z_Resources/Images/02_Captures/ManageGuests/WSC_Modifier_Tableau_Badges_Deplacer.png" tabindex="" style="height: auto;width: 700px;mc-thumbnail: link;mc-thumbnail-max-width: 1000px;max-width: 1000px;" /></a><br /><br /><br /></p>
+                                            </li>
+                                            <li value="5">
+                                                <p class="Liste_num_1">pour ne plus afficher une colonne dans le tableau, cliquez sur son en-tête : ce dernier est alors grisé&#160;;</p>
+                                            </li>
+                                            <li value="6">
+                                                <p class="Liste_num_1">dès que le tableau correspond à celui que vous souhaitez, cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Valider_WSC.png" />.</p>
+                                                <p class="Liste_num_1"><span style="font-family: 'Wingdings'">è</span>La vue créée est alors celle qui s'affiche par défaut.<br /></p>
+                                            </li>
+                                        </ol>
+                                        <h2>Modifier la vue affichée</h2>
+                                        <p class="Liste_num_1">La vue "Default" s'affiche par défaut.&#160;<br />S'il existe plusieurs vues, c'est la dernière vue créée qui s'affiche par défaut.</p>
+                                        <p class="Liste_num_1">Pour modifier cette vue, </p>
+                                        <ol>
+                                            <li value="1">
+                                                <p class="Liste_num_1">cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Bouton_Modifier_Tableau_165x23.png" style="width: 165;height: 23;" />, </p>
+                                            </li>
+                                            <li value="2">
+                                                <p class="Liste_num_1">dans l'interface <strong>Modification du tableau</strong>, sélectionnez la <strong>Vue actuelle</strong> dans la liste des vues disponibles&#160;;</p>
+                                            </li>
+                                            <li value="3">
+                                                <p class="Liste_num_1">cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Valider_WSC.png" />.<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/ManageGuests/WD_FPR_WSC_SelectionnerVue.png"><img class="MCPopupThumbnail img" data-mc-width="1869" data-mc-height="522" src="../Z_Resources/Images/02_Captures/ManageGuests/WD_FPR_WSC_SelectionnerVue.png" tabindex="" style="width: 700px;height: auto;mc-thumbnail: link;mc-thumbnail-max-width: 1000px;max-width: 1000px;" /></a></p>
+                                            </li>
+                                        </ol>
+                                        <h2>Exporter un tableau</h2>
+                                        <p>Pour exporter le contenu d'un tableau, quel qu'en soit l'objet&#160;:</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p class="Liste_num_1">dans le tableau, rendez-vous sur l'encart de droite affichant les actions ;</p>
+                                            </li>
+                                            <li value="2">
+                                                <p class="Liste_num_1">si elle est affichée, cliquez sur la roue dentée <img src="../Z_Resources/Images/02_Captures/Icone_Actions_26x22.png" style="width: 26;height: 22;" /> pour afficher la totalité des boutons d'action&#160;;</p>
+                                            </li>
+                                            <li value="3">
+                                                <p class="Liste_num_1">cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Bouton_Exporter_122x19.png" style="width: 122;height: 19;" />&#160;;</p>
+                                            </li>
+                                            <li value="4">
+                                                <p class="Liste_num_1">cliquez sur le fichier  <b>export.csv</b> téléchargé par le navigateur ou enregistrez-le dans votre espace de travail&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_FilesImpression_Exporter_543x285.png" style="width: 543;height: 285;" /></p>
+                                            </li>
+                                        </ol>
+                                        <fieldset class="astuce">Vous pouvez aussi n'exporter qu'une sélection de serveurs (après les avoir sélectionnés dans la liste) et de files ou de consommables après les avoir sélectionnés à l'aide des filtres.</fieldset>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy_First mc-component nocontent">
+                                        <div class="button-group-container-left">
+                                            <button class="button elearning-button needs-pie next-topic-button" title="Next" disabled="true">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Next">
+                                                        <div class="button-icon"> </div>
+                                                    </div><span class="button-text">Next</span>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <p><span style="font-size: 10pt;">Une suggestion ? Une demande de correction ? <a href="mailto:documentations@doxense.com?subject=Doxdoc.fr" target="_blank" title="Envoyer un email à documentations@doxense.com" alt="Envoyer un email à documentations@doxense.com">Exprimez-vous !</a></span>
+                                    </p>
+                                    <!--div id="expand-collapse" title="Expand/collapse navigation" class="collapse">
+        </div>-->
+                                    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
+                                    </script>
+                                    <script src="../Resources/Scripts/Laguna.js">
+                                    </script>
+                                    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
+                                    </script>
+                                    <script src="../Resources/Scripts/resize-initializer.js">
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

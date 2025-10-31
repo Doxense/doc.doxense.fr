@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="WSC Supervision|Serveurs" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="HTML5">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="Présentation de la fonction de maintenance des serveurs : accès à l'interface et procédure de configuration de la maintenance," /><title>Console de Supervision (WSC) - Maintenir les serveurs d'impression</title>
+        <!-- Google Tag Manager -->
+        <!-- End Google Tag Manager -->
+        <!-- Script tableau triable -->
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.needs-pie
+{
+	behavior: url('../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/javascript"> 
+			///*<![CDATA[*/
+			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PK49S9NW');
+		///*]]>*/</script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expanded-event="open.zf.drilldown closed.zf.drilldown" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div>
+                        <nav class="title-bar tab-bar" aria-label="Main navigation and search" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="https://doc.doxense.fr" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <!-- Google Tag Manager (noscript) -->
+                                    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+                                    </noscript>
+                                    <!-- End Google Tag Manager (noscript) -->
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Toolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Print">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Print">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Remove Highlights">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="nocontent">
+                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                        </div>
+                                    </div>
+                                    <div class=".body-container" role="main" id="mc-main-content">
+                                        <h1><a name="aanchor262"></a>
+                                            <MadCap:concept term="WSC" />Console de Supervision (WSC) - Maintenir les serveurs d'impression</h1>
+                                        <h2>Principe</h2>
+                                        <p>La Console de Supervision permet de gérer la maintenance des serveurs d'impression contrôlés par Watchdoc, ce qui est appréciable, notamment lorsque le parc est étendu.</p>
+                                        <h2>Accéder à l'interface de supervision</h2>
+                                        <ol>
+                                            <li value="1">
+                                                <p class="Liste_num_1">Depuis le <strong>Menu principal</strong> de WSC, cliquez sur <strong>Configuration avancée</strong> ;</p>
+                                            </li>
+                                            <li value="2">
+                                                <p class="Liste_num_1">Dans l'interface Configuration avancée, cliquez sur <strong>Opérations de maintenance</strong>&#160;: <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_MaintServeurs_Acces_700x330.png" style="width: 700;height: 330;" /><br /><br /></p>
+                                            </li>
+                                            <li value="3">
+                                                <p class="Resultat">Vous accédez à l'interface <strong>Opérations de maintenance</strong>, dans laquelle s'affichent les sections de maintenance :<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Maintenance_Interface_700x316.png" style="width: 700;height: 316;" /></p>
+                                            </li>
+                                        </ol>
+                                        <h2>Configurer la maintenance</h2>
+                                        <h3>Activer et définir la fréquence de la maintenance</h3>
+                                        <p>Les opérations de maintenance peuvent être programmées afin d'être lancées automatiquement en fonction d'une fréquence prédéfinie. Dans la section <strong>Activation et fréquence des opérations :</strong> </p>
+                                        <ol>
+                                            <li value="1">
+                                                <p class="Liste_puce_1"><strong>Activation :</strong> cochez cette case pour activer la maintenance automatique des serveurs ; </p>
+                                            </li>
+                                            <li value="2">
+                                                <p class="Liste_puce_1"><strong>Fréquence :</strong> dans ce champ, indiquez (au format Crontab) la fréquence à laquelle vous souhaitez excécuter la maintenance.&#160;</p>
+                                            </li>
+                                            <li value="3">
+                                                <p class="Liste_puce_1">Cliquez sur le <strong>bouton Lancer l'assistant </strong>de configuration pour être aidé dans la saisie de la tâche planifiée : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Maintenance_Frequence_700x282.png" style="width: 700;height: 282;" /><br /></p>
+                                            </li>
+                                        </ol>
+                                        <h3>Activer la purge des travaux</h3>
+                                        <p>En attendant leur déblocage par l'utilisateur, les travaux d'impression sont envoyés dans les <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term19">spools<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>File d'attente avant envoi au périphérique. A l'origine, le mot 'spool' est l'acronyme de 'simultaneous processing operations on line'.
+Le spool d'impression désigne le fichier d'édition envoyé au périphérique d'impression. Il regroupe l'ensemble des ordres que l'imprimante doit exécuter pour mener à bien l'impression d'un ou plusieurs documents.</span></a> (files d'attente) du serveur. Il peut être nécessaire de les gérer&#160;:</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p class="Liste_puce_1"><strong>Activation :</strong> cochez la case pour supprimer du serveur les spools correspondant aux travaux débloqués, mais qui n'ont pu être effectivement imprimés, en raison d'une défaillance quelconque (bourrage papier, panne du périphérique juste après le déblocage des travaux, etc.) ;</p>
+                                            </li>
+                                            <li value="2">
+                                                <p class="Liste_puce_1"><strong>Purge :</strong> cochez la case pour supprimer du serveur les spools correspondant à tous les travaux d'impression, qu'ils aient été débloqués (et imprimés) ou qu'ils n'aient pas été débloqués, pour une raison ou une autre (oubli de l'utilisateur ou indisponibilité du périphérique d'impression) ; </p>
+                                            </li>
+                                            <li value="3">
+                                                <p class="Liste_puce_1"><strong>Délai (en heures) :</strong> indiquez le délai, durant lequel un travail doit être conservé sur le serveur avant d'être supprimé par l'opération de purge décidée en maintenance. Ce délai permet de préserver les travaux qui auraient été lancés peu de temps avant le démarrage de la maintenance.<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Maintenance_PurgeTravaux_700x96.png" style="width: 700;height: 96;" /></p>
+                                            </li>
+                                        </ol>
+                                        <h3>Activer la purge des agents locaux</h3>
+                                        <p>L'Agent local Watchdoc est un utilitaire permettant de gérer les périphériques d'impression locaux (non connectés au réseau) connectés via USB ou adressés directement via IP aux postes de travail.&#160;L'Agent permet de suivre les usages du périphérique d'impression bien qu'il ne soit pas en réseau.</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p class="Liste_puce_1"><strong>Activation :</strong> cochez cette case pour supprimer les agents locaux inactifs (au-delà d'un délai défini) encore installés sur les postes de travail ;</p>
+                                            </li>
+                                            <li value="2">
+                                                <p class="Liste_puce_1"> <strong>Délai :</strong> indiquez, en mois, le délai d'inactivité au-delà duquel cette purge doit être effectuée : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Maintenance_PurgeAgentsLocaux_700x71.png" style="width: 700;height: 71;" /></p>
+                                            </li>
+                                        </ol>
+                                        <h3>Supprimer et/ou créer des files</h3>
+                                        <p>Les files d'impression contrôlées par Watchdoc peuvent être créées et supprimées unitairement dans l'interface d'administration de Watchdoc. Lorsque le nombre de files est important, il est possible de les créer ou de les supprimer en masse dans l'outil de maintenance.</p>
+                                        <p>Pour supprimer des files : </p>
+                                        <ol>
+                                            <li value="1">
+                                                <p class="Liste_puce_1"><strong>Activer la suppression :</strong> cochez la case pour supprimer toutes les files installées sur le serveur ;</p>
+                                            </li>
+                                            <li value="2">
+                                                <p class="Liste_puce_1"><strong>Supprimer les files désactivées : </strong>cochez la case pour supprimer uniquement les files désactivées en précisant le délai au-delà duquel elles doivent être supprimées ;</p>
+                                            </li>
+                                            <li value="3">
+                                                <p class="Liste_puce_2"><strong>Délai :</strong> indiquez, en heures, le délai au-delà duquel une file désactivée est supprimée.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p class="Liste_puce_1"><strong>Supprimer les files dont le driver n'est pas le même : </strong>cochez cette case pour supprimer les files dont le pilote est différent de celui de la file shadow ; </p>
+                                            </li>
+                                            <li value="5">
+                                                <p class="Liste_puce_1"><strong>Supprimer les files dont le port "shadow" n'est pas le même :</strong> cochez cette case pour supprimer les files dont le port est différent de celui de la file shadow ; <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Maintenance_SuppressionFiles_586x108.png" style="width: 586;height: 108;" /></p>
+                                                <p>&#160;</p>
+                                            </li>
+                                        </ol>
+                                        <p>Pour créer des files sur le serveur : </p>
+                                        <ol>
+                                            <li value="1">
+                                                <p class="Liste_puce_1"><strong>Création :</strong> cochez la case pour placer sous le contrôle de Watchoc toutes les files situées sur le serveur ;</p>
+                                            </li>
+                                            <li value="2">
+                                                <p class="Liste_puce_1"><strong>Options :</strong> </p>
+                                                <ul style="list-style-type: circle;">
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Associer le périphérique à une interface embarquée : </strong>cocher cette case pour que, lors de la création de la file, elle soit associée au WES&#160;(Watchdoc Embedded Solution) de la marque correspondante ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Cacher le titre des documents dans l'historique des impressions : </strong>cochez cette case pour faire en sorte que les titres des documents soient transformés dans l'historique d'impression ; <br />Cette option disparaît (pour une file) à partir de la version 6.1.0.5178, car elle est mutualisée au niveau du groupe de files.&#160;<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Maintenance_CreationFiles_700x81.png" style="width: 700;height: 81;" /></p>
+                                                    </li>
+                                                </ul>
+                                                <p>&#160;</p>
+                                            </li>
+                                            <li value="3">
+                                                <p class="Liste_puce_1"><strong>Liste noire :</strong> vous pouvez constituer des listes de périphériques d'impression et de pilotes qui doivent être exclus des actions de suppression.&#160;Si plusieurs noms figurent dans ces listes, séparez-les par un pipe (|). </p>
+                                            </li>
+                                            <li value="4">
+                                                <p class="Liste_puce_1"><strong>Supprimer les données collectées :</strong> cochez les cases si vous souhaitez supprimer du serveur les données (notamment statistiques) relatives au périphériques ou aux pilotes supprimés.<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Maintenance_Liste_Noire_618x134.png" style="width: 618;height: 134;" /></p>
+                                            </li>
+                                        </ol>
+                                        <h3>Personnaliser les groupes de files</h3>
+                                        <p>Les groupes  permettent de rassembler plusieurs files d'impression dans un ensemble répondant à un critère commun, de manière à en faciliter la supervision. Ce regroupement est propre à la Console de Supervision et outrepasse les groupes éventuellement paramétrés dans Watchdoc.</p>
+                                        <ol>
+                                            <li style="font-size: 12pt;" value="1"><strong>Activer cette option :</strong> cochez la case pour faire en sorte d'utiliser le groupe WSC. Si l'option n'est pas cochées, ce sont les groupes Watchdoc qui seront appliqués ;</li>
+                                            <li value="2">
+                                                <p class="Liste_puce_1"><strong>Simulateur : </strong>cliquez sur le bouton après avoir saisi votre formule dans le champ suivant pour voir le résultat obtenu ;</p>
+                                            </li>
+                                            <li value="3">
+                                                <p><strong>Formule :</strong> saisissez la formule permettant le regroupement des files. </p>
+                                                <p>Les variables possibles sont les suivantes :<br /></p>
+                                                <ul>
+                                                    <li>
+                                                        <p>    $name (nom de la file)</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>$location (emplacement physique de la file)</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>$srvname (nom du serveur)</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>$mastersrvname (nom du serveur maître)</p>
+                                                    </li>
+                                                </ul>
+                                                <p>La chaîne peut comporter plusieurs opérateurs  séparés par un point-virgule ";"</p>
+                                                <p>Chaque opération contient un opérateur qui peut être : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p>keep (conserver)</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>cut (couper)</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>split (séparer)</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>uppercase (mettre en majuscules)</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>lowercase (mettre en minuscules)</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>concat (concaténer)</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>delnumber (supprimer les chiffres)<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Maintenance_PersonnalGroupesFiles_603x115.png" style="width: 603;height: 115;" /></p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                        <h3>Synchroniser les opérations sur tous les serveurs du domaine</h3>
+                                        <fieldset>La synchronisation entre le serveur maître et les autres serveurs du domaine qui en dépendent est activable directement dans Watchdoc (case à cocher "Global"). <br />Le menu de synchronisation n'apparaît donc plus dans WSC&#160;à partir de la version v6.1.0.4996.<br />Cependant, si Watchdoc et WSC&#160;étaient installés avant la version 6.1.0.4996, ce menu s'affiche encore en vue d'informer sur la configuration.&#160;Nous vous recommandons de ne pas modifier ces paramètres depuis WSC, mais depuis Watchdoc.</fieldset>
+                                        <p>Dans une configuration Master, la synchronisation permet de mettre à jour tous les serveurs associés :</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p class="Liste_puce_1"><strong>Activer la synchronisation :</strong> cochez la case pour faire en sorte que les opérations de maintenance soient appliquées sur tous les serveurs du domaine (Master et slaves); </p>
+                                            </li>
+                                            <li value="2">
+                                                <p class="Liste_puce_1"><strong>Options : </strong>cochez les cases permettant la synchronisation des différentes configurations listées. La configuration sera appliquée dès validation de la maintenance.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p class="TitreNiveau3">Enregistrer les modifications.</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Bouton_Valider_WSC_53x22.png" style="width: 53;height: 22;" /> pour enregistrer les paramètres de maintenance.</p>
+                                            </li>
+                                        </ol>
+                                        <p>&#160;</p>
+                                        <h3>Gérer <a name="audit_des_utilisateurs"></a>l'audit des utilisateurs pour la suppression des badges</h3>
+                                        <p>L'interface <strong>Audit des utilisateurs</strong> permet de vérifier périodiquement le lien entre badges et utilisateurs.&#160;Ainsi, les badges associés à des comptes utilisateurs supprimés peuvent être détectés.</p>
+                                        <p>Il devient alors possible de supprimer ces badges de la base des badges utilisés, puis de les réattribuer ultérieurement à de nouveaux utilisateurs.</p>
+                                        <p>&#160;</p>
+                                        <p>Pour activer l'audit des utilisateurs : </p>
+                                        <ol>
+                                            <li value="1">
+                                                <p><strong>Activer la vérification :</strong>  cochez la case pour activer l'opération d'audit. WSC vérifie alors que chaque badge enregistré dans la base des badges est toujours associés à un utilisateur. </p>
+                                            </li>
+                                            <li value="2">
+                                                <p class="Liste_puce_1"><strong>Fréquence :</strong> dans ce champ, indiquez (au format Crontab) la fréquence à laquelle vous souhaitez excécuter la maintenance.&#160;Si nécessaire, cliquez sur le bouton<strong> Lancer l'assistant </strong>de configuration pour être aidé dans la saisie de la tâche planifiée&#160;; </p>
+                                            </li>
+                                            <li value="3">
+                                                <p><strong>Inclure les comptes utilisateurs désactivés :</strong> cochez cette case pour prendre en compte les comptes utilisateurs désactivés ;</p>
+                                            </li>
+                                            <li value="4">
+                                                <p><strong>Inclure les comptes utilisateurs expirés :</strong> cochez cette case pour prendre en compte les comptes utilisateurs expirés ;</p>
+                                            </li>
+                                            <li value="5">
+                                                <p><strong>Activer la suppression des badges :</strong> cochez la case pour que WSC&#160;supprime les badges qui ne sont plus associés à un compte utilisateur :<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_MaintenanceUtilisateurs_700x185.png" style="width: 700;height: 185;" /></p>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
+                                    </script>
+                                    <script src="../Resources/Scripts/Laguna.js">
+                                    </script>
+                                    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
+                                    </script>
+                                    <script src="../Resources/Scripts/resize-initializer.js">
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

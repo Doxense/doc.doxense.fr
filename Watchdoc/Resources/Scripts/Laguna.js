@@ -1,7 +1,7 @@
 ﻿$(document).ready(function() {
+	CopyPageURL();
 	BackToTop();
 	HeadingBookmarks("h1,h2,h3");
-	CopyPageURL;
 	$("div.title-bar-container").after($(".toolbar-container"));
 	$("div.toolbar-container, div.sidenav-container").show();
 	$("div.search-bar-icon").prependTo("._Skins_Toolbar_Right ");
@@ -13,7 +13,7 @@ function BackToTop() {
 	if ($(".body-container").length === 1) {
 		var bodyContainer = $('.body-container')[0];
 		var mybutton = document.createElement("button");
-		var textnode = document.createTextNode("Top");
+		var textnode = document.createTextNode("top");
 		mybutton.appendChild(textnode);
 		mybutton.setAttribute("id", "myBtn");
 		mybutton.addEventListener("click", topFunction);
@@ -29,7 +29,7 @@ function BackToTop() {
 		};
 
 		function scrollFunction() {
-			if (bodyContainer.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+			if (bodyContainer.scrollTop > 20 || document.documentElement.scrollTop > 20) {
 				mybutton.style.display = "block";
 			} else {
 				mybutton.style.display = "none";
@@ -37,7 +37,7 @@ function BackToTop() {
 		}
 
 		function scrollFunctionx() {
-			if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
 				mybutton.style.display = "block";
 			} else {
 				mybutton.style.display = "none";
@@ -148,10 +148,30 @@ function CopyPageURL() {
 
 		$(this).attr("title", "Copied");
 	});
-
-// Run after DOM is ready
-if (document.readyState === "loading") {
-	document.addEventListener("DOMContentLoaded", hideToolbarInPreview);
-} else {
-	hideToolbarInPreview();
 }
+
+/********* Clear Search **********/
+function ClearSearch() {
+	$(".search-filter-wrapper").before("<span class='clear-icon' title='Clear search'>x</span>");
+	var search_button = setInterval(function() {
+		if ($(".search-field").val().length > 0) {
+			$(".clear-icon").show();
+			$("ul#searchResultsDropdown").show();
+		}
+		clearInterval(search_button);
+	}, 100);
+	$(".search-field").keyup(function() {
+		if ($(this).val().length == 0) {
+			$(".clear-icon").hide();
+			$("ul#searchResultsDropdown").hide();
+		} else {
+			$(".clear-icon").show();
+			$("ul#searchResultsDropdown").show();
+		}
+	}).keyup();
+	$(".clear-icon").click(function() {
+		$(this).prev('input').val('').trigger('change').focus();
+		$(".clear-icon").hide();
+		$("ul#searchResultsDropdown").hide();
+	});
+};

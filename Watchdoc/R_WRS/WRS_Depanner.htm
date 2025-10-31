@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="HTML5">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Dépanner Watchdoc for Reporting Services</title>
+        <!-- Google Tag Manager -->
+        <!-- End Google Tag Manager -->
+        <!-- Script tableau triable -->
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.needs-pie
+{
+	behavior: url('../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/javascript"> 
+			///*<![CDATA[*/
+			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PK49S9NW');
+		///*]]>*/</script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expanded-event="open.zf.drilldown closed.zf.drilldown" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div>
+                        <nav class="title-bar tab-bar" aria-label="Main navigation and search" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="https://doc.doxense.fr" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <!-- Google Tag Manager (noscript) -->
+                                    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+                                    </noscript>
+                                    <!-- End Google Tag Manager (noscript) -->
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Toolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Print">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Print">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Remove Highlights">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class=".body-container" role="main" id="mc-main-content">
+                                        <h1><a name="aanchor111"></a>
+                                            <MadCap:concept term="WRS" />Dépanner Watchdoc for Reporting Services</h1>
+                                        <h2>Message d'erreur WRS</h2>
+                                        <p>Lors de l'exécution de la commande WRS, si le message d'erreur suivant s'affiche, il convient de vérifier la version de la table ASSETS&#160;: </p><code><span style="color: #ffffff; background-color: #000000; font-family: 'Courier New';">Failed to update assets for server LOCALHOST: one or more errors occurred while persisting local changes to the remote database</span>.</code>
+                                        <p>&#160;</p>
+                                        <p>Pour vérifier la version de la table ASSETS, deux actions sont possibles :</p>
+                                        <ul>
+                                            <li>
+                                                <p class="Liste_puce_1">relancez <strong>WRSTOOLS.EXE</strong> sans cocher la case<strong> Overwrite existing reports</strong> afin de ne pas modifier les rapports en production.&#160;Un message informe que le premier rapport (Avaibilities) existe déjà, mais la modification est effectivement prise en compte&#160;; </p>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <p class="Liste_puce_1">exécutez la requête suivante dans MS&#160;SQL Management Studio : </p>
+                                            </li>
+                                        </ul>
+                                        <p style="text-indent: 1in;">IF NOT EXISTS(SELECT * FROM sys.columns</p>
+                                        <p style="text-indent: 1in;">WHERE Name = N'astMODEL' AND Object_ID = Object_ID(N'assets'))</p>
+                                        <p style="text-indent: 1in;">BEGIN</p>
+                                        <p style="text-indent: 1in;">ALTER TABLE ASSETS</p>
+                                        <p style="text-indent: 1in;">ADD [astMODEL] [nvarchar](255) NULL</p>
+                                        <p style="text-indent: 1in;">END </p>
+                                        <p class="TitreNiveau2">&#160;</p>
+                                        <h2>Installation de .NET Framework 3.5 SP1 sur Windows Server 2012(R2)</h2>
+                                        <p>Microsoft Windows SQL nécessite la présence  de la fonctionnalité .NET Framework 3.5 SP1. Avec Windows Server 2012, l'installation n'est pas automatique. Pour installer .NET Framework, suivez l'une des deux méthodes suivantes&#160;:</p>
+                                        <p class="Liste_puce_1"><strong>Ligne de commande :</strong> depuis une console de commande, exécutez la commande suivante : </p>
+                                        <p style="background-color: #000000;color: #ffffff;font-family: 'Courier New';">dism /online /enable-feature /featurename:NetFX3 /all /Source:d:\sources\sxs /LimitAccess</p>
+                                        <p>&#160;</p>
+                                        <p>Pour obtenir le résultat suivant&#160;:</p>
+                                        <p style="text-align: center;">
+                                            <img src="../Z_Resources/Images/02_Captures/WRS_Depanner_InstallDotNet.png" />
+                                        </p>
+                                        <p>&#160;</p>
+                                        <p class="Liste_puce_1" style="background-color: #ffff00;">Ajout de rôles et fonctionnalités : Qui, quoi, comment, pourquoi ?</p>
+                                        <p>Précisez le chemin vers le sous-répertoire D:\sources\sxs en cliquant sur le lien spécifique.</p>
+                                        <p>
+                                            <img src="../Z_Resources/Images/02_Captures/WRS_Depanner_DotNet_AjoutRoleFonctionnalite.png" />
+                                        </p>
+                                        <p class="TitreNiveau2">&#160;</p>
+                                        <p class="TitreNiveau2">Installation de SQL Server ou Express 2012 </p>
+                                        <p style="background-color: #ffff00;">Pourquoi ? A quoi ça sert ?</p>
+                                        <p>- Assurez-vous d'avoir le setup dans la langue du Windows Server, exemple :</p>
+                                        <p>SQLEXPRADV_x86_ENU.exe correspond à un setup pour Windows Server en langue US</p>
+                                        <p>SQLEXPRADV_x64_FRA.exe correspond à un setup pour Windows Server en langue française</p>
+                                        <p>- Si vous obtenez le message d'erreur suivant :</p>
+                                        <p>Il faut alors créer manuellement le sous-répertoire manquant, y déplacer le fichier msi mentionné manuellement, puis relancer le setup SQL.</p>
+                                        <p class="TitreNiveau2">Messages d'erreur </p>
+                                        <p>Dans la boîte de dialogue <strong>Action</strong>, les messages d'erreur suivants peuvent être affichés&#160;:</p>
+                                        <p class="Liste_puce_1"><span style="color: #ff0000;"> Step 1/5: License WRS was not found: Verification de la license.</span>&#160;Il convient de vérifier que le fichier de licence .wlk est bien spécifié et qu'il est bien exécuté sur le serveur pour leque vous avez précisé l'adresse MAC.<br /></p>
+                                        <p class="Liste_puce_1"><span style="color: #ff0000;">Step 2/5: Connecting to reporting server… : </span>dans un navigateur, vérifiez  l’url de connexion délivrée dans le message d’erreur&#160;: http://serverreportingservice/Reports_INSTANCESQL&#160;;</p>
+                                        <p class="Liste_puce_1"><span style="color: #ff0000;">Step 3/5: Connecting to watchdoc... :</span> vérifiez votre mot de passe <span style="background-color: #ffff00;">root </span>de Watchdoc sur le portail web, depuis le serveur exécutant l’outil.&#160;Lancez http://SERVERWD/watchdoc/admin et renseignez le mot de passe de maintenance dans le champ <strong>root password</strong>.</p>
+                                        <p class="Liste_puce_1"><span style="color: #ff0000;">Step 4/5: Creating Datasource on reporting Service : </span>le message se rapporte à la création du connecteur SQL sur le serveur Reporting service. Avez-vous bien les droits de création avec le compte renseigné sur l’outil ? Vérifiez les droits que vou détenez sur le portail web de Reporting Service. Essayez de créer une source de données manuellement.&#160;<span style="background-color: #ffff00;">Pourquoi ?&#160;Pour vérifier ses droits ? Et alors ?&#160;Si on y arrive ou si on y arrive pas, qu'est-ce que cela signifie ?</span></p>
+                                        <p class="Liste_puce_1">Step 5/5: Uploading Report files on reporting Service&#160;: le message signale un problème au moment du téléchargement des rapports RDL. Vérifiez les  prérequis WRS 2015 = Minimum SQL Reporting Service 2008R2. Si version la version estinférieure, prenez les rapports de la version WRS_redist2008 <span style="background-color: #ffff00;">(où ça, ? Que signifie "prenez" ?)</span></p>
+                                        <p class="TitreNiveau2"> .Net Framework 3.5 SP1</p>
+                                        <p>L'un des préreqier uis de Microsoft SQL est la présence de la fonctionnalité .NET Framework 3.5 SP1.</p>
+                                        <p>Sur MS Windows Server 2012,.NET&#160;Framework n'est plus automatiquement installé, comme c'était le cas sur MS Windows Server 2008 R2. Il est donc nécessaire d'installer cette fonctionnalité </p>
+                                        <p style="background-color: #ffff00;">L'installation de cette fonctionnalité nécessite les sources de Windows, et de spécifier le sous répertoire sxs</p>
+                                        <p>En partant du postulat que les sources de Windows Server se trouvent sur D:, deux méthodes:</p>
+                                        <p class="Liste_num_1">Installation par ligne de commande : </p>
+                                        <p class="Liste_num_2">depuis une console de commandes, exécutez l'instruction suivante :</p>
+                                        <p style="text-align: center;">
+                                            <img src="../Z_Resources/Images/02_Captures/WRS_Depanner_DotNetCMD_1L_526x35.png" style="width: 526;height: 35;" />
+                                        </p>
+                                        <p class="Liste_num_2">vérifiez que vous obtenez le résultat suivant&#160;: </p>
+                                        <p style="text-align: center;">
+                                            <img src="../Z_Resources/Images/02_Captures/WRS_Depanner_DotNet_CMD_2_528x136.png" style="width: 528;height: 136;" />
+                                        </p>
+                                        <p class="Liste_num_1">Installation par ajout de rôles et de fonctionnalités : </p>
+                                        <p class="Liste_num_2">où ?&#160;Depuis quelle interface ?&#160;Précisez le chemin vers le sous-répertoire D:\sources\sxs en cliquant sur le lien spécifique </p>
+                                        <p style="text-align: center;">
+                                            <img src="../Z_Resources/Images/02_Captures/WRS_Depanner_DotNet_AddRole_464x326.png" style="width: 464;height: 326;" />
+                                        </p>
+                                        <p class="TitreNiveau2">SQL&#160;Serveur ou Express 2012</p>
+                                        <p>Avant d'entamer l'installation, téléchargez le fichier d'installation dans la langue du serveur Windows : </p>
+                                        <p class="Liste_puce_2">SQLEXPRADV_x86_ENU.exe (pour MS&#160;Windows Server en langue US)&#160;;</p>
+                                        <p class="Liste_puce_2">SQLEXPRADV_x64_FRA.exe (pour MS Windows Server en langue française).</p>
+                                        <p>Lors de l'installation, il peut arriver que le message d'erreur suivant s'affiche&#160;: </p>
+                                        <p style="text-align: center;">
+                                            <img src="../Z_Resources/Images/02_Captures/WRS_Depanner_MsgErreurSQL.png" />
+                                        </p>
+                                        <p style="background-color: #ffff00;">Pour dépanner ce problème : </p>
+                                        <p class="Liste_num_1" style="background-color: #ffff00;">créez manuellement le dossier manquant&#160;<span style="background-color: #ffff00;">; lequel ? </span></p>
+                                        <p class="Liste_num_1" style="background-color: #ffff00;">déplacez-y le fichier MSI&#160;mentionné ; </p>
+                                        <p class="Liste_num_1" style="background-color: #ffff00;">relancez le fichier d'installation SQL.</p>
+                                    </div>
+                                    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
+                                    </script>
+                                    <script src="../Resources/Scripts/Laguna.js">
+                                    </script>
+                                    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
+                                    </script>
+                                    <script src="../Resources/Scripts/resize-initializer.js">
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
