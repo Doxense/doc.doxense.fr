@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-toc-path="Administrer Watchdoc" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="HTML5">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="Présentation de l'interface Configuration système. Chemin d'accès et configuration des sections contenues dans l'interface : Sécurité, Paramètres réseaux, Spouleur d'impression, Paybox, Télémétrie, Impression interserveur, NetPOD, TCPConv / Elatec, LDAP, Scan vers URL, Stockage local, Divers." /><title>Watchdoc - Configuration Système</title>
+        <!-- Google Tag Manager -->
+        <!-- End Google Tag Manager -->
+        <!-- Script tableau triable -->
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/javascript"> 
+			///*<![CDATA[*/
+			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PK49S9NW');
+		///*]]>*/</script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expanded-event="open.zf.drilldown closed.zf.drilldown" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div>
+                        <nav class="title-bar tab-bar" aria-label="Main navigation and search" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="https://doc.doxense.fr" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <!-- Google Tag Manager (noscript) -->
+                                    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+                                    </noscript>
+                                    <!-- End Google Tag Manager (noscript) -->
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Toolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Print">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Print">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Remove Highlights">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="nocontent">
+                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                        </div>
+                                    </div>
+                                    <div class=".body-container" role="main" id="mc-main-content">
+                                        <h1><a name="aanchor35"></a>
+                                            <MadCap:concept term="WD" />Watchdoc - Configuration Système</h1>
+                                        <h2>Accéder à la configuration Système</h2>
+                                        <p>Depuis le <strong>Menu principal</strong> de l'interface d'administration, </p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>dans la section <strong>Configuration</strong>, cliquez sur <strong>Configuration avancée</strong> ;</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>dans l'interface <strong>[Nom_du_serveur]&gt;Configuration avancée</strong>, cliquez sur <strong>Configuration Système :</strong><br /></p>
+                                            </li>
+                                        </ol>
+                                        <ol data-mc-continue="true">
+                                            <li value="3">
+                                                <p class="Resultat">vous accédez à l'interface <strong>Configuration Système</strong> de Watchdoc. Une partie des informations qui y figurent sont celles qui ont été saisies lors de l'installation de Watchdoc (également présentes dans l'interface <strong>Configuration initiale </strong>du service).</p>
+                                            </li>
+                                        </ol>
+                                        <p><span style="font-family: 'Wingdings'">è</span> L'interface <strong>Configuration Système</strong> de Watchdoc comporte plusieurs sections.&#160;Depuis la version 6.0.0.4772 , certaines de ces sections peu utilisées sont présentées dans des panneaux dépliants (collapsible).</p>
+                                        <fieldset><strong>Avertissement général relatif à l'activation de journaux d'événéments.&#160;</strong>
+                                            <br />Les journaux (traces, logs) nécessitant des ressources ainsi qu'un espace de stockage importants, il est recommandé de ne les activer que ponctuellement, à des fins d'analyse en cas de dysfonctionnement, puis de les désactivés une fois le diagnostic établi.<br /></fieldset>
+                                        <h2>Section Configuration Générale</h2>
+                                        <ul>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>Id Serveur :</strong> indiquez l'adresse DNS ou l'adresse IP du serveur hébergeant le <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term0">kernel<img class="MCHelpControl_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>En anglais, Kernel signifie "noyau". Dans nos documents, il désigne le service de Watchdoc chargé de la gestion des impressions hors Site web.</span></a> Watchdoc.</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>Nom Serveur :</strong> indiquez le nom (en langage naturel) explicite du serveur. Ce nom étant affiché dans les différentes interfaces ainsi que dans les rapports statistiques, il doit être précis. Par exemple : "Impression site de Lille 2e étage" ; "Serveur Impression Bâtiment B" ; "Serveur d'impression du pôle commercial de Paris".</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>Description </strong>: si nécessaire, complétez le nom à l'aide d'une description du serveur. </p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>Code de site :</strong> indiquez, s'il existe, l'identifiant correspondant au site. Par exemple "LIL-ET2"&#160;;</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>Emplacement :</strong> si nécessaire, fournissez une information relative à la localisation géographique du serveur. Cette information peut être utile en cas d'intervention physique sur le serveur. Par exemple : "Hébergée dans la salle serveurs 2 - 3e étage".</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>Tags :</strong> saisissez des mots-clés qui serviront éventuellement de critères de recherche pour retrouver facilement le serveur</p>
+                                            </li>
+                                            <li>
+                                                <p><a name="Options_régionales"></a><strong>Options régionales</strong>
+                                                    <br />
+                                                </p>
+                                                <ul style="list-style-type: circle;">
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Langue :</strong> dans la liste, sélectionnez la langue du site web d'administration ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Horaires :</strong> indiquez dans ce champ les horaires d'utilisation habituels des périphériques d'impression. Saisissez les valeurs "0-24" si les périphériques d'impression fonctionnent en continu. </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Week-end : </strong>sélectionnez dans la liste les deux jours durant lesquels les périphériques d'impression ne sont pas utilisés ou sélectionnez la valeur "Pas de jour de repos" si les périphériques fonctionnent sans interruption.<br /></p>
+                                                        <p class="Liste_puce_1">Les informations relatives aux horaires et week-end servent principalement à construire la condition "Pendant les horaires d'ouverture" lors de la conception des filtres. Elles sont également utilisables dans les rapports d'activité.</p>
+                                                        <p class="Liste_puce_1">
+                                                            <br />
+                                                            <img src="../../Z_Resources/Images/02_Captures/Config_Systeme_SectionConfigGen_700x380.png" style="width: 700;height: 380;" />
+                                                            <br />
+                                                        </p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <h2><a name="Section_Securite"></a>Section Sécurité</h2>
+                                        <ul>
+                                            <li>
+                                                <p>Le <strong>Super Utilisateur</strong> est un administrateur disposant du droit d'accéder à l'interface d'administration en mode maintenance et habilité, de ce fait, à modifier toute la configuration de Watchdoc.</p>
+                                                <p>Dans cette section : </p>
+                                                <ul style="list-style-type: circle;">
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Mot de passe :</strong> il s'agit du mot de passe permettant d'accéder à l'interface d'administration en tant que <strong>Super Utilisateur</strong>. Ce compte permet un accès au site d'administration en mode maintenance. Le mot de passe pris en compte par défaut est celui qui a été défini lors de l'installation de Watchdoc. Si vous souhaitez le modifier, saisissez un nouveau mot de passe dans cette zone.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Interdire l'accès super utilisateur depuis le réseau</strong> : cochez la case si vous souhaitez, par mesure de précaution, empêcher un accès en mode "maintenance" afin de réserver l'accès au site d'administration depuis le serveur d'impression exclusivement, c'est-à-dire à partir de l'url "http://localhost/Watchdoc/admin/". </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Utiliser les Profils de Sécurité pour restreindre les droits d'administration par groupes de files d'impression</strong> : cochez cette case si vous souhaitez activer la hiérarchisation de l'administration des groupes de files. Ainsi, des adjoints pourront se voir confier l'administration de groupes de files spécifiques.(cf. <a href="../../H_HowTo/WD5_GestionCourante_GroupesFiles_Droits.htm" target="_blank">Droits - Gérer les droits d'administration d'un groupe de files</a>).</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <p class="TitreNiveau3"><strong>Obfuscation</strong> : il est possible de sécuriser les mots de passe saisis dans l'interface d'administration Watchdoc en activant un algorithme de chiffrement. Lorsque cette fonction  est activée, les mots de passe n'apparaissent plus en clair dans le fichier de configuration de l'application.</p>
+                                                <ul style="list-style-type: circle;">
+                                                    <li>
+                                                        <p><strong>Répliquer cette configuration sur tous les serveurs : </strong>si la configuration a lieu sur le serveur maître d'un domaine (configuration maître/esclaves), cochez cette case si vous souhaitez répliquer l'obfuscation sur tous les serveurs qui dépendent de ce serveur maître ;</p>
+                                                    </li>
+                                                    <li><strong style="font-size: 12pt;">Activer l'obfuscation des mots de passe dans le fichier de configuration&#160;: </strong><span style="font-size: 12pt;">pour des raisons de sécurité, la fonction est cochée par défaut.&#160;Décochez la case si vous souhaitez désactiver l'obfuscation des mots de passe</span>&#160;:</li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Algorithme utilisé pour le chiffrement&#160;:</strong> l'algorithme <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term103">AES<img class="MCHelpControl_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Advanced Encryption Standard ou AES (litt. « norme de chiffrement avancé »), aussi connu sous le nom de Rijndael, est un algorithme de chiffrement symétrique.Approuvé par la NSA (National Security Agency) dans sa suite B1 des algorithmes cryptographiques, c' est actuellement le plus utilisé et le plus sûr. (Source : Wikipédia)</span></a> est appliqué par défaut. <br /><br /><img src="../../Z_Resources/Images/02_Captures/WD61_Config_Systeme_SectionSecurite_700x157.png" style="width: 700;height: 157;" /></p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <h2>Configurer la section <a name="Paramètres_réseaux"></a>Paramètres réseaux</h2>
+                                        <p>Dans cette section, définissez les informations techniques relatives de Watchdoc : </p>
+                                        <ul>
+                                            <li>
+                                                <p class="TitreNiveau3"><strong>Nom d'hôte :</strong> indiquez de quelle manière doit être appelé le serveur : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="TitreNiveau3"><strong>par défaut</strong> : c'est le nom du serveur (saisi dans la section Configuration générale) affiché par défaut qui est utilisé.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="TitreNiveau3"><strong>nom DNS Serveur :</strong> par défaut, Watchdoc utilise le nom NetBios du serveur, mais dans le cas où certains postes (connectés au serveur) ne peuvent pas résoudre correctement les noms, de même que si l'id Serveur est susceptible de changer, il est conseillé de spécifier un nom DNS complet, comme, par exemple, "serveur.domain.com" ou l'adresse IP (ex: 192.168.x.y)</p>
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Alias DNS :</strong> cochez cette case et complétez le champ si vous souhaitez utiliser le nom DNS&#160;attribué au serveur d'impression. Ce nom est utilisé dans les courriels éventuellement envoyés aux utilisateurs du service. </p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p class="TitreNiveau3"><strong>Public IP : </strong>
+                                                </p>
+                                                <ul style="list-style-type: circle;">
+                                                    <li>
+                                                        <p class="TitreNiveau3"><strong>Autodétection de l'adresse IP publique :</strong> cochez cette option pour laisser le système détecter lui-même l'IP publique du serveur.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="TitreNiveau3"><strong>Adresse IP :</strong> saisissez directement l'adresse IP&#160;du serveur si vous souhaitez paramétrer vous-même cette adresse.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p class="TitreNiveau3"><strong>Sous-section .Net Remoting</strong>. Ces paramètres ne sont utiles que dans le cas où Watchdoc fonctionne en mode cluster ou déporté : dans ce cas, indiquez les paramètres de communication via l'outil .Net Remoting :</p>
+                                                <ul style="list-style-type: circle;">
+                                                    <li>
+                                                        <p><strong>Nom d'hôte :</strong> indiquez le nom d'hôte du cluster virtuel d'impression à utiliser pour contacter cette instance de Watchdoc.</p>
+                                                    </li>
+                                                </ul>
+                                                <ul style="list-style-type: circle;">
+                                                    <li>
+                                                        <p><strong>IP Locale : </strong>indiquez l'adresse IP du cluster virtuel d'impression à utiliser pour contacter cette instance de Watchdoc.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Port local :</strong> indiquez le numéro du port permettant au site web Watchdoc de communiquer avec le service Watchdoc (port TCP/UDP 5744 utilisant le protocole MS&#160;.NET Remoting).<br /></p>
+                                                    </li>
+                                                </ul>
+                                                <fieldset><span style="font-size: 12pt;">Par souci de sécurité, Doxense ne recommande pas la configuration en mode déporté avec ouverture du port 5744 en .NET Remoting (versions antérieures à la v. 6.1.1.).&#160;A partir de la version 6.1.1, le port 5744 est sécurisé (https).</span>
+                                                </fieldset>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <p>
+                                                    <p class="TitreNiveau3"><strong>Sous-section Site Web</strong>.&#160;Indiquez dans cette section les paramètres relatifs au site web d'admininistration et d'utilisation vers lequel doivent pointer certains liens (comme les e-mails de notification, par exemple). Dans le cas où un même serveur Watchdoc serait adressable par plusieurs serveurs IIS, veuillez spécifier le site web "principal", c'est-à-dire celui qui dispose de plus grande visibilité (DNS / firewall) pour les utilisateurs.</p>
+                                                </p>
+                                                <ul style="list-style-type: circle;">
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Nom DNS :</strong> indiquez le nom DNS&#160;du site web : il est fortement conseillé d'utiliser un nom FQDNS (ex: "server.print.com") au lieu d'un nom d'hôte simple ("PRINT") afin d'éviter tout problème de résolution DNS.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Sécurité :</strong> cochez la case si vous souhaitez utiliser le protocole 'https' pour les liens web ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Port HTTP :</strong> indiquez le port TCP du serveur IIS permettant d'accéder au serveur</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Préfixe URL :</strong> indiquez le préfix de l'url </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Id Server :</strong> indiquez ici l'identifiant du serveur.s'il existe.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p class="TitreNiveau3"><strong>Sous-section Site Client</strong>
+                                                </p>
+                                                <ul style="list-style-type: circle;">
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Autoriser les utilisateurs à accéder au site web de déblocage :</strong> cochez cette case pour mettre un site web de déblocage à disposition des utilisateurs.</p>
+                                                        <p>Dans le cas où le site web de déblocage est autorisé, il est nécessaire de le configurer (Main Menu &gt;&#160;Section Configuration &gt; Web &amp; WES &gt; Profils déblocage web).<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Systeme_SectionParamReseaux_700x455.png" style="width: 700;height: 455;" /></p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <h2>Configurer la section Spouleur d'impression</h2>
+                                        <p>Dans cette section, indiquez les paramètres qui permettent à l'interface admnistrateur de communiquer avec le kernel Watchdoc.</p>
+                                        <ul>
+                                            <li>
+                                                <p class="TitreNiveau3"> <strong>Serveur d'impression</strong>. Indiquez le mode de fonctionnement du serveur :</p>
+                                                <ul style="list-style-type: circle;">
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Se connecter au serveur local :</strong> choisissez ce bouton si Watchdoc est installé en mode autonome (cf. article <a href="../../P_Prerequis/Architecture_serveur.htm" target="_blank">Prérequis d'installation et de configuration</a>) ; si Watchdoc est installé en mode déporté (non-recommandé) ou <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term3">Cluster<img class="MCHelpControl_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Techniques permettant le regroupement d'ordinateurs indépendants (appelés "noeuds") afin de permettre un gestion globale et de dépasser les limitations d'un ordinateur pour en augmenter la disponibilité, faciliter la montée en charge et répartir les charges ou faciliter la gestion des ressources, notamment.</span></a>, décochez la case et indiquez le nom DNS du serveur d'impression.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Nom DNS :</strong> si Watchdoc est installé en mode déporté (non recommandé) ou en cluster, saisissez le nom DNS du serveur d'impression sur lequel est installé le kernel de Watchdoc.&#160;(cf. article <a href="../../P_Prerequis/Architecture_serveur.htm" target="_blank">Prérequis d'installation et de configuration</a>).</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <p class="TitreNiveau3"><strong>Répertoire Spool</strong>. </p>
+                                                <ul style="list-style-type: circle;">
+                                                    <li>
+                                                        <p>Dans cette section, indiquez le dossier dans lequel sont enregistrés les <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term19">spools<img class="MCHelpControl_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>File d'attente avant envoi au périphérique. A l'origine, le mot 'spool' est l'acronyme de 'simultaneous processing operations on line'.
+Le spool d'impression désigne le fichier d'édition envoyé au périphérique d'impression. Il regroupe l'ensemble des ordres que l'imprimante doit exécuter pour mener à bien l'impression d'un ou plusieurs documents.</span></a>.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Utiliser le répertoire de spool par défaut : </strong>choisissez ce bouton pour laisser Watchdoc détecter automatiquement l'endroit où sont enregistrés les fichiers de spools (portant l'extension  .shd et .spl) ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Chemin </strong>: optez pour ce choix si vous ne souhaitez pas utiliser le dossier par défaut, et indiquez le chemin d'accès au dossier où sont enregistrés les fichiers de spools. <br /></p>
+                                                        <p>Par défaut, les fichiers de spools sont enregistrés dans C:\Windows\System32\spool\PRINTERS</p>
+                                                        <p>En mode cluster, il est obligatoire d'indiquer le chemin du répertoire spooler partagé du cluster. </p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p class="TitreNiveau3"><a name="EMF"></a><strong>EMF</strong>. Vous pouvez activer ou désactiver les fonctionnalités d'impression avancées (<a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term13">EMF<img class="MCHelpControl_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Enhanced Metafile (ou EMF) est un format d'image numérique pour les systèmes Microsoft Windows et certains pilotes d'impression. Il s'agit d'une amélioration du type de fichier image de type WMF (Windows Metafile) avec des données codées sur 32 bits pour une meilleure qualité.</span></a>) de MS Windows. En configuration initiale, nous vous recommandons de conserver le paramétrage par défaut défini par le pilote du périphérique et de ne le modifier qu'à des fins de dépannage.</p>
+                                            </li>
+                                            <li>
+                                                <p class="TitreNiveau3"><strong><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term9">CSR<img class="MCHelpControl_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Client Side Rendering. Dans une infrastructure Client/serveur, le Client-side rendering est la prise en charge du spool par le poste client et non par le serveur. Le poste client envoie donc au serveur un fichier de spool finalisé.</span></a></strong>. Dans une infrastructure client/serveur, le Client-Side Rendering est la prise en charge du spool par le poste client et non par le serveur. Le poste client envoie donc au serveur un fichier de spool finalisé. En configuration initiale, nous vous recommandons de conserver le paramétrage par défaut.&#160;<br />La fonction transformation de spools nécessite l'activation du mode <strong>Client Side Rendering</strong>.</p>
+                                            </li>
+                                            <li>
+                                                <p class="TitreNiveau3"><strong>Filtrage - Suppression automatique des impressions vides :</strong> certains pilotes d'impression envoient systématiquement un document vide appelé "Document local bas niveau" avant chaque impression. Cochez cette case pour activer la fonction de filtrage qui permet à Watchdoc de détecter et de supprimer automatiquement ces travaux d'impression ne contenant pas de données.</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Sans Echec - Imprimer quand même les documents contenant des erreurs :</strong> ce paramètre permet à Watchdoc d'imprimer tous les travaux d'impression, même dans le cas où les fichiers de spools présentent des erreurs empêchant l'interprétation des métadonnées. </p>
+                                                <p>Afin d'éviter le blocage d'un certain nombre d'impressions, il est conseillé de conserver cette case cochée par défaut.</p>
+                                            </li>
+                                            <li>
+                                                <p class="TitreNiveau3"> <strong>Synchro.</strong> En configuration initiale, il est conseillé de conservez les cases cochées par défaut et de ne les décocher qu'en cas de dépannage.</p>
+                                                <ul style="list-style-type: circle;">
+                                                    <li>
+                                                        <p class="Liste_puce_1">Synchroniser les imprimantes Shadow au démarrage du service ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">Synchroniser l'imprimante Shadow lorsque la file d'impression démarre ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">Synchroniser l'imprimante Shadow lorsque la configuration Shared est modifiée ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">Synchroniser les champs Emplacement et Description entre Watchdoc et le Spooler Windows.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <p> <strong>Journaux :</strong></p>
+                                                <ul style="list-style-type: circle;">
+                                                    <li>
+                                                        <p><strong>Enregistrer les notifications du Spouleur d'impression Windows (dans le journal de l'application) : </strong>cochez la case pour activer l'enregistrement des notifications ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Diagnostiquer l'extraction du chemin des fichiers spools (dans le journal de l'application) : </strong>
+                                                        </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Enregistrer l'activité complète du Spouleur d'impression Windows sur le disque (un fichier par imprimante) :</strong> cochez cette case pour conserver une trace complète sur un disque dur, puis complétez le champ suivant pour indiquer l'endroit où sera enregistré le fichier trace ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Chemin :</strong> dans ce champ, indiquez le chemin d'accès au fichier dans lequel est enregistrée l'activité complète du spouleur Windows.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li style="background-color: #ffffff;">
+                                                <p> <strong>Comptabilisation :</strong></p>
+                                                <ul style="list-style-type: circle;">
+                                                    <li>
+                                                        <p><strong>Utiliser l'information des parseurs</strong> [...] utilisateurs suivants : listez dans ce champ les utilisateurs pour lesquels la comptabilisation doit exploiter l'information du parseur  (en les séparant par un point-virgule) :</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Utiliser l'information des parseurs</strong> [...] stations suivantes :  listez dans ce champ les utilisateurs pour lesquels la comptabilisation doit exploiter l'information du parseur  (en les séparant par un point-virgule) ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Utiliser l'information des parseurs</strong> [...] adresses IP suivantes :  listez dans ce champ les adresses IP&#160;pour lesquelles la comptabilisation doit exploiter l'information du parseur  (en les séparant par un point-virgule).<br /><br /><img src="../../Z_Resources/Images/02_Captures/WD55_Config_Systeme_SectionSpouleurImpression_700x469.png" style="width: 700;height: 469;" /><br /></p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <blockquote>
+                                            <fieldset>Redémarrez le service Watchdoc après avoir modifié les paramètres de cette sous-section.</fieldset>
+                                        </blockquote>
+                                        <h2>Configurer la section DSP</h2>
+                                        <ul>
+                                            <li>
+                                                <p class="TitreNiveau3"> <strong>Serveur Web</strong></p>
+                                                <ul style="list-style-type: circle;">
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Activer le serveur web <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term47">DSP<img class="MCHelpControl_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Les fichiers SHD appartiennent principalement à Print Spooler de Microsoft. Un fichier SHD est un travail d'impression fantôme contenant des informations d'en-tête sur un travail d'impression lancé par le service Print Spooler sur Windows système d'exploitation. Les informations enregistrées dans un fichier SHD incluent une copie des paramètres de travail d'impression enregistrés dans le document spoule réel (fichier SPL). 
+(source : https://filext.com/)</span></a> :</strong> cochez la case pour activer le serveur web Watchdoc qui permet les interactions avec les WES.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Port SSL :</strong> indiquez le port d'accès au serveur DSP&#160;(5753 par défaut) ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>N'autoriser que les connexions SSL :</strong> cochez cette case pour obliger le serveur à fonctionner de manière sécurisée avec le protocole SSL ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Utiliser uniquement les protocoles TLS :</strong> </p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <p class="TitreNiveau3"><strong>Protocoles de sécurisation</strong>
+                                                </p>
+                                                <ul style="list-style-type: circle;">
+                                                    <li>
+                                                        <p class="TitreNiveau3"><strong>Utiliser les protocoles autorisés par le Système d'administration : </strong>choisissez cette option pour permettre au système d'administration d'utiliser ses propres paramètres SSL&#160;et TLS&#160;plutôt que ceux qui sont paramétrés.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Utiliser les paramètres suivants : </strong>choisissez cette option pour utiliser les paramètres qui sont listés ensuite, puis cochez les cases des protocoles que vous souhaitez utiliser (SSL ou TLS v. 1.0, v1.1, v1.2) : </p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p class="TitreNiveau3"><strong>Journaux</strong>. </p>
+                                                <ul style="list-style-type: circle;">
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Historiser les requêtes entrantes (dans le journal du serveur web) :</strong> cochez la case si vous souhaitez enregistrer l'activité réseau ( chaque packet request et response) sur le serveur DSP. Par défaut, chaque requête web traitée par le serveur (syntaxe compatible W3C Log) est enregistrée dans un fichier log sur le disque. </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Enregistrer toute l'activité réseau sur le disque (un fichier par requête ou réponse) :</strong> </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Chemin :</strong> précisez dans ce champ le chemin d'accès au dossier dans lequel doivent être enregistrés les fichiers de logs.</p>
+                                                    </li>
+                                                </ul>
+                                                <p>Les fichiers trace nécessitant de l'espace sur le serveur, nous vous recommandons d'activer l'historisation temporairement, afin d'établir un diagnostic relatif à l'activité réseau sur le serveur DSP et de la désactiver une fois les traces collectées</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>Paramètres avancés</strong>
+                                                </p>
+                                            </li>
+                                        </ul>
+                                        <ul style="list-style-type: circle;">
+                                            <ul style="list-style-type: circle;">
+                                                <li>
+                                                    <p class="Liste_puce_1"><strong>Nombre de clients maximum :</strong> indiquez dans ce champ le nombre maximum de clients autorisés à se connecter au serveur.</p>
+                                                </li>
+                                                <li>
+                                                    <p class="Liste_puce_1"><strong>Optimiser le serveur pour un usage principalement depuis le Réseau Local (Ethernet)</strong> : cochez la case pour activer l'optimisation</p>
+                                                </li>
+                                            </ul>
+                                            <ul style="list-style-type: circle;">
+                                                <li>
+                                                    <p class="Liste_puce_1"><strong>Optimiser le serveur pour un grand nombre de clients connectés : </strong>cochez la case pour activer...</p>
+                                                </li>
+                                                <li>
+                                                    <p class="Liste_puce_1"><strong>Taille requête POST maximum :</strong> indiquez, en Gb (Mb ?), la taille des requêtes POST acceptées par le serveur </p>
+                                                </li>
+                                                <li>
+                                                    <p class="Liste_puce_1"><strong>Autoriser les connexions Keep-Alive (nécessaire pour certaines fonctionnalités)&#160;:</strong> cochez cette case pour permettre </p>
+                                                </li>
+                                                <li>
+                                                    <p class="Liste_puce_1"><strong>Activer la compression automatique des réponses (consomme des ressources CPU) </strong>: cochez cette case pour compresser les réponses fournies par le serveur aux requêtes qui lui sont envoyées par les applications tierces.<br /></p>
+                                                </li>
+                                            </ul>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <p><strong>Proxy inverse :</strong> cochez cette case si le réseau est doté d'un proxy et indiquez l'IP du proxy (par exemple http://localhost:8000)<br /><br /><img src="../../Z_Resources/Images/02_Captures/Configurer_GestAvancee_DSP_700x369.png" style="width: 700;height: 369;" /></p>
+                                            </li>
+                                        </ul>
+                                        <h2>Configurer la section Paybox</h2>
+                                        <p>Paybox (commercialisée par Verifone e-commerce) est une application tierce de paiement en ligne compatible avec un grand nombre de banques françaises qui peut être associée à Watchdoc pour assurer le règlement des travaux d'impression dès lors qu'ils sont soumis à rémunération. Si Watchdoc fonctionne avec la solution Paybox pour le paiement des travaux d'impression, il convient d'en préciser les paramétres.</p>
+                                        <p>&#160;</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p class="Liste_num_1">dans la section <strong>Paybox</strong>, complétez les champs à l'aide des paramètres suivants :</p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Numéro de site</strong> : saisissez le numéro de site fourni par Paybox ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Numéro de rang </strong>: saisissez le numéro de rang fourni par Paybox ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Identifiant interne </strong>: saisissez l'identifiant interne fourni par Paybox ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Clé secrète </strong>: saisissez la clé fournie par Paybox et mise à votre disposition dans l'espace client (Back office) ou la clé de test suivante : 0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>URL externe </strong>; saisissez l'adresse IP (ou le FQDN si vous utilisez le port 443 et le certificat) et le port (80, 8080-8085 (HTTP) ou 443 (HTTPS)) via lesquels accéder au site Paybox ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>URL Paybox </strong>: saisissez l'URL d'appel de la page de paiement Paybox ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Contrôles de sécurité </strong>:</p>
+                                                        <ul style="list-style-type: circle;">
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>adresses : </strong>cochez la case pour limiter aux seules adresses Paybox la confirmation de paiement. Décochez la case si la confirmation de paiement sollicite un autre système et indiquez l'IP de ce système au besoin (IP d'un reverse proxy, par exemple)&#160;;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>vérifier la signature :</strong> cochez la case pour vérifier la signature avec le certificat public Paybox.<br /><br /><img src="../../Z_Resources/Images/02_Captures/Admin_Paybox_FR_700x243.png" style="width: 700;height: 243;" /><br /></p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                        <h2>Configurer la section Télémétrie</h2>
+                                        <ul>
+                                            <li><strong style="font-size: 12pt;">Télémétrie</strong><span style="font-size: 12pt;">: cochez la case pour activer la connexion entre Watchdoc et WSC, la console de supervision de Watchdoc. Le cas échéant, complétez les paramètres relatifs à cette console : </span>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Hôte : </strong>indiquez le nom du serveur sur lequel est installée la console de télémétrie ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Port :</strong> indiquez le port d'accès au serveur de télémétrie (5756 par défaut) ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>HTTPS : </strong>cochez la case si vous souhaitez que la connexion soit sécurisée par le protocole HTTPS;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Files : </strong>cochez la case si vous souhaitez que les données de télémétrie soient envoyées sur les files virtuelles :<br /><br /></p>
+                                                        <p>
+                                                            <img src="../../Z_Resources/Images/02_Captures/WD_Config_Systeme_SectionTelemetrie_700x111.png" style="width: 700;height: 111;" />
+                                                            <br />
+                                                            <br />
+                                                        </p>
+                                                    </li>
+                                                </ul>
+                                                <p>Depuis la version 6.0.0.4800, l'activation de la télémétrie sur le serveur master est automatiquement répliquée sur les serveurs slaves du domaine.</p>
+                                            </li>
+                                        </ul>
+                                        <h2><a name="Configurer_la_section_Impression_interserveur"></a>Configurer la section Impression interserveur</h2>
+                                        <p>Cette section permet d'activer l'impression interserveur (si elle ne l'est pas par héritage du serveur maître) et d'en définir les paramètres&#160;(cf. <a href="../../H_HowTo/WD52_Interserveur_Principe.htm" target="_blank" title="Lien vers la procédure de configuration de l'impression à la demande interserveur" alt="Lien vers la procédure de configuration de l'impression à la demande interserveur">Impression à la demande interserveur</a>) : </p>
+                                        <blockquote>
+                                            <ul>
+                                                <li>
+                                                    <p class="Liste_puce_1"><strong>Global :</strong> si la configuration a lieu sur le serveur maître d'un domaine (configuration maître/esclaves), cochez la case "Global" si vous souhaitez répliquer la source de données sur tous les serveurs Watchdoc qui dépendent du serveur maître (à partir de la version 6.1.0.4968) ;</p>
+                                                </li>
+                                                <li>
+                                                    <p class="Liste_puce_1"><strong>Stockage :</strong> dans la liste déroulante, sélectionnez la base de données utilisée pour stocker les fichiers de configuration des files (et données utilisateurs).&#160;</p>
+                                                </li>
+                                                <li>
+                                                    <p class="Liste_puce_1"><strong>Connexion :</strong> s"il s'agit d'une base de données SQL, complétez-en la configuration :</p>
+                                                    <ul>
+                                                        <li>
+                                                            <p class="Liste_puce_2"><strong>Type :</strong> dans la liste déroulante, sélectionnez le type de base de données &#160;;</p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="Liste_puce_2"><strong>Serveur SQL : </strong>cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Parcourir_33x26.png" style="width: 33;height: 26;" /> pour parcourir la liste des serveurs sur lesquels sont installées des bases de données SQL ; </p>
+                                                        </li>
+                                                        <li>
+                                                            <p><strong>Authentification :</strong> dans la liste, sélectionner le mode d'authentification à la base.&#160;Pour l'authentification SQL&#160;Serveur, complétez ;</p>
+                                                            <ul>
+                                                                <li>
+                                                                    <p class="Liste_puce_2"><strong>Nom d'utilisateur :</strong> saisissez le nom du compte autorisé à administrer la base de données ; </p>
+                                                                </li>
+                                                                <li>
+                                                                    <p class="Liste_puce_2"><strong>Mot de passe :</strong> saisissez le mot de passe du compte autorisé à administrer la base de données ; </p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <p class="Liste_puce_2"><strong>Base de données :</strong> cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Parcourir_33x26.png" style="width: 33;height: 26;" /> pour parcourir la liste des bases de données disponibles sur le serveur&#160;:</p>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <p><strong>Tester le cluster :</strong> cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_TesterCluster_132x21.png" style="width: 132;height: 21;" />pour vérifier que les bases du cluster sont bien connectées. Un message informe du succès de la configuration.&#160;Si la base n'est pas correctement configurée, des messages informent sur la nature du problème de connectivité entre les bases.</p>
+                                                </li>
+                                                <li>
+                                                    <p class="Liste_puce_2"><strong>Cache :</strong> cochez la case pour activer un cache mémoire et indiquez, en secondes, la durée du fusible dans le champ suivant.&#160;<br />Ce paramètre permet aux utilisateurs de s'authentifier sur le WES&#160;pour débloquer leurs travaux en attente, même en cas de panne de la base de données interserveur.&#160;Passé ce délai, les utilisateurs ne peuvent plus s'authentifier sur le périphérique tant que la base reste injoignable.</p>
+                                                </li>
+                                                <li>
+                                                    <p class="Liste_puce_2"><strong>Paramètres :</strong> cochez la case pour activer la journalisation des messages à des fins d'analyse en cas de problème ou de panne.</p>
+                                                    <p>Nous vous recommandons de n'activer la journalisation que ponctuellement, à des fins d'analyse en cas de dysfonctionnement car elle nécessite des ressources ainsi qu'un espace de stockage importants.<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Systeme_SectionImprIntersSrv_v61_700x448.png" style="width: 700;height: 448;" /></p>
+                                                </li>
+                                            </ul>
+                                        </blockquote>
+                                        <h2>Configurer la section NetPOD</h2>
+                                        <p><strong>NetPOD&#160;</strong>est un ancien terminal de (type CopiCod-IP) connecté à un périphérique d'impression, permettant la saisie d'un code PUK ou la lecture d'un badge pour débloquer les impressions en attente.</p>
+                                        <p>
+                                            <br />Si vous utilisez NetPOD, précisez : </p>
+                                        <ul>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>Port :</strong> indiquez le port d'accès au serveur NetPOD (5743 par défaut) ; </p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Journaux </strong>: précisez quelles sont les traces de l'activité que vous souhaitez conserver : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p>historiser l'activité du serveur</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>historiser l'activité des clients connectés</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>historiser les commandes en provenance des clients</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>enregistrer toute l'activité : si vous cochez cette option, indiquez dans le champ Chemin le chemin vers le dossier dans lequel sont enregistrés les journaux.<br /><br /><img src="../../Z_Resources/Images/02_Captures/WD_Admin_ConfigSystem_NetPod_700x145.png" style="width: 700;height: 145;" /><br /></p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <h2>Configurer la section TCPConv / Elatec</h2>
+                                        <p>TCPConv d'Elatec est un dispositif équipé d'un port USB ou RS232 permettant l'intégration de périphérique au réseau local (LAN) . Il suffit d'insérer TCPConv dans la connexion LAN existante de votre appareil. Pour ce faire, TCPConv contient 2 ports LAN , qui fonctionnent comme un commutateur de réseau.</p>
+                                        <ul>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>Port :</strong> indiquez le port d'accès au serveur TCPConv si ce n'est pas le port par défaut (5743) ; <br /><br /><img src="../../Z_Resources/Images/02_Captures/WD_Admin_ConfigSystem_TCPConv_700x48.png" style="width: 700;height: 48;" /></p>
+                                            </li>
+                                        </ul>
+                                        <h2>Configurer la section LDAP</h2>
+                                        <p>Cette section ne concerne que les WES&#160;utiilisant la technologie OpenPlatform :  elle contient l'information permettant à Watchdoc d'être contacté par le WES&#160;comme un annuaire LDAP&#160;</p>
+                                        <ul>
+                                            <li>
+                                                <p><strong>Port Serveur :</strong>indiquez le port d'accès s'il ne s'agit pas du port par défaut.<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Systeme_ConfigLDAP.png" /></p>
+                                            </li>
+                                        </ul>
+                                        <h2>Configurer la section Scan vers Url</h2>
+                                        <p>Lorsqu'un fichier numérisé par WEScan dépasse un certain poids, il est possible de ne pas l'envoyer à son destinataire en pièce jointe du mail, mais sous forme d'un lien url.&#160;Le destinataire peut alors récupérer le document en cliquant sur l'url. </p>
+                                        <p>Pour paramétrer cette fonction, complétez les paramètres suivants :</p>
+                                        <p>&#160;</p>
+                                        <p class="Liste_puce_2">La fonction&#160;Scan vers URL est activée par défaut, mais vous pouvez personnaliser les paramètres de cette fonction.</p>
+                                        <ul>
+                                            <li>
+                                                <p class="Liste_puce_2"><strong>Adresse du proxy : </strong>saisissez l'adresse du proxy s'il y en a un ; si le champ reste vide, les fichiers volumineux seront enregistrés dans un dossier du serveur Watchdoc par défaut ;</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_2"><strong>Chemin de la route du proxy : </strong>précisez la route du proxy s'il existe ; </p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_2"><strong>Validité du lien : </strong> indiquez dans le champ le temps (1 h. min.) durant lequel le fichier numérisé reste téléchargeable.&#160;Au-delà de cette durée, le fichier numérisé est supprimé automatiquement et le lien de téléchargement devient invalide : <br /><br /><img src="../../Z_Resources/Images/02_Captures/WD54_Admin_WEScan_Config_ScanToUrl_700x152.png" style="width: 700;height: 152;" /></p>
+                                            </li>
+                                        </ul>
+                                        <h2>Configurer la section <a name="stockage_local"></a>stockage local</h2>
+                                        <p>La base de données Json (JsonDb) de Watchdoc sert à stocker certaines informations à froid telles que les étapes d’une numérisation, par exemple. </p>
+                                        <p>Il peut arriver que certains programmes de sécurité verrouillent des fichiers stockés dans la JsonDb, causant ainsi des problèmes.</p>
+                                        <p>Cette section permet de configurer le stockage local afin de  modifier la manière dont les fichiers JsonDB sont conservés&#160;: sous forme de fichiers sur disques  par défaut ou dans un serveur SQL pour éviter le verrouillage.<br /></p>
+                                        <p>&#160;</p>
+                                        <p>Si vous optez pour le stockage en base de données, il convient de créer une base de données spécifique sur chaque serveur.</p>
+                                        <p>&#160;</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Configurez le stockage :</p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Type de stockage local :</strong> dans la liste, sélectionnez le type de stockage (<strong>Fichiers sur le disque</strong> par défaut ou Base de données SQL). Pour une bdd SQL, précisez :</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Connexion : </strong>
+                                                        </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p><strong>Type :</strong> précisez le type de la base de données utilisée&#160;; </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Serveur SQL : </strong>saisissez le chemin d'accès au serveur ou cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Parcourir_17x13.png" style="width: 17;height: 13;" /> pour sélectionner le serveur parmi ceux qui sont disponibles depuis votre environnement de travail ;</p>
+                                                            </li>
+                                                            <li style="font-size: 12pt;"><strong>Authentification :</strong> précisez le type d'authentification.&#160;Pour une authentification MS&#160;SQL, précisez les données d'un compte autorisé à se connecter :<ul><li><p>nom d'utilisateur</p></li><li><p>mot de passe</p></li></ul></li>
+                                                            <li>
+                                                                <p><strong>Base de données : </strong>saisissez le chemin d'accès à la base de données ou cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Parcourir_17x13.png" style="width: 17;height: 13;" /> pour sélectionner la base de données parmi celles qui sont disponibles depuis votre environnement de travail ;</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li style="font-size: 12pt;">
+                                                        <p><strong>Chemin :</strong> pour une base SQLite, indiquez son chemin d'accès.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <p>&#160;</p>
+                                            <li value="2">
+                                                <p>Cliquez sur le bouton </p>
+                                                <ul>
+                                                    <li>
+                                                        <p><strong>Tester </strong>pour vérifier l'accès à la base de données configurée ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p> <strong>Créer </strong>si vous créez la base de données pour les besoins du stockage local :<br /><br /><img src="../../Z_Resources/Images/02_Captures/WD_Admin_ConfigSystem_StockLocal.png" /></p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                        <h2>Configurer la section Divers </h2>
+                                        <ul>
+                                            <li style="font-size: 12pt;"><strong>Créer une copie de sauvegarde de la configuration au démarrage :</strong> cochez cette case si vous souhaitez conserver un fichier dans lequel est sauvegardée la configuration de l'application.<br />Par défaut, une copie de sauvegarde du fichier de configuration de Watchdoc est effectuée à chaque redémarrage du service. <br />Pour raison de performance, certaines modifications anodines de la configuration ne sont pas sauvegardées immédiatement sur disque.</li>
+                                            <li>
+                                                <p class="Liste_puce_1" style="font-size: 12pt;"><strong>Désactiver le cache d'écriture du fichier de configuration :</strong> cochez cette case pour désactiver le cache </p>
+                                            </li>
+                                            <li>
+                                                <p style="font-size: 12pt;"><strong>Certificat Print API :</strong> lors de l'installation de WPC for Windows, il est nécessaire d'exporter le certificat PrintAPI (print_api_cert.der), puis de l'enregistrer dans le dossier <strong>bin </strong>(C:\Program Files\Doxense\Watchdoc Print Client\bin) du poste de travail pour autoriser le fonctionnement de WPC&#160;for Windows ;   </p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1" style="font-size: 12pt;"><strong>Désactiver tous les Oeufs de Pâques :</strong> cochez cette case si vous ne souhaitez pas voir apparaître les Oeufs de Pâques (Easter eggs) intégrés à l'application Watchdoc<sup>®</sup>.</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
+                                    </script>
+                                    <script src="../../Resources/Scripts/Laguna.js">
+                                    </script>
+                                    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
+                                    </script>
+                                    <script src="../../Resources/Scripts/resize-initializer.js">
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

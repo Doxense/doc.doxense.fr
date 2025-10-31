@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="HTML5">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>What is micro content?</title>
+        <meta name="phrase" value="What is micro content?" />
+        <meta name="phrase" value="Comment Watchdoc est-il sécurisé ?" />
+        <meta name="phrase" value="Sécurisation de Watchdoc" />
+        <meta name="phrase" value="sécurité Watchdoc" />
+        <meta name="phrase" value="Chiffrement des fichiers" />
+        <meta name="feedback" value="true" />
+        <meta name="source-type" value="micro-content" />
+        <meta name="truncated" value="false" />
+        <meta name="scopes" value="AllFiles" />
+        <link href="../../../../Content/Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <h1>Sécurisation&#160;des flux - Windows Data Protection Application Programming Interface (DPAPI)</h1>
+        <p>1. Le spooler MS Windows est-il bien chiffré tout comme le spooler Doxense ?</p>
+        <p>Non, le spooler MS&#160;Windows, développé par Microsoft, ne permet le chiffrement des spools.</p>
+        <p>En conséquence, le spool n'est pas chiffré avant d'être pris en charge par le spooler Doxense..</p>
+        <p>Toutefois le flux <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term125">SMB<img class="MCHelpControl_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>SMB (Server Message Block) est un protocole de communication utilisé principalement pour le partage de fichiers et d'imprimantes sur un réseau. Il permet aux applications d'accéder à des fichiers et à des ressources sur des ordinateurs distants. Les versions récentes, SMB v2 et SMB v3, offrent des fonctionnalités de chiffrement pour sécuriser les échanges entre les postes de travail et les serveurs, renforçant ainsi la protection des données.</span></a> entre le poste de travail et le serveur peut être chiffré (cf. <a href="https://learn.microsoft.com/fr-fr/windows-server/storage/file-server/configure-smb-client-require-encryption?tabs=group-policy" target="_blank">Configurer le client SMB&#160;pour exiger le chiffrement dans Windows</a>).</p>
+        <p>&#160;</p>
+        <p>2. Comment sont stockées les clés de chiffrement utilisées par Watchdoc dans la fonction de chiffrement des fichiers ?</p>
+        <p>Les clés sont des dérivés des mots de passe des comptes de services utilisés pour exécuter Watchdoc. <br />Ces clés sont générées aléatoirement lors de l'exécution de Watchdoc <span style="background-color: #f0e68c;">(sont-elles stockées ensuite ou ne servent-elles qu'1&#160;fois ?)</span></p>
+        <p>&#160;</p>
+        <p>3. Comment est sécurisé un travail d’impression envoyé vers l’imprimante avec Watchdoc ? </p>
+        <p>Le travail d'impression (transformé en spool d'impression) est chiffré par le spooler Doxense, puis déchiffré <span style="background-color: #f0e68c;">avant d'être envoyés à l'imprimante</span> au moment d'être pris en charge par l'imprimante. De plus, entre le serveur et l'imprimante, la connexion est chiffrée à l'aide du certificat de l'imprimante.</p>
+        <p>&#160;</p>
+        <p>4. Le protocole IPP est-il la seule option pour sécuriser le flux ?</p>
+        <p>Oui c'est la seule option, les constructeurs d'imprimantes ne permettent pas d'autres solutions pour les éditeurs tiers.</p>
+        <p>&#160;</p>
+        <p>5. Est-il possible d’activer le chiffrement entre Watchdoc et la base de données SQL&#160;?</p>
+        <p>Les données les plus sensibles présentes dans la bdd SQL sont  les comptes utilisateurs et les titres des documents.</p>
+        <p>Watchdoc utilise les librairies .net framework pour se connecter à la bdd SQL. Si le port SQL est sécurisé par un certificat, la connexion  est également sécurisée.</p>
+        <p>&#160;</p>
+        <p>Dans le cadre du RGPD nous disposons d'un outil pour anonymiser les informations Watchdoc (cf.&#160;Anonymisation des travaux d'impression avec WatchdocGDPRComplier). </p>
+        <p>Attention, si vous anonymisez ces données, elles ne seront plus utilisables dans les rapports statistiques (filtre par utilisateur, classement des utilisateurs les plus consommateurs, etc).</p>
+    </body>
+</html>

@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="WES" />
+            <MadCap:conditionalText MadCap:conditions="General.Online">WES Kyocera - </MadCap:conditionalText>Configurer le WES sur la file</h1>
+        <h2>Accéder à l'interface</h2>
+        <ol>
+            <li>
+                <p>Depuis le <strong>Menu principal</strong> de l'interface d'administration Watchoc, section <strong>Exploitation</strong>, cliquez sur <strong>Files d'impression, groupes de files &amp; pools</strong> :<br /><img src="../../Z_Resources/Images/02_Captures/WES/Config_WES_File_Acces_V60.png" style="width: 500px;mc-thumbnail: popup;mc-thumbnail-max-width: 15cm;" /><br /></p>
+            </li>
+        </ol>
+        <p>→ Vous accédez à l'interface présentant les files d'impressions. Dans cette file, activez le filtre <strong>Contrôlées</strong>, puis sélectionnez la file à configurer :<br /><br /><img src="../../Z_Resources/Images/02_Captures/WES/Config_WES_File_AccesFilesControl_V60.png" style="height: auto;width: 500px;mc-thumbnail: popup;mc-thumbnail-max-width: 15cm;" /></p>
+        <ol MadCap:continue="true">
+            <li>
+                <p>	Pour cette file, cliquez sur le bouton<img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Editer.png" style="width: 27px;height: 27px;" /><strong>Modifier les propriétés de la file</strong> situé en bout de ligne.</p>
+            </li>
+        </ol>
+        <h2>Configurer le mode d'impression de la file</h2>
+        <p>Dans l'interface <strong>Propriétés de la file d'impression</strong>, section <strong>Informations générales,</strong> sélectionnez le mode de fonctionnement de la file : </p>
+        <ul>
+            <li>
+                <p><strong>Mode</strong>: sélectionnez <strong>Validation</strong> pour que les utilisateurs valident les travaux en attente afin qu'ils soient réellement imprimés.</p>
+                <p>Si la file appartient à un groupe configuré en mode Validation, vous pouvez aussi sélectionner<strong> Comme le groupe</strong>.&#160;<br /></p>
+            </li>
+        </ul>
+        <h2>Configurer le WES&#160;sur la file</h2>
+        <p>Dans l'interface <strong>Propriétés de la file d'impression</strong>, cliquez sur la mention <strong>WES&#160;</strong>pour accéder à la section dédiée.<br /><img src="../../Z_Resources/Images/02_Captures/WES/Config_WES_File_Acces_SectionWES.png" /></p>
+        <p>&#160;</p>
+        <p>Dans la section WES&#160;de la file : </p>
+        <ul>
+            <li>
+                <p><strong>Activer l'interface embarquée :</strong> cochez la case pour appliquer un WES sur le périphérique.</p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p><strong>Profil :</strong> dans la liste, sélectionnez le WES à appliquer sur la file. La liste est constituée des profils créés préalablement dans votre instance Watchdoc. Si le profil souhaité n'y figure pas, il convient de le configurer (cf. Créer et configurer un profil WES.)</p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p><strong>Identifiant du WES : </strong>ce champ est automatiquement complété de la valeur “$AUTOSERIAL$”. Si vous conservez cette valeur, le serveur détermine automatiquement le numéro de série du périphérique et va l'utilisee comme identifiant du WES. Vous pouvez saisir directement le numéro de série du périphérique dans ce champ si vous le connaissez.</p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p><strong>Diagnostic - Activer les traces</strong> :  cochez la case si vous souhaitez que des fichiers traces relatifs aux communications entre Watchdoc et le WES soient générés et gardés sur le serveur. Précisez ensuite le niveau de traces souhaité : </p>
+                <ul>
+                    <li>
+                        <p><strong>Auto :</strong> conserve les traces standard.</p>
+                    </li>
+                    <li>
+                        <p><strong>Inclure les contenus binaires :</strong> conserve les traces détaillées.</p>
+                    </li>
+                    <li>
+                        <p><strong>Chemin : </strong>saisissez dans la zone le chemin du dossier où vous souhaitez enregistrer les fichiers trace. Si aucun chemin n'est indiqué, par défaut, Wat-chdoc enregistre les fichiers traces dans le sous-dossier \logs du dossier d'installation Watchdoc.&#160;</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p><strong>Réglages WES :</strong> les réglages effectués sur le profil WES&#160;s'appliquent par défaut à la file. Si vous modifiez les paramètres suivants, ils annuleront les paramètres du WES&#160;et ne s'appliqueront que sur la file configurée</p>
+                <ul>
+                    <li>
+                        <p><strong>TLS/SSL : </strong>cochez cette case si vous souhaitez que le périphérique utilise une connexion sécurisée  pour communiquer avec le serveur.</p>
+                    </li>
+                    <li>
+                        <p><strong>Nom d'utilisateur du périphérique : </strong>saisissez le nom du compte d'administration du périphérique (s'il est différent du compte par défaut) ; </p>
+                    </li>
+                    <li>
+                        <p><strong>MdP du périphérique : </strong>saisissez le mot de passe du compte d'administration du périphérique (s'il est différent du mot de passe par défaut) </p>
+                    </li>
+                </ul>
+                <fieldset>L'activation du SSL&#160;peut provoquer des lenteurs ou des alertes en cas de certificats non reconnus.</fieldset>
+                <fieldset>Lorsque le SSL est désactivé, il est recommandé de ne pas utiliser la connexion ou l'association automatique du badge (enrôlement) par compte et mot de passe.</fieldset>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p><strong>Option des logs - remplacer le niveau de traces du profil :</strong> cochez cette case pour appliquer sur la file d'impression un niveau de traces différent de celui du profil, puis définissez : </p>
+                <ul>
+                    <li>
+                        <p><strong>Emplacement : </strong>indiquez à quel emplacement l'application doit collecter les informations qu'elle enregistre dans les fichiers traces :</p>
+                        <ul>
+                            <li>
+                                <p><strong>fichier :</strong> cochez cette case pour que les informations soient enregistrées dans un fichier accessible par Watchdoc </p>
+                            </li>
+                            <li>
+                                <p><strong>périphérique :</strong> cochez cette case pour que les informations soient enregistrées sur le périphérique </p>
+                            </li>
+                            <li>
+                                <p><strong>tous : </strong>cochez cette case pour que les informations soient enregistrées dans un fichier accessible par Watchdoc et sur le périphérique.</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p>&#160;</p>
+        <ul>
+            <li>
+                <p><strong>Options des logs - Niveau :</strong> indiquez le niveau de détail des informations enregistrées :</p>
+                <ul>
+                    <li>
+                        <p><strong>debug : </strong>sélectionnez ce choix pour garder les traces laissées en cas de dysfonctionnement du WES.</p>
+                    </li>
+                    <li>
+                        <p><strong>verbose :</strong> sélectionnez ce choix pour garder toutes les traces laissées par le WES.</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p><strong>info :</strong> sélectionnez ce choix pour garder toutes les traces laissées par le WES.</p>
+                    </li>
+                    <li>
+                        <p><strong>warning :</strong> sélectionnez ce choix pour garder toutes les traces laissées par le WES</p>
+                    </li>
+                    <li>
+                        <p><strong>error :</strong> sélectionnez ce choix pour garder les traces laissées lorsqu'une erreur est détectée au niveau du WES.<br /><br /><img src="../../Z_Resources/Images/02_Captures/WES/Config_WES_File_Kyocera_V60.png" style="width: 500px;height: auto;mc-thumbnail: popup;mc-thumbnail-max-width: 15cm;" /></p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Configurer la transformation de spools</h2>
+        <ul>
+            <li>
+                <p><strong>Mode de transformation</strong> : </p>
+                <ul>
+                    <li>
+                        <p><strong>Utiliser la valeur du groupe</strong> : permet d'appliquer sur la file le paramétrage de transformation défini pour le groupe de files.</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p><strong>Désactivé</strong> : permet de désactiver la fonction sur cette file, quel que soit le paramétrage appliqué aux niveaux supérieurs (groupe ou serveur) ;</p>
+                    </li>
+                    <li>
+                        <p><strong>Activé </strong>: permet d'activer la fonction uniquement sur cette file quel que soit le paramétrage appliqué aux niveaux supérieurs (groupe ou serveur) ;</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p><strong>Diagnostic</strong> : activer le traçage des spools : cochez la case si vous souhaitez que les spools soient conservés et définissez les conditions de traçage :</p>
+                <ul>
+                    <li>
+                        <p><strong>Niveau de traces : </strong>dans la liste, sélectionnez le niveau des traces que vous souhaitez conserver (aucune, erreurs, spools édités et tous) ;</p>
+                    </li>
+                    <li>
+                        <p><strong>Activer pendant  :</strong>dans la liste, sélectionnez la durée pendant laquelle vous souhaitez activer le traçage des spools (une heure, un jour, une semaine ou un mois).<br /><br /><img src="../../Z_Resources/Images/02_Captures/WES/Config_WES_File_TransfoSpools.png" /></p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Valider la configuration</h2>
+        <p>1.		Cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Valider.png" style="width: 36px;height: 35px;" /> pour   valider la configuration du WES sur la file d'impression.</p>
+        <p>2.	Après avoir configuré le WES sur la file, installez-le.</p>
+        <fieldset>Après <strong>modification </strong>d'un profil WES déjà installé sur une file d'impression, il est nécessaire de redémarrer la file afin qu'elle prenne en compte les modifications du profil.&#160;<br />Pour redémarrer une file, cliquez sur les boutons "pause" puis "démarrer" depuis la liste des files : <img src="../../Z_Resources/Images/02_Captures/WES/Config_WES_File_Redemarrer.png" style="width: 20px;mc-thumbnail: popup;mc-thumbnail-max-width: 15cm;text-align: left;" /></fieldset>
+    </body>
+</html>

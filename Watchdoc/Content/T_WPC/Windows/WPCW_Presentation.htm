@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-toc-path="WPC Watchdoc Print Client" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="HTML5">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="Présentation de Windows Print Client for Windows : principes, prérequis, haute-disponibilité (impression directe)." /><title>Watchdoc Print Client for Windows®- Présentation</title>
+        <!-- Google Tag Manager -->
+        <!-- End Google Tag Manager -->
+        <!-- Script tableau triable -->
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.print-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.button.expand-all-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.button.collapse-all-button
+{
+	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+        <script type="text/javascript"> 
+			///*<![CDATA[*/
+			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PK49S9NW');
+		///*]]>*/</script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expanded-event="open.zf.drilldown closed.zf.drilldown" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div>
+                        <nav class="title-bar tab-bar" aria-label="Main navigation and search" data-mc-ignore="true"><a class="skip-to-content fluid-skip showOnFocus" href="#">Skip To Main Content</a>
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <div class="central-account-wrapper">
+                                        <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                            <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                                <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="menu-icon" aria-label="Show Navigation Panel" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="https://doc.doxense.fr" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="central-account-wrapper">
+                                    <div class="central-dropdown"><a class="central-account-drop"><span class="central-account-image"></span><span class="central-account-text">Account</span></a>
+                                        <div class="central-dropdown-content"><a class="MCCentralLink central-dropdown-content-settings">Settings</a>
+                                            <hr class="central-separator" /><a class="MCCentralLink central-dropdown-content-logout">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" aria-label="Search Field" placeholder="Search" />
+                                                <div class="search-filter-wrapper"><span class="invisible-label" id="search-filters-label">Filter: </span>
+                                                    <div class="search-filter" aria-haspopup="true" aria-controls="sf-content" aria-expanded="false" aria-label="Search Filter" title="All Files" role="button" tabindex="0">
+                                                    </div>
+                                                    <div class="search-filter-content" id="sf-content">
+                                                        <ul>
+                                                            <li>
+                                                                <button class="mc-dropdown-item" aria-labelledby="search-filters-label filterSelectorLabel-00001"><span id="filterSelectorLabel-00001">All Files</span>
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search" role="button" tabindex="0"><span class="invisible-label">Submit Search</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <nav class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expanded-event="down.zf.accordionMenu up.zf.accordionMenu" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <!-- Google Tag Manager (noscript) -->
+                                    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+                                    </noscript>
+                                    <!-- End Google Tag Manager (noscript) -->
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Toolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Print">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Print">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Remove Highlights">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Collapse all" title="Expand all" data-state1-title="Expand all">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Expand all">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="nocontent">
+                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                        </div>
+                                    </div>
+                                    <div class=".body-container" role="main" id="mc-main-content">
+                                        <h1><a name="aanchor456"></a>
+                                            <MadCap:concept term="WPC" />Watchdoc Print Client for Windows<sup>®</sup>- Présentation</h1>
+                                        <h2>Prérequis </h2>
+                                        <ul>
+                                            <li>
+                                                <p>WPC  for Windows est disponible à partir de la version 6.0 de Watchdoc.<br />Il convient de respecter les compatibilités entre Watchdoc/WSC et WPC (cf.&#160;<a href="../../A_Getting_Started/Release_611.htm" target="_blank" title="Lien vers le tableau des versions" alt="Lien vers le tableau des versions">versions téléchargeables)</a></p>
+                                            </li>
+                                            <li>
+                                                <p>WPC nécessite une file universelle installée automatiquement (cf. <a href="../../C_Configurer/ConfigFiles/ConfigFiles_FileUniv.htm">Configurer une file u</a><a href="../../C_Configurer/ConfigFiles/ConfigFiles_FileUniv.htm">niverselle</a>). Cette file universelle est automatiquement créée lors de l'installation de Watchdoc. Nommée <strong>Impression Universelle</strong> par défaut,&#160;elle est préconfigurée pour rediriger les fichiers de spool vers le <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term68">pool<img class="MCHelpControl_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Depuis Watchdoc 5.2,  le pool d'impression est un réservoir logique conçu pour lister des travaux en attente d'impression. Le Pool (pool de travauxl) sert notamment lors de la redirection de travaux d'une file d'impression à l'autre en cas de défaillance : ainsi, lorsqu'un périphérique d'impression est indisponible, tous les autres périphériques inclus dans le même pool peuvent être sollicités pour prendre le relais.</span></a> d'impression global (#global). </p>
+                                                <p>Outre cette file universelle par défaut, d'autres files universelles peuvent être crées en fonction des besoins.</p>
+                                            </li>
+                                            <li>
+                                                <p>WPC nécessite d'être associé à un <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term77">emplacement<img class="MCHelpControl_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>(anciennement "Géosites" dans les versions antérieures à la V6). Dans Watchdoc, un emplacement est un libellé appartenant à une liste structurée de sites géographiques permettant de localiser physiquement des éléments de configuration du parc d'impression (périphériques d'impression, serveurs, files, etc.). 
+La liste des emplacements est administrable depuis l'interface d'administration de Watchdoc.
+Les emplacements sont nécessaires à la fonctionnalité Watchdoc Print Client.</span></a> (cf. <a href="../../C_Configurer/ConfigEmplacements/ConfigEmplacements.htm" target="_blank" alt="Lien vers la documentation d'administration des emplacements">Gérer les emplacements</a>). </p>
+                                            </li>
+                                            <li>
+                                                <p>WPC&#160;for Windows doit être installé dans le dossier Program Files du poste de travail.</p>
+                                            </li>
+                                            <li>
+                                                <p>WPC&#160;for Windows doit être installé en tant que LocalSystem sur le poste de travail (installation recommandée).</p>
+                                            </li>
+                                            <li>
+                                                <p>WPC&#160;for Windows peut être installé avec des droits plus faibles que le compte LocalSystem sur le poste de travail. Cependant, Doxense ne recommande pas ce type d'installation et ne garantit pas le fonctionnement optimal de WPC installé avec des droits plus faibles que ceux de LocalSystem. Si vous souhaitez cependant installer WPCde cette manière, les droits suivants sont attendus : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p>Service : Folder Read/Write</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>C:\Program Files\</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>C:\Windows\System32\</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p>Registry : Read/Write</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>HKLM\SOFTWARE\Doxense</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>HKU\{UsersSID}\Printers\Settings</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>HKLM\SYSTEM\CurrentControlSet\Control\Print\Environments\Windows x64\Drivers\Version-3</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>HKLM\SYSTEM\CurrentControlSet\Control\Print\Monitors</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>HKLM\SYSTEM\CurrentControlSet\Control\Print\Printers</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>HKLM\Software\Xerox\PrinterDriver\V5.0</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>HKU\{userSID}\Software\Microsoft\Windows NT\CurrentVersion\Windows</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>HKU\{UsersSID}\Printers\Settings</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p>Services</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>Stop/Pause/Resume/Start service Spooler</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p>System</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>Install/Modify/Delete Port Monitor</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Install/Modify/Delete Driver</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Create/Modify/Remove TCP/IP Port</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Install/Modify/Delete Printer</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <h2>Principe</h2>
+                                        <p>Watchdoc Print Client (WPC) for Windows<sup>®</sup> est destiné aux utilisateurs équipés d'un poste de travail Windows<sup>®</sup> 10/11. <br />Il permet d'assurer l'installation, sur ces postes de travail, d'une configuration d'impression sécurisée, stable et conforme à une politique d'impression unique.&#160;</p>
+                                        <p>Il se compose  d'un service Windows, d'un <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term76">Port Monitor<img class="MCHelpControl_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>le Port Monitor de Wathdoc Print Client est un port d'impression propriétaire, lien de communication entre la partie qui opère en tant qu'utilisateur du spooler et la partie qui opère en tant que système. C’est une DLL exécutée en tant qu'utilisateur demandant une impression et qui communique avec le serveur d’impression de Windows.</span></a> et d'une interface utilisateur conviviale. S'il est configuré pour fonctionner en mode silencieux, les utilisateurs bénéficient de la facilité d'imprimer sans accéder à l'interface.&#160;</p>
+                                        <p>&#160;</p>
+                                        <p>Watchdoc Print Client for Windows<sup>®</sup> permet :</p>
+                                        <ul>
+                                            <li>
+                                                <p>d'authentifier l'utilisateur</p>
+                                            </li>
+                                            <li>
+                                                <p>de gérer la mobilité des utilisateurs</p>
+                                            </li>
+                                            <li>
+                                                <p>de permettre à des invités (non-inscrits dans l'annuaire) d'imprimer depuis un poste dédié</p>
+                                            </li>
+                                            <li>
+                                                <p>de déployer sur l'ensemble des postes de travail les pilotes d'impression installés depuis WSC&#160;- Console de supervision</p>
+                                            </li>
+                                            <li>
+                                                <p>de sécuriser l'envoi des impressions vers le serveur de proximité</p>
+                                            </li>
+                                            <li>
+                                                <p>de gérer les redirections des travaux d'impression d'un serveur à l'autre en cas de défaillance (haute-disponibilité)</p>
+                                            </li>
+                                            <li>
+                                                <p>de gérer l'impression directe en cas de défaillance des serveurs</p>
+                                            </li>
+                                            <li>
+                                                <p>d'afficher des informations de l'utilisateur, telles que son impact environnemental</p>
+                                            </li>
+                                            <li>
+                                                <p>de comptabiliser les impressions traitées par des périphériques connectés en USB (à partir des versions 6.1.0.4954 et WPC 7.0.4409).<br /><a class="MCPopupThumbnailLink" href="WPCW_presentation.png"><img class="MCPopupThumbnail img" data-mc-width="875" data-mc-height="573" src="WPCW_presentation.png" tabindex="" style="width: 700px;height: auto;mc-thumbnail-max-width: 1000px;mc-thumbnail: link;max-width: 1000px;" /></a></p>
+                                            </li>
+                                        </ul>
+                                        <p style="text-align: left;"><cite>* cliquez sur l'image pour l'agrandir</cite>
+                                        </p>
+                                        <h2>Authentification</h2>
+                                        <p>Watchdoc Print Client for Windows gère l'authentification en s'interfaçant avec les annuaires déclarés dans Watchdoc&#160;:</p>
+                                        <ul>
+                                            <li>
+                                                <p>Azure Active Directory</p>
+                                            </li>
+                                            <li>
+                                                <p>Active Directory</p>
+                                            </li>
+                                            <li>
+                                                <p>LDAP</p>
+                                            </li>
+                                            <li>
+                                                <p>Comptes invités (comptes locaux) (cf. <a href="../../G_WD_Express/WD_Express_Utilisateur.htm" target="_self" title="Lien vers le chapitre Créer un compte Invité">Créer un compte Invité dans Watchdoc Express</a> ou <a href="../../F_WSC/WSC_Base_Invites_Gerer.htm" target="_blank" title="Lien vers le chapitre Gérer la base Invités" alt="Lien vers le chapitre Gérer la base Invités">Créer un compte Invité</a> et <a href="../../F_WSC/WSC_Base_Invites_Gerer.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Déclarer la base Invités</a> dans Watchdoc Standard).</p>
+                                                <p> </p>
+                                                <p>
+                                                    <br />
+                                                    <img src="../../Z_Resources/Images/02_Captures/WD_Express/wd_express_wpc9_473x354.png" style="width: 473;height: 354;" />
+                                                </p>
+                                            </li>
+                                        </ul>
+                                        <h2>Mobilité</h2>
+                                        <p>Avec WPC for Windows, les utilisateurs ont accès à leurs imprimantes de proximité. </p>
+                                        <p>Watchdoc utilise l'adresse IP (privée ou publique) du poste utilisateur pour déterminer automatiquement l'emplacement de l'utilisateur.<br /></p>
+                                        <p>&#160;</p>
+                                        <p>Une correspondance est alors établie entre cette adresse et les plages d'adresses IP attribuées aux emplacements lors de la configuration des Emplacements dans l'interface d'administration. <br />L'utilisateur peut lancer des impressions depuis son poste de travail et les débloquer sur les imprimantes disponibles à proximité.&#160;Il n'a pas à se soucier de la configuration des imprimantes, même lorsqu'il change d'emplacement.</p>
+                                        <p>&#160;</p>
+                                        <p>L'utilisateur peut aussi déclarer son emplacement manuellement à partir du client WPC&#160;installé sur son poste&#160;:<br /><br /><img src="WPCW_icon_500x212.png" style="width: 500;height: 212;" /><br /></p>
+                                        <h2>Choix des périphériques d'impression</h2>
+                                        <p>WPC for Windows installe automatiquement une file universelle (impression sécurisée).&#160;<br />Cette file utilise le pilote paramétré dans Plug and Print / WSC (cf. <a href="../../F_WSC/WSC6.1.x_Ajouter_Pilote.htm" target="_self" title="Lien vers le chapitre &quot;Créeer des pilotes dans Plug and Print&quot;">Créer des pilotes dans Plug and Print</a>).</p>
+                                        <p>Les utilisateurs peuvent aussi installer eux-mêmes leur(s) imprimante(s) de proximité :<br /><br /><img src="../../Z_Resources/Images/02_Captures/WD_Express/wd_express_wpc12_500x375.png" style="width: 500;height: 375;" /></p>
+                                        <h2>Impression sécurisée</h2>
+                                        <p>Le port d’impression propriétaire <b><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term76">Port Monitor<img class="MCHelpControl_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>le Port Monitor de Wathdoc Print Client est un port d'impression propriétaire, lien de communication entre la partie qui opère en tant qu'utilisateur du spooler et la partie qui opère en tant que système. C’est une DLL exécutée en tant qu'utilisateur demandant une impression et qui communique avec le serveur d’impression de Windows.</span></a></b> de Watchdoc se charge de capturer les impressions lancées par l'utilisateur. </p>
+                                        <p>Le service Windows transfère le fichier de spool auu serveur Watchdoc de proximité. Le transfert s'effectue sur le service DSP au serveur. </p>
+                                        <p>Il est sécurisé par l'usage du <b>certificat de la PrintAPI</b> et chiffré (transport en <b>HTTPS</b>). </p>
+                                        <p>Le serveur de proximité est déterminé automatiquement en fonction de l'emplacement de l'utilisateur.</p>
+                                        <h2><a name="Haute_disponibilité">Haute disponibilité - Impression directe</a>
+                                        </h2>
+                                        <p> Sous réserve que la fonction d'impression à la demande interserveur soit activée et que les serveurs soient configurés en domaine (master/slaves), WPC&#160;for Windows peut être configuré en mode haute-disponibilité.&#160;Ce mode assure la fonction d'impression, même en cas de défaillance du serveur.&#160;<br /></p>
+                                        <p>&#160;</p>
+                                        <p>Dans ce cas, l'utilisateur reçoit une notification l'informant du problème et l'invitant à utiliser l'impression directe sur l'un des périphériques du parc.&#160;</p>
+                                        <p>L'impression directe s'applique alors jusqu'à ce que le serveur soit de nouveau opérationnel.<br /></p>
+                                        <p>&#160;</p>
+                                        <p>Notez que la haute-disponibilité nécessite un nombre important de requêtes.&#160;Lorsque ce mode est activé, il exploite donc beaucoup de ressources.&#160;</p>
+                                        <p>&#160;</p>
+                                        <p>Il est possible de comptabiliser les données statistiques relatives à l'impression directe. Cependant, comme il s'agit d'un mode dégradé et que Watchdoc n'est pas sollicité, les données ne sont pas aussi détaillées que celles qui sont habituellement collectées par Watchdoc. Néanmoins, il est possible de collecter a minima des informations fournies par le spooler MS Windows (printinfo2 : titre du document, nombre de pages, couleur (couleur ou monochrome) et utilisateur).</p>
+                                        <h2>Informations utilisateur</h2>
+                                        <p>Dans l'onglet <b>Profil</b>, les utilisateurs peuvent&#160;:</p>
+                                        <ul>
+                                            <li>
+                                                <p>vérifier leurs informations, </p>
+                                            </li>
+                                            <li>
+                                                <p>retrouver leurs codes d'impression (code PUK, code PIN) </p>
+                                            </li>
+                                            <li>
+                                                <p>visualiser leur impact environnemental&#160;:<br /><br /><img src="../../Z_Resources/Images/02_Captures/WD_Express/wd_express_wpc13_609x369.png" style="width: 609;height: 369;" /></p>
+                                                <p>&#160;</p>
+                                                <p>(cf.&#160;<a href="WPCW_UtilisationInit.htm" target="_blank" title="Lien vers l'article d'utilisation" alt="Lien vers l'article d'utilisation">Première utilisation de WPC</a>, <a href="WPCW_UtilisationCourante.htm" target="_blank" title="Lien vers l'article d'utilisation" alt="Lien vers l'article d'utilisation">Utilisation courante de WPC</a>, et <a href="WPCW_UtilisationHA.htm" target="_blank" title="Lien vers l'article d'utilisation" alt="Lien vers l'article d'utilisation">Utilisation en cas de panne</a>).</p>
+                                                <p>&#160;</p>
+                                            </li>
+                                        </ul>
+                                        <p>&#160;</p>
+                                        <p>&#160;</p>
+                                        <div style="line-height: 50px;vertical-align: middle;height: 50px;width: 140px;border-radius: 4%;background-color: #FF803B;margin: auto;text-align: left;"><a style="font-weight: bold; margin: auto; color: white; text-decoration: none" href="https://doc.doxense.fr/fr/Watchdoc/Content/V_Videos/FR/Video_client_windows.htm">Voir le tutoriel</a>
+                                        </div>
+                                        <p>&#160;</p>
+                                    </div>
+                                    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
+                                    </script>
+                                    <script src="../../Resources/Scripts/Laguna.js">
+                                    </script>
+                                    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
+                                    </script>
+                                    <script src="../../Resources/Scripts/resize-initializer.js">
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div><a data-close="true"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
