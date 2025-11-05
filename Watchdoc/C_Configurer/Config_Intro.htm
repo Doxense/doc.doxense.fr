@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-conditions="General.Note interne" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="HTML5">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="HTML5">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Capturer les spools Watchdoc</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Watchdoc - Configurer Watchdoc</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Script tableau triable -->
@@ -174,91 +174,13 @@
                                         </div>
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
-                                        <h2>Capturer les spools Watchdoc</h2>
-                                        <p>Pour capturer le spool afin d'analyser une anomalie reproductible, il convient tout d'abord de "bloquer" ce spool.</p>
-                                        <p> </p>
-                                        <p class="Bold" style="text-decoration: underline;">Méthode simple</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1"> rendez-vous sur le serveur d’impression ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1">dans le gestionnaire d'impression, cliquez-droit sur la file à analyser&#160;; </p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1">dans la liste des actions, cliquez-droit et sélectionnez "suspendre" ;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p class="Liste_num_1">mettez la file d’impression à analyser en pause.</p>
-                                            </li>
-                                        </ol>
-                                        <p class="Bold" style="text-decoration: underline;">&#160;</p>
-                                        <p class="Bold" style="text-decoration: underline;">Méthode exploitant un filtre</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">Authentifiez-vous dans l'interface d'administration de Watchdoc<sup>®</sup> en tant qu'administrateur; </p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1">depuis le <strong>Menu Principal</strong> &gt;&#160;section <strong>Gestion</strong>, cliquez sur <strong>Filtres </strong>:<br /><br /><img src="../Z_Resources/Images/02_Captures/Config_Filtres_AccesInterfaceAdmin_641x350.png" style="width: 641;height: 350;" /></p>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="3">
-                                                <p class="Liste_num_1">dans la liste des filtres disponibles, cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Filtres_Creer_26x33.png" style="width: 26;height: 33;" /> <strong>Créer un nouveau filtre</strong>&#160;;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p class="Liste_num_1">dans l'interface <strong>Création d'un filtre</strong>, en section <strong>Filtre</strong>, remplissez le champ <strong>Nom </strong>avec un nom explicite (par exemple&#160;: "BloquerImpressions") ;</p>
-                                            </li>
-                                            <li value="5">
-                                                <p class="Liste_num_1">Paramétrez une <strong>Règle </strong>permettant de rejeter les impression provenant d'un identifiant d'utilisateur prédéfini habilité à procéder au test :</p>
-                                            </li>
-                                            <li value="6">
-                                                <p class="Liste_puce_2">en <strong>Condition</strong>, sélectionnez "Utilisateur" &gt;&#160;"Le nom de l'utilisateur est"...&#160;;</p>
-                                            </li>
-                                            <li value="7">
-                                                <p class="Liste_puce_2">dans le champ <strong>Paramètre</strong>, saisissez l'identifiant de l'utilisateur habilité à mener le test (logiquement, vous pouvez utiliser le vôtre) ; </p>
-                                                <ul>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>Si vrai,</strong> activez l'action "Sélectionner" ; </p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>Si faux</strong>, activer l'action "Rejeter".</p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="8">
-                                                <p class="Liste_num_1">Cliquez sur le bouton <strong>Créer</strong> <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Creer_24x23.png" style="width: 24;height: 23;" /> pour valider le filtre.</p>
-                                            </li>
-                                            <li value="9">
-                                                <p class="Liste_num_1">Revenez au <strong>Menu principal</strong> puis, dans la section <strong>Exploitation</strong>, cliquez sur <strong>Files d'impression</strong> ; </p>
-                                            </li>
-                                            <li value="10">
-                                                <p class="Liste_num_1">dans la liste des files, sélectionnez la file que vous souhaitez analyser ;</p>
-                                            </li>
-                                            <li value="11">
-                                                <p class="Liste_num_1">dans l'interface de gestion de la file, cliquez sur le bouton <strong>Règles </strong><img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Regles_34x27.png" style="width: 34;height: 27;" /> :</p>
-                                            </li>
-                                        </ol>
-                                        <blockquote>
-                                            <p><a href="../Z_Resources/Images/02_Captures/Config_Files_Regles_AccesRegles.png"><img src="../Z_Resources/Images/02_Captures/Config_Files_Regles_AccesRegles_630x320.png" style="width: 630;height: 320;" /></a>
-                                            </p>
-                                        </blockquote>
-                                        <ol data-mc-continue="true">
-                                            <li value="12">
-                                                <p class="Liste_num_1"> dans l'onglet <strong>Evènements</strong>, cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Modifier_18x19.png" style="width: 18;height: 19;" /> <strong>Editer </strong>de la file d'impression&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/Config_Files_Regles_Editer_626x231.png" style="width: 626;height: 231;" /></p>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="13">
-                                                <p class="Liste_num_1">  dans la liste <strong>Evènements </strong>sur la file, sélectionnez le filtre précédemment créé, puis appliquez l'action "Bloquer le document" ; </p>
-                                            </li>
-                                            <li value="14">
-                                                <p class="Liste_num_1">  cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Valider_37x36.png" style="width: 37;height: 36;" /> pour valider l'ajout du filtre permettant de bloquer les spools sur cette file.<br /><br /><img src="../Z_Resources/Images/02_Captures/Config_Files_Regles_SelectFiltre_BloquerSpool_646x151.png" style="width: 646;height: 151;" /><br /></p>
-                                            </li>
-                                        </ol>
-                                        <fieldset class="astuce" style="text-align: left;">Si, après analyse du fichier de spools, l'équipe Support Doxense<sup>®</sup> doit prendre la main sur le serveur afin de poursuivre le diagnostic, nous vous recommandons d’installer l’outil gratuit <strong>Team Viewer®</strong> qui permet une prise en main à distance sur votre serveur.<br />Cet outil est téléchargeable sous le lien suivant : <br /><span style="font-size: 10pt;">http://download.teamviewer.com/download/version_11x/TeamViewerQS.exe</span><br />Les versions plus anciennes sont, elles, disponibles depuis la page suivante&#160;:<span style="font-size: 10pt;">https://www.teamviewer.com/fr/download/previous-versions/</span><br /></fieldset>
+                                        <h1>Watchdoc - Configurer <span class="mc-variable Document.Produit variable">Watchdoc</span></h1>
+                                        <p>Le Menu principal vous permet d'accéder aux </p>
+                                        <p>&#160;</p>
+                                        <p>&#160;</p>
+                                        <p>
+                                            <img src="../Z_Resources/Images/02_Captures/Config_Intro.png" />
+                                        </p>
                                     </div>
                                     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
                                     </script>

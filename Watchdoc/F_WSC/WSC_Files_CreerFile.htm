@@ -202,7 +202,7 @@
                                             </li>
                                         </ul>
                                         <h2 id="Principe" data-magellan-target="Principe">Principe</h2>
-                                        <p class="TitreNiveau3">Dans WSC, vous pouvez créer une file d'impression ex-nihilo.<MadCap:conditionalText data-mc-conditions="General.Note interne"> ou à partir d'un template (cf.&#160;<a href="WSC_Files_Creer_DepuisTemplate.htm" target="_blank">Créer une file à partir d'un template</a>)</MadCap:conditionalText>.</p>
+                                        <p class="TitreNiveau3">Dans WSC, vous pouvez créer une file d'impression ex-nihilo..</p>
                                         <p class="TitreNiveau3">Pour créer une file ex-nihilo, il est nécessaire d'avoir ajouté un pilote (driver) adapté à la file au préalable.</p>
                                         <h2 id="Procédure" data-magellan-target="Procédure">Procédure</h2>
                                         <h3 id="Accéderàlinterfacedecréationdefiles" data-magellan-target="Accéderàlinterfacedecréationdefiles">Accéder à l'interface de création de files</h3>
@@ -249,12 +249,11 @@
                                                     </li>
                                                     <li>
                                                         <p class="Liste_puce_1"><strong>Template:</strong> dans la liste, sélectionnez le Template associé à la file créée : dès qu'un template est sélectionné, le pilote et la version sont inidiqués. Si vous ne trouvez pas le template souhaité, cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Ajouter.png" />pour accéder à l'interface de gestion de templates et l'y ajouter.&#160;</p>
-                                                        <p>&#160;</p>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li value="3">
-                                                <p>Cliquez sur <strong>Créer </strong>si les éléments présents dans le formulaire suffisent à la création de votre file d'impression&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Files_Creer.png" /><br /><br /></p>
+                                                <p>Cliquez sur <strong>Créer </strong>si les éléments présents dans le formulaire suffisent à la création de votre file d'impression.<br /></p>
                                             </li>
                                             <li value="4">
                                                 <p>Si vous souhaitez détailler la file créée, cliquez sur <strong>Voir plus </strong>pour compléter la description : <br /></p>
@@ -263,7 +262,10 @@
                                                     <li style="font-size: 12pt;"><strong>Pool d'impression :</strong> précisez  le pool d'impression dans lequel vous souhaitez intégrer la files créée ;</li>
                                                     <li style="font-size: 12pt;"><strong>Groupe :</strong> dans la liste, sélectionnez le groupe de files (réseau, virtuelles, universelles, etc.) dans lequel vous souhaitez intégrer la file créée ;</li>
                                                     <li>
-                                                        <p><strong>WES :</strong> dans la liste, sélectionnez si nécessaire le WES&#160;que vous souhaitez appliquer sur la file créée ;</p>
+                                                        <p><strong>WES :</strong> dans la liste, sélectionnez la marque du WES&#160;que vous souhaitez installer, puis le WES que vous souhaitez appliquer sur la file créée ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Installer le WES :</strong> cochez cette case pour lancer l'installation du WES.<br />Attention : si le WES&#160;est déjà installé et que vous souhaitez le réinstaller, procédez d'abord à sa désinstallation dans Watchdoc. Dans le cas contraire, des  anomalies peuvent survenir.</p>
                                                     </li>
                                                     <li style="font-size: 12pt;">
                                                         <p><strong>File <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term99">partagée<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>File d'impression générée par défaut par l'assistant lors de l'installation du périphérique d'impression réseau. Cette file ne dépend pas de Watchdoc. Elle a pour fonction de générer le spool correspondant aux travaux d'impression envoyés au périphérique.</span></a>/publiée :</strong> cochez la case si la file doit être partagée ;</p>
@@ -316,10 +318,13 @@ Le format permet d'intégrer des données vectorielles 2D et des polices de cara
                                                             </li>
                                                         </ul>
                                                     </li>
-                                                    <li style="font-size: 12pt;"><b>Commentaire(s)</b> : si nécessaire, fournissez des informations supplémentaires relatives à la file.<br /></li>
+                                                    <li style="font-size: 12pt;"><b>Commentaire(s)</b> : si nécessaire, fournissez des informations supplémentaires relatives à la file :<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Files_Creer.png" /><br /><br /></li>
                                                 </ul>
                                             </li>
                                         </ol>
+                                        <p style="font-size: 12pt;">
+                                            <br />
+                                        </p>
                                         <h3 id="CasspécifiquedunefileXerox" data-magellan-target="CasspécifiquedunefileXerox"><a name="Xerox"></a>Cas spécifique d'une file Xerox<sup>®</sup></h3>
                                         <p>Pour configurer une file d'impression Xerox<sup>®</sup> dans WSC, il convient de disposer du fichier de configuration propre au pilote et à la file Xerox<sup>®</sup>. <br />Ce fichier de configuration (<strong>CommonConfiguration.xml</strong>), est généré à l'aide de l'outil Xerox<sup>®</sup> Print Configuration Tool (cf.&#160;<a href="https://www.office.xerox.com/latest/SFTHT-01U.PDF" target="_blank">https://www.office.xerox.com/latest/SFTHT-01U.PDF</a> pour la version 2025 ou recherchez "Print Configuration Tool" sur <a href="https://www.xerox.fr/fr-fr/bureau" target="_blank">https://www.office.xerox.com</a>). <br />Collez ce fichier de configuration sur le serveur hébergeant WSC ou dans un dossier accessible depuis WSC pour pouvoir l'exploiter lors de la création d'une file d'impression.&#160;</p>
                                         <p>

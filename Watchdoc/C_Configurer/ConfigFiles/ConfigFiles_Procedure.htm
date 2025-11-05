@@ -179,7 +179,7 @@
                                         </div>
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1 id="WatchdocFilesdimpressionConfigurerunefile" data-magellan-target="WatchdocFilesdimpressionConfigurerunefile"><a name="aanchor273"></a>
+                                        <h1 id="WatchdocFilesdimpressionConfigurerunefile" data-magellan-target="WatchdocFilesdimpressionConfigurerunefile"><a name="aanchor272"></a>
                                             <MadCap:concept term="WD">
                                             </MadCap:concept>Watchdoc - Files d'impression - Configurer une file</h1>
                                         <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
@@ -621,21 +621,8 @@ Le fait que les messages soient archivés sur le serveur fait que l'utilisateur 
                                         <p class="Liste_puce_1"><strong>Redirection</strong>
                                         </p>
                                         <p>Rendre visible les travaux imprimés dans le pool suivant : dans la liste, sélectionnez l'un des pools existants pour permettre à Watchdoc d'envoyer les travaux d'impression vers d'autres files en cas d'indisponibilité de la file que vous configurez.</p>
-                                        <ul data-mc-conditions="General.Note interne">
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Forcer la redirection vers une autre file d'impression : </strong>cochez cette case pour permettre à Watchdoc d'envoyer les travaux d'impression vers une autre file. Dans ce cas, indiquez, en paramètre <strong>Cible </strong>la file vers laquelle doivent être renvoyées les impressions.</p>
-                                            </li>
-                                        </ul>
                                         <fieldset>Lorsqu'il est utilisé, ce paramètre  s'applique depuis d'une file partagée vers une file virtuelle.&#160;Il permet, par exemple, de rediriger les demandes d'impression couleur vers une file d'impression monochrome.&#160;Notez que ce paramètre doit principalement être utilisé en mode <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term15">Comptabilisation<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Dynamic Link Library (bibliothèque de liens dynamiques) est une bibliothèque logicielle dont les fonctions sont chargées en mémoire par un programme lors de son exécution, par opposition aux bibliothèques logicielles statiques ou partagées dont les fonctions sont chargées en mémoire avant le début de l'exécution du programme.
 (Source : Wikipédia).</span></a>.&#160;En effet, comme l'impression est redirigée vers une file shadow non contrôlee par Watchdoc, les travaux sont imprimés sans validation de l'utilisateur.</fieldset>
-                                        <ul data-mc-conditions="General.Note interne">
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Redirection automatique si périphérique indisponible : </strong>cochez cette case pour permettre à Watchdoc d'envoyer les travaux d'impression vers une autre file partagée lorsque le périphérique ne fonctionne pas. Complétez alors en indiquant, en paramètre <strong>Cible</strong>, la file  vers laquelle doivent être renvoyées les impressions.</p>
-                                            </li>
-                                        </ul>
-                                        <p class="Liste_puce_1" data-mc-conditions="General.Note interne"><strong>Cible : </strong>si vous avez coché une possibilité de redirection, indiquez en <strong>Cible </strong>le ou les périphériques vers lesquels doivent être envoyés les travaux d'impression. Cliquez sur le bouton   situé au bout de la zone de saisie pour accéder à la liste des files contrôlées par Watchdoc.</p>
-                                        <fieldset class="astuce" style="text-align: left;" data-mc-conditions="General.Note interne">La redirection est effectuée en fonction de l'ordre de saisie des cibles dans la liste : ainsi, si le périphérique désigné comme première cible de redirection n'est pas opérationnel, les travaux sont dirigés vers la deuxième cible et ainsi de suite jusqu'à ce qu'un périphérique soit en mesure d'imprimer le travail.<br />Les files d'impression cibles doivent être compatibles avec l'imprimante initiale (même modèle ou même pilote). Si le langage d'impression (PostScript, PCL,..) ou les caractéristiques de l'imprimante (A3/A4, Couleur/Noir et blanc) sont différents, les documents redirigés risquent d'être corrompus.</fieldset>
-                                        <p class="Liste_puce_1" data-mc-conditions="General.Note interne">&#160;</p>
                                         <p class="Liste_puce_1"><strong>Sources </strong>: par défaut, les files héritent de la configuration du groupe de files auquel elles appartiennent. </p>
                                         <p class="Liste_puce_2"> <strong>Ne pas utiliser</strong> : cochez la case pour appliquer à la file que vous paramétrez la configuration d'une ou plusieurs sources de redirection spécifiques.</p>
                                         <p class="Liste_puce_2"><strong>Source(s) </strong>: dans le cas où vous avez coché la case précédente, indiquez dans ce champ la ou les files sources susceptibles d'envoyer leurs travaux sur la file configurée&#160;;</p>
@@ -789,19 +776,8 @@ Le fait que les messages soient archivés sur le serveur fait que l'utilisateur 
                                             <li>
                                                 <p class="Liste_puce_2"><strong>Forcer l'activation de l'envoi d'e-mails sur cette file :</strong> optez pour ce choix si vous souhaitez utiliser la notification par mail pour cette file alors qu'elle appartient à un groupe pour lequel cette option n'est pas activée.</p>
                                             </li>
-                                            <li data-mc-conditions="General.Note interne">
-                                                <p class="Liste_puce_1" data-mc-conditions="General.Note interne"><strong>Notifieur </strong>
-                                                </p>
-                                                <p>Le notifieur est une fonction qui permet d'informer les utilisateurs au moyen de fenêtres (pop-up) surgissant sur l'écran de l'utilisateur pour délivrer des messages d'alerte.</p>
-                                            </li>
                                             <li>
                                                 <p class="Liste_puce_2"><strong>Utiliser la configuration du groupe :</strong>   optez pour ce choix si le traitement à appliquer est celui qui a été défini pour le Groupe de files. La file hérite donc de la configuration générique de son Groupe.</p>
-                                            </li>
-                                            <li data-mc-conditions="General.Note interne">
-                                                <p class="Liste_puce_2"><strong>Désactiver la notification par popup Windows sur cette file :</strong> optez pour ce choix si vous ne souhaitez pas utiliser le notifieur ; </p>
-                                            </li>
-                                            <li data-mc-conditions="General.Note interne">
-                                                <p class="Liste_puce_2"><strong>Forcer l'activation de la notification par popup Windows sur cette file : </strong>optez pour ce choix si vous souhaitez utiliser le notifieur pour cette file alors qu'elle appartient à un groupe pour lequel cette option n'est pas activée.</p>
                                             </li>
                                         </ul>
                                         <h3 id="SectionArchivage" data-magellan-target="SectionArchivage">Section Archivage</h3>
