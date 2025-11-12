@@ -7,7 +7,8 @@
         <meta name="description" content="Procédure de déclaration et de configuration d'un annuaire de type LDAP dans lequel sont enregistrés les utilisateurs de Watchdoc." /><title>Watchdoc - Annuaires - Déclarer et configurer un annuaire Active Directory / LDAP</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
-        <!-- Script tableau triable -->
+        <!-- Tableau triable
+        <link rel="stylesheet" type="text/css" href="../DataTables/DataTables-1.10.20/css/jquery.dataTables.css" /> -->
         <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
@@ -41,6 +42,24 @@
 .button.collapse-all-button
 {
 	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.needs-pie
+{
+	behavior: url('../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <style>/*&lt;meta /&gt;*/
+
+.button.previous-topic-button
+{
+	-pie-background: linear-gradient(transparent, #fcfaf8);
+}
+
+.button.next-topic-button
+{
+	-pie-background: linear-gradient(#ffffff, #fcfaf8);
 }
 
 .needs-pie
@@ -321,8 +340,32 @@ Il est enregistré soit dans une table SQL, soit dans un fichier Json et peut ê
 </p></li><li><p class="Liste_puce_1"><strong>Requêtes max. :</strong> il s'agit du nombre maximum de requêtes en parallèle autorisées. En cas de forte charge de travail, le serveur distant peut ne pas être capable de répondre à un grand nombre de requêtes simultanées.
 </p></li><li><p class="Liste_puce_1"><strong>Délai attente :</strong> après déclenchement du fusible, délai d'attente avant réactivation.&#160;Au terme de ce délai, Watchdoc relance les requêtes afin de "sonder" l'état du serveur. Si les requêtes aboutissent, le fusible est réactivé, sinon il attend à nouveau l'expiration du délai.
 A tout moment, l'administrateur peut manuellement désactiver le fusible. Le fusible reste alors coupé jusqu'à ce qu'il soit réactivé manuellement. Pensez à utiliser cette fonctionnalité afin de tester l'impact d'une panne sur le serveur d'impression.<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Fusible.png" /><br /><br /></p></li></ul><p>Les valeurs généralement saisies pour l'activation du fusible dans un environnement multi serveur (Master) sont les suivantes :</p><ul><li><p class="Liste_puce_1">erreurs max : 5</p></li><li><p class="Liste_puce_1">requêtes max : 5</p></li><li><p class="Liste_puce_1">durée max : 30 secondes</p></li><li><p class="Liste_puce_1">délai attente : 120 secondes</p></li></ul><h2>Print clients</h2><ul><li><p><strong>Ne pas utiliser cet annuaire :</strong> cochez cette case pour que Watchdoc Print Client n'utilise pas  cet annuaire<br /><img src="Config_Annuaire_PrintClients.png" /></p></li></ul><h2>Validation de la configuration </h2><p class="Liste_num_1">Cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/icon_Declarer_26x24.png" style="width: 26;height: 24;" /> <strong>Créer </strong>pour valider la configuration de votre annuaire.</p></div>
+                                    <p>&#160;</p>
+                                    <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
+                                        <div class="button-group-container-left">
+                                            <button class="button elearning-button needs-pie previous-topic-button" title="Previous" disabled="true">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Previous">
+                                                        <div class="button-icon"> </div>
+                                                    </div><span class="button-text">Previous</span>
+                                                </div>
+                                            </button>
+                                            <button class="button elearning-button needs-pie next-topic-button" title="Next" disabled="true">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Next">
+                                                        <div class="button-icon"> </div>
+                                                    </div><span class="button-text">Next</span>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <p><span style="font-size: 10pt;">Une suggestion ? Une demande de correction ? <a href="mailto:documentations@doxense.com?subject=Doxdoc.fr" target="_blank" title="Envoyer un email à documentations@doxense.com" alt="Envoyer un email à documentations@doxense.com">Exprimez-vous !</a></span>
+                                    </p>
                                     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
                                     </script>
+                                    <!--div id="expand-collapse" title="Expand/collapse navigation" class="collapse">
+		</div>-->
                                     <script src="../../Resources/Scripts/Laguna.js">
                                     </script>
                                     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">

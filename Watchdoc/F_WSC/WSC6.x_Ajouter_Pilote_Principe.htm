@@ -7,7 +7,8 @@
         <meta name="description" content="Présentation du principe de création et de gestion des pilotes d'impression." /><title>WSC Console de Supervision - Pilotes (drivers) - Présentation</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
-        <!-- Script tableau triable -->
+        <!-- Tableau triable
+        <link rel="stylesheet" type="text/css" href="../DataTables/DataTables-1.10.20/css/jquery.dataTables.css" /> -->
         <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
@@ -41,6 +42,24 @@
 .button.collapse-all-button
 {
 	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.needs-pie
+{
+	behavior: url('../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <style>/*&lt;meta /&gt;*/
+
+.button.previous-topic-button
+{
+	-pie-background: linear-gradient(transparent, #fcfaf8);
+}
+
+.button.next-topic-button
+{
+	-pie-background: linear-gradient(#ffffff, #fcfaf8);
 }
 
 .needs-pie
@@ -200,8 +219,32 @@
                                         <h2>Mettre à jour les pilotes dans WSC</h2>
                                         <fieldset>La procédure de chargement des pilotes ayant changé en v. 6.1, lors d'une mise à jour de WSC&#160;v6.0 (ou antérieure) vers v6.1, il est nécessaire de supprimer les pilotes installés et de les charger de nouveau en respectant la procédure (cf. <a href="WSC6.1.x_Ajouter_Pilote.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">WSC v6.1 - Charger un pilote</a>).&#160;</fieldset>
                                     </div>
+                                    <p>&#160;</p>
+                                    <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
+                                        <div class="button-group-container-left">
+                                            <button class="button elearning-button needs-pie previous-topic-button" title="Previous" disabled="true">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Previous">
+                                                        <div class="button-icon"> </div>
+                                                    </div><span class="button-text">Previous</span>
+                                                </div>
+                                            </button>
+                                            <button class="button elearning-button needs-pie next-topic-button" title="Next" disabled="true">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Next">
+                                                        <div class="button-icon"> </div>
+                                                    </div><span class="button-text">Next</span>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <p><span style="font-size: 10pt;">Une suggestion ? Une demande de correction ? <a href="mailto:documentations@doxense.com?subject=Doxdoc.fr" target="_blank" title="Envoyer un email à documentations@doxense.com" alt="Envoyer un email à documentations@doxense.com">Exprimez-vous !</a></span>
+                                    </p>
                                     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
                                     </script>
+                                    <!--div id="expand-collapse" title="Expand/collapse navigation" class="collapse">
+		</div>-->
                                     <script src="../Resources/Scripts/Laguna.js">
                                     </script>
                                     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">

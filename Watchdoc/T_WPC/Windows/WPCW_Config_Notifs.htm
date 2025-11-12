@@ -6,7 +6,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title> Watchdoc Print API - Configurer les notifications</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
-        <!-- Script tableau triable -->
+        <!-- Tableau triable
+        <link rel="stylesheet" type="text/css" href="../DataTables/DataTables-1.10.20/css/jquery.dataTables.css" /> -->
         <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
@@ -40,6 +41,24 @@
 .button.collapse-all-button
 {
 	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.needs-pie
+{
+	behavior: url('../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <style>/*&lt;meta /&gt;*/
+
+.button.previous-topic-button
+{
+	-pie-background: linear-gradient(transparent, #fcfaf8);
+}
+
+.button.next-topic-button
+{
+	-pie-background: linear-gradient(#ffffff, #fcfaf8);
 }
 
 .needs-pie
@@ -181,7 +200,14 @@
                                         <h1><a name="aanchor333"></a>
                                             <MadCap:concept term="WPC" /> Watchdoc Print API - Configurer les notifications</h1>
                                         <h2>Principe</h2>
-                                        <p>Vous pouvez configurer des notifications permettant d'informer les utilisateurs de WPC&#160;des différentes actions lancées depuis WCP for Windows telles que les travaux d'impression envoyés, en attente, ou imprimés via l'application.&#160;</p>
+                                        <p>Vous pouvez configurer des notifications permettant d'informer les utilisateurs de WPC&#160;des différentes actions lancées depuis WCP for Windows telles que les travaux d'impression envoyés, en attente, ou imprimés via l'application, mais aussi les modifications de configurations telles que le choix d'une file par défaut ou d'un emplacement.&#160;</p>
+                                        <p>&#160;</p>
+                                        <p>Ces notifications sont adressées à l'utilisateur sous des formes différentes en fonction du système d'exploitation qui équipe leur poste de travail.&#160;Les liens présents dans la notification sont cliquables : <br /><br /></p>
+                                        <p>
+                                            <img src="WPCW_notification_filedefaut.png" /> <img src="WPCW_notification_Couleur_356x198.png" style="width: 356;height: 198;" /></p>
+                                        <address style="text-align: left;">Exemple de notifications WPC&#160;sous MS&#160;Windows 11</address>
+                                        <p>&#160;</p>
+                                        <fieldset>En raison du processus de déclenchement des notifications, certains événements (notamment la suppression) peuvent ne pas être signalés immédiatement à l'utilisateur.&#160;Il peut arriver que l'utilisateur ne reçoive la notification que lorsqu'il lance une nouvelle demande d'impression.</fieldset>
                                         <h2>Procédure</h2>
                                         <h3>Configurer les notifications Watchdoc Print Client</h3>
                                         <p>Pour configurer les notifications de WPC : </p>
@@ -235,9 +261,35 @@
                                                 <p>Testez la notification en déclenchant l'événement pour lequel vous l'avez configuré (par exemple, lancez une impression) et vérifiez que le message s'affiche dans l'interface Watchdoc Print Client.&#160; </p>
                                             </li>
                                         </ol>
+                                        <p>&#160;</p>
+                                        <p>N.B. : si les notifications s'affichent dans une autre langue que la langue souhaitée, configurez les options régionales de Watchoc pour préciser la langue souhaitée (Menu principal &gt;&#160;section Configuration &gt; Configuration avancée &gt; Configuration système &gt;&#160;section Configuration générale &gt; Options régionales &gt;&#160;paramètre Langue) : <br /><br /><img src="WPCW_notification_Lang_700x380.png" style="width: 700;height: 380;" /></p>
                                     </div>
+                                    <p>&#160;</p>
+                                    <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
+                                        <div class="button-group-container-left">
+                                            <button class="button elearning-button needs-pie previous-topic-button" title="Previous" disabled="true">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Previous">
+                                                        <div class="button-icon"> </div>
+                                                    </div><span class="button-text">Previous</span>
+                                                </div>
+                                            </button>
+                                            <button class="button elearning-button needs-pie next-topic-button" title="Next" disabled="true">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Next">
+                                                        <div class="button-icon"> </div>
+                                                    </div><span class="button-text">Next</span>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <p><span style="font-size: 10pt;">Une suggestion ? Une demande de correction ? <a href="mailto:documentations@doxense.com?subject=Doxdoc.fr" target="_blank" title="Envoyer un email à documentations@doxense.com" alt="Envoyer un email à documentations@doxense.com">Exprimez-vous !</a></span>
+                                    </p>
                                     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
                                     </script>
+                                    <!--div id="expand-collapse" title="Expand/collapse navigation" class="collapse">
+		</div>-->
                                     <script src="../../Resources/Scripts/Laguna.js">
                                     </script>
                                     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">

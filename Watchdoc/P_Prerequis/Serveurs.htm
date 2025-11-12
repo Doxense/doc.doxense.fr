@@ -7,7 +7,8 @@
         <meta name="description" content="Présentation des prérequis d'installation de Watchdoc : versions MS Windows Serveur compatibles, langages analysés, composants du serveur d'application, serveurs d'annuaires compatibles, serveurs de données compatibles, présentation de la fonction de notifications, antimalware, antivirus et outils de sécurité." /><title>Watchdoc - Prérequis serveurs</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
-        <!-- Script tableau triable -->
+        <!-- Tableau triable
+        <link rel="stylesheet" type="text/css" href="../DataTables/DataTables-1.10.20/css/jquery.dataTables.css" /> -->
         <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
@@ -41,6 +42,24 @@
 .button.collapse-all-button
 {
 	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.needs-pie
+{
+	behavior: url('../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <style>/*&lt;meta /&gt;*/
+
+.button.previous-topic-button
+{
+	-pie-background: linear-gradient(transparent, #fcfaf8);
+}
+
+.button.next-topic-button
+{
+	-pie-background: linear-gradient(#ffffff, #fcfaf8);
 }
 
 .needs-pie
@@ -363,8 +382,32 @@
                                         <h2>Antimalware, antivirus et outils de sécurité</h2>
                                         <p>Les antimalware, antivirus et autres outils garantissant la sécurité du serveur d'impression (Windows<sup>®</sup> Defender, Bit Defender<sup>®</sup>, Kaspersky<sup>®</sup>, MacAfee<sup>®</sup>, par exemple, doivent être désactivés sur le dossier d'installation de Watchdoc ainsi que sur le dossier contenant les spools.&#160;Cette désactivation repose sur des règles d'exclusion pour que l'activité d'impression de Watchdoc ne soit pas ralentie par l'analyse effectuée par ces outils.&#160;</p>
                                     </div>
+                                    <p>&#160;</p>
+                                    <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
+                                        <div class="button-group-container-left">
+                                            <button class="button elearning-button needs-pie previous-topic-button" title="Previous" disabled="true">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Previous">
+                                                        <div class="button-icon"> </div>
+                                                    </div><span class="button-text">Previous</span>
+                                                </div>
+                                            </button>
+                                            <button class="button elearning-button needs-pie next-topic-button" title="Next" disabled="true">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Next">
+                                                        <div class="button-icon"> </div>
+                                                    </div><span class="button-text">Next</span>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <p><span style="font-size: 10pt;">Une suggestion ? Une demande de correction ? <a href="mailto:documentations@doxense.com?subject=Doxdoc.fr" target="_blank" title="Envoyer un email à documentations@doxense.com" alt="Envoyer un email à documentations@doxense.com">Exprimez-vous !</a></span>
+                                    </p>
                                     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
                                     </script>
+                                    <!--div id="expand-collapse" title="Expand/collapse navigation" class="collapse">
+		</div>-->
                                     <script src="../Resources/Scripts/Laguna.js">
                                     </script>
                                     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">

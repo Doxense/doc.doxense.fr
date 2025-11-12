@@ -7,7 +7,8 @@
         <meta name="description" content="Procédure d'installation et de configuration de Watchdoc Print Client for Chrome dans Google Admin." /><title> Watchdoc Print Client for Chrome® - Configurer</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
-        <!-- Script tableau triable -->
+        <!-- Tableau triable
+        <link rel="stylesheet" type="text/css" href="../DataTables/DataTables-1.10.20/css/jquery.dataTables.css" /> -->
         <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
@@ -41,6 +42,24 @@
 .button.collapse-all-button
 {
 	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.needs-pie
+{
+	behavior: url('../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <style>/*&lt;meta /&gt;*/
+
+.button.previous-topic-button
+{
+	-pie-background: linear-gradient(transparent, #fcfaf8);
+}
+
+.button.next-topic-button
+{
+	-pie-background: linear-gradient(#ffffff, #fcfaf8);
 }
 
 .needs-pie
@@ -212,8 +231,32 @@
                                                 </li>
                                             </ol> <ol data-mc-continue="true"><li value="3"><p class="Liste_num_1">dans l'interface <strong>Add the Chrome app or extension by ID</strong>, saisissez :</p><ul><li><p class="Liste_num_1">soit l'identifiant, dans le : champ <strong>Extension ID</strong>, </p></li><li><p class="Liste_num_1">soit l'URL dans le champ <strong>From a custom URL</strong>, </p></li></ul></li><li value="4"><p class="Liste_num_1">validez en cliquant sur <img src="../../Z_Resources/Images/02_Captures/WPC/Bouton_Chrome_Valider.png" /> : <br /><br /><img src="../../Z_Resources/Images/02_Captures/WPC/WPC_Chrome_Admin_AjoutExtension_ID_390x287.png" style="width: 390;height: 287;" /></p><p>&#160;</p></li><li value="5"><p>l'extension apparaît dans les sources disponibles : </p><p>&#160;</p><p><img src="../../Z_Resources/Images/02_Captures/WPC/WPC_Chrome_Admin_Extension_657x332.png" style="width: 657;height: 332;" /></p><p>&#160;</p></li><li value="6"><p>cliquez dessus et complétez le champ <strong>Policy for extensions</strong> : pour affiner la stratégie de l'extension, ajoutez le code suivant : </p><p><code>{"settings":{"discoveryUrls":["http://10.10.0.173:5753/api/1.0/print/discover"]}}</code></p><p>&#160;</p><p><code><img src="../../Z_Resources/Images/02_Captures/WPC/WPC_Chrome_Admin_PolicyExtensions.png" /></code></p></li></ol><ol data-mc-continue="true"><li value="7"><p class="Liste_num_1">Sélectionnez ensuite le mode d'installation :</p><ul><li><p class="Liste_puce_2"><strong>Force install :</strong> sélectionnez ce mode pour installer l'extension par défaut sur tous les postes Chromebook<sup>®</sup> ou navigateurs Chrome<sup>®</sup> gérés par votre organisation ;</p></li><li><p class="Liste_puce_2"><strong>Allow install :</strong> sélectionnez ce mode pour proposer cette extension aux utilisateurs de vos postes Chromebook<sup>®</sup> ou navigateurs Chrome<sup>®</sup> gérés par votre organisation en les laissant libres de l'activer ou non ; </p></li><li><p class="Liste_puce_2"><strong>Bloc : </strong>sélectionnez ce mode pour bloquer l'utilisation de cette extension sur les postes Chromebook<sup>®</sup> ou navigateurs Chrome<sup>®</sup> gérés par votre organisation :<br /><br /><img src="../../Z_Resources/Images/02_Captures/WPC/WPC_Chrome_Admin_ModeInstallation_640x205.png" style="width: 640;height: 205;" /></p><p class="Liste_puce_2"><br /></p></li></ul></li><li value="8"><p>Cliquez ensuite sur <strong>Sécurité </strong>&gt; <strong>Contrôle des accès et des données</strong> &gt; <strong>Commandes des API</strong>.</p></li><li value="9"><p>S'il y en a plusieurs, recherchez l'unité organisationnelle que vous souhaitez modifier.</p></li><li value="10"><p>Dans l'interface<strong> Affichage des paramètres pour les utilisateurs de</strong> [unité_organisationelle], pour le paramètre "<strong>Applications tierces non configurées</strong>", sélectionnez l'option "<b>autoriser les utilisateurs à accéder aux applications tierces qui ne demandent que les informations de base nécessaires pour la fonctionnalité Se connecter avec Google</b>" : <br /><br /><img src="WPCC_6.1_ErreurAuthent_Config_700x523.png" style="width: 700;height: 523;" /><br /><br /></p></li></ol><ol data-mc-continue="true"><li value="11"><p class="Liste_num_1">Validez le paramétrage en cliquant sur <img src="../../Z_Resources/Images/02_Captures/WPC/Bouton_Chrome_Valider.png" />.</p></li><li value="12"><p class="Resultat">Testez l'extension à partir d'un Chromebook<sup>®</sup> ou d'un navigateur Chrome<sup>®</sup>.</p></li></ol></p>
                                     </div>
+                                    <p>&#160;</p>
+                                    <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
+                                        <div class="button-group-container-left">
+                                            <button class="button elearning-button needs-pie previous-topic-button" title="Previous" disabled="true">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Previous">
+                                                        <div class="button-icon"> </div>
+                                                    </div><span class="button-text">Previous</span>
+                                                </div>
+                                            </button>
+                                            <button class="button elearning-button needs-pie next-topic-button" title="Next" disabled="true">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Next">
+                                                        <div class="button-icon"> </div>
+                                                    </div><span class="button-text">Next</span>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <p><span style="font-size: 10pt;">Une suggestion ? Une demande de correction ? <a href="mailto:documentations@doxense.com?subject=Doxdoc.fr" target="_blank" title="Envoyer un email à documentations@doxense.com" alt="Envoyer un email à documentations@doxense.com">Exprimez-vous !</a></span>
+                                    </p>
                                     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
                                     </script>
+                                    <!--div id="expand-collapse" title="Expand/collapse navigation" class="collapse">
+		</div>-->
                                     <script src="../../Resources/Scripts/Laguna.js">
                                     </script>
                                     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
