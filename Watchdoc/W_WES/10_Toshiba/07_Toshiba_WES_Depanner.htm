@@ -210,6 +210,8 @@
                                                     </li>
                                                     <li class="tree-node"><a href="#Travauxdenum%C3%A9risationfaxetphotocopienoncomptabilis%C3%A9s">Travaux de numérisation, fax et photocopie non comptabilisés</a>
                                                     </li>
+                                                    <li class="tree-node"><a href="#Impossibilit%C3%A9desauthentifierdepuisleWESLenteursconstat%C3%A9essurlep%C3%A9riph%C3%A9riqueNovembre2025">Impossibilité de s'authentifier depuis le WES - Lenteurs constatées sur le périphérique - Novembre 2025.</a>
+                                                    </li>
                                                     <li class="tree-node"><a href="#MessagedanslinterfacedadministrationTopAccessDonn%C3%A9esdejournaleffac%C3%A9es">Message dans l'interface d'administration TopAccess : Données de journal effacées</a>
                                                     </li>
                                                     <li class="tree-node"><a href="#MessagederreurTheremoteSOAPservicefailedwhileprocessingrequestunknownUserisoperatingthepanel">Message d'erreur - The remote SOAP&#160;service failed while processing request 'unknown': User is operating the panel</a>
@@ -317,6 +319,20 @@
                                                 <p class="Resultat" style="text-align: justify;">vérifiez que la procédure a réglé le problème.</p>
                                             </li>
                                         </ol>
+                                        <hr width="100%" size="0" align="center" />
+                                        <h2 id="ImpossibilitédesauthentifierdepuisleWESLenteursconstatéessurlepériphériqueNovembre2025" data-magellan-target="ImpossibilitédesauthentifierdepuisleWESLenteursconstatéessurlepériphériqueNovembre2025">Impossibilité de s'authentifier depuis le WES - Lenteurs constatées sur le périphérique - Novembre 2025.</h2>
+                                        <p><strong style="color: #000000;">Contexte</strong>
+                                        </p>
+                                        <p style="text-align: left;">Après mise à jour en Watchdoc v. 6.1.1., les utilisateurs n'arrivent plus à s'authentifier depuis le WES&#160;: après saisie du code ou présentation du badge, le périphérique semble traiter l'information pendant environ 40 secondes, mais revient à l'interface d'accueil.&#160;<br />L'anomalie est résolue après redémarrage du périphérique, mais elle réapparaît très rapidement.&#160;<br />Dans le journal, on constate effectivement que la réponse à la commande   &lt;deviceRecord:getLog&gt; est anormalement longue.<br />Depuis la page web du périphérique, il est impossible d'afficher  le journal des travaux (chargement infini).</p>
+                                        <p style="text-align: left;"> <br /></p>
+                                        <p><strong style="color: #000000;">Cause</strong> </p>
+                                        <p>Ce problème est lié au journal des travaux (job log) qui peut ralentir le fonctionnement du périphérique lorsqu'il est trop lourd.&#160;</p>
+                                        <p>
+                                            <br />
+                                        </p>
+                                        <p><strong style="color: #000000;">Résolution</strong>
+                                        </p>
+                                        <p>Il convient de modifier la valeur du paramètre "Journal des travaux" configuré dans le profil WES&#160;associé au périphérique (cf. <a href="03_Toshiba_WES_ConfigProfil.htm#Joblog" target="_blank">Configurer le profil WES</a>).&#160;<br />Nous recommandons d'utiliser la valeur 0 permettant une purge automatique ou de limiter le nombre de jours de rétention pour éviter ces lenteurs.&#160;<br />Attention : il arrive qu'une valeur supérieure à 0, même peu élevée, provoque des dysfonctionnements.&#160;</p>
                                         <hr width="100%" size="0" align="center" />
                                         <h2 data-mc-conditions="General.Online" id="MessagedanslinterfacedadministrationTopAccessDonnéesdejournaleffacées" data-magellan-target="MessagedanslinterfacedadministrationTopAccessDonnéesdejournaleffacées">Message dans l'interface d'administration TopAccess : <a name="Donnees_Effacees"></a>Données de journal effacées</h2>
                                         <p style="font-weight: bold;">Juin 2025</p>
@@ -642,18 +658,18 @@
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">
-                                            <button class="button elearning-button needs-pie previous-topic-button" title="Previous" disabled="true">
+                                            <button class="button elearning-button needs-pie previous-topic-button" title="Précédent" disabled="true">
                                                 <div>
-                                                    <div role="img" class="button-icon-wrapper" aria-label="Previous">
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Précédent">
                                                         <div class="button-icon"> </div>
-                                                    </div><span class="button-text">Previous</span>
+                                                    </div><span class="button-text">Précédent</span>
                                                 </div>
                                             </button>
-                                            <button class="button elearning-button needs-pie next-topic-button" title="Next" disabled="true">
+                                            <button class="button elearning-button needs-pie next-topic-button" title="Suivant" disabled="true">
                                                 <div>
-                                                    <div role="img" class="button-icon-wrapper" aria-label="Next">
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Suivant">
                                                         <div class="button-icon"> </div>
-                                                    </div><span class="button-text">Next</span>
+                                                    </div><span class="button-text">Suivant</span>
                                                 </div>
                                             </button>
                                         </div>
