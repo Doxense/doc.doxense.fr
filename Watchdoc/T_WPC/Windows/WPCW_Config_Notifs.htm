@@ -197,10 +197,10 @@
                                         </div>
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor333"></a>
+                                        <h1><a name="aanchor332"></a>
                                             <MadCap:concept term="WPC" /> Watchdoc Print API - Configurer les notifications</h1>
                                         <h2>Principe</h2>
-                                        <p>Vous pouvez configurer des notifications permettant d'informer les utilisateurs de WPC&#160;des différentes actions lancées depuis WCP for Windows telles que les travaux d'impression envoyés, en attente, ou imprimés via l'application, mais aussi les modifications de configurations telles que le choix d'une file par défaut ou d'un emplacement.&#160;</p>
+                                        <p>Vous pouvez configurer des notifications permettant d'informer les utilisateurs des différentes actions lancées depuis WCP for Windows<sup>®</sup> telles que les travaux d'impression envoyés, en attente, ou imprimés via l'application, mais aussi les modifications de configurations telles que le choix d'une file par défaut ou d'un emplacement.&#160;</p>
                                         <p>&#160;</p>
                                         <p>Ces notifications sont adressées à l'utilisateur sous des formes différentes en fonction du système d'exploitation qui équipe leur poste de travail.&#160;Les liens présents dans la notification sont cliquables : <br /><br /></p>
                                         <p>
@@ -219,10 +219,10 @@
                                                 <p>dans l'interface <strong>Configuration avancée</strong>, cliquez sur <strong>Notifications</strong>&#160;;</p>
                                             </li>
                                             <li value="3">
-                                                <p>dans l'interface <strong>Notifications</strong>, cliquez sur <strong>Paramètres de notification</strong> ; </p>
+                                                <p>dans l'interface <strong>Notifications</strong>, cliquez sur <strong>Paramètres de notification</strong>&#160;; </p>
                                             </li>
                                             <li value="4">
-                                                <p>configurez la notification (cf.&#160;<a href="../../C_Configurer/ConfigNotifs/ConfigNotifs_Procedure.htm">Configurer la</a><a href="../../C_Configurer/ConfigNotifs/ConfigNotifs_Procedure.htm"> notification</a>)&#160;en cochant également la case <strong>Notifications WPC&#160;: activer la notification aux utilisateurs dans WPC</strong> :<br /><br /><img src="../../C_Configurer/ConfigNotifs/Config_Notifs_WPC.png" /></p>
+                                                <p>configurez la notification (cf.&#160;<a href="../../C_Configurer/ConfigNotifs/ConfigNotifs_Procedure.htm">Configurer la</a><a href="../../C_Configurer/ConfigNotifs/ConfigNotifs_Procedure.htm"> notification</a>)&#160;en cochant également la case <strong>Notifications WPC&#160;: activer la notification aux utilisateurs dans WPC</strong>&#160;:<br /><br /><img src="../../C_Configurer/ConfigNotifs/Config_Notifs_WPC.png" /></p>
                                                 <p>
                                                     <br />
                                                 </p>
@@ -262,7 +262,14 @@
                                             </li>
                                         </ol>
                                         <p>&#160;</p>
-                                        <p>N.B. : si les notifications s'affichent dans une autre langue que la langue souhaitée, configurez les options régionales de Watchoc pour préciser la langue souhaitée (Menu principal &gt;&#160;section Configuration &gt; Configuration avancée &gt; Configuration système &gt;&#160;section Configuration générale &gt; Options régionales &gt;&#160;paramètre Langue) : <br /><br /><img src="WPCW_notification_Lang_700x380.png" style="width: 700;height: 380;" /></p>
+                                        <p>N.B. : si les notifications s'affichent dans une autre langue que la langue souhaitée, configurez les options régionales de Watchoc pour préciser la langue souhaitée (Menu principal &gt;&#160;section Configuration &gt; Configuration avancée &gt; Configuration système &gt;&#160;section Configuration générale &gt; Options régionales &gt;&#160;paramètre Langue) : <br /><br /><a class="MCPopupThumbnailLink" href="WPCW_notification_Lang.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1130" data-mc-height="614" src="WPCW_notification_Lang.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a></p>
+                                        <h3>Synchronisation des notifications sur les serveurs slaves.</h3>
+                                        <p>Dans le cas où Watchdoc est installé en domaine (configuration master/slaves), la configuration des notifications effectuée sur le serveur master doit être reportée sur les serveurs slaves.</p>
+                                        <p>Cette synchronisation peut être réalisée en cochant le bouton <strong>Global </strong>dans l'interface de configuration des notifications, section <strong>Réplication </strong>: <br /><br /><a class="MCPopupThumbnailLink" href="../../C_Configurer/ConfigNotifs/Config_Notifs_WPC_Global.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1144" data-mc-height="256" src="../../C_Configurer/ConfigNotifs/Config_Notifs_WPC_Global.png" tabindex="" style="max-width: 1000px;" /></a><br /><br /></p>
+                                        <fieldset>Attention : la case Global est inactive dans les versions 6.1.1.5417 et 6.1.1.5430. Il est donc nécessaire de reproduire la configuration effectuée sur le serveur maître sur les serveurs esclaves qui en dépendent.</fieldset>
+                                        <h3>Personnalisation des notifications sous MS Windows 10 ou 11.</h3>
+                                        <p>Les notifications de WPC&#160;dépendent des notifications MS&#160;Windows<sup>®</sup> que vous pouvez gérer et adapter à vos besoins en vous reportant à la documentation <a href="https://support.microsoft.com/fr-fr/windows/notifications-et-ne-pas-déranger-dans-windows-feeca47f-0baf-5680-16f0-8801db1a8466" target="_blank">MS&#160;Windows</a>.</p>
+                                        <p>Par ailleurs, les messages correspondant aux événements peuvent être modifiés dans le fichier de langues de Watchdoc (C:\Program Files\Doxense\Watchdoc\Data\lang_service.fr-FR.wml, dans les balises commençant par # [notifications/wpcs/) en suivant la procédure  <a href="../../H_HowTo/WD541_Personnaliser_Libelles.htm">Personnaliser les libellés de Watchdoc.</a><br /></p>
                                     </div>
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
