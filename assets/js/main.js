@@ -4,6 +4,11 @@ let blockNews = document.querySelector('.doc_news--ul');
 
 let arrayContent = [
 {	
+	date: "24 novembre 2025",
+	link: "/Focalist/D_NotesVersions/Notes_Versions.htm",
+	content: "nouvelle version Focalist 9.37.1"
+},
+{	
 	date: "17 novembre 2025",
 	link: "/Focalist/D_NotesVersions/Notes_Versions.htm",
 	content: "nouvelle version Focalist 9.37.0"
