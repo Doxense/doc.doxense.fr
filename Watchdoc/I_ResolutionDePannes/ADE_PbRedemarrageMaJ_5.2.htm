@@ -177,7 +177,7 @@
                                         <h1>Problème de redémarrage après mise à jour</h1>
                                         <p>Watchdoc 5.1-5.2</p>
                                         <h2>Contexte</h2>
-                                        <p>Après une mise à jour manuelle de Watchdoc<sup>®</sup> dans un environnement fonctionnant avec le framework .NET 4.7.2, Watchdoc ne démarre plus.</p>
+                                        <p>Après une mise à jour manuelle de Watchdoc dans un environnement fonctionnant avec le framework .NET 4.7.2, Watchdoc ne démarre plus.</p>
                                         <p>Dans l'outil en ligne de commande, le message d'erreur suivant est affiché :</p>
                                         <p style="text-align: center;">
                                             <img src="../Z_Resources/Images/02_Captures/WD52_ADE_Pb_MaJ_52_MsgErrorCommandPrompt.png" />
@@ -190,14 +190,14 @@
                                         <h2>&#160;</h2>
                                         <h2><strong>Cause(s)</strong>
                                         </h2>
-                                        <p>Le problème est lié à la mise à jour manuelle des fichiers du kernel lorsque Watchdoc<sup>®</sup> fonctionne avec le .Net framework 4.7.2.</p>
+                                        <p>Le problème est lié à la mise à jour manuelle des fichiers du kernel lorsque Watchdoc fonctionne avec le .Net framework 4.7.2.</p>
                                         <h2>&#160;</h2>
                                         <h2><strong>Résolution</strong>
                                         </h2>
                                         <p>Pour résoudre le problème, il convient de remplacer les fichiers du dossier Watchdoc (par défaut C:\ProgramFiles\Doxense\Watchdoc) par ceux du dossier de mise à jour kernel[nouvelle_version]&#160;:</p>
                                         <ol>
                                             <li value="1">
-                                                <p class="Liste_num_1">sur le serveur, ouvrez le dossier des fichiers de configuration de Watchdoc<sup>®</sup> (par défaut C:\ProgramFiles\Doxense\Watchdoc) ;</p>
+                                                <p class="Liste_num_1">sur le serveur, ouvrez le dossier des fichiers de configuration de Watchdoc (par défaut C:\ProgramFiles\Doxense\Watchdoc) ;</p>
                                             </li>
                                             <li value="2">
                                                 <p class="Liste_num_1">ouvrez le dossier <strong>Watchdoc_Update_[nouvelle_version].zip</strong> de mise à jour téléchargé depuis Connect ;</p>
@@ -206,7 +206,7 @@
                                                 <p class="Liste_num_1">toujours dans ce dossier de mise à jour, ouvrez le dossier <strong>kernel[n°_version].zip </strong>;</p>
                                             </li>
                                             <li value="4">
-                                                <p class="Liste_num_1">pour chaque fichier de configuration Watchdoc<sup>®</sup> <strong>([nom_fichier].exe.config</strong>) installé sur le serveur, recherchez le fichier de mise à jour correspondant dans le dossier de mise à jour <strong>([nom_fichier].exe.config.merge)</strong>;</p>
+                                                <p class="Liste_num_1">pour chaque fichier de configuration Watchdoc <strong>([nom_fichier].exe.config</strong>) installé sur le serveur, recherchez le fichier de mise à jour correspondant dans le dossier de mise à jour <strong>([nom_fichier].exe.config.merge)</strong>;</p>
                                             </li>
                                             <li value="5">
                                                 <p class="Liste_num_1">déplacez les fichiers<strong> .merge </strong>du dossier de mise à jour vers le dossier Watchdoc du serveur;</p>

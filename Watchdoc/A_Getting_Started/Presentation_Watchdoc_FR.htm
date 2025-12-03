@@ -205,21 +205,21 @@
                                         <p>&#160;</p>
                                         <p>
                                             <p><strong style="color: #ff8c00; background-color: #ffffff;">1.</strong> 	L'utilisateur lance une demande d'impression depuis son poste de travail.</p>
-                                            <p><strong style="color: #ff8c00;">2.</strong> Cette demande d'impression est envoyée dans la file partagée du serveur d'impression habituel. La seule différence visible, par rapport à une impression non contrôlée par Watchdoc, est que les files d'impression de ce serveur sont "en pause". Lorsque le travail d'impression est soumis au serveur par un poste client, le spool d'impression est placé en attente dans la file d'impression du serveur.</p>
-                                            <p><strong style="color: #ff8c00;">3.	</strong>Watchdoc analyse le travail d'impression pour en extraire les informations essentielles et parcourt le fichier de spool pour en définir les caractéristiques (noir &amp; blanc ou couleur, nombre de pages, etc.).</p>
-                                            <p><strong style="color: #ff8c00;">4.</strong>	Watchdoc compare les caractéristiques du travail d'impression et du profil utilisateur avec les règles établies afin de vérifier s'il existe des actions spécifiques à appliquer (blocage de l'impression, courriel de notification, etc.). Par défaut, en mode comptabilisation, le travail est prêt à être imprimé immédiatement. En mode validation (Print-on-Demand), le travail est gardé en sécurité jusqu'à ce que l'utilisateur le libère depuis l'interface web ou après s'être identifié ou avoir badgé sur le périphérique.</p>
-                                            <p><strong style="color: #ff8c00;">5.</strong> Si la transformation de spools est disponible (fonction soumise à compatibilité du périphérique) et activée, elle est appliquée : en fonction du paramétrage défini, Watchdoc suggère ou force l'utilisateur à modifier ses choix d'impression initiaux pour adopter des choix d'impression plus économiques et écologiques : recto-verso plutôt que recto simple, N&amp;B plutôt que couleur, réduction du nombre d'exemplaires.</p>
+                                            <p><strong style="color: #ff8c00;">2.</strong> Cette demande d'impression est envoyée dans la file partagée du serveur d'impression habituel. <br />La seule différence visible, par rapport à une impression non contrôlée par Watchdoc, est que les files d'impression de ce serveur sont "en pause". Lorsque le travail d'impression est soumis au serveur par un poste client, le spool d'impression est placé en attente dans la file d'impression du serveur.</p>
+                                            <p><strong style="color: #ff8c00;">3.</strong> Watchdoc analyse le travail d'impression pour en extraire les informations essentielles et parcourt le fichier de spool pour en définir les caractéristiques (noir et blanc ou couleur, nombre de pages, etc.).</p>
+                                            <p><strong style="color: #ff8c00;">4.</strong>	Watchdoc compare les caractéristiques du travail d'impression et du profil utilisateur avec les règles établies afin de vérifier s'il existe des actions spécifiques à appliquer (blocage de l'impression, e-mail de notification, etc.). <br />En mode "comptabilisation" (par défaut), le travail est prêt à être imprimé immédiatement. <br />En mode "validation", le travail est gardé en sécurité jusqu'à ce que l'utilisateur le libère depuis l'interface web ou après s'être identifié ou avoir badgé sur le périphérique.</p>
+                                            <p><strong style="color: #ff8c00;">5.</strong> Si la transformation de spools est disponible (fonction soumise à compatibilité du périphérique) et activée, elle est appliquée : en fonction du paramétrage défini, Watchdoc suggère ou force l'utilisateur à modifier ses choix d'impression initiaux pour adopter des choix d'impression plus éco-responsables : recto-verso plutôt que recto simple, noir et blanc plutôt que couleur, réduction du nombre d'exemplaires.</p>
                                             <p><![CDATA[	]]><strong style="color: #ff8c00;">6.</strong> Si nécessaire, l'utilisateur est informé par mail que son travail est en attente, ou qu'il n'a pas été imprimé s'il ne répond pas aux règles définies par la politique d'impression.</p>
                                             <p><strong style="color: #ff8c00;">7.</strong> 	L'activité d'impression est enregistrée dans la base de données statistiques.</p>
-                                            <p><strong style="color: #ff8c00;">8.	</strong> En mode "validation", l'utilisateur s'authentifie sur le périphérique d'impression de son choix.</p>
-                                            <p><strong style="color: #ff8c00;">9.	</strong> Watchdoc dirige le travail d'impression vers le périphérique choisi par l'utilisateur et recueille les données fournies par le périphérique.</p>
-                                            <p><strong style="color: #ff8c00;">10.	</strong> Lorsque le travail d'impression est libéré, Watchdoc le déplace dans la file d'impression (shadow) du périphérique d'impression.</p>
+                                            <p><strong style="color: #ff8c00;">8.</strong> En mode "validation", l'utilisateur s'authentifie sur le périphérique d'impression de son choix.</p>
+                                            <p><strong style="color: #ff8c00;">9.</strong> Watchdoc dirige le travail d'impression vers le périphérique choisi par l'utilisateur et recueille les données fournies par le périphérique.</p>
+                                            <p><strong style="color: #ff8c00;">10.</strong> Lorsque le travail d'impression est libéré, Watchdoc le déplace dans la file d'impression (shadow) du périphérique d'impression.</p>
                                             <p><strong style="color: #ff8c00;">11.</strong>	 Le travail est imprimé sur le périphérique.</p>
                                         </p>
                                         <h2>Fonctions clés</h2>
                                         <ul>
                                             <li>
-                                                <p class="Liste_puce_1">Audit en temps réel et analyse détaillée de votre activité d’impression mono ou multi-site (qui imprime quel type de document, sur quel périphérique, quand et à quel coût ?).</p>
+                                                <p class="Liste_puce_1">Audit en temps réel et analyse détaillée de l'activité d’impression sur un ou plusieurs sites (Qui imprime ? Quel types de documents ? Sur quels périphériques ? Quand ? A quel coût ?).</p>
                                             </li>
                                             <li>
                                                 <p class="Liste_puce_1">Une interface 100% web accessible depuis tous les postes de travail.</p>
@@ -228,7 +228,7 @@
                                                 <p class="Liste_puce_1">Redirection des impressions vers un autre périphérique en cas d'indisponibilité du périphérique initialement sollicité.</p>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1">Libération automatique de vos travaux sur le point d’impression de votre choix grâce à votre badge ou code PIN : déplacement de Watchdoc sur l’ensemble des écrans des périphériques multifonctions (WES).</p>
+                                                <p class="Liste_puce_1">Libération automatique de vos travaux sur le périphérique d’impression de votre choix grâce à un badge ou à un code&#160;: affichage de Watchdoc sur l’ensemble des écrans des périphériques multifonctions (WES).</p>
                                             </li>
                                             <li>
                                                 <p class="Liste_puce_1">Gestion centralisée du parc de périphériques, même lorsque les points d’impression sont géographiquement distants.</p>
@@ -240,19 +240,19 @@
                                                 <p class="Liste_puce_1">Suivi des dépenses d’impression et de copies avec précisions sur le  coût papier et le coût énergétique des périphériques dans le coût global d'impression.</p>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1">Sauvegarde des impressions et statistiques associées en cas d’inaccessibilité des ressources (annuaires ou bases de données).</p>
+                                                <p class="Liste_puce_1">Sauvegarde des impressions et statistiques associées en cas d’inaccessibilité des ressources (annuaires ou bases de données) afin de garantir une continuité de service et la reprise d'activité ultérieure.</p>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1"> Gestion de quotas et de la refacturation.</p>
+                                                <p class="Liste_puce_1">Gestion de quotas et de la refacturation.</p>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1">Remontées analytiques des impressions effectuées sur vos imprimantes locales (parallèle, USB, direct IP) et un comptage précis des impressions effectuées sur les périphériques réseau.</p>
+                                                <p class="Liste_puce_1">Remontées analytiques des impressions effectuées sur vos imprimantes locales (parallèle, USB, direct IP) et comptage précis des impressions effectuées sur les périphériques réseau.</p>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1">Gestion des comptes invités.</p>
+                                                <p class="Liste_puce_1">Gestion des comptes invités (utilisateurs occasionnels non-inscrits dans l'annuaire de l'organisation).</p>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1">Accès facilité aux périphériques d'impression pour tous les utilisateurs hors annuaire (prestataires externes ou invités), grâce à la gestion d’une base de données indépendante de l’annuaire AD, permettant à ces utilisateurs d'accéder à l’ensemble des fonctions</p>
+                                                <p class="Liste_puce_1">Accès facilité aux périphériques d'impression pour tous les utilisateurs hors annuaire (prestataires externes ou invités).&#160;Grâce à la gestion d’une base de données indépendante de l’annuaire AD permettant à ces utilisateurs d'accéder à l’ensemble des fonctions.</p>
                                             </li>
                                         </ul>
                                         <h2>Bénéfices</h2>
@@ -261,13 +261,13 @@
                                                 <p class="Liste_puce_1">Réduction des dépenses liées au poste "impression".</p>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1">Protection de l'environnement en réduisant le nombre d'impressions. </p>
+                                                <p class="Liste_puce_1">Protection de l'environnement par réduction du nombre d'impressions. </p>
                                             </li>
                                             <li>
                                                 <p class="Liste_puce_1">Augmentation de la qualité de service auprès des utilisateurs.</p>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1">Rationalisation des parcs de périphériques.</p>
+                                                <p class="Liste_puce_1">Rationalisation des parcs de périphériques d'impression.</p>
                                             </li>
                                             <li>
                                                 <p class="Liste_puce_1">Optimisation de la gestion des consommables.</p>

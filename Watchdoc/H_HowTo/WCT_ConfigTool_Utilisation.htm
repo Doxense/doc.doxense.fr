@@ -218,26 +218,27 @@
                                                 <p class="Liste_num_1">cliquez sur <strong>OK&#160;</strong>de la fenêtre d'action pour valider la modification ;</p>
                                             </li>
                                             <li value="6">
-                                                <p class="Liste_num_1">cliquez ensuite sui le bouton <strong>Save </strong>de Watchdoc<sup>®</sup> Config Tool ;</p>
+                                                <p class="Liste_num_1">cliquez ensuite sur le bouton <strong>Save </strong>de Watchdoc Config Tool ;</p>
                                             </li>
                                             <li value="7">
-                                                <p class="Liste_num_1">redémarrez le service Watchdoc<sup>®</sup> pour que les modifications soient prises en compte.</p>
+                                                <p class="Liste_num_1">redémarrez le service Watchdoc pour que les modifications soient prises en compte.</p>
                                             </li>
                                         </ol>
                                         <h2>Syntaxe des actions</h2>
-                                        <p>Les actions lancées sur le fichier de configuration de Watchdoc<sup>®</sup> sont prédéfinies etdoivent respecter une syntaxe spécifique : </p>
+                                        <p>Les actions lancées sur le fichier de configuration de Watchdoc sont prédéfinies et doivent respecter une syntaxe spécifique : </p>
                                         <ul>
                                             <li>
                                                 <p class="Liste_puce_1">Action <strong>STATE </strong>: change le statut de la file d'impression :</p>
                                                 <ul style="list-style-type: circle;">
                                                     <li>
-                                                        <p style="text-indent: 0.5in;"><strong>ENABLE :</strong> file contrôlée par Watchdoc<sup>®</sup> ;</p>
+                                                        <p class="Liste_puce_1"><strong>ENABLE :</strong> file contrôlée par Watchdoc ;</p>
                                                     </li>
                                                     <li>
-                                                        <p style="text-indent: 0.5in;"><strong>PAUSED : </strong>file shadow en pause ;</p>
+                                                        <p class="Liste_puce_1"><strong>PAUSED :</strong> file shadow en pause ;</p>
                                                     </li>
                                                     <li>
-                                                        <p style="text-indent: 0.5in;"><strong>DISABLED :</strong> file non contrôlée par Watchdoc.</p>
+                                                        <p class="Liste_puce_1"><strong>DISABLED :</strong> file non contrôlée par Watchdoc.</p>
+                                                        <p>&#160;</p>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -245,105 +246,103 @@
                                         <ul>
                                             <li>
                                                 <p class="Liste_puce_1">Action <strong>GROUP </strong>: change le groupe de la file d'impression</p>
+                                                <p>&#160;</p>
                                             </li>
                                             <li>
                                                 <p class="Liste_puce_1">Action <strong>TYPE </strong>: change le mode de fonctionnement de la file d'impression</p>
+                                                <ul style="list-style-type: circle;">
+                                                    <li>
+                                                        <p><strong>ACCOUNTING : </strong>active le mode comptabilisation ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>BLOCK : </strong>active le mode validation ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>AUDIT : </strong>active le mode comptabilisation pour un fonctionnement silencieux&#160;;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>EXTERNAL : </strong>file d'impression externe ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>REMOTE :</strong> file d'impression (agent Watchdoc) ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>USEGROUP : </strong>permet d'appliquer la même configuration que celle du groupe.</p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                </ul>
                                             </li>
                                         </ul>
-                                        <blockquote>
-                                            <ul style="list-style-type: circle;">
-                                                <li>
-                                                    <p><strong>ACCOUNTING : </strong>active le mode comptabilisation ;</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>BLOCK : </strong>active le mode validation ;</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>AUDIT : </strong>active le mode comptabilisation pour un fonctionnement silencieux&#160;;</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>EXTERNAL : </strong>file d'impression externe ;</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>REMOTE :</strong> file d'impression (agent Watchdoc) ; </p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>USEGROUP : </strong>permet d'appliquer la même configuration que celle du groupe.</p>
-                                                </li>
-                                            </ul>
-                                        </blockquote>
                                         <ul>
                                             <li>
                                                 <p class="Liste_puce_1">Action <strong>EDIT&#160;XML</strong> :</p>
+                                                <ul style="list-style-type: circle;">
+                                                    <li>
+                                                        <p><strong>@enabled</strong> (valeurs true / false) : imprimante disponible ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>@paused</strong>  (valeurs true / false) : imprimante en pause ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>queue-location:</strong> localisation de la file d'impression ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>queue-description :</strong> texte de description de la file d'impression ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>queue-color</strong> (valeurs auto/false/true) : précise si la file d’impression prend en charge la couleur ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>use-group </strong>(valeurs true/false) : précise si la file utilise des groupes ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>monitors/NETMON/@enabled </strong>(valeurs true/false) : active le monitoring ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>device-infos/device-ip</strong> : adresse IP ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>queue-config/win32/emf-enabled</strong> (valeurs true/false) : active l’EMF ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>analysis/allow-fail-safe</strong> (valeurs true/false) : autoriser l'action, même en cas d'erreur ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>analysis/ignore-spool-title</strong> (valeurs true/false) : ignorer le titre du spool ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>analysis/obfuscate-title (valeurs true/false) </strong>:  cacher les titres du document ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>analysis/ignore-spool-identity</strong> (valeurs true/false) : ignorer le login dans le spool ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>analysis/force-spool-domain</strong> (valeurs true/false) : forcer le domaine ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>analysis/ignore-spool-code</strong> (valeurs true/false) : ignorer le code présent dans le spool ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>analysis/ignore-spool-media </strong>(valeurs true/false) : ignorer le format de papier dans le spool ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>analysis/ignore-spool-numcopies</strong> (valeurs true/false) : ignorer le nombre de copies dans le spool ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>analysis/ignore-spool-duplex</strong> (valeurs true/false): ignorer les informations de duplex dans le spool ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>analysis/use-station-as-login</strong> (valeurs true/false) : utiliser le poste de travail comme login d'authentification ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>analysis/ignore-color-auto</strong> (valeurs true/false) : ignorer la couleur ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>analysis/extract-login-from-title</strong> (valeurs true/false) : récupérer le login de l'utilisateur dans le titre du travail di'mpression.</p>
+                                                    </li>
+                                                </ul>
                                             </li>
                                         </ul>
-                                        <blockquote>
-                                            <ul style="list-style-type: circle;">
-                                                <li>
-                                                    <p><strong>@enabled</strong> (valeurs true / false) : imprimante disponible ;</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>@paused</strong>  (valeurs true / false) : imprimante en pause ; </p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>queue-location:</strong> localisation de la file d'impression ;</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>queue-description :</strong> texte de description de la file d'impression ; </p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>queue-color</strong> (valeurs auto/false/true) : précise si la file d’impression prend en charge la couleur ;</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>use-group </strong>(valeurs true/false) : précise si la file utilise des groupes ; </p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>monitors/NETMON/@enabled </strong>(valeurs true/false) : active le monitoring ;</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>device-infos/device-ip</strong> : adresse IP ;</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>queue-config/win32/emf-enabled</strong> (valeurs true/false) : active l’EMF ;</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>analysis/allow-fail-safe</strong> (valeurs true/false) : autoriser l'action, même en cas d'erreur ;</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>analysis/ignore-spool-title</strong> (valeurs true/false) : ignorer le titre du spool ;</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>analysis/obfuscate-title (valeurs true/false) </strong>:  cacher les titres du document ; </p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>analysis/ignore-spool-identity</strong> (valeurs true/false) : ignorer le login dans le spool ;</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>analysis/force-spool-domain</strong> (valeurs true/false) : forcer le domaine ;</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>analysis/ignore-spool-code</strong> (valeurs true/false) : ignorer le code présent dans le spool ; </p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>analysis/ignore-spool-media </strong>(valeurs true/false) : ignorer le format de papier dans le spool ; </p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>analysis/ignore-spool-numcopies</strong> (valeurs true/false) : ignorer le nombre de copies dans le spool ;</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>analysis/ignore-spool-duplex</strong> (valeurs true/false): ignorer les informations de duplex dans le spool ;</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>analysis/use-station-as-login</strong> (valeurs true/false) : utiliser le poste de travail comme login d'authentification ; </p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>analysis/ignore-color-auto</strong> (valeurs true/false) : ignorer la couleur ; </p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>analysis/extract-login-from-title</strong> (valeurs true/false) : récupérer le login de l'utilisateur dans le titre du travail di'mpression.</p>
-                                                </li>
-                                            </ul>
-                                        </blockquote>
                                         <h2>Cas d'usage</h2>
                                         <p><strong>Config Tool</strong> peut-être utilisé, par exemple, pour cacher le titre des travaux d'impression dans les files.&#160;Ce résultat peut être obtenu, depuis l'interface de paramétrage de la file d'impression, en cochant la case "Remplacer le titre des documents par un texte générique dans l'historique des impressions"&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/Config_Files_Mode_Expert_533x316.png" style="width: 533;height: 316;" /></p>
                                         <p>&#160;</p>
@@ -378,10 +377,10 @@
                                                 </p>
                                             </li>
                                             <li value="7">
-                                                <p>cliquez ensuite sui le bouton <strong>Save </strong>de <strong>Watchdoc ConfigTool</strong> ;</p>
+                                                <p>cliquez ensuite sur le bouton <strong>Save </strong>de <strong>Watchdoc ConfigTool</strong> ;</p>
                                             </li>
                                             <li value="8">
-                                                <p>redémarrez le service Watchdoc<sup>®</sup> pour que les modifications soient prises en compte.</p>
+                                                <p>redémarrez le service Watchdoc pour que les modifications soient prises en compte.</p>
                                             </li>
                                         </ol>
                                     </div>

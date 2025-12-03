@@ -4,6 +4,7 @@ xmlSynonymsData += '<MadCapSynonyms xml:lang=\"en-us\">';
 xmlSynonymsData += '    <Groups />';
 xmlSynonymsData += '    <Directional>';
 xmlSynonymsData += '        <DirectionalSynonym From=\"Processeur d\'impression\" To=\"print processor\" />';
+xmlSynonymsData += '        <DirectionalSynonym From=\"spooler\" To=\"spouleur\" />';
 xmlSynonymsData += '        <DirectionalSynonym From=\"Trafic\" To=\"traffic\" />';
 xmlSynonymsData += '        <DirectionalSynonym From=\"calculateur\" To=\"estimateur\" />';
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"Améliorer\" To=\"amélior\" FromStem=\"amélior\" />';
@@ -25,7 +26,6 @@ xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"Restreindre
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"Scan to folder\" To=\"scan2fold\" FromStem=\"scan to fold\" />';
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"Scan to mail\" To=\"scan2mail\" FromStem=\"scan to mail\" />';
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"Scan to me\" To=\"scantom\" FromStem=\"scan to m\" />';
-xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"spouler\" To=\"spooler\" FromStem=\"spouler\" />';
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"transformation de travaux\" To=\"transformation de spool\" FromStem=\"transformation de travaux\" />';
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"travaux d\'impression\" To=\"spool\" FromStem=\"travaux d\'impress\" />';
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"encodage\" To=\"encod\" FromStem=\"encodag\" />';
