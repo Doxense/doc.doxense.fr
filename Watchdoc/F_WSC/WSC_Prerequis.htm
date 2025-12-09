@@ -198,7 +198,7 @@
                                         </div>
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor258"></a>
+                                        <h1><a name="aanchor259"></a>
                                             <MadCap:concept term="WSC" />WSC Console de supervision - Prérequis</h1>
                                         <h2>Prérequis système</h2>
                                         <h3>Dimensionnement</h3>
@@ -218,6 +218,50 @@
                                             </li>
                                         </ul>
                                         <p>Si la configuration comprend un pare-feu (firewall), ce dernier doit autoriser les accès sur le serveur hébergeant Watchdoc et Watchdoc Supervision Console via ces ports.</p>
+                                        <h3><a name="Droits_spe">Droits spécifiques au compte gMSA</a>
+                                        </h3>
+                                        <p>Dans un contexte exploitant un compte gMSA, le téléchargement de packages nécessaires à la gestion des pilotes et files d'impression requiert les droits suivants&#160;:</p>
+                                        <ul>
+                                            <li style="font-size: 12pt;">
+                                                <p>OpenPrinter: Aucun</p>
+                                            </li>
+                                            <li>
+                                                <p style="font-size: 12pt;">GetPrinter: Aucun (lecture)</p>
+                                            </li>
+                                            <li>
+                                                <p style="font-size: 12pt;">EnumPrinters: Aucun</p>
+                                            </li>
+                                            <li>
+                                                <p style="font-size: 12pt;">ClosePrinter: Aucun</p>
+                                            </li>
+                                            <li>
+                                                <p style="font-size: 12pt;">SetPrinter: Manage Printers</p>
+                                            </li>
+                                            <li>
+                                                <p style="font-size: 12pt;">DeletePrinter: Manage Printers</p>
+                                            </li>
+                                            <li>
+                                                <p style="font-size: 12pt;">AddPrinter: Manage Server</p>
+                                            </li>
+                                            <li>
+                                                <p style="font-size: 12pt;">AddPrinterDriver: Manage Server + SeLoadDriverPrivilege</p>
+                                            </li>
+                                            <li>
+                                                <p style="font-size: 12pt;">GetPrinterDriver: Manage Server</p>
+                                            </li>
+                                            <li>
+                                                <p style="font-size: 12pt;">DeletePrinterDriver: Manage Server</p>
+                                            </li>
+                                            <li>
+                                                <p style="font-size: 12pt;">UploadPrinterDriverPackage: Manage Server + SeLoadDriverPrivilege (souvent attribué à un administrateur)</p>
+                                            </li>
+                                            <li>
+                                                <p style="font-size: 12pt;">InstallPrinterDriverFromPackage: Manage Server + SeLoadDriverPrivilege</p>
+                                            </li>
+                                            <li style="font-size: 12pt;">
+                                                <p>AddMonitor: Manage Server + SeLoadDriverPrivilege</p>
+                                            </li>
+                                        </ul>
                                         <h2>Prérequis organisationnel</h2>
                                         <p>Pour configurer une file d'impression dans WSC, il est obligatoire d'avoir préalablement configuré un emplacement auquel il est possible d'assigner des imprimantes physiques.<br /></p>
                                         <p>&#160;</p>

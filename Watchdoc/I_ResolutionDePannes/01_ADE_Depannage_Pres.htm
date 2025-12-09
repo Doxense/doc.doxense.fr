@@ -196,7 +196,7 @@
                                         </div>
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
-                                        <p><a name="aanchor257"></a>
+                                        <p><a name="aanchor258"></a>
                                             <MadCap:concept term="ADE" /><span style="font-size: 24pt; font-weight: bold; color: #ff803b;">Dépannages</span>
                                         </p>
                                         <p>&#160;</p>
@@ -284,15 +284,27 @@
                                                     </li>
                                                     <li class="tree-node"><a href="#WatchdocScanCare">Watchdoc ScanCare</a>
                                                     </li>
+                                                    <li class="tree-node"><a href="#Skyprint">Skyprint</a>
+                                                    </li>
                                                     <li class="tree-node"><a href="#ServicedimpressionMicrosoftWindows">Service d'impression Microsoft Windows</a>
                                                     </li>
                                                 </ul>
                                             </li>
                                         </ul>
                                         <h2 id="Watchdoc" data-magellan-target="Watchdoc"><a name="Watchdoc"></a>Watchdoc</h2>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Closed" data-mc-alt2="Open" />Message d'erreur "Serveur injoignable" sur le WES&#160;après authentification de l'utilisateur - déc. 2025</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> dans un contexte où les quotas sont utilisés et après panne de la base sur laquelle sont gérés les quotas, après s'être authentifié sur le WES, l'utilisateur voit apparaître le message "serveur injoignable".&#160;</p>
+                                                <p>Dans les logs, les messages suivants apparaissent : "SQL|SQLProxy "Failed to connect to the MSSQL server atdbtype=MSSQL" </p>
+                                                <p>et "WES|WesDeviceSessionHandler     "Error caught while trying to initialize user quotas for Token".</p>
+                                                <p><strong>Cause :</strong> cette anomalie est due à la perte temporaire de connexion à la base de quotas.</p>
+                                                <p><strong>Résolution :</strong> pour résoudre ce problème, il convient de désactiver les quotas tant que la base de données est injoignable, puis les réactiver une fois la connexion rétablie.</p>
+                                            </div>
+                                        </div>
+                                        <p>&#160;</p>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Closed" data-mc-alt2="Open" />Message d'erreur "JSE Error: XSLT transform failed" sur les pages web Watchdoc après mise à jour</a><a name="24H2"></a><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" aria-expanded="false"> 24H2 d'un serveur  MS Windows - juin 2025</a></span>
                                             <div class="MCDropDownBody dropDownBody">
-                                                <p><strong>Contexte :</strong> alors que la version Watchdoc 6.1.0.5267 est installée et fonctionne correctement, après une mise à jour 24H2 du serveur MS Windows, on constate que l'authentification fonctionne, mais qu'il est ensuite  impossible d'accéder à l'interface d'administration ou à la page "Mon compte".&#160;<br />Il arrive également que le problème survienne alors que l'on navigue depuis un moment dans l'interface d'administration ou la page "Mon compte".<br /><br />Un message d'erreur <strong>JSE Error: XSLT Transform failed - XSLT Error : catastrophic faillure</strong> s'affiche.&#160;</p>
+                                                <p><strong>Contexte :</strong> alors que la version Watchdoc 6.1.0.5267 est installée et fonctionne correctement, après une mise à jour 24H2 du serveur MS Windows, on constate que l'authentification fonctionne, mais qu'il est ensuite  impossible d'accéder à l'interface d'administration ou à la page "Mon compte".&#160;<br />Il arrive également que le problème survienne alors que l'on navigue depuis un moment dans l'interface d'administration ou la page "Mon compte".<br />Un message d'erreur <strong>JSE Error: XSLT Transform failed - XSLT Error : catastrophic faillure</strong> s'affiche.&#160;</p>
                                                 <p><strong>Cause : </strong>ce problème est  probablement dû à une nouvelle politique de gestion de l'accès mémoire par les processus.</p>
                                                 <p><strong>Résolution :</strong> pour résoudre ce problème, il convient de mettre à jour une clé de registre liée à Internet : </p>
                                                 <ol>
@@ -1457,7 +1469,15 @@ Aucun numéro de port TCP ou UDP n'est associé aux paquets ICMP, car ces numér
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> après authentification d'un utilisateur venu débloquer ses impressions sur le périphérique, le message d'erreur "Quota non trouvé" ("Quota not found") s'affiche et bloque le périphérique.</p>
                                                 <p><strong>Cause :</strong> cette erreur est provoquée par la configuration de quotas variables appliqués pour le paiement automatique sur la file d'impression.</p>
-                                                <p><strong>Resolution :</strong> il convient de modifier la configuration des quotas variables (cf.&#160;<a href="ADE_QuotaNotFound_ApresAuthent.htm" target="_blank" title="Lien vers la procédure de dépannage." alt="Lien vers la procédure de dépannage.">Message d'erreur "Quota non trouvé"</a>).</p>
+                                                <p><strong>Résolution :</strong> il convient de modifier la configuration des quotas variables (cf.&#160;<a href="ADE_QuotaNotFound_ApresAuthent.htm" target="_blank" title="Lien vers la procédure de dépannage." alt="Lien vers la procédure de dépannage.">Message d'erreur "Quota non trouvé"</a>).</p>
+                                            </div>
+                                        </div>
+                                        <p>&#160;</p>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Closed" data-mc-alt2="Open" />Erreur de compte non débité après le transfert d'un document dans la page "Mon compte"</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> dans un contexte de panne d'un périphérique d'impression, l'utilisateur opte pour l'impression directe en utilisant la fonction "Transférer le document" de la page "Mon compte". Alors que le document est imprimé, le compte de l'utilisateur n'est pas débité.&#160;</p>
+                                                <p><strong>Cause :</strong> cette anomalie est due à un problème d'information qui n'est pas transmise à Watchdoc.</p>
+                                                <p><strong>Résolution :</strong> il convient de mettre à jour Watchdoc en v.&#160;6.1.1.5452 qui contient le correctif.</p>
                                             </div>
                                         </div>
                                         <h2 id="Serveur" data-magellan-target="Serveur">Serveur</h2>
@@ -1465,7 +1485,7 @@ Aucun numéro de port TCP ou UDP n'est associé aux paquets ICMP, car ces numér
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> dans le journal d'événements d'un serveur (eventlog), il arrive que plusieurs événements se rapportent au TerminalServices-Printers.</p>
                                                 <p><strong>Cause :</strong> la plupart de ces événements sont dus aux rapports automatiques des pilotes du Viewer PDF envoyés sur le poste des administrateurs quand ils se connectent au serveur d'impression par le biais d'un utilitaire d'accès distant (type Remote Desktop Services).</p>
-                                                <p><strong>Resolution :</strong> il est nécessaire de désactiver le rapport sur le serveur d'impression (cf.&#160;<a href="ADE_Rapport_RDS_Printer_Desactiver.htm" target="_blank" title="Lien vers la procédure de dépannage." alt="Lien vers la procédure de dépannage.">Désactiver le rapport Remote Desktop Services Printer</a>).</p>
+                                                <p><strong>Résolution :</strong> il est nécessaire de désactiver le rapport sur le serveur d'impression (cf.&#160;<a href="ADE_Rapport_RDS_Printer_Desactiver.htm" target="_blank" title="Lien vers la procédure de dépannage." alt="Lien vers la procédure de dépannage.">Désactiver le rapport Remote Desktop Services Printer</a>).</p>
                                             </div>
                                         </div>
                                         <h2 id="WRSWatchdocReportingServices" data-magellan-target="WRSWatchdocReportingServices">WRS - Watchdoc Reporting Services</h2>
@@ -1479,6 +1499,23 @@ Aucun numéro de port TCP ou UDP n'est associé aux paquets ICMP, car ces numér
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Closed" data-mc-alt2="Open" />Enregistrer manuellement Watchdoc ScanCare sur un périphérique Lexmark</a></span>
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> Il arrive que l'installation automatique de Watchdoc ScanCare sur un périphérique Lexmark échoue. <br /><strong>Résolution :</strong>il est nécessaire de procéder à l'installation manuelle de ScanCare (cf.&#160;Enregistrer manuellement Watchdoc ScanCare sur un périphérique Lexmark).</p>
+                                            </div>
+                                        </div>
+                                        <h2 id="Skyprint" data-magellan-target="Skyprint">Skyprint</h2>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Closed" data-mc-alt2="Open" />La demande d'impression n'apparaît ni dans liste des travaux en attente ni dans la liste des travaux envoyés</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> Un utilisateur a envoyé un travail qui n'a pas été imprimé.&#160;Pourtant, l'utilisateur dispose d'un compte valide et remplit les conditions d'acceptation.<br />Sa demande d'impression semble s'être perdue : l'administrateur n'en trouve trace ni dans la liste des travaux en attente ni dans la liste des travaux envoyés.</p>
+                                                <p>Dans le fichier de logs, le message "MailReceiver[...] stopping loop because of exception: The requested folder could not be found" apparaît.&#160;</p>
+                                                <p><strong>Cause :</strong>ce message indique que le boîte mail configurée dans Skyprint contient un "Dossier IMAP" qui n'existe pas dans la boîte mail dédiée.</p>
+                                                <p><strong>Résolution :</strong>il est possible de résoudre le problème de deux manières différentes :</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>soit en configurant le dossier spécifique dans la boîte mail dédiée à Skyprint&#160;; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p>soit en supprimant  le paramètre "Dossier imap" dans la configuration de la boîte mail dans Skyprint (cf.&#160;<a href="../M_SkyPrint/SP_Config_boitesmail.htm#Dossier_IMAP" target="_blank">Configurer les boîtes mail supervisées</a>).&#160;</p>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
                                         <h2 id="ServicedimpressionMicrosoftWindows" data-magellan-target="ServicedimpressionMicrosoftWindows">Service d'impression Microsoft Windows</h2>

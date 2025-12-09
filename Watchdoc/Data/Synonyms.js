@@ -30,6 +30,7 @@ xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"transformat
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"travaux d\'impression\" To=\"spool\" FromStem=\"travaux d\'impress\" />';
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"encodage\" To=\"encod\" FromStem=\"encodag\" />';
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"proxy inverse\" To=\"reverse proxi\" FromStem=\"proxy invers\" />';
+xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"email\" To=\"e-mail\" FromStem=\"email\" />';
 xmlSynonymsData += '    </Directional>';
 xmlSynonymsData += '</MadCapSynonyms>';
 MadCap.Utilities.Xhr._FilePathToXmlStringMap.Add('Synonyms', xmlSynonymsData);

@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="Procédure d'ajout de Watchdoc Print Client for Android dans le Store Android." /><title>Watchdoc Mobile Client  - Configurer les files d'impression</title>
+        <meta name="description" content="Procédure d'ajout de Watchdoc Print Client for Android dans le Store Android." /><title>Watchdoc Mobile Client  - Configurer les options de finition par défaut</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -199,7 +199,7 @@
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
                                         <h1><a name="aanchor204"></a>
-                                            <MadCap:concept term="WPC" />Watchdoc Mobile Client  - Configurer les files d'impression</h1>
+                                            <MadCap:concept term="WPC" />Watchdoc Mobile Client  - Configurer les options de finition par défaut</h1>
                                         <h2>Principe</h2>
                                         <p>Pour chaque file disponible dans l'application, vous avez la possiblité de configurer les critères d'impression qui s'affichent par défaut&#160;:</p>
                                         <ul>
@@ -226,15 +226,15 @@
                                             <li value="3">
                                                 <p>ouvrez le fichier config.xml à l'aide d'un éditeur de texte ;</p>
                                             </li>
-                                            <li value="4">
-                                                <p>repérez la balise &lt;queue-config&gt; ou, &lt;queue-group config&gt; si les paramètres doivent s'appliquer au groupe de files ;</p>
-                                                <p>et saisissez les 3&#160;balises suivantes ainsi que les valeurs que vous souhaitez y faire figurer par défaut : </p>
+                                            <li style="font-size: 12pt;" value="4">repérez la balise &lt;queue id =[...]&gt; de la file que vous souhaitez configurer ou &lt;group id=[...]&gt; si vous souhaitez configurer les files d'un groupe&#160;;</li>
+                                            <li value="5">
+                                                <p>dans cette balise, saisissez les et saisissez les 3&#160;balises suivantes ainsi que les valeurs que vous souhaitez y faire figurer par défaut : </p>
                                                 <ul>
                                                     <li>
                                                         <p>&lt;default-color&gt;&lt;/default-color&gt; : "monochrome" ou "color"</p>
                                                     </li>
                                                     <li>
-                                                        <p>&lt;default-plexing&gt;&lt;/default-plexing&gt; : "duplexLongEdge" ou "simplex" </p>
+                                                        <p>&lt;default-plexing&gt;&lt;/default-plexing&gt; : "duplexLongEdge" (recto-verso bord long) ou "simplex" (recto)</p>
                                                     </li>
                                                     <li>
                                                         <p>&lt;default-copies&gt;&lt;/default-copies&gt; : indiquez le nombre d'exemplaires par défaut ("1" pour une impression éco-responsable)&#160;:<br /><br /><img src="WPCA_6.1_OptionsFinition_Config.png" /></p>
@@ -242,10 +242,13 @@
                                                 </ul>
                                                 <p>&#160;</p>
                                             </li>
-                                            <li value="5">
+                                            <li value="6">
+                                                <p>si vous souhaitez configurer ces paramètres pour d'autres files, réitérez cette opération dans les autres balises &lt;queue id =[...]&gt; des files concernées ;</p>
+                                            </li>
+                                            <li value="7">
                                                 <p>enregistrez le fichier config.xml ; </p>
                                             </li>
-                                            <li value="6">
+                                            <li value="8">
                                                 <p>dans l'application mobile, vérifiez que les options d'impression sont celles qui ont été configurées par défaut.</p>
                                             </li>
                                         </ol>

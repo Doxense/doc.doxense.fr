@@ -213,7 +213,7 @@
                                         <p>&#160;</p>
                                         <h2>Travaux en attente</h2>
                                         <p>Les travaux figurant dans cette liste sont les demandes d'impression prises en charge par Skyprint, mais pas encore traitées par Watchdoc.&#160;</p>
-                                        <p>Lorsqu'un travail n'est pas encore envoyé, son statut permet d'en connaître la raison (cf.&#160;<a href="#Messages_erreur">Messages d'erreur</a> ci-dessous).&#160;</p>
+                                        <p>Lorsqu'un travail n'est pas encore envoyé, son statut permet d'en connaître la raison (cf. Messages d'erreur dans l'article <a href="SP_Depannage.htm#Messages_erreur" target="_blank">Dépanner Skyprint</a>).&#160;</p>
                                         <p>
                                             <br />Lorsque l'impression échoue après plusieurs tentatives, la demande d'impression est alors considérée comme en erreur.&#160;Elle  peut alors être supprimée  de la liste à l'aide du bouton situé à droite<img src="Admin_Consult_BtnSupprimer_39x36.png" style="width: 39;height: 36;" />  et après confirmation de la suppression&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="Admin_Consult_ListeTravaux_Suppr.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1909" data-mc-height="909" src="Admin_Consult_ListeTravaux_Suppr.png" tabindex="" style="max-width: 1000px;" /></a></p>
                                         <h2>Travaux envoyés</h2>
@@ -221,34 +221,6 @@
                                         <p>Les informations fournies permettent de connaître le détail du traitement effectué par Watchdoc.&#160;<br /><br /></p>
                                         <p><a class="MCPopupThumbnailLink" href="Admin_Consult_ListeEnvoyes.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1905" data-mc-height="901" src="Admin_Consult_ListeEnvoyes.png" tabindex="" style="max-width: 1000px;" /></a>
                                         </p>
-                                        <p>&#160;</p>
-                                        <h2><a name="Messages_erreur"></a>Messages d'erreur</h2>
-                                        <p>Dans la liste des travaux en attente, la colonne <b>Statut</b> peut afficher les messages d'erreurs suivants&#160;: </p>
-                                        <ul>
-                                            <li>
-                                                <p><b>The job was submitted with a forbidden e-mail address:</b> la demande est envoyée depuis une adresse mail non-autorisée (cf.&#160;<a href="SP_Config_travaux_Conditions.htm" target="_blank">Configurer les conditions d'acceptation des e-mails)</a>.</p>
-                                            </li>
-                                            <li>
-                                                <p><b>No user found with e-mail address:</b> la condition <strong>Autoriser la création d'utilisateurs</strong> n'est pas cochée et aucun utilisateur n'est enregistré pour l'adresse e-mail émettrice du document  (cf.&#160;<a href="SP_Config_travaux_Conditions.htm#Auto_Crea_Util" target="_blank">Configurer les conditions d'acceptation des e-mails</a>).</p>
-                                            </li>
-                                            <li>
-                                                <p><b>Failed to create a new user with e-mail address:</b> la condition <strong>Autoriser la création d'utilisateurs</strong> est cochée mais Watchdoc n'est pas en mesure de créer l'utilisateur. <br />Ce problème est sans doute dû à une défaillance de WSC.&#160;Dans la page Accueil, section Statut de la connexion au serveur pour la gestion des utilisateurs, vous pouvez vérifier :<br /></p>
-                                                <ul>
-                                                    <li>
-                                                        <p>le statut de la connexion entre Skyprint et WSC et/ou le fonctionnement de WSC.&#160;Le message "la connexion à watchdoc a échoué" indique que WSC&#160;ne fonctionne pas correctement, soit en raison des paramètres de connexion configurés dans Skyprint, soit en raison d'un dysfonctionnement de WSC ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>les droits attribués à l'utilisateur chargé de gérer Skyprint. Le message "Le compte n'a pas les droits nécessaires" indique que le compte ne dispose pas des droits suffisants pour créer les utilisateurs dans la base Invités de WSC (cf.&#160;<a href="SP_Config_Srv_GestionUtils.htm">Configurer la gestion des utilisateurs</a>).</p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <p><b>SendingPrintApi :</b> le travail a été envoyé à Watchdoc.&#160;Une fois traité par Watchdoc, le travail passe dans la liste "Envoyés". Si le travail reste dans la liste "En attente", c'est qu'un problème empêche Watchdoc de le traiter.&#160;Vérifiez alors le statut de la connexion entre Skyprint et Watchdoc et/ou le fonctionnement de Watchdoc.</p>
-                                            </li>
-                                            <li>
-                                                <p><b>Job [{JobId}] has an invalid/unsupported mime type:</b>  le format du document n'est pas supporté (le document n'est pas un PDF).</p>
-                                            </li>
-                                        </ul>
                                     </div>
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
