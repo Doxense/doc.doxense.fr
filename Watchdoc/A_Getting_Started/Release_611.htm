@@ -269,6 +269,104 @@
                                             </ul>
                                         </fieldset>
                                         <br />
+                                        <h2 style="color: #000000;">Watchdoc/WSC 6.1.1.5458<span>,</span> WPC for Windows 7.0.5912 et Skyprint 7.0.5911 - 11/12/2025</h2>
+                                        <p style="font-weight: bold;color: #000000;">Améliorations</p>
+                                        <ul>
+                                            <li>
+                                                <p><b>Watchdoc :</b>
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <p>la fonction interserveur est désormais opérationnelle entre serveurs Watchdoc équipés de versions différentes (notamment inférieures à v. 6.1.1)</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>dans la configuration du Serveur  DSP, ajout de pop-up de confirmation pour les actions critiques sur les points d'entrée du server web</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>dans la configuration"planification de rapports", suppression des notifications e-mail intempestives lors de changements mineurs </p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <li style="font-size: 12pt;"><b>WES&#160;Canon :</b> ajout du support du Wes en non-SSL</li>
+                                            </li>
+                                            <li>
+                                                <p><b>WEScan :</b> optimisation de l’affichage des libellés dans la version russe de l’interface</p>
+                                            </li>
+                                            <li>
+                                                <p><b>Skyprint :</b>
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <p>clarification de l'interface Configuration générale par ajout d'icones dédiées aux sections Mettre à jour le certificat et Changer le mot de passe maintenance </p>
+                                                    </li>
+                                                    <li>
+                                                        <p>ajout d'une fonction de suppression automatique des e-mails après traitement (présents dans "Travaux envoyés")</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>dans la configuration d’une boîte mail supervisée, clarification et amélioration graphique de la sélection de la file</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>dans la configuration d’une boîte mail supervisée, ajout d'un message d’alerte dans le cas où la file n'existe plus</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>amélioration globale des libellés dans les interfaces </p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p>Outil <strong>Watchdoc Web Site Configurator :</strong> ajout d'un exemple d’uri en https:// </p>
+                                            </li>
+                                        </ul>
+                                        <p style="font-weight: bold; color: #000000;">&#160;</p>
+                                        <p style="font-weight: bold; color: #000000;">Correctifs</p>
+                                        <ul>
+                                            <li>
+                                                <p><b>Watchdoc :</b>
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <p>correction de l'anomalie qui  empêchait le premier démarrage des slaves après mise à jour quand le master n'était pas disponible</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>correction de l'anomalie faisant échouer l'installation de Watchdoc Express v.&#160;6.1.1.5444 lorsque Visual C++ 2022 était déjà installé sur le serveur</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>correction de l'anomalie qui empêchait de désactiver l'authentification auprès du serveur SMTP pour la fonction Notifications</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>la création d'une bdd SQLite est désormais opérationnelle (un message indiquait "The data base creation script [...] was not found!")</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p><b>WES&#160;Toshiba :</b> correction de la fonction de purge avec possibilité de paramétrer la purge des job logs des périphériques Toshiba en nombre de jours</p>
+                                            </li>
+                                            <li>
+                                                <p><b>WPC&#160;for Windows :</b> </p>
+                                                <ul>
+                                                    <li>
+                                                        <p><span>correction de la notification qui stipulait qu'un document avait été supprimé (le titre était parfois tronqué)</span>
+                                                        </p>
+                                                    </li>
+                                                    <li>
+                                                        <p>correction d'une anomalie pouvant empêcher la validation WHQL&#160;ans certains cas</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p><b>Skyprint :</b>
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <p>dans la configuration d'une boîte mail supervisée, suppression d'une sauvegarde automatique inutile lors de la suppression d'un e-mail ou d'un domaine figurant dans les conditions d'acceptation</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>le pictogramme témoignant du statut de connexion avec Watchdoc s'actualise désormais correctement</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
                                         <h2 style="color: #000000;">Watchdoc/WSC 6.1.1.5452 - 04/12/2025</h2>
                                         <p style="font-weight: bold; color: #000000;">Correctifs</p>
                                         <ul>
@@ -286,7 +384,7 @@
                                         <p style="font-weight: bold;color: #000000;">Nouveautés</p>
                                         <ul>
                                             <li>
-                                                <p style="font-weight: bold;color: #000000;"><span style="color: #696969;">Skyprint :</span> <span style="color: #696969; font-weight: normal;">mise à disposition d'une nouvelle version Skyprint intégrée à Watchdoc</span></p>
+                                                <p style="font-weight: bold;color: #000000;"><span style="color: #696969;">Skyprint :</span> <span style="color: #696969; font-weight: normal;">mise à disposition d'une nouvelle version <a href="../M_SkyPrint/SP_Presentation.htm">Skyprint</a> intégrée à Watchdoc (cf. package ci-dessus)</span></p>
                                             </li>
                                         </ul>
                                         <p style="font-weight: bold;color: #000000;">&#160;</p>
@@ -298,13 +396,10 @@
                                         </ul>
                                         <ul>
                                             <li>
-                                                <p style="font-weight: bold;">Watchdoc Mobile Client : <span style="font-weight: normal;">possibilité de configurer les options d'impression par défaut de manière à proposer de préférence le recto/verso, le noir&amp;blanc et un seul exemplaire</span></p>
+                                                <p><span style="color: #696969;font-weight: bold;">WPC for Windows :</span> ajout d'informations relatives aux <a href="../T_WPC/Windows/WPCW_Config_Notifs.htm" target="_blank">notifications</a> : les événements non supportés par le WPC sont désormais grisés</p>
                                             </li>
                                             <li>
-                                                <p><span style="color: #696969;font-weight: bold;">WPC for Windows :</span> ajout d'informations relatives aux notifications : les événements non supportés par le WPC sont désormais grisés</p>
-                                            </li>
-                                            <li>
-                                                <p><b>PNP :</b> ajout de messages d'erreur dans le cas où des droits empêchent le chargement du pilote et, par conséquent, la création de la file</p>
+                                                <p><b>PNP :</b> ajout de <a href="../F_WSC/WSC_Files_CreerFile.htm#dysfonctionnement" target="_blank">messages d'erreur</a> dans le cas où des droits empêchent le chargement du pilote et, par conséquent, la création de la file</p>
                                             </li>
                                         </ul>
                                         <p style="font-weight: bold; color: #000000;">&#160;</p>
@@ -315,13 +410,13 @@
                                                 </p>
                                                 <ul>
                                                     <li>
-                                                        <p>correction des notifications requérant l'attention de l'utilisateur qui ne s'affichaient pas</p>
+                                                        <p>correction des <a href="../T_WPC/Windows/WPCW_Config_Notifs.htm" target="_blank">notifications</a> requérant l'attention de l'utilisateur qui ne s'affichaient pas</p>
                                                     </li>
                                                     <li>
                                                         <p>suppression de la notification systématique lors de l'impression d'un document</p>
                                                     </li>
                                                     <li>
-                                                        <p>la connexion OAUTH avec Entra ID&#160;était parfois inopérante&#160;("L'identifiant ou le mot de passe est erroné")</p>
+                                                        <p>correction de la  connexion OAUTH avec Entra ID&#160;qui était parfois inopérante&#160;("L'identifiant ou le mot de passe est erroné")</p>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -339,7 +434,7 @@
                                                         <p>correction du bouton "Imprimer la sélection" de la page "Mon compte" qui était parfois inopérant</p>
                                                     </li>
                                                     <li>
-                                                        <p>mise à jour des dépendances redistribuables cpp 2013 à 2022 </p>
+                                                        <p>mise à jour des dépendances redistribuables Microsoft Visual C++ 2013 à 2022 </p>
                                                     </li>
                                                     <li>
                                                         <p>l'utilisation du SNMP v3 avec mots de passe en AES&#160;est désormais correctement supportée</p>
@@ -465,7 +560,7 @@
                                                         <p>HP - Hewlett Packard : suppression de la fonction de balayage (swipe) sur l'écran du WEScan qui pouvait figer l'écran</p>
                                                     </li>
                                                     <li>
-                                                        <p>KM - Konica Minolta : correction de la désinstallation du WES Konica Minolta, de nouveau opérationnelle</p>
+                                                        <p>KM - Konica Minolta : correction d’un problème qui empéchait d’ajuster correctement le contraste</p>
                                                     </li>
                                                 </ul>
                                             </li>

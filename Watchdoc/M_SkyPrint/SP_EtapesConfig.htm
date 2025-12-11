@@ -179,7 +179,8 @@
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
                                         <h1><a name="aanchor401"></a>
-                                            <MadCap:concept term="SP" />Watchdoc Skyprint - Etapes de configuration</h1>
+                                            <MadCap:concept term="SP" />
+                                            <MadCap:conditionalText data-mc-conditions="General.Online">Watchdoc Skyprint - </MadCap:conditionalText>Etapes de configuration</h1>
                                         <h2>Etapes</h2>
                                         <p>&#160;</p>
                                         <p>1. Configurez le <a href="SP_Config_Srv_EnvoiDoc.htm">serveur d'envoi des documents (Watchdoc)</a></p>
@@ -187,14 +188,13 @@
                                         <p>3. Configurez les <a href="SP_Config_boitesmail.htm">boîtes mails dédiées</a></p>
                                         <p>4. Configurez les <a href="SP_Config_ListeTravaux.htm">options de finition des travaux</a></p>
                                         <p>5. Configurez les <a href="SP_Config_travaux_Options.htm">options d'acceptation des mails</a></p>
-                                        <p>6. Configurez la <a href="../C_Configurer/ConfigNotifs/ConfigNotifs_Evenmts_Procedure.htm" target="_blank">notification des codes (PIN/PUK) dans Watchdoc</a></p>
+                                        <p>6. Configurez la <a href="../H_HowTo/WD_CodePUK_CommuniquerCodePUK_Utilisateurs.htm">notification des codes (PIN/PUK)</a></p>
                                         <p><a href="../C_Configurer/ConfigNotifs/ConfigNotifs_Evenmts_Procedure.htm" target="_blank"><br /><img src="../Z_Resources/Images/03_Schemas/WD_SP_SCH_SchemaArchitectFonctionnelle_FR.png" /><br /></a>
                                         </p>
                                         <p>&#160;</p>
-                                        <p>&#160;</p>
                                         <h3>Envoi des codes (PUK/PIN) à l'utilisateur</h3>
                                         <p>Lorsque Watchdoc fonctionne en mode "validation", l'impression est sécurisée : les travaux d'impressions sont bloquées dans le périphérique et les utilisateurs doivent  débloquer leurs impressions après d'être identifiés.&#160;Pour cela, ils ont besoin d'un code (PUK/PIN).</p>
-                                        <p>Pour qu'un utilisateur de Skyprint reçoive un code (PUK/PIN) lors de la première demande d'impression à Skyprint, il convient de configurer une notification spécifique dans Watchdoc(cf.&#160;<a href="../C_Configurer/ConfigNotifs/ConfigNotifs_Evenmts_Procedure.htm" target="_blank"><a href="../H_HowTo/WD_CodePUK_CommuniquerCodePUK_Utilisateurs.htm" class="MCXref xref" xrefformat="{paratext}">Watchdoc - Communiquer le code PUK aux utilisateurs Watchdoc</a></a>).&#160;</p>
+                                        <p>Pour qu'un utilisateur de Skyprint reçoive un code (PUK/PIN) lors d'une demande d'impression à Skyprint, il convient de configurer une notification spécifique dans Watchdoc pour l'événement "Document en attente" (cf.&#160;<a href="../C_Configurer/ConfigNotifs/ConfigNotifs_Evenmts_Procedure.htm" target="_blank"><a href="../H_HowTo/WD_CodePUK_CommuniquerCodePUK_Utilisateurs.htm" class="MCXref xref" xrefformat="{paratext}">Watchdoc - Communiquer le code PUK aux utilisateurs Watchdoc</a></a>).</p>
                                     </div>
                                     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
                                     </script>
