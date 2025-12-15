@@ -198,7 +198,7 @@
                                         </div>
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1 style="text-align: justify;" id="WESCanonDépannerleWES" data-magellan-target="WESCanonDépannerleWES"><a name="aanchor420"></a>
+                                        <h1 style="text-align: justify;" id="WESCanonDépannerleWES" data-magellan-target="WESCanonDépannerleWES"><a name="aanchor422"></a>
                                             <MadCap:concept term="WES;ADE" />
                                             <MadCap:conditionalText data-mc-conditions="General.Online">WES&#160;Canon - </MadCap:conditionalText>Dépanner le WES</h1>
                                         <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
@@ -209,6 +209,8 @@
                                                     <li class="tree-node"><a href="#ActiverlestracesduWESWEStraces">Activer les traces du WES (WEStraces)</a>
                                                     </li>
                                                     <li class="tree-node"><a href="#Travauxdenum%C3%A9risationfaxetphotocopienoncomptabilis%C3%A9s">Travaux de numérisation, fax et photocopie non comptabilisés</a>
+                                                    </li>
+                                                    <li class="tree-node"><a href="#LemodedeconnexionSSLd%C3%A9sactiv%C3%A9nestpasenregistr%C3%A9lorsdelaconfigurationduWESd%C3%A9c2025">Le mode de connexion "SSL désactivé" n'est pas enregistré lors de la configuration du WES&#160;- déc. 2025</a>
                                                     </li>
                                                     <li class="tree-node"><a href="#ScanversdossierScanToFoldernefonctionnepas">Scan vers dossier (ScanToFolder) ne fonctionne pas </a>
                                                     </li>
@@ -306,6 +308,25 @@
                                             </li>
                                         </ol>
                                         <hr width="100%" size="0" align="center" />
+                                        <h2 id="LemodedeconnexionSSLdésactivénestpasenregistrélorsdelaconfigurationduWESdéc2025" data-magellan-target="LemodedeconnexionSSLdésactivénestpasenregistrélorsdelaconfigurationduWESdéc2025">Le mode de connexion "SSL désactivé" n'est pas enregistré lors de la configuration du WES&#160;- déc. 2025</h2>
+                                        <p style="font-size: 14pt;font-weight: bold;">Contexte</p>
+                                        <p>Lors de la configuration du WES&#160;Canon sur une file d'impression, j'opte pour le mode de connexion "SSL&#160;désactivé" et saisis les paramètres de sécurité du périphérique (compte/mot de passe), puis  j'enregistre.</p>
+                                        <p>Lorsque j'édite la configuration du servlet Canon (bouton <b>Editer la configuration</b>), je constate que l'adresse du serveur hôte n'a pas été conservée en paramètre.</p>
+                                        <p>&#160;</p>
+                                        <p><span style="font-size: 14pt; font-weight: bold;">Cause</span>
+                                        </p>
+                                        <p>Le problème est lié à une incompatibilité de mode de connexion entre le périphérique d'impression et Watchdoc, certains périphériques Canon ne supportant pas les communications en mode non-SSL.&#160;</p>
+                                        <p>&#160;</p>
+                                        <p><span style="font-size: 14pt; font-weight: bold;">Résolution</span> </p>
+                                        <p>Pour résoudre le problème, il convient de mettre à jour Watchdoc en version v. qui comporte les correctifs suivants : </p>
+                                        <ul>
+                                            <li>
+                                                <p>si Watchdoc tente de communiquer en non-SSL, l'erreur est signalée dans les fichiers traces ; </p>
+                                            </li>
+                                            <li>
+                                                <p>la case “<strong>Utiliser une connexion securisée avec le périphérique</strong>” cochée par défaut permet de forcer Watchdoc à communiquer en SSL avec le périphérique, même si ce dernier est configuré pour communiquer en non-SSL avec Watchdoc (cf.&#160;<a href="03_Canon_WES_ConfigProfil.htm#section_Périphérique" target="_blank">Configurer le profil WES Canon</a>).&#160;</p>
+                                            </li>
+                                        </ul>
                                         <hr width="100%" size="0" align="center" />
                                         <h2 id="ScanversdossierScanToFoldernefonctionnepas" data-magellan-target="ScanversdossierScanToFoldernefonctionnepas">Scan vers dossier (ScanToFolder) ne fonctionne pas </h2>
                                         <p style="font-size: 14pt;font-weight: bold;">Contexte</p>

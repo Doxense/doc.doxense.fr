@@ -196,7 +196,7 @@
                                         </div>
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
-                                        <p><a name="aanchor258"></a>
+                                        <p><a name="aanchor259"></a>
                                             <MadCap:concept term="ADE" /><span style="font-size: 24pt; font-weight: bold; color: #ff803b;">Dépannages</span>
                                         </p>
                                         <p>&#160;</p>
@@ -292,6 +292,14 @@
                                             </li>
                                         </ul>
                                         <h2 id="Watchdoc" data-magellan-target="Watchdoc"><a name="Watchdoc"></a>Watchdoc</h2>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Closed" data-mc-alt2="Open" /></a><a name="Spam"></a><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" aria-expanded="false">Spam de notifications après modification de la configuration de la planification de rapports - déc. 2025</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> dans un domaine, après une modification apportée à la configuration de la planification des rapports, l'adresse mail de destination configurée  est spammée par des notifications envoyées par le serveur master ainsi que par tous les serveurs slaves.</p>
+                                                <p><strong>Cause :</strong> cette anomalie est due au fait que la tâche de planification est répliquée par défaut sur tous les serveurs du domaine.&#160;</p>
+                                                <p><strong>Résolution :</strong> pour résoudre ce problème, il convient de mettre à jour Watchdoc en v.&#160;6.1.1.5458 qui contient un correctif.&#160;A&#160;partir de cette version, seul le serveur master envoie une notification lorsqu'une modification est apportée à la configuration de la section "planification" des notifications.&#160;</p>
+                                            </div>
+                                        </div>
+                                        <p>&#160;</p>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Closed" data-mc-alt2="Open" />Message d'erreur "Serveur </a><a name="Serveur_injoignable"></a><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" aria-expanded="false">injoignable" sur le WES&#160;après authentification de l'utilisateur - déc. 2025</a></span>
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> dans un contexte où les quotas sont utilisés et après panne de la base sur laquelle sont gérés les quotas, après s'être authentifié sur le WES, l'utilisateur voit apparaître le message "serveur injoignable".&#160;</p>
@@ -1363,7 +1371,16 @@ dans la boîte de dialogue, activez le <strong>protocole SOAP.</strong></p>
                                                 </ol>
                                             </div>
                                         </div>
-                                        <h2 id="WPCWatchdocPrintClient" data-magellan-target="WPCWatchdocPrintClient">WPC - Watchdoc Print Client</h2>
+                                        <h2 id="WPCWatchdocPrintClient" data-magellan-target="WPCWatchdocPrintClient"><a name="WPC"></a>WPC - Watchdoc Print Client</h2>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Closed" data-mc-alt2="Open" />WPC&#160;for Windows - L'utilisateur ne reçoit pas de notification  lorsque son travail est imprimé après avoir été redirigé vers une  file physique - déc. 2025</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> un utilisateur envoie sa demande d'impression.&#160;Il ne reçoit pas de notification MS Windows, mais son travail est imprimé et, dans WPC, cette impression apparaît bien dans la liste de ses travaux.&#160;Pourtant, l'administrateur a bien configuré une notification dans le cas où le travail est redirigé vers une autre file d'impression.<br /></p>
+                                                <p><strong>Cause :</strong> la demande d'impression est envoyée vers une file universelle, puis redirigée vers une file physique.&#160;</p>
+                                                <p><strong>Résolution :</strong> il n'existe pas de résolution pour ce comportement : Watchdoc n'envoie la notification que dans le cas où la demande d'impression est initialement envoyée vers une file physique. Si le travail est envoyé vers une file universelle, aucune notification n'est envoyée en cas de redirection.</p>
+                                            </div>
+                                        </div>
+                                        <p>N.B. : la notification n'est envoyée sur le poste utilisateur que pour les demandes d'impression initialement envoyées sur une file physique. Ainsi, un travail envoyé sur une file universelle puis redirigé vers une file physique ne déclenche pas de notification.</p>
+                                        <p>&#160;</p>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Closed" data-mc-alt2="Open" />WPC&#160;for Windows - Erreur de détection d'emplacements dans un environnement utilisant un </a><a name="proxy_inverse"></a><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" aria-expanded="false">proxy inverse - Juillet 2025</a></span>
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> dans un environnement réseau utilisant un proxy inverse (reverse proxy) lorsqu'un utilisateur ouvre WPC for Windows, ce dernier ne parvient pas à trouver l'emplacement associé à l'adresse IP du poste utilisateur. Pourtant, la configuration des emplacements comporte bien des adresses IP&#160;publiques.</p>
@@ -1465,11 +1482,11 @@ Aucun numéro de port TCP ou UDP n'est associé aux paquets ICMP, car ces numér
                                             </div>
                                         </div>
                                         <h2 id="Quotas" data-magellan-target="Quotas">Quotas<br /></h2>
-                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Closed" data-mc-alt2="Open" />Quota débité alors que l'impression a été annulée - déc.&#160;2025</a></span>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Closed" data-mc-alt2="Open" /></a><a name="Quota_débité"></a><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" aria-expanded="false">Quota débité alors que l'impression a été annulée - déc.&#160;2025</a></span>
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> le quota d'un utilisateur est débité alors que l'impression a été annulée. Suite une erreur, Watchdoc supprime la demande d'impression mais débite le quota de l'utilisateur.</p>
-                                                <p><strong>Cause :</strong> cette erreur est provoquée par l'ordre de l'étape de débit du quota en cas de panne du périphérique d'impression.</p>
-                                                <p><strong>Résolution :</strong>  il convient de mettre à jour Watchdoc en <span style="background-color: #ffd700;">v.&#160;6.1.1.54</span> qui contient le correctif.</p>
+                                                <p><strong>Cause :</strong> cette erreur (qui survient lorsque Watchdoc utilise le custom spooler) est provoquée par l'ordre de l'étape de débit du quota en cas de panne du périphérique d'impression.</p>
+                                                <p><strong>Résolution :</strong>  il convient de mettre à jour Watchdoc en <span>v.&#160;6.1.1.5458 </span>qui contient le correctif.</p>
                                             </div>
                                         </div>
                                         <p>&#160;</p>

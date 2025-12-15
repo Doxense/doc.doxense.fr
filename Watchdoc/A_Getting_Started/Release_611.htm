@@ -200,7 +200,7 @@
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
                                         <fieldset class="orange">La version 6.1.1 est disponible. <br />Pour la mise à jour, reportez-vous au <a href="../E_MettreAJour/MAJ_presentation.htm" target="_blank">tableau des procédures</a> pour trouver celle qui correspond à votre besoin.&#160;<br />Si vous avez besoin d'une nouvelle licence (à partir de la v. 6.1) ou d'aide pour la mise à jour, contactez l'équipe Support de Doxense en déclarant un ticket dans <a href="https://connect.doxense.com/hc/fr" target="_blank">Connect</a> (précisez le type "licence" ou "tâche" si vous avez besoin d'assistance).<br /></fieldset>
-                                        <h1><a name="aanchor91"></a>
+                                        <h1><a name="aanchor92"></a>
                                             <MadCap:concept term="RNO" />Watchdoc / WSC 6.1 - Packages et notes de versions</h1>
                                         <table style="mc-table-style: url('../Resources/TableSlylesheets/Standard.css');border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
                                             <col class="TableStyle-Standard-Column-Regular" />
@@ -235,7 +235,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td style="font-size: 12pt;text-align: left;vertical-align: top;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;" class="TableStyle-Standard-BodyE-Regular-Row2">WSC&#160;<span class="mc-variable Versions.Watchdoc_WSC&#160;6.0 variable">6.0.0.5458</span></td>
+                                                    <td style="font-size: 12pt;text-align: left;vertical-align: top;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;" class="TableStyle-Standard-BodyE-Regular-Row2">WSC&#160;<span class="mc-variable Versions.Watchdoc_WSC&#160;6.0 variable">6.1.1.5458</span></td>
                                                     <td style="font-size: 12pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;" class="TableStyle-Standard-BodyE-Regular-Row2">Watchdoc Supervision Console (WSC)&#160;-<MadCap:conditionalText data-mc-conditions="Langues.FR">Programme d'installation</MadCap:conditionalText><br />Watchdoc Supervision Console (WSC) - <MadCap:conditionalText data-mc-conditions="Langues.FR">Programme de mise à jour</MadCap:conditionalText></td>
                                                     <td style="font-size: 12pt;text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #ffffff;" class="TableStyle-Standard-BodyD-Regular-Row2">
                                                         <p><a href="https://downloads.doxense.fr/files/supervision/Supervision_Setup_6.1.1.5458.zip" alt="Link to the setup file" title="Link to the setup file">Supervision Setup</a><a href="https://downloads.doxense.fr/files/supervision/Supervision_Setup_6.1.0.5058.zip" alt="Link to the setup file" title="Link to the setup file"><br /></a><a href="https://downloads.doxense.fr/files/supervision/Supervision_Update_6.1.1.5458.zip" alt="Lien de téléchargement du programme de mise à jour" title="Lien de téléchargement du programme de mise à jour">Supervision Update</a>
@@ -283,7 +283,7 @@
                                                         <p>dans la configuration du Serveur  DSP, ajout de pop-up de confirmation pour les actions critiques sur les points d'entrée du server web</p>
                                                     </li>
                                                     <li>
-                                                        <p>dans la configuration"planification de rapports", suppression des notifications e-mail intempestives lors de changements mineurs </p>
+                                                        <p>dans la configuration"planification de rapports", suppression des <a href="../I_ResolutionDePannes/01_ADE_Depannage_Pres.htm#Spam" target="_blank">notifications e-mail intempestives</a> lors de changements mineurs</p>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -326,9 +326,6 @@
                                                 </p>
                                                 <ul>
                                                     <li>
-                                                        <p>correction de l'anomalie qui  empêchait le premier démarrage des slaves après mise à jour quand le master n'était pas disponible</p>
-                                                    </li>
-                                                    <li>
                                                         <p>correction de l'anomalie faisant échouer l'installation de Watchdoc Express v.&#160;6.1.1.5444 lorsque Visual C++ 2022 était déjà installé sur le serveur</p>
                                                     </li>
                                                     <li>
@@ -336,6 +333,9 @@
                                                     </li>
                                                     <li>
                                                         <p>la création d'une bdd SQLite est désormais opérationnelle (un message indiquait "The data base creation script [...] was not found!")</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>correction <a href="../I_ResolutionDePannes/01_ADE_Depannage_Pres.htm#Quota_débité" target="_blank">du double débit d'un quota</a> alors que le travail n'est pas imprimé dans le cas où Watchdoc utilise le custom spooler. <br /><br /></p>
                                                     </li>
                                                 </ul>
                                             </li>

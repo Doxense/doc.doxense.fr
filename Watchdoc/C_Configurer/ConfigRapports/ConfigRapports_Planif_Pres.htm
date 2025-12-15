@@ -195,16 +195,17 @@
                                         </div>
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor357"></a>
+                                        <h1><a name="aanchor358"></a>
                                             <MadCap:concept term="WD" />Watchdoc - Communicateur de rapports - Présentation</h1>
                                         <h2>Principe</h2>
-                                        <p>Le communicateur de rapports est une fonction de Watchdoc 5.3 conçue pour envoyer aux utilisateurs un rapport relatif à leur activité d'impression. Ce rapport est envoyé par mail à une fréquence préalablement prédéfinie par l'administrateur de Watchdoc.</p>
-                                        <fieldset>Dans les précédentes versions de Watchdoc, il existait une fonction reposant sur l'outil Watchdoc Reporting Services (WRS) et exploitant SQL<sup>®</sup> Reporting Services, permettant l'envoi de rapports sous la forme d'une pièce jointe à un mail.&#160; La fonction développée pour la version 5.3, quant à elle, permet de se passer de WRS&#160;et d'envoyer les données directement dans le mail, sans avoir à ouvrir une pièce jointe.</fieldset>
+                                        <p>Le communicateur de rapports est une fonction conçue pour envoyer aux utilisateurs de Watchdoc un rapport relatif à leur activité d'impression. Ce rapport est envoyé par mail à une fréquence préalablement prédéfinie par l'administrateur de Watchdoc.</p>
+                                        <p>&#160;</p>
+                                        <fieldset>Dans les précédentes versions de Watchdoc, il existait une fonction reposant sur l'outil Watchdoc Reporting Services (WRS) et exploitant SQL<sup>®</sup> Reporting Services, permettant l'envoi de rapports sous la forme d'une pièce jointe à un mail.&#160;<br />La fonction présente à partir de la v. 5.3 permet de se passer de WRS&#160;et d'envoyer les données directement dans le mail, évitant ainsi à l'utilisateur d'avoir à ouvrir une pièce jointe.</fieldset>
                                         <p style="text-align: left;">&#160;</p>
                                         <p style="text-align: left;"><a href="../../Z_Resources/Images/02_Captures/Admin_Communic_Rapports_Mail.png"><img src="../../Z_Resources/Images/02_Captures/Admin_Communic_Rapports_Mail_370x513.png" style="width: 370;height: 513;" /></a>
                                         </p>
                                         <p>&#160;</p>
-                                        <p>Les rapports étant envoyés par mail, il est impératif que Watchdoc soit associé à un serveur SMTP.</p>
+                                        <p>Les rapports étant envoyés par mail, il est impératif qu'un  serveur SMTP soit configuré dans Watchdoc.</p>
                                         <p>Dans une configuration en domaine (configuration master / slaves), le communicateur de rapports est configuré sur le serveur maître.</p>
                                         <h2>Etapes</h2>
                                         <p>La communication des rapports nécessite : </p>
@@ -213,6 +214,9 @@
                                                 <p class="Liste_num_1">de paramétrer le service d'envoi ; </p>
                                             </li>
                                             <li value="2">
+                                                <p>de créer une planification ;</p>
+                                            </li>
+                                            <li value="3">
                                                 <p class="Liste_num_1">de planifier l'envoi du rapport.</p>
                                             </li>
                                         </ol>
