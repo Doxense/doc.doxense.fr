@@ -13,7 +13,7 @@ function BackToTop() {
 	if ($(".body-container").length === 1) {
 		var bodyContainer = $('.body-container')[0];
 		var mybutton = document.createElement("button");
-		var textnode = document.createTextNode("top");
+		var textnode = document.createTextNode("");
 		mybutton.appendChild(textnode);
 		mybutton.setAttribute("id", "myBtn");
 		mybutton.addEventListener("click", topFunction);
