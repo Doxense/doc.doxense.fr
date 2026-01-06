@@ -1112,8 +1112,8 @@ div.central-dropdown-content > a:hover
 
 ._Skins_Toolbar.mc-component .button.expand-all-button .button-icon-wrapper
 {
-	width: 30px;
-	height: 30px;
+	width: 16px;
+	height: 24px;
 }
 
 ._Skins_Toolbar.mc-component .button.expand-all-button .button-text
@@ -1274,8 +1274,8 @@ div.central-dropdown-content > a:hover
 
 ._Skins_Toolbar.mc-component .button.print-button .button-icon-wrapper
 {
-	width: 30px;
-	height: 30px;
+	width: 16px;
+	height: 24px;
 }
 
 ._Skins_Toolbar.mc-component .button.print-button .button-text
@@ -1285,21 +1285,23 @@ div.central-dropdown-content > a:hover
 
 ._Skins_Toolbar.mc-component .button.remove-highlight-button
 {
-	background-repeat: no-repeat;
-	background-position: center center;
+	border-left: solid 1px #d3d3d3;
+	border-right: solid 1px #d3d3d3;
+	border-top: solid 1px #d3d3d3;
+	border-bottom: solid 1px #d3d3d3;
 	-webkit-box-shadow: 0px 0px 0px #ffffff;
 	-moz-box-shadow: 0px 0px 0px #ffffff;
 	box-shadow: 0px 0px 0px #ffffff;
 	-webkit-box-shadow: 0px 0px 0px #ffffff;
 	-moz-box-shadow: 0px 0px 0px #ffffff;
-	background: #ececec;
-	background: -moz-linear-gradient(top, transparent 0%, transparent 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,transparent), color-stop(100%,transparent));
-	background: -webkit-linear-gradient(top, transparent 0%, transparent 100%);
-	background: -o-linear-gradient(top, transparent 0%,transparent 100%);
-	background: -ms-linear-gradient(top, transparent 0%,transparent 100%);
-	background: linear-gradient(transparent 0%,transparent 100%);
-	-pie-background: linear-gradient(transparent, transparent);
+	background: #ececec url('Images/StopHighlight.png') no-repeat center center;
+	background: url('Images/StopHighlight.png') no-repeat center center, -moz-linear-gradient(top, transparent 0%, transparent 100%);
+	background: url('Images/StopHighlight.png') no-repeat center center, -webkit-gradient(linear, left top, left bottom, color-stop(0%,transparent), color-stop(100%,transparent));
+	background: url('Images/StopHighlight.png') no-repeat center center, -webkit-linear-gradient(top, transparent 0%, transparent 100%);
+	background: url('Images/StopHighlight.png') no-repeat center center, -o-linear-gradient(top, transparent 0%,transparent 100%);
+	background: url('Images/StopHighlight.png') no-repeat center center, -ms-linear-gradient(top, transparent 0%,transparent 100%);
+	background: url('Images/StopHighlight.png') no-repeat center center, linear-gradient(transparent 0%,transparent 100%);
+	-pie-background: url('Skins/Default/Stylesheets/Components/Images/StopHighlight.png') no-repeat center center, linear-gradient(transparent, transparent);
 }
 
 ._Skins_Toolbar.mc-component .button.remove-highlight-button > div
@@ -1315,8 +1317,8 @@ div.central-dropdown-content > a:hover
 
 ._Skins_Toolbar.mc-component .button.remove-highlight-button .button-icon-wrapper
 {
-	width: 30px;
-	height: 30px;
+	width: 16px;
+	height: 24px;
 }
 
 ._Skins_Toolbar.mc-component .button.remove-highlight-button .button-text
@@ -2806,7 +2808,9 @@ ul.menu._Skins_MenuProxy.mc-component li > a
 {
 	color: #000000;
 	font-family: Helvetica;
-	font-size: 12px;
+	font-size: 11px;
+	line-height: 1em;
+	text-align: left;
 	margin-left: 0px;
 	margin-right: 0px;
 	margin-top: 0px;

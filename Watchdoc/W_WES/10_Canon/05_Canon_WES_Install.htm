@@ -30,7 +30,7 @@
 
 .button.remove-highlight-button
 {
-	-pie-background: linear-gradient(transparent, transparent);
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/StopHighlight.png') no-repeat center center, linear-gradient(transparent, transparent);
 }
 
 .button.expand-all-button
@@ -202,18 +202,19 @@
                                             <MadCap:conditionalText data-mc-conditions="General.Online">WES&#160;Canon - </MadCap:conditionalText>Installer le WES sur la file</h1>
                                         <h2>Prérequis d'installation</h2>
                                         <p>
-                                            <p>Pour permettre le téléchargement des fichiers d'installation Canon, la limite de tampon de réponse du serveur Web IIS&#160;doit être est suffisante. </p>
-                                            <p>
-                                                <br />accédez au gestionnaire des services Internet (IIS) en tant qu'administrateur ; </p>
+                                            <p>Pour permettre le téléchargement des fichiers d'installation Canon, la limite de tampon de réponse du serveur Web IIS&#160;doit être suffisante :</p>
                                         </p>
                                         <ol>
                                             <li value="1">
-                                                <p>dans la liste des sites, sélectionnez votre site Watchdoc et cliquez-droit ;</p>
+                                                <p>accédez au gestionnaire des services Internet (IIS) en tant qu'administrateur ; </p>
                                             </li>
                                             <li value="2">
-                                                <p>rendez-vous dans le menu des Comportements &gt; Propriétés relatives aux limites ;</p>
+                                                <p>dans la liste des sites, sélectionnez votre site Watchdoc et cliquez-droit ;</p>
                                             </li>
                                             <li value="3">
+                                                <p>rendez-vous dans le menu des Comportements &gt; Propriétés relatives aux limites ;</p>
+                                            </li>
+                                            <li value="4">
                                                 <p>augmentez la taille de la <strong>Limite du tampon de réponse</strong> :<br /><br /><img src="Config_WES_Canon_PRT_TailleIIS_700x375.png" style="width: 700;height: 375;" /><br /></p>
                                             </li>
                                         </ol>
