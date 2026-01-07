@@ -239,8 +239,8 @@
                                         <h1 id="MessagesderreurAlertes" data-magellan-target="MessagesderreurAlertes">Messages d'erreur / Alertes</h1>
                                         <p><a name="TOC"></a>
                                         </p>
-                                        <div data-sticky-container="" id="5Fq06R5r2EG8NKKJjSNsXA">
-                                            <div class="sticky sticky-menu" style="width:100%" data-sticky="" data-top-anchor="5Fq06R5r2EG8NKKJjSNsXA:top" data-bottom-anchor="contentBody:bottom" data-scroll-container=".body-container" data-sticky-on="only screen and (min-width: 1280px)" data-scroll-container-on="only screen and (min-width: 1280px)">
+                                        <div data-sticky-container="" id="Sg2NTqd5TUO3yTTYf0SQiQ">
+                                            <div class="sticky sticky-menu" style="width:100%" data-sticky="" data-top-anchor="Sg2NTqd5TUO3yTTYf0SQiQ:top" data-bottom-anchor="contentBody:bottom" data-scroll-container=".body-container" data-sticky-on="only screen and (min-width: 1280px)" data-scroll-container-on="only screen and (min-width: 1280px)">
                                                 <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
                                                     <li class="tree-node"><a href="#MessagesderreurAlertes">Messages d'erreur / Alertes</a>
                                                         <ul>
@@ -296,6 +296,15 @@
                                             </div>
                                         </div>
                                         <h2 id="Watchdoc" data-magellan-target="Watchdoc"><a name="Watchdoc"></a>Watchdoc</h2>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" /></a><a name="Postgre"></a><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" aria-expanded="false">Message d'erreur 'Internal error while connecting to database pgsql lorsque Watchdoc utilise une base Postgre SQL- déc. 2025</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> lorsque  Watchdoc fonctionne avec une base de données Postgre SQL, il arrive qu'une saturation survienne,&#160;provoquant le blocage de Watchdoc.<br />Dans les fichiers traces, on trouve le message suivant : "Internal error while connecting to database pgsql://postgres@localhost/printlinkstats: The connection pool has been exhausted, either raise 'Max Pool Size' (currently 100) or 'Timeout' (currently 5 seconds) in your connection string. || InnerException : [System.TimeoutException]".</p>
+                                                <p>Un redémarrage du service règle temporairement le problème.<br /></p>
+                                                <p><strong>Cause :</strong> cette anomalie est due au composant qui communique avec la base de données Postgre SQL.&#160;Ce dernier ne ferme pas les connexions, autorisant ainsi un trop grand nombre de communications avec la base de données, ce qui finit par provoquer une saturation du serveur.</p>
+                                                <p><strong>Résolution :</strong> il convient de mettre à jour Watchdoc en v.<span>&#160;6.1.1.5486 qui contient une correction des composants de communication.&#160;</span></p>
+                                            </div>
+                                        </div>
+                                        <p>&#160;</p>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" /></a><a name="Spam"></a><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" aria-expanded="false">Spam de notifications après modification de la configuration de la planification de rapports - déc. 2025</a></span>
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> dans un domaine, après une modification apportée à la configuration de la planification des rapports, l'adresse mail de destination configurée  est spammée par des notifications envoyées par le serveur master ainsi que par tous les serveurs slaves.</p>

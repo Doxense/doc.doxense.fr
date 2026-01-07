@@ -270,20 +270,35 @@
                                         <h3>Créer un utilisateur</h3>
                                         <ol>
                                             <li value="1">
-                                                <p>Créez un utilisateur à l'aide de la commande suivante : <br /><code>CREATE USER nom_de_lutilisateurGR WITH PASSWORD 'Mot_de_passe';</code><br /><img src="../Z_Resources/Images/02_Captures/WD_BDD_Postgre_User.png" /></p>
+                                                <p>Créez un utilisateur avec son mot de passe à l'aide de la commande suivante : </p>
+                                                <p><code>CREATE USER nom_de_lutilisateurGR WITH PASSWORD 'Mot_de_passe'; CREATE USER</code>
+                                                    <br />
+                                                    <img src="../Z_Resources/Images/02_Captures/WD_BDD_Postgre_User.png" />
+                                                </p>
                                             </li>
                                         </ol>
                                         <h3>Créer une base</h3>
                                         <ol>
                                             <li value="1">
-                                                <p>Créez la base en saisissant la commande suivante : <br /><code>CREATE DATABASE watchdocstats WITH OWNER watchdoc_rw ENCODING = 'UTF8'</code><br /><img src="../Z_Resources/Images/02_Captures/WD_BDD_Postgre_Base.png" /><br />Attention : pour les collations, veuillez vous référer à la documentation dédiée (en fonction de l'environnement Windows ou Linux : <a href="https://www.postgresql.org/docs/current/multibyte.html" target="_blank">https://www.postgresql.org/docs/current/multibyte.html</a></p>
+                                                <p>Créez la base en saisissant la commande suivante </p>
+                                                <p>&#160;</p>
+                                                <p id="code"><code>postgre=# CREATE DATABASE watchdocstats WITH OWNER watchdoc_rw ENCODING = 'UTF8'; CREATE&#160;DATABASE</code>
+                                                </p>
+                                                <p>
+                                                    <br />
+                                                    <img src="../Z_Resources/Images/02_Captures/WD_BDD_Postgre_Base.png" />
+                                                    <br />Attention : pour les collations, veuillez vous référer à la documentation dédiée (en fonction de l'environnement Windows ou Linux : <a href="https://www.postgresql.org/docs/current/multibyte.html" target="_blank">https://www.postgresql.org/docs/current/multibyte.html)</a></p>
                                                 <p>&#160;</p>
                                             </li>
                                         </ol>
                                         <ol data-mc-continue="true">
                                             <li value="2">
-                                                <p>Donnez les accès à Watchdoc à l'aide des commandes suivantes :<br /><code>GRANT CONNECT ON DATABASE "watchdocstats" TO watchdoc_rw;<br></br>GRANT USAGE ON SCHEMA public TO watchdoc_rw;<br></br>GRANT SELECT,INSERT,UPDATE,DELETE ON ALL TABLES IN SCHEMA public TO watchdoc_rw;<br></br>ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT,INSERT,UPDATE,DELETE ON TABLES TO watchdoc_rw;</code></p>
+                                                <p>Donnez les accès à Watchdoc à l'aide des commandes suivantes :</p>
+                                                <p id="code">GRANT CONNECT ON DATABASE "watchdocstats" TO watchdoc_rw; GRANT<br /></p>
                                             </li>
+                                            <p>
+                                                <p id="code"><code>GRANT USAGE ON SCHEMA public TO watchdoc_rw; GRANT USAGE&#160;ON&#160;SCHEMA<br />GRANT SELECT,INSERT,UPDATE,DELETE ON ALL TABLES IN SCHEMA public TO watchdoc_rw; GRANT<br />ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT,INSERT,UPDATE,DELETE ON TABLES TO watchdoc_rw;</code>GRANT</p>
+                                            </p>
                                         </ol>
                                         <h3>Créer les tables</h3>
                                         <ol>
@@ -293,17 +308,17 @@
                                             </li>
                                             <li value="2">
                                                 <p>Lancez la commande suivante : </p>
-                                                <p><code>\i 'c:/SQL/pgsql_awdstats60.sql'</code>
+                                                <p id="code"><code>\i 'c:/SQL/pgsql_awdstats60.sql'</code>
                                                 </p>
                                                 <p>&#160;</p>
                                                 <p>En fonction du type de base dont vous avez besoin, exécutez les différents scripts suivants&#160;:</p>
-                                                <p><code>pgsql_awdstats60.sql  = base de statistiques Watchdoc</code>
+                                                <p id="code"><code>pgsql_awdstats60.sql  = base de statistiques Watchdoc</code>
                                                 </p>
-                                                <p><code>pgsql_cards45.sql = Base cards</code>
+                                                <p id="code"><code>pgsql_cards45.sql = Base cards</code>
                                                 </p>
-                                                <p><code>pgsql_cluster60.sql = Base interserveur</code>
+                                                <p id="code"><code>pgsql_cluster60.sql = Base interserveur</code>
                                                 </p>
-                                                <p><code>pgsql_pmv60.sql = Base Quota</code>
+                                                <p id="code"><code>pgsql_pmv60.sql = Base Quota</code>
                                                 </p>
                                                 <p>
                                                     <br />
