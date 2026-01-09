@@ -212,7 +212,7 @@
                                                     </li>
                                                     <li class="tree-node"><a href="#ImpossibledetrouverlassemblyDoxenseWebVersion5400cultureneutralPublicKeyToken94de63351b6ea861">Impossible de trouver l’assembly ‘Doxense.Web, Version=5.4.0.0, culture=neutral, PublicKeyToken=94de63351b6ea861’.</a>
                                                     </li>
-                                                    <li class="tree-node"><a href="#WESRicohMise%C3%A0jourdujetondauthentificationAccessToken">WES Ricoh - Mise à jour du jeton d'authentification (Access Token)</a>
+                                                    <li class="tree-node"><a href="#WESRicohMise%C3%A0jourdujetondauthentification">WES Ricoh - Mise à jour du jeton d'authentification </a>
                                                     </li>
                                                     <li class="tree-node"><a href="#WESRicohScannatifImpossibledenum%C3%A9riserundocumentMessagerderreurJournalscannerplein">WES Ricoh - Scan natif - Impossible de numériser un document - Messager d'erreur Journal scanner plein</a>
                                                     </li>
@@ -334,34 +334,45 @@
                                             </li>
                                         </ul>
                                         <hr width="100%" size="0" align="center" />
-                                        <h2 id="WESRicohMiseàjourdujetondauthentificationAccessToken" data-magellan-target="WESRicohMiseàjourdujetondauthentificationAccessToken">WES Ricoh - Mise à jour du jeton d'authentification <a name="Access_Token">(Access Token)</a></h2>
+                                        <h2 id="WESRicohMiseàjourdujetondauthentification" data-magellan-target="WESRicohMiseàjourdujetondauthentification">WES Ricoh - Mise à jour du jeton d'authentification </h2>
                                         <h3>Contexte</h3>
                                         <p>Lorsque Watchdoc fonctionne avec un WES Ricoh, à l'approche de la date d'expiration du jeton d'authentification, un message d'alerte s'affiche, vous invitant à contacter le revendeur :<br /><br /><img src="../../Z_Resources/Images/02_Captures/WES/ADE_Ricoh_JetonAuthent.png" /></p>
                                         <h3>Résolution</h3>
-                                        <p>Ce problème peut être résolu par la mise à jour de Watchdoc.</p>
-                                        <p>Si la mise à jour de Watchdoc n'est pas envisageable, le problème peut être résolu par la modification manuelle du fichier de configuration de Watchdoc (cf. ci-dessous).</p>
-                                        <p>&#160;</p>
-                                        <p><span style="font-size: 14pt;font-weight: bold;">Nouvelle date de validité : </span><b style="font-size: 14pt;"><b>22/02/2028</b></b>
-                                        </p>
+                                        <p>Ce problème peut être résolu par l'une des opérations suivantes : </p>
+                                        <ul>
+                                            <li>
+                                                <p>par la mise à jour de Watchdoc ;</p>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <p>par la modification automatique à l'aide du script PowerShell (<a href="https://downloads.doxense.fr/doc.doxense/WatchdocRefreshRicohToken.zip">WatchdocRefreshRicohToken.zip</a>) à appliquer <b>sur tous les serveurs du domaine</b> (master et slaves) ; </p>
+                                            </li>
+                                            <li>
+                                                <p>par la modification manuelle à l'aide de la procédure indiquée ci-dessous.</p>
+                                            </li>
+                                        </ul>
                                         <h3>Procédure </h3>
                                         <fieldset>Cette procédure nécessitant une interruption de service, assurez-vous de l'effectuer au moment où elle aura le moins de conséquences sur l'activité d'impression (HNO). En fonction de l'importance de votre parc, cette interruption de service peut prendre entre 15 secondes et 20 minutes.</fieldset>
-                                        <p>&#160;</p>
-                                        <p>Pour modifier le fichier de configuration de Watchdoc :</p>
+                                        <p>
+                                            <br />
+                                        </p>
+                                        <p>Vous pouvez également modifier le fichier de configuration de Watchdoc manuellement sur tous les serveurs du domaine (master et slaves) :</p>
                                         <ol>
                                             <li value="1">
                                                 <p>rendez-vous dans le serveur hébergeant Watchdoc et arrêtez le service Watchdoc ;</p>
                                             </li>
                                             <li value="2">
-                                                <p>recherchez le fichier <b>config.xml</b> (enregistré par défaut dans C:\Program Files\Doxense\Watchdoc\Data\config.xml) ;</p>
+                                                <p>recherchez le fichier <b>config.xml</b> (enregistré par défaut dans C:\Program Files\Doxense\Watchdoc\Data) ;</p>
                                             </li>
                                             <li value="3">
                                                 <p>effectuez une sauvegarde de ce fichier ;</p>
                                             </li>
                                             <li value="4">
-                                                <p>ouvrez le fichier config. xml à l'aide d'un éditeur de texte et recherchez-y la balise <b>&lt;ricoh-web-api&gt;</b>.</p>
+                                                <p>éditez le fichier <b>config. xml</b> et recherchez-y la balise <b>&lt;ricoh-web-api&gt; </b>&#160;;</p>
                                             </li>
                                             <li value="5">
-                                                <p>Si cette balise n'existe pas, créez-la sous la balise <b>&lt;instances&gt;&lt;default-instance&gt;</b> ;</p>
+                                                <p>si cette balise n'existe pas, créez-la sous la balise <b>&lt;instances&gt;&lt;default-instance&gt;</b> ;</p>
                                             </li>
                                             <li value="6">
                                                 <p>modifiez les balises incluses dans la balise <b>&lt;ricoh-web-api&gt;</b> comme suit :</p>
@@ -390,7 +401,8 @@
                                         <p>5. enregistrez le fichier config.xml ;</p>
                                         <p>6. redémarrez le service Watchdoc ;</p>
                                         <p>7. dans le site web d'administration Watchdoc, vérifiez que le message d'alerte relatif au jeton d'authentification ne s'affiche plus.</p>
-                                        <p>&#160;</p>
+                                        <p><a name="Access_Token">(Access Token)</a>
+                                        </p>
                                         <hr width="100%" size="0" align="center" />
                                         <h2 id="WESRicohScannatifImpossibledenumériserundocumentMessagerderreurJournalscannerplein" data-magellan-target="WESRicohScannatifImpossibledenumériserundocumentMessagerderreurJournalscannerplein">WES Ricoh - Scan natif - Impossible de numériser un document - Messager d'erreur <a name="JournalScannerPlein">Journal scanner plein</a></h2>
                                         <p style="font-weight: bold;"><span style="font-size: 14pt;">Contexte</span>
