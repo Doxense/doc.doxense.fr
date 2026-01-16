@@ -228,11 +228,9 @@
                                                     </li>
                                                     <li class="tree-node"><a href="#D%C3%A9sinstallationmanuelleduWes">Désinstallation manuelle du Wes</a>
                                                     </li>
-                                                    <li class="tree-node"><a href="#Messagederreurtoomanyapplicationalreadyinstalled">Message d'erreur : too many application already installed</a>
+                                                    <li class="tree-node"><a href="#ErreurlorsdelinstallationCannotinstalltoomanyapplicationalreadyinstalled">Erreur lors de l'installation : Cannot install, too many application already installed</a>
                                                     </li>
                                                     <li class="tree-node"><a href="#MessagederreurCep%C3%A9riph%C3%A9riquenapasdelicencevalideetserarejet%C3%A9parceserveur">Message d'erreur : "Ce périphérique n'a pas de licence valide et sera rejeté par ce serveur"</a>
-                                                    </li>
-                                                    <li class="tree-node"><a href="#MessagederreurCep%C3%A9riph%C3%A9riquenapasdelicencevalideetserarejet%C3%A9parceserveur1">Message d'erreur : "Ce périphérique n'a pas de licence valide et sera rejeté par ce serveur"</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -321,61 +319,61 @@
                                         </ol>
                                         <hr width="100%" size="0" align="center" />
                                         <h2 id="ImpossibilitédesauthentifierdepuisleWESLenteursconstatéessurlepériphériqueNovembre2025" data-magellan-target="ImpossibilitédesauthentifierdepuisleWESLenteursconstatéessurlepériphériqueNovembre2025"><a name="Impossibl_Authent"></a>Impossibilité de s'authentifier depuis le WES - Lenteurs constatées sur le périphérique - Novembre 2025.</h2>
-                                        <p><strong style="color: #000000;">Contexte</strong>
+                                        <p style="font-size: 14pt;"><strong style="color: #000000;">Contexte</strong>
                                         </p>
                                         <p style="text-align: left;">Après mise à jour en Watchdoc v. 6.1.1., les utilisateurs n'arrivent plus à s'authentifier depuis le WES&#160;: après saisie du code ou présentation du badge, le périphérique semble traiter l'information pendant environ 40 secondes, mais revient à l'interface d'accueil.&#160;<br />L'anomalie est résolue après redémarrage du périphérique, mais elle réapparaît très rapidement.&#160;<br />Dans le journal, on constate effectivement que la réponse à la commande   &lt;deviceRecord:getLog&gt; est anormalement longue.<br />Depuis la page web du périphérique, il est impossible d'afficher  le journal des travaux (chargement infini).</p>
                                         <p style="text-align: left;"> <br /></p>
-                                        <p><strong style="color: #000000;">Cause</strong> </p>
+                                        <p style="font-size: 14pt;"><strong style="color: #000000;">Cause</strong> </p>
                                         <p>Ce problème est lié au journal des travaux (job log) qui peut ralentir le fonctionnement du périphérique lorsqu'il est trop lourd.&#160;</p>
                                         <p>
                                             <br />
                                         </p>
-                                        <p><strong style="color: #000000;">Résolution</strong>
+                                        <p style="font-size: 14pt;"><strong style="color: #000000;">Résolution</strong>
                                         </p>
                                         <p>Il convient de modifier la valeur du paramètre "Journal des travaux" configuré dans le profil WES&#160;associé au périphérique (cf. <a href="03_Toshiba_WES_ConfigProfil.htm#Joblog" target="_blank">Configurer le profil WES</a>).&#160;<br />Nous recommandons d'utiliser la valeur 0 permettant une purge automatique ou de limiter le nombre de jours de rétention pour éviter ces lenteurs.&#160;<br />Attention : il arrive qu'une valeur supérieure à 0, même peu élevée, provoque des dysfonctionnements.&#160;</p>
                                         <hr width="100%" size="0" align="center" />
-                                        <h2 data-mc-conditions="General.Online" id="MessagedanslinterfacedadministrationTopAccessDonnéesdejournaleffacées" data-magellan-target="MessagedanslinterfacedadministrationTopAccessDonnéesdejournaleffacées">Message dans l'interface d'administration TopAccess : <a name="Donnees_Effacees"></a>Données de journal effacées</h2>
+                                        <h2 id="MessagedanslinterfacedadministrationTopAccessDonnéesdejournaleffacées" data-magellan-target="MessagedanslinterfacedadministrationTopAccessDonnéesdejournaleffacées">Message dans l'interface d'administration TopAccess : <a name="Donnees_Effacees"></a>Données de journal effacées</h2>
                                         <p style="font-weight: bold;">Juin 2025</p>
-                                        <p><strong style="color: #000000;">Contexte</strong>
+                                        <p style="font-size: 14pt;"><strong style="color: #000000; font-size: 14pt;">Contexte</strong>
                                         </p>
                                         <p style="text-align: left;">Dans l'interface d'administration d'un périphérique Toshiba TopAccess, sous l'onglet Journaux &gt;&#160;Afficher les journaux, l'administrateurqui souhaite consulter le journal des impressions (jobs log). Or, il constate que le journal a été effacé : message "Données de journal effacées" :<br /><br /><img src="Depanner_WES_TopAccessJobLogsL.png" /><br /></p>
                                         <p>&#160;</p>
-                                        <p><strong style="color: #000000;">Cause</strong>
+                                        <p style="font-size: 14pt;"><strong style="color: #000000;">Cause</strong>
                                         </p>
                                         <p>Il s'agit d'un fonctionnement automatique du WES&#160;qui efface systématiquement les journaux des impressions (jobs log).</p>
                                         <p>
                                             <br />
                                         </p>
-                                        <p><strong style="color: #000000;">Résolution</strong>
+                                        <p style="font-size: 14pt;"><strong style="color: #000000;">Résolution</strong>
                                         </p>
                                         <p style="text-align: left;">Ce fonctionnement automatique a été modifié. <br />Pour résoudre ce dysfonctionnement, il convient donc de mettre Watchdoc à jour en v. 6.1.0.5290 min (cf. <a href="../../A_Getting_Started/Release_611.htm" target="_blank">Packages et notes de versions</a>).</p>
                                         <hr width="100%" size="0" align="center" />
-                                        <h2 data-mc-conditions="General.Online" id="MessagederreurTheremoteSOAPservicefailedwhileprocessingrequestunknownUserisoperatingthepanel" data-magellan-target="MessagederreurTheremoteSOAPservicefailedwhileprocessingrequestunknownUserisoperatingthepanel"><a name="Desinstall"></a>Message d'erreur - The remote SOAP&#160;service failed while processing request 'unknown': User is operating the panel</h2>
-                                        <p><strong style="color: #000000;">Contexte</strong>
+                                        <h2 id="MessagederreurTheremoteSOAPservicefailedwhileprocessingrequestunknownUserisoperatingthepanel" data-magellan-target="MessagederreurTheremoteSOAPservicefailedwhileprocessingrequestunknownUserisoperatingthepanel"><a name="Desinstall"></a>Message d'erreur - The remote SOAP&#160;service failed while processing request 'unknown': User is operating the panel</h2>
+                                        <p style="font-size: 14pt;"><strong style="color: #000000;">Contexte</strong>
                                         </p>
                                         <p style="text-align: left;">Lors de la désinstallation du WES&#160;Toshiba Open Platform, l'opération se déroule bien jusqu'à la ligne Set MDS&#160;settings qui affiche le message d'erreur suivant&#160;: The remote SOAP&#160;service failed while processing request '&amp;lt;unknown&amp;gt;': User is operating the panel:<br /><br /><img src="Depanner_WES_ErreurDesinstall_700x192.png" style="width: 700;height: 192;" /><br /></p>
                                         <p>&#160;</p>
                                         <p style="text-align: left;">De fait, sur l'écran du périphérique, le WES&#160;reste affiché (écran d'authentification)&#160;:<br /><br /><img src="Depanner_WES_ErreurDesinstall_WES_700x328.png" style="width: 700;height: 328;" /></p>
                                         <p>&#160;</p>
-                                        <p><strong style="color: #000000;">Résolution</strong>
+                                        <p style="font-size: 14pt;"><strong style="color: #000000;">Résolution</strong>
                                         </p>
                                         <p style="text-align: left;">Pour résoudre le problème, il convient d'appuyer 2&#160;fois sur le bouton <img src="Depanner_WES_ErreurDesinstallBtn_108x38.png" style="width: 108;height: 38;" /> de l'écran du périphérique pour faire disparaître le WES&#160;et afficher de nouveau la page d'accueil originale du périphérique&#160;:<br /><br /><img src="Depanner_WES_ErreurDesinstall_Origin_700x321.png" style="width: 700;height: 321;" /><br /></p>
                                         <p>&#160;</p>
                                         <hr width="100%" size="0" align="center" />
-                                        <h2 style="text-align: left;" data-mc-conditions="General.Online" id="MessagederreurErrorwhilestartinganewformatbreakdownInvalidobjectnamedboformatbreakdownmessageInternalServerErrorsurleWES" data-magellan-target="MessagederreurErrorwhilestartinganewformatbreakdownInvalidobjectnamedboformatbreakdownmessageInternalServerErrorsurleWES"><a name="formatbreakdown">Message d'erreur - Error while starting a newformat breakdown: Invalid object name 'dbo.formatbreakdown'" + message "Internal Server Error" sur le WES</a>
+                                        <h2 style="text-align: left;" id="MessagederreurErrorwhilestartinganewformatbreakdownInvalidobjectnamedboformatbreakdownmessageInternalServerErrorsurleWES" data-magellan-target="MessagederreurErrorwhilestartinganewformatbreakdownInvalidobjectnamedboformatbreakdownmessageInternalServerErrorsurleWES"><a name="formatbreakdown">Message d'erreur - Error while starting a newformat breakdown: Invalid object name 'dbo.formatbreakdown'" + message "Internal Server Error" sur le WES</a>
                                         </h2>
                                         <p style="font-size: 14pt;"><strong style="color: #000000;">Contexte</strong>
                                         </p>
                                         <p>Alors que les quotas sont configurés sur le WES&#160;Toshiba, lors de la validation d'un travail d'impression, l'utilisateur voit s'afficher le message "Internal Server error" sur le WES.&#160;</p>
                                         <p>Lors de l'analyse, le message "Error while starting a newformat breakdown: Invalid object name 'dbo.formatbreakdown'" apparaît dans les fichiers traces (logs).</p>
                                         <p>&#160;</p>
-                                        <p><strong style="font-size: 14pt; color: #000000;">Cause</strong>
+                                        <p style="font-size: 14pt;"><strong style="font-size: 14pt; color: #000000;">Cause</strong>
                                         </p>
                                         <p>Ce problème peut être lié à la configuration des quotas qui nécessite une base de données spécifique.</p>
                                         <p>
                                             <br />
                                         </p>
-                                        <p><strong style="font-size: 14pt; color: #000000;">Résolution</strong>
+                                        <p style="font-size: 14pt;"><strong style="font-size: 14pt; color: #000000;">Résolution</strong>
                                         </p>
                                         <p>Pour résoudre ce problème, il est nécessaire de compléter l'installation du WES&#160;après les étapes d'installation : </p>
                                         <ol>
@@ -434,14 +432,14 @@
                                         </ol>
                                         <p><span style="font-family: 'Wingdings'">è</span>vérifiez que l'impression s'exécute bien sur le WES,&#160;et que les quotas sont bien pris en compte.</p>
                                         <hr width="100%" size="0" align="center" />
-                                        <h2 style="text-align: left;" data-mc-conditions="General.Online" id="InternalServerErrorAnInternalerroroccurredDoxensedataJsonDvJsonDbExceptionDatabasemustbeinitializedbeforeanyoperation" data-magellan-target="InternalServerErrorAnInternalerroroccurredDoxensedataJsonDvJsonDbExceptionDatabasemustbeinitializedbeforeanyoperation">InternalServerError. An Internal error occurred. Doxense.data.JsonDv.JsonDbException: Database must be initialized before any operation.</h2>
-                                        <p style="font-size: 14pt;"><strong>Contexte</strong>
+                                        <h2 style="text-align: left;" id="InternalServerErrorAnInternalerroroccurredDoxensedataJsonDvJsonDbExceptionDatabasemustbeinitializedbeforeanyoperation" data-magellan-target="InternalServerErrorAnInternalerroroccurredDoxensedataJsonDvJsonDbExceptionDatabasemustbeinitializedbeforeanyoperation">InternalServerError. An Internal error occurred. Doxense.data.JsonDv.JsonDbException: Database must be initialized before any operation.</h2>
+                                        <p style="font-size: 14pt;font-weight: bold;color: #000000;"><strong>Contexte</strong>
                                         </p>
                                         <p>Lors de la configuration d'un WES Toshiba v3 avec la fonction d'interserveur activée, l'installation se déroule correctement, sans message d'erreur. La configuration sur le copieur et l'interface EWB est correcte.</p>
                                         <p>&#160;</p>
                                         <p>Mais à l'utilisation, le message d'erreur suivant s'affiche sur l'écran du périphérique : <strong style="font-family: 'Courier New';">500 InternalServerError "an Internal error occurred" Doxense.data.JsonDv.JsonDbException: Database must be initialized before any operation.</strong></p>
                                         <p>&#160;</p>
-                                        <p style="font-size: 14pt;"><strong>Cause</strong>
+                                        <p style="font-size: 14pt;color: #000000;"><strong>Cause</strong>
                                         </p>
                                         <p>Ce message survient lorsque la fonction "interserveur" de Watchdoc est activée, mais que la base de données interserveur n'est pas connectée au démarrage du serveur Watchdoc ou a été déconnectée</p>
                                         <p style="font-size: 14pt;">&#160;</p>
@@ -450,15 +448,15 @@
                                         <p>Pour résoudre ce problème, il confient de redémarrer la base de données interserveur, de la reconnecter au serveur Watchdoc ou de vérifier sa configuration (cf. <a href="../../H_HowTo/WD52_Interserveur_Principe.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Activer la fonction d'impression interserveur</a>).</p>
                                         <hr width="100%" size="0" align="center" />
                                         <h2 id="Délaiavantimpression" data-magellan-target="Délaiavantimpression">Délai avant impression</h2>
-                                        <p style="font-size: 14pt;"><strong>Contexte</strong>
+                                        <p style="font-size: 14pt;color: #000000;"><strong>Contexte</strong>
                                         </p>
                                         <p>Quand un utilisateur envoie un document sur une imprimante réseau ciblant un serveur d'impression, il faut attendre un délai d'une vingtaine de secondes avant que le document ne commence à être spoulé puis envoyé au serveur.</p>
                                         <p>&#160;</p>
-                                        <p><strong>Cause</strong>
+                                        <p style="font-size: 14pt;color: #000000;"><strong>Cause</strong>
                                         </p>
                                         <p>Ce problème est dû au pilote qui envoie des requêtes SNMP au serveur d'impression en pensant qu'il s'agit d'un périphérique. Chaque requête provoque un temps d'attente avant arrêt.<br /><br /><img src="../../Z_Resources/Images/01_Generiques/ADE_WES_Toshiba_Delai_Impression_1.png" /></p>
                                         <p>&#160;</p>
-                                        <p><strong>Résolution</strong>
+                                        <p style="color: #000000;font-size: 14pt;"><strong>Résolution</strong>
                                         </p>
                                         <p>Pour résoudre ce problème, désactivez la bidirectionnalité dans les propriétés de la file d'impression à partir de son interface de configuration :</p>
                                         <ol>
@@ -490,14 +488,14 @@
                                         </ol>
                                         <hr width="100%" size="0" align="center" />
                                         <h2 id="ErreurdecertificatSSL" data-magellan-target="ErreurdecertificatSSL">Erreur de certificat SSL</h2>
-                                        <p style="text-align: left;font-size: 14pt;font-weight: bold;">Contexte</p>
+                                        <p style="text-align: left;font-size: 14pt;font-weight: bold;color: #000000;">Contexte</p>
                                         <p style="text-align: left;">Un message intitulé <strong>Erreur de certificat SSL</strong> vous demande si vous souhaitez forcer l'accès au périphérique d'impression. </p>
                                         <p style="text-align: left;">&#160;</p>
-                                        <p style="text-align: left;"><b style="font-size: 14pt;">Cause</b>
+                                        <p style="text-align: left;color: #000000;font-size: 14pt;"><b style="font-size: 14pt;">Cause</b>
                                         </p>
                                         <p style="text-align: left;">Ce message est normal, informant simplement que le certificat web utilisé par le serveur est auto-signé et ne peut donc être vérifié par le périphérique.</p>
                                         <p style="text-align: left;">&#160;</p>
-                                        <p style="text-align: left;"><span style="font-size: 14pt; font-weight: bold;">Résolution</span>
+                                        <p style="text-align: left;color: #000000;font-size: 14pt;"><span style="font-size: 14pt; font-weight: bold;">Résolution</span>
                                         </p>
                                         <p style="text-align: left;">Pour ne plus voir ce message, vous devez ajouter le certificat web dans le périphérique afin qu'il puisse être testé. </p>
                                         <ol>
@@ -526,14 +524,14 @@
                                         </ol>
                                         <hr />
                                         <h2 id="Authentificationutilisateur" data-magellan-target="Authentificationutilisateur">Authentification utilisateur</h2>
-                                        <p style="text-align: left;font-size: 14pt;font-weight: bold;">Contexte</p>
+                                        <p style="text-align: left;font-size: 14pt;font-weight: bold;color: #000000;">Contexte</p>
                                         <p>Lors d'une impression  sur un périphérique Toshiba, l'authentification peut ne pas être fonctionner et l'utilisateur remplacé par l'identifiant ?META\PrintOpe (rôle par défaut du périphérique).</p>
                                         <p>&#160;</p>
-                                        <p style="text-align: left;"><b style="font-size: 14pt;">Cause</b>
+                                        <p style="text-align: left;font-size: 14pt;color: #000000;"><b style="font-size: 14pt;">Cause</b>
                                         </p>
                                         <p>Ce message est affiché quand le périphérique Toshiba envoie à Watchdoc le rôle par défaut du périphérique à la place de l'identifiant de l'utilisateur.</p>
                                         <p>&#160;</p>
-                                        <p style="text-align: left;"><span style="font-size: 14pt; font-weight: bold;">Résolution</span>
+                                        <p style="text-align: left;font-size: 14pt;color: #000000;"><span style="font-size: 14pt; font-weight: bold;">Résolution</span>
                                         </p>
                                         <p>Pour résoudre ce problème, vous devez désactiver l'authentification utilisateur pour l'impression sur le périphérique&#160;:</p>
                                         <ol>
@@ -554,12 +552,12 @@
                                         </ol>
                                         <hr />
                                         <h2 id="DésinstallationmanuelleduWes" data-magellan-target="DésinstallationmanuelleduWes">Désinstallation manuelle du Wes</h2>
-                                        <p style="font-size: 14pt;"><strong>Contexte</strong>
+                                        <p style="font-size: 14pt;color: #000000;"><strong>Contexte</strong>
                                         </p>
                                         <p>Il peut arriver, notamment après une période de tests sur le périphérique Toshiba e-Bridge-N, que ce dernier ne soit plus connecté et ne parvienne plus à s'interfacer avec le serveur d'impression Watchdoc.</p>
                                         <p>Dans ce cas, il devient impossible de désinstaller le WES du périphérique depuis l'interface d'administration de Watchdoc. Pour retrouver l'usage du périphérique, il est donc nécessaire de désinstaller le WES depuis l'interface d'administration du périphérique Toshiba e-Bridge-N.</p>
                                         <p>&#160;</p>
-                                        <p style="font-size: 14pt;"><strong>Procédure</strong>
+                                        <p style="font-size: 14pt;color: #000000;"><strong>Procédure</strong>
                                         </p>
                                         <p>Pour désinstaller le WES manuellement depuis le périphérique :</p>
                                         <ol>
@@ -596,8 +594,8 @@
                                             </li>
                                         </ol>
                                         <p class="Resultat"><span style="font-family: 'Wingdings'">è</span>Dès lors, Watchdoc est désinstallé et le périphérique peut donc fonctionner normalement.</p>
-                                        <p>&#160;</p>
-                                        <h2 data-mc-conditions="General.Online" id="Messagederreurtoomanyapplicationalreadyinstalled" data-magellan-target="Messagederreurtoomanyapplicationalreadyinstalled">Message d'erreur : too many application already installed</h2>
+                                        <hr width="100%" size="0" align="center" />
+                                        <h2 id="ErreurlorsdelinstallationCannotinstalltoomanyapplicationalreadyinstalled" data-magellan-target="ErreurlorsdelinstallationCannotinstalltoomanyapplicationalreadyinstalled">Erreur lors de l'installation : Cannot install, too many application already installed</h2>
                                         <p><span style="font-size: 14pt; font-weight: bold;">Contexte</span>
                                         </p>
                                         <p style="text-align: left;">Lors de l'installation du WES Toshiba, le message d'erreur suivant s'affiche dans le rapport d'installation :</p>
@@ -620,8 +618,7 @@
                                             </li>
                                         </ol>
                                         <hr width="100%" size="0" align="center" />
-                                        <h2 data-mc-conditions="General.Online" id="MessagederreurCepériphériquenapasdelicencevalideetserarejetéparceserveur" data-magellan-target="MessagederreurCepériphériquenapasdelicencevalideetserarejetéparceserveur">Message d'erreur : "Ce périphérique n'a pas de licence valide et sera rejeté par ce serveur"</h2>
-                                        <h2 id="MessagederreurCepériphériquenapasdelicencevalideetserarejetéparceserveur1" data-magellan-target="MessagederreurCepériphériquenapasdelicencevalideetserarejetéparceserveur1">Message d'erreur : "Ce périphérique n'a pas de licence valide et sera rejeté par ce serveur"</h2>
+                                        <h2 id="MessagederreurCepériphériquenapasdelicencevalideetserarejetéparceserveur" data-magellan-target="MessagederreurCepériphériquenapasdelicencevalideetserarejetéparceserveur">Message d'erreur : "Ce périphérique n'a pas de licence valide et sera rejeté par ce serveur"</h2>
                                         <p style="font-size: 14pt;font-weight: bold;">Contexte</p>
                                         <p>Quand le WES  est associé à une file d'impression, il arrive que, suite à une panne du serveur ou du spouleur MS Windows, le nombre des licences WES ne s'affiche pas dans les propriétés de cette file (<strong>Menu principal</strong> &gt; <strong>File d'impression </strong>+ sélection d'une file &gt; <strong>Propriétés</strong>).<br /><br /></p>
                                         <p>

@@ -215,7 +215,7 @@
                                                     </li>
                                                     <li class="tree-node"><a href="#InstallationduWESimpossibleMessagederreur302MovedTemporarily">Installation du WES&#160;impossible - Message d'erreur "302 Moved Temporarily"</a>
                                                     </li>
-                                                    <li class="tree-node"><a href="#InstallationduWESimpossible%C3%A0causedunprobl%C3%A8medecommunicationli%C3%A9auxoptionsAMX2etAMX3">Installation du WES&#160;impossible à cause d'un problème de communication lié aux options AMX2 et AMX3</a>
+                                                    <li class="tree-node"><a href="#InstallationduWESimpossibleprobl%C3%A8medecommunicationli%C3%A9auxoptionsAMX2etAMX3">Installation du WES&#160;impossible  problème de communication lié aux options AMX2 et AMX3</a>
                                                     </li>
                                                     <li class="tree-node"><a href="#WESSharpAcc%C3%A8sauWESimpossibledepuisl%C3%A9crandaccueildup%C3%A9riph%C3%A9rique">WES Sharp - Accès au WES&#160;impossible depuis l'écran d'accueil du périphérique</a>
                                                     </li>
@@ -312,55 +312,59 @@
                                         </ol>
                                         <hr width="100%" size="0" align="center" />
                                         <h2 style="text-align: justify;" id="IconesWEScanmaldimensionnéeMessagederreur302MovedTemporarily" data-magellan-target="IconesWEScanmaldimensionnéeMessagederreur302MovedTemporarily">Icones WEScan mal dimensionnée - Message d'erreur "302 Moved Temporarily"</h2>
-                                        <p class="H2_Print">Contexte</p>
+                                        <p class="H2_Print" style="font-size: 14pt;">Contexte</p>
                                         <p>Sur le WES, on constate que les icones Watchdoc et WEScan n'ont pas la même taille : <br /><br /><img src="ADE_WES_Sharp_Icones_530x173.png" style="width: 530;height: 173;" /><br /></p>
                                         <p class="H2_Print">&#160;</p>
-                                        <p class="H2_Print">Résolution</p>
+                                        <p class="H2_Print"><span style="font-size: 14pt;">Résolution</span>
+                                        </p>
                                         <p>Pour résoudre ce problème, il convient de mettre à jour Watchdoc en v.&#160;6.1.1. 5486 qui contient un correctif. </p>
                                         <p>&#160;</p>
                                         <hr width="100%" size="0" align="center">
                                         </hr>
                                         <h2 style="text-align: justify;" id="InstallationduWESimpossibleMessagederreur302MovedTemporarily" data-magellan-target="InstallationduWESimpossibleMessagederreur302MovedTemporarily">Installation du WES&#160;impossible - Message d'erreur "302 Moved Temporarily"</h2>
-                                        <p class="H2_Print">Contexte</p>
+                                        <p class="H2_Print"><span style="font-size: 14pt;">Contexte</span>
+                                        </p>
                                         <p style="text-align: left;">Lors de l'installation du WES sur les périphériques Sharp, le message d'erreur suivant apparaît dans le rapport, empêchant l'installation du WES&#160;: <code>ssl_states : WES&#160;Java request to [IP&#160;Adress] failed with statuts 302 Moved Temporarily</code>:<br /><br /><img src="Sharp.png" /></p>
                                         <p class="H2_Print">&#160;</p>
-                                        <p class="H2_Print">Résolution</p>
+                                        <p class="H2_Print" style="font-size: 14pt;">Résolution</p>
                                         <p>Pour résoudre ce problème, il convient de mettre à jour Watchdoc en v.&#160;6.1.1. 5465 qui contient un correctif.</p>
                                         <hr width="100%" size="0" align="center" />
-                                        <h2 style="text-align: justify;" id="InstallationduWESimpossibleàcausedunproblèmedecommunicationliéauxoptionsAMX2etAMX3" data-magellan-target="InstallationduWESimpossibleàcausedunproblèmedecommunicationliéauxoptionsAMX2etAMX3"><a name="404NotFound"></a>Installation du WES&#160;impossible à cause d'un problème de communication lié aux options AMX2 et AMX3</h2>
-                                        <p class="H2_Print">Contexte</p>
+                                        <h2 style="text-align: justify;" id="InstallationduWESimpossibleproblèmedecommunicationliéauxoptionsAMX2etAMX3" data-magellan-target="InstallationduWESimpossibleproblèmedecommunicationliéauxoptionsAMX2etAMX3"><a name="404NotFound"></a>Installation du WES&#160;impossible  problème de communication lié aux options AMX2 et AMX3</h2>
+                                        <p class="H2_Print" style="font-size: 14pt;">Contexte</p>
                                         <p style="text-align: justify;">Lors de l'installation du WES sur les périphériques Sharp MX-M2651, MX-M3051, MX-M3551, MX-M4051, MX-M5051 ou MX-M6051, le message d'erreur suivant apparaît dans le rapport, empêchant l'installation du WES&#160;: </p>
                                         <p style="text-align: left;"><code>WES&#160;Java request to [IP&#160;Adress] failed with statuts 404 Not Found Login failed (check credentials)</code>:<br /><br /><img src="ADE_WES_Sharp_404NotFound.png" /><br /><br /></p>
                                         <p style="text-align: left;">Dans l'interface de configuration du périphérique, sous l'onglet <strong>Règlages système &gt; Réglages Sharp OSA &gt;&#160;Réglages de l'application standard</strong>, l'interface se présente comme ci-dessous :<br /><br /><img src="ADE_WES_Sharp_InstallWESImposs_PasAMX.png" /><br /></p>
-                                        <p class="H2_Print">&#160;</p>
-                                        <p class="H2_Print">Cause</p>
+                                        <p>&#160;</p>
+                                        <p class="H2_Print"><span style="font-size: 14pt;">Cause</span>
+                                        </p>
                                         <p style="text-align: justify;">Ce problème est dû aux modules <strong>AMX2</strong> (module de communication avec une application)  et <strong>AMX3 </strong>(module de comptabilisation externe) qui n'ont pas été installés sur le périphérique*. Ce dernier ne peut donc pas communiquer avec Watchdoc.&#160;</p>
                                         <p style="text-align: justify;">* ces modules sont installés par défaut sur les modèles MX-M3071, MX-M3071S, MX-M3571, MX-M3571S, MX-M4071, MX-M4071S, MX-M5071, MX-M5071S, MX-M6071 ou MX-M6071, mais <b>doivent être installés</b> sur les périphériques d'impression MX-M2651, MX-M3051, MX-M3551, MX-M4051, MX-M5051 ou MX-M6051.</p>
-                                        <p class="H2_Print">&#160;</p>
-                                        <p class="H2_Print">Résolution</p>
+                                        <p>&#160;</p>
+                                        <p class="H2_Print"><span style="font-size: 14pt;">Résolution</span>
+                                        </p>
                                         <p>Pour résoudre ce problème</p>
                                         <ol>
                                             <li value="1">
                                                 <p style="text-align: justify;">activez l'option AMX2 - BP-MX10 sur vos périphériques : </p>
-                                                <ol>
+                                                <ol style="list-style-type: upper-roman;">
                                                     <li value="1">
-                                                        <p>A l'aide d'un navigateur, accédez à l'interface web du périphérique&#160;;</p>
+                                                        <p>à l'aide d'un navigateur, accédez à l'interface web du périphérique&#160;;</p>
                                                     </li>
                                                     <li value="2">
                                                         <p>authentifiez-vous avec un compte administrateur&#160;; </p>
                                                     </li>
                                                     <li value="3">
-                                                        <p>dans le menu, cliquez sur Réglages système &gt; Réglages Sharp OSA &gt;&#160;Réglages de l'application standard&#160;;</p>
+                                                        <p>dans le menu, cliquez sur <b>Réglages système &gt; Réglages Sharp OSA &gt;&#160;Réglages de l'application standard</b>&#160;;</p>
                                                     </li>
                                                     <li value="4">
-                                                        <p>dans l'interface Enregistrement de l'application standard, complétez les champs&#160;: </p>
+                                                        <p>dans l'interface <b>Enregistrement de l'application standard,</b> complétez les champs&#160;: </p>
                                                         <ul>
                                                             <li>
-                                                                <p>Nom de l'application : saisissez le nom de l'application "Watchdoc" ou "Mes impressions"&#160;;</p>
+                                                                <p><b>Nom de l'application :</b> saisissez le nom de l'application "Watchdoc" ou "Mes impressions"&#160;;</p>
                                                             </li>
                                                             <li>
-                                                                <p>Adresse de l'interface utilisateur de l'application&#160;: saisissez l'url http://IPSERVEUR:5754/dsp/Sharp/Osa/2.0/Web/Jobs </p>
-                                                                <p>ou, si vous êtes en SSL, saisissez l'url https://IPSERVEUR:5753/dsp/Sharp/Osa/2.0/Web/Jobs<br /><br /><img src="Config_WES_Sharp_InstallManu_AppliStand_700x338.png" style="width: 700;height: 338;" /></p>
+                                                                <p><b>Adresse de l'interface utilisateur de l'application&#160;:</b> saisissez l'url http://IPSERVEUR:5754/dsp/Sharp/Osa/2.0/Web/Jobs </p>
+                                                                <p>ou, si vous êtes en SSL, saisissez l'url https://IPSERVEUR:5753/dsp/Sharp/Osa/2.0/Web/Jobs<br /><img src="Config_WES_Sharp_InstallManu_AppliStand_700x338.png" style="width: 700;height: 338;" /></p>
                                                             </li>
                                                         </ul>
                                                     </li>
@@ -369,9 +373,9 @@
                                             </li>
                                             <li value="2">
                                                 <p>Activez l'option AMX3 - BP-MX11</p>
-                                                <ol>
+                                                <ol style="list-style-type: lower-roman;">
                                                     <li value="1">
-                                                        <p>A l'aide d'un navigateur, accédez à l'interface web du périphérique&#160;;</p>
+                                                        <p>à l'aide d'un navigateur, accédez à l'interface web du périphérique&#160;;</p>
                                                     </li>
                                                     <li value="2">
                                                         <p>authentifiez-vous avec un compte administrateur&#160;; </p>
@@ -400,7 +404,7 @@
                                                                 <p>ou, si vous êtes en SSL, https://IPSERVEUR:5753/dsp/Sharp/Osa/1.0/Service</p>
                                                             </li>
                                                             <li>
-                                                                <p><strong>Dépassement du délai :</strong> conservez la valeur choisie comme  délai durant lequel le périphérique dialogue avec le serveur.<br /><br /><img src="Config_WES_Sharp_InstallManu_AppliExt_700x334.png" style="width: 700;height: 334;" /></p>
+                                                                <p><strong>Dépassement du délai :</strong> conservez la valeur choisie comme  délai durant lequel le périphérique dialogue avec le serveur.<br /><img src="Config_WES_Sharp_InstallManu_AppliExt_700x334.png" style="width: 700;height: 334;" /></p>
                                                             </li>
                                                         </ul>
                                                         <p>&#160;</p>
@@ -408,19 +412,19 @@
                                                 </ol>
                                             </li>
                                             <li value="3">
-                                                <p style="text-align: justify;">Une fois les modules activés, vérifiez que les deux options figurent sous l'onglet <strong>Règlages système &gt; Réglages Sharp OSA &gt;&#160;Réglages de l'application standard</strong>.</p>
+                                                <p style="text-align: justify;">Vérifiez que les deux options figurent sous l'onglet <strong>Règlages système &gt; Réglages Sharp OSA &gt;&#160;Réglages de l'application standard</strong>.</p>
                                             </li>
                                         </ol>
                                         <hr width="100%" size="0" align="center" />
                                         <h2 id="WESSharpAccèsauWESimpossibledepuislécrandaccueildupériphérique" data-magellan-target="WESSharpAccèsauWESimpossibledepuislécrandaccueildupériphérique">WES Sharp - Accès au WES&#160;impossible depuis l'écran d'accueil du périphérique</h2>
-                                        <p class="H2_Print">Contexte</p>
+                                        <p class="H2_Print" style="font-size: 14pt;">Contexte</p>
                                         <p>Lors de l'installation du WES sur des périphériques récents, aucun message d'erreur n'apparaît et le rapport d'installation indique qu'elle s'est bien déroulée. </p>
                                         <p>Cependant, le WES&#160;(bouton "Mes impressions") n'apparaît pas sur l'écran d'accueil du périphérique Sharp.</p>
                                         <p class="H2_Print">&#160;</p>
-                                        <p class="H2_Print">Cause</p>
+                                        <p class="H2_Print" style="font-size: 14pt;">Cause</p>
                                         <p>Ce problème peut être dû au fait que le WES&#160;n'est pas activé sur le périphérique qui ne le reconnaît donc pas.&#160;</p>
                                         <p class="H2_Print">&#160;</p>
-                                        <p class="H2_Print">Résolution</p>
+                                        <p class="H2_Print" style="font-size: 14pt;">Résolution</p>
                                         <p>Pour résoudre ce problème,</p>
                                         <ol>
                                             <li value="1">
@@ -446,15 +450,15 @@
                                         </ol>
                                         <hr width="100%" size="0" align="center" />
                                         <h2 id="DysfonctionnementdesMFPSharpavecSNMP" data-magellan-target="DysfonctionnementdesMFPSharpavecSNMP"><a name="Dysfonct_SNMP"></a>Dysfonctionnement des MFP Sharp avec SNMP</h2>
-                                        <p class="H2_Print">Contexte</p>
+                                        <p class="H2_Print" style="font-size: 14pt;">Contexte</p>
                                         <p>Il arrive que les périphériques Sharp ne fonctionnent plus après l'activation du SNMP et envoient une erreur de type "maintenance préventive".</p>
                                         <p>&#160;</p>
-                                        <p class="H2_Print">Cause</p>
+                                        <p class="H2_Print" style="font-size: 14pt;">Cause</p>
                                         <p>Les périphériques Sharp utilisent SNMP pour envoyer des informations de maintenance préventives (en cas de toner ou de bac papier vides, par exemple).</p>
                                         <p>&#160;</p>
                                         <p>Watchdoc est alors informé via SNMP que le périphérique est en panne alors que ce n'est pas le cas. Le message perdure, même après l'intervention qui permet de résoudre le problème (changement du toner et alimentation du bac à papier, par exemple).</p>
-                                        <p class="H2_Print">&#160;</p>
-                                        <p class="H2_Print">Résolution</p>
+                                        <p>&#160;</p>
+                                        <p class="H2_Print" style="font-size: 14pt;">Résolution</p>
                                         <p style="font-weight: bold;">Modification unitaire</p>
                                         <p>Pour résoudre le problème, il est possible de désactiver totalement le SNMP, mais on risque de perdre des données relatives à l'utilisation du périphérique. </p>
                                         <p>Il est donc recommandé de  désactiver la surveillance de l'état du périphérique depuis l'interface d'administration Watchdoc : </p>
@@ -497,16 +501,16 @@
                                         </ol>
                                         <hr width="100%" size="0" align="center" />
                                         <h2 id="WESSharpImpressionimpossibledepuisunefilevirtuelle" data-magellan-target="WESSharpImpressionimpossibledepuisunefilevirtuelle">WES Sharp - Impression impossible depuis une file virtuelle  </h2>
-                                        <p class="H2_Print">Contexte</p>
+                                        <p class="H2_Print" style="font-size: 14pt;">Contexte</p>
                                         <p>Sur des périphériques équipés du WES Sharp sur lesquels est appliquée une politique d'impression, le travail n'est pas imprimé.</p>
                                         <p>Le travail est lancé et s'affiche dans la file d'attente du WES. Quand l'utilisateur valide, le périphérique s'active, mais le document n'est pas imprimé.</p>
                                         <p>Dans les logs, les utilisateurs ne sont pas reconnus pour l'impression ou la copie "scan tous" se retrouve dans ?META/anonymous.</p>
                                         <p>Pourtant, les travaux en attente apparaissent bien dans la file virtuelle.</p>
-                                        <p class="H2_Print">&#160;</p>
-                                        <p class="H2_Print">Cause</p>
+                                        <p>&#160;</p>
+                                        <p class="H2_Print" style="font-size: 14pt;">Cause</p>
                                         <p>Le problème est lié à une configuration du pilote de la file d'impression virtuelle Sharp qui ne reconnaît pas le nom de connexion comme nom d'utilisateur.</p>
                                         <p>&#160;</p>
-                                        <p class="H2_Print">Résolution</p>
+                                        <p class="H2_Print" style="font-size: 14pt;">Résolution</p>
                                         <p>Le problème doit être résolu dans l'interface de configuration du pilote Sharp :</p>
                                         <ol>
                                             <li value="1">
