@@ -269,6 +269,14 @@
                                                         </ul>
                                                     </li>
                                                     <li class="tree-node"><a href="#WPCWatchdocPrintClient">WPC - Watchdoc Print Client</a>
+                                                        <ul>
+                                                            <li class="tree-node"><a href="#ForAndroid">For Android</a>
+                                                            </li>
+                                                            <li class="tree-node"><a href="#ForChrome">For Chrome</a>
+                                                            </li>
+                                                            <li class="tree-node"><a href="#ForWindows">For Windows</a>
+                                                            </li>
+                                                        </ul>
                                                     </li>
                                                     <li class="tree-node"><a href="#WCLIWatchdocCommandInLine">WCLI - Watchdoc Command In-Line</a>
                                                     </li>
@@ -584,7 +592,22 @@
                                             </div>
                                         </div>
                                         <p>&#160;</p>
-                                        <h2 id="WSCWatchdocSupervisionConsole" data-magellan-target="WSCWatchdocSupervisionConsole">WSC&#160;- Watchdoc Supervision Console</h2>
+                                        <h2 id="WSCWatchdocSupervisionConsole" data-magellan-target="WSCWatchdocSupervisionConsole">WSC&#160;-<a name="WSC"></a> Watchdoc Supervision Console</h2>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Erreur lors de l'installation d'un pilote d'impression - Message d'erreur : "driver package is not WHQL valid"</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> lors de l'ajout d'un pilote d'impression dans WSC sur un domaine (master/slaves), un message d'alerte informe que l'opération s'est bien déroulée pour le serveur master, mais le message d'erreur suivant s'affiche pour les slaves : Failed to add driver on server [nom_du_serveur].&#160;Reason: 'driver package is not WHQL valid'.</p>
+                                                <p><strong>Cause :</strong> ce message apparaît lorsque WSC n'arrive pas à remonter la chaîne de certification WHQL&#160;du pilote.</p>
+                                                <p><strong>Résolution :</strong> mettez à jour la liste des certificats roots de tous les serveurs du domaine (master et slaves).</p>
+                                            </div>
+                                        </div>
+                                        <p>&#160;</p>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Impossible de créer un compte Invité. Message d'erreur "400: Bad Request"</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> lors de la création d'un compte dans la base Invités de WSC, dans le formulaire Ajouter un invité, le champ Compte restou de la mise à jour d'une file d'attente avec PnP, dans un environnement utilisant un compte de service gMSA, après avoir ajouté le package de pilotes, lors de la création d'une file d'attente, un message d'erreur s'affiche lorsque vous sélectionnez le pilote associé&#160;: "An unexpected exception occured while trying to install driver. Reason was ERROR_ACCESS_DENIED: Access Denied Failed to UploadPrinterDriverPackage"</p>
+                                                <p><strong>Cause :</strong> ce problème se produit lorsque le compte de service ne dispose pas des droits suffisants pour télécharger le package du pilote.</p>
+                                                <p><strong>Résolution :</strong> vérifiez que le compte de service dispose des droits spécifiés dans les <a href="../F_WSC/WSC_Prerequis.htm#Droits_spe" target="_blank">prérequis</a>. Si ce n'est pas le cas, ajoutez les droits manquants.</p>
+                                            </div>
+                                        </div>
                                         <p>&#160;</p>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Une erreur s'est produite lors de la création de la file d'impression.</a></span>
                                             <div class="MCDropDownBody dropDownBody">
@@ -1402,6 +1425,15 @@ dans la boîte de dialogue, activez le <strong>protocole SOAP.</strong></p>
                                             </div>
                                         </div>
                                         <h2 id="WPCWatchdocPrintClient" data-magellan-target="WPCWatchdocPrintClient"><a name="WPC"></a>WPC - Watchdoc Print Client</h2>
+                                        <h3 id="ForAndroid" data-magellan-target="ForAndroid">For Android</h3>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WPC&#160;for Android - Le message "Serveur injoignable.&#160;Vous avez un problème avec votre configuration Watchdoc : vérifiez votre configuration Watchdoc" s'affiche sur le téléphone de l'utilisateur - jan. 2025</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> un utilisateur a installé  l'application WPC&#160;for Android sur son téléphone depuis son EMM&#160;MS&#160;Intune.&#160;Lorsqu'il active son application, le message "Serveur injoignable.&#160;Vous avez un problème avec votre configuration Watchdoc.&#160;Vérifiez votre configuration Watchdoc" s'affiche.&#160;</p>
+                                                <p><strong>Cause :</strong> l'url de découverte ou le certificat configurés dans les paramètres de l'application dans MS&#160;Intune est erroné.</p>
+                                                <p><strong>Résolution :</strong> vérifiez les paramètres saisis dans la configuration de WPC&#160;for Android dans l'EMM&#160;MS&#160;Intune  (cf. <a href="../T_WPC/Android/WPCA_AjoutApp_Intune.htm#WPCA_Certificat" target="_blank">Ajouter et configurer l'application dans l'EMM Intune</a>). Pour être sûr de disposer du certificat de la Print API sous forme d'une chaîne de caractères valide (sans espaces ni retours-chariots), copiez-le en suivant la procédure décrite dans les Prérequis (cf. <a href="../T_WPC/Android/WPCA_AjoutApp_Intune.htm#Prérequi" target="_blank">Ajouter et configurer l'application, dans l'EMM&#160;Intune)</a>.</p>
+                                            </div>
+                                        </div>
+                                        <h3 id="ForChrome" data-magellan-target="ForChrome">For Chrome</h3>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WPC&#160;for Windows - L'utilisateur ne reçoit pas de notification  lorsque son travail est imprimé après avoir été redirigé vers une  file physique - déc. 2025</a></span>
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> un utilisateur envoie sa demande d'impression.&#160;Il ne reçoit pas de notification MS Windows, mais son travail est imprimé et, dans WPC, cette impression apparaît bien dans la liste de ses travaux.&#160;Pourtant, l'administrateur a bien configuré une notification dans le cas où le travail est redirigé vers une autre file d'impression.<br /></p>
@@ -1411,6 +1443,7 @@ dans la boîte de dialogue, activez le <strong>protocole SOAP.</strong></p>
                                         </div>
                                         <p>N.B. : la notification n'est envoyée sur le poste utilisateur que pour les demandes d'impression initialement envoyées sur une file physique. Ainsi, un travail envoyé sur une file universelle puis redirigé vers une file physique ne déclenche pas de notification.</p>
                                         <p>&#160;</p>
+                                        <h3 id="ForWindows" data-magellan-target="ForWindows">For Windows</h3>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WPC&#160;for Windows - Erreur de détection d'emplacements dans un environnement utilisant un </a><a name="proxy_inverse"></a><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" aria-expanded="false">proxy inverse - Juillet 2025</a></span>
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> dans un environnement réseau utilisant un proxy inverse (reverse proxy) lorsqu'un utilisateur ouvre WPC for Windows, ce dernier ne parvient pas à trouver l'emplacement associé à l'adresse IP du poste utilisateur. Pourtant, la configuration des emplacements comporte bien des adresses IP&#160;publiques.</p>

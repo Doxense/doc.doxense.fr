@@ -215,7 +215,7 @@
                                         <p style="text-align: left; vertical-align: super;">
                                             <br />
                                         </p>
-                                        <p style="text-align: left; vertical-align: super;">Les paramètres à configurer ou à fournir à vos utilisateurs, sont&#160;: </p>
+                                        <p style="text-align: left; vertical-align: super;">Dans l'EMM Microsoft Intune, comme pour l'apk, les paramètres à configurer pour l'application  sont&#160;: </p>
                                         <ul>
                                             <li>
                                                 <p style="text-align: left; vertical-align: super;">l'url du  "serveur de découverte" qui permet à l'application de communiquer avec le serveur d'impression&#160;Watchdoc&#160;; </p>
@@ -235,11 +235,11 @@
                                                 <p>&#160;</p>
                                             </li>
                                             <li value="3">
-                                                <p>dans la liste <b>Configurations clientes</b>, éditez la configuration DEFAULT :<br /><br /><a class="MCPopupThumbnailLink" href="../WPC_PrintApi_EditDefaultConfigCliente.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1627" data-mc-height="258" src="../WPC_PrintApi_EditDefaultConfigCliente.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                <p>dans la liste <b>Configurations clientes</b>, éditez la configuration correspondant à la Print API (<b>DEFAULT</b> par défaut dans Watchdoc)&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="../WPC_PrintApi_EditDefaultConfigCliente.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1627" data-mc-height="258" src="../WPC_PrintApi_EditDefaultConfigCliente.png" tabindex="" style="max-width: 1000px;" /></a></p>
                                                 <p>&#160;</p>
                                             </li>
                                             <li value="4">
-                                                <p>dans la configuration Client Windows, section <strong>Installation</strong>, copiez le Certificat Print API&#160;: <br /><br /><a class="MCPopupThumbnailLink" href="../WPC_PrintApi_CopierCert.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1111" data-mc-height="161" src="../WPC_PrintApi_CopierCert.png" tabindex="" style="max-width: 1000px;" /></a><br /><br /></p>
+                                                <p>dans la configuration <b>Client Windows</b>, section <strong>Installation</strong>, copiez le <b>Certificat Print API</b>&#160;: <br /><br /><a class="MCPopupThumbnailLink" href="../WPC_PrintApi_CopierCert.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1111" data-mc-height="161" src="../WPC_PrintApi_CopierCert.png" tabindex="" style="max-width: 1000px;" /></a><br /><br /></p>
                                             </li>
                                         </ol>
                                         <ol data-mc-continue="true">
@@ -248,101 +248,105 @@
                                             </li>
                                         </ol>
                                         <h2>Configurer Watchdoc Print Client for Android dans InTune</h2>
+                                        <h3>Accéder à l'interface de configuration</h3>
                                         <p>Pour que l'application Watchdoc Print Client for Android puisse communiquer avec le serveur Watchdoc, il convient d'associer l'application Watchdoc Print Client for Android à l'url du serveur d'impression dans l'EMM et de l'associer au certificat&#160;: </p>
                                         <ol>
                                             <li value="1">
-                                                <p>rendez-vous dans l'interface d'administration ;</p>
+                                                <p>rendez-vous dans l'interface d'administration <b>Centre d'administration Microsoft Intune</b>&#160;;</p>
                                             </li>
                                             <li value="2">
-                                                <p>dans l'interface de gestion des applications, accédez à la liste des applications (<b>Accueil</b> &gt;&#160;<b>Applications</b>) ; </p>
+                                                <p>dans le menu de gauche, cliquez sur <b>Applications</b> ; </p>
                                             </li>
                                             <li value="3">
-                                                <p>sélectionnez ensuite l'entrée <b>iOS/iPadOS</b> ou <b>Android</b> en fonction du système d'exploitation sur lequel l'application doit être installée&#160;;</p>
+                                                <p>dans l'interface <b>Applications|Vue d'ensemble</b>, cliquez sur la tuile <b>Android</b> ; </p>
                                             </li>
                                             <li value="4">
-                                                <p>dans Managed Google Play, cherchez et sélectionnez l'application Watchdoc Print Client for Android&#160;;<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/WPC/WPCA_InTune_SelectWApp.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="788" data-mc-height="604" src="../../Z_Resources/Images/02_Captures/WPC/WPCA_InTune_SelectWApp.png" tabindex="" style="width: 300px;max-width: 1000px;" /></a></p>
-                                                <p>&#160;</p>
+                                                <p>dans l'interface <b>Android|Android applications</b>, cliquez sur le bouton <b>Créer</b> ; </p>
                                             </li>
                                             <li value="5">
-                                                <p>dans l'interface de gestion de l'application, cliquez sur <strong>Propriétés (Properties)</strong>&#160;;</p>
+                                                <p>dans la fenêtre de droite, sélectionnez le type d'application <b>Application Google Play géré</b>, puis cliquez sur <b>Sélectionner</b> ; <br /><br /><a class="MCPopupThumbnailLink" href="WPCA_InTune_Config_app.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="2301" data-mc-height="876" src="WPCA_InTune_Config_app.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                <p>&#160;</p>
                                             </li>
                                             <li value="6">
-                                                <p>créez la politique de déploiement de l'application ; </p>
+                                                <p>dans Managed Google Play, cherchez et sélectionnez l'application Watchdoc Print Client for Android&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="WPCA_InTune_SelectWApp.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1166" data-mc-height="610" src="WPCA_InTune_SelectWApp.png" tabindex="" style="max-width: 1000px;" /></a><br /><br /></p>
                                             </li>
-                                            <li value="7">
-                                                <p>sous l'onglet <strong>Basics</strong>, indiquez&#160;:</p>
+                                        </ol>
+                                        <h3>Configurer l'url de découverte et configurer le <a name="WPCA_Certificat"></a>certificat WPC</h3>
+                                        <p>Une fois l'application ajoutée, </p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>dans le menu <strong>Android applications</strong>, cliquez sur <b>Configuration</b> : <br /><br /></p>
+                                                <p><a class="MCPopupThumbnailLink" href="WPCA_InTune_Config.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="2165" data-mc-height="840" src="WPCA_InTune_Config.png" tabindex="" style="max-width: 1000px;" /></a>
+                                                    <br>
+                                                    </br>
+                                                </p>
+                                                <p>&#160;</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>dans la liste des applications, sélectionnez l'application <b>Watchdoc Print Client for Android</b>&#160;;</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>dans l'interface de configuration de l'application, cliquez sur l'entrée de menu <b>Propriétés</b> ; </p>
+                                            </li>
+                                            <li value="4">
+                                                <p>dans la section <strong>Paramètres </strong>de configuration, en <strong>Format des paramètres</strong>, sélectionnez <b>Utiliser le concepteur de configuration</b>&#160;;</p>
+                                            </li>
+                                            <li value="5">
+                                                <p>complétez ensuite la section <b>Paramètres</b>, en ajoutant 2&#160;clés de configuration :</p>
                                                 <ol style="list-style-type: lower-roman;">
                                                     <li value="1">
-                                                        <p>dans le champ <b>Nom</b> de l'application (Watchdoc Print Client for Android, par exemple)&#160;;</p>
+                                                        <p>le serveur Watchdoc </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>saisissez la valeur "Serveur de découverte"&#160;;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>sélectionnez la valeur "string" ; </p>
+                                                            </li>
+                                                            <li>
+                                                                <p>dans le champ "Valeur",  saisissez l'adresse url du serveur Watchdoc, suivie du port d'accès et de la mention "<b>/discover</b>"&#160;;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>dans le champ "Description", fournissez une description de la clé de configuration si nécessaire&#160;;</p>
+                                                            </li>
+                                                        </ul>
                                                     </li>
                                                     <li value="2">
-                                                        <p>dans le champ <b>Platform</b>, le système d'exploitation pour lequel l'application est configurée</p>
-                                                    </li>
-                                                    <li value="3">
-                                                        <p>dans le champ <strong>Type de profil</strong>, sélectionnez le type "fully managed, dedicated and Corporate-Owned Work Profile Only" ;<br /></p>
+                                                        <p>le certificat</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>saisissez la valeur "Certificat' ; </p>
+                                                            </li>
+                                                            <li>
+                                                                <p>sélectionnez la valeur "String"&#160;;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>dans le champ 'Valeur", saisissez la chaîne de caractères correspondant au certificat préalablement téléchargé depuis Watchdoc&#160;;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>dans le champ "Description", fournissez une description de la clé de configuration si nécessaire&#160;(Exemple : certificat de la Print API)&#160;;</p>
+                                                            </li>
+                                                        </ul>
                                                     </li>
                                                 </ol>
                                             </li>
+                                            <li value="6">
+                                                <p>dans la section Paramètres de configuration, en <b>Format des paramètres</b>, sélectionnez <b>Entrer des données JSON</b>&#160;;<br /><br /><a class="MCPopupThumbnailLink" href="WPCA_InTune_Config_appJSON.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1484" data-mc-height="1165" src="WPCA_InTune_Config_appJSON.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                <p>
+                                                    <br />
+                                                </p>
+                                            </li>
+                                            <li value="7">
+                                                <p>Dans la section <b>Applications connectées</b>, cliquez sur <b>Activé</b> pour autoriser vos utilisateurs à se connecter à l'application à l'aide de leur profil personnel ou professionnel en fonction de la politique d'accès aux applications en vigueur dans votre organisation.</p>
+                                            </li>
                                             <li value="8">
-                                                <p>cliquez ensuite sur le bouton <strong>Next </strong>pour accéder à l'onglet <strong>Settings</strong><br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/WPC/WPCA_InTune_ConfigPolicy.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1539" data-mc-height="885" src="../../Z_Resources/Images/02_Captures/WPC/WPCA_InTune_ConfigPolicy.png" tabindex="" style="max-width: 1000px;" /></a></p>
-                                            </li>
-                                        </ol>
-                                        <h2>Configurer l'url du serveur Watchdoc dans l'application</h2>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Sous l'onglet <strong>Settings</strong>, sélectionnez le format <strong>Use configuration designer</strong> ; </p>
-                                            </li>
-                                            <li value="2">
-                                                <p>Cliquez ensur le bouton <b>+Add</b> pour ajouter deux clés de configuration : </p>
-                                                <ul>
-                                                    <li>
-                                                        <p>Clé de configuration 1</p>
-                                                        <ul>
-                                                            <li>
-                                                                <p>saisissez l'identifiant de la clé ("Serveur de découverte"&#160;ou "Serveur Watchdoc", par exemple&#160;:</p>
-                                                            </li>
-                                                        </ul>
-                                                        <ul>
-                                                            <li>
-                                                                <p><strong>Value type</strong> : sélectionnez la valeur <strong>string </strong>; </p>
-                                                            </li>
-                                                            <li>
-                                                                <p><strong>Configuration value</strong> : saisissez l'adresse url du serveur master sur lequel est installé Watchdoc ;</p>
-                                                            </li>
-                                                            <li>
-                                                                <p><strong>Description </strong>: saisissez un texte indiquant la nature de la clé de configuration&#160;;</p>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <p>Clé de configuration 2</p>
-                                                        <ul>
-                                                            <li>
-                                                                <p>saisissez la mention "Certificat de licence" ;</p>
-                                                            </li>
-                                                        </ul>
-                                                        <ul>
-                                                            <li>
-                                                                <p><strong>Value type</strong> : sélectionnez la valeur <strong>string </strong>; </p>
-                                                            </li>
-                                                            <li>
-                                                                <p><strong>Configuration value</strong> : ajoutez le certificat (format base 64).&#160;<br />Pour obtenir le certificat en base 64, reportez-vous à la section <a href="#Pr%C3%A9requi" target="_self">Prérequis</a> ci-dessus ;<br /></p>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li value="3">
-                                                <p>Dans la section <b>Connected apps</b>, cliquez sur <b>Enabled</b> pour autoriser vos utilisateurs à se connecter à l'application à l'aide de leur profil personnel ou professionnel.</p>
-                                            </li>
-                                            <li value="4">
-                                                <p>Cliquez sur <b>Next</b> pour enregistrer les paramètres.</p>
+                                                <p>cliquez sur <b>Enregistrer</b>&#160;pour valider la configuration de l'application.</p>
                                             </li>
                                         </ol>
                                         <h2>Vérifier la présence de l'application Watchdoc dans Intune</h2>
                                         <ol>
                                             <li value="1">
-                                                <p>Une fois l'application configurée dans Intune, vérifiez que les utilisateurs peuvent la télécharger parmi les applications mises à leur disposition par Microsoft Intune&#160;:<br /><br /><img src="../../Z_Resources/Images/02_Captures/WPC/WPCA_InTune_InstallApp_300x650.png" style="width: 300;height: 650;" /></p>
+                                                <p>Une fois l'application configurée dans Intune, vérifiez que les utilisateurs peuvent la télécharger parmi les applications mises à leur disposition dans leur environnement Microsoft<sup>®</sup> Intune&#160;:<br /><br /><img src="../../Z_Resources/Images/02_Captures/WPC/WPCA_InTune_InstallApp_300x650.png" style="width: 300;height: 650;" /></p>
                                             </li>
                                         </ol>
                                     </div>
