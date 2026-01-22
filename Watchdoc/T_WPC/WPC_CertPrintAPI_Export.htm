@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr" xml:lang="fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="HTML5">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr" xml:lang="fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="WPC Watchdoc Print Client" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="HTML5">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>WPC_Exporter_CertifPrintAPI</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>WPC&#160;- Copier ou exporter le certificat Print API</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
-        <!-- Script tableau triable -->
+        <!-- Tableau triable
+        <link rel="stylesheet" type="text/css" href="../DataTables/DataTables-1.10.20/css/jquery.dataTables.css" /> -->
         <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
@@ -40,6 +41,19 @@
 .button.collapse-all-button
 {
 	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.needs-pie
+{
+	behavior: url('../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <style>/*&lt;meta /&gt;*/
+
+.button.previous-topic-button
+{
+	-pie-background: linear-gradient(transparent, #fcfaf8);
 }
 
 .needs-pie
@@ -144,6 +158,8 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
+                                    </script>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -173,10 +189,88 @@
                                             </button>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1>WPC_Exporter_CertifPrintAPI</h1>
-                                        <p>Delete this text and replace it with your own content.</p>
+                                    <div class="nocontent">
+                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
+                                        </div>
                                     </div>
+                                    <div class=".body-container" role="main" id="mc-main-content">
+                                        <h1><a name="aanchor140"></a>
+                                            <MadCap:concept term="WPC" />WPC&#160;- Copier ou exporter le certificat Print API</h1>
+                                        <h2>Principe</h2>
+                                        <p>Le certificat Watchdoc Print API&#160;est requis pour utiliser Watchdoc Print Client (for Windows, for Android, for Chrome et Skyprint).</p>
+                                        <p>Ce certificat est demandé au cours des procédures d'installation de ces modules.&#160;Il est donc nécessaire de télécharger le certificat au préalable.&#160;</p>
+                                        <p>Ce certificat peut être exporté sous 2 formats distincts : </p>
+                                        <ul>
+                                            <li>
+                                                <p>fichier .der</p>
+                                            </li>
+                                            <li>
+                                                <p>sous forme d'une chaîne de caractères (en base 64).</p>
+                                            </li>
+                                        </ul>
+                                        <h2>Procédure</h2>
+                                        <h3>Exporter le certificat Print API&#160;au format .der</h3>
+                                        <ol data-mc-continue="false">
+                                            <li value="1">
+                                                <p>Connectez-vous à l'interface d'administration de Watchdoc.</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Depuis le <strong>Menu Principal</strong>, section <strong>Configuration</strong>, cliquez sur <strong>Configuration avancé&#160;&gt;&#160;Configuration Système</strong>.</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Dans la section <strong>Divers</strong>, cliquez sur  <strong>Exporter le certificat</strong> : <br /><br /><img src="../Z_Resources/Images/02_Captures/WD_Express/wd_express_wpc7.png" /></p>
+                                            </li>
+                                        </ol>
+                                        <ol data-mc-continue="true">
+                                            <li value="4">
+                                                <p>Le fichier généré est nommé <strong>print_api_cert.der</strong>. </p>
+                                                <p>Enregistrez-le dans le dossier  d'installation du Watchdoc Print Client concerné (par défaut, <strong>C:\Program Files\Doxense\[WPC ou Skyprint]</strong>) :<br /><br /><img src="../M_SkyPrint/Admin_Install_Cert.png" /><br /><br /></p>
+                                            </li>
+                                        </ol>
+                                        <p><span style="font-family: 'Wingdings'">è</span>Vous pouvez alors poursuivre l'installation.</p>
+                                        <h3>Copier la chaîne de caractère du certificat Print API</h3>
+                                        <p>Si le certificat est attendu sous forme d'une chaîne de caractères (en base 64, comme dans MS&#160;Intune, par exemple)&#160;:</p>
+                                        <ol start="1">
+                                            <li value="1">
+                                                <p>connectez-vous à l'interface d'administration de Watchdoc&#160;;</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>depuis le <strong>Menu Principal</strong>, section <strong>Configuration</strong>, cliquez sur <strong>Configuration avancée&#160;&gt;&#160;Configurations clientes</strong>&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="WPC_PrintApi_AccessCert.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1522" data-mc-height="870" src="WPC_PrintApi_AccessCert.png" tabindex="" style="max-width: 1000px;" /></a><br /></p>
+                                                <p>&#160;</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>dans la liste <b>Configurations clientes</b>, éditez la configuration correspondant à la Print API (<b>DEFAULT</b> par défaut dans Watchdoc)&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="WPC_PrintApi_EditDefaultConfigCliente.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1627" data-mc-height="258" src="WPC_PrintApi_EditDefaultConfigCliente.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                <p>&#160;</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>dans la configuration <b>Client Windows</b>, section <strong>Installation</strong>, copiez le <b>Certificat Print API</b>&#160;: <br /><br /><a class="MCPopupThumbnailLink" href="WPC_PrintApi_CopierCert.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1111" data-mc-height="161" src="WPC_PrintApi_CopierCert.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                <p>
+                                                    <br />
+                                                </p>
+                                            </li>
+                                            <li value="5">
+                                                <p>copiez cette chaîne de caractères dans un éditeur de texte et enregistrez-le dans votre espace de travail pour en disposer au moment adéquat.</p>
+                                            </li>
+                                        </ol>
+                                        <p>&#160;</p>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy_Last mc-component nocontent">
+                                        <div class="button-group-container-left">
+                                            <button class="button elearning-button needs-pie previous-topic-button" title="Précédent" disabled="true">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Précédent">
+                                                        <div class="button-icon"> </div>
+                                                    </div><span class="button-text">Précédent</span>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <p><span style="font-size: 10pt;">Une suggestion ? Une demande de correction ? <a href="mailto:documentations@doxense.com?subject=Doxdoc.fr" target="_blank" title="Envoyer un email à documentations@doxense.com" alt="Envoyer un email à documentations@doxense.com">Exprimez-vous !</a></span>
+                                    </p>
+                                    <!--div id="expand-collapse" title="Expand/collapse navigation" class="collapse">
+		</div>-->
                                     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
                                     </script>
                                     <script src="../Resources/Scripts/Laguna.js">

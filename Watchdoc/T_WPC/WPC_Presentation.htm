@@ -200,7 +200,7 @@
                                         <h2>Principe</h2>
                                         <p>Watchdoc Print Client (WPC) est une fonctionnalité disponible depuis Watchdoc v.6 développée pour faciliter l'impression : aisément déployable grâce à l'infrastructure technique sur laquelle il s'appuie, WPC&#160;facilite la reconnaissance des périphériques d'impression disponibles dans un emplacement prédéfini et, par conséquent, l'impression depuis les postes de travail ou téléphones intégrés à cet environnement. </p>
                                         <p>&#160;</p>
-                                        <p>Tous les flux transitent par le port 5753 et sont chiffrés à l'aide d'un certificat embarqué dans l'API. </p>
+                                        <p>Tous les flux transitent par le port 5753 et sont chiffrés à l'aide d'un certificat embarqué dans l'API (Print API). </p>
                                         <p>&#160;</p>
                                         <p>Watchdoc Print Client  est décliné pour les environnements suivants :</p>
                                         <ul>
@@ -214,6 +214,9 @@
                                             <li>
                                                 <p>Application mobile Android<sup>®</sup></p>
                                             </li>
+                                            <li>
+                                                <p>Skyprint (nouvelle version)</p>
+                                            </li>
                                         </ul>
                                         <h2>Prérequis </h2>
                                         <ul>
@@ -223,7 +226,7 @@
                                         </ul>
                                         <ul>
                                             <li>
-                                                <p> WPC nécessite une file universelle installée automatiquement (cf. <a href="../C_Configurer/ConfigFiles/ConfigFiles_FileUniv.htm">Configurer une file u</a><a href="../C_Configurer/ConfigFiles/ConfigFiles_FileUniv.htm">niverselle</a>)&#160;</p>
+                                                <p>WPC nécessite une file universelle installée automatiquement (cf. <a href="../C_Configurer/ConfigFiles/ConfigFiles_FileUniv.htm">Configurer une file u</a><a href="../C_Configurer/ConfigFiles/ConfigFiles_FileUniv.htm">niverselle</a>)&#160;</p>
                                             </li>
                                             <li>
                                                 <p>WPC nécessite d'être associé à un <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term77">emplacement<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>(anciennement "Géosites" dans les versions antérieures à la V6). Dans Watchdoc, un emplacement est un libellé appartenant à une liste structurée de sites géographiques permettant de localiser physiquement des éléments de configuration du parc d'impression (périphériques d'impression, serveurs, files, etc.). 
@@ -234,6 +237,9 @@ Les emplacements sont nécessaires à la fonctionnalité Watchdoc Print Client.<
                                         <h2>Gestion des pannes (failover)</h2>
                                         <p>Lors de son installation, WPC&#160;est automatiquement associé à un emplacement générique (Monde) par défaut que vous pouvez ensuite modifier.&#160;</p>
                                         <p>L'emplacement est le paramètre sur lequel WPC&#160;s'appuie pour la gestion des pannes (fail over) : en cas de dysfonctionnement d'un serveur, Watchdoc redirige les travaux d'impression vers l'un des serveurs configurés sous le même emplacement.&#160;Tous les serveurs situés dans un emplacement sont alors considérés comme des serveur de secours.</p>
+                                        <h2>Certificat Print API</h2>
+                                        <p>Un certificat spécifique aux Watchdoc Print Clients est demandé au cours de l'installation.</p>
+                                        <p>Ce certificat est exporté ou copié depuis Watchdoc (cf.&#160;<a href="WPC_CertPrintAPI_Export.htm" target="_blank">Exporter ou copier le certificat Print API</a>).</p>
                                         <h2>Print Client Legacy</h2>
                                         <p>Les versions de Watchdoc Print Client antérieures  restent compatibles avec Watchdoc v.6.</p>
                                         <p>Pour accéder à l'interface de configuration des anciennes versions : </p>
