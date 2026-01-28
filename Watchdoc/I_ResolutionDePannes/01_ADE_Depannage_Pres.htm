@@ -21,7 +21,7 @@
         <link href="../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
+        <link href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
         <style>/*&lt;meta /&gt;*/
 
 .button.print-button
@@ -64,6 +64,8 @@
 
 </style>
         <link href="../Resources/TableSlylesheets/Standard.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
+        <link href="../Resources/Stylesheets/NewStylesheet.css" rel="stylesheet" type="text/css" />
         <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
         </script>
         <script src="../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
@@ -196,7 +198,7 @@
                                         </div>
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
-                                        <p><a name="aanchor262"></a>
+                                        <p><a name="aanchor265"></a>
                                             <MadCap:concept term="ADE" /><span style="font-size: 24pt; font-weight: bold; color: #ff803b;">Dépannages</span>
                                         </p>
                                         <p>&#160;</p>
@@ -1589,10 +1591,18 @@ Aucun numéro de port TCP ou UDP n'est associé aux paquets ICMP, car ces numér
                                                 <p><strong>Contexte :</strong> Il arrive que l'installation automatique de Watchdoc ScanCare sur un périphérique Lexmark échoue. <br /><strong>Résolution :</strong>il est nécessaire de procéder à l'installation manuelle de ScanCare (cf.&#160;Enregistrer manuellement Watchdoc ScanCare sur un périphérique Lexmark).</p>
                                             </div>
                                         </div>
-                                        <h2 id="Skyprint" data-magellan-target="Skyprint">Skyprint</h2>
+                                        <h2 id="Skyprint" data-magellan-target="Skyprint"><a name="Skyprint"></a>Skyprint</h2>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Skyprint - Impossible de configurer le serveur d'envoi des documents - La connexion à Entra ID échoue - Entra ID connection failed</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> dans Skyprint, après la configuration du serveur d'envoi des documents, dans la page d'accueil, un msg informe que la connexion n'aboutit pas en raison&#160;de l'échec de l'authentification. Le compte de service configuré pour Skyprint est inscrit dans un annuaire Entra-id.&#160;Dans cet annuaire, la double-authentification (2FA) est activée.&#160;Dans les logs Skyprint, le message "EntraId connection failed", </p>
+                                                <p><strong>Cause :</strong> ce dysfonctionnement&#160;est lié  au compte de service auquel vous avez attribué le rôle Skyprint dans Watchdoc.&#160;</p>
+                                                <p><strong>Résolution :</strong> configurez un compte de service répondant aux <a href="../M_SkyPrint/SP_Prerequis.htm" target="_blank">prérequis</a>.</p>
+                                            </div>
+                                        </div>
+                                        <p>&#160;</p>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />La demande d'impression n'apparaît ni dans liste des travaux en attente ni dans la liste des travaux envoyés</a></span>
                                             <div class="MCDropDownBody dropDownBody">
-                                                <p><strong>Contexte :</strong> Un utilisateur a envoyé un travail qui n'a pas été imprimé.&#160;Pourtant, l'utilisateur dispose d'un compte valide et remplit les conditions d'acceptation.<br />Sa demande d'impression semble s'être perdue : l'administrateur n'en trouve trace ni dans la liste des travaux en attente ni dans la liste des travaux envoyés.</p>
+                                                <p><strong>Contexte :</strong> un utilisateur a envoyé un travail qui n'a pas été imprimé.&#160;Pourtant, l'utilisateur dispose d'un compte valide et remplit les conditions d'acceptation.<br />Sa demande d'impression semble s'être perdue : l'administrateur n'en trouve trace ni dans la liste des travaux en attente ni dans la liste des travaux envoyés.</p>
                                                 <p>Dans le fichier de logs, le message "MailReceiver[...] stopping loop because of exception: The requested folder could not be found" apparaît.&#160;</p>
                                                 <p><strong>Cause :</strong>ce message indique que le boîte mail configurée dans Skyprint contient un "Dossier IMAP" qui n'existe pas dans la boîte mail dédiée.</p>
                                                 <p><strong>Résolution :</strong>il est possible de résoudre le problème de deux manières différentes :</p>

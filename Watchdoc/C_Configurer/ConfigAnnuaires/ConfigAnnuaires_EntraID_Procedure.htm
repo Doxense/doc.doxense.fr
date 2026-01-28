@@ -20,7 +20,7 @@
         <link href="../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
+        <link href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
         <style>/*&lt;meta /&gt;*/
 
 .button.print-button
@@ -67,6 +67,7 @@
 }
 
 </style>
+        <link href="../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
         <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
         </script>
         <script src="../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
@@ -199,8 +200,7 @@
                                     <div class=".body-container" role="main" id="mc-main-content">
                                         <h1><a name="aanchor28"></a>
                                             <MadCap:concept term="CFG;WD" />Watchdoc - Annuaires - Entra - Configurer un annuaire Entra ID dans Watchdoc</h1>
-                                        <h2>Configurer</h2>
-                                        <h3>Section Propriétés</h3>
+                                        <h2>Configurer la section Propriétés</h2>
                                         <p>Dans la section Propriétés, </p>
                                         <ul>
                                             <li>
@@ -216,7 +216,7 @@
                                                 <p><strong>Alias : </strong>si nécessaire, ajoutez un alias pour retrouver l'annuaire plus facilement qu'à l'aide de son identifiant.</p>
                                             </li>
                                         </ul>
-                                        <h3>Section Azure</h3>
+                                        <h2>Configurer la section Azure</h2>
                                         <p>Les informations saisies permettent d'établir la communication entre Watchdoc et l'annuaire :</p>
                                         <ul>
                                             <li>
@@ -267,7 +267,7 @@
                                                 </ul>
                                             </li>
                                         </ul>
-                                        <h3><a name="Code_PUK"></a>Section Code PUK</h3>
+                                        <h2><a name="Code_PUK"></a>Configurer la section Code PUK</h2>
                                         <p>Les utilisateurs inscrits dans un annuaire Microsoft Entra ID peuvent s'authentifier dans Watchdoc à l'aide d'un Code <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm glossaryTermPopup MCTextPopupHotSpot_ MCTextPopupHotSpot_Popup" glossTerm="Glossary.Term81">PUK<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Puk = Print User Key.
 Dans Watchdoc, il s'agit d'un code (associé à un compte utilisateur, mais utilisé seul) suffisant pour permettre à ce dernier de s'authentifier dans un WES.
 Le code PUK est généré par un algorithme. 
@@ -307,13 +307,128 @@ Par souci de sécurité, nous déconseillons l'authentification par code PUK et 
                                             </p>
                                         </ul>
                                         <p>&#160;</p>
-                                        <p>→ Watchdoc génère automatiquement un code PUK pour chaque utilisateur lors de sa connexion à Watchdoc.</p>
+                                        <p><span style="font-family: 'Wingdings'">è</span>Watchdoc génère automatiquement un code PUK pour chaque utilisateur lors de sa connexion à Watchdoc.</p>
                                         <p>&#160;</p>
-                                        <fieldset>*Par souci de sécurité, nous déconseillons l'authentification par code PUK et recommandons l'utilisation du compte utilisateur (login)/code PIN.</fieldset>
-                                        <h3>Section Code PIN</h3>
-                                        <p>Les utilisateurs inscrits dans un annuaire Microsoft Entra ID peuvent s'authentifier dans Watchdoc à l'aide d'un Code <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term44">PIN<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Le code PIN (Personal Identification Number) est un code comportant au moins 4 chiffres. Il est, par exemple, utilisé sur un téléphone mobile ou un smartphone équipés d'une carte SIM. Dans Watchhdoc, c'est un code qui, associé au nom d'utilisateur, constitue un moyen d'authentification sur un WES.
-Ce code peut être saisi et consulté depuis la page Mon Compte.
-Il est enregistré soit dans une table SQL, soit dans un fichier Json et peut être stocké tel quel ou sécurisé par hachage.</span></a>.<br /></p>
+                                        <fieldset>*Par souci de sécurité, nous déconseillons l'authentification par code PUK et recommandons l'utilisation du compte utilisateur (login)/code PIN ou code d'impression.</fieldset>
+                                        <h2>Configurer la section Code PIN</h2>
+                                        <p>Indiquez dans cette section si les utilisateurs inscrits dans l'annuaire  peuvent s'authentifier dans Watchdoc à l'aide d'un Code PIN (code comportant au moins 4 chiffres et dont la longueur varie en fonction de la configuration par l'administrateur).&#160;Associé au nom d'utilisateur, il constitue un moyen d'authentification sur un WES.</p>
+                                        <p>Il est enregistré soit dans une table SQL, soit dans un fichier Json et peut être stocké tel quel ou sécurisé par hashage.</p>
+                                        <p>Dans la liste, sélectionnez&#160;l'un des paramètres suivants&#160;;</p>
+                                        <ul>
+                                            <li>
+                                                <p><b>Auto :</b> le code PIN est généré automatiquement par l'annuaire ;</p>
+                                            </li>
+                                            <li>
+                                                <p><b>Désactivé :</b> le code PIN&#160;n'est pas utilisé ;</p>
+                                            </li>
+                                            <li>
+                                                <p><b>Stocké ou hérité d'un annuaire fils :</b> ce paramètre est spécifique à l'annuaire META&#160;et indique que le code PIN&#160;est géré par un autre annuaire inclus dans l'annuaire META&#160;;</p>
+                                            </li>
+                                            <li>
+                                                <p><b>Stocké dans les paramètres utilisateurs (en clair) :</b> le code PIN&#160;est enregistré en clair dans l'annuaire. L'utilisateur peut l'afficher  dans sa page "Mon compte" et peut également en générer un nouveau&#160;;</p>
+                                            </li>
+                                            <li>
+                                                <p><b>Stocké dans les paramètres utilisateurs (hashé) :</b> le code PIN est enregistré de manière sécurisée dans la base Json.db.&#160;L'utilisateur ne peut pas l'afficher dans la page "Mon compte", mais il peut en générer un nouveau :<br /><br /><img src="Config_Annuaire_CodePIN.png" /></p>
+                                            </li>
+                                        </ul>
+                                        <h2>Configurer la section Code d'impression</h2>
+                                        <p>Indiquez dans cette section si les utilisateur inscrits dans l'annuaire peuvent s'authentifier dans Watchdoc à l'aide d'un code d'impression (code alpha-numérique qui doit contenir entre 4 et 16 caractères et ne doit pas contenir plus de 2 chiffres).</p>
+                                        <p>Dans la liste, sélectionnez l'un des paramètres suivants&#160;:</p>
+                                        <ul>
+                                            <li>
+                                                <p><b>Désactivé :</b> le code d'impression n'est pas utilisé ; </p>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li style="font-size: 12pt;"><b>Stocké dans les paramètres utilisateurs (en clair) :</b> le code d'impression est enregistré en clair dans l'annuaire. L'utilisateur peut l'afficher  dans sa page "Mon compte" et peut également en générer un nouveau&#160;;</li>
+                                            <li style="font-size: 12pt;">
+                                                <p><b>Stocké dans les paramètres utilisateurs (hashé) :</b> le code d'impression est enregistré de manière sécurisée dans la base Json.db.&#160;L'utilisateur ne peut pas l'afficher dans la page "Mon compte", mais il peut en générer un nouveau.<br /><br /><a class="MCPopupThumbnailLink" href="Config_Annuaire_CodeImpres.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="727" data-mc-height="87" src="Config_Annuaire_CodeImpres.png" tabindex="" style="max-width: 1000px;" /></a><br /></p>
+                                            </li>
+                                        </ul>
+                                        <h2>Configurer la section Badges</h2>
+                                        <p>L'utilisateur peut s'authentifier sur le périphérique d'impression à l'aide d'un badge. Si c'est ce moyen d'authentification qui est retenu, sélectionnez dans la liste l'annuaire dans lequel sont enregistrés les badges des utilisateurs : ces derniers recevront ainsi un mail comportant leur code (PUK ou PIN) et les invitant à <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term35">enrôler<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Action au cours de laquelle un compte utilisateur est associé au numéro de badge qui lui appartient. L'enrôlement est réalisé lors de la première utilisation d'un badge. L'enrôlement peut être réalisé par le responsable informatique lorsqu'il délivre le badge à un utilisateur ou par l'utilisateur lui-même qui saisit son identifiant (code PIN, code PUK ou identifiant et mot de passe) qui est alors associé à son numéro de badge. Une fois l'enrôlement réalisé, le numéro de badge est associé définitivement à son propriétaire.</span></a> leur badge.<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Annuaires_LDAP_Badges_FR.png" /></p>
+                                        <fieldset>Par défaut, les badges sont enregistrés dans la base CARDS gérée depuis la Console de Supervision Watchdoc (WSC).</fieldset>
+                                        <h2>Configurer la section E-mail</h2>
+                                        <p>Lorsque la notification par e-mail est activée, Watchdoc doit disposer de l'adresse mail des utilisateurs pour communiquer avec eux. Ce paramètre indique à Watchdoc où trouver l'adresse mail des utilisateurs :</p>
+                                        <ul>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>stockée dans l'annuaire :</strong>sélectionnez cette option si l'adresse mail est enregistrée dans un attribut de l'annuaire&#160;; </p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>le compte utilisateur sert également d'adresse e-mail :</strong> sélectionnez cette option pour que Watchdoc crée l'adresse mail en concaténant le nom du compte de l'utilisateur avec un nom de domaine DNS. Dans ce cas, précisez le <strong>nom de domaine DNS</strong>&#160;à ajouter au nom de l'utilisateur lors de la concaténation&#160;;</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_2"><strong>rechercher l'adresse dans un annuaire alias :</strong> optez pour ce choix si l'adresse e-mail est enregistrée dans un annuaire Alias. Dans ce cas,  sélectionnez l'annuaire dans lequel sont enregistrées les e-mails. (Pour configurer un annuaire de codes PUK, cf.&#160;<a href="ConfigAnnuaires_SQLPUK_Procedure.htm">Configurer un annuaire SQL de codes PUK</a>) :<br /><br /><a class="MCPopupThumbnailLink" href="Config_Annuaires_Emails.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbord" data-mc-width="995" data-mc-height="247" src="Config_Annuaires_Emails.png" alt="" title="" tabindex="" style="width: 500px;max-width: 1000px;" /></a></p>
+                                            </li>
+                                        </ul>
+                                        <h2>Configurer la section  Cache</h2>
+                                        <p>Watchdoc peut conserver en cache les requêtes sur l'annuaire  afin d'en accélérer l'exécution.<br />Par défaut, la durée de vie (<a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term123">TTL<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>La durée de vie (TTL - Time To Live) est la durée pendant laquelle un objet est stocké dans un système de mise en cache avant d’être supprimé ou actualisé.</span></a>) des données d'annuaire mise en cache est de 72 heures.</p>
+                                        <p> Cochez les cases des caches que vous souhaitez activer : </p>
+                                        <ul>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>Infos user :</strong> cochez cette case pour activer le cache relatif aux informations utilisateurs. </p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>Non trouvés :</strong> cochez cette case pour activer le cache relatif aux utilisateurs dont le compte n'a pas été trouvé.</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>Cache à froid :</strong> cochez cette case pour conserver un cache des données "froides", c'est-à-dire des données déjà vérifiées mais expirées.</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>Persistance :</strong> cochez cette case pour permettre de conserver le cache sur le disque afin de le retrouver en cas de redémarrage du service Watchdoc.</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>Compression :</strong> cochez cette case pour activer la compression du cache sur le disque. Il est fortement recommandé d'activer ce paramètre afin de réduire la taille du fichier quand la persistance est activée.</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>Chiffrement	: </strong>cochez cette case pour chiffrer le fichier de cache sur le disque afin d'en sécuriser le contenu.<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Cache_655x183.png" alt="" title="" style="width: 655;height: 183;" /></p>
+                                            </li>
+                                        </ul>
+                                        <h2>Configurer la section  Fusible</h2>
+                                        <p>Les annuaires utilisateurs sont généralement hébergés sur un contrôleur de domaine ou serveur distant, accessible via le réseau local. En cas de panne réseau ou de ralentissement important, cela peut provoquer, par effet de cascade, un blocage ou ralentissement du serveur d'impression. </p>
+                                        <p>&#160;</p>
+                                        <p>Il peut alors être utile d'activer un "fusible logique", qui se déclenche en cas de ralentissement majeur du système, afin de stopper les requêtes envoyées au serveur défaillant pour éviter une surcharge de travail.</p>
+                                        <fieldset style="text-align: left;">Attention: il est important de bien considérer l'impact de l'activation d'un fusible sur le bon fonctionnement du service !
+<br />Afin de protéger efficacement le serveur de tout dysfonctionnement de l'annuaire distant, il est important de calibrer correctement le fusible. <br />Il est recommandé de tester le paramétrage du fusible avant de le configurer en environnement de production.<br /></fieldset>
+                                        <p>Dans les champs, saisissez les valeurs au-delà desquelles Watchdoc cesse d'envoyer des requêtes au serveur d'annuaire : </p>
+                                        <ul>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>Erreurs max. :</strong> il s'agit du nombre d'erreurs "graves" successives tolérées. Une erreur "grave" est, par exemple, un problème de communication réseau, un timeout, un dysfonctionnement du serveur distant. Ces erreurs sont généralement rares et peuvent parfois se régler naturellement (fin d'une période de pointe, redémarrage du serveur distant). Les erreurs "logiques" (comme un échec d'identification, de syntaxe ou de configuration de l'annuaire) sont ignorées.</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>Durée max. :</strong> il s'agit de la durée moyenne maximale tolérée pour l'exécution des 10 dernières requêtes. En cas de fort ralentissement du serveur distant (période de pointe, timeout réseau,...), cette durée est rallongée.
+</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>Requêtes max. :</strong> il s'agit du nombre maximum de requêtes en parallèle autorisées. En cas de forte charge de travail, le serveur distant peut ne pas être capable de répondre à un grand nombre de requêtes simultanées.
+</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>Délai attente :</strong> après déclenchement du fusible, délai d'attente avant réactivation.&#160;Au terme de ce délai, Watchdoc relance les requêtes afin de "sonder" l'état du serveur. Si les requêtes aboutissent, le fusible est réactivé, sinon il attend à nouveau l'expiration du délai.
+A tout moment, l'administrateur peut manuellement désactiver le fusible. Le fusible reste alors coupé jusqu'à ce qu'il soit réactivé manuellement. Pensez à utiliser cette fonctionnalité afin de tester l'impact d'une panne sur le serveur d'impression.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Annuaires_Fusible.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="647" data-mc-height="139" src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Fusible.png" tabindex="" style="max-width: 1000px;" /></a><br /><br /></p>
+                                            </li>
+                                        </ul>
+                                        <p>Les valeurs généralement saisies pour l'activation du fusible dans un environnement multi serveur (Master) sont les suivantes :</p>
+                                        <ul>
+                                            <li>
+                                                <p class="Liste_puce_1">erreurs max : 5</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1">requêtes max : 5</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1">durée max : 30 secondes</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1">délai attente : 120 secondes</p>
+                                            </li>
+                                        </ul>
+                                        <h2>Configurer la section  Print Client</h2>
+                                        <ul>
+                                            <li>
+                                                <p><strong>Ne pas utiliser cet annuaire :</strong> cochez cette case pour que cet annuaire ne soit pas utilisé par Watchdoc Print Client&#160;:<br /><img src="Config_Annuaire_PrintClients.png" /></p>
+                                            </li>
+                                        </ul>
                                     </div>
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">

@@ -21,6 +21,7 @@
         <link href="../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
+        <link href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
         <style>/*&lt;meta /&gt;*/
 
 .button.print-button
@@ -197,7 +198,7 @@
                                         </div>
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor338"></a>
+                                        <h1><a name="aanchor341"></a>
                                             <MadCap:concept term="WPC" /> Watchdoc Print API - Configurer les notifications</h1>
                                         <h2>Principe</h2>
                                         <p>Vous pouvez configurer des notifications permettant d'informer les utilisateurs des différentes actions lancées depuis WCP for Windows<sup>®</sup> (travaux d'impression envoyés, en attente, ou imprimés via l'application).<br />Ces notifications peuvent également concerner les modifications de configuration telles que le choix d'une file par défaut ou d'un emplacement.&#160;</p>
@@ -253,10 +254,10 @@
                                                 <p>cochez ensuite la case <strong>Watchdoc Print Client : envoyer un message par notification WPC&#160;lorsque cet événement est déclenché</strong>&#160;;</p>
                                             </li>
                                             <li value="6">
-                                                <p>validez la configuration de l'événement ;<br /><br /><a class="MCPopupThumbnailLink" href="../../C_Configurer/ConfigNotifs/Config_Notifs_WPC_Evenmt.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="950" data-mc-height="470" src="../../C_Configurer/ConfigNotifs/Config_Notifs_WPC_Evenmt.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a></p>
+                                                <p>validez la configuration de l'événement ;<br /><br /><img src="../../C_Configurer/ConfigNotifs/Config_Notifs_WPC_Evenmt_700x346.png" style="width: 700;height: 346;" class="bord" /></p>
                                                 <p>&#160;</p>
                                             </li>
-                                            <li value="7">dans la liste des événements, vérifiez que la mention <strong>ON </strong>s'affiche dans la colonne <strong>Watchdoc Print Client</strong> correspondant à l'événement configuré&#160;: <br /><br /><a class="MCPopupThumbnailLink" href="../../C_Configurer/ConfigNotifs/Config_Notifs_WPC_EvenmtON.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1586" data-mc-height="633" src="../../C_Configurer/ConfigNotifs/Config_Notifs_WPC_EvenmtON.png" tabindex="" style="max-width: 1000px;" /></a><br /></li>
+                                            <li value="7">dans la liste des événements, vérifiez que la mention <strong>ON </strong>s'affiche dans la colonne <strong>Watchdoc Print Client</strong> correspondant à l'événement configuré&#160;: <br /><br /><img src="../../C_Configurer/ConfigNotifs/Config_Notifs_WPC_EvenmtON.png" class="bord" /><br /></li>
                                             <p>
                                                 <p>&#160;</p>
                                             </p>
@@ -267,11 +268,11 @@
                                         </ol>
                                         <p>N.B. : la notification n'est envoyée sur le poste utilisateur que pour les demandes d'impression initialement envoyées sur une file physique. Ainsi, un travail envoyé sur une file universelle puis redirigé vers une file physique ne déclenche pas de notification.</p>
                                         <p>&#160;</p>
-                                        <p>N.B. : si les notifications s'affichent dans une autre langue que la langue souhaitée, configurez les options régionales de Watchdoc pour préciser la langue souhaitée (Menu principal &gt;&#160;section Configuration &gt; Configuration avancée &gt; Configuration système &gt;&#160;section Configuration générale &gt; Options régionales &gt;&#160;paramètre Langue) : <br /><br /><a class="MCPopupThumbnailLink" href="WPCW_notification_Lang.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1130" data-mc-height="614" src="WPCW_notification_Lang.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a></p>
+                                        <p>N.B. : si les notifications s'affichent dans une autre langue que la langue souhaitée, configurez les options régionales de Watchdoc pour préciser la langue souhaitée (Menu principal &gt;&#160;section Configuration &gt; Configuration avancée &gt; Configuration système &gt;&#160;section Configuration générale &gt; Options régionales &gt;&#160;paramètre Langue) : <br /><br /><img src="WPCW_notification_Lang_700x380.png" style="width: 700;height: 380;" class="bord" /></p>
                                         <p>&#160;</p>
                                         <h3>Synchronisation des notifications sur les serveurs slaves.</h3>
                                         <p>Dans le cas où Watchdoc est installé en domaine (configuration master/slaves), la configuration des notifications effectuée sur le serveur master doit être reportée sur les serveurs slaves.</p>
-                                        <p>Cette synchronisation peut être réalisée en cochant le bouton <strong>Global </strong>dans l'interface de configuration des notifications, section <strong>Réplication </strong>: <br /><br /><a class="MCPopupThumbnailLink" href="../../C_Configurer/ConfigNotifs/Config_Notifs_WPC_Global.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1144" data-mc-height="256" src="../../C_Configurer/ConfigNotifs/Config_Notifs_WPC_Global.png" tabindex="" style="max-width: 1000px;" /></a><br /><br /></p>
+                                        <p>Cette synchronisation peut être réalisée en cochant le bouton <strong>Global </strong>dans l'interface de configuration des notifications, section <strong>Réplication </strong>: <br /><br /><img src="../../C_Configurer/ConfigNotifs/Config_Notifs_WPC_Global.png" class="bord" /><br /><br /></p>
                                         <fieldset>Attention : la case Global est inactive dans les versions 6.1.1.5417 et 6.1.1.5430. Il est donc nécessaire de reproduire la configuration effectuée sur le serveur maître sur les serveurs esclaves qui en dépendent.</fieldset>
                                         <h3>Personnalisation des notifications sous MS Windows 10 ou 11.</h3>
                                         <p>Les notifications de WPC&#160;dépendent des notifications MS&#160;Windows<sup>®</sup> que vous pouvez gérer et adapter à vos besoins en vous reportant à la documentation <a href="https://support.microsoft.com/fr-fr/windows/notifications-et-ne-pas-déranger-dans-windows-feeca47f-0baf-5680-16f0-8801db1a8466" target="_blank">MS&#160;Windows</a>.</p>
