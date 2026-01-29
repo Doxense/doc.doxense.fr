@@ -1,0 +1,72 @@
+-- Plan de maintenance V1
+-- 03/03/2011 DOXENSE/NB
+-- Backup de la base de données
+DECLARE @BackupPath nvarchar(100)
+DECLARE @BackupName nvarchar(100)
+DECLARE @Bdname nvarchar(100)
+DECLARE @FullBackupPath nvarchar(100)
+DECLARE @TimeTable table( Step int, Fonction nvarchar(10), Datestart datetime, temps VARCHAR(8)) 
+DECLARE @a int
+-- Nom de la base de données WATCHDOC
+SET @BdName = N'watchdocstats'
+-- Emplacement de sauvegarde
+SET @BackupPath= N'c:\backupDB\'
+-- Nom du fichier de sauvegarde
+SET @BackupName= @BdName+'_watchdcostats-Full Database Backup_'+ CONVERT(varchar(2), (DATEPART(wk,GETDATE())%4))+'.bak'
+-- Chemin complet de sauvegarde
+SET @FullBackupPath = @BackupPath + @BackupName
+
+insert into @TimeTable(Step,Fonction,Datestart) values (1,'Backup',GETDATE())
+
+-- Sauvegarde de la base de données
+BACKUP DATABASE @BdName TO  DISK =@FullBackupPath WITH NOFORMAT, INIT, NAME = @BdName, SKIP, NOREWIND, NOUNLOAD,  STATS = 10
+
+update @TimeTable set temps=CONVERT(VARCHAR(8),(GETDATE()-(SELECT max(Datestart) from @TimeTable)),108) where Step = 1
+insert into @TimeTable(Step,Fonction,Datestart) values (2,'Delete',GETDATE())
+
+-- Suppression de l'historique > 2 ans
+Set @a=1
+WHILE @a <>0
+Begin
+execute ('delete T1 FROM (Select Top (2000) * from '+@BdName+'.dbo.documents where docdateoperation<dateadd(year,-2,getdate())) as T1')
+Set @a = @@Rowcount
+End
+Set @a=1
+WHILE @a <>0
+Begin
+execute ('delete T2 FROM (Select Top (2000) * from '+@BdName+'.dbo.incidents where incdate<dateadd(year,-2,getdate())) as T2')
+Set @a = @@Rowcount
+End
+Set @a=1
+WHILE @a <>0
+Begin
+execute ('delete T3 FROM (Select Top (2000) * from '+@BdName+'.dbo.queuescounters where cntdate<dateadd(year,-2,getdate())) as T3')
+Set @a = @@Rowcount
+End
+
+update @TimeTable set temps=CONVERT(VARCHAR(8),(GETDATE()-(SELECT max(Datestart) from @TimeTable)),108) where Step = 2
+insert into @TimeTable(Step,Fonction,Datestart) values (3,'Index',GETDATE())
+
+-- Reorganisation des indexes
+execute ('ALTER INDEX ALL ON '+@BdName+'.dbo.documents REBUILD')
+execute ('ALTER INDEX ALL ON '+@BdName+'.dbo.roles REBUILD')
+execute ('ALTER INDEX ALL ON '+@BdName+'.dbo.members REBUILD')
+execute ('ALTER INDEX ALL ON '+@BdName+'.dbo.incidents REBUILD')
+execute ('ALTER INDEX ALL ON '+@BdName+'.dbo.transactions REBUILD')
+execute ('ALTER INDEX ALL ON '+@BdName+'.dbo.servercounters REBUILD')
+execute ('ALTER INDEX ALL ON '+@BdName+'.dbo.queuescounters REBUILD')
+
+update @TimeTable set temps=CONVERT(VARCHAR(8),(GETDATE()-(SELECT max(Datestart) from @TimeTable)),108) where Step = 3
+insert into @TimeTable(Step,Fonction,Datestart) values (4,'Statistics',GETDATE())
+
+-- Logs
+update @TimeTable set temps=CONVERT(VARCHAR(8),(GETDATE()-(SELECT max(Datestart) from @TimeTable)),108) where Step = 4
+insert into @TimeTable(Step,Fonction,Datestart) values (5,'Schrink',GETDATE())
+
+-- Defrag avec conservation de 5% d'espace
+execute ('DBCC SHRINKDATABASE('+@BdName+', 5)')
+update @TimeTable set temps=CONVERT(VARCHAR(8),(GETDATE()-(SELECT max(Datestart)  from @TimeTable)),108) where Step = 5
+
+-- Logs Report
+Select *
+from @TimeTable
