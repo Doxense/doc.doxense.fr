@@ -179,43 +179,46 @@
                                         </div>
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor119"></a>
+                                        <h1><a name="aanchor117"></a>
                                             <MadCap:concept term="WD" />Maintenir la base de données statistiques WatchdocStats</h1>
                                         <h2>Introduction</h2>
                                         <p>Dans Watchdoc, les données statistiques sont enregistrées dans une base de données SQL nommée <strong>Watchdocstats </strong>par défaut.&#160;</p>
-                                        <p>Cette base de données SQL ne dispose pas de plan de maintenance par défaut. Il est donc nécessaire de concevoir un plan de maintenance à l'aide d'une requête SQL exécutable par un  script (cf.<a href="https://downloads.doxense.fr/doc.doxense/WDmaintenance.sql#https://downloads.doxense.fr/doc.doxense/WDmaintenance.sql" target="_blank">modèle téléchargeable</a>).</p>
+                                        <p>Cette base de données SQL ne dispose pas de plan de maintenance par défaut. Il est donc nécessaire de concevoir un plan de maintenance à l'aide d'une requête SQL et d'un script exécutable (cf.<a href="https://downloads.doxense.fr/doc.doxense/WDmaintenance.sql#https://downloads.doxense.fr/doc.doxense/WDmaintenance.sql" target="_blank">modèle téléchargeable</a>).</p>
+                                        <p>&#160;</p>
                                         <p>Il est recommandé d'exécuter ce script toutes les semaines.</p>
-                                        <h2>Procédure</h2>
+                                        <h2>Procédure de création du script</h2>
+                                        <p>Pour exécuter le plan de maintenance par tâche planifiée, créez un script (.bat) dans un éditeur de texte&#160;: </p>
                                         <ol>
                                             <li value="1">
-                                                <p class="Liste_num_1">Sur le serveur sur lequel est installé Watchdoc  (ou serveur MS&#160;SQL<sup>®</sup>), ouvrez un éditeur de texte (de type MS Notepad) ; </p>
+                                                <p class="Liste_num_1">sur le serveur MS&#160;SQL<sup>®</sup>, ouvrez un éditeur de texte (de type MS Notepad)&#160;; </p>
                                             </li>
                                             <li value="2">
-                                                <p class="Liste_num_1">saisissez le script suivant&#160;: <code>Sqlcmd –e -i C:\BackupDATA\WDmaintenance.sql -o C:\BackupDATA\logs.txt</code></p>
+                                                <p class="Liste_num_1">saisissez le script suivant&#160;:<code><br /><span style="background-color: #ffffff; color: #000000; font-weight: bold;"><span style="background-color: #000000; color: #ffffff;"> Sqlcmd –e -i C:\BackupDATA\WDmaintenance.sql -o C:\BackupDATA\logs.txt</span></span></code></p>
                                                 <p class="Liste_num_1">Dans ce code&#160;:</p>
                                                 <ul>
                                                     <li>
-                                                        <p class="Liste_puce_2"> le chemin de l'argument<strong> -i </strong>spécifie l'emplacement du script de maintenance&#160;; </p>
+                                                        <p class="Liste_puce_2">le chemin de l'argument<strong> -i </strong>spécifie l'emplacement du script de maintenance&#160;; </p>
                                                     </li>
                                                     <li>
-                                                        <p class="Liste_puce_2">le chemin de l'argument <strong>-o</strong> spécifie l'emplacement où seront enregistrés les traces (logs).<br />Il peut être nécessaire d'ajuster les valeurs <strong>@BdName </strong>et <strong>@BackupPath</strong> inscrites par défaut dans le script en les remplaçant par le nom attribué à la base et le chemin d'accès au fichier de sauvegarde.<br /></p>
+                                                        <p class="Liste_puce_2">le chemin de l'argument <strong>-o</strong> spécifie l'emplacement où seront enregistrés les traces (logs).<br /></p>
                                                     </li>
                                                 </ul>
+                                                <p class="Liste_puce_2">N.B.: pour plus d'information sur les commandes SQLCMD, consultez <a href="http://msdn.microsoft.com/en-us/library/ms162773.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms162773.aspx</a><br /></p>
                                             </li>
                                         </ol>
                                         <ol data-mc-continue="true">
                                             <li value="3">
-                                                <p class="Liste_num_1">Enregistrez le fichier au format "<strong>.bat</strong>".</p>
+                                                <p class="Liste_num_1">enregistrez le fichier au format "<strong>.bat</strong>"&#160;;</p>
                                             </li>
                                             <li value="4">
-                                                <p class="Liste_num_1">Cliquez sur le fichier<strong>.bat</strong> pour lancer la maintenance.</p>
+                                                <p class="Liste_num_1">cliquez sur le fichier<strong>.bat</strong> pour lancer la maintenance.<br /></p>
                                             </li>
                                         </ol>
                                         <h2>Détail du script WDmaintenance.sql</h2>
                                         <p>Le script de maintenance  effectue :</p>
                                         <ol>
                                             <li value="1">
-                                                <p class="Liste_num_1">une sauvegarde de la base de données&#160;;</p>
+                                                <p class="Liste_num_1">une sauvegarde de la base de données : il peut être nécessaire d'ajuster les valeurs <strong>@BdName </strong>et <strong>@BackupPath</strong> inscrites par défaut dans le script en les remplaçant par le nom attribué à la base et le chemin d'accès au fichier de sauvegarde ;</p>
                                             </li>
                                             <li value="2">
                                                 <p class="Liste_num_1">une purge des données antérieures à 2 ans&#160;;</p>
@@ -224,12 +227,11 @@
                                                 <p class="Liste_num_1">une réorganisation des index&#160;;</p>
                                             </li>
                                             <li value="4">
-                                                <p class="Liste_num_1">éventuellement d'une défragmentation de la base.<br /><br /><img src="../Z_Resources/Images/02_Captures/WD_FPR_WDMaintenance_sql_1.png" /><br /><img src="../Z_Resources/Images/02_Captures/WD_WD5_FPR_WDMaintenance_sql_2.png" /></p>
+                                                <p class="Liste_num_1">éventuellement d'une défragmentation de la base&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WD_FPR_WDMaintenance_sql_1.png" /><br /><img src="../Z_Resources/Images/02_Captures/WD_WD5_FPR_WDMaintenance_sql_2.png" /></p>
                                             </li>
                                         </ol>
                                         <p>&#160;</p>
-                                        <p>Téléchargez le <a href="../D_BDD/WD_SQL_PlandeMaintenance.txt">script au format .txt pour une base SQL</a></p>
-                                        <p>Téléchargez le <a href="../D_BDD/WD_SQLExpress_PlandeMaintenance.txt">script au format .txt pour une base SQL&#160;Express</a></p>
+                                        <p>Téléchargez le <a href="../C_Configurer/ConfigBDD/WD_SQL_PlandeMaintenance.txt" target="_blank">script au format .txt pour une base SQL</a></p>
                                     </div>
                                     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
                                     </script>
