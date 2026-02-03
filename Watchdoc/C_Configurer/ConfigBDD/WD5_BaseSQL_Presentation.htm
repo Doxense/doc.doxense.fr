@@ -209,6 +209,8 @@
                                         <p>Par ailleurs, si votre organisation ne dispose pas d'annuaire dédié (Active Directory), un annuaire peut être créé dans une base de données MS SQL<sup>®</sup>. </p>
                                         <p>Enfin, c'est également sur une base MS SQL que repose l'annuaire Invités (base Guests) permettant de gérer ponctuellement des utilisateurs non présents dans l'annuaire de l'organisation.</p>
                                         <p>Il est donc nécessaire d'installer une base de données préalablement à l'installation de Watchdoc. </p>
+                                        <p>&#160;</p>
+                                        <p>Par ailleurs, dans la mesure où les données de la base varient, au fil du temps, il arrive que le traitement des requêtes soit ralenti en raison d'une fragmentation des index. Pour éviter cet inconvénient, nous vous recommandons de nettoyer régulièrement votre base en suivant le <a href="WD5_BaseSQL_Maintenir.htm">plan de maintenance</a>&#160;fourni.&#160;</p>
                                         <h2>Prérequis</h2>
                                         <p>Avant d'installer la base de données MS SQL, vérifiez les prérequis suivants : </p>
                                         <ul>
@@ -245,10 +247,32 @@
                                         <p>Choisir&#160; la version correspondant à la langue du serveur MS Windows&#160;:<br /><br /></p>
                                         <table style="width: 100%;mc-table-style: url('../../Resources/TableSlylesheets/Standard.css');" class="TableStyle-Standard" cellspacing="0">
                                             <col class="TableStyle-Standard-Column-Regular" />
-                                            <col class="TableStyle-Standard-Column-Regular" />
-                                            <col class="TableStyle-Standard-Column-Regular" />
+                                            <col class="TableStyle-Standard-Column-Regular" style="width: 52px;" />
+                                            <col class="TableStyle-Standard-Column-Regular" style="width: 722px;" />
                                             <col class="TableStyle-Standard-Column-Regular" />
                                             <tbody>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">Microsoft SQL Express 2022</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">FR</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;"><a href="https://www.microsoft.com/fr-fr/download/details.aspx?id=104781" target="_blank">https://www.microsoft.com/fr-fr/download/details.aspx?id=104781</a>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-size: 12pt;">
+                                                        <p>Espace disque nécessaire
+:</p>
+                                                        <p>4,2 Go d'espace disque</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">Microsoft SQL Express 2019</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">FR</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;"><a href="https://www.microsoft.com/fr-fr/download/details.aspx?id=101064" target="_blank">https://www.microsoft.com/fr-fr/download/details.aspx?id=101064</a>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1" style="font-size: 12pt;">
+                                                        <p>Espace disque nécessaire
+:</p>
+                                                        <p>4,2 Go d'espace disque</p>
+                                                    </td>
+                                                </tr>
                                                 <tr class="TableStyle-Standard-Body-Row2">
                                                     <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">Microsoft SQL Express 2017 Express Advanced FRA</td>
                                                     <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">FR	</td>
@@ -256,7 +280,11 @@
                                                         <p><a href="https://download.microsoft.com/download/0/E/0/0E08C7E6-43C8-4FE6-8035-9E3E31163417/SQLEXPRADV_x64_FRA.exe" target="_blank">https://download.microsoft.com/download/0/E/0/0E08C7E6-43C8-4FE6-8035-9E3E31163417/SQLEXPRADV_x64_FRA.exe</a>
                                                         </p>
                                                     </td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-size: 12pt;">&#160;</td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-size: 12pt;">
+                                                        <p>Espace disque nécessaire
+:</p>
+                                                        <p>4,2 Go d'espace disque</p>
+                                                    </td>
                                                 </tr>
                                                 <tr class="TableStyle-Standard-Body-Row1">
                                                     <td rowspan="2" class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">Microsoft SQL Express 2016 SP1</td>

@@ -1,4 +1,4 @@
--- Plan de maintenance V1
+﻿-- Plan de maintenance V1
 -- 03/03/2011 DOXENSE/NB
 -- Backup de la base de données
 DECLARE @BackupPath nvarchar(100)
@@ -47,7 +47,7 @@ End
 update @TimeTable set temps=CONVERT(VARCHAR(8),(GETDATE()-(SELECT max(Datestart) from @TimeTable)),108) where Step = 2
 insert into @TimeTable(Step,Fonction,Datestart) values (3,'Index',GETDATE())
 
--- Reorganisation des indexes
+-- Reorganisation des index
 execute ('ALTER INDEX ALL ON '+@BdName+'.dbo.documents REBUILD')
 execute ('ALTER INDEX ALL ON '+@BdName+'.dbo.roles REBUILD')
 execute ('ALTER INDEX ALL ON '+@BdName+'.dbo.members REBUILD')
