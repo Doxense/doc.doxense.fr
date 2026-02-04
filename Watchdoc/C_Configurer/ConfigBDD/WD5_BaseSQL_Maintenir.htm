@@ -186,7 +186,7 @@
                                         <p>&#160;</p>
                                         <p>Dans la mesure où les données de la base varient, il arrive qu'au fil du temps, le traitement des requêtes soit ralenti en raison d'une fragmentation des index. Pour éviter cet inconvénient, nous vous recommandons de nettoyer régulièrement votre base en suivant le plan de maintenance présenté.</p>
                                         <p>&#160;</p>
-                                        <p>Cette base de données SQL ne dispose pas de plan de maintenance par défaut. Il est donc nécessaire de concevoir un plan de maintenance à l'aide d'une requête SQL et d'un script exécutable (cf.<a href="https://downloads.doxense.fr/doc.doxense/WDmaintenance.sql#https://downloads.doxense.fr/doc.doxense/WDmaintenance.sql" target="_blank">modèle téléchargeable</a>).</p>
+                                        <p>Cette base de données SQL ne dispose pas de plan de maintenance par défaut. Il est donc nécessaire de concevoir un plan de maintenance à l'aide d'une requête SQL et d'un script exécutable (cf. <a href="https://downloads.doxense.fr/doc.doxense/WDmaintenance.sql#https://downloads.doxense.fr/doc.doxense/WDmaintenance.sql" target="_blank">modèle téléchargeable</a>).</p>
                                         <p>Il est recommandé d'exécuter ce script toutes les semaines.</p>
                                         <h2>Base de données MS&#160;SQL</h2>
                                         <h3>Procédure de création du script</h3>
@@ -196,14 +196,16 @@
                                                 <p class="Liste_num_1">sur le serveur MS&#160;SQL<sup>®</sup>, ouvrez un éditeur de texte (de type MS Notepad)&#160;; </p>
                                             </li>
                                             <li value="2">
-                                                <p class="Liste_num_1">saisissez le script suivant&#160;:<code><br /><span style="background-color: #ffffff; color: #000000; font-weight: bold;"><span style="background-color: #000000; color: #ffffff;">Sqlcmd –e -i C:\BackupDATA\WDmaintenance.sql -o C:\BackupDATA\logs.txt</span></span></code></p>
+                                                <p class="Liste_num_1">saisissez le script suivant&#160;:</p>
+                                                <p id="code"><span style="background-color: #000000; color: #ffffff;">Sqlcmd –e -i C:\BackupDATA\WDmaintenance.sql -o C:\BackupDATA\logs.txt</span>
+                                                </p>
                                                 <p class="Liste_num_1">Dans ce code&#160;:</p>
                                                 <ul>
                                                     <li>
-                                                        <p class="Liste_puce_2">le chemin de l'argument<strong> -i </strong>spécifie l'emplacement du script de maintenance&#160;; </p>
+                                                        <p class="Liste_puce_2">le chemin de l'argument<strong> -i</strong> spécifie l'emplacement du script de maintenance&#160;; </p>
                                                     </li>
                                                     <li>
-                                                        <p class="Liste_puce_2">le chemin de l'argument <strong>-o</strong> spécifie l'emplacement où seront enregistrés les traces (logs).<br /></p>
+                                                        <p class="Liste_puce_2">le chemin de l'argument <strong>-o</strong> spécifie l'emplacement où sont enregistrés les fichiers traces (logs).<br /></p>
                                                     </li>
                                                 </ul>
                                                 <p class="Liste_puce_2">N.B.: pour plus d'information sur les commandes SQLCMD, consultez <a href="http://msdn.microsoft.com/en-us/library/ms162773.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms162773.aspx</a><br /></p>

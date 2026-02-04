@@ -21,7 +21,6 @@
         <link href="../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
         <link href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
         <style>/*&lt;meta /&gt;*/
 
@@ -69,6 +68,7 @@
 }
 
 </style>
+        <link href="../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
         <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
         </script>
         <script src="../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
@@ -213,7 +213,7 @@
                                                     </li>
                                                     <li class="tree-node"><a href="#Messagederreurlapplicationnestpasinstall%C3%A9e">Message d'erreur : l'application n'est pas installée</a>
                                                     </li>
-                                                    <li class="tree-node"><a href="#AvecWEScanlOCRnefonctionnepassurlesTaskalfa2254Ci">Avec WEScan, l'OCR&#160;ne fonctionne pas sur les Taskalfa 2254Ci</a>
+                                                    <li class="tree-node"><a href="#AvecWEScanlOCRnefonctionnepassurlesTaskalfa2254Ci">Avec WEScan, l'OCR ne fonctionne pas sur les Taskalfa 2254Ci</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -308,8 +308,9 @@
                                         <p style="text-align: left;">Suite à l'installation du WES depuis Watchdoc, le message d'erreur suivant s'affiche dans rapport : <strong>l'application n'est pas installée"</strong> :<br /><br /></p>
                                         <p>
                                             <img src="../../Z_Resources/Images/01_Generiques/ADE_WESKyocera_ActiverAppli_MsgErreur.png" />
+                                            <br />
+                                            <br />
                                         </p>
-                                        <p style="font-size: 14pt;font-weight: bold;">&#160;</p>
                                         <p style="font-size: 14pt;font-weight: bold;">Cause(s)</p>
                                         <p>L'application WES n'est pas activée sur le mfp par défaut.</p>
                                         <p>&#160;</p>
@@ -326,39 +327,27 @@
                                             <li value="3">
                                                 <p style="text-align: left;">fermez ensuite la boîte de dialogue et vérifiez que vous pouvez activer le WES depuis l'administration de Watchdoc :</p>
                                                 <p style="text-align: left;">
-                                                    <br />
-                                                    <br />
-                                                    <img src="../../Z_Resources/Images/01_Generiques/ADE_WESKyocera_ActiverAppli_Resolution_700x638.png" style="width: 700;height: 638;" />
+                                                    <img src="../../Z_Resources/Images/01_Generiques/ADE_WESKyocera_ActiverAppli_Resolution_500x456.png" style="width: 500;height: 456;" />
                                                 </p>
                                             </li>
                                         </ol>
                                         <hr width="100%" size="0" align="center" />
-                                        <h2 id="AvecWEScanlOCRnefonctionnepassurlesTaskalfa2254Ci" data-magellan-target="AvecWEScanlOCRnefonctionnepassurlesTaskalfa2254Ci">Avec WEScan, l'OCR&#160;ne fonctionne pas sur les Taskalfa 2254Ci</h2>
-                                        <p><b style="font-size: 14pt;">Contexte</b>
-                                        </p>
-                                        <p>Alors que la fonction d'OCR native fonctionne correctement pour la fonction native du scan, on constate que ce n'est pas le cas avec WEScan.</p>
-                                        <p>&#160;</p>
+                                        <h2 id="AvecWEScanlOCRnefonctionnepassurlesTaskalfa2254Ci" data-magellan-target="AvecWEScanlOCRnefonctionnepassurlesTaskalfa2254Ci">Avec WEScan, l'OCR ne fonctionne pas sur les Taskalfa 2254Ci</h2>
+                                        <h3 data-mc-conditions="General.Online">Contexte</h3>
+                                        <p>Alors que la fonction d'OCR native fonctionne correctement sur les Taskalpha 2254Ci,  on constate que ce n'est pas le cas avec WEScan.</p>
                                         <p>Pourtant,</p>
                                         <ul>
                                             <li>
-                                                <p>la fonction d'OCR&#160;WEScan est activée sur le périphérique d'impression.</p>
+                                                <p>la fonction d'OCR WEScan est activée sur le périphérique d'impression&#160;;</p>
                                             </li>
                                             <li>
-                                                <p> le profil WEScan est configuré pour activer l'OCr.</p>
+                                                <p>le profil WEScan est configuré pour activer l'OCr.</p>
                                             </li>
                                         </ul>
-                                        <p>&#160;</p>
-                                        <p><b style="font-size: 14pt;">Cause</b>
-                                        </p>
-                                        <p>Cette anomalie est due à une mauvaise interprétation </p>
-                                        <p>&#160;</p>
-                                        <p><b style="font-size: 14pt;">Résolution</b>
-                                        </p>
-                                        <p>Pour résoudre ce problème, il convient de mettre à jour Watchdoc car la croretion est dmerqu'e dans la version.&#160;<span style="background-color: #ffff00;">6.00.xx</span></p>
-                                        <p>&#160;</p>
-                                        <p>&#160;</p>
-                                        <p>&#160;</p>
-                                        <p>&#160;</p>
+                                        <h3 data-mc-conditions="General.Online">Cause</h3>
+                                        <p>Cette anomalie est due à une incompatibilité de configuration dans le profil de scan WEScan ("PDFCompatibility" doit valoir "UNAVAILABLE" et "PDFALevel doit valoir OFF").</p>
+                                        <h3 data-mc-conditions="General.Online">Résolution</h3>
+                                        <p>Pour résoudre ce problème, il convient de mettre à jour Watchdoc, v.&#160;6.1.0.5290 qui contient un correctif.</p>
                                     </div>
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
