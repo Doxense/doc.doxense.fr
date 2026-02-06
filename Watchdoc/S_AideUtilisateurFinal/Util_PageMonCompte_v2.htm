@@ -20,7 +20,6 @@
         <link href="../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
-        <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
         <style>/*&lt;meta /&gt;*/
 
 .button.print-button
@@ -49,6 +48,8 @@
 }
 
 </style>
+        <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
+        <link href="../Resources/Stylesheets/NewStylesheet.css" rel="stylesheet" type="text/css" />
         <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
         </script>
         <script src="../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
@@ -177,8 +178,8 @@
                                     <div class=".body-container" role="main" id="mc-main-content">
                                         <h1>Watchdoc - Utilisateur - Consulter la page Mon compte Nouvelle version</h1>
                                         <h2>Présentation</h2>
-                                        <p>La page "Mon compte" est l'interface web de Watchdoc dédiée à l'utilisation. Cette interface est déclinée en deux versions : l'ancienne et la nouvelle, depuis Watchdoc <span style="background-color: #ffff00;">v. 6.1.1.5854</span>.</p>
-                                        <p>Quelle que soit la version utilisée, son url est généralement communiquée par votre référent Watchdoc à l'ensemble des utilisateurs.</p>
+                                        <p>La page "Mon compte" est l'interface web de Watchdoc dédiée à l'utilisateur. Cette interface est déclinée en deux versions : l'ancienne et la nouvelle, depuis Watchdoc <span style="background-color: #ffff00;">v. 6.1.1.5854</span>.</p>
+                                        <p>Quelle que soit la version utilisée, son url est généralement communiquée par le référent Watchdoc à l'ensemble des utilisateurs.</p>
                                         <p>
                                             <br />Configurée par  l'administrateur, elle peut proposer des  usages variés. Elle peut donc permettre&#160;: </p>
                                         <ul>
@@ -235,6 +236,7 @@
                                             </li>
                                         </ul>
                                         <h2>Consulter ses codes et badges</h2>
+                                        <h3>Consulter</h3>
                                         <p>Pour consulter la liste de votre (ou vos) code(s) d'identification et/ou badges enregistrés&#160;:</p>
                                         <ol>
                                             <li value="1">
@@ -244,7 +246,7 @@
                                                 <p>cliquez sur l'onglet <strong>Mes codes et badges</strong>&#160;;</p>
                                                 <ul>
                                                     <li>
-                                                        <p>dans la liste <strong>Vos codes d'identification </strong>figurent plus ou moins de codes (PIN, PUK, d'impression) en fonction de la configuration appliquée. Si le code est masqué, cliquez sur le bouton <strong>Voir </strong><img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_VoirLeCode.png"></img> pour afficher le code&#160;;</p>
+                                                        <p>dans la liste <strong>Vos codes d'identification </strong>figurent plus ou moins de codes (PIN, PUK, d'impression) en fonction de la configuration appliquée par l'administrateur. Si le code est masqué, cliquez sur le bouton <strong>Voir </strong><img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_VoirLeCode.png" /> pour l'afficher&#160;;</p>
                                                     </li>
                                                     <li>
                                                         <p>dans la liste <strong>Liste de vos badges enregistrés</strong> figurent le ou les badges que vous êtes en mesure d'utiliser pour vous identifier sur un WES&#160;:</p>
@@ -272,16 +274,58 @@
                                                 </ul>
                                             </li>
                                         </ol>
+                                        <h3>Saisir son code PIN et/ou code d'impression</h3>
+                                        <p>Si vous devez vous authentifier dans le WES&#160;à l'aide d'un code PIN ou d'un  code d'impression, c'est à vous de le définir dans la page "Mes codes et badges"&#160;:</p>
+                                        <ul>
+                                            <li>
+                                                <p>code PIN : code constitué de 4&#160;chiffres minimum (longueur précisée par l'administrateur) ; </p>
+                                                <p>ou</p>
+                                            </li>
+                                            <li>
+                                                <p>code d'impression : code alphanumérique qui doit comporter entre 4 et 16 caractères et ne doit pas contenir plus de 2 chiffres(longueur précisée par l'administrateur).</p>
+                                            </li>
+                                        </ul>
+                                        <p>&#160;</p>
+                                        <p>Pour saisir votre code(PIN ou d'impression) :<br></br></p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>dans la page <b>Mon compte</b>, cliquez sur l'onglet <strong>Mes codes et badges</strong>&#160;;</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>cliquez sur le bouton <b>Editer</b><img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Editer_18x18.png" style="width: 18;height: 18;"></img> du code PIN ou d'impression ;</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>saisissez votre code dans le champ&#160;;</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>cliquez sur le bouton <b>Valider</b><img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Enregistrer.png" />:</p>
+                                            </li>
+                                        </ol>
                                         <h2>Consulter ses statistiques</h2>
+                                        <p>En fonction de la politique d'impression appliquée dans votre organisation, vous pouvez avoir accès à vos statistiques personnelles ou à vos statistiques personnelles ainsi que les statistiques de votre équipe.</p>
+                                        <h3>Statistiques personnelles</h3>
                                         <p>Pour consulter les statistiques de votre activité d'impression : </p>
                                         <ol>
                                             <li value="1">
-                                                <p>depuis l'interface de déblocage de vos documents, cliquez sur <strong>Mes statistiques</strong> ; </p>
+                                                <p>dans la page <b>Mon compte</b>, cliquez sur <strong>Mes statistiques</strong> ; </p>
                                             </li>
                                             <li value="2">
-                                                <p>cliquez sur l'onglet <strong>Mes Statistiques</strong>&#160;: vous accédez à une interface qui affichent vos données d'usage de Watchdoc et l'impact environnemental qui en découle :<br /></p>
+                                                <p>cliquez sur l'onglet <strong>Mes Statistiques</strong>&#160;: vous accédez à une interface qui affiche vos données d'usage de Watchdoc et l'impact environnemental qui en découle :</p>
                                             </li>
                                         </ol>
+                                        <h3>Statistiques d'équipes</h3>
+                                        <p>Pour consulter les statistiques de votre activité d'impression : </p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>dans la page <b>Mon compte</b>, cliquez sur <strong>Mes statistiques</strong> ; </p>
+                                            </li>
+                                            <li value="2">
+                                                <p>cliquez sur l'onglet <strong>Mes Statistiques</strong>&#160;: vous accédez à une interface qui affiche vos données d'usage de Watchdoc et l'impact environnemental qui en découle :</p>
+                                            </li>
+                                        </ol>
+                                        <p>
+                                            <br />
+                                        </p>
                                         <h2>Consulter ses impressions - Historique des derniers documents</h2>
                                         <p>Pour consulter l'historique de vos dernières impressions&#160;:</p>
                                         <ol>

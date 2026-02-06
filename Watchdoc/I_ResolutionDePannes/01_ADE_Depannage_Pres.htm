@@ -603,6 +603,15 @@
                                         </div>
                                         <p>&#160;</p>
                                         <h2 id="WSCWatchdocSupervisionConsole" data-magellan-target="WSCWatchdocSupervisionConsole">WSC&#160;-<a name="WSC"></a> Watchdoc Supervision Console</h2>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Message d'erreur lors d'actions dans la Console de supervision :  "Une erreur est survenue : (400:Bad request) BadRequest" et "This page isn't working right now".</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> après mise à jour de Watchdoc/WSC (v.&#160;5.4 vers 6.1.1), certaines actions ne sont plus possibles dans la Console de supervisions et renvoient des messages d'erreur : la modification ou l'ajout de badges, l'ajout de comptes invités, l'import en masse de badges, la modification de configurations.</p>
+                                                <p>Des interfaces affichent le message "BadRequest" ou la page web affiche le message "This page isn't working right now"</p>
+                                                <p><strong>Cause :</strong> ce message apparaît lorsque WSC a précédemment été configuré pour être accessible via le port 5757 non-SSL.&#160;La version 6.1.1 exigeant plus de sécurité, ce port a été remplacé par le port SSL 5756.</p>
+                                                <p><strong>Résolution :</strong> configurez le port SSL&#160;5756 comme port d'accès à WSC.</p>
+                                            </div>
+                                        </div>
+                                        <p>&#160;</p>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Erreur lors de l'installation d'un pilote d'impression - Message d'erreur : "driver package is not WHQL valid"</a></span>
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> lors de l'ajout d'un pilote d'impression dans WSC sur un domaine (master/slaves), un message d'alerte informe que l'opération s'est bien déroulée pour le serveur master, mais le message d'erreur suivant s'affiche pour les slaves : Failed to add driver on server [nom_du_serveur].&#160;Reason: 'driver package is not WHQL valid'.</p>
