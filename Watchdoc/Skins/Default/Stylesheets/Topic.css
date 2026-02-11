@@ -477,18 +477,6 @@ div.MCBreadcrumbsBox_0
 	padding: 5px;
 }
 
-.glossaryTerm
-{
-	font-weight: bold;
-	color: Olive;
-}
-
-.glossaryTerm:link
-{
-	font-weight: bold;
-	color: Olive;
-}
-
 .img
 {
 	border: none;
@@ -505,16 +493,23 @@ div.MCBreadcrumbsBox_0
 
 div.MCMiniTocBox_0
 {
-	border-top-width: 1px;
-	border-top-style: solid;
-	border-top-color: black;
-	padding-top: 10px;
-	margin-top: 10px;
-	padding-left: 20px;
+	border-top-style: none;
+	border-top-width: 0px;
+	border-top-color: transparent;
+	padding-top: 7px;
+	font-size: 10pt;
+	font-weight: normal;
+	margin-top: 5 px;
+	padding-left: 10px;
+	font: Helvetica;
 }
 
 p.MiniTOC1_0
 {
+	margin-top: 1px;
+	margin-bottom: 1px;
+	font-size: 12pt;
+	color: #696969;
 	display: block;
 	margin: 1.12em 0;
 	margin-left: 0pt;
@@ -546,7 +541,6 @@ a.MiniTOC1:link
 	background-color: transparent;
 	background-image: none;
 	float: inherit;
-	font-size: inherit;
 	font-family: inherit;
 	font-style: inherit;
 	font-variant: inherit;
@@ -555,13 +549,18 @@ a.MiniTOC1:link
 	word-spacing: inherit;
 	text-align: inherit;
 	mc-leader-format: '.';
-	color: black;
+	color: #696969;
+	font-size: 12pt;
 	font-weight: bold;
 	text-decoration: none;
 }
 
 p.MiniTOC2_0
 {
+	margin-top: 1px;
+	margin-bottom: 1px;
+	font-size: 12pt;
+	color: #696969;
 	display: block;
 	margin: 1.12em 0;
 	margin-left: 10pt;
@@ -592,7 +591,6 @@ a.MiniTOC2:link
 	background-color: transparent;
 	background-image: none;
 	float: inherit;
-	font-size: inherit;
 	font-family: inherit;
 	font-style: inherit;
 	font-variant: inherit;
@@ -601,12 +599,17 @@ a.MiniTOC2:link
 	word-spacing: inherit;
 	text-align: inherit;
 	mc-leader-format: '.';
-	color: black;
+	color: #696969;
+	font-size: 12pt;
 	text-decoration: none;
 }
 
 p.MiniTOC3_0
 {
+	margin-top: 1px;
+	margin-bottom: 1px;
+	font-size: 12pt;
+	color: #696969;
 	display: block;
 	margin: 1.12em 0;
 	margin-left: 20pt;
@@ -637,7 +640,6 @@ a.MiniTOC3:link
 	background-color: transparent;
 	background-image: none;
 	float: inherit;
-	font-size: inherit;
 	font-family: inherit;
 	font-style: inherit;
 	font-variant: inherit;
@@ -646,7 +648,8 @@ a.MiniTOC3:link
 	word-spacing: inherit;
 	text-align: inherit;
 	mc-leader-format: '.';
-	color: black;
+	color: #696969;
+	font-size: 12pt;
 	text-decoration: none;
 }
 
@@ -658,14 +661,14 @@ a.MiniTOC3:link
 
 .a:link
 {
+	color: #000000;
 	text-decoration: underline;
-	color: blue;
 }
 
 .a:visited
 {
+	color: #808080;
 	text-decoration: underline;
-	color: purple;
 }
 
 .a:active
@@ -694,16 +697,16 @@ a.MiniTOC3:link
 	padding-left: 0;
 }
 
-.a:link
+.glossaryTerm
 {
-	color: #000000;
-	text-decoration: underline;
+	font-weight: bold;
+	color: Olive;
 }
 
-.a:visited
+.glossaryTerm:link
 {
-	color: #808080;
-	text-decoration: underline;
+	font-weight: bold;
+	color: Olive;
 }
 
 .popupHead
@@ -724,51 +727,6 @@ a.MiniTOC3:link
 .MCTextPopupBodyBottom .MCTextPopupArrow
 {
 	border-top-color: #dcdcdc;
-}
-
-.dropDownHotspot
-{
-	text-decoration: none;
-}
-
-.dropDownHotspot:link
-{
-	text-decoration: none;
-}
-
-.MCDropDown_Open .MCDropDownHotSpot_.MCHotSpotImage
-{
-	background-position: left;
-	background-image: url('DropDownOpen.gif');
-	padding-left: 1px;
-	padding-right: 0;
-}
-
-.MCDropDown_Closed .MCDropDownHotSpot_.MCHotSpotImage
-{
-	background-position: left;
-	background-image: url('DropDownClosed.gif');
-	padding-left: 0px;
-	padding-right: 0;
-}
-
-.dropDownHead
-{
-	text-decoration: none;
-}
-
-video._0
-{
-	display: inline-block;
-	width: 350px;
-	height: auto;
-}
-
-video.object1
-{
-	display: inline-block;
-	width: 300px;
-	height: auto;
 }
 
 .dropDown
@@ -824,6 +782,20 @@ video.object1
 	border-color: #FF803B;
 	border-radius: 5px;
 	padding: 10px 10px 10px 10px;
+}
+
+video._0
+{
+	display: inline-block;
+	width: 350px;
+	height: auto;
+}
+
+video.object1
+{
+	display: inline-block;
+	width: 300px;
+	height: auto;
 }
 
 div.MCTocProxy_0

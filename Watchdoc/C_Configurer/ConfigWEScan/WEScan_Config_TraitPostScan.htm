@@ -208,22 +208,10 @@
                                         <p>
                                             <br />
                                         </p>
-                                        <p>Les documents numérisés par WEScan sont enregistrés dans un dossier <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term96">Hotfolder<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>dossier informatique monitoré par un logiciel qui traite chaque nouveau fichier qui y est enregistré.
-(Source : fr.wiktionary.org/wiki/hot_folder)</span></a>).&#160;<br />Les outils tiers traitent les documents numérisés puis les enregistrent dans un dossier de sortie.&#160;&#160;</p>
-                                        <p>Dans Watchdoc, la configuration du traitement post-scan consiste à indiquer :</p>
-                                        <ul>
-                                            <li>
-                                                <p>la localisation du dossier d'entrée (hotfolder monitoré par l'outil tiers) dans lequel WEScan enregistre les documents  une fois numérisés&#160;; </p>
-                                            </li>
-                                            <li>
-                                                <p>la localisation du dossier vers lequel l'outil tiers envoie les documents une fois son traitement appliqué et dans lequel WEScan récupère les documents pour poursuivre son traitement ;</p>
-                                                <p>Eventuellement, si plusieurs traitements sont susceptibles d'être appliqués, il est possible d'ajouter des sous-dossiers au dossier pour organiser au mieux les documents traités.</p>
-                                                <p>&#160;</p>
-                                            </li>
-                                        </ul>
-                                        <fieldset>La fonction "séparation des fichiers" (à l'aide d'un code à barres, d'une page blanche ou après un nombre de pages) proposée par Kyocera Capture Manager<sup>®</sup> n'est pas compatible avec le traitement post-scan de WEScan. <br /></fieldset>
+                                        <p>Les outils tiers traitent les documents numérisés puis les enregistrent dans un dossier de sortie.&#160;&#160;</p>
+                                        <p>Dans Watchdoc, la configuration du traitement post-scan consiste à indiquer quel est le type de traitement appliqué et, pour chaque traitement, les  paramètres à prendre en compte pour l'appliquer.</p>
                                         <h2>Prérequis</h2>
-                                        <p>Avant de configurer les traitements post-scan dans Watchdoc, il convient d'avoir créé les différents dossiers nécessaires aux traitements post-scan.&#160;WEScan doit avoir accès en lecture et en écriture à ces  dossiers.</p>
+                                        <p>Pour le type de traitement Hotfolder, avant de leconfigurer dans Watchdoc, il convient d'avoir créé les différents dossiers nécessaires aux traitements post-scan.&#160;WEScan doit avoir accès en lecture et en écriture à ces  dossiers.</p>
                                         <h2>Procédure</h2>
                                         <h3>Accéder à l'interface</h3>
                                         <ol>
@@ -231,10 +219,8 @@
                                                 <p class="Liste_num_1">Accédez à l'interface d'administration de Watchdoc en tant qu'administrateur ; </p>
                                             </li>
                                             <li value="2">
-                                                <p class="Liste_num_1">depuis le <strong>Menu Principal</strong> &gt; section <strong>Configuration</strong>, cliquez sur <strong>Web, WES &amp; Destination de numérisation</strong>&#160;;<br /><br /><img src="../../Z_Resources/Images/02_Captures/WD54_Admin_WEScan_AccesMenuPrincipal_700x305.png" style="width: 700;height: 305;" class="bord" /></p>
-                                                <p class="Liste_num_1">
-                                                    <br />
-                                                </p>
+                                                <p class="Liste_num_1">depuis le <strong>Menu Principal</strong> &gt; section <strong>Configuration</strong>, cliquez sur <strong>Web, WES &amp; Destination de numérisation</strong>&#160;;<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/WD54_Admin_WEScan_AccesMenuPrincipal.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1915" data-mc-height="819" src="../../Z_Resources/Images/02_Captures/WD54_Admin_WEScan_AccesMenuPrincipal.png" tabindex="" style="height: 305px;width: 700px;max-width: 1000px;" /></a><br /></p>
+                                                <p>&#160;</p>
                                             </li>
                                         </ol>
                                         <ol data-mc-continue="true">
@@ -244,28 +230,39 @@
                                         </ol>
                                         <ol data-mc-continue="true">
                                             <li value="4">
-                                                <p class="Liste_num_1">Cliquez sur le bouton <strong>Créer un nouveau traitement post-scan</strong>&#160;: <br /></p>
+                                                <p class="Liste_num_1">Cliquez sur le bouton <strong>Créer un nouveau traitement post-scan</strong>&#160;: <br /><br /><a class="MCPopupThumbnailLink" href="WD60_Admin_WEScan_Config_TraitPostScan.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1658" data-mc-height="569" src="WD60_Admin_WEScan_Config_TraitPostScan.png" tabindex="" style="max-width: 1000px;" /></a><br /></p>
                                                 <p class="Liste_num_1">
                                                     <br />
-                                                    <img src="../../Z_Resources/Images/02_Captures/WD60_Admin_WEScan_Config_TraitPostScan_700x267.png" style="width: 700;height: 267;" class="bord" />
                                                 </p>
                                             </li>
                                         </ol>
                                         <h3>Configurer le traitement</h3>
                                         <ol>
                                             <li value="1">
-                                                <p>Dans l'interface <strong>Créer un traitement post-scan</strong>, complétez les champs :</p>
+                                                <p>Dans l'interface <strong>Créer un traitement post-scan</strong>, complétez&#160;:</p>
                                                 <ul>
                                                     <li>
                                                         <p>section <strong>Propriétés</strong> :</p>
                                                         <ul>
                                                             <li>
-                                                                <p><strong>Identifiant : </strong>saisissez l'identifiant du traitement (identifiant  interne affiché dans les interfaces d'administration uniquement).</p>
+                                                                <p><strong>Identifiant : </strong>saisissez l'identifiant du traitement (identifiant  interne affiché dans les interfaces d'administration uniquement)&#160;;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Type de traitement : </strong>choisissez le type du traitement à appliquer : </p>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p><b>HotFolder :</b> les fichiers numérisés sont enregistrés dans un dossier <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term96">Hotfolder<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>dossier informatique monitoré par un logiciel qui traite chaque nouveau fichier qui y est enregistré.
+(Source : fr.wiktionary.org/wiki/hot_folder)</span></a> pour y être ensuite traités par un logiciel tiers. Certains de ces logiciels tiers (comme  Kyocera Capture Manager<sup>®</sup>, par exemple) nécessitent une licence pour être activés. Une fois le type HotFolder choisi, complétez la section <b>Emplacement</b>&#160;;</p>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Nom :</strong> saisissez le nom (interne) du traitement&#160;;</p>
                                                             </li>
                                                         </ul>
                                                         <ul>
                                                             <li>
-                                                                <p><strong>Nom :</strong> saisissez un nom explicite pour le traitement.</p>
+                                                                <p><strong>Libellé de l'option : </strong>saisissez le libellé qui s'affiche aux utilisateurs dans l'interface WEScan (par exemple : "OCR&#160;multiformat" pour un traitement permettant de générer des fichiers océrisés en MSWord, MSExcel et PDF, par exemple).</p>
                                                                 <p>&#160;</p>
                                                             </li>
                                                         </ul>
@@ -273,7 +270,7 @@
                                                 </ul>
                                                 <ul>
                                                     <li>
-                                                        <p>section <strong>Emplacements</strong> :</p>
+                                                        <p>section <strong>Emplacements</strong> (pour le type Hotfolder) :</p>
                                                         <ul>
                                                             <li>
                                                                 <p><strong>Dossier d'entrée : </strong>indiquez le chemin du dossier dans lequel WEScan enregistre les documents numérisés (hotfolder monitoré par l'outil tiers) ; <br /></p>
@@ -285,7 +282,7 @@
                                                                 <p><strong>Dossier d'erreur :</strong> indiquez le chemin du  dossier dans lequel l'outil tiers enregistre les documents en erreur ;</p>
                                                             </li>
                                                             <li>
-                                                                <p><strong>Libellé de l'option :</strong> saisissez le libellé sous lequel le traitement est présenté dans l'interface WEScan (par exemple : "OCR&#160;multiformat" pour un traitement permettant de générer des fichiers océrisés en MSWord, MSExcel et PDF, par exemple).</p>
+                                                                <p><strong>Libellé de l'option :</strong> saisissez le libellé sous lequel le traitement est présenté dans l'interface WEScan .</p>
                                                             </li>
                                                             <li>
                                                                 <p><strong>Commandes :</strong> détaillez cle ou les traitements&#160;appliqués :</p>
@@ -298,10 +295,11 @@
                                                                     <p><strong>Langue d'OCR : </strong> sélectionnez la langue dans laquelle l'OCR est réalisé ;</p>
                                                                 </li>
                                                                 <li>
-                                                                    <p><strong>Libellé :</strong> saisissez le libellé sous lequel le traitement est présenté dans l'interface WEScan (par exemple :"OCR&#160;en PDF", "OCR en Word", etc.)&#160;;</p>
+                                                                    <p><strong>Libellé :</strong> saisissez le libellé sous lequel le traitement est présenté dans l'interface WEScan&#160;;</p>
                                                                 </li>
                                                                 <li>
-                                                                    <p><![CDATA[	]]><strong>Chemin du sous dossier :</strong> saisissez le nom d'un sous-dossier (du dossier de sortie) dans lequel sont enregistrés les fichiers une fois traités&#160;:<br /><br /><img src="../../Z_Resources/Images/02_Captures/WD60_Admin_WEScan_TraitPostScan_creer_700x368.png" style="width: 700;height: 368;" class="bord" /></p>
+                                                                    <p><![CDATA[	]]><strong>Chemin du sous dossier :</strong> saisissez le nom d'un sous-dossier (du dossier de sortie) dans lequel sont enregistrés les fichiers une fois traités&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="WEScan_TraitPostScan_Emplacements.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1078" data-mc-height="490" src="WEScan_TraitPostScan_Emplacements.png" tabindex="" style="max-width: 1000px;" /></a><br /><br /></p>
+                                                                    <fieldset style="font-size: 12pt;">La fonction "séparation des fichiers" (à l'aide d'un code à barres, d'une page blanche ou après un nombre de pages) proposée par KCM<sup>®</sup>&#160;n'est pas compatible avec le traitement post-scan de WEScan. <br /></fieldset>
                                                                     <p>
                                                                         <br />
                                                                     </p>
@@ -316,16 +314,16 @@
                                             </li>
                                         </ol>
                                         <h3>Appliquer le traitement</h3>
-                                        <p>Une fois le traitement créé, appliquez-le sur le profil WES : </p>
+                                        <p>Une fois le traitement créé, appliquez-le sur le profil WES&#160;: </p>
                                         <ol>
                                             <li value="1">
-                                                <p>dans l'interface <strong>Web, WES &amp; Destinations de numérisation</strong>, cliquez sur le WES&#160;sur lequel vous souhaitez appliquer le traitement ; </p>
+                                                <p>dans l'interface <strong>Web, WES &amp; Destinations de numérisation</strong>, cliquez sur le WES&#160;sur lequel vous souhaitez appliquer le traitement&#160; </p>
                                             </li>
                                             <li value="2">
-                                                <p>dans l'interface<strong> Configuration du profil WES</strong>, section <strong>Numérisation</strong>, activez le <strong>Profil de numérisation </strong>sur lequel doit être appliqué le traitement ;</p>
+                                                <p>dans l'interface<strong> Configuration du profil WES</strong>, section <strong>Numérisation</strong>, activez le <strong>Profil de numérisation </strong>sur lequel doit être appliqué le traitement&#160;;</p>
                                             </li>
                                             <li value="3">
-                                                <p>dans la liste, sélectionnez le traitement que vous souhaitez appliquer, puis configurez la destination :<br /><br /><img src="../../Z_Resources/Images/02_Captures/WD60_Admin_WEScan_TraitPostScan_Appliquer_700x236.png" style="width: 700;height: 236;" /></p>
+                                                <p>dans la liste, sélectionnez le traitement que vous souhaitez appliquer, puis configurez la destination&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/WD60_Admin_WEScan_TraitPostScan_Appliquer.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1006" data-mc-height="339" src="../../Z_Resources/Images/02_Captures/WD60_Admin_WEScan_TraitPostScan_Appliquer.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a></p>
                                                 <p>&#160;</p>
                                             </li>
                                         </ol>
@@ -334,9 +332,6 @@
                                                 <p>cliquez sur <strong>Valider </strong>pour valider le profil de numérisation.</p>
                                             </li>
                                         </ol>
-                                        <p>&#160;</p>
-                                        <p>&#160;</p>
-                                        <p>&#160;</p>
                                     </div>
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
