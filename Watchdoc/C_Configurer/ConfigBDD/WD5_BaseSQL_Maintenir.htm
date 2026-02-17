@@ -3,7 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Watchdoc - Maintenir la base de données statistiques WatchdocStats</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Watchdoc - Maintenir la base de données SQL / PostgreSQL WatchdocStats</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Script tableau triable -->
@@ -180,13 +180,13 @@
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
                                         <h1><a name="aanchor270"></a>
-                                            <MadCap:concept term="WD" />Watchdoc - Maintenir la base de données statistiques WatchdocStats</h1>
+                                            <MadCap:concept term="WD" />Watchdoc - Maintenir la base de données SQL / PostgreSQL WatchdocStats</h1>
                                         <h2>Introduction</h2>
-                                        <p>Dans Watchdoc, les données statistiques sont enregistrées dans une base de données SQL nommée <strong>Watchdocstats </strong>par défaut.&#160;</p>
+                                        <p>Dans Watchdoc, les données statistiques sont enregistrées dans une base de données SQL<sup>®</sup> ou PostgreSQL®&#160;nommée <strong>Watchdocstats </strong>par défaut.&#160;</p>
                                         <p>&#160;</p>
                                         <p>Dans la mesure où les données de la base varient, il arrive qu'au fil du temps, le traitement des requêtes soit ralenti en raison d'une fragmentation des index. Pour éviter cet inconvénient, nous vous recommandons de nettoyer régulièrement votre base en suivant le plan de maintenance présenté.</p>
                                         <p>&#160;</p>
-                                        <p>Cette base de données SQL ne dispose pas de plan de maintenance par défaut. Il est donc nécessaire de concevoir un plan de maintenance à l'aide d'une requête SQL et d'un script exécutable (cf. <a href="https://downloads.doxense.fr/doc.doxense/WDmaintenance.sql#https://downloads.doxense.fr/doc.doxense/WDmaintenance.sql" target="_blank">modèle téléchargeable</a>).</p>
+                                        <p>Cette base de données ne dispose pas de plan de maintenance par défaut. Il est donc nécessaire de concevoir un plan de maintenance à l'aide d'une requête SQL / PostgreSQL&#160;et d'un script exécutable.</p>
                                         <p>Il est recommandé d'exécuter ce script toutes les semaines.</p>
                                         <h2>Base de données MS&#160;SQL</h2>
                                         <h3>Procédure de création du script</h3>
@@ -232,11 +232,121 @@
                                                 <p class="Liste_num_1">une réorganisation des index&#160;;</p>
                                             </li>
                                             <li value="4">
-                                                <p class="Liste_num_1">éventuellement d'une défragmentation de la base&#160;:<br /><br /><img src="../../Z_Resources/Images/02_Captures/WD_FPR_WDMaintenance_sql_1.png" /><br /><img src="../../Z_Resources/Images/02_Captures/WD_WD5_FPR_WDMaintenance_sql_2.png" /></p>
+                                                <p class="Liste_num_1">éventuellement d'une défragmentation de la base&#160;:<br /></p>
                                             </li>
                                         </ol>
-                                        <p>&#160;</p>
-                                        <p>Téléchargez le <a href="WD_SQL_PlandeMaintenance.txt" target="_blank">script au format .txt pour une base SQL<br /></a></p>
+                                        <blockquote>
+                                            <p>-- Plan de maintenance V2 (Optimisé)</p>
+                                            <p>-- Mise à jour : 2026</p>
+                                            <p>DECLARE @BdName nvarchar(100) = N'watchdocstats'</p>
+                                            <p>DECLARE @BackupPath nvarchar(100) = N'c:\backupDB\'</p>
+                                            <p>DECLARE @FullBackupPath nvarchar(150)</p>
+                                            <p>DECLARE @BackupName nvarchar(150)</p>
+                                            <p>DECLARE @TimeTable table( Step int, Fonction nvarchar(20), Datestart datetime, temps VARCHAR(8))</p>
+                                            <p>-- 1. SAUVEGARDE AVEC COMPRESSION</p>
+                                            <p>SET @BackupName = @BdName + '_Full_' + CONVERT(varchar(2), (DATEPART(wk,GETDATE())%4)) + '.bak'</p>
+                                            <p>SET @FullBackupPath = @BackupPath + @BackupName</p>
+                                            <p>INSERT INTO @TimeTable(Step, Fonction, Datestart) VALUES (1, 'Backup', GETDATE())</p>
+                                            <p>BACKUP DATABASE @BdName TO DISK = @FullBackupPath</p>
+                                            <p>WITH NOFORMAT, INIT, NAME = @BdName, SKIP, NOREWIND, NOUNLOAD, COMPRESSION, STATS = 10</p>
+                                            <p>UPDATE @TimeTable SET temps = CONVERT(VARCHAR(8), (GETDATE() - Datestart), 108) WHERE Step = 1</p>
+                                            <p>-- 2. SUPPRESSION DES DONNÉES ANCIENNES (BATCH)</p>
+                                            <p>INSERT INTO @TimeTable(Step, Fonction, Datestart) VALUES (2, 'Purge', GETDATE())</p>
+                                            <p>-- Garde le système de boucle Top (2000) car il évite de saturer les logs de transaction</p>
+                                            <p>DECLARE @Rows INT = 1</p>
+                                            <p>WHILE @Rows &gt; 0</p>
+                                            <p>BEGIN</p>
+                                            <p>DELETE TOP (5000) FROM watchdocstats.dbo.documents WHERE docdateoperation &lt; DATEADD(year, -2, GETDATE())</p>
+                                            <p>SET @Rows = @@ROWCOUNT</p>
+                                            <p>END</p>
+                                            <p>-- (Répéter pour incidents et queuescounters si nécessaire)</p>
+                                            <p>UPDATE @TimeTable SET temps = CONVERT(VARCHAR(8), (GETDATE() - Datestart), 108) WHERE Step = 2</p>
+                                            <p>-- 3. VÉRIFICATION D'INTÉGRITÉ (CRITIQUE)</p>
+                                            <p>INSERT INTO @TimeTable(Step, Fonction, Datestart) VALUES (3, 'Check Integrity', GETDATE())</p>
+                                            <p>DBCC CHECKDB (@BdName) WITH NO_INFOMSGS</p>
+                                            <p>UPDATE @TimeTable SET temps = CONVERT(VARCHAR(8), (GETDATE() - Datestart), 108) WHERE Step = 3</p>
+                                            <p>-- 4. OPTIMISATION DES INDEX (REORGANIZE PLUTÔT QUE REBUILD SI POSSIBLE)</p>
+                                            <p>INSERT INTO @TimeTable(Step, Fonction, Datestart) VALUES (4, 'Index Optiz', GETDATE())</p>
+                                            <p>-- Note : On utilise REBUILD ici pour rester simple, mais sans le SHRINK après !</p>
+                                            <p>EXEC ('ALTER INDEX ALL ON ' + @BdName + '.dbo.documents REBUILD WITH (ONLINE = ON)') -- ONLINE si Edition Enterprise</p>
+                                            <p>EXEC ('ALTER INDEX ALL ON ' + @BdName + '.dbo.incidents REBUILD')</p>
+                                            <p>EXEC ('ALTER INDEX ALL ON ' + @BdName + '.dbo.transactions REBUILD')</p>
+                                            <p>UPDATE @TimeTable SET temps = CONVERT(VARCHAR(8), (GETDATE() - Datestart), 108) WHERE Step = 4</p>
+                                            <p>-- 5. MISE À JOUR DES STATISTIQUES</p>
+                                            <p>INSERT INTO @TimeTable(Step, Fonction, Datestart) VALUES (5, 'Update Stats', GETDATE())</p>
+                                            <p>EXEC ('USE ' + @BdName + '; EXEC sp_updatestats')</p>
+                                            <p>UPDATE @TimeTable SET temps = CONVERT(VARCHAR(8), (GETDATE() - Datestart), 108) WHERE Step = 5</p>
+                                            <p>-- Logs Report</p>
+                                            <p>SELECT * FROM @TimeTable</p>
+                                        </blockquote>
+                                        <p>Téléchargez le <a href="WDMaintenance.sql" target="_blank">script pour une base SQL<br /></a></p>
+                                        <h2>Base de données PostgreSQL</h2>
+                                        <h3>Prérequis</h3>
+                                        <p>Vérifiez les prérequis suivants avant de créer le script&#160;: </p>
+                                        <ul>
+                                            <li>
+                                                <p><b>l'Autovacuum :</b> assurez-vous qu'il est activé dans votre fichier postgresql.conf afin d'éviter que la base ne sature au quotidien&#160;;</p>
+                                            </li>
+                                            <li>
+                                                <p><b>l'extension pg_repack :</b> si le volume de données est important et qu'il n'est pas possible  de bloquer les tables avec un REINDEX, pg_repack est l'outil standard pour reconstruire tables et index en ligne sans verrouillage ;</p>
+                                            </li>
+                                            <li>
+                                                <p><b>checkpoints&#160;:</b> PostgreSQL gère l'intégrité via des "Checkpoints". Il n'y a pas d'équivalent exact au DBCC CHECKDB (de MS SQL) car PostgreSQL vérifie l'intégrité au moment de l'écriture/lecture (Checksums de pages).</p>
+                                            </li>
+                                        </ul>
+                                        <h3>Procédure de création du script</h3>
+                                        <p>Pour exécuter le plan de maintenance par tâche planifiée, créez un script (.bat) dans un éditeur de texte&#160;: </p>
+                                        <ol>
+                                            <li value="1">
+                                                <p class="Liste_num_1">sur le serveur Postgre SQL<sup>®</sup>, ouvrez un éditeur de texte (de type MS Notepad)&#160;; </p>
+                                            </li>
+                                            <li value="2">
+                                                <p class="Liste_num_1">saisissez le script suivant&#160;:</p>
+                                                <p id="code"><span style="background-color: #000000; color: #ffffff;">Sqlcmd –e -i C:\BackupDATA\WDmaintenance.pgsql -o C:\BackupDATA\logs.txt</span>
+                                                </p>
+                                                <p class="Liste_num_1">Dans ce code&#160;:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_2">le chemin de l'argument<strong> -i</strong> spécifie l'emplacement du script de maintenance&#160;; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2">le chemin de l'argument <strong>-o</strong> spécifie l'emplacement où sont enregistrés les fichiers traces (logs).<br /></p>
+                                                    </li>
+                                                </ul>
+                                                <p class="Liste_puce_2">N.B.: pour plus d'information sur les PostgreSQL, consultez <a href="https://docs.postgresql.fr/12/sql-commands.html" target="_blank">https://docs.postgresql.fr/12/sql-commands.html</a><br /></p>
+                                            </li>
+                                        </ol>
+                                        <ol data-mc-continue="true">
+                                            <li value="3">
+                                                <p class="Liste_num_1">enregistrez le fichier au format "<strong>.bat</strong>"&#160;;</p>
+                                            </li>
+                                            <li value="4">
+                                                <p class="Liste_num_1">cliquez sur le fichier<strong>.bat</strong> pour lancer la maintenance.</p>
+                                                <p>&#160;</p>
+                                                <p>-- Plan de maintenance PostgreSQL V1</p>
+                                                <p>-- Cible : watchdocstats</p>
+                                                <p>-- 1. ANALYSE DE LA BASE (Mise à jour des statistiques pour l'optimiseur)</p>
+                                                <p>-- Aide PostgreSQL à choisir les meilleurs plans d'exécution</p>
+                                                <p>ANALYZE;</p>
+                                                <p>-- 2. PURGE DES DONNÉES ANCIENNES (&gt; 2 ans)</p>
+                                                <p>-- En PostgreSQL, DELETE est efficace, mais un VACUUM doit suivre.</p>
+                                                <p>DELETE FROM documents WHERE docdateoperation &lt; NOW() - INTERVAL '2 years';</p>
+                                                <p>DELETE FROM incidents WHERE incdate &lt; NOW() - INTERVAL '2 years';</p>
+                                                <p>DELETE FROM queuescounters WHERE cntdate &lt; NOW() - INTERVAL '2 years';</p>
+                                                <p>-- 3. VACUUM (Nettoyage des espaces vacants laissés par la purge)</p>
+                                                <p>-- Le VACUUM ANALYZE libère l'espace interne et met à jour les stats après purge.</p>
+                                                <p>VACUUM ANALYZE documents;</p>
+                                                <p>VACUUM ANALYZE incidents;</p>
+                                                <p>VACUUM ANALYZE queuescounters;</p>
+                                                <p>-- 4. REINDEX (Si la base est très sollicitée en écriture)</p>
+                                                <p>-- Optionnel : à ne faire qu'une fois par semaine car cela bloque l'écriture sur la table.</p>
+                                                <p>-- Sur les versions récentes (12+), on peut ajouter CONCURRENTLY pour ne pas bloquer.</p>
+                                                <p>REINDEX TABLE documents;</p>
+                                                <p>REINDEX TABLE incidents;</p>
+                                                <p>&#160;</p>
+                                                <p>Téléchargez le <a href="WDmaintenance.pgsql" target="_blank">script pour une base PostgreSQL</a>.</p>
+                                            </li>
+                                        </ol>
                                     </div>
                                     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
                                     </script>
