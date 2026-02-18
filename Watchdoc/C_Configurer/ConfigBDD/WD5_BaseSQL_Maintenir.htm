@@ -187,7 +187,8 @@
                                         <p>Dans la mesure où les données de la base varient, il arrive qu'au fil du temps, le traitement des requêtes soit ralenti en raison d'une fragmentation des index. Pour éviter cet inconvénient, nous vous recommandons de nettoyer régulièrement votre base en suivant le plan de maintenance présenté.</p>
                                         <p>&#160;</p>
                                         <p>Cette base de données ne dispose pas de plan de maintenance par défaut. Il est donc nécessaire de concevoir un plan de maintenance à l'aide d'une requête SQL / PostgreSQL&#160;et d'un script exécutable.</p>
-                                        <p>Il est recommandé d'exécuter ce script toutes les semaines.</p>
+                                        <p>Il est recommandé d'exécuter ce script toutes les semaines.<br /><br /></p>
+                                        <fieldset class="orange">Les scripts fournis sont conçus pour un environnement de&#160;taille moyenne.&#160;Dans le cas où vous mettez à jour la base dans un environnement plus important, veillez à adapter ces scripts afin d'éviter une saturation de l'espace disque ou une saturation des journaux de transactions qui pourraient entraîner un arrêt du serveur SQL/PostgreSQL.<br />Pensez, par exemple, à ajouter une pause dans la purge (WAITFOR DELAY), à gérer le log en ajoutant des BACKUP LOG&#160;dans les itérations de la boucle, à vérifier le taux de fragmentation des index et à utiliser un lecteur dédié où enregistrer les fichiers de sauvegarde.</fieldset>
                                         <h2>Base de données MS&#160;SQL</h2>
                                         <h3>Procédure de création du script</h3>
                                         <p>Pour exécuter le plan de maintenance par tâche planifiée, créez un script (.bat) dans un éditeur de texte&#160;: </p>
