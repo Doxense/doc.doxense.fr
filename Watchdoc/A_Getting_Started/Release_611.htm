@@ -263,14 +263,14 @@
                                                 <li style="font-size: 12pt;">Watchdoc v. 6.1 nécessite une nouvelle licence, qui inclut la licence WSC (<a href="https://downloads.doxense.fr/doc.doxense/DOX_SUP_FDL_FormulaireDemandeLicences_FR.docx" target="_blank" title="Lien vers le formulaire de demande de licence" alt="Lien vers le formulaire de demande de licence">formulaire de demande de licence</a> à adresser  à l'équipe Support  via le site <a href="https://connect.doxense.com/hc/fr" target="_blank">Connect</a>).&#160;</li>
                                                 <li style="font-size: 12pt;">WSC v. 6.1 requiert la <a href="../F_WSC/WSC6.1.x_Ajouter_Pilote.htm" target="_blank">réinstallation à l'aide de DriverPackageExtractor</a> des pilotes installés dans des versions antérieures</li>
                                                 <li style="font-size: 12pt;">Watchdoc v. 6.1 requiert la version <strong>4.8</strong> du MS&#160;.NET Framework (<a href="https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48" target="_blank" title="Link to the Microsoft web site" alt="Link to the Microsoft web site">à télécharger ici</a>).</li>
-                                                <li style="font-size: 12pt;">Watchdoc v. 6.1 requiert Microsoft Visal C++ 2013 (<a href="https://www.microsoft.com/fr-fr/download/details.aspx?id=40784" target="_blank" title="Link to the Microsoft web site" alt="Link to the Microsoft web site">à télécharger ici</a>).</li>
+                                                <li style="font-size: 12pt;">Watchdoc v. 6.1 requiert Microsoft Visual C++ 2013 (<a href="https://www.microsoft.com/fr-fr/download/details.aspx?id=40784" target="_blank" title="Link to the Microsoft web site" alt="Link to the Microsoft web site">à télécharger ici</a>).</li>
                                                 <li style="font-size: 12pt;">Nous ne recommandons pas l'utilisation de l'authentification par <strong>code PUK</strong>. En conséquence, depuis la version 6.1.0.5273, ce mode d'authentification est désactivé par défaut lors de la configuration d'un annuaire.&#160;Cette désactivation n'a aucune incidence en cas de mise à jour depuis une version où ce mode d'authentification est déjà configuré.</li>
                                                 <li style="font-size: 12pt;">Nous ne recommandons pas l'installation en mode déporté (serveurs web IIS et Watchdoc différents). En conséquence, entre les versions 6.1.0.5221 et 6.1.0.5318, le port 5744 est automatiquement fermé et doit être configuré (cf.&#160;<a href="../I_ResolutionDePannes/ADE_Gestion_Port5744.htm" target="_blank">Configurer le port 5744</a>).
                </li>
                                             </ul>
                                         </fieldset>
                                         <br />
-                                        <h2 style="color: #000000;">Watchdoc/WSC <span class="mc-variable Versions.Watchdoc_WSC&#160;6.0 variable">6.1.1.5528</span>, WPC for Windows <span class="mc-variable Versions.WPC_for_Windows variable">7.0.5979</span> et Skyprint <span class="mc-variable Versions.Skyprint variable">7.0.5979</span> - 18/02/2026</h2>
+                                        <h2 style="color: #000000;">Watchdoc/WSC <span class="mc-variable Versions.Watchdoc_WSC&#160;6.0 variable">6.1.1.5528</span>, WPC for Windows et Skyprint <span class="mc-variable Versions.Skyprint variable">7.0.5979</span> - 18/02/2026</h2>
                                         <p style="font-weight: bold;color: #000000;">Améliorations</p>
                                         <ul style="font-size: 12pt;">
                                             <li style="font-size: 12pt;"><b>Watchdoc :</b>
@@ -284,10 +284,8 @@
                                                 </ul>
                                             </li>
                                             <li style="font-size: 12pt;"><b>WSC :</b> <ul style="font-size: 12pt;"><li style="font-size: 12pt;">lors de la propagation des packages de mise à jour, clarification du message d'erreur "Security check failed" causé par une absence de droits d'écriture et de lecture sur les dossiers de stockage</li><li style="font-size: 12pt;">dans l'interface de configuration du serveur, il n'est plus possible de configurer WSC&#160;avec un port non-sécurisé (5757), configuration qui générait des messages d'erreur "BadRequest"</li><li style="font-size: 12pt;">clarification des libellés et messages d'erreurs dans les interfaces d'import de fichiers .CVS</li></ul></li>
-                                            <li style="font-size: 12pt;"><b>WPC for Windows :</b> <ul style="font-size: 12pt;"><li style="font-size: 12pt;">correction du port pris en compte par le service de découverte (discover) pour privilégier le port sécurisé (5753 par défaut) au lieu d'un port non-sécurisé</li><li><p style="font-size: 12pt;">lors du changement du template d'une file universelle (depuis le serveur master), répercussion instantanée sur les WPC installés sur les postes clients
-</p></li></ul></li>
-                                            <li style="font-size: 12pt;"><b>WEScan :</b> lors de la onfiguration d'un profil WES, il est désormais impossible de valider le profil si aucun profil de numérisation n'est sélectionné alors que la fonction Numérisation est activée
-</li>
+                                            <li style="font-size: 12pt;"><b>WPC for Windows :</b> <ul style="font-size: 12pt;"><li><p>correction du port pris en compte par le service de découverte (discover) pour privilégier le port sécurisé (5753 par défaut) au lieu d'un port non-sécurisé</p></li><li><p>lors du changement du template d'une file universelle (depuis le serveur master), répercussion instantanée sur les WPC installés sur les postes clients</p></li></ul></li>
+                                            <li style="font-size: 12pt;"><b>WEScan :</b> lors de la configuration d'un profil WES, il est désormais impossible de valider le profil si aucun profil de numérisation n'est sélectionné alors que la fonction Numérisation est activée</li>
                                         </ul>
                                         <p style="font-weight: bold; color: #000000;">&#160;</p>
                                         <p style="font-weight: bold; color: #000000;">Correctifs</p>
@@ -295,8 +293,31 @@
                                             <li style="font-size: 12pt;"><b>Watchdoc :</b> <ul style="font-size: 12pt;"><li style="font-size: 12pt;">dans les notifications par mail, il arrivait que l'heure indiquée soit erronée (décalage d'une heure).&#160;Désormais, la notification s'ajuste à l'heure locale</li><li style="font-size: 12pt;">dans la page "Mon compte", affichage de la prévisualisation de tous les travaux d'impression, même dans le cas où le chiffrement est activé sur Watchdoc, ce qui n'était pas possible dans les versions précédentes</li><li style="font-size: 12pt;">correction d'une anomalie d'affichage du code PUK dans la page "Mon compte" dans le cas où l'utilisateur ne dispose pas de code PIN</li></ul></li>
                                             <li style="font-size: 12pt;"><b>WPC for Windows :</b> correction d'une anomalie qui empêchait le traitement de documents volumineux (&gt; 150 pages).&#160;Lorsque l'utilisateur lançait une demande d'impression, le document apparaissait à l'état "Envoyé", figurait dans la liste des travaux sur le WES mais ne pouvait pas être imprimé</li>
                                             <li style="font-size: 12pt;"><b>WEScan :</b> modification du composant gérant l'interaction entre la JSON&#160;DB et SQL&#160;pour éviter la suppression de numérisations lors de l'activation de la fonction ScanToFolder</li>
-                                            <li style="font-size: 12pt;"><b>WSC/PNP : </b>&#160;<ul style="font-size: 12pt;"><li><p>lors de la migration d'une file d'un serveur à l'autre à l'aide de Plug and Print, un message indiquait "Migration en échec : the queue of id [N°_ID] already exists!" lorsqu'une file de type proxy existait.&#160;Désormais, la file proxy est supprimée avant le transfert</p></li><li><p>il arrivait que le numéro de version inscrit dans le fichier de sauvegarde soit erroné.&#160;Désormais, le bon numéro de version est inscrit</p></li><li style="font-size: 12pt;">dans la gestion des comptes Invités, contrôle du champ Email rendant cette valeur facultative et permettant d'éviter les doublons (adresse email attribuée à deux invités différents)</li></ul></li>
-                                            <li style="font-size: 12pt;"><b>WES Sharp: </b>&#160;<ul style="font-size: 12pt;"><li><p>prise en compte de la langue configurée sur le périphérique pour afficher les messages du WES lorsque l'authentification par badge est activée</p></li><li><p>réactivation du logo comme bouton d'action pour accéder aux actions spéciales sur l'écran du périphérique lorsque l'authentification par badge est activée.</p></li></ul></li>
+                                            <li>
+                                                <p style="font-weight: bold;">WSC/PNP : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p>lors de la migration d'une file d'un serveur à l'autre à l'aide de Plug and Print, un message indiquait "Migration en échec : the queue of id [N°_ID] already exists!" lorsqu'une file de type proxy existait. Désormais, la file proxy est supprimée avant le transfert</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>il arrivait que le numéro de version inscrit dans le fichier de sauvegarde soit erroné. Désormais, le bon numéro de version est inscrit dans la gestion des comptes Invités, </p>
+                                                    </li>
+                                                    <li>
+                                                        <p>contrôle du champ Email rendant cette valeur facultative et permettant d'éviter les doublons (adresse email attribuée à deux invités différents)</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p style="font-weight: bold;">WES Sharp: </p>
+                                                <ul style="font-size: 12pt;">
+                                                    <li>
+                                                        <p>prise en compte de la langue configurée sur le périphérique pour afficher les messages du WES lorsque l'authentification par badge est activée</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>réactivation du logo comme bouton d'action pour accéder aux actions spéciales sur l'écran du périphérique lorsque l'authentification par badge est activée</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
                                         </ul>
                                         <h2 style="color: #000000;">Watchdoc/WSC <span>6.1.1.5514,</span> WPC for Windows 7.0.<span>5973</span> et Skyprint 7.0.<span>5973 </span>- 04/02/2026</h2>
                                         <p style="font-weight: bold;color: #000000;">Améliorations</p>
@@ -344,7 +365,7 @@
                                         <p style="font-weight: bold;color: #000000;">Amélioration</p>
                                         <ul>
                                             <li>
-                                                <p><b>Watchdoc :</b> suppression de certaines couleurs (jaune, notamment) qui rendaient difficile la lecture des initiales dans les identicones</p>
+                                                <p><b>Watchdoc :</b> suppression de certaines couleurs (jaune, notamment) qui rendaient difficile la lecture des initiales dans les identicônes</p>
                                             </li>
                                             <li>
                                                 <p><b>WPC&#160;for Windows :</b> </p>
@@ -2633,7 +2654,7 @@
                                                         <p>optimisation des requêtes SQL émises dans le cas d’une configuration interserveur </p>
                                                     </li>
                                                     <li>
-                                                        <p>l'icône d’identité (identicone) Watchdoc a été intégrée à la page “Mon compte"</p>
+                                                        <p>l'icône d’identité (identicône) Watchdoc a été intégrée à la page “Mon compte"</p>
                                                     </li>
                                                 </ul>
                                             </li>
