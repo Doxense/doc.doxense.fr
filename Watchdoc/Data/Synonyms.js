@@ -34,6 +34,8 @@ xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"email\" To=
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"hacher\" To=\"hash\" FromStem=\"hach\" />';
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"hachage\" To=\"hasharg\" FromStem=\"hachag\" />';
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"haché\" To=\"hash\" FromStem=\"hach\" />';
+xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"compatible\" To=\"compatibil\" FromStem=\"compatibl\" />';
+xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"marque\" To=\"constructeur\" FromStem=\"marqu\" />';
 xmlSynonymsData += '    </Directional>';
 xmlSynonymsData += '</MadCapSynonyms>';
 MadCap.Utilities.Xhr._FilePathToXmlStringMap.Add('Synonyms', xmlSynonymsData);
