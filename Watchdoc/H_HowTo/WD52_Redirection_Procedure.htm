@@ -202,15 +202,13 @@
                                         <h1><a name="aanchor38"></a>
                                             <MadCap:concept term="WD" />Watchdoc - Rediriger les travaux d'impression </h1>
                                         <h2>Principe</h2>
-                                        <p>En cas d'indisponibilité d'une file physique (périphérique d'impression), les travaux ne peuvent être imprimés. Dans ce cas, pour éviter aux utilisateurs d'avoir à attendre la remise en état du périphérique, Watchdoc offre une fonction de redirection permettant de solliciter d'autres périphériques du parc qui prennent alors le relais.</p>
+                                        <p>En cas d'indisponibilité d'une file physique (périphérique d'impression), les travaux ne peuvent être imprimés. Pour éviter aux utilisateurs d'attendre le dépannage du périphérique, Watchdoc propose d'envoyer le travail d'impression vers d'autres périphériques du parc.</p>
                                         <p>&#160;</p>
-                                        <p>La redirection des travaux d'une file vers une autre file n'est possible qu'entre files compatibles.</p>
-                                        <p>Pour permettre la redirection d'une file vers l'autre, il convient donc d'avoir indiqué préalablement à Watchdoc les compatibilités entre files (notamment en matière de pilotes lorsque les périphériques d'impression sont de marques différentes). </p>
+                                        <p><span style="font-size: 12pt;">La redirection des travaux d'une file vers une autre file n'est possible qu'entre files </span><b style="font-size: 12pt;">compatibles</b><span style="font-size: 12pt;">. Pour permettre la redirection, il faut donc avoir indiqué préalablement à Watchdoc les compatibilités entre files (notamment en matière de pilotes lorsque les périphériques d'impression sont de marques différentes).</span> </p>
+                                        <p>.</p>
+                                        <p>Les files (virtuelles et physiques) compatibles peuvent être associées dans un  "Pool de travaux" : ainsi, lorsqu'une file (périphérique) est indisponible, toutes les autres files du pool peuvent être sollicitées.</p>
                                         <p>&#160;</p>
-                                        <p>Dans les versions antérieures à Watchdoc 5.2, des files "cibles" étaient associées aux files physiques pour être sollicitées en cas d'indisponibilité de cette file physique.</p>
-                                        <p>La version 5.2 introduit le concept de "Pool" sur lequel repose la redirection : les files virtuelles sont associées à un pool appelé <strong>Job ticket pool</strong>.&#160;De même, les files physiques sont associées à un pool qui constitue alors une source de travaux que ces files sont susceptibles d'imprimer. Ainsi, lorsqu'un périphérique est indisponible, tous les autres périphériques associés au même pool peuvent être sollicités.</p>
-                                        <p>&#160;</p>
-                                        <p>Watchdoc V5.2 est doté de deux pools par défaut pouvant répondre à la plupart des cas d'usage :</p>
+                                        <p>Watchdoc contient  deux pools par défaut pouvant répondre à la plupart des cas d'usage :</p>
                                         <ul>
                                             <li>
                                                 <p class="Liste_puce_2"><strong>#global</strong>
@@ -221,51 +219,56 @@
                                                 </p>
                                             </li>
                                         </ul>
-                                        <p>Outre ces pools par défaut, vous pouvez créer autant de pools que nécessaire.</p>
+                                        <p>Outre ces pools par défaut, vous pouvez créer autant de pools que nécessaire (cf.&#160;<a href="../C_Configurer/ConfigPool/ConfigPool_Procedure.htm" target="_blank">Créer un pool</a>).<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/Config_Files_Redirections_V541.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="895" data-mc-height="97" src="../Z_Resources/Images/02_Captures/Config_Files_Redirections_V541.png" tabindex="" style="max-width: 1000px;" /></a></p>
                                         <h2>Procédure</h2>
-                                        <h3>Configurer le pool</h3>
-                                        <p>Si les deux pools #Local et #Global configurés par défaut dans Watchdoc ne suffisent pas, procédez comme suit pour créer d'autres pools&#160;:</p>
+                                        <h3>Accéder à l'interface</h3>
+                                        <p>Si les deux pools #Local et #Global configurés par défaut dans Wathdoc ne suffisent pas, vous pouvez en créer d'autres.</p>
                                         <ol>
                                             <li value="1">
-                                                <p class="Liste_num_1">depuis le<strong> Menu Principal</strong> de Watchdoc, section <strong>Exploitation</strong>, cliquez sur <strong>Files d'impression, groupes de files et Pools</strong>&#160;;<br /><br /><img src="../Z_Resources/Images/02_Captures/Config_Files_AccesInterface_v61_700x310.png" style="width: 700;height: 310;" /></p>
-                                                <p>&#160;</p>
+                                                <p class="Liste_num_1">Depuis le<strong> Menu Principal</strong> de Watchdoc, section <strong>Exploitation</strong>, cliquez sur <strong>Files d'impression, groupes de files et Pools</strong>&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/Config_Files_AccesInterface_v61.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1686" data-mc-height="746" src="../Z_Resources/Images/02_Captures/Config_Files_AccesInterface_v61.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a><br /><br /></p>
                                             </li>
                                             <li value="2">
-                                                <p class="Liste_num_1"> dans l'interface <strong>Files d'impression, groupes de files &amp; Pools</strong>, cliquez sur l'onglet <strong>Pools de travaux</strong>&#160;; </p>
+                                                <p class="Liste_num_1">dans l'interface <strong>Files d'impression, groupes de files &amp; Pools</strong>, cliquez sur l'onglet <strong>Pools de travaux</strong>&#160;; </p>
                                             </li>
                                             <li value="3">
-                                                <p class="Liste_num_1">dans la liste s'affichent les deux pools par défaut #Local et #Global ; <br /><br /><img src="../Z_Resources/Images/02_Captures/Config_Pool_Acces_700x148.png" style="width: 700;height: 148;" /><br /></p>
+                                                <p class="Liste_num_1">dans la liste s'affichent les deux pools par défaut #Local et #Global ; <br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/Config_Pool_Acces.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1715" data-mc-height="362" src="../Z_Resources/Images/02_Captures/Config_Pool_Acces.png" tabindex="" style="height: auto;width: 700px;max-width: 1000px;" /></a><br /></p>
                                             </li>
-                                            <li value="4">
-                                                <p class="Liste_num_1">cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Creer_27x26.png" style="width: 27;height: 26;" /> <strong>Créer un pool</strong> ;</p>
+                                        </ol>
+                                        <h3>Créer le pool</h3>
+                                        <ol>
+                                            <li value="1">
+                                                <p class="Liste_num_1">Dans l'interface <strong>Créer un pool</strong>, remplissez les champs suivants&#160;: </p>
                                             </li>
-                                            <li value="5">
-                                                <p class="Liste_num_1">dans l'interface <strong>Créer un pool</strong>, remplissez les champs suivants&#160;: </p>
-                                            </li>
-                                            <blockquote>
-                                                <ul>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Identifiant </strong>: saisissez un identifiant pour votre pool. Utilisez pour cela les majuscules, les minuscules, les chiffres ainsi que le séparateur "_" pour composer un identifiant d'une longueur maximale de 64 caractères. Une fois enregistré, cet identifiant unique dans le système ne pourra plus être modifié.</p>
-                                                    </li>
-                                                    <p>Exemple : "liverpool" pour tous les périphériques disponibles dans la filiale de Liverpool et "Etage_1" pour tous les périphériques localisés au 1er étage d'un bâtiment.</p>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Nom </strong>: saisissez un nom explicite pour le pool créé. Ce nom est celui qui s'affiche dans les interfaces de paramétrage ; </p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Commentaire </strong>: si nécessaire, décrivez plus précisément le pool en indiquant, par exemple, sa nature, sa localisation, sa raison d'être, sa date de création, le public auquel il s'adresse, etc.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Mode de partage</strong>: dans la liste, sélectionnez son mode de fonctionnement :</p>
-                                                        <p class="Liste_puce_2"> - <strong>Off :</strong> permet au pool de fonctionner uniquement avec les physiques installées sur le serveur et aux files virtuelles associées au serveur ne pourront être vues par d'autres serveurs ; </p>
-                                                        <p class="Liste_puce_2"> - <strong>Peer to peer :</strong> permet au serveur d'interroger d'autres serveurs du réseau à la recherche de travaux d'impression en attente. Ce fonctionnement pouvant induire des latences (dues à des lenteurs du réseau, à des serveurs hors-ligne, etc.), il est recommandé de n'activer ce mode de partage que lorsqu'il est vraiment nécessaire.&#160;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Tags </strong>: si nécessaire, saisissez l'un des tags assigné au serveur en guise de filtre de sélection complémentaire. Ce ou ces tags, utilisés dans les filtres ou dans des scénarios de déploiement spécifiques, permettent d'inclure ou d'exclure certains périphériques du pool en fonction d'un critère précis (par exemple "Salariés" permet d'exclure du pool les périphériques estampillés du tag "Managers" ou "!offline" permet de ne pas tenir compte des périphériques indisponibles afin qu'ils ne ralentissent pas le temps de traitement). </p>
-                                                    </li>
-                                                </ul>
-                                            </blockquote>
-                                            <li value="6">
-                                                <p class="Liste_num_1">cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Valider_25x24.png" style="width: 25;height: 24;" /> pour valider la création du pool.</p>
+                                            <ul>
+                                                <li>
+                                                    <p class="Liste_puce_1"><strong>Identifiant </strong>: saisissez un identifiant d'une longueur maximale de 64 caractères (à l'aide de majuscules, minuscules, chiffres et séparateur "_"). Une fois enregistré, cet identifiant ne peut plus être modifié.</p>
+                                                </li>
+                                                <p>Exemple : "Liverpool_1" pour tous les périphériques disponibles dans la filiale de Liverpool et "Etage_1" pour tous les périphériques localisés au 1er étage d'un bâtiment.</p>
+                                                <li>
+                                                    <p class="Liste_puce_1"><strong>Nom </strong>: saisissez un nom (qui s'affiche dans les interfaces de paramétrage)&#160;; </p>
+                                                </li>
+                                                <li>
+                                                    <p class="Liste_puce_1"><strong>Commentaire </strong>: si nécessaire, décrivez plus précisément le pool en indiquant, (par ex, précisez sa nature, sa localisation, sa raison d'être, sa date de création, le public auquel il s'adresse, etc.).</p>
+                                                </li>
+                                                <li>
+                                                    <p class="Liste_puce_1"><strong>Mode de partage</strong>: dans la liste, sélectionnez son mode de fonctionnement :</p>
+                                                    <ul>
+                                                        <li>
+                                                            <p class="Liste_puce_2"> <strong>Off :</strong> permet au pool de fonctionner uniquement avec les files physiques installées sur le serveur; les files virtuelles associées au serveur ne seront pas vues par d'autres serveurs ; </p>
+                                                        </li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li>
+                                                            <p class="Liste_puce_2"><strong>Peer to peer :</strong> permet au serveur d'interroger d'autres serveurs du réseau à la recherche de travaux d'impression en attente. Ce fonctionnement pouvant induire des latences (dues à des lenteurs du réseau, à des serveurs hors-ligne, etc.), il est recommandé de n'activer ce mode de partage que lorsqu'il est vraiment nécessaire.&#160;</p>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <p class="Liste_puce_1"><strong>Tags </strong>: si nécessaire, saisissez l'un des tags assignés au serveur en guise de filtre de sélection complémentaire. Ce ou ces tags, utilisés dans les filtres ou dans des scénarios de déploiement spécifiques, permettent d'inclure ou d'exclure certains périphériques du pool en fonction d'un critère précis (par exemple "Salariés" permet d'exclure du pool les périphériques estampillés avec le tag "Managers" ; "!offline" permet de ne pas tenir compte des périphériques indisponibles afin qu'ils ne ralentissent pas le temps de traitement). </p>
+                                                </li>
+                                            </ul>
+                                            <li value="2">
+                                                <p class="Liste_num_1">cliquez sur le bouton Créer ou <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Valider_24x23.png" style="width: 24;height: 23;" /> pour valider la création du pool : <br /><br /><img src="../C_Configurer/ConfigPool/Config_Pool_Creer.png" /></p>
                                                 <p>&#160;</p>
                                             </li>
                                         </ol>
