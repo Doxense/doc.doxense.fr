@@ -198,7 +198,7 @@
                                         </div>
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
-                                        <p><a name="aanchor262"></a>
+                                        <p><a name="aanchor264"></a>
                                             <MadCap:concept term="ADE" /><span style="font-size: 24pt; font-weight: bold; color: #ff803b;">Dépannages</span>
                                         </p>
                                         <p>&#160;</p>
@@ -1227,6 +1227,34 @@
                                             </div>
                                         </div>
                                         <h3 id="WESToshiba" data-magellan-target="WESToshiba">WES&#160;Toshiba</h3>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WES&#160;Toshiba - Impossibilité de s'authentifier par badge  - Message d'erreur : "?common/error/couldnotsetcookie?" - Février 2026</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> avec Watchdoc 6.1.0.4940, alors que WES Toshiba est correctement installé sur des périphériques,  lorsqu’un utilisateur tente de s’authentifier par badge, l’authenfication n’a pas lieu et un message d’erreur s’affiche sur l'écran du périphérique : ?common/error/couldnotsetcookie?</p>
+                                                <p><strong>Cause :</strong> dans les traces, il semble que le “session id” ne soit pas pris en compte.</p>
+                                                <p><strong>Résolution :</strong> Prérequis : vérifiez que le périphérique est équipé d’un firmware supérieur à TS20SD0W1816.</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>désinstallez le WES sur le périphérique</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>dans l'interface web d'administrationu périphérique, rendez-vous dans administration &gt; Setub &gt;ODCA</p>
+                                                    </li>
+                                                    <li style="text-align: left;" value="3">
+                                                        <p>dans la section <b>Evenements de notification</b>, cliquez sur <b>Supprimer tout</b> :</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>redémarrez le périphérique</p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p>depuis l'interface d'administration de Watchdoc, réinstallez le WES</p>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p>vérifiez que  l’authentification par badge fonctionne.</p>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <p>&#160;</p>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WES Toshiba.&#160;Lenteurs constatées sur le périphérique et impossibilité de s'authentifier - Novembre 2025.</a></span>
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> après mise à jour Watchdoc v. 6.1.1., les utilisateurs n'arrivent plus à s'authentifier depuis le WES&#160;: après saisie du code ou présentation du badge, le périphérique semble traiter l'information pendant environ 40 secondes, mais revient à l'interface d'accueil.&#160;<br />L'anomalie est résolue après redémarrage du périphérique, mais elle réapparaît très rapidement.&#160;<br /></p>

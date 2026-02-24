@@ -211,6 +211,8 @@
                                                     </li>
                                                     <li class="tree-node"><a href="#Travauxdenum%C3%A9risationfaxetphotocopienoncomptabilis%C3%A9s">Travaux de numérisation, fax et photocopie non comptabilisés</a>
                                                     </li>
+                                                    <li class="tree-node"><a href="#Impossibilit%C3%A9desauthentifierparbadgeMessagederreurcommonerrorcouldnotsetcookie">Impossibilité de s'authentifier par badge  - Message d'erreur : "?common/error/couldnotsetcookie?"</a>
+                                                    </li>
                                                     <li class="tree-node"><a href="#Impossibilit%C3%A9desauthentifierdepuisleWESLenteursconstat%C3%A9essurlep%C3%A9riph%C3%A9riqueNovembre2025">Impossibilité de s'authentifier depuis le WES - Lenteurs constatées sur le périphérique - Novembre 2025.</a>
                                                     </li>
                                                     <li class="tree-node"><a href="#MessagedanslinterfacedadministrationTopAccessDonn%C3%A9esdejournaleffac%C3%A9es">Message dans l'interface d'administration TopAccess : Données de journal effacées</a>
@@ -316,6 +318,39 @@
                                             </li>
                                             <li value="4">
                                                 <p class="Resultat" style="text-align: justify;">vérifiez que la procédure a réglé le problème.</p>
+                                            </li>
+                                        </ol>
+                                        <hr width="100%" size="0" align="center" />
+                                        <h2 id="ImpossibilitédesauthentifierparbadgeMessagederreurcommonerrorcouldnotsetcookie" data-magellan-target="ImpossibilitédesauthentifierparbadgeMessagederreurcommonerrorcouldnotsetcookie">Impossibilité de s'authentifier par badge  - Message d'erreur : "?common/error/couldnotsetcookie?"</h2>
+                                        <p style="font-size: 14pt;"><strong style="color: #000000;">Contexte</strong>
+                                        </p>
+                                        <p>Avec Watchdoc 6.1.0.4940, alors que WES Toshiba est correctement installé sur des périphériques,  lorsqu’un utilisateur tente de s’authentifier par badge, l’authenfication n’a pas lieu et un message d’erreur s’affiche sur l'écran du périphérique : ?common/error/couldnotsetcookie?</p>
+                                        <p>&#160;</p>
+                                        <p style="font-size: 14pt;"><strong style="color: #000000;">Cause</strong>
+                                        </p>
+                                        <p style="font-size: 12pt;">Dans les traces, il semble que le “session id” ne soit pas pris en compte.</p>
+                                        <p style="font-size: 12pt;">&#160;</p>
+                                        <p style="font-size: 14pt;"><strong style="color: #000000;">Résolution</strong>
+                                        </p>
+                                        <p>Prérequis : vérifiez que le périphérique est équipé d’un firmware supérieur à TS20SD0W1816.</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>désinstallez le WES sur le périphérique</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>dans l'interface web d'administration du périphérique, rendez-vous dans administration &gt; Setub &gt;ODCA</p>
+                                            </li>
+                                            <li style="text-align: left;" value="3">
+                                                <p>dans la section <b>Evénements de notification</b>, cliquez sur <b>Supprimer tout</b> :<br /><br /><img src="Depanner_WES_SupprTout.png" /><br /></p>
+                                            </li>
+                                            <li style="text-align: left;" value="4">
+                                                <p>redémarrez le périphérique&#160;;</p>
+                                            </li>
+                                            <li value="5">
+                                                <p>depuis l'interface d'administration de Watchdoc, réinstallez le WES&#160;;</p>
+                                            </li>
+                                            <li value="6">
+                                                <p>vérifiez que  l’authentification par badge fonctionne.</p>
                                             </li>
                                         </ol>
                                         <hr width="100%" size="0" align="center" />

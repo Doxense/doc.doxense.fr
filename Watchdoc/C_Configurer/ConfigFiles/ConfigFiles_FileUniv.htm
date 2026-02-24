@@ -199,7 +199,7 @@
                                         </div>
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor448"></a>
+                                        <h1><a name="aanchor450"></a>
                                             <MadCap:concept term="WD" />Watchdoc - Files - Configurer une file universelle</h1>
                                         <h2>Principe</h2>
                                         <p>Une file universelle </p>
@@ -254,6 +254,26 @@ Les emplacements sont nécessaires à la fonctionnalité Watchdoc Print Client.<
                                             </li>
                                         </ol>
                                         <h2>Configurer la file</h2>
+                                        <h3>En bref</h3>
+                                        <p>Pour configurer une file universelle, vous pouvez vous contenter de compléter les champs suivants : </p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Informations générales &gt;&#160;<a href="#Identifiant">identifiant</a></p>
+                                            </li>
+                                            <li value="2">
+                                                <p>Informations générales &gt;&#160;<a href="#Identifiant">nom</a></p>
+                                            </li>
+                                            <li value="3">
+                                                <p>Informations générales &gt;&#160;<a href="#emplacements">emplacement</a></p>
+                                            </li>
+                                            <li value="4">
+                                                <p>Redirections &gt; <a href="#Redirections">Pool de travaux</a></p>
+                                            </li>
+                                            <li value="5">
+                                                <p>Plateforme &gt; <a href="#Plateforme">Tags supportés</a></p>
+                                            </li>
+                                        </ol>
+                                        <p>&#160;</p>
                                         <h3>Section Informations générales</h3>
                                         <p class="Liste_num_1">Complétez les zones suivantes : </p>
                                         <ul>
@@ -265,29 +285,44 @@ Les emplacements sont nécessaires à la fonctionnalité Watchdoc Print Client.<
                                             </li>
                                             <li>
                                                 <p class="Liste_puce_1"><strong>Groupe :</strong> associez la file à un  groupe prédéfini&#160;: </p>
+                                                <ul>
+                                                    <li>
+                                                        <p><b>Files externes :</b> groupe conçu pour rassembler les files réseaux non gérées par le serveur (par exemple, sur un serveur master, files gérées par les serveurs slaves) ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><b>Files personnelles :</b> groupe conçu pour rassembler les files associées à des périphériques USB gérés par des agents locaux&#160;;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><b>Files Réseaux :</b> files physiques détectables par Watchdoc sur le réseau ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><b>Files Universelles :</b> files dédiées à l'utilisation de WPC&#160;(for Android, for Chrome, for IOS, for Windows et Skyprint)&#160;;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><b>Files virtuelles :</b> files qui collectent  les travaux d'impression en vue de les envoyer vers une file réseau (périphérique d'impression) choisie par l'utilisateur lors du déblocage (impression à la demande).
+                        </p>
+                                                    </li>
+                                                </ul>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1"><strong><a name="ModeWD"></a>Mode </strong>: le mode "Universelle" est prédéfini</p>
-                                            </li>
-                                            <li>
-                                                <p>Emplacement : </p>
+                                                <p class="Liste_puce_1"><strong><a name="ModeWD"></a>Mode </strong>: le mode "Universelle" est prédéfini.</p>
                                             </li>
                                             <li>
                                                 <p><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term77">Emplacement<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>(anciennement "Géosites" dans les versions antérieures à la V6). Dans Watchdoc, un emplacement est un libellé appartenant à une liste structurée de sites géographiques permettant de localiser physiquement des éléments de configuration du parc d'impression (périphériques d'impression, serveurs, files, etc.). 
 La liste des emplacements est administrable depuis l'interface d'administration de Watchdoc.
-Les emplacements sont nécessaires à la fonctionnalité Watchdoc Print Client.</span></a> , dans l'arborescence des emplacements, sélectionnez celui auquel  la file universelle est associée.&#160;Si nécessaire, apportez des précisions relatives à l'emplacement.dans le champ <b>Description détaillée</b>.</p>
-                                                <ul style="font-size: 12pt;background-color: #ffff00;">
+Les emplacements sont nécessaires à la fonctionnalité Watchdoc Print Client.</span></a> , dans l'arborescence des <a name="emplacements"></a>emplacements, sélectionnez celui auquel  la file universelle est associée.&#160;Si nécessaire, apportez des précisions relatives à l'emplacement.dans le champ <b>Description détaillée</b>.</p>
+                                                <ul style="font-size: 12pt;">
                                                     <li style="font-size: 12pt;">
-                                                        <p style="background-color: #ffff00;">Convention de formatage du nom complet: indiquez la manière dont Watchdoc crée le nom complet <span style="background-color: #ffff00;"> de la file ou de l'emplacement ?</span>:</p>
+                                                        <p>Convention de formatage du nom complet : indiquez la manière dont Watchdoc crée le nom complet de la file</p>
                                                         <ul>
                                                             <li>
                                                                 <p>convention de nommage du groupe : utilisez la convention définie au niveau du groupe de files</p>
                                                             </li>
                                                             <li>
-                                                                <p>préfixer : le nom complet de la file est composé par le préfixe nom de l'emplacement, puis par le nom de la file ; </p>
+                                                                <p>préfixer : le nom complet de l'emplacement est  composé par le préfixe de l'emplacement qui précède; </p>
                                                             </li>
                                                             <li>
-                                                                <p>ne pas ajouter de préfixe : le nom de la file n'est pas complétée par le nom de l'emplacement.</p>
+                                                                <p>ne pas ajouter de préfixe : le nom de l'emplacement n'est pas complétée.</p>
                                                             </li>
                                                         </ul>
                                                     </li>
@@ -370,16 +405,34 @@ Le fait que les messages soient archivés sur le serveur fait que l'utilisateur 
                                             </li>
                                         </ul>
                                         <p>&#160;</p>
-                                        <h3>Section Redirections<br /><br /></h3>
-                                        <p class="Liste_num_1">Configurez les paramètres souhaités.</p>
+                                        <h3>Section <a name="Redirections"></a>Redirections</h3>
+                                        <p>En cas d'indisponibilité d'une file physique (périphérique d'impression), les travaux ne peuvent être imprimés. Pour éviter aux utilisateurs d'attendre le dépannage du périphérique, Watchdoc propose d'envoyer le travail d'impression vers d'autres périphériques du parc.</p>
+                                        <p>&#160;</p>
+                                        <p><span style="font-size: 12pt;">La redirection des travaux d'une file vers une autre file n'est possible qu'entre files </span><b style="font-size: 12pt;">compatibles</b><span style="font-size: 12pt;">. Pour permettre la redirection, il faut donc avoir indiqué préalablement à Watchdoc les compatibilités entre files (notamment en matière de pilotes lorsque les périphériques d'impression sont de marques différentes).</span> </p>
+                                        <p>.</p>
+                                        <p>Les files (virtuelles et physiques) compatibles peuvent être associées dans un  "Pool de travaux" : ainsi, lorsqu'une file (périphérique) est indisponible, toutes les autres files du pool peuvent être sollicitées.</p>
+                                        <p>&#160;</p>
+                                        <p>Watchdoc contient  deux pools par défaut pouvant répondre à la plupart des cas d'usage :</p>
+                                        <ul>
+                                            <li>
+                                                <p class="Liste_puce_2"><strong>#global</strong>
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_2"><strong>#local</strong>
+                                                </p>
+                                            </li>
+                                        </ul>
+                                        <p>Outre ces pools par défaut, vous pouvez créer autant de pools que nécessaire (cf.&#160;<a href="../ConfigPool/ConfigPool_Procedure.htm" target="_blank">Créer un pool</a>).<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Files_Redirections_V541.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="895" data-mc-height="97" src="../../Z_Resources/Images/02_Captures/Config_Files_Redirections_V541.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                        <p>&#160;</p>
+                                        <h3>Section <a name="Plateforme"></a>Plateforme</h3>
                                         <ol>
                                             <li value="1">
-                                                <p class="Liste_num_1">Si la configuration a lieu sur le serveur maître d'un domaine (configuration maître/esclaves), cochez la case <strong>Global</strong> si vous souhaitez répliquer la file sur tous les serveurs Watchdoc qui dépendent du serveur maître ;</p>
+                                                <p>Complétez la section <strong>Plateforme</strong> : <br />Cette section permet de préciser les plateformes WPC à partir desquelles la file  peut être utilisée : WPC&#160;for Android, for Chrome, for IOS, for Windows et /ou Skyprint.&#160;Cochez la ou les cases correspondant aux plateformes sur lesquelles la file est proposée :Windows : la file est proposée sur WPC&#160;for Windows ;Plateformes PDF&#160;: inclut tous les  WPC&#160;traitant des fichiers au format .pdf : for Chrome, for Android, for IOS&#160;et Skyprint. Activé : la file est proposée sur toutes les plateformes PDF&#160;; Désactivé : la file n'est pas proposée sur les plateformes PDF&#160;(aucun WPC&#160;PDF&#160;ne peut être sélectionné) ; Auto-détection : Watchdoc examine les capacités du périphérique pour proposer ou ne pas proposer la file ; Mobile : la file est proposée sur les WPC&#160;mobiles : for Android et IOS ; Android : la file est proposée sur WPC&#160;for Android ; IOS : la file est proposée sur WPC&#160;for IOS ; Skyprint : la file est proposée sur Skyprint.<br /><br /><img src="Config_Files_SectionPlateforme.png" /><br />N.B. : notez que si la file n'est associée à aucun pilote d'impression, elle n'est pas proposée à l'utilisateur.<br /></p>
                                             </li>
+                                        </ol>
+                                        <ol data-mc-continue="true">
                                             <li value="2">
-                                                <p>Complétez la section <strong>Plateforme</strong> : <br />Cette section permet de préciser les plateformes WPC à partir desquelles la file  peut être utilisée : WPC&#160;for Android, for Chrome, for IOS, for Windows et /ou Skyprint.&#160;Cochez la ou les cases correspondant aux plateformes sur lesquelles la file est proposée :Windows : la file est proposée sur WPC&#160;for Windows ;Plateformes PDF&#160;: inclut tous les  WPC&#160;traitant des fichiers au format .pdf : for Chrome, for Android, for IOS&#160;et Skyprint. Activé : la file est proposée sur toutes les plateformes PDF&#160;; Désactivé : la file n'est pas proposée sur les plateformes PDF&#160;(aucun WPC&#160;PDF&#160;ne peut être sélectionné) ; Auto-détection : Watchdoc examine les capacités du périphérique pour proposer ou ne pas proposer la file ; Mobile : la file est proposée sur les WPC&#160;mobiles : for Android et IOS ; Android : la file est proposée sur WPC&#160;for Android ; IOS : la file est proposée sur WPC&#160;for IOS ; Skyprint : la file est proposée sur Skyprint.<br /><br /><img src="Config_Files_SectionPlateforme.png" /><br />N.B. : notez que si la file n'est associée à aucun pilote d'impression, elle n'est pas proposée à l'utilisateur.</p>
-                                            </li>
-                                            <li value="3">
                                                 <p>Si le tag <b>Windows</b> est coché, complétez les paramètres associés&#160;: </p>
                                             </li>
                                             <ul>
@@ -395,6 +448,170 @@ Le fait que les messages soient archivés sur le serveur fait que l'utilisateur 
                                                 </li>
                                             </ul>
                                         </ol>
+                                        <h3>Section Notifications</h3>
+                                        <ul>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>Destinataires </strong>: saisissez les adresses e-mail de référents habilités à intervenir en cas de problèmes techniques détectés par le système,<span> tels que l'arrêt d'un périphérique ou une alerte en cas de détection d'un niveau bas de consommable, par exemple</span>. </p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Support technique :</strong> saisissez dans ce champ l'adresse e-mail de la personne chargée de gérer techniquement les périphériques et qui pourra donc intervenir en cas de panne ou de problème ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Consommables </strong>: saisissez dans ce champ l'adresse e-mail de la personne chargée de gérer les consommables des périphériques et qui pourra donc intervenir dès qu'il sera nécessaire de réapprovisionner les périphériques en cartouches d'encre ou en papier, par exemple ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Resp. Quotas </strong>: saisissez dans ce champ l'adresse e-mail de la personne chargée de gérer les quotas d'impression (ou Porte-Monnaie Virtuels (PMV)).</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>Sourdine :</strong> ce paramètre vous permet de gérer les alertes lancées depuis la file d'impression&#160;:<br /></p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>envoyer toutes les alertes&#160;:</strong> sélectionnez ce(par défaut) pour que toutes les alertes relatives à la file d'impression soient envoyées ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>n'envoyer que les alertes graves&#160;:</strong> sélectionnez ce paramètre pour limiter le nombre d'alertes envoyées aux seules alertes considérées comme graves (indisponibilités du périphérique) ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>n'envoyer aucune alerte&#160;:</strong> sélectionnez ce paramètre pour désactiver l'envoi des alertes depuis la file d'impression.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>E-mails :</strong> ce paramètre vous permet de préciser les modalités de notifications par e-mail appliquées pour le périphérique configuré.</p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Utiliser la configuration du groupe :</strong>  optez pour ce choix si le traitement à appliquer est celui qui a été défini pour le Groupe de files. La file hérite donc de la configuration générique de son Groupe.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Désactiver l'envoi d'e-mails sur cette file :</strong> optez pour ce choix si vous ne souhaitez pas utiliser la notification par mail ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Forcer l'activation de l'envoi d'e-mails sur cette file :</strong> optez pour ce choix si vous souhaitez utiliser la notification par mail pour cette file alors qu'elle appartient à un groupe pour lequel cette option n'est pas activée.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>Notifieur :</strong> le notifieur est une fonction qui permet d'informer les utilisateurs au moyen de fenêtres (pop-up) surgissant sur l'écran de l'utilisateur pour délivrer des messages d'alerte.</p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Utiliser la configuration du groupe :</strong>   optez pour ce choix si le traitement à appliquer est celui qui a été défini pour le Groupe de files. La file hérite donc de la configuration générique de son Groupe.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Forcer l'activation de la notification par popup Windows sur cette file : </strong>optez pour ce choix si vous souhaitez utiliser le notifieur pour cette file alors qu'elle appartient à un groupe pour lequel cette option n'est pas activée.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Files_Notifications_54.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1052" data-mc-height="250" src="../../Z_Resources/Images/02_Captures/Config_Files_Notifications_54.png" tabindex="" style="width: 852px;height: 202px;max-width: 1000px;" /></a></p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <p>&#160;</p>
+                                        <h3>Section Archivage</h3>
+                                        <p>Ce paramètre permet de donner à l'utilisateur la possilibilité d'archiver les travaux d'impression depuis l'interface utilisateur.&#160;<br /></p>
+                                        <blockquote>
+                                            <fieldset>Pour finaliser la fonction d'archivage, il est nécessaire de compléter le paramètrage de l'interface utilisateur.</fieldset>
+                                        </blockquote>
+                                        <ul>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>Héritage</strong>
+                                                </p>
+                                                <ul style="list-style-type: circle;">
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Utiliser la configuration par défaut du groupe :</strong> optez pour ce choix pour utiliser le mode d'archivage appliqué au Groupe de files.&#160;La file hérite donc de la configuration générique de son Groupe.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Utiliser une configuration spécifique :</strong> optez pour ce choix pour définir précisément les paramètres d'archivage. Dans ce cas, de nouveaux paramètres doivent être complétés. </p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>Temporaire :</strong> ce paramètre permet de définir les modalités de l'archivage temporaire des travaux d'impression sur le serveur.</p>
+                                                <ul style="list-style-type: circle;">
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>autoriser les archives temporaires : </strong>
+                                                        </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>réimpression rapide : </strong>
+                                                        </p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>Permanent :</strong> ce paramètre permet de définir les modalités d'archivage permanent des travaux  d'impression sur le serveur.</p>
+                                                <ul style="list-style-type: circle;">
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>autoriser les archives permanentes :</strong>  cochez cette case pour activer l'archivage illimité des impressions sur le serveur. De la sorte, l'utilisateur peut réimprimer ou gérer et supprimer ses archives à volonté.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>audit des impressions : </strong>cochez cette case pour activer l'archivage  sur le disque, sans possibilité aux utilisateurs de les supprimer. </p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <fieldset>L'archivage temporaire est souvent utilisé à des fins d'analyse, notamment pour capturer les spools qui permettront d'expliquer des anomalies de comptage ou de valider des informations remontées par Watchdoc.<br />Attention, le mode audit nécessite un espace de stockage conséquent, de l'ordre de plusieurs dizaines de gigaoctets suivant le volume d'impression.</fieldset>
+                                        <p>&#160;</p>
+                                        <p><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Files_Archivage_54.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="685" data-mc-height="183" src="../../Z_Resources/Images/02_Captures/Config_Files_Archivage_54.png" tabindex="" style="max-width: 1000px;" /></a>
+                                        </p>
+                                        <p>&#160;</p>
+                                        <h3>Section Mode Expert</h3>
+                                        <p>La section regroupe des paramètres permettant de faciliter la détection d'anomalies afin de faciliter l'analyse. <br /><br /></p>
+                                        <fieldset>Attention : nous vous recommandons de ne modifier ces paramètres qu'en cas de nécessité.&#160;</fieldset>
+                                        <p>&#160;</p>
+                                        <ul>
+                                            <li>
+                                                <p><strong>Sans Echec :</strong> en mode sans échec, Watchdoc essaye de détecter de manière différente les documents non compatibles. Cette solution n'est malheureusement pas fiable à 100% et peut entraîner des erreurs de comptage dans certaines situations.</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Couleur :</strong> dans certains cas, Watchdoc est capable d'identifier si un document "couleur automatique" ne contient que du texte noir ou gris. Attention : toutes les images sont considérées comme étant en couleur. Certains pilotes reportent incorrectement les informations de couleur, ce qui peut provoquer des erreurs de détection.</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Titre : </strong>
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <p><strong>Ignorer le titre : </strong>certains pilotes renvoient un titre de document incorrect. Cochez cette case pour ignorer le titre envoyé par le pilote.</p>
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <p><strong>Remplacer le titre des documents :</strong> par souci de confidentialité, il peut être nécessaire de remplacer le titre des documents.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Chiffrer le titre des documents dans la file d’attente partagée :</strong>nativement gérée par MS&#160;Windows la fonction disparaît de l'interface d'administration Watchdoc après la version 6.1.0.5178.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p><strong>Copies : </strong>certains pilotes renvoient un nombre de copies incorrect (nombre de copies au carré). Cochez cette case pour ignorer l'information envoyée par le pilote.</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Recto-verso :</strong> certains pilotes renvoient un mode recto-verso incorrect. Cochez cette case pour ignorer l'information envoyée par le pilote.</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>N-to-Up :</strong> certains pilotes renvoient un mode N-to-Up (2 pages en 1, 4 pages en 1, ..) incorrect. Cochez cette case pour l'ignorer.</p>
+                                                <p><strong>Identité : </strong>certains pilotes renvoient une identité utilisateur incorrecte. Cochez cette case pour l'ignorer.</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Station :</strong> dans certains cas, il est utile d'utiliser le nom du poste de travail comme nom d'utilisateur. Cochez cette case pour activer ce mode.</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Fantôme :</strong>  dans certains cas, il est utile de supprimer la dernière page d'une demande d'impression si elle est vide.</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Domaine :</strong> dans certains cas, il est utile de forcer le domaine utilisateur vers un annuaire particulier, voir un annuaire proxy.</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Auth. Titre :</strong> dans certaines situations, l'identité de l'utilisateur doit être extraite du titre du document. Il faut préciser une expression régulière (Regular Expression) capturant la portion du titre correspondant au login utilisateur. Ex: "^GenericApp - User:([A-Za-z0-9_]+)$"</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Encodage :</strong> sélectionnez dans la liste le format d'encodage des caractères souhaité pour la file configurée (ou le groupe de files), afin de permettre à Watchdoc d'appliquer un format différent du format du serveur (par défaut).</p>
+                                                <p>Ce paramètre permet de tenir compte des documents rédigés à l'aide d'alphabets autres que l'alphabet latin (par défaut).<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Files_SectionExpert.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1211" data-mc-height="698" src="../../Z_Resources/Images/02_Captures/Config_Files_SectionExpert.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                            </li>
+                                        </ul>
                                     </div>
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
