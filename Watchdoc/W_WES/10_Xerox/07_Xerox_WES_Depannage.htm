@@ -199,7 +199,7 @@
                                         </div>
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1 id="WESXeroxDépannerleWES" data-magellan-target="WESXeroxDépannerleWES"><a name="aanchor320"></a>
+                                        <h1 id="WESXeroxDépannerleWES" data-magellan-target="WESXeroxDépannerleWES"><a name="aanchor319"></a>
                                             <MadCap:concept term="WES;ADE" />
                                             <MadCap:conditionalText data-mc-conditions="General.Online">WES Xerox - </MadCap:conditionalText>Dépanner le WES</h1>
                                         <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
@@ -230,6 +230,12 @@
                                                     <li class="tree-node"><a href="#Probl%C3%A8medencodageenalphabetcyrillique">Problème d'encodage en alphabet cyrillique</a>
                                                     </li>
                                                     <li class="tree-node"><a href="#Messagederreurlorsdelanum%C3%A9risation%C3%A0partirdelafonctiondescannative">Message d'erreur lors de la numérisation à partir de la fonction de scan native</a>
+                                                    </li>
+                                                    <li class="tree-node"><a href="#Diff%C3%A9rencesdecomptabilisationimpressionformatLargejan2024">Différences de comptabilisation impression format Large (jan. 2024)</a>
+                                                    </li>
+                                                    <li class="tree-node"><a href="#Cause">Cause</a>
+                                                    </li>
+                                                    <li class="tree-node"><a href="#R%C3%A9solutions">Résolutions</a>
                                                     </li>
                                                     <li class="tree-node"><a href="#MessagederreurlorsdelinstallationduWESIPLokedOutException">Message d'erreur lors de l'installation du WES&#160;: IPLokedOut Exception</a>
                                                     </li>
@@ -630,6 +636,18 @@
                                                 <p>configurer une adresse mail "émettrice" dans le profil WES&#160;et forcer le périphérique à utiliser cet émetteur ("de/from") pour toutes les numérisations effectuées depuis le périphérique (cf. <a href="03_Xerox_WES_ConfigProfil.htm#Forcer_emetteur" target="_blank">Configurer le profil WES Xerox</a>).<br />N.B.&#160;:  cette action désactive la fonction "ScanToMe".</p>
                                             </li>
                                         </ul>
+                                        <hr width="100%" size="0" align="center" />
+                                        <h2 id="DifférencesdecomptabilisationimpressionformatLargejan2024" data-magellan-target="DifférencesdecomptabilisationimpressionformatLargejan2024">Différences de <a name="comptabilisation"></a>comptabilisation impression format Large (jan. 2024)</h2>
+                                        <p style="font-size: 14pt;font-weight: bold;"><span style="color: #000000;">Contexte</span>
+                                        </p>
+                                        <p>Vous constatez une différence entre la comptabilisation des impressions demandées traitées par Watchdoc et la comptabilisation du périphérique d'impression (AltaLink ou VersaLink, notamment) à l'occasion d'un audit sur les impressions, par exemple.</p>
+                                        <p> Cette différence concerne les formats larges en couleur et en Noir&amp;Blanc.</p>
+                                        <h2 id="Cause" data-magellan-target="Cause"><span style="font-size: 14pt; color: #000000;">Cause</span>
+                                        </h2>
+                                        <p>Avant la version Watchdoc v6, le format "Large" des documents n'est pas pris en compte. La base de données n'est pas conçue pour collecter ce type de donnée. Les travaux d'impression demandés dans ce format ne sont donc pas comptabilisés par Watchdoc car les compteurs sont manquants.</p>
+                                        <h2 id="Résolutions" data-magellan-target="Résolutions"><span style="font-size: 14pt;">Résolutions</span>
+                                        </h2>
+                                        <p>Pour essayer de résoudre le problème,  il convient de mettre à jour Watchdoc (v. 6 min.) afin que de la base de données contienne les colonnes cntSHEETSLARGEIMPRESSIONBLACK et cntSHEETSLARGEIMPRESSIONCOLOR.</p>
                                         <hr width="100%" size="0" align="center" />
                                         <h2 id="MessagederreurlorsdelinstallationduWESIPLokedOutException" data-magellan-target="MessagederreurlorsdelinstallationduWESIPLokedOutException"><a name="IPLokedOut_Exception"></a>Message d'erreur lors de l'installation du WES&#160;: IPLokedOut Exception</h2>
                                         <p> </p>

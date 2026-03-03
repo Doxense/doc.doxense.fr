@@ -77,16 +77,19 @@
         </ul>
         <ul>
             <li>
-                <p>Si l'organisation ne dispose pas d'annuaire dédié (Active Directory), un annuaire peut être créé dans une base de données  (cf.&#160;<a href="../../../../C_Configurer/ConfigAnnuaires/ConfigAnnuaires_SQLUtil_Procedure.htm" target="_blank">Créer et configurer une base de données Utilisateurs</a>).</p>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <p>C'est également sur une base SQL que repose l'annuaire Invités (base Guests) permettant de gérer ponctuellement des utilisateurs non-présents dans l'annuaire de l'organisation (cf.&#160;<a href="../../../../F_WSC/WSC_Base_Invites_Gerer.htm" target="_blank">Gérer la base Invités</a>)</p>
-            </li>
-            <li>
-                <p>Enfin, il est possible de créer une base de données pour gérer les code PUK&#160;(cf.&#160;<a href="../../../../C_Configurer/ConfigAnnuaires/ConfigAnnuaires_SQLPUK_Procedure.htm" target="_blank">Créer et configurer une base de codes PUK</a>)</p>
-                <p>&#160;</p>
+                <p>La base de données de type SQL&#160;peut aussi être utilisée en guise d'annuaire : </p>
+                <ul>
+                    <li>
+                        <p class="Liste_puce_1"><strong>Annuaire utilisateurs&#160;:</strong> dans de rares cas où l'organisation ne dispose pas d'un annuaire LDAP, elle peut utiliser une table SQL en guise d'annuaire utilisateurs  (cf.&#160;<a href="../../../../C_Configurer/ConfigAnnuaires/ConfigAnnuaires_SQLUtil_Procedure.htm" target="_blank">Créer et configurer une base de données Utilisateurs</a>).</p>
+                    </li>
+                    <li>
+                        <p><strong>Annuaire invités :</strong> WSC&#160;offre par défaut une base <strong>Invités </strong>(<strong>Guest</strong>) qui repose sur une table SQL. Cet annuaire permet de référencer les utilisateurs non présents dans l'annuaire de l'organisation mais qui doivent être reconnus par Watchdoc pour imprimer (par exemple, un  partenaire de passage, un stagiaire, un prestataire missionné pour une durée déterminée, etc. (cf.&#160;<a href="../../../../F_WSC/WSC_Base_Invites_Gerer.htm" target="_blank">Gérer la base Invités</a>).</p>
+                    </li>
+                    <li>
+                        <p><b>Codes d'impression (Code PUK)</b> : cet annuaire permet de générer des codes d'impression PUK à l'attention des utilisateurs inscrits dans l'annuaire Entra ID (Microsoft Azure).&#160;(cf.&#160;<a href="../../../../C_Configurer/ConfigAnnuaires/ConfigAnnuaires_SQLPUK_Procedure.htm" target="_blank">Créer et configurer une base de codes PUK</a>)</p>
+                        <p>&#160;</p>
+                    </li>
+                </ul>
             </li>
         </ul>
         <p>Il est donc nécessaire d'installer une base de données préalablement à l'installation de Watchdoc. Pour cela, vous pouvez consulter : <br /></p>

@@ -438,8 +438,9 @@
                                         <p>&#160;</p>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Problème d'affichage des caractères non-latins.</a></span>
                                             <div class="MCDropDownBody dropDownBody">
-                                                <p><strong>Contexte :</strong> lorsque Watchdoc est installé pour fonctionner dans une langue non -atine, il arrive que certains caractères soient mal affichés.<br /><strong>Cause :</strong> ce dysfonctionnement est dû au mode de collation des données textuelles dans la base de données SQL .</p>
-                                                <p><strong>Résolution :</strong> modifier l’installation de Watchdoc pour demander de choisir le jeu de caractères (charset) et le mode de collationnement,(cf.&#160;<a href="ADE_BaseSQL_PB_AffichageCaracteresNon-Latins.htm" target="_blank" title="Lien vers l'article de dépannage" alt="Lien vers l'article de dépannage">Problème d'affichage des caractères non-latins</a>).</p>
+                                                <p><strong>Contexte :</strong> lorsque Watchdoc est installé pour fonctionner dans une langue non-latine, il arrive que certains caractères soient mal affichés notamment dans les messages d'erreurs envoyés aux utilisateurs ou aux administrateurs. <br /><strong>Cause :</strong> ce dysfonctionnement est dû au mode de collation des données textuelles dans la base de données SQL qui a pour conséquence de ne pas permettre de gérer les caractères non-latins.</p>
+                                                <p><strong>Résolution :</strong> il convient de modifier l’installation de Watchdoc pour demander de choisir le jeu de caractères (charset) et le mode de collationnement, puis reporter cela dynamiquement dans le script de création de la base.</p>
+                                                <p>Nous préconisons l’utilisation d’une collation à langage case insensitive pour la BDD, comme par exemple Latin1_General_100_CI_AI.</p>
                                             </div>
                                         </div>
                                         <p>&#160;</p>
@@ -1248,7 +1249,7 @@
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> on constate parfois un décalage entre la comptabilisation des impressions traitées par Watchdoc (WESAccounting) et la comptabilisation du périphérique d'impression (AltaLink ou VersaLink, notamment).&#160;Cette différence concerne les formats larges en couleur et en Noir&amp;Blanc.</p>
                                                 <p><strong>Cause :</strong> l'erreur est due à la configuration du périphérique sur lequel le protocole SOAP n'est pas activé. En conséquence, le périphérique ne réceptionne pas les informations envoyées par Watchdoc via ce protocole.</p>
-                                                <p><strong>Résolution :</strong> il convient de mettre à jour Watchdoc (v. 6 min.) (cf.&#160;<a href="ADE_WES_Xerox_DifferenceComptabilisation.htm" target="_blank" title="Lien vers l'article de dépannage" alt="Lien vers l'article de dépannage">WES&#160;Xerox - Différence de comptabilisation des impressions au format Large</a>).</p>
+                                                <p><strong>Résolution :</strong> il convient de mettre à jour Watchdoc (v. 6 min.) (cf.&#160;<a href="../W_WES/10_Xerox/07_Xerox_WES_Depannage.htm" target="_blank">WES&#160;Xerox - Différence de comptabilisation des impressions au format Large</a>).</p>
                                             </div>
                                         </div>
                                         <p>&#160;</p>
