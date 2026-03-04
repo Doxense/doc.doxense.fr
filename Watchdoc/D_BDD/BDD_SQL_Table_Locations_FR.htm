@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr" xml:lang="fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="Outils complémentaires|Base de données SQL" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="HTML5">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr" xml:lang="fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="HTML5">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Table roles</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Table Locations</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Script tableau triable -->
@@ -175,110 +175,178 @@
                                             </button>
                                         </div>
                                     </div>
-                                    <div class="nocontent">
-                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
-                                        </div>
-                                    </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
-                                        <h3>Table roles</h3>
-                                        <h4><span class="span_3">Description</span>
-                                        </h4>
-                                        <p class="p_13">Cette table contient tous les rôles définis (groupes, départements, services…).</p>
-                                        <p class="p_13">&#160;</p>
-                                        <h4><span class="span_3">Schéma</span>
-                                        </h4>
+                                        <h3>Table Locations</h3>
+                                        <h4>Description</h4>
+                                        <p>Cette table contient toutes les informations collectées par Watchdoc sur les emplacements configurés dans Watchdoc.</p>
+                                        <h4>Schéma</h4>
                                         <table style="mc-table-style: url('../Resources/TableSlylesheets/Standard.css');" class="TableStyle-Standard" cellspacing="0">
                                             <col class="TableStyle-Standard-Column-Regular" />
+                                            <col class="TableStyle-Standard-Column-Regular" style="width: 184px;" />
                                             <col class="TableStyle-Standard-Column-Regular" />
                                             <col class="TableStyle-Standard-Column-Regular" />
-                                            <col class="TableStyle-Standard-Column-Regular" />
-                                            <col class="TableStyle-Standard-Column-Regular" />
+                                            <col class="TableStyle-Standard-Column-Regular" style="width: 351px;" />
                                             <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_15">Field</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_15">Type</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_15"><span class="Élevé">Requis</span>
+                                                <td style="font-weight: bold;" class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                    <p class="p_15"><strong>Field</strong>
                                                     </p>
                                                 </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_15">CP</p>
+                                                <td style="font-weight: bold;" class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                    <p class="p_15"><strong>Type</strong>
+                                                    </p>
                                                 </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p class="Légende"><span class="Élevé">Description</span>
+                                                <td style="font-weight: bold;" class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                    <p class="p_15"><strong>Requis</strong>
+                                                    </p>
+                                                </td>
+                                                <td style="font-weight: bold;" class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                    <p class="p_15"><strong>CP</strong>
+                                                    </p>
+                                                </td>
+                                                <td style="font-weight: bold;" class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                    <p class="p_15"><strong>Description</strong>
                                                     </p>
                                                 </td>
                                             </tr>
                                             <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>roleID</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>bigint</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>Identifiant du rôle (au sein de la base de données).</p>
-                                                </td>
+                                                <td style="font-weight: normal;" class="TableStyle-Standard-BodyE-Regular-Row1">locID</td>
+                                                <td style="font-weight: normal;" class="TableStyle-Standard-BodyE-Regular-Row1">PK, varchar (64)</td>
+                                                <td style="font-weight: normal;" class="TableStyle-Standard-BodyE-Regular-Row1">oui</td>
+                                                <td style="font-weight: normal;" class="TableStyle-Standard-BodyE-Regular-Row1">&#160;</td>
+                                                <td style="font-weight: normal;" class="TableStyle-Standard-BodyD-Regular-Row1">Identifiant de l'emplacement</td>
                                             </tr>
                                             <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>roleFILTER</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>nvarchar (64)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>Identifiant du filtre (tel que défini dans Watchdoc).</p>
-                                                </td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">locPARENTID</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">	varchar(64), null	</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">non</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">*</td>
+                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">&#160;</td>
                                             </tr>
                                             <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>roleNAME</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>nvarchar (128)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>Nom du rôle tel que configuré dans Watchdoc.</p>
-                                                </td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">locSUBTYPE</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">varchar(64), null</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">oui</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">&#160;</td>
+                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">&#160;</td>
                                             </tr>
                                             <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>roleDESC</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>nvarchar (255)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>Description du rôle tel que configuré dans Watchdoc.</p>
-                                                </td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">locNAME</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">nvarchar(MAX)</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">oui</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">&#160;</td>
+                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">&#160;</td>
+                                            </tr>
+                                            <tr class="TableStyle-Standard-Body-Row1">
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">locLABEL</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">nvarchar(MAX)</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">oui</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">&#160;</td>
+                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">&#160;</td>
+                                            </tr>
+                                            <tr class="TableStyle-Standard-Body-Row2">
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">locDESCRIPTION</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">nvarchar(MAX)</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">oui</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">&#160;</td>
+                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">&#160;</td>
+                                            </tr>
+                                            <tr class="TableStyle-Standard-Body-Row1">
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">locVERSION</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">smallint</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">non</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">&#160;</td>
+                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">&#160;</td>
+                                            </tr>
+                                            <tr class="TableStyle-Standard-Body-Row2">
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">locLASTMODIFIED	</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">datetime</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">oui</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">&#160;</td>
+                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">&#160;</td>
+                                            </tr>
+                                            <tr class="TableStyle-Standard-Body-Row1">
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">locDEPTH</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">locDEPTH</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">non</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">&#160;</td>
+                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">&#160;</td>
+                                            </tr>
+                                            <tr class="TableStyle-Standard-Body-Row2">
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">locDEVICES</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">int</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">non</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">&#160;</td>
+                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">&#160;</td>
+                                            </tr>
+                                            <tr class="TableStyle-Standard-Body-Row1">
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">locDEVICESNODE</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">int</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">non</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">&#160;</td>
+                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">&#160;</td>
+                                            </tr>
+                                            <tr class="TableStyle-Standard-Body-Row2">
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">locSERVERS</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">int</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">non</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">&#160;</td>
+                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">&#160;</td>
+                                            </tr>
+                                            <tr class="TableStyle-Standard-Body-Row1">
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">locSERVERSNODE</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">int</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">non</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">&#160;</td>
+                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">&#160;</td>
+                                            </tr>
+                                            <tr class="TableStyle-Standard-Body-Row2">
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">locSELECTABLE</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">tinyint</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">non</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">&#160;</td>
+                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">&#160;</td>
+                                            </tr>
+                                            <tr class="TableStyle-Standard-Body-Row1">
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">locPHYSICAL</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">tinyint</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">non</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">&#160;</td>
+                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">&#160;</td>
+                                            </tr>
+                                            <tr class="TableStyle-Standard-Body-Row2">
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">locZONEID</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">varchar(64)</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">oui</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">&#160;</td>
+                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">&#160;</td>
+                                            </tr>
+                                            <tr class="TableStyle-Standard-Body-Row1">
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">locCOUNTRYCODE</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">varchar(16)</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">oui</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">&#160;</td>
+                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">&#160;</td>
+                                            </tr>
+                                            <tr class="TableStyle-Standard-Body-Row2">
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">locCOUNTRYID</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">varchar(64)</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">oui</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">&#160;</td>
+                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">&#160;</td>
+                                            </tr>
+                                            <tr class="TableStyle-Standard-Body-Row1">
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">locCITYID</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">varchar(64)</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">oui</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">&#160;</td>
+                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">&#160;</td>
+                                            </tr>
+                                            <tr class="TableStyle-Standard-Body-Row2">
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">locSITEID</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">varchar(64)</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">oui</td>
+                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">&#160;</td>
+                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">&#160;</td>
                                             </tr>
                                         </table>
                                     </div>
