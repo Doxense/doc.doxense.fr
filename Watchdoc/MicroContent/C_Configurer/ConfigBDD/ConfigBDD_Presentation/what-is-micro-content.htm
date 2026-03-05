@@ -51,39 +51,20 @@
         </script>
     </head>
     <body>
-        <h2>Watchdoc - Base de données WatchdocStats - SQL / PostgreSQL&#160;/&#160;SQLite</h2>
-        <h3>Compatibilités</h3>
-        <p>Watchdoc est compatible avec&#160;: </p>
-        <ul>
-            <li>
-                <p><b>MS SQL Server<sup>®</sup></b> (Express/Standard/Enterprise) 2012, 2014, 2016, 2017, 2019 et 2022  (cf.&#160;<a href="../../../../P_Prerequis/Serveurs.htm#Serveur_donnees" target="_blank">Prérequis du serveur de données</a>) ;</p>
-            </li>
-            <li>
-                <p><b>PostgreSQL® 17</b>
-                    <br />Notez que  Doxense<sup>®</sup> n'assure pas le support pour le paramétrage du SGBD PostgreSQL<sup>®</sup>.</p>
-            </li>
-            <li>
-                <p><b>SQLite®</b> Watchdoc est compatible avec la version SQLite<sup>®</sup> distribuée dans le package d'installation de Watchdoc. <br />Notez que SQLite fonctionnant comme une base de données locale, elle n'est recommandée que pour de petites configurations ou sur les serveurs slaves d'un domaine qui envoient leurs données vers la base de données SQL du serveur master.</p>
-            </li>
-        </ul>
-        <p>&#160;</p>
-        <h3>Principe</h3>
+        <h2>Watchdoc - Base de données Watchdocstats - SQL / PostgreSQL&#160;/&#160;SQLite</h2>
+        <h3>Principes</h3>
         <ul>
             <li>
                 <p>Dans Watchdoc, l'activité d'impression est enregistrée dans une base de données statistique SQL® ou PostgreSQL®  appelée Watchdocstats.</p>
             </li>
             <li>
-                <p>la fonction d'impression à la demande interserveur repose également sur une base de données statistique de type SQL ; </p>
-            </li>
-        </ul>
-        <ul>
-            <li>
                 <p>Cette base est alimentée grâce aux données collectées par Watchdoc via le protocole SNMP.</p>
             </li>
-        </ul>
-        <ul>
             <li>
-                <p>Elle peut-être utilisée à des fins d'analyse, mais aussi pour gérer les quotas d'impression.</p>
+                <p>La fonction d'impression à la demande interserveur repose également sur une base de données statistique de type SQL.</p>
+            </li>
+            <li>
+                <p>Si vous utilisez des quotas, ils reposent sur une autre base de données nommée Watchdocpmv.</p>
             </li>
         </ul>
         <ul>
@@ -91,7 +72,7 @@
                 <p>Les données sont affichées dans l'interface d'administration de Watchdoc mais peuvent aussi être exploitées et exportées par <a href="../../../../C_Configurer/ConfigWDIS/ConfigWDIS_Procedure.htm">WDIS</a>.</p>
             </li>
             <li>
-                <p>Les données sont aussi exploitables par les utilisateurs dans leur page "Mon compte'.</p>
+                <p>Les données sont aussi consultables par les utilisateurs dans leur page "Mon compte'.</p>
             </li>
         </ul>
         <ul>
@@ -106,36 +87,53 @@
                     </li>
                     <li>
                         <p><b>Codes d'impression (Code PUK)</b> : cet annuaire permet de générer des codes d'impression PUK à l'attention des utilisateurs inscrits dans l'annuaire Entra ID (Microsoft Azure).&#160;(cf.&#160;<a href="../../../../C_Configurer/ConfigAnnuaires/ConfigAnnuaires_SQLPUK_Procedure.htm" target="_blank">Créer et configurer une base de codes PUK</a>)</p>
-                        <p>&#160;</p>
                     </li>
                 </ul>
             </li>
         </ul>
-        <p>Il est donc nécessaire d'installer une base de données préalablement à l'installation de Watchdoc. Pour cela, vous pouvez consulter : <br /></p>
+        <h3>Compatibilités</h3>
+        <p>Les bases de données Watchdocstats et/ou Watchdocpmv peuvent être des bases : </p>
+        <ul>
+            <li>
+                <p><b>MS SQL Server<sup>®</sup></b> (Express/Standard/Enterprise) 2012, 2014, 2016, 2017, 2019 et 2022   ;</p>
+            </li>
+            <li>
+                <p><span style="font-weight: bold;" class="mc-variable Versions.PostgreSQL variable">PostgreSQL 17</span>®</p>
+            </li>
+            <li>
+                <p><b>SQLite®</b>(version distribuée dans le package d'installation de Watchdoc). <br /></p>
+            </li>
+        </ul>
+        <p>Pour plus de détails, cf.&#160;<a href="../../../../P_Prerequis/Serveurs.htm#Serveur_donnees" target="_blank">Prérequis du serveur de données.</a></p>
+        <p>&#160;</p>
+        <h4>Procédures</h4>
+        <p>Il est donc nécessaire d'installer une base de données préalablement à l'installation de Watchdoc. Sauf si vous installez  la version Watchdoc Express qui installe automatiquement une  base de données MS SQL&#160;Express®.</p>
+        <p>&#160;</p>
+        <p>Pour cela, vous pouvez consulter : <br /></p>
         <ul>
             <li>
                 <p>les <a href="../../../../P_Prerequis/Serveurs.htm" target="_blank">Prérequis des serveurs de données</a></p>
             </li>
             <li>
-                <p>les <a href="../../../../C_Configurer/ConfigBDD/WD_BaseSQL_Presentation.htm">Prérequis d'installation et packages MS SQL</a></p>
+                <p>les <a href="../../../../C_Configurer/ConfigBDD/WD_BaseSQL_Presentation.htm">Prérequis d'installation et packages MS SQL®</a></p>
             </li>
             <li>
-                <p><a href="../../../../C_Configurer/ConfigBDD/WD_BaseSQL_Creer.htm">Créer la base MS&#160;SQL</a>
+                <p><a href="../../../../C_Configurer/ConfigBDD/WD_BaseMSSQL_Creer.htm">Créer la base MS&#160;SQL®</a>
                 </p>
             </li>
             <li>
-                <p><a href="../../../../C_Configurer/ConfigBDD/WD_BaseSQL_Configurer.htm">Configurer la base MS&#160;SQL</a>
+                <p><a href="../../../../C_Configurer/ConfigBDD/WD_BaseSQLPostGre_Creer.htm">Créer la base Postgre SQL®</a>
                 </p>
             </li>
             <li>
-                <p><a href="../../../../C_Configurer/ConfigBDD/WD_BaseSQLPostGre_Creer.htm">Créer la base Postgre SQL</a>
+                <p><a href="../../../../C_Configurer/ConfigBDD/WD_BaseSQL_Configurer.htm">Connecter la base SQL®</a>
                 </p>
             </li>
         </ul>
         <p>&#160;</p>
-        <p>Par ailleurs, comme les données de la base varient, il arrive que le traitement des requêtes soit ralenti en raison d'une fragmentation des index. Pour éviter cet inconvénient, nous vous recommandons de nettoyer régulièrement votre base en suivant le <a href="../../../../C_Configurer/ConfigBDD/WD_BaseSQL_Maintenir.htm">plan de maintenance fourni</a>.</p>
+        <p>Par ailleurs, comme les données de la base varient,  le traitement des requêtes peut être ralenti en raison d'une fragmentation des index au fil du temps. Nous vous recommandons de nettoyer régulièrement votre base en suivant le <a href="../../../../C_Configurer/ConfigBDD/WD_BaseSQL_Maintenir.htm">plan de maintenance fourni</a>.</p>
         <p>&#160;</p>
-        <p>Il est parfois utile de <a href="../../../../C_Configurer/ConfigBDD/WD_BaseSQL_Restaurer.htm" target="_blank">restaurer la base de données</a>.</p>
+        <p>Il est parfois utile de sauvegarder la base de données en vue de la <a href="../../../../C_Configurer/ConfigBDD/WD_BaseSQL_Restaurer.htm" target="_blank">restaurer</a>.</p>
         <p>&#160;</p>
         <p>Enfin, vous pouvez aussi avoir à <a href="../../../../C_Configurer/ConfigBDD/WD_BaseSQL_Transferer.htm" target="_blank">transférer la base de données.</a></p>
     </body>

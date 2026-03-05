@@ -3,6 +3,8 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="description" content="Procédure de création et de configuration du profil WES : sections Propriétés, Authentification par clavier, Authentification par badge, Impression à la demande et Périphérique." /><title>WES&#160;Toshiba - Configurer le profil WES</title>
         <!-- Google Tag Manager -->
@@ -199,7 +201,7 @@
                                         </div>
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor373"></a>
+                                        <h1><a name="aanchor374"></a>
                                             <MadCap:concept term="WES" />
                                             <MadCap:conditionalText data-mc-conditions="General.Online">WES&#160;Toshiba - </MadCap:conditionalText>Configurer le profil WES</h1>
                                         <h2>Créer le profil WES</h2>
@@ -222,7 +224,7 @@
 <br /><img src="../../Z_Resources/Images/02_Captures/WES/Config_WES_BarreNav.png" /></MadCap:conditionalText></p>
                                         <h2>Configurer le profil WES</h2>
                                         <h3>Configurer la section Propriétés</h3>
-                                        <p><a name="top"></a>Utilisez cette section pour indiquer les principales propriétés de WES :</p>
+                                        <p><a name="top" id="top"></a>Utilisez cette section pour indiquer les principales propriétés de WES :</p>
                                         <ul>
                                             <li>
                                                 <p><strong>Identifiant&#160;: </strong>saisissez l'identifiant unique du profil WES. Il peut comprendre des lettres, des chiffres et le caractère "_", avec un maximum de 64 caractères. Cet identifiant n'est affiché que dans les interfaces d'administration.</p>
@@ -480,7 +482,7 @@ Par souci de sécurité, nous déconseillons l'utilisation du code PUK et recomm
                                                 </ul>
                                             </li>
                                             <li>
-                                                <p><b><a name="Joblog"></a>Journal de travaux :</b> indiquez, en jours, la durée de rétention des journaux (logs) du périphérique d'impression. La valeur -1 permet de ne pas supprimer les journaux de la machine, 0 déclenche la suppression du journal. Par défaut, les journaux de travaux sont supprimés automatiquement.&#160;<br />N.B.&#160;: les journaux étant enregistrés sur le périphérique d'impression, nous conseillons une durée de rétention la plus basse possible afin d'éviter d'en ralentir le fonctionnement.&#160;Il arrive qu'une valeur supérieure à 0&#160;provoque des dysfonctionnements.</p>
+                                                <p><b><a name="Joblog" id="Joblog"></a>Journal de travaux :</b> indiquez, en jours, la durée de rétention des journaux (logs) du périphérique d'impression. La valeur -1 permet de ne pas supprimer les journaux de la machine, 0 déclenche la suppression du journal. Par défaut, les journaux de travaux sont supprimés automatiquement.&#160;<br />N.B.&#160;: les journaux étant enregistrés sur le périphérique d'impression, nous conseillons une durée de rétention la plus basse possible afin d'éviter d'en ralentir le fonctionnement.&#160;Il arrive qu'une valeur supérieure à 0&#160;provoque des dysfonctionnements.</p>
                                             </li>
                                             <li>
                                                 <p><strong>e-mail : Destinations</strong>&#160;: si nécessaire, sélectionnez la restriction posée sur la destination lors d'un envoi par e-mail ;</p>
@@ -496,7 +498,7 @@ Par souci de sécurité, nous déconseillons l'utilisation du code PUK et recomm
 : </strong>ce paramètre permet de préciser si les périphériques d'impression se connectent via l'adresse IP ou le nom DNS (déterminés au démarrage du service) du server Watchdoc. Si le serveur possède plusieurs adresses IP ou si vous voulez spécifier manuellement l'adresse, sélectionnez "Adresse ci-contre" et remplissez le champ.</p>
                                                     </li>
                                                     <li>
-                                                        <p><strong><a name="PointEntreeSecurise"></a>Point d'entrée sécurisé :</strong> si vous avez sélectionné un mode de connexion SSL ou Mixte (ci-dessous, depuis v.&#160;6.1.0.5262), vous pouvez préciser le point d'accès que vous souhaitez utiliser. Le nombre de  points d'entrée figurant dans la liste varie en fonction de ceux qui ont été préalablement configurés dans l'interface Serveur Web,  section DSP&#160; <MadCap:conditionalText data-mc-conditions="General.Online">(cf.&#160;<a href="../../C_Configurer/ConfigServeurWeb/Config_ServeurWeb_Presentation.htm#DSP" target="_blank">Configurer le Serveur web</a>).</MadCap:conditionalText> Si vous n'avez pas configuré ces points d'entrée préalablement, cliquez sur <b>Configurer les points d'entrée</b>.</p>
+                                                        <p><strong><a name="PointEntreeSecurise" id="PointEntreeSecurise"></a>Point d'entrée sécurisé :</strong> si vous avez sélectionné un mode de connexion SSL ou Mixte (ci-dessous, depuis v.&#160;6.1.0.5262), vous pouvez préciser le point d'accès que vous souhaitez utiliser. Le nombre de  points d'entrée figurant dans la liste varie en fonction de ceux qui ont été préalablement configurés dans l'interface Serveur Web,  section DSP&#160; <MadCap:conditionalText data-mc-conditions="General.Online">(cf.&#160;<a href="../../C_Configurer/ConfigServeurWeb/Config_ServeurWeb_Presentation.htm#DSP" target="_blank">Configurer le Serveur web</a>).</MadCap:conditionalText> Si vous n'avez pas configuré ces points d'entrée préalablement, cliquez sur <b>Configurer les points d'entrée</b>.</p>
                                                         <ul>
                                                             <li>
                                                                 <p>le point d'entrée par défaut : il s'agit du point d'entrée défini comme point d'entrée par défaut dans la section DSP ;</p>
@@ -507,7 +509,7 @@ Par souci de sécurité, nous déconseillons l'utilisation du code PUK et recomm
                                                         </ul>
                                                     </li>
                                                     <li>
-                                                        <p><a name="Reseau_SSL"></a><strong>Utiliser SSL pour les pages Web affichées sur le périphérique :</strong> par défaut, le SSL est activé pour sécuriser les pages du WES sur le périphérique afin de générer  des alertes en cas de faille de sécurité (certificats non- reconnus, par exemple). </p>
+                                                        <p><a name="Reseau_SSL" id="Reseau_SSL"></a><strong>Utiliser SSL pour les pages Web affichées sur le périphérique :</strong> par défaut, le SSL est activé pour sécuriser les pages du WES sur le périphérique afin de générer  des alertes en cas de faille de sécurité (certificats non- reconnus, par exemple). </p>
                                                         <p>N.B.&#160;: si vous désactivez le SSL (pour régler des problèmes de lenteur, par exemple), nous vous recommandons de ne pas utiliser l'authentification ou l'enrôlement du badge par compte et mot de passe.</p>
                                                     </li>
                                                     <li>

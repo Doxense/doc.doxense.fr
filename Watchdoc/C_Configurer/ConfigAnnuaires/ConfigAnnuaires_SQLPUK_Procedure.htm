@@ -3,6 +3,8 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="description" content="Procédure de déclaration et de configuration d'une base MS SQL contenant les codes PUK des utilisateurs." /><title>Watchdoc - Annuaires - Créer et configurer une base de codes PUK de type SQL (SQL / PostgreSQL&#160;/ SQLite)</title>
         <!-- Google Tag Manager -->
@@ -262,7 +264,7 @@
 (source : Wikipédia)</span></a>" permettant d'initialiser le générateur des codes PUK des utilisateurs.&#160;Ce chiffre est un entier de 32 bits compris entre 1 et 2.147.000.000 ; </p>
                                             </li>
                                             <li>
-                                                <p><strong><a name="Algorithme_PUK"></a>Algorithme : </strong>dans la liste, sélectionnez le niveau d'algorithme permettant de générer les codes PUK de vos utilisateurs (6 ou 10 chiffres) ; </p>
+                                                <p><strong><a name="Algorithme_PUK" id="Algorithme_PUK"></a>Algorithme : </strong>dans la liste, sélectionnez le niveau d'algorithme permettant de générer les codes PUK de vos utilisateurs (6 ou 10 chiffres) ; </p>
                                             </li>
                                             <li>
                                                 <p><strong>Variabilité : </strong>dans la liste, sélectionnez (si nécessaire) la fréquence à laquelle l'annuaire de codes PUK sera regénéré. Par défaut, l'annuaire ne change pas.&#160;Regénérer les codes PUK permet d'augmenter la sécurité de ce mode d'authentification.</p>

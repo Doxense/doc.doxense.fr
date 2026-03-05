@@ -3,6 +3,8 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="description" content="Présentation des prérequis d'installation de Watchdoc : versions MS Windows Serveur compatibles, langages analysés, composants du serveur d'application, serveurs d'annuaires compatibles, serveurs de données compatibles, présentation de la fonction de notifications, antimalware, antivirus et outils de sécurité." /><title>Watchdoc - Prérequis serveurs</title>
         <!-- Google Tag Manager -->
@@ -199,9 +201,9 @@
                                         </div>
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor444"></a>
+                                        <h1><a name="aanchor446"></a>
                                             <MadCap:concept term="PRT" />
-                                            <MadCap:conditionalText data-mc-conditions="General.Online"><a name="aanchor445"></a>
+                                            <MadCap:conditionalText data-mc-conditions="General.Online"><a name="aanchor447"></a>
                                                 <MadCap:concept term="WD" />Watchdoc - </MadCap:conditionalText>Prérequis serveurs</h1>
                                         <h2>Editions de Microsoft Windows Server<sup>®</sup> compatibles</h2>
                                         <ul>
@@ -222,7 +224,7 @@
                                         <p>&#160;</p>
                                         <p>La version Core de MS Windows Server<sup>®</sup> n'est pas supportée.&#160;<br /></p>
                                         <p>&#160;</p>
-                                        <p>Microsoft Visual<sup>®</sup> C++ 2022 Redistribuable est requis.<br />Microsoft<sup>®</sup> .NET Framework 4.8 est obligatoire (l'installation requiert un redémarrage du serveur et donc une interruption du service d'impression). <br /></p>
+                                        <p>Microsoft Visual<sup>®</sup> C++ v14 Redistribuable est requis (cf. site <a href="https://learn.microsoft.com/fr-fr/cpp/windows/latest-supported-vc-redist?view=msvc-170" target="_blank">Microsoft Visual C++ Redistribuable</a>).<br />Microsoft<sup>®</sup> .NET Framework 4.8 est obligatoire (l'installation requiert un redémarrage du serveur et donc une interruption du service d'impression). <br /></p>
                                         <h2>Langages analysés</h2>
                                         <p>Doxense recommande fortement l'utilisation de pilotes de type 3, ceux de type 4 pouvant provoquer des comportements non-attendus.</p>
                                         <p>&#160;</p>
@@ -298,7 +300,7 @@
                                         <p>&#160;</p>
                                         <p>Dans le cas où vous utilisez tout autre type d'annuaire, merci de nous contacter pour une validation préalable.<br /></p>
                                         <p>Watchdoc peut gérer plusieurs annuaires utilisateurs, sous réserve qu'il n'y ait pas d'homonymes entre eux.</p>
-                                        <h2><a name="Serveur_donnees"></a>Serveur de données</h2>
+                                        <h2><a name="Serveur_donnees" id="Serveur_donnees"></a>Serveur de données</h2>
                                         <p>Watchdoc stocke les statistiques et le Porte-Monnaie Virtuel (PMV) des utilisateurs dans deux bases de données qui reposent sur des systèmes de gestion de bases de données (SGBD). </p>
                                         <p>
                                             <br />Les serveurs de bases de données compatibles avec Watchdoc sont les suivants&#160;:</p>
@@ -323,7 +325,8 @@
                                                 </ul>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1">PostgreSQL<sup>®</sup> 17 </p>
+                                                <p class="Liste_puce_1"><span class="mc-variable Versions.PostgreSQL variable">PostgreSQL 17</span><sup>®</sup>
+                                                </p>
                                                 <p class="Liste_puce_1">N.B.&#160;: Doxense<sup>®</sup> <strong>n'assure pas le support </strong>pour le paramétrage du SGBD PostgreSQL<sup>®</sup></p>
                                             </li>
                                             <li>

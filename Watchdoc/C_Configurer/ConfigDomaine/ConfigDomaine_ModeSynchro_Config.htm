@@ -3,6 +3,8 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="description" content="Procédure d'activation et de configuration de la synchronisation entre le serveur master et les serveurs esclaves d'un Domaine." /><title>Watchdoc - Configurer le mode de synchronisation entre master et autres serveurs</title>
         <!-- Google Tag Manager -->
@@ -199,7 +201,7 @@
                                         </div>
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor375"></a>
+                                        <h1><a name="aanchor376"></a>
                                             <MadCap:concept term="CFG;WD" />Watchdoc - Configurer le mode de synchronisation entre master et autres serveurs</h1>
                                         <h2>Principe</h2>
                                         <p>Dans une architecture comportant un serveur master et d'autres serveurs, l'ensemble des serveurs Watchdoc communiquent entre eux. <br />En particulier, le serveur master communique vers les autres serveurs de Watchdoc pour leur envoyer sa configuration lors des synchronisations.</p>
@@ -258,7 +260,7 @@
                                             <p><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Z_Resources/Images/02_Captures/Config_Domaine_mailbox2.png"><img class="MCPopupThumbnail img" data-mc-width="1909" data-mc-height="846" src="../../Z_Resources/Images/02_Captures/Config_Domaine_mailbox2.png" tabindex="" style="width: 700px;mc-thumbnail: popup;mc-thumbnail-max-width: 1000px;max-width: 1000px;" /></a>
                                             </p>
                                         </blockquote>
-                                        <h3>Configurer les <a name="délais_de_communication"></a>délais de communication</h3>
+                                        <h3>Configurer les <a name="délais_de_communication" id="délais_de_communication"></a>délais de communication</h3>
                                         <p>La gestion en domaine génère un grand nombre de communications entre le serveur master et les autres serveurs.&#160;<br />Il arrive que ce grand nombre de communications simultanées provoque des latences de réponses du serveur entraînant des perturbations dans le traitement des travaux d'impression.&#160;<br />En cas de perturbations de ce genre, modifiez les délais de communications des serveurs avec le serveur master&#160;: </p>
                                         <ol>
                                             <li value="1">

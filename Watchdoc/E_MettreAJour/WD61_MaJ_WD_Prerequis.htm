@@ -3,6 +3,8 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="description" content="Présentation de la procédure de mise à jour et de restauration de Watchdoc" />
         <meta name="description" content="Prérequis d'installation de mise à jour Watchdoc" /><title>Watchdoc  - Mettre à jour - Prérequis et préparation</title>
@@ -304,7 +306,7 @@
                                         <p>Lorsque Watchdoc est installé en mode <a href="../Z_Resources/Images/03_Schemas/WD_WD5_SCH_SchemaModeDeporte.png" class="MCTopic MCTopicPopupHotSpot a">déporté</a> (serveurs Watchdoc et IIS&#160;déployés sur des serveurs différents, architecture non-recommandée), il est nécessaire de conserver une ancienne version du site web IIS&#160;jusqu'à la fin de la mise à jour. <br />Cette sauvegarde peut également être conservée en vue de restaurer la précédente version. </p>
                                         <h2 id="Réinstallationdespilotes" data-magellan-target="Réinstallationdespilotes">Réinstallation des pilotes</h2>
                                         <p>Pour les versions antérieures à la v.&#160;6.1, la désinstallation puis la <strong><a href="../F_WSC/WSC6.1.x_Ajouter_Pilote.htm" target="_blank">réinstallation des pilotes</a></strong> à l'aide de l'outil DriverPackageExtractor est nécessaire.</p>
-                                        <h2 id="Préparerlamiseàjour" data-magellan-target="Préparerlamiseàjour"><a name="Preparation"></a>Préparer la mise à jour</h2>
+                                        <h2 id="Préparerlamiseàjour" data-magellan-target="Préparerlamiseàjour"><a name="Preparation" id="Preparation"></a>Préparer la mise à jour</h2>
                                         <ol>
                                             <li value="1">
                                                 <p class="Liste_num_1">Téléchargez le package d'installation de la nouvelle version depuis la <a href="../A_Getting_Started/Versions_FR.htm" target="_blank" title="Lien vers la page de téléchargement du package d'installation" alt="Lien vers la page de téléchargement du package d'installation">page dédiée.</a></p>
@@ -334,7 +336,7 @@
                                                 </ul>
                                             </li>
                                             <li value="5">
-                                                <p>Si vous utilisez WEScan et avez personnalisé les profils de scan directement dans le dossier des profils par défaut (fichiers JSON), faites-en une sauvegarde que vous pourrez rétablir après la mise à jour.Ce dossier est en effet écrasé au cours de la mise à jour. Pour information, il est recommandé de créer un dossier spécifique pour les profils personnalisés <a name="MaJ_WEScan" href="../C_Configurer/ConfigWEScan/WEScan_Config_Profil_SPC_utilisation.htm" target="_blank">(cf.&#160;Utiliser ScanProfilesCustomizer).</a></p>
+                                                <p>Si vous utilisez WEScan et avez personnalisé les profils de scan directement dans le dossier des profils par défaut (fichiers JSON), faites-en une sauvegarde que vous pourrez rétablir après la mise à jour.Ce dossier est en effet écrasé au cours de la mise à jour. Pour information, il est recommandé de créer un dossier spécifique pour les profils personnalisés <a name="MaJ_WEScan" href="../C_Configurer/ConfigWEScan/WEScan_Config_Profil_SPC_utilisation.htm" target="_blank" id="MaJ_WEScan">(cf.&#160;Utiliser ScanProfilesCustomizer).</a></p>
                                             </li>
                                         </ol>
                                     </div>

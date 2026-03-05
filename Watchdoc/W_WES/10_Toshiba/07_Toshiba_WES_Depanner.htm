@@ -3,6 +3,8 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="description" content="Articles de dépannage du WES Toshiba et activation des WES traces" /><title>WES&#160;Toshiba - Dépanner le WES</title>
         <!-- Google Tag Manager -->
@@ -265,7 +267,7 @@
                                         <p style="text-align: justify;">&#160;</p>
                                         <p style="text-align: left;">Pour obtenir un relevé optimal des données nécessaires au diagnostic, utilisez l'outil Watchdoc DiagTool fourni avec le programme d'installation de Watchdoc (cf.&#160;<a href="../../H_HowTo/WD5_DiagTool_Procedure.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Créer un rapport de logs avec DiagTool</a>).</p>
                                         <hr />
-                                        <h2 style="text-align: justify;" id="ActiverlestracesduWESWEStraces" data-magellan-target="ActiverlestracesduWESWEStraces"><a name="WEStraces"></a>Activer les traces du WES (WEStraces)</h2>
+                                        <h2 style="text-align: justify;" id="ActiverlestracesduWESWEStraces" data-magellan-target="ActiverlestracesduWESWEStraces"><a name="WEStraces" id="WEStraces"></a>Activer les traces du WES (WEStraces)</h2>
                                         <p style="text-align: justify;">Pour effectuer un diagnostic du problème rencontré sur les applications embarquées, il convient d'activer les fichiers traces (logs) spécifiques aux communications du WES. </p>
                                         <p style="font-size: 14pt;font-weight: bold;">&#160;</p>
                                         <p style="font-weight: normal;font-size: 12pt;">Pour activer les traces&#160;: </p>
@@ -354,7 +356,7 @@
                                             </li>
                                         </ol>
                                         <hr width="100%" size="0" align="center" />
-                                        <h2 id="ImpossibilitédesauthentifierdepuisleWESLenteursconstatéessurlepériphériqueNovembre2025" data-magellan-target="ImpossibilitédesauthentifierdepuisleWESLenteursconstatéessurlepériphériqueNovembre2025"><a name="Impossibl_Authent"></a>Impossibilité de s'authentifier depuis le WES - Lenteurs constatées sur le périphérique - Novembre 2025.</h2>
+                                        <h2 id="ImpossibilitédesauthentifierdepuisleWESLenteursconstatéessurlepériphériqueNovembre2025" data-magellan-target="ImpossibilitédesauthentifierdepuisleWESLenteursconstatéessurlepériphériqueNovembre2025"><a name="Impossibl_Authent" id="Impossibl_Authent"></a>Impossibilité de s'authentifier depuis le WES - Lenteurs constatées sur le périphérique - Novembre 2025.</h2>
                                         <p style="font-size: 14pt;"><strong style="color: #000000;">Contexte</strong>
                                         </p>
                                         <p style="text-align: left;">Après mise à jour en Watchdoc v. 6.1.1., les utilisateurs n'arrivent plus à s'authentifier depuis le WES&#160;: après saisie du code ou présentation du badge, le périphérique semble traiter l'information pendant environ 40 secondes, mais revient à l'interface d'accueil.&#160;<br />L'anomalie est résolue après redémarrage du périphérique, mais elle réapparaît très rapidement.&#160;<br />Dans le journal, on constate effectivement que la réponse à la commande   &lt;deviceRecord:getLog&gt; est anormalement longue.<br />Depuis la page web du périphérique, il est impossible d'afficher  le journal des travaux (chargement infini).</p>
@@ -368,7 +370,7 @@
                                         </p>
                                         <p>Il convient de modifier la valeur du paramètre "Journal des travaux" configuré dans le profil WES&#160;associé au périphérique (cf. <a href="03_Toshiba_WES_ConfigProfil.htm#Joblog" target="_blank">Configurer le profil WES</a>).&#160;<br />Nous recommandons d'utiliser la valeur 0 permettant une purge automatique ou de limiter le nombre de jours de rétention pour éviter ces lenteurs.&#160;<br />Attention : il arrive qu'une valeur supérieure à 0, même peu élevée, provoque des dysfonctionnements.&#160;</p>
                                         <hr width="100%" size="0" align="center" />
-                                        <h2 id="MessagedanslinterfacedadministrationTopAccessDonnéesdejournaleffacées" data-magellan-target="MessagedanslinterfacedadministrationTopAccessDonnéesdejournaleffacées">Message dans l'interface d'administration TopAccess : <a name="Donnees_Effacees"></a>Données de journal effacées</h2>
+                                        <h2 id="MessagedanslinterfacedadministrationTopAccessDonnéesdejournaleffacées" data-magellan-target="MessagedanslinterfacedadministrationTopAccessDonnéesdejournaleffacées">Message dans l'interface d'administration TopAccess : <a name="Donnees_Effacees" id="Donnees_Effacees"></a>Données de journal effacées</h2>
                                         <p style="font-weight: bold;">Juin 2025</p>
                                         <p style="font-size: 14pt;"><strong style="color: #000000; font-size: 14pt;">Contexte</strong>
                                         </p>
@@ -384,7 +386,7 @@
                                         </p>
                                         <p style="text-align: left;">Ce fonctionnement automatique a été modifié. <br />Pour résoudre ce dysfonctionnement, il convient donc de mettre Watchdoc à jour en v. 6.1.0.5290 min (cf. <a href="../../A_Getting_Started/Release_611.htm" target="_blank">Packages et notes de versions</a>).</p>
                                         <hr width="100%" size="0" align="center" />
-                                        <h2 id="MessagederreurTheremoteSOAPservicefailedwhileprocessingrequestunknownUserisoperatingthepanel" data-magellan-target="MessagederreurTheremoteSOAPservicefailedwhileprocessingrequestunknownUserisoperatingthepanel"><a name="Desinstall"></a>Message d'erreur - The remote SOAP&#160;service failed while processing request 'unknown': User is operating the panel</h2>
+                                        <h2 id="MessagederreurTheremoteSOAPservicefailedwhileprocessingrequestunknownUserisoperatingthepanel" data-magellan-target="MessagederreurTheremoteSOAPservicefailedwhileprocessingrequestunknownUserisoperatingthepanel"><a name="Desinstall" id="Desinstall"></a>Message d'erreur - The remote SOAP&#160;service failed while processing request 'unknown': User is operating the panel</h2>
                                         <p style="font-size: 14pt;"><strong style="color: #000000;">Contexte</strong>
                                         </p>
                                         <p style="text-align: left;">Lors de la désinstallation du WES&#160;Toshiba Open Platform, l'opération se déroule bien jusqu'à la ligne Set MDS&#160;settings qui affiche le message d'erreur suivant&#160;: The remote SOAP&#160;service failed while processing request '&amp;lt;unknown&amp;gt;': User is operating the panel:<br /><br /><img src="Depanner_WES_ErreurDesinstall_700x192.png" style="width: 700;height: 192;" /><br /></p>
@@ -396,7 +398,7 @@
                                         <p style="text-align: left;">Pour résoudre le problème, il convient d'appuyer 2&#160;fois sur le bouton <img src="Depanner_WES_ErreurDesinstallBtn_108x38.png" style="width: 108;height: 38;" /> de l'écran du périphérique pour faire disparaître le WES&#160;et afficher de nouveau la page d'accueil originale du périphérique&#160;:<br /><br /><img src="Depanner_WES_ErreurDesinstall_Origin_700x321.png" style="width: 700;height: 321;" /><br /></p>
                                         <p>&#160;</p>
                                         <hr width="100%" size="0" align="center" />
-                                        <h2 style="text-align: left;" id="MessagederreurErrorwhilestartinganewformatbreakdownInvalidobjectnamedboformatbreakdownmessageInternalServerErrorsurleWES" data-magellan-target="MessagederreurErrorwhilestartinganewformatbreakdownInvalidobjectnamedboformatbreakdownmessageInternalServerErrorsurleWES"><a name="formatbreakdown">Message d'erreur - Error while starting a newformat breakdown: Invalid object name 'dbo.formatbreakdown'" + message "Internal Server Error" sur le WES</a>
+                                        <h2 style="text-align: left;" id="MessagederreurErrorwhilestartinganewformatbreakdownInvalidobjectnamedboformatbreakdownmessageInternalServerErrorsurleWES" data-magellan-target="MessagederreurErrorwhilestartinganewformatbreakdownInvalidobjectnamedboformatbreakdownmessageInternalServerErrorsurleWES"><a name="formatbreakdown" id="formatbreakdown">Message d'erreur - Error while starting a newformat breakdown: Invalid object name 'dbo.formatbreakdown'" + message "Internal Server Error" sur le WES</a>
                                         </h2>
                                         <p style="font-size: 14pt;"><strong style="color: #000000;">Contexte</strong>
                                         </p>

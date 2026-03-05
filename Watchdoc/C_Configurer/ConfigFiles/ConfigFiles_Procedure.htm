@@ -3,6 +3,8 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="description" content="Procédure de configuration d'une file d'impression (sections Informations générales, Périphériques, Envoi de fichiers spools, Restrictions, Plateforme, Contacts, Monitoring, Configuration SNMP, Notifications, Archivage, WES, Transformation de spools, Profil du périphérique, Mode expert)." /><title>Watchdoc - Files d'impression - Configurer une file</title>
         <!-- Google Tag Manager -->
@@ -254,7 +256,7 @@
                                         <p class="Liste_num_1">Complétez les zones suivantes : </p>
                                         <ul>
                                             <li>
-                                                <p class="Liste_puce_1"><strong><a name="Identifiant"></a>Identifiant :</strong> un identifiant est généré automatiquement par défaut. Vous pouvez le modifier&#160;: il peut contenir jusqu'à 64 caractères alphabétiques et chiffres, ainsi que le tiret bas (_) en guise de séparateur. </p>
+                                                <p class="Liste_puce_1"><strong><a name="Identifiant" id="Identifiant"></a>Identifiant :</strong> un identifiant est généré automatiquement par défaut. Vous pouvez le modifier&#160;: il peut contenir jusqu'à 64 caractères alphabétiques et chiffres, ainsi que le tiret bas (_) en guise de séparateur. </p>
                                             </li>
                                             <li>
                                                 <p class="Liste_puce_1"><strong>Nom :</strong> attribuez un nom à votre file d'impression.&#160;Ce nom s'affichant dans l'interface de déblocage ou dans les mails de notification, il doit contenir des informations précisant son modèle et sa localisation.<br /></p>
@@ -283,21 +285,21 @@
                                                 </li>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1"><strong><a name="ModeWD"></a>Mode </strong>: le <strong>mode </strong>désigne la manière dont Watchdoc fonctionne pour libérer les travaux d'impression qu'il contrôle&#160;:</p>
+                                                <p class="Liste_puce_1"><strong><a name="ModeWD" id="ModeWD"></a>Mode </strong>: le <strong>mode </strong>désigne la manière dont Watchdoc fonctionne pour libérer les travaux d'impression qu'il contrôle&#160;:</p>
                                                 <ul>
                                                     <li><strong style="font-size: 12pt;">Comme le groupe :</strong><span style="font-size: 12pt;"> la file hérite de la configuration appliquée au groupe (ce qui offre une garantie d'homogénéité</span>&#160;;</li>
-                                                    <li><a name="ModeValidation" style="font-size: 12pt;"></a><strong style="font-size: 12pt;">Validation :</strong><span style="font-size: 12pt;">: ce mode impose à l'utilisateur de valider ses travaux d'impression. Pour valider, l'utilisateur s'authentifie sur le périphérique d'impression (à l'aide d'un WES ou d'un lecteur de badges) et confirme ses impressions.&#160;Il peut alors les récupérer en toute sécurité.</span>
+                                                    <li><a name="ModeValidation" style="font-size: 12pt;" id="ModeValidation"></a><strong style="font-size: 12pt;">Validation :</strong><span style="font-size: 12pt;">: ce mode impose à l'utilisateur de valider ses travaux d'impression. Pour valider, l'utilisateur s'authentifie sur le périphérique d'impression (à l'aide d'un WES ou d'un lecteur de badges) et confirme ses impressions.&#160;Il peut alors les récupérer en toute sécurité.</span>
                                                     </li>
                                                     <li style="font-size: 12pt;"><strong style="font-size: 12pt;">Comptabilisation :</strong> <span style="font-size: 12pt;">ce mode imprime automatiquement les travaux demandés sans exiger la validation de l'utilisateur. </span></li>
                                                 </ul>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1"><strong><a name="File_Virtuelle"></a>Virtuelle </strong>: cochez cette cas si la file que vous configurez est virtuelle.<br />La file virtuelle est une file qui n'est associée à aucun périphérique mais qui est chargée de conserver les travaux d'impression en vue de les diriger vers le périphérique réseau qui sera sollicité par l'utilisateur pour l'impression <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term80">"à la demande"<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Fonction qui permet à l'utilisateur de lancer ses travaux d'impression depuis son environnement de travail puis de débloquer ses impressions sur le périphérique de son choix. La validation de ses impressions peut être effectuée soit depuis l'interface web de Watchdoc, soit depuis le WES, après authentification par l'utilisateur.</span></a>. <br />Comme la file virtuelle envoie les travaux d'impression à des  périphériques divers dont les capacités sont très différentes, nous vous recommandons de configurer cette file avec le maximum de capacités (cf.&#160;<a href="#Section_Periph" target="_blank">section Périphériques</a> ci-dessous : impression couleur, recto-verso et grand format) afin d'en optimiser l'efficacité.</p>
+                                                <p class="Liste_puce_1"><strong><a name="File_Virtuelle" id="File_Virtuelle"></a>Virtuelle </strong>: cochez cette cas si la file que vous configurez est virtuelle.<br />La file virtuelle est une file qui n'est associée à aucun périphérique mais qui est chargée de conserver les travaux d'impression en vue de les diriger vers le périphérique réseau qui sera sollicité par l'utilisateur pour l'impression <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term80">"à la demande"<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Fonction qui permet à l'utilisateur de lancer ses travaux d'impression depuis son environnement de travail puis de débloquer ses impressions sur le périphérique de son choix. La validation de ses impressions peut être effectuée soit depuis l'interface web de Watchdoc, soit depuis le WES, après authentification par l'utilisateur.</span></a>. <br />Comme la file virtuelle envoie les travaux d'impression à des  périphériques divers dont les capacités sont très différentes, nous vous recommandons de configurer cette file avec le maximum de capacités (cf.&#160;<a href="#Section_Periph" target="_blank">section Périphériques</a> ci-dessous : impression couleur, recto-verso et grand format) afin d'en optimiser l'efficacité.</p>
                                             </li>
                                         </ul>
                                         <ul>
                                             <li>
-                                                <p class="Liste_puce_1"><strong>Tags </strong>: saisissez au besoin des mots-clés internes permettant de qualifier la file.&#160;Utilisez l'espace en guise de séparateur entre deux mots-clés et le tiret bas (_) en guise de séparateur dans le mot-clé s'il est composé de plusieurs mots.&#160;Ces mots-clés servent principalement à la conception de filtres et sont exploités pour affiner les rapports personnalisés, facilitant ainsi l'exploitation des files.<br /><a name="Tags_WPC"></a>Certains tags sont utilisés par WPC&#160;for Windows pour déclencher un comportement particulier de la file : </p>
+                                                <p class="Liste_puce_1"><strong>Tags </strong>: saisissez au besoin des mots-clés internes permettant de qualifier la file.&#160;Utilisez l'espace en guise de séparateur entre deux mots-clés et le tiret bas (_) en guise de séparateur dans le mot-clé s'il est composé de plusieurs mots.&#160;Ces mots-clés servent principalement à la conception de filtres et sont exploités pour affiner les rapports personnalisés, facilitant ainsi l'exploitation des files.<br /><a name="Tags_WPC" id="Tags_WPC"></a>Certains tags sont utilisés par WPC&#160;for Windows pour déclencher un comportement particulier de la file : </p>
                                                 <ul>
                                                     <li>
                                                         <p class="Liste_puce_1"><strong>remote :</strong> permet d'installer la file d'impression avec le PortMonitor WPC&#160;pour imprimer au format RAW&#160;sur le port 9100 du périphérique d'impression plutôt que d'envoyer la demande d'impression au serveur (permet d'activer l'impression directe avec WPC&#160;for Windows) ; </p>
@@ -306,7 +308,7 @@
                                                         <p class="Liste_puce_1"><strong>tcpip :</strong> permet d'installer la file d'impression avec son port d'impression <strong>TCPIP </strong>de manière à laisser MS&#160;Windows gérer l'impression, sans solliciter Watchdoc (permet l'impression directe par Windows). </p>
                                                     </li>
                                                     <li>
-                                                        <p class="Liste_puce_1"><strong><a name="forceinstall"></a>forceinstall :</strong> permet d'installer une file d'impression physique  automatiquement.</p>
+                                                        <p class="Liste_puce_1"><strong><a name="forceinstall" id="forceinstall"></a>forceinstall :</strong> permet d'installer une file d'impression physique  automatiquement.</p>
                                                     </li>
                                                 </ul>
                                                 <p>Lorsqu'une file est installée sans ces tags, le périphérique d'impression est installé avec le PortMonitor WPC, afin que la demande d'impression soit envoyée à Watchdoc via la PrintAPI.</p>
@@ -325,7 +327,7 @@
                                                 <p>&#160;</p>
                                             </li>
                                         </ul>
-                                        <h3 id="SectionPériphériques" data-magellan-target="SectionPériphériques"><a name="Section_Periph"></a>Section Périphériques</h3>
+                                        <h3 id="SectionPériphériques" data-magellan-target="SectionPériphériques"><a name="Section_Periph" id="Section_Periph"></a>Section Périphériques</h3>
                                         <p><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Files_Peripheriques_V52.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1146" data-mc-height="649" src="../../Z_Resources/Images/02_Captures/Config_Files_Peripheriques_V52.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a>
                                         </p>
                                         <p>&#160;</p>
@@ -406,7 +408,7 @@ Le format permet d'intégrer des données vectorielles 2D et des polices de cara
                                         </ul>
                                         <ul>
                                             <li>
-                                                <p class="Liste_puce_1"><a name="CSR"></a><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term9">CSR<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Client Side Rendering. Dans une infrastructure Client/serveur, le Client-side rendering est la prise en charge du spool par le poste client et non par le serveur. Le poste client envoie donc au serveur un fichier de spool finalisé.</span></a> : </p>
+                                                <p class="Liste_puce_1"><a name="CSR" id="CSR"></a><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term9">CSR<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Client Side Rendering. Dans une infrastructure Client/serveur, le Client-side rendering est la prise en charge du spool par le poste client et non par le serveur. Le poste client envoie donc au serveur un fichier de spool finalisé.</span></a> : </p>
                                                 <ul style="list-style-type: circle;">
                                                     <li>
                                                         <p class="Liste_puce_2"><strong>Garder la configuration actuelle du pilote d'impression</strong> : optez pour ce choix afin de conserver la configuration définie par le pilote lors de l'installation ;</p>
@@ -451,7 +453,7 @@ Le fait que les messages soient archivés sur le serveur fait que l'utilisateur 
                                                 </ul>
                                             </li>
                                         </ul>
-                                        <h3 id="SectionEnvoidefichiersspools" data-magellan-target="SectionEnvoidefichiersspools">Section <a name="Envoi_de_fichiers_spools"></a>Envoi de fichiers spools</h3>
+                                        <h3 id="SectionEnvoidefichiersspools" data-magellan-target="SectionEnvoidefichiersspools">Section <a name="Envoi_de_fichiers_spools" id="Envoi_de_fichiers_spools"></a>Envoi de fichiers spools</h3>
                                         <p>Par défaut, l'envoi des spools est géré automatiquement par Watchdoc. Cependant, il peut être nécessaire, dans des configurations très spécifiques, de modifier les paramètres suivants&#160;:</p>
                                         <ul>
                                             <li>
@@ -561,7 +563,7 @@ Comme tous les protocoles basés sur IP, IPP peut être utilisé localement ou s
                                         <h3 id="SectionRestrictions" data-magellan-target="SectionRestrictions">Section Restrictions</h3>
                                         <ul>
                                             <li>
-                                                <p class="Liste_puce_1"><strong><a name="Expiration">Expiration :</a></strong> le paramètre définit le traitement  appliqué aux travaux d'impression au-delà de la durée de vie indiquée (dans le champ suivant)&#160;:</p>
+                                                <p class="Liste_puce_1"><strong><a name="Expiration" id="Expiration">Expiration :</a></strong> le paramètre définit le traitement  appliqué aux travaux d'impression au-delà de la durée de vie indiquée (dans le champ suivant)&#160;:</p>
                                                 <ul>
                                                     <li>
                                                         <p class="Liste_puce_2"><strong>Utiliser la configuration par défaut du groupe :</strong>&#160;le traitement appliqué est le même que celui qui a été défini pour le Groupe de files (si la file appartient à un groupe). Dans ce cas, c'est aussi la durée de vie définie pour le groupe qui s'applique à la file.</p>
@@ -589,11 +591,11 @@ Le fait que les messages soient archivés sur le serveur fait que l'utilisateur 
                                         </ul>
                                         <ul>
                                             <li>
-                                                <p class="Liste_puce_1"><strong><a name="DureeDeVie"></a>Durée de vie</strong> (durée de rétention) : indiquez en secondes, minutes, heures et jours, le temps durant lequel un travail reste dans la file tant qu'il n'est pas débloqué par l'utilisateur. Si vous ne remplissez pas ce champ, la durée de vie fixée à 8h par défaut.<br />Au-delà de la durée de vie précisée, le traitement défini en paramètre <b>Expiration</b>  est appliqué.<br />N.B.&#160;: si la file appartient à un groupe, c'est la durée définie dans le groupe qui est appliquée. Ceci afin d'éviter des erreurs liées à la coexistence de deux durées de vie différentes (groupe et file) pour une même file.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Files_Restriction_54.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="821" data-mc-height="74" src="../../Z_Resources/Images/02_Captures/Config_Files_Restriction_54.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                <p class="Liste_puce_1"><strong><a name="DureeDeVie" id="DureeDeVie"></a>Durée de vie</strong> (durée de rétention) : indiquez en secondes, minutes, heures et jours, le temps durant lequel un travail reste dans la file tant qu'il n'est pas débloqué par l'utilisateur. Si vous ne remplissez pas ce champ, la durée de vie fixée à 8h par défaut.<br />Au-delà de la durée de vie précisée, le traitement défini en paramètre <b>Expiration</b>  est appliqué.<br />N.B.&#160;: si la file appartient à un groupe, c'est la durée définie dans le groupe qui est appliquée. Ceci afin d'éviter des erreurs liées à la coexistence de deux durées de vie différentes (groupe et file) pour une même file.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Files_Restriction_54.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="821" data-mc-height="74" src="../../Z_Resources/Images/02_Captures/Config_Files_Restriction_54.png" tabindex="" style="max-width: 1000px;" /></a></p>
                                             </li>
                                         </ul>
                                         <p>&#160;</p>
-                                        <p class="Liste_puce_1"><strong><a name="Expiration">Expiration</a></strong>
+                                        <p class="Liste_puce_1"><strong><a name="Expiration" id="Expiration">Expiration</a></strong>
                                         </p>
                                         <p>Le paramètre fonctionne avec le paramètre <strong>Durée de vie</strong> qui suit.<br />Il permet de définir le traitement qui doit être appliqué aux travaux d'impression au-delà de la durée de vie fixée par défaut :</p>
                                         <ul>
@@ -621,11 +623,11 @@ Le fait que les messages soient archivés sur le serveur fait que l'utilisateur 
                                         </ul>
                                         <ul>
                                             <li>
-                                                <p class="Liste_puce_1"><strong><a name="DureeDeVie"></a>Durée de vie</strong> (durée de rétention) : indiquez en secondes, minutes, heures et jours, le temps durant lequel un travail reste dans la file tant qu'il n'est pas débloqué par l'utilisateur. Si vous ne remplissez pas ce champs, par défaut, la durée de vie fixée à 8h.&#160;Au-delà, sans déblocage de la part de l'utilisateur, le travail d'impression est supprimé.<br />Au-delà de la durée de vie précisée, le traitement défini précédemment est appliqué.<br />N.B.&#160;: si la file appartient à un groupe, c'est la durée définie dans le groupe qui est appliquée. Ceci afin d'éviter des erreurs liées à la coexistence de deux durées de vie différentes pour une même file.</p>
+                                                <p class="Liste_puce_1"><strong><a name="DureeDeVie" id="DureeDeVie"></a>Durée de vie</strong> (durée de rétention) : indiquez en secondes, minutes, heures et jours, le temps durant lequel un travail reste dans la file tant qu'il n'est pas débloqué par l'utilisateur. Si vous ne remplissez pas ce champs, par défaut, la durée de vie fixée à 8h.&#160;Au-delà, sans déblocage de la part de l'utilisateur, le travail d'impression est supprimé.<br />Au-delà de la durée de vie précisée, le traitement défini précédemment est appliqué.<br />N.B.&#160;: si la file appartient à un groupe, c'est la durée définie dans le groupe qui est appliquée. Ceci afin d'éviter des erreurs liées à la coexistence de deux durées de vie différentes pour une même file.</p>
                                             </li>
                                         </ul>
                                         <p>&#160;</p>
-                                        <h3 id="SectionPlateforme" data-magellan-target="SectionPlateforme">Section <a name="Plateforme"></a>Plateforme<br /></h3>
+                                        <h3 id="SectionPlateforme" data-magellan-target="SectionPlateforme">Section <a name="Plateforme" id="Plateforme"></a>Plateforme<br /></h3>
                                         <p>Cette section permet de préciser les plateformes WPC à partir desquelles la file  peut être utilisée : WPC&#160;for Android, for Chrome, for IOS, for Windows et /ou Skyprint.&#160;</p>
                                         <p>Cochez la ou les cases correspondant aux plateformes sur lesquelles la file est proposée :</p>
                                         <ul>
@@ -762,7 +764,7 @@ Le fait que les messages soient archivés sur le serveur fait que l'utilisateur 
                                         <blockquote>
                                             <fieldset>Les données renvoyées par la fonction <strong>Monitoring </strong>de Watchdoc sont visibles dans les onglets <strong>Etat du périphérique</strong> et <strong>Incidents </strong>de l'interface d'administration ainsi que dans la base SQL servant à générer les statistiques d'impression.</fieldset>
                                         </blockquote>
-                                        <h3 id="SectionConfigurationSNMP" data-magellan-target="SectionConfigurationSNMP">Section Configuration <a name="SNMP"></a>SNMP</h3>
+                                        <h3 id="SectionConfigurationSNMP" data-magellan-target="SectionConfigurationSNMP">Section Configuration <a name="SNMP" id="SNMP"></a>SNMP</h3>
                                         <p>Si vous avez activé le monitoring SNMP, complétez-en la configuration (disponible depuis la v6.1.4898)&#160;: </p>
                                         <ul>
                                             <li>
@@ -804,7 +806,7 @@ Le fait que les messages soient archivés sur le serveur fait que l'utilisateur 
                                                         </ul>
                                                     </li>
                                                     <li>
-                                                        <p><b><a name="SNMP_Encodage"></a>Encodage :</b> dans la liste, sélectionnez le format d'encodage des caractères, si l'alphabet utilisé n'est pas l'alphabet latin.&#160;Ce paramètre n'est visible qu'en mode débogage (debug) (cf.&#160;<a href="../../H_HowTo/WD_Activer_ModeDebug.htm" target="_blank">Activer le mode débogage</a>) : <br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Files_SNMP_Encodage.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="841" data-mc-height="349" src="../../Z_Resources/Images/02_Captures/Config_Files_SNMP_Encodage.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a><br /><br /></p>
+                                                        <p><b><a name="SNMP_Encodage" id="SNMP_Encodage"></a>Encodage :</b> dans la liste, sélectionnez le format d'encodage des caractères, si l'alphabet utilisé n'est pas l'alphabet latin.&#160;Ce paramètre n'est visible qu'en mode débogage (debug) (cf.&#160;<a href="../../H_HowTo/WD_Activer_ModeDebug.htm" target="_blank">Activer le mode débogage</a>) : <br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Files_SNMP_Encodage.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="841" data-mc-height="349" src="../../Z_Resources/Images/02_Captures/Config_Files_SNMP_Encodage.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a><br /><br /></p>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -1046,7 +1048,7 @@ Le fait que les messages soient archivés sur le serveur fait que l'utilisateur 
                                                 <p class="Liste_puce_1"><strong>Consommation d'énergie :</strong> indiquez, pour les différents états du périphérique, quelle est la consommation estimée en Watts.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Files_ProfilPerifph.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="716" data-mc-height="242" src="../../Z_Resources/Images/02_Captures/Config_Files_ProfilPerifph.png" tabindex="" style="max-width: 1000px;" /></a></p>
                                             </li>
                                         </ul>
-                                        <h3 id="SectionModeexpert" data-magellan-target="SectionModeexpert">Section <a name="Mode_expert"></a>Mode expert</h3>
+                                        <h3 id="SectionModeexpert" data-magellan-target="SectionModeexpert">Section <a name="Mode_expert" id="Mode_expert"></a>Mode expert</h3>
                                         <p>La section regroupe des paramètres permettant de faciliter la détection d'anomalies afin de faciliter l'analyse. <br /><br /></p>
                                         <fieldset>Attention : nous vous recommandons de ne modifier ces paramètres qu'en cas de nécessité.&#160;</fieldset>
                                         <p>&#160;</p>

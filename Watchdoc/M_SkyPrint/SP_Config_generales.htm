@@ -3,6 +3,8 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Watchdoc Skyprint - Configurer les paramètres généraux</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
@@ -215,7 +217,7 @@
                                                 <p>Consultez les données affichées dans la section <strong>Statistiques </strong>:<br /><br /><a class="MCPopupThumbnailLink" href="Admin_Config_Gen_Stats.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1684" data-mc-height="921" src="Admin_Config_Gen_Stats.png" tabindex="" style="max-width: 1000px;" /></a></p>
                                             </li>
                                         </ol>
-                                        <h2><a name="MotDePasse"></a>Configurer le mot de passe maintenance</h2>
+                                        <h2><a name="MotDePasse" id="MotDePasse"></a>Configurer le mot de passe maintenance</h2>
                                         <p>Vous pouvez modifier le mot de passe permettant d'accéder à l'interface d'administration de Skyprint. </p>
                                         <ol>
                                             <li value="1">
@@ -235,7 +237,7 @@
                                             </li>
                                         </ol>
                                         <p style="font-weight: normal;"><span style="font-family: 'Wingdings'">è</span> Un message informe du succès de l'opération.</p>
-                                        <h2><a name="Certif"></a>Configurer la gestion des certificats</h2>
+                                        <h2><a name="Certif" id="Certif"></a>Configurer la gestion des certificats</h2>
                                         <p>Lors de l'installation initiale de Skyprint, vous devez exporter le certificat fourni par Watchdoc puis l'enregistrer  sur le serveur dans le dossier de Skyprint (cf. <a href="SP_Installation.htm#Certificat" target="_blank">Installer Skyprint</a>). Ce certificat par défaut vous permet de sécuriser Skyprint.&#160;</p>
                                         <p>Cependant, vous pouvez aussi appliquer un autre certificat <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term128">PFX<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Un fichier PKCS#12 ou .pfx est un fichier qui contient à la fois la clé privée et le certificat X.509. Il est prêt à être installé par le client sur des serveurs comme IIS, Tomkat ou Exchange. (Source : https://www.globalsign.com/fr/blog/fichier-pkcs12)</span></a> fourni par votre organisation. Pour cela, vous devez disposer du mot de passe qui protège la clé privée associée au certificat.</p>
                                         <ol>
@@ -257,7 +259,7 @@
                                                     <br /><span style="font-family: 'Wingdings'">è</span> Un message vous informe du succès de l'opération.</p>
                                             </li>
                                         </ol>
-                                        <h2>Configurer la gestion <a name="Logs"></a>des logs</h2>
+                                        <h2>Configurer la gestion <a name="Logs" id="Logs"></a>des logs</h2>
                                         <p>Skyprint génère des logs, fichiers traçant l'activité du service qui supervise les boîtes mail.&#160;Ces logs facilitent le diagnostic en cas de dysfonctionnement.</p>
                                         <p>Par défaut, le niveau de logs est fixé à <strong>INFO</strong>. Modifiez ce niveau pour disposer de données plus ou moins précises. <br />Vous pouvez aussi modifier ce niveau de logs avant de reproduire un dysfonctionnement.&#160;Ainsi, les logs permettront de faciliter le diagnostic.</p>
                                         <p>&#160;</p>

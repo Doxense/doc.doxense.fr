@@ -3,6 +3,8 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="description" content="Procédure de création et de configuration du profil WES : sections Propriétés, Authentification par clavier, Authentification par badge, Impression à la demande et Périphérique." /><title>WES&#160;Sharp - Configurer le profil WES</title>
         <!-- Google Tag Manager -->
@@ -272,7 +274,7 @@ Par souci de sécurité, nous déconseillons l'utilisation du code PUK et recomm
                                                     <li>
                                                         <p><strong>Nom et code d'impression&#160;:</strong> l'utilisateur s'authentifie à l'aide de son compte LDAP ainsi que d'un code alphanumérique.&#160;Ce mode d'authentification doit avoir été activé au préalable dans la configuration de l'annuaire LDAP. Le code alphanumérique doit avoir été saisi au préalable par l'utilisateur dans la page "Mon Compte"<MadCap:conditionalText data-mc-conditions="General.Online"> (cf. <a href="../../H_HowTo/WD_MonCompte_Consulter_Util.htm" target="_blank">Utiliser la page "Mon compte")</a> ;</MadCap:conditionalText><br /><br /><img src="Config_WES_Profil_Sharp_SectionAuthClavier_V61.png" /><br /></p>
                                                     </li>
-                                                </ul><a name="Mode_Galerie"></a>
+                                                </ul><a name="Mode_Galerie" id="Mode_Galerie"></a>
                                                 <ul>
                                                     <li>
                                                         <p><strong>Galerie : </strong>l'utilisateur recherche son compte dans une galerie d'identicônes (liste de comptes déjà authentifiés sur le périphérique), puis complète l'authentification à l'aide d'un code.&#160;S'il ne trouve pas son compte directement la galerie, il dispose d'un moteur de recherche.&#160;</p>
@@ -398,7 +400,7 @@ Par souci de sécurité, nous déconseillons l'utilisation du code PUK et recomm
                                                 <p><strong>Mot de passe obIigatoire :</strong> cochez cette case pour obliger les utilisateurs à saisir leur mot de passe dans les paramètres du pilote ou de l'application mobile Sharp. Si le mot de passe est absent, l'impression est considérée comme anonyme et sera rejetéesi l'impression anonyme n'est pas autorisée.</p>
                                             </li>
                                         </ul>
-                                        <h3>Configurer la section Gestion de la <a name="Redirection"></a>redirection (depuis v. 6.1.0.5290)</h3>
+                                        <h3>Configurer la section Gestion de la <a name="Redirection" id="Redirection"></a>redirection (depuis v. 6.1.0.5290)</h3>
                                         <p>Configurez ici le fonctionnement du WES&#160;avec ou sans l'option AMX2 / BP-AM10 (cf.&#160;<a href="02_Sharp_WES_ConfigPrea.htm#Options" target="_parent">Prérequis d'installation</a>).</p>
                                         <ul>
                                             <li>
@@ -617,7 +619,7 @@ Par souci de sécurité, nous déconseillons l'utilisation du code PUK et recomm
                                                         <p>une adresse spécifique à saisir dans le champ dédié.</p>
                                                     </li>
                                                     <li>
-                                                        <p><strong><a name="PointEntreeSecurise"></a>Point d'entrée sécurisé :</strong> si vous avez sélectionné un mode de connexion SSL ou Mixte (ci-dessous, depuis v.&#160;6.1.0.5262), vous pouvez préciser le point d'accès que vous souhaitez utiliser. Le nombre de  points d'entrée figurant dans la liste varie en fonction de ceux qui ont été préalablement configurés dans l'interface Serveur Web,  section DSP <MadCap:conditionalText data-mc-conditions="General.Online">(cf.&#160;<a href="../../C_Configurer/ConfigServeurWeb/Config_ServeurWeb_Presentation.htm#DSP" target="_blank">Configurer le Serveur web</a>).</MadCap:conditionalText> Si vous n'avez pas configuré ces points d'entrée préalablement, cliquez sur <b>Configurer les points d'entrée</b>.</p>
+                                                        <p><strong><a name="PointEntreeSecurise" id="PointEntreeSecurise"></a>Point d'entrée sécurisé :</strong> si vous avez sélectionné un mode de connexion SSL ou Mixte (ci-dessous, depuis v.&#160;6.1.0.5262), vous pouvez préciser le point d'accès que vous souhaitez utiliser. Le nombre de  points d'entrée figurant dans la liste varie en fonction de ceux qui ont été préalablement configurés dans l'interface Serveur Web,  section DSP <MadCap:conditionalText data-mc-conditions="General.Online">(cf.&#160;<a href="../../C_Configurer/ConfigServeurWeb/Config_ServeurWeb_Presentation.htm#DSP" target="_blank">Configurer le Serveur web</a>).</MadCap:conditionalText> Si vous n'avez pas configuré ces points d'entrée préalablement, cliquez sur <b>Configurer les points d'entrée</b>.</p>
                                                         <ul>
                                                             <li>
                                                                 <p>le point d'entrée par défaut : il s'agit du point d'entrée défini comme point d'entrée par défaut dans la section DSP ;</p>

@@ -3,6 +3,8 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="description" content="Présentation du principe d'envoi des mails et rapports depuis WSC : accès à l'interface, configuration du serveur SMTP, configuration de la notification, envoi des alertes et des rapports" /><title>Console de Supervision (WSC) - Envoyer des mails d'alerte et de rapports</title>
         <!-- Google Tag Manager -->
@@ -254,7 +256,7 @@
                                                 <p class="Liste_puce_1"><strong>Se connecter au serveur SMTP&#160;en utilisant <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term4">TLS<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Protocole de sécurisation des Transport Layer Security. Protocole de sécurisation des échanges sur Internet, remplaçant le protocole SSL en 2001. SSL et le TLS sont des protocoles de chiffrement qui garantissent pleinement la sécurité des communications pour tous les mails échangés. Ces systèmes sont largement utilisés pour garantir la sécurité des communications sur internet.</span></a>/<a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term5">SSL<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Secure Sockets Layer. Protocole de sécurisation des échanges sur Internet, devenu Transport Layer Security (TLS) en 2001.</span></a>&#160;:</strong> cochez la case si le serveur SMTP impose le protocole de sécurisation Transport Layer Security (TLS) ou Secure Sockets Layer (SSL). Ce paramètre est obligatoire avec le mode de connexion Exchange Online.cochez cette case si une identification est requise par le serveur SMTP, puis complétez les champs suivants : </p>
                                             </li>
                                         </ul>
-                                        <h2><a name="Exchange_Online"></a>Exchange Online</h2>
+                                        <h2><a name="Exchange_Online" id="Exchange_Online"></a>Exchange Online</h2>
                                         <p>Si vous avez sélectionné le type Exchange Online dans la section précédente, complétez les paramètres suivants : </p>
                                         <ul>
                                             <li>

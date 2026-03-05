@@ -3,6 +3,8 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="description" content="Procédure d'ajout de Watchdoc Print Client for Android dans le Store Android." /><title>Watchdoc Print Client for Android - Ajouter et configurer l'application dans l'EMM Intune</title>
         <!-- Google Tag Manager -->
@@ -199,7 +201,7 @@
                                         </div>
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor70"></a>
+                                        <h1><a name="aanchor71"></a>
                                             <MadCap:concept term="WPC" />Watchdoc Print Client for Android - Ajouter et configurer l'application dans l'EMM Intune</h1>
                                         <h2>Principe</h2>
                                         <p style="text-align: left;vertical-align: super;">En tant qu'administrateur, lorsque  vous fournissez votre ID d'organisation, Doxense l'ajoute à la liste des organisations&#160;/ entreprises autorisées à utiliser l'application Watchdoc Print Client for Android. Cette application est mise à votre disposition dans le store Google Play.&#160;</p>
@@ -225,7 +227,7 @@
                                                 <p style="text-align: left; vertical-align: super;">le certificat de la Print API (fichier au format .der), garant de la sécurité de l'application.</p>
                                             </li>
                                         </ul>
-                                        <h2><a name="Prérequi"></a>Prérequis</h2>
+                                        <h2><a name="Prérequi" id="Prérequi"></a>Prérequis</h2>
                                         <p>Pour configurer l'application Watchdoc Print Client for Android dans Intune, vous devez disposer du certificat <b>print_api_cert.der</b> au format base 64.<br />Ce certificat doit être exporté au format .der depuis Watchdoc puis modifié en fichier .txt :</p>
                                         <p>&#160;</p>
                                         <ol start="1">
@@ -274,7 +276,7 @@
                                                 <p>dans Managed Google Play, cherchez et sélectionnez l'application Watchdoc Print Client for Android&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="WPCA_InTune_SelectWApp.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1166" data-mc-height="610" src="WPCA_InTune_SelectWApp.png" tabindex="" style="max-width: 1000px;" /></a><br /><br /></p>
                                             </li>
                                         </ol>
-                                        <h3>Configurer l'url de découverte et configurer le <a name="WPCA_Certificat"></a>certificat WPC</h3>
+                                        <h3>Configurer l'url de découverte et configurer le <a name="WPCA_Certificat" id="WPCA_Certificat"></a>certificat WPC</h3>
                                         <p>Une fois l'application ajoutée, </p>
                                         <ol>
                                             <li value="1">

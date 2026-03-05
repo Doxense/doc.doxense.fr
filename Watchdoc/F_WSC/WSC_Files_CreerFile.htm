@@ -3,6 +3,8 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="description" content="Procédure de création et de configuration d'une file d'impression via WSC." /><title>Console de Supervision (WSC) - Créer et configurer une file d'impression</title>
         <!-- Google Tag Manager -->
@@ -199,7 +201,7 @@
                                         </div>
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1 id="ConsoledeSupervisionWSCCréeretconfigurerunefiledimpression" data-magellan-target="ConsoledeSupervisionWSCCréeretconfigurerunefiledimpression"><a name="aanchor125"></a>
+                                        <h1 id="ConsoledeSupervisionWSCCréeretconfigurerunefiledimpression" data-magellan-target="ConsoledeSupervisionWSCCréeretconfigurerunefiledimpression"><a name="aanchor126"></a>
                                             <MadCap:concept term="WSC" />Console de Supervision (WSC) - Créer et configurer une file d'impression<br /></h1>
                                         <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
                                             <li class="tree-node"><a href="#ConsoledeSupervisionWSCCr%C3%A9eretconfigurerunefiledimpression">Console de Supervision (WSC) - Créer et configurer une file d'impression</a>
@@ -294,7 +296,7 @@
                                                         <p><strong>Mots clés : </strong>saisissez un ou plusieurs mots clés associés à la file (peut servir comme critère de sélection ou de tri par la suite).</p>
                                                     </li>
                                                     <li>
-                                                        <p><a name="Protocole"></a>Protocole d'impression Watchdoc : sélectionnez ici le protocole que vous souhaitez appliquer à la file :</p>
+                                                        <p><a name="Protocole" id="Protocole"></a>Protocole d'impression Watchdoc : sélectionnez ici le protocole que vous souhaitez appliquer à la file :</p>
                                                         <ul style="font-size: 12pt;">
                                                             <li>
                                                                 <p><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term98">IPP<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Internet Printing Protocol (protocole d'impression Internet) définit un protocole standard pour l'impression et ce qui s'y rattache, comme les files d'attente d'impression, la taille des médias, la résolution, etc.
@@ -322,7 +324,7 @@ Le format permet d'intégrer des données vectorielles 2D et des polices de cara
                                                     <li style="font-size: 12pt;"><strong><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term9">CSR<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Client Side Rendering. Dans une infrastructure Client/serveur, le Client-side rendering est la prise en charge du spool par le poste client et non par le serveur. Le poste client envoie donc au serveur un fichier de spool finalisé.</span></a> : </strong>indiquez si vous souhaitez activer CSR sur la file<ul style="font-size: 12pt;"><li style="font-size: 12pt;">forcé :</li><li style="font-size: 12pt;">désactivé : </li></ul></li>
                                                     <li>
                                                         <p class="Liste_puce_2"><strong><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term17">SNMP<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Simple Network Management Protocol (Protocole Simple de Gestion de Réseau) est un protocole de communication qui permet aux administrateurs réseau de gérer les équipements du réseau, de superviser et de diagnostiquer des problèmes réseaux et matériels à distance.
-(Source : Wikipedia)</span></a></strong> : si vous avez activé le monitoring <a name="SNMP"></a>SNMP, complétez-en la configuration : </p>
+(Source : Wikipedia)</span></a></strong> : si vous avez activé le monitoring <a name="SNMP" id="SNMP"></a>SNMP, complétez-en la configuration : </p>
                                                         <ul>
                                                             <li>
                                                                 <p><strong>Configuration du groupe :</strong> cochez la case si la file appartient à un groupe de files et que la configuration du groupe s'applique à la file. Dans ce cas, il n'est pas nécessaire de configurer le SNMP pour la file.</p>
@@ -344,11 +346,11 @@ Le format permet d'intégrer des données vectorielles 2D et des polices de cara
                                             </li>
                                         </ol>
                                         <p style="font-size: 12pt;">&#160;</p>
-                                        <p style="font-size: 12pt;">N.B.&#160;: en cas de <a name="dysfonctionnement"></a>dysfonctionnement,  Watchdoc et WSC peuvent fonctionner en mode dégradé, Dans ce cas, certaines opérations peuvent être poursuivies en mode dégradé.&#160;Un message vous en informe : <br /><br /><img src="../Z_Resources/Images/02_Captures/Config_Files_WSC_Mode_degrade.png" /></p>
+                                        <p style="font-size: 12pt;">N.B.&#160;: en cas de <a name="dysfonctionnement" id="dysfonctionnement"></a>dysfonctionnement,  Watchdoc et WSC peuvent fonctionner en mode dégradé, Dans ce cas, certaines opérations peuvent être poursuivies en mode dégradé.&#160;Un message vous en informe : <br /><br /><img src="../Z_Resources/Images/02_Captures/Config_Files_WSC_Mode_degrade.png" /></p>
                                         <p style="font-size: 12pt;">
                                             <br />
                                         </p>
-                                        <h3 id="CasspécifiquedunefileXerox" data-magellan-target="CasspécifiquedunefileXerox"><a name="Xerox"></a>Cas spécifique d'une file Xerox<sup>®</sup></h3>
+                                        <h3 id="CasspécifiquedunefileXerox" data-magellan-target="CasspécifiquedunefileXerox"><a name="Xerox" id="Xerox"></a>Cas spécifique d'une file Xerox<sup>®</sup></h3>
                                         <p>Pour configurer une file d'impression Xerox<sup>®</sup> dans WSC, il convient de disposer du fichier de configuration propre au pilote et à la file Xerox<sup>®</sup>. <br />Ce fichier de configuration (<strong>CommonConfiguration.xml</strong>), est généré à l'aide de l'outil Xerox<sup>®</sup> Print Configuration Tool (cf.&#160;<a href="https://www.office.xerox.com/latest/SFTHT-01U.PDF" target="_blank">https://www.office.xerox.com/latest/SFTHT-01U.PDF</a> pour la version 2025 ou recherchez "Print Configuration Tool" sur <a href="https://www.xerox.fr/fr-fr/bureau" target="_blank">https://www.office.xerox.com</a>). <br />Collez ce fichier de configuration sur le serveur hébergeant WSC ou dans un dossier accessible depuis WSC pour pouvoir l'exploiter lors de la création d'une file d'impression.&#160;</p>
                                         <p>
                                             <br />Pour ajouter une file Xerox, dans la boîte <strong>Créer une nouvelle file d'impression</strong>&#160;;  </p>

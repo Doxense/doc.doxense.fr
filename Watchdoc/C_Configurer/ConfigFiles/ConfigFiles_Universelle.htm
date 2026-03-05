@@ -3,6 +3,8 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="description" content="Présentation du concept de file universelle et procédure de configuration." /><title>Watchdoc - Files - Configurer une file universelle</title>
         <!-- Google Tag Manager -->
@@ -199,7 +201,7 @@
                                         </div>
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor116"></a>
+                                        <h1><a name="aanchor117"></a>
                                             <MadCap:concept term="WD" />Watchdoc - Files - Configurer une file universelle</h1>
                                         <h2>Principe</h2>
                                         <p>Une file universelle </p>
@@ -278,7 +280,7 @@ Les emplacements sont nécessaires à la fonctionnalité Watchdoc Print Client.<
                                         <p class="Liste_num_1">Complétez les zones suivantes : </p>
                                         <ul>
                                             <li>
-                                                <p class="Liste_puce_1"><strong><a name="Identifiant"></a>Identifiant :</strong> un identifiant est généré automatiquement par défaut. Vous pouvez le modifier&#160;: il peut contenir jusqu'à 64 caractères alphabétiques et chiffres, ainsi que le tiret bas (_) en guise de séparateur. </p>
+                                                <p class="Liste_puce_1"><strong><a name="Identifiant" id="Identifiant"></a>Identifiant :</strong> un identifiant est généré automatiquement par défaut. Vous pouvez le modifier&#160;: il peut contenir jusqu'à 64 caractères alphabétiques et chiffres, ainsi que le tiret bas (_) en guise de séparateur. </p>
                                             </li>
                                             <li>
                                                 <p class="Liste_puce_1"><strong>Nom :</strong> le nom attribué à la file d'impression s'affiche dans l'interface de déblocage (WES) et dans les mails de notification. Il peut être utile d'en préciser le modèle et la localisation.</p>
@@ -305,12 +307,12 @@ Les emplacements sont nécessaires à la fonctionnalité Watchdoc Print Client.<
                                                 </ul>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1"><strong><a name="ModeWD"></a>Mode </strong>: le mode "Universelle" est prédéfini.</p>
+                                                <p class="Liste_puce_1"><strong><a name="ModeWD" id="ModeWD"></a>Mode </strong>: le mode "Universelle" est prédéfini.</p>
                                             </li>
                                             <li>
                                                 <p><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term77">Emplacement<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>(anciennement "Géosites" dans les versions antérieures à la V6). Dans Watchdoc, un emplacement est un libellé appartenant à une liste structurée de sites géographiques permettant de localiser physiquement des éléments de configuration du parc d'impression (périphériques d'impression, serveurs, files, etc.). 
 La liste des emplacements est administrable depuis l'interface d'administration de Watchdoc.
-Les emplacements sont nécessaires à la fonctionnalité Watchdoc Print Client.</span></a> , dans l'arborescence des <a name="emplacements"></a>emplacements, sélectionnez celui auquel  la file universelle est associée.&#160;Si nécessaire, apportez des précisions relatives à l'emplacement.dans le champ <b>Description détaillée</b>.</p>
+Les emplacements sont nécessaires à la fonctionnalité Watchdoc Print Client.</span></a> , dans l'arborescence des <a name="emplacements" id="emplacements"></a>emplacements, sélectionnez celui auquel  la file universelle est associée.&#160;Si nécessaire, apportez des précisions relatives à l'emplacement.dans le champ <b>Description détaillée</b>.</p>
                                                 <ul style="font-size: 12pt;">
                                                     <li style="font-size: 12pt;">
                                                         <p>Convention de formatage du nom complet : indiquez la manière dont Watchdoc crée le nom complet de la file</p>
@@ -331,7 +333,7 @@ Les emplacements sont nécessaires à la fonctionnalité Watchdoc Print Client.<
                                         </ul>
                                         <ul>
                                             <li>
-                                                <p class="Liste_puce_1"><strong>Tags </strong>: si nécessaire, saisissez  des mots-clés internes permettant de qualifier la file.&#160;Utilisez l'espace en guise de séparateur entre deux mots-clés et le tiret bas (_) en guise de séparateur pour un mot-clé composé.&#160;Ces mots-clés servent à la conception de filtres et sont exploités pour affiner les rapports personnalisés pour faciliter l'exploitation des files.<br /><a name="Tags_WPC"></a>Certains tags sont utilisés par <b>WPC&#160;for Windows</b> pour déclencher un comportement particulier de la file : </p>
+                                                <p class="Liste_puce_1"><strong>Tags </strong>: si nécessaire, saisissez  des mots-clés internes permettant de qualifier la file.&#160;Utilisez l'espace en guise de séparateur entre deux mots-clés et le tiret bas (_) en guise de séparateur pour un mot-clé composé.&#160;Ces mots-clés servent à la conception de filtres et sont exploités pour affiner les rapports personnalisés pour faciliter l'exploitation des files.<br /><a name="Tags_WPC" id="Tags_WPC"></a>Certains tags sont utilisés par <b>WPC&#160;for Windows</b> pour déclencher un comportement particulier de la file : </p>
                                                 <ul>
                                                     <li>
                                                         <p class="Liste_puce_1"><strong>remote :</strong> installe la file d'impression avec le PortMonitor WPC&#160;pour imprimer au format RAW&#160;sur le port 9100 du périphérique d'impression plutôt que d'envoyer la demande d'impression au serveur.&#160;Ce qui revient à activer l'impression directe avec WPC&#160;for Windows ; </p>
@@ -340,7 +342,7 @@ Les emplacements sont nécessaires à la fonctionnalité Watchdoc Print Client.<
                                                         <p class="Liste_puce_1"><strong>tcpip :</strong> permet d'installer la file d'impression avec son port d'impression <strong>TCPIP </strong>de manière à laisser MS&#160;Windows gérer l'impression, sans solliciter Watchdoc (permet l'impression directe par Windows). </p>
                                                     </li>
                                                     <li>
-                                                        <p class="Liste_puce_1"><strong><a name="forceinstall"></a>forceinstall :</strong> permet d'installer une file d'impression physique  automatiquement sur le poste client.</p>
+                                                        <p class="Liste_puce_1"><strong><a name="forceinstall" id="forceinstall"></a>forceinstall :</strong> permet d'installer une file d'impression physique  automatiquement sur le poste client.</p>
                                                     </li>
                                                 </ul>
                                                 <p>Lorsqu'une file est installée sans ces tags, le périphérique d'impression est installé avec le PortMonitor WPC, pour envoyer l'impression  à Watchdoc via la PrintAPI.</p>
@@ -358,7 +360,7 @@ Les emplacements sont nécessaires à la fonctionnalité Watchdoc Print Client.<
                                         <h3>Section Restrictions</h3>
                                         <ul>
                                             <li>
-                                                <p class="Liste_puce_1"><strong><a name="Expiration">Expiration :</a></strong> le paramètre définit le traitement  appliqué aux travaux d'impression au-delà de la durée de vie indiquée (dans le champ suivant)&#160;:</p>
+                                                <p class="Liste_puce_1"><strong><a name="Expiration" id="Expiration">Expiration :</a></strong> le paramètre définit le traitement  appliqué aux travaux d'impression au-delà de la durée de vie indiquée (dans le champ suivant)&#160;:</p>
                                                 <ul>
                                                     <li>
                                                         <p class="Liste_puce_2"><strong>Utiliser la configuration par défaut du groupe :</strong>&#160;le traitement appliqué est le même que celui qui a été défini pour le Groupe de files (si la file appartient à un groupe). Dans ce cas, c'est aussi la durée de vie définie pour le groupe qui s'applique à la file.</p>
@@ -386,7 +388,7 @@ Le fait que les messages soient archivés sur le serveur fait que l'utilisateur 
                                         </ul>
                                         <ul>
                                             <li>
-                                                <p class="Liste_puce_1"><strong><a name="DureeDeVie"></a>Durée de vie</strong> (durée de rétention) : indiquez en secondes, minutes, heures et jours, le temps durant lequel un travail reste dans la file tant qu'il n'est pas débloqué par l'utilisateur. Si vous ne remplissez pas ce champ, la durée de vie fixée à 8h par défaut.<br />Au-delà de la durée de vie précisée, le traitement défini en paramètre <b>Expiration</b>  est appliqué.<br />N.B.&#160;: si la file appartient à un groupe, c'est la durée définie dans le groupe qui est appliquée. Ceci afin d'éviter des erreurs liées à la coexistence de deux durées de vie différentes (groupe et file) pour une même file.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Files_Restriction_54.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="821" data-mc-height="74" src="../../Z_Resources/Images/02_Captures/Config_Files_Restriction_54.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                <p class="Liste_puce_1"><strong><a name="DureeDeVie" id="DureeDeVie"></a>Durée de vie</strong> (durée de rétention) : indiquez en secondes, minutes, heures et jours, le temps durant lequel un travail reste dans la file tant qu'il n'est pas débloqué par l'utilisateur. Si vous ne remplissez pas ce champ, la durée de vie fixée à 8h par défaut.<br />Au-delà de la durée de vie précisée, le traitement défini en paramètre <b>Expiration</b>  est appliqué.<br />N.B.&#160;: si la file appartient à un groupe, c'est la durée définie dans le groupe qui est appliquée. Ceci afin d'éviter des erreurs liées à la coexistence de deux durées de vie différentes (groupe et file) pour une même file.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Files_Restriction_54.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="821" data-mc-height="74" src="../../Z_Resources/Images/02_Captures/Config_Files_Restriction_54.png" tabindex="" style="max-width: 1000px;" /></a></p>
                                             </li>
                                         </ul>
                                         <p>&#160;</p>
@@ -405,7 +407,7 @@ Le fait que les messages soient archivés sur le serveur fait que l'utilisateur 
                                             </li>
                                         </ul>
                                         <p>&#160;</p>
-                                        <h3>Section <a name="Redirections"></a>Redirections</h3>
+                                        <h3>Section <a name="Redirections" id="Redirections"></a>Redirections</h3>
                                         <p>En cas d'indisponibilité d'une file physique (périphérique d'impression), les travaux ne peuvent être imprimés. Pour éviter aux utilisateurs d'attendre le dépannage du périphérique, Watchdoc propose d'envoyer le travail d'impression vers d'autres périphériques du parc.</p>
                                         <p>&#160;</p>
                                         <p><span style="font-size: 12pt;">La redirection des travaux d'une file vers une autre file n'est possible qu'entre files </span><b style="font-size: 12pt;">compatibles</b><span style="font-size: 12pt;">. Pour permettre la redirection, il faut donc avoir indiqué préalablement à Watchdoc les compatibilités entre files (notamment en matière de pilotes lorsque les périphériques d'impression sont de marques différentes).</span> </p>
@@ -425,7 +427,7 @@ Le fait que les messages soient archivés sur le serveur fait que l'utilisateur 
                                         </ul>
                                         <p>Outre ces pools par défaut, vous pouvez créer autant de pools que nécessaire (cf.&#160;<a href="../ConfigPool/ConfigPool_Procedure.htm" target="_blank">Créer un pool</a>).<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Files_Redirections_V541.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="895" data-mc-height="97" src="../../Z_Resources/Images/02_Captures/Config_Files_Redirections_V541.png" tabindex="" style="max-width: 1000px;" /></a></p>
                                         <p>&#160;</p>
-                                        <h3>Section <a name="Plateforme"></a>Plateforme</h3>
+                                        <h3>Section <a name="Plateforme" id="Plateforme"></a>Plateforme</h3>
                                         <ol>
                                             <li value="1">
                                                 <p>Complétez la section <strong>Plateforme</strong> : <br />Cette section permet de préciser les plateformes WPC à partir desquelles la file  peut être utilisée : WPC&#160;for Android, for Chrome, for IOS, for Windows et /ou Skyprint.&#160;Cochez la ou les cases correspondant aux plateformes sur lesquelles la file est proposée :<b>Windows :</b> la file est proposée sur WPC&#160;for Windows ;<b>Plateformes PDF&#160;:</b> inclut tous les  WPC&#160;traitant des fichiers au format .pdf : for Chrome, for Android, for IOS&#160;et Skyprint. Activé : la file est proposée sur toutes les plateformes PDF&#160;; Désactivé : la file n'est pas proposée sur les plateformes PDF&#160;(aucun WPC&#160;PDF&#160;ne peut être sélectionné) ; Auto-détection : Watchdoc examine les capacités du périphérique pour proposer ou ne pas proposer la file ; <b>Mobile :</b> la file est proposée sur les WPC&#160;mobiles : for Android et IOS ; Android : la file est proposée sur WPC&#160;for Android ; IOS : la file est proposée sur WPC&#160;for IOS ; <b>Skyprint :</b> la file est proposée sur Skyprint.<br /><br /><img src="Config_Files_SectionPlateforme.png" /><br />N.B. : notez que si la file n'est associée à aucun pilote d'impression, elle n'est pas proposée à l'utilisateur.<br /></p>

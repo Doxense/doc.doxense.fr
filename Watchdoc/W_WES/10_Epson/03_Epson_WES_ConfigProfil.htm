@@ -3,6 +3,8 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="description" content="Procédure de création et de configuration du profil WES : sections Propriétés, Authentification par clavier, Authentification par badge, Impression à la demande et Périphérique." /><title>WES&#160;Epson - Configurer le profil WES</title>
         <!-- Google Tag Manager -->
@@ -199,7 +201,7 @@
                                         </div>
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor394"></a>
+                                        <h1><a name="aanchor395"></a>
                                             <MadCap:concept term="WES" />
                                             <MadCap:conditionalText data-mc-conditions="General.Online">WES&#160;Epson - </MadCap:conditionalText>Configurer le profil WES</h1>
                                         <h2>Créer le profil WES</h2>
@@ -222,7 +224,7 @@
 <br /><img src="../../Z_Resources/Images/02_Captures/WES/Config_WES_BarreNav.png" /></MadCap:conditionalText></p>
                                         <h2>Configurer le profil WES</h2>
                                         <h3>Configurer la section Propriétés</h3>
-                                        <p><a name="top"></a>Utilisez cette section pour indiquer les principales propriétés de WES :</p>
+                                        <p><a name="top" id="top"></a>Utilisez cette section pour indiquer les principales propriétés de WES :</p>
                                         <ul>
                                             <li>
                                                 <p><strong>Identifiant&#160;: </strong>saisissez l'identifiant unique du profil WES. Il peut comprendre des lettres, des chiffres et le caractère "_", avec un maximum de 64 caractères. Cet identifiant n'est affiché que dans les interfaces d'administration.</p>
@@ -414,7 +416,7 @@ Par souci de sécurité, nous déconseillons l'utilisation du code PUK et recomm
                                                 </ul>
                                             </li>
                                         </ul>
-                                        <h3><a name="ScanToMe">Configurer la section Scan</a>
+                                        <h3><a name="ScanToMe" id="ScanToMe">Configurer la section Scan</a>
                                         </h3>
                                         <p>La fonction de numérisation <strong>Scan (to me</strong> ou <strong>to Folder)</strong> pour le WES&#160;Epson est disponible depuis la version <span>6.1.0.5011</span>. Elle repose sur l'exploitation du <strong>Carnet de contacts</strong> des périphériques Epson.</p>
                                         <p>Pour configurer cette fonction, il est nécessaire de disposer de tous les paramètres SMTP propres aux périphérique<br />Cette fonction suppose en prérequis que l'utilisateur authentifié dispose d'une adresse e-mail associée à son compte, enregistrée dans un attribut de l'annuaire LDAP.</p>

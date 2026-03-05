@@ -3,6 +3,8 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="description" content="Présentation des prérequis d'installation et d'organisation de la Console de Supervision." /><title>WSC Console de supervision - Prérequis</title>
         <!-- Google Tag Manager -->
@@ -219,7 +221,7 @@
                                             </li>
                                         </ul>
                                         <p>Si la configuration comprend un pare-feu (firewall), ce dernier doit autoriser les accès sur le serveur hébergeant Watchdoc et Watchdoc Supervision Console via ces ports.</p>
-                                        <h3>Droits spécifiques au compte <a name="gMSA"></a>gMSA</h3>
+                                        <h3>Droits spécifiques au compte <a name="gMSA" id="gMSA"></a>gMSA</h3>
                                         <p>Dans un contexte exploitant un compte gMSA, le téléchargement de packages nécessaires à la gestion des pilotes et files d'impression requiert les droits suivants&#160;:</p>
                                         <ul>
                                             <li style="font-size: 12pt;">

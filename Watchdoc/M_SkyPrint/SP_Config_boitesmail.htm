@@ -3,6 +3,8 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Watchdoc Skyprint - Configurer les boîtes mail supervisées</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
@@ -251,7 +253,7 @@
                                                         <p><strong>File d'impression cible :</strong> sélectionnez la file d'impression chargée de prendre en charge les travaux d'impression (cf. <a href="#Select_File" target="_blank">ci-dessous</a>)&#160;;</p>
                                                     </li>
                                                     <li>
-                                                        <p><strong><a name="Dossier_IMAP"></a>Dossier IMAP&#160;:</strong> précisez, si nécessaire, un dossier de la boîte mail dans lequel les demandes d'impression sont enregistrées.&#160;<br />Ce paramètre permet de regrouper les demandes d'impressions destinées à Skyprint si la boîte mail n'est pas dédiée à ce seul usage.&#160;<br /><br /><a class="MCPopupThumbnailLink" href="Admin_Config_BoiteMail.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1522" data-mc-height="488" src="Admin_Config_BoiteMail.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                        <p><strong><a name="Dossier_IMAP" id="Dossier_IMAP"></a>Dossier IMAP&#160;:</strong> précisez, si nécessaire, un dossier de la boîte mail dans lequel les demandes d'impression sont enregistrées.&#160;<br />Ce paramètre permet de regrouper les demandes d'impressions destinées à Skyprint si la boîte mail n'est pas dédiée à ce seul usage.&#160;<br /><br /><a class="MCPopupThumbnailLink" href="Admin_Config_BoiteMail.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1522" data-mc-height="488" src="Admin_Config_BoiteMail.png" tabindex="" style="max-width: 1000px;" /></a></p>
                                                         <p>&#160;</p>
                                                     </li>
                                                 </ul>
@@ -334,7 +336,7 @@
                                                 <p>Lorsque le message "Compte associé avec succès" s'affiche, cliquez sur <b>Sauvegarder</b> pour enregistrer les parapètres de la boîte mail.</p>
                                             </li>
                                         </ol>
-                                        <h2><a name="Select_File"></a>Sélectionner une file d'impression</h2>
+                                        <h2><a name="Select_File" id="Select_File"></a>Sélectionner une file d'impression</h2>
                                         <p>Sélectionnez la file vers laquelle la boîte mail envoie les travaux d'impression à l'aide des outils suivants :</p>
                                         <ol>
                                             <li value="1">
@@ -350,7 +352,7 @@
                                                 <p>cliquez sur le bouton <strong>Sélectionner</strong>&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="Admin_Config_SelectFile.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="759" data-mc-height="553" src="Admin_Config_SelectFile.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a></p>
                                             </li>
                                         </ol>
-                                        <h2>Configurer la <a name="Suppression"></a>suppression des e-mails après le traitement</h2>
+                                        <h2>Configurer la <a name="Suppression" id="Suppression"></a>suppression des e-mails après le traitement</h2>
                                         <p>Il est possible de configurer la suppression des e-mails dans la boîte mail dédiée à Skyprint après leur traitement, de sorte d'éviter la saturation de cette boîte. Ce paramètre s'affiche lorsque le mode "debug" est activé.</p>
                                         <p>Pour autoriser la supression des e-mails&#160;: </p>
                                         <ol>
