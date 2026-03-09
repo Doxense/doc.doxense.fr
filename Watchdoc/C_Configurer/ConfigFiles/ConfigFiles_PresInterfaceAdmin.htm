@@ -220,40 +220,43 @@
                                                 <p>&#160;</p>
                                             </li>
                                         </ul>
-                                        <p>Par défaut, l'interface d'administration des Files d'impression affiche la liste des files contrôlées&#160;par Watchdoc.&#160;Vous pouvez filtrer cette liste en fonction du type de file que vous souhaitez afficher&#160;:</p>
+                                        <p>Par défaut, l'interface d'administration des Files d'impression affiche la liste des files contrôlées&#160;par Watchdoc (hors files proxy).&#160;<br />Vous pouvez filtrer cette liste en fonction du type de files que vous souhaitez afficher&#160;:</p>
                                         <ul>
                                             <li>
-                                                <p class="Liste_puce_1"><strong>Contrôlées </strong>: liste des files d'impression<span> réseau </span>actives et contrôlées par Watchdoc ; </p>
+                                                <p class="Liste_puce_1"><strong>Contrôlées </strong>: files d'impression<span> réseau </span>actives et contrôlées par Watchdoc ; </p>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1"><strong>Désactivées </strong>: listes des files volontairement retirées du contrôle de Watchdoc&#160;;</p>
+                                                <p class="Liste_puce_1"><strong>Désactivées </strong>: files volontairement retirées du contrôle de Watchdoc&#160;;</p>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1"><strong>Physiques</strong>: liste des files d'impression physiquement associées à un périphérique d'impression ; </p>
+                                                <p class="Liste_puce_1"><strong>Physiques</strong>: files d'impression physiquement associées à un périphérique d'impression ; </p>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1"><strong>Virtuelle</strong> : liste des files utilisées dans le cadre de l'impression à la demande.&#160;Ces files n'existent pas physiquement mais servent à recueillir temporairement les travaux d'impression en attendant que l'utilisateur choisisse son périphérique d'impression.&#160;Dès que l'utilisateur débloque ses impressions sur un périphérique précis, la file virtuelle transfère les travaux vers la file physique&#160;;</p>
+                                                <p class="Liste_puce_1"><strong>Virtuelle</strong> : files utilisées dans le cadre de l'impression à la demande.&#160;Ces files n'existent pas physiquement mais servent à recueillir temporairement les travaux d'impression en attendant que l'utilisateur choisisse son périphérique d'impression.&#160;Dès que l'utilisateur débloque ses impressions sur un périphérique précis, la file virtuelle transfère les travaux vers la file physique&#160;;</p>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1"><strong>Locales </strong>: liste des files d'impression <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term10">locales<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>File d'impression locale : file d'impression d'un périphérique non connecté au réseau. Un agent Watchdoc installé localement sur le périphérique collecte et renvoie les données d'impression à Watchdoc.</span></a> contrôlées par Watchdoc. Ces files sont également désignées sous l'appellation <strong>Files personnelles</strong> ; </p>
+                                                <p class="Liste_puce_1"><strong>Locales </strong>: files d'impression <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term10">locales<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>File d'impression locale : file d'impression d'un périphérique non connecté au réseau. Un agent Watchdoc installé localement sur le périphérique collecte et renvoie les données d'impression à Watchdoc.</span></a> contrôlées par Watchdoc. Ces files sont également désignées sous l'appellation <strong>Files personnelles</strong> ; </p>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1"><strong>Actives </strong>: liste des files (contrôlées) en cours de fonctionnement lors de la consultation de l'interface ; </p>
+                                                <p class="Liste_puce_1"><strong>Actives </strong>: files (contrôlées) en cours de fonctionnement lors de la consultation de l'interface ; </p>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1"><strong>En panne </strong>: liste des files (contrôlées) présentant un dysfonctionnement lors de la consultation de l'interface ;</p>
+                                                <p><b>Files proxy</b> (proxy queues)&#160;: files contrôlées par d'autres serveurs appartenant au  même domaine (en configuration master/slave). Ces files sont configurées pour être sollicitées en cas de panne des files du serveur&#160;; </p>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1"><strong>Consommables</strong> : liste des alertes relatives aux <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term11">consommables<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Dans le contexte de l'impression, le consommable désigne les fournitures autres que le périphérique lui-même nécessaire à son fonctionnement, telles que cartouches d'encre, papier ou cartouches d'agrafes, par exemple.</span></a> des périphériques contrôlés par Watchdoc ; </p>
+                                                <p class="Liste_puce_1"><strong>En panne </strong>: files (contrôlées) présentant un dysfonctionnement lors de la consultation de l'interface ;</p>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_1"><strong>VIP&#160;</strong>: liste des périphériques auxquels on a attribué un statut spécifique afin de les distinguer des autres périphériques.</p>
+                                                <p class="Liste_puce_1"><strong>Consommables</strong> : alertes relatives aux <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term11">consommables<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Dans le contexte de l'impression, le consommable désigne les fournitures autres que le périphérique lui-même nécessaire à son fonctionnement, telles que cartouches d'encre, papier ou cartouches d'agrafes, par exemple.</span></a> des périphériques contrôlés par Watchdoc ; </p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>VIP&#160;</strong>: périphériques auxquels on a attribué un statut spécifique afin de les distinguer des autres périphériques.</p>
                                             </li>
                                         </ul>
                                         <fieldset style="text-align: left;">La désactivation manuelle peut être utile lors d'une intervention en maintenance sur un périphérique, notamment pour ne  pas fausser les statistiques si des tests d'impression sont réalisés par le technicien de maintenance lors de son intervention.&#160;<br />Par ailleurs, la désactivation automatique peut être déclenchée par Watchdoc dans le cas où le nombre de files déclarées excède le nombre de licences acquises. <br />Dans ce cas, les  dernières files déclarées à partir du moment où Watchdoc ne trouve plus de licence correspondante sont automatiquement désactivées.</fieldset>
                                         <ul>
                                             <li>
-                                                <p class="Liste_puce_1"><strong>Toutes </strong>: total des files contrôlées, gérées par Watchdo, quel que soit leur état.<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Files_Filtre_Types_611_700x329.png" style="width: 700;height: 329;" /></p>
+                                                <p class="Liste_puce_1"><strong>Toutes </strong>: total des files contrôlées, gérées par Watchdoc, quel que soit leur état.<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Files_Filtre_Types_611_700x329.png" style="width: 700;height: 329;" /></p>
                                             </li>
                                         </ul>
                                         <h3>Outils d'affichage des listes</h3>

@@ -203,8 +203,18 @@
                                     <div class=".body-container" role="main" id="mc-main-content">
                                         <h1><a name="aanchor344"></a>
                                             <MadCap:concept term="CFG;INS;WD" />Watchdoc - Service - Configurer les bases de données</h1>
+                                        <h2>Principe</h2>
+                                        <p>Dans cette interface, vous indiquez les informations relatives à la (aux) base(s) de données nécessaire(s) à Watchdoc et les connecter : <br /></p>
+                                        <ul>
+                                            <li>
+                                                <p>base de données statistiques (watchdocstats),&#160;obligatoire ;</p>
+                                            </li>
+                                            <li>
+                                                <p>base de données dédiée à la fonction Quotas (watchdocpmv), facultative.</p>
+                                            </li>
+                                        </ul>
+                                        <p>Cette configuration suppose qu'une base de données dédiée ait été créée préalablement (cf.&#160;<a href="../../C_Configurer/ConfigBDD/WD_BaseMSSQL_Creer.htm">Créer une base de données MS&#160;SQL</a>® ou <a href="../../C_Configurer/ConfigBDD/WD_BaseSQLPostGre_Creer.htm">Créer une base de données PostgreSQL</a>®).</p>
                                         <h2>Configurer la base Statistiques</h2>
-                                        <p>Cette section regroupe les informations relatives à la base de données collectant les statistiques des impressions.</p>
                                         <ul>
                                             <li>
                                                 <p class="TitreNiveau3">Sous-section <strong>Connexion</strong></p>
@@ -256,13 +266,13 @@
                                                 <p class="TitreNiveau3">Sous-section <strong>Opérations :</strong></p>
                                                 <ul>
                                                     <li>
-                                                        <p class="Liste_puce_1">Bouton <strong>Créer une nouvelle base de données</strong> : cliquez sur ce bouton dans le cas d'une première installation de Watchdoc  afin de créer la base de données statistique ;<br /><img src="../../Z_Resources/Images/02_Captures/Config_CreerBddStats.png" /></p>
+                                                        <p class="Liste_puce_1">Bouton <strong>Créer une nouvelle base de données</strong> : cliquez sur ce bouton dans le cas d'une première installation de Watchdoc  afin de créer la base de données statistique ;<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_CreerBddStats.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="638" data-mc-height="456" src="../../Z_Resources/Images/02_Captures/Config_CreerBddStats.png" tabindex="" style="max-width: 1000px;" /></a></p>
                                                         <p class="Liste_puce_1">
                                                             <br />
                                                         </p>
                                                     </li>
                                                     <li>
-                                                        <p>Bouton <strong>Vérifier la base de données</strong> : cliquez sur ce bouton dans le cas où vous réinstallez Watchdoc et que la base de données statistiques était déjà installée.<br /><img src="../../Z_Resources/Images/02_Captures/Config_VerifierBdd.png" /></p>
+                                                        <p>Bouton <strong>Vérifier la base de données</strong> : cliquez sur ce bouton dans le cas où vous réinstallez Watchdoc et que la base de données statistiques était déjà installée :<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_VerifierBdd.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="448" data-mc-height="250" src="../../Z_Resources/Images/02_Captures/Config_VerifierBdd.png" tabindex="" style="max-width: 1000px;" /></a></p>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -313,7 +323,7 @@
                                                         <p class="Liste_puce_1"><strong>Base de données</strong> : indiquez dans cette zone le nom de la base de données utilisée. Par défaut, le nom est <strong>Watchdocpmv</strong>.</p>
                                                     </li>
                                                     <li>
-                                                        <p class="Liste_puce_1"><strong>Chemin :</strong> ce paramètre n'est activé que dans le cas d'un annuaire de type SQLite. L'information affichée est le chemin du dossier (data) dans lequel est créée la base de données SQLite par défaut.<br /><br /><img src="../../Z_Resources/Images/02_Captures/MAI_Configurer_BDD_Quotas_700x400.png" style="width: 700;height: 400;" /><br /><br /></p>
+                                                        <p class="Liste_puce_1"><strong>Chemin :</strong> ce paramètre n'est activé que dans le cas d'un annuaire de type SQLite. L'information affichée est le chemin du dossier (data) dans lequel est créée la base de données SQLite par défaut.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/MAI_Configurer_BDD_Quotas.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="603" data-mc-height="345" src="../../Z_Resources/Images/02_Captures/MAI_Configurer_BDD_Quotas.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a><br /><br /></p>
                                                         <p>
                                                             <br />
                                                         </p>
@@ -326,11 +336,11 @@
                                                 <p class="TitreNiveau3">Sous-section <strong>Opérations :</strong></p>
                                                 <ul>
                                                     <li>
-                                                        <p class="Liste_puce_1">Bouton <strong>Créer une nouvelle base de données</strong> : cliquez sur ce bouton dans le cas d'une première installation de Watchdoc  afin de créer la base de données pour les PMV ;<br /><img src="../../Z_Resources/Images/02_Captures/Config_CreerBddPmv.png" /></p>
+                                                        <p class="Liste_puce_1">Bouton <strong>Créer une nouvelle base de données</strong> : cliquez sur ce bouton dans le cas d'une première installation de Watchdoc  afin de créer la base de données pour les PMV ;<br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_CreerBddPmv.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="627" data-mc-height="301" src="../../Z_Resources/Images/02_Captures/Config_CreerBddPmv.png" tabindex="" style="max-width: 1000px;" /></a></p>
                                                         <p>&#160;</p>
                                                     </li>
                                                     <li>
-                                                        <p>Bouton <strong>Vérifier la base de données</strong> : cliquez sur ce bouton dans le cas où vous réinstallez Watchdoc et que la base de données PMV était déjà installée.<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_VerifierBddpmv.png" /></p>
+                                                        <p>Bouton <strong>Vérifier la base de données</strong> : cliquez sur ce bouton dans le cas où vous réinstallez Watchdoc et que la base de données PMV était déjà installée.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_VerifierBddpmv.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="443" data-mc-height="236" src="../../Z_Resources/Images/02_Captures/Config_VerifierBddpmv.png" tabindex="" style="max-width: 1000px;" /></a></p>
                                                     </li>
                                                 </ul>
                                             </li>
