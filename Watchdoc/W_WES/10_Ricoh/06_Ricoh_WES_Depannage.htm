@@ -213,6 +213,8 @@
                                                     </li>
                                                     <li class="tree-node"><a href="#Travauxdenum%C3%A9risationfaxetphotocopienoncomptabilis%C3%A9s">Travaux de numérisation, fax et photocopie non comptabilisés</a>
                                                     </li>
+                                                    <li class="tree-node"><a href="#Probl%C3%A8medequotadoubl%C3%A9lorsdelimpressiondunformatlargeA3">Problème de quota doublé lors de l'impression d'un format large (A3)</a>
+                                                    </li>
                                                     <li class="tree-node"><a href="#WESRicohMise%C3%A0jourdujetondauthentificationEch%C3%A9ance02022028">WES Ricoh - Mise à jour du jeton d'authentification - Echéance : 02/02/2028</a>
                                                     </li>
                                                     <li class="tree-node"><a href="#ImpossibledetrouverlassemblyDoxenseWebVersion5400cultureneutralPublicKeyToken94de63351b6ea861">Impossible de trouver l’assembly ‘Doxense.Web, Version=5.4.0.0, culture=neutral, PublicKeyToken=94de63351b6ea861’.</a>
@@ -302,6 +304,43 @@
                                             </li>
                                             <li value="4">
                                                 <p class="Resultat" style="text-align: justify;">vérifiez que la procédure a réglé le problème.</p>
+                                            </li>
+                                        </ol>
+                                        <hr />
+                                        <h2 id="ProblèmedequotadoublélorsdelimpressiondunformatlargeA3" data-magellan-target="ProblèmedequotadoublélorsdelimpressiondunformatlargeA3">Problème de quota doublé lors de l'impression d'un format large (A3)</h2>
+                                        <p><strong>Contexte</strong> </p>
+                                        <p>Lorsqu'un double quota est activé pour tenir compte du format d'impression (un quota pour le format A4 et un autre pour le format A3), il arrive que l'on constate une erreur de comptabilisation, les impressions en grand format étant comptés deux fois dans le quota.<br />Par exemple, on dispose :</p>
+                                        <ul>
+                                            <li>
+                                                <p>d'un quota appliquant un coût unitaire de 1 € pour une impression A4 ;<br /></p>
+                                            </li>
+                                            <li>
+                                                <p>d'un quota appliquant un coût unitaire de 2 € pour une impression A3.</p>
+                                            </li>
+                                        </ul>
+                                        <p>En cas d'impression A3, au lieu d'être débité de 2&#160;€, le quota est débité de 4 € .</p>
+                                        <p>&#160;</p>
+                                        <p><strong>Cause</strong>
+                                            <br />L'erreur est due au système de comptabilisation du périphérique qui compte un grand format comme deux petits formats. Le coût est alors doublé, alors que le quota configuré pour un grand format est déjà plus élevé que le quota pour un petit format. </p>
+                                        <p>&#160;</p>
+                                        <p><strong>Résolution</strong>
+                                        </p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Rendez-vous sur la file d'impression sur laquelle l'erreur de comptabilisation a été constatée&#160;;</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>depuis l'interface de consultation de la file, cliquez sur le bouton <b>Editer les propriétés de la file</b>&#160;;</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>dans l'interface <b>Propriétés de la file d'impression</b>, rendez-vous dans la section <b>Mode Expert</b>&#160;; </p>
+                                            </li>
+                                            <li value="4">
+                                                <p>pour le paramètre <b>Comptabilisation</b>, cochez la case <b>Redresser la comptabilisation pour les grands formats</b>&#160;: <br /><br /><a class="MCPopupThumbnailLink" href="../10_Xerox/ADE_WES_Xerox_ComptaGrdFormats.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1149" data-mc-height="320" src="../10_Xerox/ADE_WES_Xerox_ComptaGrdFormats.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                <p>&#160;</p>
+                                            </li>
+                                            <li value="5">
+                                                <p>Lancez une impression grand format pour vérifier que le quota n'est plus doublé.</p>
                                             </li>
                                         </ol>
                                         <hr width="100%" size="0" align="center" />
