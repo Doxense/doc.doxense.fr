@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr" xml:lang="fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-toc-path="Administrer Watchdoc" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="HTML5">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr" xml:lang="fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-toc-path="Administrer Watchdoc|Quota" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="HTML5">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="Présentation du principe des quotas, crédit d'unités de valeurs dédié à l'impression et attribué à un utilisateur ou à un groupe d'utilisateurs et présentation des étapes de configuration." /><title>Watchdoc - Quotas - Principes</title>
+        <meta name="description" content="Présentation du chemin d'accès et de l'interface d'administration." /><title>Watchdoc - Quotas - Présentation de l'interface d'administration</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -54,6 +54,11 @@
 
 </style>
         <style>/*&lt;meta /&gt;*/
+
+.button.previous-topic-button
+{
+	-pie-background: linear-gradient(transparent, #fcfaf8);
+}
 
 .button.next-topic-button
 {
@@ -162,8 +167,6 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
-                                    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
-                                    </script>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -198,69 +201,98 @@
                                         </div>
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor183"></a>
-                                            <MadCap:concept term="WD" />Watchdoc - Quotas - Principes</h1>
-                                        <h2>Prérequis</h2>
-                                        <p>Les quotas s'appuyant sur un tarif de refacturation,  il est nécessaire d'avoir <a href="../ConfigTarifsCouts/ConfigTarifsSimples_Procedure.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">configuré au moins 1 tarif</a>  avant de configurer des quotas.</p>
-                                        <h3>Qu'est-ce qu'un quota ?</h3>
-                                        <p>Dans Watchdoc, un quota est un crédit d'unités de valeurs dédié à l'impression et attribué à un utilisateur ou à un groupe d'utilisateurs. </p>
-                                        <p>Les quotas reposent sur une base de données spécifique, nommée <strong><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term115">Watchdocpmv<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>nom attribué par défaut à la base de données (type sql) dédiée à la collecte des informations de quotas (crédit attribué à un utilisateur pour l'impression).</span></a></strong> par défaut (de type SQL<sup>®</sup>), déclarée lors de l'installation initiale de Watchdoc.</p>
-                                        <p>&#160;</p>
-                                        <p>Le fonctionnement du quota  est défini à l'aide d'une règle de gestion (cf. <a href="../ConfigRegleGestion/ConfigRegleGestion_Procedure.htm#Rechargement" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Configurer les règles de gestion</a>).</p>
-                                        <p>&#160;</p>
-                                        <p>Lorsque les travaux d'impression sont facturables à l'utilisateur, le quota est associé à une devise. Il peut alors être utilisé pour régler des coûts de travaux d'impression différents.&#160;<br />Ce coût est défini par l'administrateur qui attribue un prix par page en fonction de divers critères (monochrome/couleur, format des feuilles&#160;; recto/verso et applications logicielles dont sont issus les documents).</p>
-                                        <p>&#160;</p>
-                                        <p>Un quota peut être crédité&#160;:</p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1">par l'administrateur (l'entreprise, l'université, l'administration) manuellement ou automatiquement, selon une fréquence prédéfinie,&#160;à l'aide d'une valeur fixe ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">par l'utilisateur lui-même, manuellement, selon son besoin.</p>
-                                            </li>
-                                        </ul>
-                                        <p>&#160;</p>
-                                        <p>Depuis   la version 5.0, Watchdoc est capable de gérer un double-quota, permettant ainsi d'attribuer à un utilisateur un crédit géré par un établissement et un crédit géré par l'utilisateur lui-même depuis une station de rechargement ou un site (type Paybox<sup>®</sup>), par exemple. Dans ce cas, les travaux d'impression sont automatiquement décomptés du deuxième quota lorsque le premier quota est épuisé.</p>
-                                        <p />
-                                        <h3>Où et comment sont utilisés les quotas ?</h3>
-                                        <p>Les quotas interviennent lors du déblocage des travaux d'impression : </p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_num_1">lorsque le quota est positif, le travail est débloqué puis imprimé ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_num_1">lorsque le quota est négatif, le travail est bloqué par Watchdoc.</p>
-                                            </li>
-                                        </ul>
-                                        <h3>Recharger un quota</h3>
-                                        <p>Il est possible de configurer la manière dont est rechargé un quota (cf. <a href="../ConfigAvancee/ConfigAvancee_BaseQuotas.htm" target="_blank" title="Lien vers la procédure de configuration" alt="Lien vers la procédure de configuration">Configurer la base des Quotas</a>).</p>
-                                        <p>Les quotas peuvent être rechargés manuellement par l'administrateur ou automatiquement. <br />La fréquence de réinitialisation (rechargement) est configurable (cf.&#160;<a href="../ConfigRegleGestion/ConfigRegleGestion_Procedure.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Configurer une règle de gestion</a>).&#160;</p>
-                                        <p>Si l'administrateur l'autorise à recharger son compte, l'utilisateur peut le faire depuis l'interface web <strong>Mon Compte</strong> ou depuis une station de rechargement ou un site web dédié (type PayBox<sup>®</sup>, par exemple).</p>
-                                        <h2>Etapes de configuration</h2>
-                                        <p>Pour configurer un quota, il convient : </p>
+                                        <h1><a name="aanchor210"></a>
+                                            <MadCap:concept term="WD" />Watchdoc - Quotas - Présentation de l'interface d'administration</h1>
+                                        <h2>Accéder à l'interface de configuration</h2>
                                         <ol>
                                             <li value="1">
-                                                <p class="Liste_num_1">créer une file et un groupe de files (si le quota s'applique à un groupe) ; </p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1">paramétrer un tarif de refacturation sur la file ; </p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1">créer une règle de gestion ; </p>
-                                            </li>
-                                            <li value="4">
-                                                <p class="Liste_num_1">créer un quota ; </p>
-                                            </li>
-                                            <li value="5">
-                                                <p class="Liste_num_1">éditer le paiement automatique.</p>
+                                                <p>Depuis le <strong>Menu principal</strong> de l'interface d'administration, dans la section <strong>Gestion</strong>, cliquez sur <strong>Modèles de Quotas</strong>&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="Config_Quotas_ModelQuotas_Acces.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1905" data-mc-height="918" src="Config_Quotas_ModelQuotas_Acces.png" tabindex="" style="max-width: 1000px;" /></a><br /></p>
                                             </li>
                                         </ol>
-                                        <p><a class="btn_video" href="../../V_Videos/Video_quotas.htm" target="_blank" title="Lien vers l'article de présentation" alt="Lien vers l'article de présentation">Voir le tutoriel Configuration des quotas d'impression.</a>
-                                        </p>
+                                        <p>&#160;</p>
+                                        <p class="Resultat">→ Vous accédez à l'interface de configuration des <strong>Modèles de Quotas</strong>.</p>
+                                        <h2>Description des outils des listes Modèles de Quotas</h2>
+                                        <p>La liste affiche l'ensemble des <strong>Modèles de quotas</strong> et <strong>Règles de gestion</strong> utilisés par l'application Watchdoc :<br /><br /><img src="Config_Quotas_ModelQuotas_Liste.png" /></p>
+                                        <p>&#160;</p>
+                                        <p>Chaque ligne présentant un modèle de quota et une règle de gestion comporte les outils suivants&#160;: </p>
+                                        <ul>
+                                            <li>
+                                                <p class="Liste_puce_1">Le bouton <strong>Editer</strong> <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Modifier_16x17.png" style="width: 16;height: 17;" /> permet d'éditer le tarfis afin d'en étudier la configuration et de la modifier ;</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1">le bouton <strong>Dupliquer</strong> <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Dupliquer_22x17.png" style="width: 22;height: 17;" /> permet de prendre le modèle ou la règle comme modèle pour en recréer d'autres ;</p>
+                                            </li>
+                                        </ul>
+                                        <ul style="font-size: 12pt;">
+                                            <li style="font-size: 12pt;">
+                                                <p class="Liste_puce_1">le bouton <strong>Supprimer</strong> <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Supprimer_22x23.png" style="width: 22;height: 23;" /> permet de supprimer un modèle ou une règle.&#160;La suppression n'est effective qu'après confirmation.</p>
+                                            </li>
+                                            <li style="font-size: 12pt;">
+                                                <p class="Liste_puce_1">le bouton  <strong>Créer un nouveau/nouvelle</strong> <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Ajouter_18x18.png" style="width: 18;height: 18;" /> situé sous la liste ouvre l'interface de création d'un modèle de quota ou d'une règle de gestion.</p>
+                                            </li>
+                                        </ul>
+                                        <h2>Informations de la liste Modèle de quota</h2>
+                                        <p>Chaque ligne affiche les informations constituant le quota&#160;: </p>
+                                        <ul>
+                                            <li>
+                                                <p class="Liste_puce_1">le <strong>Nom</strong> et la description de la règle ;</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1">la <strong>Portée</strong> type d'utilisateur sur lequel porte le quota : utilisateur ou groupe d'utilisateurs ;</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1">le <strong>Nombre</strong> affiche le nombre de comptes utilisateurs auxquels le quota est associé. L'icone <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Loupe_19x19.png" style="width: 19;height: 19;" />  loupe permet d'accéder à la liste des utilisateurs associés&#160;;</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1">le <strong>Total</strong>  affiche le nombre total d'unités crédités sur ce quota ;</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1">la <strong>Conso.</strong> affiche le nombre total d'unités consommées.</p>
+                                            </li>
+                                        </ul>
+                                        <h2>Informations de la liste Règles de gestion</h2>
+                                        <p>Chaque ligne affiche les informations constituant la règle de gestion&#160;: </p>
+                                        <ul>
+                                            <li>
+                                                <p class="Liste_puce_1">le <strong>Nom</strong> et la description de la règle de gestion&#160;;</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1">le <strong>Mode</strong> : mode de comptage des crédits sur le quota : </p>
+                                                <ul style="list-style-type: circle;">
+                                                    <li>
+                                                        <p class="Liste_puce_2">soit&#160;<strong>Compteur </strong>lorsque les coûts sont cumulés sur le quota jusqu'à la limite prédéfinie ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2">soit <strong>Débit</strong>, lorsque les coûts d'impression sont débités du quota prédéfini.&#160;</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>Valeur init.:</strong> les différents  coûts définis dans le tarif (en fonction des couleurs et formats) ;  </p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>Plafond :</strong> limite haute que l'utilisateur ne peut pas dépasser ;  </p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>Tolérance :</strong> valeur indiquant la marge de tolérance accordée ;</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>Périodicité : </strong>fréquence à laquelle le quota peut être crédité.&#160;</p>
+                                            </li>
+                                        </ul>
                                     </div>
                                     <p>&#160;</p>
-                                    <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy_First mc-component nocontent">
+                                    <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">
+                                            <button class="button elearning-button needs-pie previous-topic-button" title="Précédent" disabled="true">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Précédent">
+                                                        <div class="button-icon"> </div>
+                                                    </div><span class="button-text">Précédent</span>
+                                                </div>
+                                            </button>
                                             <button class="button elearning-button needs-pie next-topic-button" title="Suivant" disabled="true">
                                                 <div>
                                                     <div role="img" class="button-icon-wrapper" aria-label="Suivant">
@@ -273,10 +305,10 @@
                                     <p>&#160;</p>
                                     <p><span style="font-size: 10pt;">Une suggestion ? Une demande de correction ? <a href="mailto:documentations@doxense.com?subject=Doxdoc.fr" target="_blank" title="Envoyer un email à documentations@doxense.com" alt="Envoyer un email à documentations@doxense.com">Exprimez-vous !</a></span>
                                     </p>
-                                    <!--div id="expand-collapse" title="Expand/collapse navigation" class="collapse">
-        </div>-->
                                     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
                                     </script>
+                                    <!--div id="expand-collapse" title="Expand/collapse navigation" class="collapse">
+		</div>-->
                                     <script src="../../Resources/Scripts/Laguna.js">
                                     </script>
                                     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">

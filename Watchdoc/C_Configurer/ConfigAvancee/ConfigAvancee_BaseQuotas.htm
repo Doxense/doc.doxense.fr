@@ -198,7 +198,7 @@
                                         </div>
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor158"></a>
+                                        <h1><a name="aanchor161"></a>
                                             <MadCap:concept term="CFG" />Watchdoc - Quotas - Gérer la base de quotas</h1>
                                         <h2>Principe</h2>
                                         <p>Les quotas reposent sur une base de données spécifique, nommée <strong><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term115">Watchdocpmv<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>nom attribué par défaut à la base de données (type sql) dédiée à la collecte des informations de quotas (crédit attribué à un utilisateur pour l'impression).</span></a></strong> par défaut (de type SQL<sup>®</sup>), déclarée lors de l'installation initiale de Watchdoc.</p>
@@ -231,17 +231,6 @@
                                             </li>
                                         </ol>
                                         <h3>Configurer la section Quotas</h3>
-                                        <p>Cette section regroupe les informations relatives à la base de données collectant les informations des quotas.</p>
-                                        <ul>
-                                            <li>
-                                                <p class="TitreNiveau3">Sous section <strong>Activation</strong></p>
-                                                <ul>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Activer la gestion des quotas</strong> : cochez cette case si vous souhaitez utiliser les quotas pour le paiement des impressions.</p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
                                         <ul>
                                             <li>
                                                 <p class="TitreNiveau3">Sous-section <strong>Connexion</strong></p>
@@ -250,55 +239,62 @@
                                                         <p class="Liste_puce_1"><strong>Type </strong>: dans la liste, sélectionnez le type de base de données installée dans votre infrastructure réseau pour collecter les données relatives à l'utilisation du PMV<br />Watchdoc supporte les systèmes suivants : </p>
                                                         <ul>
                                                             <li>
-                                                                <p> Microsoft SQL Server<sup>®</sup> 2012 jusquà v.&#160;2022</p>
+                                                                <p>Microsoft SQL Server<sup>®</sup> 2012 jusqu'à v.&#160;2022</p>
                                                             </li>
                                                             <li>
-                                                                <p>	Microsoft SQL Desktop Engine,</p>
+                                                                <p>Microsoft SQL Desktop Engine,</p>
                                                             </li>
                                                             <li>
-                                                                <p>PostgreSQL 14.x,</p>
+                                                                <p><span class="mc-variable Versions.PostgreSQL variable">PostgreSQL 17</span>,</p>
                                                             </li>
                                                             <li>
-                                                                <p>SQLite 3.x</p>
+                                                                <p>SQLite (version embarquée dans le package d'installation Watchdoc).</p>
                                                             </li>
                                                         </ul>
                                                     </li>
                                                     <li>
-                                                        <p class="Liste_puce_1"><strong>Serveur SQL</strong> : dans la zone, indiquez le chemin de localisation de la base de données. Si vous ne connaissez pas la localisation de la base de données, cliquez sur le bouton  <img src="../../Z_Resources/Images/02_Captures/Boutons/icon_localisationbdd_32x25.png" style="width: 32;height: 25;" />. Cette fonction parcourt le réseau et renvoie la liste des serveurs SQL qui y sont installés. Sélectionnez dans cette liste le serveur SQL désigné pour les statistiques Watchdoc.</p>
+                                                        <p class="Liste_puce_1"><strong>Serveur SQL</strong> : saisissez le chemin de localisation de la base de données ou cliquez sur le bouton  <img src="../../Z_Resources/Images/02_Captures/Boutons/icon_localisationbdd_31x24.png" style="width: 31;height: 24;" /> pour parcourir la liste des serveurs SQL installés sur le réseau. Puis sélectionnez serveur SQL désigné pour les statistiques Watchdoc.</p>
                                                     </li>
                                                     <li>
-                                                        <p class="Liste_puce_1"><strong>Nom d'utilisateur</strong> : indiquez dans cette zone le nom de l'utilisateur habilité à gérer la base de données. Pour plus de sécurité, il est recommandé de créer un compte propre à la base des PMV ;</p>
+                                                        <p class="Liste_puce_1"><strong>Nom d'utilisateur</strong> : saisissez le nom de l'utilisateur habilité à gérer la base de données. Pour plus de sécurité, il est recommandé de créer un compte propre à la base des Quotas&#160;;</p>
                                                     </li>
                                                     <li>
-                                                        <p class="Liste_puce_1"><strong>Mot de passe</strong> : indiquez dans cette zone le mot de passe associé au nom de l'utilisateur ;</p>
+                                                        <p class="Liste_puce_1"><strong>Mot de passe</strong> : saisissez le mot de passe de l'utilisateur habilité ;</p>
                                                     </li>
                                                     <li>
-                                                        <p class="Liste_puce_1"><strong>Base de données</strong> : indiquez dans cette zone le nom de la base de données utilisée. Par défaut, le nom est <strong>Watchdocpmv</strong>.</p>
+                                                        <p class="Liste_puce_1"><strong>Base de données</strong> : saisissez le nom de la base de données utilisée ou cliquez sur le bouton  <img src="../../Z_Resources/Images/02_Captures/Boutons/icon_localisationbdd_31x24.png" style="width: 31;height: 24;" /> pour parcourir la liste des bases déclarées dans le serveur.&#160;Par défaut, la base servant à gérer les quotas s'appelle <strong>Watchdocpmv</strong> ;</p>
                                                     </li>
                                                     <li>
-                                                        <p class="Liste_puce_1"><strong>Chemin :</strong> ce paramètre n'est activé que dans le cas d'un annuaire de type SQLite. L'information affichée est le chemin du dossier (data) dans lequel est créée la base de données SQLite par défaut.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/MAI_Configurer_BDD_Quotas.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="603" data-mc-height="345" src="../../Z_Resources/Images/02_Captures/MAI_Configurer_BDD_Quotas.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a><br /><br /></p>
-                                                        <p>
-                                                            <br />
-                                                        </p>
+                                                        <p class="Liste_puce_1"><strong>Chemin :</strong> ce paramètre concerne exclusivement une base de type SQLite. L'information affichée est le chemin du dossier (data) dans lequel est créée la base de données SQLite par défaut.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/MAI_Configurer_BDD_Quotas.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="600" data-mc-height="223" src="../../Z_Resources/Images/02_Captures/MAI_Configurer_BDD_Quotas.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a><br /><br /></p>
                                                     </li>
                                                 </ul>
                                             </li>
                                         </ul>
                                         <ul>
                                             <li>
-                                                <p class="TitreNiveau3">Sous-section <strong>Opérations :</strong></p>
+                                                <p class="TitreNiveau3">Sous-section <strong>Opérations :</strong> dans cette section, cliquez sur l'un des deux boutons&#160;:</p>
                                                 <ul>
                                                     <li>
-                                                        <p class="Liste_puce_1">Bouton <strong>Créer une nouvelle base de données</strong> : cliquez sur ce bouton dans le cas d'une première installation de Watchdoc  afin de créer la base de données pour les PMV ;<br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_CreerBddPmv.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="627" data-mc-height="301" src="../../Z_Resources/Images/02_Captures/Config_CreerBddPmv.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                        <p class="Liste_puce_1"><strong>Créer une nouvelle base de données</strong> dans le cas d'une première installation de Watchdoc  afin de créer la base de données des Quotas.&#160;Complétez ensuite l'interface Création d'une base de données : </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p class="Liste_puce_1"><b>Options :</b> cochez cette case si vous ne souhaitez pas créer une base complète, mais pour créer les tables nécessaires à la gestion des Quotas dans une base existante ;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_1"><b>Identification</b> : si l'accès à la base de données nécessite une authentification autre que le compte par défaut WatchdocUser, cochez la case <b>Utiliser un autre compte</b>, puis saisissez l'<b>identifiant</b> et le <b>mot de passe</b> du compte habilité à accéder à la base ;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_1"><b>Chemin</b> :  ce paramètre concerne exclusivement une base de type SQLite. L'information affichée est le chemin du dossier (data) dans lequel est créée la base de données SQLite par défaut.<br /><br /><a class="MCPopupThumbnailLink" href="../ConfigQuotas/Config_Quota_Base_CreerBddQuotas.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="580" data-mc-height="345" src="../ConfigQuotas/Config_Quota_Base_CreerBddQuotas.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                            </li>
+                                                        </ul>
                                                         <p>&#160;</p>
                                                     </li>
                                                     <li>
-                                                        <p>Bouton <strong>Vérifier la base de données</strong> : cliquez sur ce bouton dans le cas où vous réinstallez Watchdoc et que la base de données PMV était déjà installée.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_VerifierBddpmv.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="443" data-mc-height="236" src="../../Z_Resources/Images/02_Captures/Config_VerifierBddpmv.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                        <p><strong>Vérifier la base de données</strong>, dans le cas où vous réinstallez Watchdoc et que la base de données Watchdocpmv était déjà installée&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_VerifierBddpmv.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="443" data-mc-height="236" src="../../Z_Resources/Images/02_Captures/Config_VerifierBddpmv.png" tabindex="" style="max-width: 1000px;" /></a></p>
                                                     </li>
                                                 </ul>
                                             </li>
                                         </ul>
-                                        <p class="Resultat">Cliquez sur <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Valider_27x26.png" style="width: 27;height: 26;" /> <strong>Valider </strong>pour enregistrer cette configuration.</p>
                                         <h3>Configurer la section Mode Expert</h3>
                                         <p>Cette section regroupe les informations avancées relatives à la base de données collectant les informations des quotas.</p>
                                         <ul>
