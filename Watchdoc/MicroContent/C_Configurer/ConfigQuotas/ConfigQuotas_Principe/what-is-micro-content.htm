@@ -28,6 +28,7 @@
         <meta name="phrase" value="A quoi sert Watchdocpmv" />
         <meta name="phrase" value="base watchdocpmv" />
         <meta name="phrase" value="bdd watchdocpmv" />
+        <meta name="phrase" value="New Phrase" />
         <meta name="feedback" value="true" />
         <meta name="source-type" value="micro-content" />
         <meta name="truncated" value="false" />
@@ -59,10 +60,10 @@
                 <p>les quotas reposent sur une base de données spécifique, nommée <strong><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term115">Watchdocpmv<img class="MCHelpControl_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>nom attribué par défaut à la base de données (type sql) dédiée à la collecte des informations de quotas (crédit attribué à un utilisateur pour l'impression).</span></a></strong> par défaut (de type SQL<sup>®</sup>), déclarée et activée lors de <a href="../../../../B_Installer/ConfigInit/ConfigInit_BDD.htm#base_Quota" target="_blank">l'installation initiale de Watchdoc</a>. La fonction peut être <a href="../../../../C_Configurer/ConfigQuotas/ConfigQuotas_ActivationConfig.htm" target="_blank">activée et configurée</a> après l'installation initiale.</p>
             </li>
             <li>
-                <p>un quota peut être associé à une unité monétaire lorsque les travaux d'impression sont facturables à l'utilisateur. Le quota est alors appelé "PMV : porte-monnaie virtuel". Ce coût monétaire est défini par l'administrateur qui attribue un prix par page en fonction de divers critères (monochrome/couleur, format des feuilles&#160;; recto/verso et applications logicielles dont sont issus les documents)&#160;;</p>
+                <p>un quota peut être associé à une unité monétaire lorsque les travaux d'impression sont facturables à l'utilisateur. Le quota est alors appelé "PMV : porte-monnaie virtuel" (cf.&#160;<a href="../../../../B_Installer/ConfigInit/ConfigInit_UnitesMonetaires.htm">Configurer&#160;les unités monétaires</a>)&#160;;</p>
             </li>
             <li>
-                <p>un quota s'appuie sur un tarif de refacturation. Il est donc nécessaire d'avoir <a href="../../../../C_Configurer/ConfigTarifsCouts/ConfigTarifsSimples_Procedure.htm" target="_blank">configuré au moins 1 tarif</a> avant de configurer un quota&#160;;</p>
+                <p>un quota s'appuie sur un tarif de refacturation défini par l'administrateur. Il est donc nécessaire d'avoir <a href="../../../../C_Configurer/ConfigTarifsCouts/ConfigTarifsSimples_Procedure.htm" target="_blank">configuré au moins 1 tarif</a> avant de configurer un quota&#160;;</p>
             </li>
             <li>
                 <p>le fonctionnement du quota  est défini à l'aide d'une règle de gestion (cf. <a href="../../../../C_Configurer/ConfigRegleGestion/ConfigRegleGestion_Procedure.htm#Rechargement" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Configurer les règles de gestion</a>)&#160;appliquée sur une file d'impression&#160;;</p>
@@ -79,7 +80,7 @@
                 <p>un quota peut être crédité&#160;:</p>
                 <ul>
                     <li>
-                        <p class="Liste_puce_1">par l'administrateur (l'entreprise, l'université, l'administration) manuellement ou automatiquement, selon une fréquence prédéfinie,&#160;à l'aide d'une valeur fixe ;</p>
+                        <p class="Liste_puce_1">par l'administrateur (l'entreprise, l'université, l'administration) manuellement ou automatiquement, selon une fréquence prédéfinie,&#160;à l'aide d'une valeur fixe&#160;;</p>
                     </li>
                     <li>
                         <p class="Liste_puce_1">par l'utilisateur lui-même, manuellement, selon son besoin.</p>
@@ -90,6 +91,9 @@
         <ul>
             <li>
                 <p>le double-quota  permet d'attribuer à un utilisateur un crédit géré par son établissement et un crédit géré par lui-même depuis une station de rechargement ou un site (type Paybox<sup>®</sup>), par exemple. Dans ce cas, les travaux d'impression sont automatiquement décomptés du deuxième quota lorsque le premier quota est épuisé.</p>
+            </li>
+            <li>
+                <p>les quotas attribués aux utilisateurs peuvent être consultés par l'administrateur.</p>
             </li>
         </ul>
         <h2>Configurer un quota</h2>
