@@ -4,6 +4,11 @@ let blockNews = document.querySelector('.doc_news--ul');
 
 let arrayContent = [
 {
+	date: "18 mars 2026",
+	link: "/Watchdoc/A_Getting_Started/Release_611.htm",
+	content: "nouvelles versions de Watchdoc, Console de Supervision 6.1.1.5556, Watchdoc Print Client for Windows 7.0.5999 et Skyprint 7.0.5998"
+},
+{
 	date: "10 mars 2026",
 	link: "/Watchdoc/A_Getting_Started/Release_611.htm",
 	content: "nouvelles versions de Watchdoc, Console de Supervision 6.1.1.5548, Watchdoc Print Client for Windows et Skyprint 7.0.5983"
