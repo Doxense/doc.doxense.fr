@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr" xml:lang="fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="WRS" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="HTML5">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr" xml:lang="fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="WRS" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="web">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="description" content="Procédure d'installation de l'outil WRS (Watchdoc for Reporting Services) : accès à l'outil, installation automatique et déploiement des rapports." /><title>WRS&#160;- Installer automatiquement Watchdoc for Reporting Services</title>
         <!-- Google Tag Manager -->
@@ -24,7 +22,6 @@
         <link href="../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
-        <link href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
         <style>/*&lt;meta /&gt;*/
 
 .button.print-button
@@ -201,7 +198,7 @@
                                         </div>
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor469"></a>
+                                        <h1><a name="aanchor222"></a>
                                             <MadCap:concept term="WRS" />WRS&#160;- Installer automatiquement Watchdoc for Reporting Services</h1>
                                         <p>A partir de MS SQL<sup>®</sup> 2012 R2 , il est possible de déployer automatiquement les rapports WRS à l'aide de l'utilitaire WRSTools.exe mis à votre disposition dans le package d'installation.</p>
                                         <h2>Accéder à l'outil WRSTOOLS.exe</h2>
@@ -217,7 +214,7 @@
                                                 <p class="Liste_num_1">décompressez l'archive après voir vérifié qu'elle n'était pas bloquée ;</p>
                                             </li>
                                             <li value="4">
-                                                <p class="Liste_num_1">parmi les fichiers de l'archive, repérez le fichier <strong>WRSTools.exe</strong>.<br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Install_WRSToolExe_Access_527x481.png" style="width: 527;height: 481;" /><br /></p>
+                                                <p class="Liste_num_1">parmi les fichiers de l'archive, repérez le fichier <strong>WRSTools.exe</strong>.<br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Install_WRSToolExe_Access.png" style="width: 527px;height: 481px;" /><br /></p>
                                             </li>
                                         </ol>
                                         <fieldset>Avec la version MS SQL&#160;Express<sup>®</sup>, l'outil WRS<sup>®</sup> doit être installé sur le même serveur que celui qui héberge la base de données.Les instances créées avec SQL Express ne peuvent dépasser les <strong>10Go</strong>. Pour pouvoir gérer plus d’informations, nous conseillons la création d’une base de données standard (ou une base de consolidation, elle-aussi standard, dans un domaine incluant un serveur master et d'autres serveurs).<br /><br />Avec les autres version de MS SQL, l'outil WRS<sup>®</sup> peut être installé sur un autre serveur que celui qui héberge la base de données.</fieldset>
@@ -234,7 +231,7 @@
                                                         <p class="Liste_puce_2">Settings ; </p>
                                                     </li>
                                                     <li>
-                                                        <p class="Liste_puce_2">Advanced :<br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Install_WRSToolExe_Settings_500x551.png" style="width: 500;height: 551;" /><br /></p>
+                                                        <p class="Liste_puce_2">Advanced :<br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Install_WRSToolExe_Settings.png" style="height: auto;width: 500px;" /><br /></p>
                                                         <p>&#160;</p>
                                                     </li>
                                                 </ul>
@@ -282,7 +279,7 @@
                                                         <p class="Liste_puce_2"><strong>Folder with *.rdl</strong> : indiquez dans ce champ l’emplacement du dossier comportant les fichiers .rdl&#160;(<strong>Reports</strong>, par défaut) ;</p>
                                                     </li>
                                                     <li>
-                                                        <p class="Liste_puce_2"><strong>SQL Instance  : </strong>indiquez le nom de l'instance installée propre à Watchdoc (<strong>Watchdoc</strong>, par défaut) ;<br /><br /> <img src="../Z_Resources/Images/02_Captures/WRS_Install_WRSToolExe_Advanced_EN_500x553.png" style="width: 500;height: 553;" /></p>
+                                                        <p class="Liste_puce_2"><strong>SQL Instance  : </strong>indiquez le nom de l'instance installée propre à Watchdoc (<strong>Watchdoc</strong>, par défaut) ;<br /><br /> <img src="../Z_Resources/Images/02_Captures/WRS_Install_WRSToolExe_Advanced_EN.png" style="width: 500px;height: auto;" /></p>
                                                         <p>&#160;</p>
                                                     </li>
                                                 </ul>
@@ -297,15 +294,15 @@
                                         </ol>
                                         <ol data-mc-continue="true">
                                             <li value="6">
-                                                <p class="Liste_num_1">Dans la boîte <strong>SQL Password not found</strong> saisissez le mot de passe du compte administrant l'instance SQL indiquée précédemment sous l'onglet <strong>Advanced</strong>, puis cliquez sur le bouton <strong>OK&#160;</strong>:<br /><br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Install_WRSToolExe_SQLPassword_EN_500x275.png" style="width: 500;height: 275;" /></p>
+                                                <p class="Liste_num_1">Dans la boîte <strong>SQL Password not found</strong> saisissez le mot de passe du compte administrant l'instance SQL indiquée précédemment sous l'onglet <strong>Advanced</strong>, puis cliquez sur le bouton <strong>OK&#160;</strong>:<br /><br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Install_WRSToolExe_SQLPassword_EN.png" style="width: 500px;height: auto;" /></p>
                                                 <p>&#160;</p>
                                             </li>
                                         </ol>
-                                        <p class="Resultat">→ un message vous informe que l'installation d WRS&#160;est terminée&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Install_WRSToolExe_Congratulation_EN_500x312.png" style="width: 500;height: 312;" /></p>
+                                        <p class="Resultat">→ un message vous informe que l'installation d WRS&#160;est terminée&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Install_WRSToolExe_Congratulation_EN.png" style="width: 500px;" /></p>
                                         <p>&#160;</p>
                                         <ol data-mc-continue="true">
                                             <li value="7">
-                                                <p class="Liste_num_1">Cliquez sur le lien URL&#160;affiché pour accéder à l'interface <strong>SQL&#160;Server Reporting Services</strong>&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Install_WRSToolExe_AccessLink_EN_500x553.png" style="width: 500;height: 553;" /><br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Executer_WRS_DossierRacine_EN.png" /></p>
+                                                <p class="Liste_num_1">Cliquez sur le lien URL&#160;affiché pour accéder à l'interface <strong>SQL&#160;Server Reporting Services</strong>&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Install_WRSToolExe_AccessLink_EN.png" style="height: auto;width: 500px;" /><br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Executer_WRS_DossierRacine_EN.png" /></p>
                                             </li>
                                         </ol>
                                         <h2>Déployer les rapports WRS</h2>
@@ -313,7 +310,7 @@
                                         <p>&#160;</p>
                                         <ol>
                                             <li value="1">
-                                                <p class="Liste_num_1">Parmi les fichiers contenus dans ce dossier, cliquez sur l'entrée <strong>Statement </strong>pour accéder au rapport :<br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Executer_WRSDossierRacine_700x321.png" style="width: 700;height: 321;" /></p>
+                                                <p class="Liste_num_1">Parmi les fichiers contenus dans ce dossier, cliquez sur l'entrée <strong>Statement </strong>pour accéder au rapport :<br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Executer_WRSDossierRacine.png" style="height: auto;width: 700px;" /></p>
                                                 <p class="Liste_num_1">
                                                     <br />
                                                 </p>

@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr" xml:lang="fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-toc-path="Administrer Watchdoc|Annuaires" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="HTML5">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr" xml:lang="fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-toc-path="Administrer Watchdoc|Annuaires" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="web">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="description" content="Procédure de déclaration et de configuration d'une base MS SQL contenant les codes PUK des utilisateurs." /><title>Watchdoc - Annuaires - Créer et configurer une base de codes PUK de type SQL (SQL / PostgreSQL&#160;/ SQLite)</title>
         <!-- Google Tag Manager -->
@@ -22,7 +20,6 @@
         <link href="../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
         <link href="../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
         <style>/*&lt;meta /&gt;*/
 
@@ -182,7 +179,7 @@
                                         </div>
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor160"></a>
+                                        <h1><a name="aanchor218"></a>
                                             <MadCap:concept term="CFG;WD" />Watchdoc - Annuaires - Créer et configurer une base de codes PUK de type SQL (SQL / PostgreSQL&#160;/ SQLite)</h1>
                                         <h2>Principe</h2>
                                         <p>Lorsque les utilisateurs de Watchdoc sont enregistrés dans un annuaire Entra ID (Microsoft Azure), s'ils s'authentifient à l'aide d'un code PUK, ces  codes sont enregistrés dans une base SQL.</p>
@@ -206,7 +203,7 @@
                                                 <p class="Liste_num_1">dans la section <strong>Configuration</strong>, cliquez sur <strong>Annuaires utilisateurs</strong> :</p>
                                             </li>
                                             <li value="2">
-                                                <p class="Liste_num_1">Dans la liste des annuaires qui s'affiche, cliquez sur le bouton <strong>Déclarer un nouvel annuaire <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_DeclarerAnnuaire_22x23.png" style="width: 22;height: 23;" /> :</strong><br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Annuaires_DeclarerNvlAnnuaire_61_700x187.png" style="width: 700;height: 187;" /><br /><br /></p>
+                                                <p class="Liste_num_1">Dans la liste des annuaires qui s'affiche, cliquez sur le bouton <strong>Déclarer un nouvel annuaire <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_DeclarerAnnuaire.png" style="width: 22px;height: 23px;" /> :</strong><br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Annuaires_DeclarerNvlAnnuaire_61.png" style="width: 700px;height: auto;" /><br /><br /></p>
                                             </li>
                                         </ol>
                                         <p class="Resultat"><span style="font-family: 'Wingdings'">è</span> Vous accédez à l'interface <strong>Déclarer un nouvel annuaire utilisateur</strong> constituée de plusieurs sections.<br />Le nombre et la nature des paramètres figurant dans cette interface varient en fonction du type d'annuaire à configurer.</p>
@@ -252,7 +249,7 @@
                                                     <p class="Liste_puce_1"><strong>Base de données :</strong> indiquez le nom de la base de données dans laquelle doivent être enregistrées les codes PUK associés aux utilisateurs inscrits dans l'annuaire Entra ID (<strong style="font-weight: normal;">watchdocstats, la plupart du temps).</strong>Cliquez sur le bouton <strong>Parcourir </strong>pour parcourir le serveur SQL&#160;déclaré précédemment afin d'y sélectionner les tables statistiques qui y sont déclarées. Par défaut, les codes PUK sont enregistrés dans la base des badges (cards). </p>
                                                 </li>
                                                 <li>
-                                                    <p><strong>Chemin :</strong> pour une base de données de type SQLite, indiquez le chemin du fichier spécifique à la base de données utilisateurs :<br /><br /><img src="../../Z_Resources/Images/02_Captures/Admin_Annuaire_SQLCodesPUK_Bdd_700x202.png" style="width: 700;height: 202;" /></p>
+                                                    <p><strong>Chemin :</strong> pour une base de données de type SQLite, indiquez le chemin du fichier spécifique à la base de données utilisateurs :<br /><br /><img src="../../Z_Resources/Images/02_Captures/Admin_Annuaire_SQLCodesPUK_Bdd.png" style="width: 700px;height: auto;" /></p>
                                                 </li>
                                             </ul>
                                         </blockquote>
@@ -264,7 +261,7 @@
 (source : Wikipédia)</span></a>" permettant d'initialiser le générateur des codes PUK des utilisateurs.&#160;Ce chiffre est un entier de 32 bits compris entre 1 et 2.147.000.000 ; </p>
                                             </li>
                                             <li>
-                                                <p><strong><a name="Algorithme_PUK" id="Algorithme_PUK"></a>Algorithme : </strong>dans la liste, sélectionnez le niveau d'algorithme permettant de générer les codes PUK de vos utilisateurs (6 ou 10 chiffres) ; </p>
+                                                <p><strong><a name="Algorithme_PUK"></a>Algorithme : </strong>dans la liste, sélectionnez le niveau d'algorithme permettant de générer les codes PUK de vos utilisateurs (6 ou 10 chiffres) ; </p>
                                             </li>
                                             <li>
                                                 <p><strong>Variabilité : </strong>dans la liste, sélectionnez (si nécessaire) la fréquence à laquelle l'annuaire de codes PUK sera regénéré. Par défaut, l'annuaire ne change pas.&#160;Regénérer les codes PUK permet d'augmenter la sécurité de ce mode d'authentification.</p>
@@ -360,7 +357,7 @@ A tout moment, l'administrateur peut manuellement désactiver le fusible. Le fus
                                             </li>
                                         </ul>
                                         <h2>Validation de la configuration </h2>
-                                        <p class="Liste_num_1">Cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/icon_Declarer_26x24.png" style="width: 26;height: 24;" /> <strong>Créer </strong>pour valider la configuration de votre annuaire.</p>
+                                        <p class="Liste_num_1">Cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/icon_Declarer.png" style="width: 26px;height: 24px;" /> <strong>Créer </strong>pour valider la configuration de votre annuaire.</p>
                                     </div>
                                     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
                                     </script>

@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr" xml:lang="fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="WSC Supervision|Serveurs" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="HTML5">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr" xml:lang="fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="WSC Supervision|Serveurs" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="web">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="description" content="Présentation de la fonction de maintenance des serveurs : accès à l'interface et procédure de configuration de la maintenance," /><title>Console de Supervision (WSC) - Maintenir les serveurs d'impression</title>
         <!-- Google Tag Manager -->
@@ -23,7 +21,6 @@
         <link href="../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
-        <link href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
         <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
         <style>/*&lt;meta /&gt;*/
 
@@ -198,7 +195,7 @@
                                         </div>
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor270"></a>
+                                        <h1><a name="aanchor395"></a>
                                             <MadCap:concept term="WSC" />Console de Supervision (WSC) - Maintenir les serveurs d'impression</h1>
                                         <h2>Principe</h2>
                                         <p>La Console de Supervision permet de gérer la maintenance des serveurs d'impression contrôlés par Watchdoc, ce qui est appréciable, notamment lorsque le parc est étendu.</p>
@@ -208,10 +205,10 @@
                                                 <p class="Liste_num_1">Depuis le <strong>Menu principal</strong> de WSC, cliquez sur <strong>Configuration avancée</strong> ;</p>
                                             </li>
                                             <li value="2">
-                                                <p class="Liste_num_1">Dans l'interface Configuration avancée, cliquez sur <strong>Opérations de maintenance</strong>&#160;: <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_MaintServeurs_Acces_700x330.png" style="width: 700;height: 330;" /><br /><br /></p>
+                                                <p class="Liste_num_1">Dans l'interface Configuration avancée, cliquez sur <strong>Opérations de maintenance</strong>&#160;: <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_MaintServeurs_Acces.png" style="width: 700px;" /><br /><br /></p>
                                             </li>
                                             <li value="3">
-                                                <p class="Resultat">Vous accédez à l'interface <strong>Opérations de maintenance</strong>, dans laquelle s'affichent les sections de maintenance :<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Maintenance_Interface_700x316.png" style="width: 700;height: 316;" /></p>
+                                                <p class="Resultat">Vous accédez à l'interface <strong>Opérations de maintenance</strong>, dans laquelle s'affichent les sections de maintenance :<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Maintenance_Interface.png" style="width: 700px;" /></p>
                                             </li>
                                         </ol>
                                         <h2>Configurer la maintenance</h2>
@@ -225,7 +222,7 @@
                                                 <p class="Liste_puce_1"><strong>Fréquence :</strong> dans ce champ, indiquez (au format Crontab) la fréquence à laquelle vous souhaitez excécuter la maintenance.&#160;</p>
                                             </li>
                                             <li value="3">
-                                                <p class="Liste_puce_1">Cliquez sur le <strong>bouton Lancer l'assistant </strong>de configuration pour être aidé dans la saisie de la tâche planifiée : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Maintenance_Frequence_700x282.png" style="width: 700;height: 282;" /><br /></p>
+                                                <p class="Liste_puce_1">Cliquez sur le <strong>bouton Lancer l'assistant </strong>de configuration pour être aidé dans la saisie de la tâche planifiée : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Maintenance_Frequence.png" style="width: 700px;height: auto;" /><br /></p>
                                             </li>
                                         </ol>
                                         <h3>Activer la purge des travaux</h3>
@@ -239,17 +236,7 @@ Le spool d'impression désigne le fichier d'édition envoyé au périphérique d
                                                 <p class="Liste_puce_1"><strong>Purge :</strong> cochez la case pour supprimer du serveur les spools correspondant à tous les travaux d'impression, qu'ils aient été débloqués (et imprimés) ou qu'ils n'aient pas été débloqués, pour une raison ou une autre (oubli de l'utilisateur ou indisponibilité du périphérique d'impression) ; </p>
                                             </li>
                                             <li value="3">
-                                                <p class="Liste_puce_1"><strong>Délai (en heures) :</strong> indiquez le délai, durant lequel un travail doit être conservé sur le serveur avant d'être supprimé par l'opération de purge décidée en maintenance. Ce délai permet de préserver les travaux qui auraient été lancés peu de temps avant le démarrage de la maintenance.<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Maintenance_PurgeTravaux_700x96.png" style="width: 700;height: 96;" /></p>
-                                            </li>
-                                        </ol>
-                                        <h3>Activer la purge des agents locaux</h3>
-                                        <p>L'Agent local Watchdoc est un utilitaire permettant de gérer les périphériques d'impression locaux (non connectés au réseau) connectés via USB ou adressés directement via IP aux postes de travail.&#160;L'Agent permet de suivre les usages du périphérique d'impression bien qu'il ne soit pas en réseau.</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_puce_1"><strong>Activation :</strong> cochez cette case pour supprimer les agents locaux inactifs (au-delà d'un délai défini) encore installés sur les postes de travail ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_puce_1"> <strong>Délai :</strong> indiquez, en mois, le délai d'inactivité au-delà duquel cette purge doit être effectuée : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Maintenance_PurgeAgentsLocaux_700x71.png" style="width: 700;height: 71;" /></p>
+                                                <p class="Liste_puce_1"><strong>Délai (en heures) :</strong> indiquez le délai, durant lequel un travail doit être conservé sur le serveur avant d'être supprimé par l'opération de purge décidée en maintenance. Ce délai permet de préserver les travaux qui auraient été lancés peu de temps avant le démarrage de la maintenance.<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Maintenance_PurgeTravaux.png" style="width: 700px;height: auto;" /></p>
                                             </li>
                                         </ol>
                                         <h3>Supprimer et/ou créer des files</h3>
@@ -269,7 +256,7 @@ Le spool d'impression désigne le fichier d'édition envoyé au périphérique d
                                                 <p class="Liste_puce_1"><strong>Supprimer les files dont le driver n'est pas le même : </strong>cochez cette case pour supprimer les files dont le pilote est différent de celui de la file shadow ; </p>
                                             </li>
                                             <li value="5">
-                                                <p class="Liste_puce_1"><strong>Supprimer les files dont le port "shadow" n'est pas le même :</strong> cochez cette case pour supprimer les files dont le port est différent de celui de la file shadow ; <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Maintenance_SuppressionFiles_586x108.png" style="width: 586;height: 108;" /></p>
+                                                <p class="Liste_puce_1"><strong>Supprimer les files dont le port "shadow" n'est pas le même :</strong> cochez cette case pour supprimer les files dont le port est différent de celui de la file shadow ; <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Maintenance_SuppressionFiles.png" style="width: 586px;height: 108px;" /></p>
                                                 <p>&#160;</p>
                                             </li>
                                         </ol>
@@ -285,7 +272,7 @@ Le spool d'impression désigne le fichier d'édition envoyé au périphérique d
                                                         <p class="Liste_puce_2"><strong>Associer le périphérique à une interface embarquée : </strong>cocher cette case pour que, lors de la création de la file, elle soit associée au WES&#160;(Watchdoc Embedded Solution) de la marque correspondante ; </p>
                                                     </li>
                                                     <li>
-                                                        <p class="Liste_puce_2"><strong>Cacher le titre des documents dans l'historique des impressions : </strong>cochez cette case pour faire en sorte que les titres des documents soient transformés dans l'historique d'impression ; <br />Cette option disparaît (pour une file) à partir de la version 6.1.0.5178, car elle est mutualisée au niveau du groupe de files.&#160;<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Maintenance_CreationFiles_700x81.png" style="width: 700;height: 81;" /></p>
+                                                        <p class="Liste_puce_2"><strong>Cacher le titre des documents dans l'historique des impressions : </strong>cochez cette case pour faire en sorte que les titres des documents soient transformés dans l'historique d'impression ; <br />Cette option disparaît (pour une file) à partir de la version 6.1.0.5178, car elle est mutualisée au niveau du groupe de files.&#160;<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Maintenance_CreationFiles.png" style="height: auto;width: 700px;" /></p>
                                                     </li>
                                                 </ul>
                                                 <p>&#160;</p>
@@ -294,7 +281,7 @@ Le spool d'impression désigne le fichier d'édition envoyé au périphérique d
                                                 <p class="Liste_puce_1"><strong>Liste noire :</strong> vous pouvez constituer des listes de périphériques d'impression et de pilotes qui doivent être exclus des actions de suppression.&#160;Si plusieurs noms figurent dans ces listes, séparez-les par un pipe (|). </p>
                                             </li>
                                             <li value="4">
-                                                <p class="Liste_puce_1"><strong>Supprimer les données collectées :</strong> cochez les cases si vous souhaitez supprimer du serveur les données (notamment statistiques) relatives au périphériques ou aux pilotes supprimés.<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Maintenance_Liste_Noire_618x134.png" style="width: 618;height: 134;" /></p>
+                                                <p class="Liste_puce_1"><strong>Supprimer les données collectées :</strong> cochez les cases si vous souhaitez supprimer du serveur les données (notamment statistiques) relatives au périphériques ou aux pilotes supprimés.<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Maintenance_Liste_Noire.png" style="width: 618px;height: 134px;" /></p>
                                             </li>
                                         </ol>
                                         <h3>Personnaliser les groupes de files</h3>
@@ -343,7 +330,7 @@ Le spool d'impression désigne le fichier d'édition envoyé au périphérique d
                                                         <p>concat (concaténer)</p>
                                                     </li>
                                                     <li>
-                                                        <p>delnumber (supprimer les chiffres)<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Maintenance_PersonnalGroupesFiles_603x115.png" style="width: 603;height: 115;" /></p>
+                                                        <p>delnumber (supprimer les chiffres)<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Maintenance_PersonnalGroupesFiles.png" style="width: 603px;height: 115px;" /></p>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -362,11 +349,11 @@ Le spool d'impression désigne le fichier d'édition envoyé au périphérique d
                                                 <p class="TitreNiveau3">Enregistrer les modifications.</p>
                                             </li>
                                             <li value="4">
-                                                <p>Cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Bouton_Valider_WSC_53x22.png" style="width: 53;height: 22;" /> pour enregistrer les paramètres de maintenance.</p>
+                                                <p>Cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Bouton_Valider_WSC.png" style="width: 53px;height: 22px;" /> pour enregistrer les paramètres de maintenance.</p>
                                             </li>
                                         </ol>
                                         <p>&#160;</p>
-                                        <h3>Gérer <a name="audit_des_utilisateurs" id="audit_des_utilisateurs"></a>l'audit des utilisateurs pour la suppression des badges</h3>
+                                        <h3>Gérer <a name="audit_des_utilisateurs"></a>l'audit des utilisateurs pour la suppression des badges</h3>
                                         <p>L'interface <strong>Audit des utilisateurs</strong> permet de vérifier périodiquement le lien entre badges et utilisateurs.&#160;Ainsi, les badges associés à des comptes utilisateurs supprimés peuvent être détectés.</p>
                                         <p>Il devient alors possible de supprimer ces badges de la base des badges utilisés, puis de les réattribuer ultérieurement à de nouveaux utilisateurs.</p>
                                         <p>&#160;</p>
@@ -385,7 +372,7 @@ Le spool d'impression désigne le fichier d'édition envoyé au périphérique d
                                                 <p><strong>Inclure les comptes utilisateurs expirés :</strong> cochez cette case pour prendre en compte les comptes utilisateurs expirés ;</p>
                                             </li>
                                             <li value="5">
-                                                <p><strong>Activer la suppression des badges :</strong> cochez la case pour que WSC&#160;supprime les badges qui ne sont plus associés à un compte utilisateur :<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_MaintenanceUtilisateurs_700x185.png" style="width: 700;height: 185;" /></p>
+                                                <p><strong>Activer la suppression des badges :</strong> cochez la case pour que WSC&#160;supprime les badges qui ne sont plus associés à un compte utilisateur :<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_MaintenanceUtilisateurs.png" style="width: 700px;height: auto;" /></p>
                                             </li>
                                         </ol>
                                     </div>

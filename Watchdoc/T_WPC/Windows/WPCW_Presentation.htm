@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr" xml:lang="fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-toc-path="WPC Watchdoc Print Client" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="HTML5">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr" xml:lang="fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-toc-path="WPC Watchdoc Print Client" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="web">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="description" content="Présentation de Windows Print Client for Windows : principes, prérequis, haute-disponibilité (impression directe)." /><title>Watchdoc Print Client for Windows®- Présentation</title>
         <!-- Google Tag Manager -->
@@ -24,7 +22,6 @@
         <link href="../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
-        <link href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
         <style>/*&lt;meta /&gt;*/
 
 .button.print-button
@@ -201,7 +198,7 @@
                                         </div>
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor244"></a>
+                                        <h1><a name="aanchor245"></a>
                                             <MadCap:concept term="WPC" />Watchdoc Print Client for Windows<sup>®</sup>- Présentation</h1>
                                         <h2>Prérequis </h2>
                                         <ul>
@@ -347,7 +344,7 @@ Les emplacements sont nécessaires à la fonctionnalité Watchdoc Print Client.<
                                                 <p> </p>
                                                 <p>
                                                     <br />
-                                                    <img src="../../Z_Resources/Images/02_Captures/WD_Express/wd_express_wpc9_473x354.png" style="width: 473;height: 354;" />
+                                                    <img src="../../Z_Resources/Images/02_Captures/WD_Express/wd_express_wpc9.png" style="width: 473px;height: 354px;" />
                                                 </p>
                                             </li>
                                         </ul>
@@ -357,16 +354,16 @@ Les emplacements sont nécessaires à la fonctionnalité Watchdoc Print Client.<
                                         <p>&#160;</p>
                                         <p>Une correspondance est alors établie entre cette adresse et les plages d'adresses IP attribuées aux emplacements lors de la configuration des Emplacements dans l'interface d'administration. <br />L'utilisateur peut lancer des impressions depuis son poste de travail et les débloquer sur les imprimantes disponibles à proximité.&#160;Il n'a pas à se soucier de la configuration des imprimantes, même lorsqu'il change d'emplacement.</p>
                                         <p>&#160;</p>
-                                        <p>L'utilisateur peut aussi déclarer son emplacement manuellement à partir du client WPC&#160;installé sur son poste&#160;:<br /><br /><img src="WPCW_icon_500x212.png" style="width: 500;height: 212;" /><br /></p>
+                                        <p>L'utilisateur peut aussi déclarer son emplacement manuellement à partir du client WPC&#160;installé sur son poste&#160;:<br /><br /><img src="WPCW_icon.png" style="width: 500px;" /><br /></p>
                                         <h2>Choix des périphériques d'impression</h2>
                                         <p>WPC for Windows installe automatiquement une file universelle (impression sécurisée).&#160;<br />Cette file utilise le pilote paramétré dans Plug and Print / WSC (cf. <a href="../../F_WSC/WSC6.1.x_Ajouter_Pilote.htm" target="_self" title="Lien vers le chapitre &quot;Créeer des pilotes dans Plug and Print&quot;">Créer des pilotes dans Plug and Print</a>).</p>
-                                        <p>Les utilisateurs peuvent aussi installer eux-mêmes leur(s) imprimante(s) de proximité :<br /><br /><img src="../../Z_Resources/Images/02_Captures/WD_Express/wd_express_wpc12_500x375.png" style="width: 500;height: 375;" /></p>
+                                        <p>Les utilisateurs peuvent aussi installer eux-mêmes leur(s) imprimante(s) de proximité :<br /><br /><img src="../../Z_Resources/Images/02_Captures/WD_Express/wd_express_wpc12.png" style="height: auto;width: 500px;" /></p>
                                         <h2>Impression sécurisée</h2>
                                         <p>Le port d’impression propriétaire <b><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term76">Port Monitor<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>le Port Monitor de Watchdoc Print Client est un port d'impression propriétaire, lien de communication entre la partie qui opère en tant qu'utilisateur du spooler et la partie qui opère en tant que système. C’est une DLL exécutée en tant qu'utilisateur demandant une impression et qui communique avec le serveur d’impression de Windows.</span></a></b> de Watchdoc se charge de capturer les impressions lancées par l'utilisateur. </p>
                                         <p>Le service Windows transfère le fichier de spool auu serveur Watchdoc de proximité. Le transfert s'effectue sur le service DSP au serveur. </p>
                                         <p>Il est sécurisé par l'usage du <b>certificat de la PrintAPI</b> et chiffré (transport en <b>HTTPS</b>). </p>
                                         <p>Le serveur de proximité est déterminé automatiquement en fonction de l'emplacement de l'utilisateur.</p>
-                                        <h2><a name="Haute_disponibilité" id="Haute_disponibilité">Haute disponibilité - Impression directe</a>
+                                        <h2><a name="Haute_disponibilité">Haute disponibilité - Impression directe</a>
                                         </h2>
                                         <p> Sous réserve que la fonction d'impression à la demande interserveur soit activée et que les serveurs soient configurés en domaine (master/slaves), WPC&#160;for Windows peut être configuré en mode haute-disponibilité.&#160;Ce mode assure la fonction d'impression, même en cas de défaillance du serveur.&#160;<br /></p>
                                         <p>&#160;</p>
@@ -386,9 +383,9 @@ Les emplacements sont nécessaires à la fonctionnalité Watchdoc Print Client.<
                                                 <p>retrouver leurs codes d'impression (code PUK, code PIN) </p>
                                             </li>
                                             <li>
-                                                <p>visualiser leur impact environnemental&#160;:<br /><br /><img src="../../Z_Resources/Images/02_Captures/WD_Express/wd_express_wpc13_609x369.png" style="width: 609;height: 369;" /></p>
+                                                <p>visualiser leur impact environnemental&#160;:<br /><br /><img src="../../Z_Resources/Images/02_Captures/WD_Express/wd_express_wpc13.png" style="width: 609px;height: 369px;" /></p>
                                                 <p>&#160;</p>
-                                                <p>(cf.&#160;<a href="WPCW_UtilisationInit.htm" target="_blank" title="Lien vers l'article d'utilisation" alt="Lien vers l'article d'utilisation">Première utilisation de WPC</a>, <a href="WPCW_UtilisationCourante.htm" target="_blank" title="Lien vers l'article d'utilisation" alt="Lien vers l'article d'utilisation">Utilisation courante de WPC</a>, et <a href="WPCW_UtilisationHA.htm" target="_blank" title="Lien vers l'article d'utilisation" alt="Lien vers l'article d'utilisation">Utilisation en cas de panne</a>).</p>
+                                                <p>(cf.&#160;Première utilisation de WPC, <a href="WPCW_UtilisationCourante.htm" target="_blank" title="Lien vers l'article d'utilisation" alt="Lien vers l'article d'utilisation">Utilisation courante de WPC</a>, et <a href="WPCW_UtilisationHA.htm" target="_blank" title="Lien vers l'article d'utilisation" alt="Lien vers l'article d'utilisation">Utilisation en cas de panne</a>).</p>
                                                 <p>&#160;</p>
                                             </li>
                                         </ul>

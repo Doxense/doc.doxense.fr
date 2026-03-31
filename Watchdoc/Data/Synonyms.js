@@ -7,6 +7,10 @@ xmlSynonymsData += '        <DirectionalSynonym From=\"Processeur d\'impression\
 xmlSynonymsData += '        <DirectionalSynonym From=\"spooler\" To=\"spouleur\" />';
 xmlSynonymsData += '        <DirectionalSynonym From=\"Trafic\" To=\"traffic\" />';
 xmlSynonymsData += '        <DirectionalSynonym From=\"calculateur\" To=\"estim\" />';
+xmlSynonymsData += '        <DirectionalSynonym From=\"pull print\" To=\"impression sécuris\" />';
+xmlSynonymsData += '        <DirectionalSynonym From=\"pull printing\" To=\"impression sécuris\" />';
+xmlSynonymsData += '        <DirectionalSynonym From=\"journal\" To=\"log\" />';
+xmlSynonymsData += '        <DirectionalSynonym From=\"journaux\" To=\"log\" />';
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"Améliorer\" To=\"amélior\" FromStem=\"amélior\" />';
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"cacher\" To=\"transform\" FromStem=\"cach\" />';
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"créer\" To=\"cre\" FromStem=\"cré\" />';

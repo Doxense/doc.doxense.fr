@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr" xml:lang="fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-toc-path="Administrer Watchdoc|Domaine" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="HTML5">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr" xml:lang="fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-toc-path="Administrer Watchdoc|Domaine" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="web">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="description" content="Procédure de création et de configuration d'un domaine : désignation du serveur master et du ou des serveurs esclaves qui en dépendent, gestion et maintenance du domaine." />
         <meta name="Installation master / slave" content="Installation maître / esclave" />
@@ -26,7 +24,6 @@
         <link href="../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
-        <link href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
         <style>/*&lt;meta /&gt;*/
 
 .button.print-button
@@ -203,27 +200,31 @@
                                         </div>
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor6"></a>
+                                        <h1><a name="aanchor249"></a>
                                             <MadCap:concept term="CFG" />Watchdoc - Domaine - Créer et géer un domaine (master/slave)</h1>
                                         <h2>Etapes</h2>
                                         <p>Pour mettre en œuvre un domaine comprenant un serveur master et d'autres serveurs&#160;:</p>
                                         <ol>
                                             <li value="1">
-                                                <p class="Liste_num_1">installez Watchdoc sur le serveur</p>
+                                                <p class="Liste_num_1">installez Watchdoc sur le serveur master</p>
                                             </li>
                                             <li value="2">
-                                                <p class="Liste_num_1">déclarez le serveur en tant que master (ce qui entraîne la création du du domaine)</p>
+                                                <p class="Liste_num_1">déclarez le serveur en tant que master pour entraîner la création du domaine</p>
                                             </li>
                                             <li value="3">
-                                                <p class="Liste_num_1">enregistrez les autres serveurs du domaine.</p>
+                                                <p class="Liste_num_1">enregistrez les autres serveurs du domaine</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>configurez les serveurs iis du domaine.</p>
+                                                <p>&#160;</p>
                                             </li>
                                         </ol>
                                         <p class="Liste_num_1">Vous pouvez compléter cette installation en activant la  configuration centralisée&#160;: </p>
                                         <ol data-mc-continue="true">
-                                            <li value="4">
+                                            <li value="5">
                                                 <p class="Liste_num_1">activez la configuration centralisée</p>
                                             </li>
-                                            <li value="5">
+                                            <li value="6">
                                                 <p>activez le mode de synchronisation.</p>
                                             </li>
                                         </ol>
@@ -237,7 +238,7 @@
                                                 <p>depuis le <strong>Menu principal</strong>, cliquez sur <strong>Configuration avancée</strong> ; </p>
                                             </li>
                                             <li value="3">
-                                                <p>dans l'interface <strong>Configuration avancée</strong>, cliquez sur <strong>Gestion du domaine</strong> : <br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Domaine_Acces_700x455.png" style="width: 700;height: 455;" /></p>
+                                                <p>dans l'interface <strong>Configuration avancée</strong>, cliquez sur <strong>Gestion du domaine</strong> : <br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Domaine_Acces.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1273" data-mc-height="828" src="../../Z_Resources/Images/02_Captures/Config_Domaine_Acces.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a></p>
                                             </li>
                                         </ol>
                                         <h2>Déclarer le serveur master</h2>
@@ -259,8 +260,7 @@
                                                     <li>
                                                         <p><strong>Description </strong>: un complément d'information permettant d'identifier le serveur si nécessaire&#160;:<br /></p>
                                                         <p>&#160;</p>
-                                                        <p>
-                                                            <img src="../../Z_Resources/Images/02_Captures/Config_Domaine_CreerMaster_700x319.png" style="width: 700;height: 319;" />
+                                                        <p><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Domaine_CreerMaster.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1606" data-mc-height="731" src="../../Z_Resources/Images/02_Captures/Config_Domaine_CreerMaster.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a>
                                                         </p>
                                                         <p>
                                                             <br />
@@ -272,10 +272,87 @@
                                                 <p>Cliquez sur <strong>Créer</strong> pour valider la création du domaine et de son serveur master.</p>
                                             </li>
                                         </ol>
+                                        <h3>Vérifier le statut du serveur master</h3>
+                                        <ol>
+                                            <li value="1">
+                                                <p class="Resultat">Dans le <strong>Menu principal</strong> de Watchdoc, le nouveau statut du serveur s'affiche :	<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Domaine_CreerMaster_Statut.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="528" data-mc-height="110" src="../../Z_Resources/Images/02_Captures/Config_Domaine_CreerMaster_Statut.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                <p>&#160;</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>dans l'interface de<strong> Gestion du domaine</strong>, les informations et les certificats du domaine s'affichent&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Domaine_Interface_Gestion.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1606" data-mc-height="677" src="../../Z_Resources/Images/02_Captures/Config_Domaine_Interface_Gestion.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a><br /></p>
+                                            </li>
+                                        </ol>
+                                        <p><span style="font-family: 'Wingdings'">è</span> Vous pouvez compléter les informations du serveur master, mais aussi ajouter d'autres serveurs dans le domaine.<br /></p>
+                                        <p>NB.&#160;: pour supprimer le rôle master à un serveur , cf.&#160;la procédure <a href="ConfigDomaine_Declasser.htm" target="_blank">Déclasser un serveur master</a>.</p>
+                                        <h2><a name="kanchor4"></a>Déclarer les serveurs slaves Watchdoc</h2>
+                                        <h3>Déclarer les serveurs slaves depuis Watchdoc </h3>
+                                        <p>Une fois  le master déclaré et le domaine créé, vous pouvez ajouter les serveurs slaves du domaine&#160;:</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>dans l'interface <strong>Gestion du domaine</strong>, section <strong>Liste des serveurs</strong>, cliquez sur <strong>Ajouter un serveur slave</strong> ; </p>
+                                            </li>
+                                            <li value="2">
+                                                <p>dans l'interface d'ajout, indiquez l'<strong>adresse </strong>et le <strong>port </strong>du serveur à ajouter (port du service DSP) ;</p>
+                                            </li>
+                                            <li value="3">
+                                                <p>cliquez sur <strong>Ajouter </strong>pour valider l'ajout du serveur slave&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Domaine2.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1736" data-mc-height="565" src="../../Z_Resources/Images/02_Captures/Config_Domaine2.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a></p>
+                                            </li>
+                                        </ol>
+                                        <p>&#160;</p>
+                                        <p>Si la liste des serveurs slaves est importante, elle est paginée. Une page comporte au maximum 30 serveurs. </p>
+                                        <p>&#160;</p>
+                                        <p>N.B. : cette configuration peut aussi être effectuée depuis l'interface d'administration du serveur slave.</p>
+                                        <p>&#160;</p>
+                                        <h3>Vérifier l'ajout des autres serveurs dans le domaine</h3>
+                                        <ol>
+                                            <li value="1">
+                                                <p class="Resultat">Dans le <strong>Menu principal</strong> de Watchdoc, le nouveau statut du serveur s'affiche :	<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/FT_WD5x_MasterSlave_statut2_Slave.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="424" data-mc-height="85" src="../../Z_Resources/Images/02_Captures/FT_WD5x_MasterSlave_statut2_Slave.png" tabindex="" style="width: 414px;height: 82px;max-width: 1000px;" /></a></p>
+                                                <p>&#160;</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>dans l'interface de<strong> Gestion du domaine</strong>, les autres serveurs s'ajoutent dans la liste des serveurs, sous le serveur master.</p>
+                                            </li>
+                                        </ol>
+                                        <h2>Configurer l'accès au serveur web <a name="WebSiteConfig"></a>du serveur master</h2>
+                                        <p>Une fois le domaine constitué, il est nécessaire d'indiquer quels sont les serveurs web slaves qui peuvent accéder au serveur web IIS du master. Cette opération repose sur l'outil WebSiteConfig.exe&#160;: </p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>depuis l'interface d'administration du domaine dans la liste des serveurs, cliquez sur le bouton <b>Exporter la liste des serveurs</b><img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_ExporterListServeurs.png" style="width: 145px;height: 16px;" /> </p>
+                                            </li>
+                                            <li value="2">
+                                                <p>l'export génère un fichier "servers.xml" dans lequel sont listés tous les serveurs du domaine&#160;; </p>
+                                            </li>
+                                            <li value="3">
+                                                <p>conservez ce fichier à disposition et rendez-vous en tant qu'administrateur sur le serveur master&#160;; </p>
+                                            </li>
+                                            <li value="4">
+                                                <p>sur le master, exécutez l'outil <b>WebSiteConfig.exe</b> (enregistré par défaut dans le dossier C:\Program Files\Doxense\Watchdoc\Tools)&#160;;</p>
+                                            </li>
+                                            <li value="5">
+                                                <p>ouvrez en parallèle le fichier "servers.xml"&#160;;</p>
+                                            </li>
+                                            <li value="6">
+                                                <p>dans l'outil WebSiteConfigurator, cliquez sur <b>Add new</b> ;</p>
+                                            </li>
+                                            <li value="7">
+                                                <p>dans l'interface <b>Server Connection Properties</b>, reportez l'identifiant et l'URI d'un serveur slave du domaine du fichier "servers.xml"&#160;; </p>
+                                            </li>
+                                            <li value="8">
+                                                <p>cliquez sur <b>OK</b> pour autoriser le serveur slave  à accéder au serveur web IIS&#160;du master ;</p>
+                                            </li>
+                                            <li value="9">
+                                                <p>réitérez l'opération pour tous les serveurs slaves du domaine inscrits dans le fichier "servers.xlm"&#160;:</p>
+                                                <p>
+                                                    <br /><a class="MCPopupThumbnailLink" href="ConfigDomaineWebSiteConfig.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1284" data-mc-height="506" src="ConfigDomaineWebSiteConfig.png" tabindex="" style="max-width: 1000px;" /></a>
+                                                </p>
+                                            </li>
+                                        </ol>
+                                        <h2>Gérer le domaine avec WCLI</h2>
+                                        <p>Vous pouvez également gérer un domaine Watchdoc à l'aide de l'outil WCLI (cf.&#160;<a href="../../O_WCLI/WCLI_Presentation.htm" target="_blank">présentation de l'outil Watchdoc Commandes en Ligne</a>).</p>
                                         <h3>Déclarer le master depuis WCLI</h3>
                                         <ol>
                                             <li value="1">
-                                                <p class="Liste_num_1">à l'aide de l'outil de commande, placez-vous dans le répertoire d'installation de Watchdoc : <code>cd "\Program Files\Doxense\Watchdoc"</code></p>
+                                                <p class="Liste_num_1">A l'aide de l'outil de commande, placez-vous dans le répertoire d'installation de Watchdoc : <code>cd "\Program Files\Doxense\Watchdoc"</code>&#160;;</p>
                                             </li>
                                             <li value="2">
                                                 <p class="Liste_num_1">lancez ensuite la commande de création du Master (en respectant la casse)&#160;: <br /><br /><code>WCLI CREATEMASTER /master=adresse /password=mot_de_passe_de_maintenance<br /></code><br /><img src="../../Z_Resources/Images/02_Captures/FT_MasterSlave_CMD_WCLI.png" /></p>
@@ -297,38 +374,10 @@
                                                 <p>&#160;</p>
                                             </li>
                                             <li value="3">
-                                                <p class="Liste_num_1">vérifiez que vous recevez le message de confirmation suivant&#160;:<br /><img src="../../Z_Resources/Images/02_Captures/FT_MasterSlave_MsgConfirmMaster.png" /></p>
+                                                <p class="Liste_num_1">vérifiez que vous recevez le message de confirmation suivant&#160;:<br /><br /><img src="../../Z_Resources/Images/02_Captures/FT_MasterSlave_MsgConfirmMaster.png" /></p>
                                             </li>
                                         </ol>
-                                        <h3>Vérifier le statut du serveur master</h3>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Resultat">Dans le <strong>Menu principal</strong> de Watchdoc, le nouveau statut du serveur s'affiche :	<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Domaine_CreerMaster_Statut.png" /></p>
-                                            </li>
-                                            <li value="2">
-                                                <p>dans l'interface de<strong> Gestion du domaine</strong>, les informations et les certificats du domaine s'affichent&#160;:<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Domaine_Interface_Gestion_700x295.png" style="width: 700;height: 295;" /><br /></p>
-                                            </li>
-                                        </ol>
-                                        <p>→ Vous pouvez compléter les informations du serveur master, mais aussi ajouter d'autres serveurs dans le domaine.</p>
-                                        <h2><a name="kanchor1"></a>Déclarer les autres serveurs Watchdoc</h2>
-                                        <h3>Déclarer les autres serveurs depuis Watchdoc </h3>
-                                        <p>Une fois  le master déclaré et le domaine créé, vous pouvez l'enrichir d'autres serveurs&#160;:</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>dans l'interface <strong>Gestion du domaine</strong>, section <strong>Liste des serveurs</strong>, cliquez sur <strong>Ajouter un serveur slave</strong> ; </p>
-                                            </li>
-                                            <li value="2">
-                                                <p>dans l'interface d'ajout, indiquez l'<strong>adresse </strong>et le <strong>port </strong>du serveur à ajouter (port du service DSP) ;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>cliquez sur <strong>Ajouter </strong>pour valider l'ajout du serveur slave&#160;:<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Domaine2_700x228.png" style="width: 700;height: 228;" /></p>
-                                            </li>
-                                        </ol>
-                                        <p>&#160;</p>
-                                        <p>Si la liste des serveurs slaves est importante, elle est paginée. Une page comporte au maximum 30 serveurs. </p>
-                                        <p>&#160;</p>
-                                        <p>N.B. : cette configuration peut aussi être effectuée depuis l'interface d'administration du serveur slave.</p>
-                                        <h3>Déclarer les serveurs à l'aide de WCLI</h3>
+                                        <h3>Déclarer les serveurs slaves à l'aide de WCLI</h3>
                                         <ol>
                                             <li value="1">
                                                 <p>Avec l'outil en ligne de commande, placez-vous dans le dossier d'installation de Watchdoc;</p>
@@ -344,61 +393,6 @@
                                                 <p class="Liste_num_1">vérifiez que vous recevez le message de confirmation suivant&#160;:<br /><br /><img src="../../Z_Resources/Images/02_Captures/FT_WD5x_MasterSlave_statut1_Slave.png" /></p>
                                             </li>
                                         </ol>
-                                        <p>&#160;</p>
-                                        <h3>Vérifier l'ajout des autres serveurs dans le domaine</h3>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Resultat">Dans le <strong>Menu principal</strong> de Watchdoc, le nouveau statut du serveur s'affiche :	<br /><br /><img src="../../Z_Resources/Images/02_Captures/FT_WD5x_MasterSlave_statut2_Slave_414x82.png" style="width: 414;height: 82;" /></p>
-                                            </li>
-                                            <li value="2">
-                                                <p>dans l'interface de<strong> Gestion du domaine</strong>, les autres serveurs s'ajoutent dans la liste des serveurs, sous le serveur master.<br /></p>
-                                            </li>
-                                        </ol>
-                                        <h2><a name="kanchor2"></a><a name="Supprimer" id="Supprimer"></a>Supprimer (déclasser) un serveur Master</h2>
-                                        <p>Ponctuellement, il peut être nécessaire de déclasser un serveur master, c'est-à-dire lui enlever son rôle de master. </p>
-                                        <fieldset>Déclasser un serveur master est une opération dont les conséquences sont importantes, notamment pour les autres serveurs qui en dépendent.&#160;</fieldset>
-                                        <p>Cette opération doit être réalisée à l'aide de WCLI.<br /></p>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">à l'aide de l'outil de commande, placez-vous dans le répertoire d'installation de Watchdoc : <code>cd "\Program Files\Doxense\Watchdoc"</code> ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1">lancez la commande permettant d'arrêter le serveur :<code style="font-family: 'Courier New';"> &gt;<b style="font-family: 'Courier New';">net stop watchdoc</b></code></p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1">lorsque le service est arrêté, lancez la commande permettant de déclasser le serveur : &gt;<strong style="font-family: 'Courier New';">wcli SINGLEIFY /force</strong></p>
-                                            </li>
-                                            <li value="4">
-                                                <p class="Liste_num_1">confirmez votre demande de déclassement par "<strong style="font-family: 'Courier New';">y</strong>" ;</p>
-                                            </li>
-                                        </ol>
-                                        <p class="Liste_num_1"><span style="font-family: 'Wingdings'">è</span> l'outil procède au déclassement du master : il vous informe que le serveur est devenu "single master" et vous rend la main.<br />Par ailleurs, depuis la version&#160;6.1.0.5276, Watchdoc génère automatiquement une sauvegarde du fichier de configuration permettant une restauration en cas d'erreur lors de l'opération.&#160;Ce fichier de sauvegarde est enregistré par défaut dans C:Program Files\Doxense\Watchdoc\Data\ et porte la date de sa création.</p>
-                                        <ol data-mc-continue="true">
-                                            <li value="5">
-                                                <p class="Liste_num_1">lancez la commande permettant de redémarrer le serveur : &gt; <code style="font-family: 'Courier New';"><b style="font-family: 'Courier New';">net start watchdoc</b></code>:<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Domaine_DeclasserMasterWCLI_700x364.png" style="width: 700;height: 364;" /></p>
-                                                <p class="Liste_num_1">
-                                                    <br />
-                                                </p>
-                                            </li>
-                                        </ol>
-                                        <p class="Liste_num_1"><span style="font-family: 'Wingdings'">è</span> une fois Watchdoc redémarré, vérifiez dans <strong>Gestion du domaine</strong> que le serveur n'a plus le rôle de master.&#160;</p>
-                                        <h2><a name="kanchor3"></a>Sortir un serveur du domaine</h2>
-                                        <p>Ponctuellement, il peut être nécessaire de supprimer un serveur esclave (slave), ce qui oblige à casser le lien qui le relie au serveur master (maître).</p>
-                                        <p>Cette opération doit être réalisée à l'aide de WCLI&#160;:<br></br></p>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">à l'aide de l'outil de commande, lancez WCLI&#160;: <code>cd "\Program Files\Doxense\Watchdoc\wcli.exe"</code> ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>lancez la commande permettant de sortir le serveur du domaine :                <code>removeslave /slave=DNS_SLAVE /domain=DOMAIN_ID</code><br /><br /><img src="../../Z_Resources/Images/02_Captures/WCLI_WatchdocCommandLine/WCLI_Removeslave.png" /><![CDATA[
-]]></p>
-                                                <p><![CDATA[                ]]></p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1">une fois le serveur esclave devenu simple (single) serveur, vous pouvez le supprimer.</p>
-                                            </li>
-                                        </ol>
-                                        <p class="Liste_num_1"><span style="font-family: 'Wingdings'">è</span> vérifiez dans <strong>Gestion du domaine</strong> que le serveur ne figure plus dans la liste des serveurs slaves du domaine.&#160;</p>
                                     </div>
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
