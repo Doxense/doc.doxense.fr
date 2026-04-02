@@ -1,1 +1,1 @@
-define({r:0.5,st:'Stem',n:1,t:[0],m:[],u:['../B_Procedure Topics/Ajouter_Peripheriques.htm'],s:['0','faut','redress'],p:[['0',4],['canon',5],['d',8],['document',26],['fax',30],['l\u0027utilisateur',1],['mise',7],['permettant',14],['s',7],['sélectionnez',16],['zone',28]]});
+define({r:0.5,st:'Stem',n:1,t:[0],m:[],u:['../B_Procedure Topics/Ajouter_Peripheriques.htm'],s:['0','fair','recev'],p:[['0',4],['cachet',34],['csv',28],['disque',4],['expéditeur',13],['l\u0027ocr',4],['mb562',5],['pas',1],['requise',35],['sur',18],['watchdoc',28]]});
