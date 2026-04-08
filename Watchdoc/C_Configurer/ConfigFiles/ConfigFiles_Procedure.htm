@@ -198,7 +198,7 @@
                                         </div>
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1 id="WatchdocFilesdimpressionConfigurerunefile" data-magellan-target="WatchdocFilesdimpressionConfigurerunefile"><a name="aanchor384"></a>
+                                        <h1 id="WatchdocFilesdimpressionConfigurerunefile" data-magellan-target="WatchdocFilesdimpressionConfigurerunefile"><a name="aanchor381"></a>
                                             <MadCap:concept term="WD">
                                             </MadCap:concept>Watchdoc - Files d'impression - Configurer une file</h1>
                                         <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
@@ -637,7 +637,7 @@ Le fait que les messages soient archivés sur le serveur fait que l'utilisateur 
                                                         <p>Désactivé : la file n'est pas proposée sur les plateformes PDF&#160;(aucun WPC&#160;PDF&#160;ne peut être sélectionné) ; </p>
                                                     </li>
                                                     <li>
-                                                        <p>Auto-détection : Watchdoc examine les capacités du périphérique pour proposer ou ne pas proposer la file <MadCap:conditionalText data-mc-conditions="General.Note interne">en fonction des critères d'impression choisis par l'utilisateur</MadCap:conditionalText>; </p>
+                                                        <p>Auto-détection : Watchdoc examine les capacités du périphérique pour proposer ou ne pas proposer la file ; </p>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -699,21 +699,8 @@ Le fait que les messages soient archivés sur le serveur fait que l'utilisateur 
                                         <p class="Liste_puce_1"><strong>Redirection</strong>
                                         </p>
                                         <p>Rendre visible les travaux imprimés dans le pool suivant : dans la liste, sélectionnez l'un des pools existants pour permettre à Watchdoc d'envoyer les travaux d'impression vers d'autres files en cas d'indisponibilité de la file que vous configurez.</p>
-                                        <ul data-mc-conditions="General.Note interne">
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Forcer la redirection vers une autre file d'impression : </strong>cochez cette case pour permettre à Watchdoc d'envoyer les travaux d'impression vers une autre file. Dans ce cas, indiquez, en paramètre <strong>Cible </strong>la file vers laquelle doivent être renvoyées les impressions.</p>
-                                            </li>
-                                        </ul>
                                         <fieldset>Lorsqu'il est utilisé, ce paramètre  s'applique depuis d'une file partagée vers une file virtuelle.&#160;Il permet, par exemple, de rediriger les demandes d'impression couleur vers une file d'impression monochrome.&#160;Notez que ce paramètre doit principalement être utilisé en mode <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term15">Comptabilisation<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Dynamic Link Library (bibliothèque de liens dynamiques) est une bibliothèque logicielle dont les fonctions sont chargées en mémoire par un programme lors de son exécution, par opposition aux bibliothèques logicielles statiques ou partagées dont les fonctions sont chargées en mémoire avant le début de l'exécution du programme.
 (Source : Wikipédia).</span></a>.&#160;En effet, comme l'impression est redirigée vers une file shadow non contrôlee par Watchdoc, les travaux sont imprimés sans validation de l'utilisateur.</fieldset>
-                                        <ul data-mc-conditions="General.Note interne">
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Redirection automatique si périphérique indisponible : </strong>cochez cette case pour permettre à Watchdoc d'envoyer les travaux d'impression vers une autre file partagée lorsque le périphérique ne fonctionne pas. Complétez alors en indiquant, en paramètre <strong>Cible</strong>, la file  vers laquelle doivent être renvoyées les impressions.</p>
-                                            </li>
-                                        </ul>
-                                        <p class="Liste_puce_1" data-mc-conditions="General.Note interne"><strong>Cible : </strong>si vous avez coché une possibilité de redirection, indiquez en <strong>Cible </strong>le ou les périphériques vers lesquels doivent être envoyés les travaux d'impression. Cliquez sur le bouton   situé au bout de la zone de saisie pour accéder à la liste des files contrôlées par Watchdoc.</p>
-                                        <fieldset class="astuce" style="text-align: left;" data-mc-conditions="General.Note interne">La redirection est effectuée en fonction de l'ordre de saisie des cibles dans la liste : ainsi, si le périphérique désigné comme première cible de redirection n'est pas opérationnel, les travaux sont dirigés vers la deuxième cible et ainsi de suite jusqu'à ce qu'un périphérique soit en mesure d'imprimer le travail.<br />Les files d'impression cibles doivent être compatibles avec l'imprimante initiale (même modèle ou même pilote). Si le langage d'impression (PostScript, PCL,..) ou les caractéristiques de l'imprimante (A3/A4, Couleur/Noir et blanc) sont différents, les documents redirigés risquent d'être corrompus.</fieldset>
-                                        <p class="Liste_puce_1" data-mc-conditions="General.Note interne">&#160;</p>
                                         <p class="Liste_puce_1"><strong>Sources </strong>: par défaut, les files héritent de la configuration du groupe de files auquel elles appartiennent. </p>
                                         <p class="Liste_puce_2"> <strong>Ne pas utiliser</strong> : cochez la case pour appliquer à la file que vous paramétrez la configuration d'une ou plusieurs sources de redirection spécifiques.</p>
                                         <p class="Liste_puce_2"><strong>Source(s) </strong>: dans le cas où vous avez coché la case précédente, indiquez dans ce champ la ou les files sources susceptibles d'envoyer leurs travaux sur la file configurée&#160;;</p>
@@ -775,7 +762,7 @@ Le fait que les messages soient archivés sur le serveur fait que l'utilisateur 
                                         <ul>
                                             <li>
                                                 <p><strong>Source : </strong>cochez la case si la file appartient à un groupe de files et que la configuration du groupe doit s'appliquer à la file.</p>
-                                                <p>Dans ce cas, il n'est pas nécessaire de configurer le SNMP.</p>
+                                                <p>Dans ce cas, il n'est pas nécessaire de configurer le SNMP de la file.</p>
                                             </li>
                                             <li>
                                                 <p><strong>Version de SNMP :</strong> sélectionnez la version du protocole SNMP utilisée.&#160;</p>
@@ -868,9 +855,6 @@ Le fait que les messages soient archivés sur le serveur fait que l'utilisateur 
                                                     <li>
                                                         <p class="Liste_puce_2"><strong>Utiliser la configuration du groupe :</strong>   optez pour ce choix si le traitement à appliquer est celui qui a été défini pour le Groupe de files. La file hérite donc de la configuration générique de son Groupe.</p>
                                                     </li>
-                                                    <li data-mc-conditions="General.Note interne">
-                                                        <p class="Liste_puce_2"><strong>Désactiver la notification par popup Windows sur cette file :</strong> optez pour ce choix si vous ne souhaitez pas utiliser le notifieur ; </p>
-                                                    </li>
                                                     <li>
                                                         <p class="Liste_puce_2"><strong>Forcer l'activation de la notification par popup Windows sur cette file : </strong>optez pour ce choix si vous souhaitez utiliser le notifieur pour cette file alors qu'elle appartient à un groupe pour lequel cette option n'est pas activée.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Files_Notifications_54.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1052" data-mc-height="250" src="../../Z_Resources/Images/02_Captures/Config_Files_Notifications_54.png" tabindex="" style="width: 852px;height: 202px;max-width: 1000px;" /></a></p>
                                                     </li>
@@ -941,12 +925,12 @@ Le fait que les messages soient archivés sur le serveur fait que l'utilisateur 
                                         <p>&#160;</p>
                                         <ul>
                                             <li>
-                                                <p><strong>Périphérique : activer l'interface embarquée : </strong>cochez la case pour mettre en œuvre le WES ;
+                                                <p style="font-weight: normal;"><strong>Périphérique : activer l'interface embarquée : </strong>cochez la case pour mettre en œuvre le WES ;
 
 </p>
                                             </li>
                                             <li>
-                                                <p>Profil : dans la liste déroulante, sélectionnez le WES adapté à votre périphérique ;
+                                                <p style="font-weight: normal;"><b>Profil :</b> dans la liste déroulante, sélectionnez le WES adapté à votre périphérique ;
 </p>
                                             </li>
                                         </ul>
@@ -977,10 +961,13 @@ Le fait que les messages soient archivés sur le serveur fait que l'utilisateur 
                                                 </ul>
                                             </li>
                                             <li>
+                                                <p><b>Réglages WES :</b> si la file est équipée d'un WES, complétez cette section en suivant la procédure <b>Configurer le WES&#160;sur la file</b> dans la documentation du WES&#160;concerné : </p>
+                                            </li>
+                                            <li>
                                                 <p style="font-weight: normal;"><strong>Options de logs :</strong> si des options de logs sont définires dans le profil WES, vous pouvez ici ne pas en tenir compte pour définir des options de logs propres à la file d'impression : </p>
                                                 <ul>
                                                     <li>
-                                                        <p style="font-weight: normal;">Emplacement : indiquez à quel emplacement l'application doit collecter les informations qu'elle enregistre dans les fichiers traces :</p>
+                                                        <p style="font-weight: normal;"><b>Emplacement :</b> indiquez à quel emplacement l'application doit collecter les informations qu'elle enregistre dans les fichiers traces :</p>
                                                         <ul>
                                                             <li>
                                                                 <p>fichier : cochez cette case pour que les informations soient enregistrées dans un fichier accessible par Watchdoc ;</p>
@@ -1030,7 +1017,7 @@ Le fait que les messages soient archivés sur le serveur fait que l'utilisateur 
                                                 <p class="Liste_puce_1"><strong>Mode de transformation de spool:</strong> indiquez, grâce aux paramètres, is le mode est activé ou non sur la file: </p>
                                             </li>
                                             <li>
-                                                <p class="Liste_puce_2"><strong>Utiliser la valeur du groupe :</strong> par défaut, si la file appartient à un gropue de files, c'est le paramètre choisi pour le groupe de files qui est appliqué sur la file ;</p>
+                                                <p class="Liste_puce_2"><strong>Utiliser la valeur du groupe :</strong> par défaut, si la file appartient à un groupe de files, c'est le paramètre choisi pour le groupe de files qui est appliqué sur la file ;</p>
                                             </li>
                                             <li>
                                                 <p class="Liste_puce_2"><strong>Activaté :</strong> choisissez ce paramètre pour activer la transformation de spool sur la file ; </p>
@@ -1040,7 +1027,7 @@ Le fait que les messages soient archivés sur le serveur fait que l'utilisateur 
                                             </li>
                                         </ul>
                                         <blockquote>
-                                            <fieldset>Tracer les spools nécessite de disposer d'espace disque sur le serveur d'impression. C'est pourquoi nous recommandons de n'activer la fonction qu'à des fins d'analyse en cas de dysfonctionnement.<br /><br /></fieldset>
+                                            <fieldset>Tracer les spools nécessite de disposer d'espace disque sur le serveur d'impression. C'est pourquoi nous recommandons de n'activer la fonction qu'à des fins d'analyse en cas de dysfonctionnement.<br /></fieldset>
                                         </blockquote>
                                         <p><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Files_Section_TransfoSpools_V54.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="820" data-mc-height="92" src="../../Z_Resources/Images/02_Captures/Config_Files_Section_TransfoSpools_V54.png" tabindex="" style="width: 540px;height: 66px;max-width: 1000px;" /></a>
                                         </p>

@@ -363,8 +363,6 @@
                                         <hr width="100%" size="0" align="center" />
                                         <h2 id="WESLexmarkMessagederreurWatchdocisnotrespondingsurlesWESdeLexmarkSDK4aprèsmiseàjourdeWatchdocenv6105221" data-magellan-target="WESLexmarkMessagederreurWatchdocisnotrespondingsurlesWESdeLexmarkSDK4aprèsmiseàjourdeWatchdocenv6105221">WES Lexmark. Message d'erreur "Watchdoc is not responding" sur les WES&#160;de Lexmark SDK4 après mise à jour de Watchdoc en v. 6.1.0.5221 </h2>
                                         <li>
-                                            <p data-mc-conditions="General.Note interne"><a name="aanchor16"></a>
-                                                <MadCap:concept term="ADE" />Watchdoc - Gérer le port 5744 dans le firewall - Message d'erreur "Watchdoc is not responding"</p>
                                             <p><strong>Mai 2025</strong>
                                             </p>
                                             <h2 id="Contexte" data-magellan-target="Contexte"><b>Contexte</b>
@@ -779,92 +777,15 @@
                                         <ul>
                                             <li>
                                                 <p>après installation correcte du WES Lexmark, lorsqu'on tente de lancer Watchdoc depuis l'écran du périphérique, on constate que l'icone de l'application "Mes impressions" ("MyPrints") est l'icone générique Lexmark (au lieu de l'icone Watchdoc). </p>
-                                                <p>Lorsqu'on clique sur cette icone, on obtient le message d’erreur suivant : "Impossible d'exécuter l'application. Contactez le fournisseur de l'application ou votre administrateur système. Erreur 20.005" :<br /><br /><img src="ADE_ErreurMaJFirmware.png" style="width: 500px;height: auto;" /></p>
+                                                <p>Lorsqu'on clique sur cette icone, on obtient le message d’erreur suivant : "Impossible d'exécuter l'application. Contactez le fournisseur de l'application ou votre administrateur système. Erreur 20.005" :<br /><br /><img src="ADE_ErreurMaJFirmware.png" style="width: 547px;height: 329px;" /></p>
                                             </li>
                                         </ul>
                                         <p>&#160;</p>
                                         <p style="font-size: 14pt;"><strong>Cause</strong>
                                         </p>
-                                        <p> Le nouveau firmware mis à disposition par Lexmark ne fonctionne plus comme le précédent : il nécessite désormais un certificat avec l’extension CA=TRUE qui signifie qu’il est marqué comme une autorité de certification (CA).</p>
+                                        <p>Le nouveau firmware mis à disposition par Lexmark ne fonctionne plus comme le précédent : il nécessite désormais un certificat avec l’extension CA=TRUE qui signifie qu’il est marqué comme une autorité de certification (CA).</p>
                                         <p>&#160;</p>
                                         <p style="font-size: 14pt;"><strong>Résolution</strong>
-                                        </p>
-                                        <p>Pour résoudre ce problème, il existe une solution de contournement, décrite ci-dessous. </p>
-                                        <p>Elle nécessite de<strong> mettre à jour Watchdoc, au minimum avec la version 6.0.0.4856</strong> et s'appuie sur l'outil WCM.</p>
-                                        <p>&#160;</p>
-                                        <p><strong>Supprimer le certificat existant</strong>
-                                        </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Arrêtez le service Watchdoc.</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>	Lancez une invite de commande Windows en mode administrateur puis accédez à l’outil wcm&#160;:</p>
-                                                <p><code>Cd C:\Program Files\Doxense\Watchdoc</code>
-                                                </p>
-                                                <p><code>C:\Program Files\Doxense\Watchdoc&gt;wcm</code>
-                                                </p>
-                                                <p>WCM affiche des informations selon lesquelles le certificat http-server est auto-signé [self-signed] :<br /><br /><img src="ADE_ErreurMaJFirmware_WCMInfos.png" style="width: 923px;height: 163px;" /></p>
-                                                <p>
-                                                    <br />
-                                                </p>
-                                            </li>
-                                            <li value="3">
-                                                <p>Saisissez la commande <code style="font-weight: normal;">delete</code> pour supprimer le précédent certificat : <br /><br /><img src="ADE_ErreurMaJFirmware_WCMDelete.png" style="width: 700px;" />d<br /><br /></p>
-                                            </li>
-                                            <li value="4">
-                                                <p>Saisissez<code> y</code> pour confirmer la suppression.</p>
-                                            </li>
-                                            <li value="5">
-                                                <p>Puis saisissez <code>save</code> pour enregistrer la suppression : <br /><br /><img src="ADE_ErreurMaJFirmware_WCMDeleteOK.png" style="width: 700px;height: auto;" /></p>
-                                                <p>&#160;</p>
-                                                <p>→ Un message confirme que les modifications ont été prises en compte dans le fichier config.xml</p>
-                                            </li>
-                                        </ol>
-                                        <p>&#160;</p>
-                                        <p><strong>Créer un nouveau certificat</strong>
-                                        </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>A l'invite de commande, saisissez <code>create </code>pour créer un nouveau certificat.</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>Appuyez sur Entrée après chaque ligne pour confirmer l'information affichée.&#160;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>Pour la ligne <code>More IP or DNS</code>, ajoutez les adresses IP, DNS&#160;ou FQDN de tous les serveurs  concernés par la modification, séparés par un point-virgule.</p>
-                                            </li>
-                                            <li value="4">
-                                                <p>WCM indique que le certificat est CA=true&#160;: en cliquant sur Entrée pour approuver, vous acceptez d'installer un certificat déclaré certificat d'autorité (CA).<br /></p>
-                                            </li>
-                                            <li value="5">
-                                                <p>Après avoir approuvé toutes les autres conditions, saisissez <code>y</code> pour confimer la création&#160;:<br /><br /><img src="ADE_ErreurMaJFirmware_WCMCreate.png" /></p>
-                                                <p>
-                                                    <br />
-                                                </p>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="6">
-                                                <p>WCM génère alors la clé privée, la clé publique et la requête (CSR).</p>
-                                            </li>
-                                            <li value="7">
-                                                <p>saisissez <code>save </code>pour confirmer la génération du certificat et quittez WCM.</p>
-                                            </li>
-                                        </ol>
-                                        <p>&#160;</p>
-                                        <p><strong>Réinstaller les WES Lexmark</strong>
-                                        </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Redémarrez le service Watchdoc.</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>Réinstallez les WES&#160;sur <strong>tous </strong>les périphériques d'impression Lexmark du parc, concernés ou pas par le problème.&#160;</p>
-                                            </li>
-                                        </ol>
-                                        <p>&#160;</p>
-                                        <p><strong style="font-size: 14pt;">Alternative</strong>
                                         </p>
                                         <p>Pour résoudre ce problème de manière pérenne et régulière, nous vous recommandons d'obtenir de la part de votre contrôleur de domaine un certificat d'autorité (CA) pour le site web Watchdoc. <br />Suivez ensuite la procédure permettant de l'installer pour Watchdoc et WSC (cf. <span><a href="../../U_WCM/WCM_SignerCertificat_Procedure.htm" target="_blank" title="Lien vers la procédure" alt="Lien vers la procédure">WCM - Signer un certificat).</a></span> Au terme de cette procédure, il ne sera pas nécessaire de réinstaller les WES sur les périphériques.</p>
                                         <p>&#160;</p>
@@ -906,57 +827,50 @@
                                         <p style="font-weight: bold;">Préalable</p>
                                         <p>Avant d'installer manuellement Watchdoc ScanCare, assurez-vous que la fonction Utiliser profils est paramétrée sur le paramètre Pas de sécurité :</p>
                                         <p>1.	accédez à l'interface web d'administration du périphérique Lexmark (en saisissant son adresse IP dans un navigateur web) ;</p>
-                                        <p>2.	Dans la page d'administration du périphérique Lexmark, cliquez sur l'entrée de menu <strong>Paramètres </strong>:<br /><br /><img src="../../Z_Resources/Images/02_Captures/Lexmark_Install_ScanCare_1.png" style="width: 700px;height: auto;" /><br /></p>
+                                        <p>2.	Dans la page d'administration du périphérique Lexmark, cliquez sur l'entrée de menu <strong>Paramètres </strong>:<br /><br /><img src="../../Z_Resources/Images/02_Captures/Lexmark_Install_ScanCare_1.png" style="width: 500px;height: auto;" /><br /></p>
                                         <p>&#160;</p>
                                         <p>&#160;</p>
-                                        <p>3.	Dans la section <strong>Autres paramètres</strong>, cliquez sur <strong>Sécurité </strong>:<br /><br /><img src="../../Z_Resources/Images/02_Captures/Lexmark_Install_ScanCare_2.png" style="width: 700px;height: auto;" /><br /><br /><br /></p>
-                                        <p>4.	Dans la section <strong>Sécurité</strong>, cliquez sur <strong>Configuration de sécurité</strong> :<br /><br /><img src="../../Z_Resources/Images/02_Captures/Lexmark_Install_ScanCare_4.png" style="width: 700px;height: 0;" /><br /><br /><img src="../../Z_Resources/Images/02_Captures/Lexmark_Install_ScanCare_3.png" style="width: 700px;height: auto;" /><br /><br /></p>
+                                        <p>3.	Dans la section <strong>Autres paramètres</strong>, cliquez sur <strong>Sécurité </strong>:<br /><br /><img src="../../Z_Resources/Images/02_Captures/Lexmark_Install_ScanCare_2.png" style="height: auto;width: 500px;" /><br /><br /><br /></p>
+                                        <p>4.	Dans la section <strong>Sécurité</strong>, cliquez sur <strong>Configuration de sécurité</strong> :<br /><br /><img src="../../Z_Resources/Images/02_Captures/Lexmark_Install_ScanCare_4.png" style="height: auto;width: 500px;" /><br /><br /><img src="../../Z_Resources/Images/02_Captures/Lexmark_Install_ScanCare_3.png" style="height: auto;width: 500px;" /><br /><br /></p>
                                         <p>5.	Dans la section <strong>Configuration de sécurité avancée</strong>, cliquez sur <strong>Contrôles d'accès</strong> :<br /><br /></p>
-                                        <p>6.	ouvrez le dossier <strong>Accès aux fonctions</strong>, puis, dans la liste déroulante <strong>Utiliser profils</strong>, sélectionnez <strong>Pas de sécurité </strong>:<br /><br /><img src="../../Z_Resources/Images/02_Captures/Lexmark_Install_ScanCare_5.png" style="width: 700px;height: auto;" /><br /><br /></p>
-                                        <p>&#160;</p>
+                                        <p>6.	ouvrez le dossier <strong>Accès aux fonctions</strong>, puis, dans la liste déroulante <strong>Utiliser profils</strong>, sélectionnez <strong>Pas de sécurité </strong>:<br /><br /><img src="../../Z_Resources/Images/02_Captures/Lexmark_Install_ScanCare_5.png" style="width: 500px;height: auto;" /><br /><br /></p>
                                         <p>7.	Validez ce paramétrage.</p>
                                         <p>&#160;</p>
                                         <p style="font-weight: bold;">Enregistrer manuellement Watchdoc ScanCare sur un périphérique Lexmark (eSFv3, eSFv4)</p>
                                         <p>1.	accédez à l'interface web d'administration du périphérique Lexmark (en saisissant son adresse IP dans un navigateur web) ;</p>
                                         <p>2.	dans la page d'administration web du périphérique, cliquez sur le menu <strong>Paramètres</strong>.</p>
-                                        <p>3.	Dans la section <strong>Autres paramètres</strong>, cliquez sur <strong>App. </strong>:<br /><br /><img src="../../Z_Resources/Images/02_Captures/Lexmark_Install_ScanCare_6.png" style="width: 700px;height: auto;" /><br /></p>
+                                        <p>3.	Dans la section <strong>Autres paramètres</strong>, cliquez sur <strong>App. </strong>:<br /><br /><img src="../../Z_Resources/Images/02_Captures/Lexmark_Install_ScanCare_6.png" style="height: auto;width: 500px;" /><br /></p>
                                         <p>&#160;</p>
-                                        <p>4.	dans l'interface <strong>App.</strong>, section <strong>Gest.app</strong>, cliquez sur <strong>Gest. app.</strong> :<br /><br /><img src="../../Z_Resources/Images/02_Captures/Lexmark_Install_ScanCare_7.png" style="width: 700px;height: auto;" /><br /><br /></p>
-                                        <p>5.	En bas de l'interface <strong>App</strong>., cliquez sur <strong>Inst. nouv. app.</strong>. :<br /><br /><img src="../../Z_Resources/Images/02_Captures/Lexmark_Install_ScanCare_8.png" style="width: 700px;height: auto;" /><br /><br /></p>
+                                        <p>4.	dans l'interface <strong>App.</strong>, section <strong>Gest.app</strong>, cliquez sur <strong>Gest. app.</strong> :<br /><br /><img src="../../Z_Resources/Images/02_Captures/Lexmark_Install_ScanCare_7.png" style="height: auto;width: 500px;" /><br /><br /></p>
+                                        <p>5.	En bas de l'interface <strong>App</strong>., cliquez sur <strong>Inst. nouv. app.</strong>. :<br /><br /><img src="../../Z_Resources/Images/02_Captures/Lexmark_Install_ScanCare_8.png" style="height: auto;width: 500px;" /><br /><br /></p>
                                         <p>6.	dans la section Inst. nouv. app., cliquez sur Browse pour vous rendre dans le dossier [...]Doxense\ScanCare\AddIn;</p>
-                                        <p>7.	dans ce dossier, sélectionnez le fichier DrivveImage.fls., puis cliquez sur Ouvrir :<br /><br /><img src="../../Z_Resources/Images/02_Captures/Lexmark_Install_ScanCare_9.png" style="width: 700px;height: auto;" /><br /></p>
+                                        <p>7.	dans ce dossier, sélectionnez le fichier DrivveImage.fls., puis cliquez sur Ouvrir :<br /><br /><img src="../../Z_Resources/Images/02_Captures/Lexmark_Install_ScanCare_9.png" style="height: auto;width: 500px;" /><br /></p>
                                         <p>&#160;</p>
                                         <p>
                                             <br />
                                         </p>
-                                        <p>8.	une fois le fichier affiché dans le champ de sélection, cliquez sur le bouton Démarrer :<br /><br /><img src="../../Z_Resources/Images/02_Captures/Lexmark_Install_ScanCare_10.png" style="width: 700px;height: auto;" /></p>
+                                        <p>8.	une fois le fichier affiché dans le champ de sélection, cliquez sur le bouton Démarrer :<br /><br /><img src="../../Z_Resources/Images/02_Captures/Lexmark_Install_ScanCare_10.png" style="height: auto;width: 500px;" /></p>
                                         <p>
                                             <br />
                                         </p>
                                         <p>&#160;</p>
-                                        <p>9.	Lorsque le message indique que l'application est correctement installée, cliquez sur l'onglet App. :<br /><br /><img src="../../Z_Resources/Images/02_Captures/Lexmark_Install_ScanCare_11.png" style="width: 700px;height: auto;" /></p>
+                                        <p>9.	Lorsque le message indique que l'application est correctement installée, cliquez sur l'onglet App. :<br /><br /><img src="../../Z_Resources/Images/02_Captures/Lexmark_Install_ScanCare_11.png" style="height: auto;width: 500px;" /></p>
                                         <p>&#160;</p>
-                                        <p>10.	Sous l'onglet App, cliquez sur Drivve Image :<br /><br /><img src="../../Z_Resources/Images/02_Captures/Lexmark_Install_ScanCare_12.png" style="width: 700px;height: auto;" /></p>
+                                        <p>10.	Sous l'onglet App, cliquez sur Drivve Image :<br /><br /><img src="../../Z_Resources/Images/02_Captures/Lexmark_Install_ScanCare_12.png" style="height: auto;width: 500px;" /></p>
                                         <p>&#160;</p>
                                         <p>&#160;</p>
-                                        <p>11.	Sous l'onglet Configurer de l'interface Drivve Image, pour le paramètre Serveur, saisissez l'adresse IP du serveur Watchdoc ScanCare</p>
-                                        <p>12.	puis, cliquez sur Appliquer :<br /><br /><img src="../../Z_Resources/Images/02_Captures/Lexmark_Install_ScanCare_13.png" style="width: 700px;height: auto;" /></p>
-                                        <p>
-                                            <br />
-                                            <br />
-                                        </p>
-                                        <p>==&gt; L'enregistrement de Watchdoc ScanCare sur le périphérique Lexmark est terminé.</p>
+                                        <p>11.	sous l'onglet Configurer de l'interface Drivve Image, pour le paramètre Serveur, saisissez l'adresse IP du serveur Watchdoc ScanCare</p>
+                                        <p>12.	puis, cliquez sur Appliquer :<br /><br /><img src="../../Z_Resources/Images/02_Captures/Lexmark_Install_ScanCare_13.png" style="height: auto;width: 500px;" /><br /></p>
+                                        <p>&#160;</p>
+                                        <p><span style="font-family: 'Wingdings'">è</span> L'enregistrement de Watchdoc ScanCare sur le périphérique Lexmark est terminé.</p>
                                         <p style="font-weight: bold;">Enregistrer manuellement Watchdoc ScanCare sur un périphérique Lexmark (eSFv5, eSFv6 basé sur Android)</p>
                                         <fieldset>Les périphériques eSF v5 et v6 Lexmark sont pris en charge à partir de la version 7.0.740 de Watchdoc ScanCare.</fieldset>
+                                        <p>&#160;</p>
                                         <p>Suivez la procédure suivante :</p>
                                         <p>1.	accédez à l'interface web d'administration du périphérique Lexmark (en saisissant son adresse IP dans un navigateur web) ;</p>
                                         <p>2.	dans la page web d'administration, cliquez sur l'entrée de menu Applications :</p>
                                         <p>3.	dans la section Application, cliquez sur App. installées :</p>
                                         <p>4.	Cliquez sur le bouton Installer app.<br /><br /><img src="../../Z_Resources/Images/02_Captures/Lexmark_Install_ScanCare_14.png" style="width: 700px;height: auto;" /><br /><br /></p>
-                                        <p>
-                                            <br />
-                                            <br />
-                                        </p>
                                         <p>5.	dans la section  Installer app., cliquez sur Parcourir pour vous rendre dans le dossier [...]Doxense\ScanCare\AddIn;</p>
                                         <p>6.	Sélectionnez le fichier DrivveImageAndroid.fls sur le serveur Watchdoc ScanCare</p>
                                         <p>7.	Cliquez sur Instal. :<br /><br /><img src="../../Z_Resources/Images/02_Captures/Lexmark_Install_ScanCare_15.png" style="width: 700px;height: auto;" /><br /><br /><br /><br /></p>
@@ -980,7 +894,7 @@
                                         <fieldset>Watchdoc ScanCare 7.x : il se peut que vous deviez saisir le paramètre dev=lexmark dans Parameters pour certains modèles. Pour Watchdoc ScanCare 8.0 et les versions ultérieures, ce n'est plus nécessaire.</fieldset>
                                         <fieldset>Généralement, vous n'avez pas de valeur à indiquer dans Parameters. Les paramètres de langue doivent être saisis uniquement pour forcer une langue dans le cas où elle ne serait pas active avec les paramètres de serveur et de machine par défaut.</fieldset>
                                         <p>12.	Confirmez avec Appliquer :</p>
-                                        <p>==&gt; L'enregistrement de Watchdoc ScanCare sur le périphérique Lexmark est terminé.</p>
+                                        <p><span style="font-family: 'Wingdings'">è</span>L'enregistrement de Watchdoc ScanCare sur le périphérique Lexmark est terminé.</p>
                                     </div>
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">

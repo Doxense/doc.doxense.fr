@@ -258,7 +258,17 @@
                                                 </ul>
                                             </li>
                                         </ul>
-                                        <h2 id="Watchdoc" data-magellan-target="Watchdoc"><a name="Watchdoc"></a>Watchdoc<br /></h2>
+                                        <h2 id="Watchdoc" data-magellan-target="Watchdoc"><a name="Watchdoc"></a>Watchdoc</h2>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WatchdocGDPRComplier - Message d'erreur "Cannot decrypt value that uses a custom AES&#160;policy..."- mars 2026</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong>lorsque l'administrateur lance l'outil WatchdocGDPRComplier pour anonymiser les travaux d'impression d'un utilisateur, l'outil affiche le message d'erreur suivant&#160;: "An error has occured while fetching document's data.&#160;Cannot decrypt value that uses a custom AES policy because we don't know the decryption key!"</p>
+                                                <p><strong>Cause :</strong> ce problème survient parce que le chiffrement AES, activé sur Watchdoc, empêche l'opération.&#160;</p>
+                                                <p><strong>Résolution :</strong> pour résoudre le problème, désactivez l'obfuscation des mots de passe avec AES&#160;durant l'opération d'anonymisation, puis réactivez-la une fois l'opération terminée (Menu principal &gt;&#160;section Configuration &gt; Configuration avancée &gt;&#160;Configuration système &gt;&#160;section Sécurité &gt; paramètre Obfuscation : Activer l'obfuscation des mots de passe...).</p>
+                                            </div>
+                                        </div>
+                                        <p>
+                                            <br />
+                                        </p>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Transformation de spools : après refus d'une transformation, le travail d'impression disparaît - jan. 2026</a></span>
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> la transformation de spools est suggérée sur une file.&#160;Après avoir lancé un travail d'impression en couleur, l'utilisateur refuse la transformation en noir et blanc.&#160;Son document disparaît de la liste des travaux en attente.</p>
@@ -579,13 +589,6 @@
                                             </div>
                                         </div>
                                         <p>&#160;</p>
-                                        <div class="MCDropDown MCDropDown_Closed dropDown" style="background-color: #ffff00;"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Watchdoc Express. <span style="color: #808080;">Service Watchdoc failed to start. Verify that you have sufficient privileges to start system services</span></a></span>
-                                            <div class="MCDropDownBody dropDownBody">
-                                                <p><strong>Contexte :</strong> le message s'affiche lors de l'installation de Watchdoc Express, bloquant l'installation.<br /><strong>Cause :</strong> le problème est lié aux droits de la personne qui installe Watchdoc Express : .</p>
-                                                <p><strong>Résolution :</strong>il convient de vérifier que la personne qui tente d'installer Watchdoc dispose du droit d'administration sur le serveur. </p>
-                                                <p>SANS activer les Privileged services puis de les activer ultérieurement (cf.&#160;Impossible d'installer Watchdoc 5.4.1).</p>
-                                            </div>
-                                        </div>
                                         <h2 id="WSCWatchdocSupervisionConsole" data-magellan-target="WSCWatchdocSupervisionConsole">WSC&#160;-<a name="WSC"></a> Watchdoc Supervision Console</h2>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Message d'erreur - Propagation de mise à jour Watchdoc :  "GetPackageFromMaster.&#160;Security check failed.&#160;Removing package"</a></span>
                                             <div class="MCDropDownBody dropDownBody">
@@ -700,6 +703,13 @@
                                             </div>
                                         </div>
                                         <h2 id="WES" data-magellan-target="WES">WES</h2>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WES. Après redémarrage du serveur, le WES&#160;ne fonctionne plus - Message d'erreur "Aucun serveur disponible" - mars 2026</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> après redémarrage programmé d'un serveur, les périphériques d'impression n'arrivent plus à communiquer avec le serveur Watchdoc. Sur le WES, le message suivant s'affiche : "Aucun serveur disponible.&#160;Veuillez réessayer dans quelques instants.&#160;Si le problème persiste, veuillez contacter votre administrateur". Le WES affiche un bouton "Se connecter".&#160;Lorsqu'il clique sur ce bouton, l'utilisateur accède à une interface grisée dans laquelle aucune action n'est possible. Ce problème disparaît après redémarrage du périphérique.<br />Dans les WEStraces, l'erreur "Unable to init the WesLocale".<br /></p>
+                                                <p><strong>Résolution :</strong> le problème peut être contourné en configurant le profil WES&#160;afin d'augmenter le nombre d'essais de connexions avant sollicitation du serveur de secours&#160;(Profil WES&#160;&gt; section Options de secours &gt;&#160;paramètre Nombre d'essais : nombre de connexions que le périphérique doit tenter vers le serveur avant de solliciter le serveur de secours).</p>
+                                            </div>
+                                        </div>
+                                        <p>&#160;</p>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WES. Quota doublement débité lors d'impression au format A3.</a></span>
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> lorsqu'un double-quota (un pour l'A4 et un autre pour l'A3) est appliqué sur une file d'impression , il arrive que l'on constate une erreur de comptabilisation, les impressions grands formats (A3) étant comptées deux fois.</p>
