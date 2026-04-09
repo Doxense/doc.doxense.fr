@@ -3,6 +3,11 @@
 let blockNews = document.querySelector('.doc_news--ul');
 
 let arrayContent = [
+{	
+	date: "9 avril 2026",
+	link: "/Focalist/D_NotesVersions/Notes_Versions.htm",
+	content: "nouvelle version Focalist 9.40.0"
+},
 {
 	date: "3 avril 2026",
 	link: "/Watchdoc/A_Getting_Started/Release_611.htm",
