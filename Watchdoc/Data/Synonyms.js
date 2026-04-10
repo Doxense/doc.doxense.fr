@@ -11,6 +11,11 @@ xmlSynonymsData += '        <DirectionalSynonym From=\"pull print\" To=\"impress
 xmlSynonymsData += '        <DirectionalSynonym From=\"pull printing\" To=\"impression sécuris\" />';
 xmlSynonymsData += '        <DirectionalSynonym From=\"journal\" To=\"log\" />';
 xmlSynonymsData += '        <DirectionalSynonym From=\"journaux\" To=\"log\" />';
+xmlSynonymsData += '        <DirectionalSynonym From=\"connexion\" To=\"login\" />';
+xmlSynonymsData += '        <DirectionalSynonym From=\"Konica Minolta\" To=\"km\" />';
+xmlSynonymsData += '        <DirectionalSynonym From=\"Hewlett Packard\" To=\"hp\" />';
+xmlSynonymsData += '        <DirectionalSynonym From=\"KM\" To=\"konica minolt\" />';
+xmlSynonymsData += '        <DirectionalSynonym From=\"HP\" To=\"hewlett packard\" />';
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"Améliorer\" To=\"amélior\" FromStem=\"amélior\" />';
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"cacher\" To=\"transform\" FromStem=\"cach\" />';
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"créer\" To=\"cre\" FromStem=\"cré\" />';
@@ -40,6 +45,7 @@ xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"hachage\" T
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"haché\" To=\"hash\" FromStem=\"hach\" />';
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"compatible\" To=\"compatibil\" FromStem=\"compatibl\" />';
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"marque\" To=\"constructeur\" FromStem=\"marqu\" />';
+xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"connexion\" To=\"connect\" FromStem=\"connexion\" />';
 xmlSynonymsData += '    </Directional>';
 xmlSynonymsData += '</MadCapSynonyms>';
 MadCap.Utilities.Xhr._FilePathToXmlStringMap.Add('Synonyms', xmlSynonymsData);
