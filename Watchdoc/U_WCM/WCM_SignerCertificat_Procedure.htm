@@ -3,7 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Watchdoc Certificat Manager - Signer un certificat</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Watchdoc Certificat Manager - Faire signer un certificat</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -198,20 +198,21 @@
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
                                         <h1><a name="aanchor296"></a>
-                                            <MadCap:concept term="WCM" />Watchdoc Certificat Manager - Signer un certificat</h1>
+                                            <MadCap:concept term="WCM" />Watchdoc Certificat Manager - Faire signer un certificat</h1>
                                         <h2>Accéder à WCM</h2>
                                         <ol>
                                             <li value="1">
-                                                <p>Lancez la console Windows en tant qu'administrateur ; </p>
+                                                <p>Depuis le serveur Watchdoc, en tant qu'administrateur, lancez l'invite de commandes   en saisissant "cmd" dans la barre de recherche Windows&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="../C_Configurer/ConfigCertificats/WD_Config_Certif_CMD.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="794" data-mc-height="429" src="../C_Configurer/ConfigCertificats/WD_Config_Certif_CMD.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                <p>&#160;</p>
                                             </li>
                                             <li value="2">
-                                                <p>lancez la commande cd et indiquez le chemin d'accès à WCM (C:\Program Files\Doxense\Watchdoc par défaut) ;</p>
-                                                <p><code>cd C:\Program Files\Doxense\Watchdoc</code>
+                                                <p>saisissez la commande <span style="font-family: 'Courier New'; color: #ffffff; background-color: #000000; font-weight: bold;">cd</span>, puis le chemin d'accès à WCM (C:\Program Files\Doxense\Watchdoc par défaut) ;</p>
+                                                <p><code style="font-family: 'Courier New'; font-weight: bold; color: #ffffff; background-color: #000000;">cd C:\Program Files\Doxense\Watchdoc</code>
                                                     <br />
                                                 </p>
                                             </li>
                                             <li value="3">
-                                                <p>lancez l'outil wcm.exe</p>
+                                                <p>lancez l'outil wcm.exe en saisissant la commande <span style="font-family: 'Courier New'; color: #ffffff; background-color: #000000; font-weight: bold;">wcm</span></p>
                                             </li>
                                         </ol>
                                         <p>
@@ -222,89 +223,120 @@
                                         <ol>
                                             <li value="1">
                                                 <p class="Liste_num_1">Dans WCM, saisissez le chemin vers le fichier de configuration : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_2" style="text-align: left;">pour Watchdoc : <br /><strong style="font-family: 'Courier New'; color: #ffffff; background-color: #000000;">/config=..\Watchdoc\Data\config.xml</strong></p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2" style="text-align: left;">pour Watchdoc Supervision Console (WSC) : <br /><strong style="font-family: 'Courier New'; color: #ffffff; background-color: #000000;">/config=..\Supervision\Data\wts_config.xml</strong></p>
+                                                    </li>
+                                                </ul>
                                             </li>
                                         </ol>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_2" style="text-align: left;">pour Watchdoc : <br /><strong style="font-family: 'Courier New';">/config=..\Watchdoc\Data\config.xml</strong></p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2" style="text-align: left;">pour Watchdoc Supervision Console (WSC) : <br /><strong style="font-family: 'Courier New';">/config=..\Supervision\Data\wts_config.xml</strong></p>
-                                            </li>
-                                        </ul>
                                         <p>&#160;</p>
                                         <ol data-mc-continue="true">
                                             <li value="2">
-                                                <p class="Liste_num_1">saisissez la commande pour exporter le certificat incluant la clé privée :</p>
+                                                <p class="Liste_num_1">saisissez la commande pour exporter le certificat incluant la clé privée (Attention: saisissez bien "http" et non "https" !)&#160;:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_2" style="text-align: left;">pour exporter vers C:\Program Files\Doxense\Watchdoc\http-server.cer : <br /><strong style="font-family: 'Courier New'; color: #ffffff; background-color: #000000;">export --key</strong></p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2" style="text-align: left;">pour choisir un autre espace d'export spécifique : <br /><strong style="font-family: 'Courier New'; font-size: 12pt; color: #ffffff; background-color: #000000;">export --key http-server C:\temp\certsigningtest\wcmexport.cer</strong><br /><br /><img src="FP_WCM_ExporterCER.png" style="width: 800px;height: auto;" /></p>
+                                                    </li>
+                                                </ul>
                                             </li>
                                         </ol>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_2" style="text-align: left;">pour exporter vers C:\Program Files\Doxense\Watchdoc\http-server.cer : <br /><strong style="font-family: 'Courier New';">export --key</strong></p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2" style="text-align: left;">pour choisir un autre espace d'export spécifique : <br /><strong style="font-family: 'Courier New'; font-size: 10pt;">export --key http-server C:\temp\certsigningtest\wcmexport.cer</strong><br /><br /><img src="FP_WCM_ExporterCER.png" style="width: 800px;height: auto;" /></p>
-                                            </li>
-                                        </ul>
                                         <h2>Générer un fichier CSR</h2>
-                                        <p>Saisissez la commande  <b style="font-family: 'Courier New';">csr</b> pour générer le fichier <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term9">CSR<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Client Side Rendering. Dans une infrastructure Client/serveur, le Client-side rendering est la prise en charge du spool par le poste client et non par le serveur. Le poste client envoie donc au serveur un fichier de spool finalisé.</span></a> (Certificat Signing Request) correspondant au certificat sélectionné en base64&#160;:<br /><br /><img src="FP_WCM_GenererCSR.png" style="height: auto;width: 600px;" /></p>
+                                        <p>Saisissez la commande  <b style="font-family: 'Courier New'; color: #ffffff; background-color: #000000;">csr</b> pour générer le fichier <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term9">Demande CSR<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>(Certificat Signing Request). Dans une infrastructure PKI (Public Key Infrastructure / Infrastructure à Clés Publiques), une demande de signature de certificat (en anglais CSR pour Certificate Signing Request) est un message envoyé à partir d'un demandeur à une autorité de certification afin de demander un certificat d'identité numérique. Le format le plus commun pour les CSR est la spécification PKCS#10.</span></a> (Certificat Signing Request) correspondant au certificat sélectionné. Ce fichier est généré en base64&#160;:<br /><br /><img src="FP_WCM_GenererCSR.png" style="height: auto;width: 600px;" /></p>
                                         <p>&#160;</p>
-                                        <h2>Produire le certificat signé</h2>
+                                        <h2>Valider le CSR&#160;par le domaine avec <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term132">Microsoft AD CS<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Microsoft Active Directory Certificate Services est un rôle Windows Server pour l’émission et la gestion des certificats d’infrastructure à clé publique (PKI) utilisés dans les protocoles de communication et d’authentification sécurisés.
+(Source : https://learn.microsoft.com/)</span></a></h2>
                                         <ol>
                                             <li value="1">
-                                                <p class="Liste_num_1"> Dans un navigateur web, saisissez l'adresse permettant d'accéder au contrôleur de domaine (exemple : http://adresseDC/certsrv) ; </p>
+                                                <p class="Liste_num_1">Depuis un espace d'où le fichier .cer précédemment généré est accessible, lancez un navigateur avec un compte administrateur du domaine (compte ayant le droit de gestion des certificats)&#160;; </p>
                                             </li>
                                             <li value="2">
-                                                <p class="Liste_num_1">dans la section <strong>Select a task,</strong> cliquez sur <strong>Request a certificate</strong> :<br /><br /><img src="FP_WCM_CertificateService_Access.png" style="width: 700px;height: auto;" /></p>
-                                                <p>&#160;</p>
+                                                <p class="Liste_num_1">dans ce navigateur, saisissez l'adresse permettant d'accéder au contrôleur de domaine (exemple : http://adresseDC/certsrv)&#160;; </p>
+                                                <p><span style="font-family: 'Wingdings'">è</span><strong>Microsoft Active Directory Certificate Services</strong> s'affiche&#160;:</p>
                                             </li>
                                             <li value="3">
-                                                <p class="Liste_num_1">dans l'interface <strong>Request a Certificate</strong>, cliquez sur <strong>Advanced certificate request</strong>&#160;:<br /><br /><img src="FP_WCM_CertificateRequest.png" style="height: auto;width: 500px;" /></p>
+                                                <p class="Liste_num_1">dans la section <strong>Select a task,</strong> cliquez sur <strong>Request a certificate</strong> :<br /><br /><a class="MCPopupThumbnailLink" href="FP_WCM_CertificateService_Access.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="680" data-mc-height="283" src="FP_WCM_CertificateService_Access.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a></p>
                                                 <p>&#160;</p>
                                             </li>
                                             <li value="4">
-                                                <p class="Liste_num_1">dans l'interface <strong>Submit a Certificate Request or Renewal Request</strong>, collez le CSR en base 64 dans la zone de saisie <strong>Saved Request</strong>&#160;:</p>
+                                                <p class="Liste_num_1">dans l'interface <strong>Request a Certificate</strong>, cliquez sur <strong>advanced certificate request</strong>&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="FP_WCM_CertificateRequest.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="452" data-mc-height="167" src="FP_WCM_CertificateRequest.png" tabindex="" style="height: auto;width: 500px;max-width: 1000px;" /></a></p>
+                                                <p>&#160;</p>
                                             </li>
                                             <li value="5">
-                                                <p class="Liste_num_1">dans la section <strong>Certificate Template</strong>, dans la liste déroulante, sélectionnez <strong>Web Server</strong>&#160;;</p>
+                                                <p class="Liste_num_1">ouvrez le fichier .csr dans un éditeur de texte&#160;et copiez-le ;</p>
                                             </li>
                                             <li value="6">
+                                                <p class="Liste_num_1">dans l'interface <strong>Submit a Certificate Request or Renewal Request</strong>, dans la zone de saisie <strong>Saved Request</strong>, collez le contenu du .csr en base 64&#160;;</p>
+                                            </li>
+                                            <li value="7">
+                                                <p class="Liste_num_1">dans la section <strong>Certificate Template</strong>, dans la liste déroulante, sélectionnez <strong>Web Server</strong>&#160;;</p>
+                                            </li>
+                                            <li value="8">
                                                 <p class="Liste_num_1">cliquez sur <strong>Submit</strong>&#160;:<br /><br /><img src="FP_WCM_CertificateAdvRequest.png" style="height: auto;width: 700px;" /></p>
                                                 <p>&#160;</p>
                                             </li>
-                                            <li value="7">
-                                                <p class="Liste_num_1">dans l'interface <strong>Certificate Issued</strong>, cochez le bouton-radio <strong>Base64 encoded</strong>&#160;;</p>
+                                            <li value="9">
+                                                <p class="Liste_num_1">dans l'interface <strong>Certificate Issued</strong>, cochez le bouton-radio <strong>Base 64 encoded</strong>&#160;;</p>
                                             </li>
-                                            <li value="8">
-                                                <p class="Liste_num_1">Cliquez ensuite sur <strong>Download certificate</strong>&#160;:<br /><br /><img src="FP_WCM_CertificateIssued.png" style="width: 400px;height: auto;" /></p>
+                                            <li value="10">
+                                                <p class="Liste_num_1">cliquez ensuite sur <strong>Download certificate</strong>&#160;:<br /><br /><img src="FP_WCM_CertificateIssued.png" style="width: 400px;height: auto;" /></p>
                                                 <p>&#160;</p>
                                             </li>
-                                            <li value="9">
-                                                <p class="Liste_num_1"> Sauvegardez le certificat signé (extension .cer).</p>
+                                            <li value="11">
+                                                <p class="Liste_num_1"> Sauvegardez le certificat signé téléchargé(extension .cer).</p>
+                                                <p>&#160;</p>
                                             </li>
                                         </ol>
                                         <fieldset style="text-align: left;">Ne pas cliquer sur <strong>Download certificate chain.</strong><br /></fieldset>
-                                        <h2>Compléter la demande de certificat</h2>
-                                        <p>Pour compléter le certificat :</p>
+                                        <h2>Compléter <a name="Completer_Exporter" id="Completer_Exporter"></a>la demande de certificat et l'exporter</h2>
+                                        <p>Pour compléter le certificat, utilisez WCM.&#160;Pour le lancer : </p>
                                         <ol>
                                             <li value="1">
-                                                <p class="Liste_num_1">arrêtez le service (Watchdoc ou WSC en fonction de l'outil sur lequel vous installez le certificat) ;</p>
+                                                <p>Depuis le serveur Watchdoc, en tant qu'administrateur, lancez l'invite de commandes   en saisissant "cmd" dans la barre de recherche Windows&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="../C_Configurer/ConfigCertificats/WD_Config_Certif_CMD.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="794" data-mc-height="429" src="../C_Configurer/ConfigCertificats/WD_Config_Certif_CMD.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                <p>&#160;</p>
                                             </li>
                                             <li value="2">
-                                                <p class="Liste_num_1">activez WCM&#160;:</p>
+                                                <p>placez-vous dans le dossier où Watchdoc est installé (C:\Program Files\Doxense\Watchdoc par défaut)&#160;; </p>
                                             </li>
                                             <li value="3">
-                                                <p class="Liste_num_1">dans WCM, saisissez la commande suivante :<br /><strong style="font-family: 'Courier New';">complete http-server &lt;chemin vers votre certificat&gt;</strong></p>
+                                                <p>lancez l'outil WMC&#160;en saisissant la commande <span style="background-color: #000000; color: #ffffff; font-family: 'Courier New'; font-weight: bold;">wcm</span>: </p>
+                                                <p>
+                                                    <br>
+                                                    </br><a class="MCPopupThumbnailLink" href="../C_Configurer/ConfigCertificats/WD_Config_Certif_WCMLancer.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="584" data-mc-height="106" src="../C_Configurer/ConfigCertificats/WD_Config_Certif_WCMLancer.png" tabindex="" style="max-width: 1000px;" /></a>
+                                                </p>
+                                                <p>&#160;</p>
                                             </li>
                                             <li value="4">
-                                                <p class="Liste_num_1">Confirmez avec la commande <span style="font-family: 'Courier New'; font-weight: bold;">y</span></p>
+                                                <p>saisissez la commande <span style="font-family: 'Courier New'; background-color: #000000; color: #ffffff; font-weight: bold;">complete http-server &lt;chemin vers votre certificat&gt;</span> en indiquant le chemin vers le dossier dans lequel a été exporté le fichier .cer lors de la précédente étape :<br></br><br></br><a class="MCPopupThumbnailLink" href="../C_Configurer/ConfigCertificats/WD_Config_Certif_Complete.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="605" data-mc-height="51" src="../C_Configurer/ConfigCertificats/WD_Config_Certif_Complete.png" tabindex="" style="max-width: 1000px;" /></a><br></br></p>
+                                                <p>&#160;</p>
                                             </li>
                                             <li value="5">
-                                                <p class="Liste_num_1">Sauvegardez avec la commande <span style="font-family: 'Courier New'; font-weight: bold;">save</span></p>
+                                                <p>Si le  certificat est bien validé, le message <strong style="background-color: #000000; color: #ffffff; font-family: 'Courier New';">OK! Certificate is recognized OK! Certificate is recognized as valid by the current host (0,266 sec)</strong> s'affiche ; </p>
                                             </li>
+                                        </ol>
+                                        <ol data-mc-continue="true">
                                             <li value="6">
-                                                <p class="Liste_num_1">Redémarrez le service (Watchdoc ou WSC).</p>
+                                                <p>Confirmez en saisissant la commande <strong style="background-color: #000000; color: #ffffff; font-family: 'Courier New';">y</strong>&#160;:<br></br><br></br><a class="MCPopupThumbnailLink" href="../C_Configurer/ConfigCertificats/WD_Config_Certif_OK.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="595" data-mc-height="125" src="../C_Configurer/ConfigCertificats/WD_Config_Certif_OK.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                <p>&#160;</p>
                                             </li>
+                                            <li value="7">
+                                                <p>Exportez ensuite le certificat en saisissant la commande <span style="color: #ffffff; background-color: #000000; font-weight: bold;"><span style="font-family: 'Courier New';">Export https-server –p12 c:\[chemind’export]</span></span> (indiquez le chemin du dossier dans lequel vous souhaitez enregistrer le certificat)&#160;; </p>
+                                            </li>
+                                            <li value="8">
+                                                <p>saisissez un mot de passe permettant de sécuriser le certificat : <br></br><br></br><a class="MCPopupThumbnailLink" href="../C_Configurer/ConfigCertificats/WD_Config_Certif_Export.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="571" data-mc-height="82" src="../C_Configurer/ConfigCertificats/WD_Config_Certif_Export.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                <p>&#160;</p>
+                                            </li>
+                                            <li value="9">
+                                                <p>Vérifiez dans le dossier de sauvegarde que le certificat (fichiers .pfx) s'y trouve bien. Il peut alors être activé sur WSC&#160;et Watchdoc.</p>
+                                            </li>
+                                            <li value="10">Sauvegardez avec la commande <strong style="font-family: 'Courier New'; color: #ffffff; background-color: #000000;">save</strong> :</li>
+                                            <li style="font-size: 12pt;" value="11">puis quittez l'outil WMC&#160;à l'aide de la commande <strong style="font-family: 'Courier New'; color: #ffffff; background-color: #000000;">quit</strong>&#160;;<br /><br /><a class="MCPopupThumbnailLink" href="../C_Configurer/ConfigCertificats/WD_Config_Certif_Save.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="370" data-mc-height="94" src="../C_Configurer/ConfigCertificats/WD_Config_Certif_Save.png" tabindex="" style="width: 372px;height: 94px;max-width: 1000px;" /></a></li>
                                         </ol>
                                     </div>
                                     <p>&#160;</p>
