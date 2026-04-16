@@ -205,6 +205,8 @@
                                                 <ul>
                                                     <li class="tree-node"><a href="#Watchdoc61x">Watchdoc 6.1.x</a>
                                                     </li>
+                                                    <li class="tree-node"><a href="#Watchdoc6115585WSC6115584WPCforWindows706003etSkyprint70600216042026">Watchdoc 6.1.1.5585, WSC&#160;6.1.1.5584, WPC for Windows 7.0.6003 et Skyprint 7.0.6002 - 16/04/2026</a>
+                                                    </li>
                                                     <li class="tree-node"><a href="#WatchdocWSC6115571WPCforWindows706003etSkyprint70600203042026">Watchdoc/WSC 6.1.1.5571, WPC for Windows 7.0.6003 et Skyprint 7.0.6002 - 03/04/2026</a>
                                                     </li>
                                                     <li class="tree-node"><a href="#WatchdocWSC6115570WPCforWindows706003etSkyprint70600201042026">Watchdoc/WSC 6.1.1.5570, WPC for Windows 7.0.6003 et Skyprint 7.0.6002 - 01/04/2026</a>
@@ -330,7 +332,57 @@
                                         <hr width="100%" size="0" align="center" data-mc-conditions="General.Online">
                                         </hr>
                                         <h2 data-mc-conditions="General.Online" id="Watchdoc61x" data-magellan-target="Watchdoc61x">Watchdoc 6.1.x</h2>
-                                        <h2 style="color: #000000;" id="WatchdocWSC6115571WPCforWindows706003etSkyprint70600203042026" data-magellan-target="WatchdocWSC6115571WPCforWindows706003etSkyprint70600203042026">Watchdoc/WSC <span class="mc-variable Versions.Watchdoc_WSC&#160;6.0 variable">6.1.1.5571</span>, WPC for Windows <span class="mc-variable Versions.WPC_for_Windows variable">7.0.6003</span> et Skyprint <span class="mc-variable Versions.Skyprint variable">7.0.6002</span> - 03/04/2026</h2>
+                                        <h2 style="color: #000000;" id="Watchdoc6115585WSC6115584WPCforWindows706003etSkyprint70600216042026" data-magellan-target="Watchdoc6115585WSC6115584WPCforWindows706003etSkyprint70600216042026">Watchdoc <span class="mc-variable Versions.Watchdoc variable">6.1.1.5585</span>, WSC&#160;6.1.1.5584, WPC for Windows <span class="mc-variable Versions.WPC_for_Windows variable">7.0.6003</span> et Skyprint <span class="mc-variable Versions.Skyprint variable">7.0.6002</span> - 16/04/2026</h2>
+                                        <p>
+                                            <p.bold style="font-weight: bold;">Améliorations</p.bold>
+                                        </p>
+                                        <ul style="font-size: 12pt;">
+                                            <li style="font-size: 12pt;">
+                                                <p><b>Watchdoc :</b>
+                                                </p>
+                                                <ul style="font-size: 12pt;">
+                                                    <li>
+                                                        <p>renforcement des mécanismes de gestion de l’intégrité des clés AES</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>renforcement des mécanismes de gestion des clés AES lors d'une mise à jour de Watchdoc avec déplacement sur un nouveau serveur</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>création d’un outil en ligne de commande (AESKeyManager.exe) qui permet de gérer l’import/export de clefs dans un fichier protégé par un mot de passe</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li style="font-size: 12pt;">
+                                                <p style="font-weight: bold;">WSC&#160;: <span style="font-weight: normal;">mise à jour de la dépendance VC++2013 en v.&#160;14.0 pour la fonction de mise à jour WSC des files (updater)</span></p>
+                                            </li>
+                                            <li style="font-size: 12pt;">
+                                                <p><strong>WES Kyocera : </strong>amélioration de l'interface de gestion du profil WES</p>
+                                            </li>
+                                        </ul>
+                                        <p>&#160;</p>
+                                        <p><strong>Correctifs</strong>
+                                        </p>
+                                        <ul style="font-size: 12pt;">
+                                            <li style="font-size: 12pt;">
+                                                <p><b>Watchdoc :</b>
+                                                </p>
+                                                <ul style="font-size: 12pt;">
+                                                    <li>
+                                                        <p>correction&#160;d'une surconsommation de CPU&#160;sur le serveur master</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>correction de la gestion du port 5744 lors de l'installation : ce port n'est plus déclaré comme port par défaut</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li style="font-size: 12pt;">
+                                                <p><strong>WPC&#160;for Windows : </strong>correction d'une anomalie qui empêchait la personnalisation graphique de WPC&#160;for Windows (les images personnalisées n'étaient pas copiées dans le bon dossier du poste client)</p>
+                                            </li>
+                                            <li>
+                                                <p><b>WES Xerox :</b> correction de l'erreur qui empêchait l'enrôlement par login (compte) et code PIN</p>
+                                            </li>
+                                        </ul>
+                                        <h2 style="color: #000000;" id="WatchdocWSC6115571WPCforWindows706003etSkyprint70600203042026" data-magellan-target="WatchdocWSC6115571WPCforWindows706003etSkyprint70600203042026">Watchdoc/WSC 6.1.1.5571, WPC for Windows 7.0.6003 et Skyprint 7.0.6002 - 03/04/2026</h2>
                                         <p class="bold">Correctif</p>
                                         <ul>
                                             <li>
@@ -495,7 +547,7 @@
                                                         <p>correction du programme de mise à jour d'une base Postgre SQL&#160;(pgsql_update_[n°_v].sql) garantissant la mise à jour de la base sans problème de docID</p>
                                                     </li>
                                                     <li>
-                                                        <p>correction du paramètre "Code PIN" qui apparaissait en erreur dans la configuration de l'annuaire META après mise à jour en version <span class="mc-variable Versions.Watchdoc_WSC&#160;6.0 variable">6.1.1.5571</span></p>
+                                                        <p>correction du paramètre "Code PIN" qui apparaissait en erreur dans la configuration de l'annuaire META après mise à jour en version <span class="mc-variable Versions.Watchdoc variable">6.1.1.5585</span></p>
                                                     </li>
                                                     <li>
                                                         <p>correction d'une anomalie provoquant une erreur dans la page "Mon compte" (message "Une erreur s'est produite - Error while calling method ScreenMyAccountStats") liée à l'activation du paramètre "Afficher les statistiques d'équipes" quand l'utilisateur n'appartient à aucune équipe</p>
