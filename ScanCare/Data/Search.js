@@ -1,1 +1,1 @@
-define({r:0.5,st:'Stem',n:1,t:[0],m:[],u:['../B_Procedure Topics/Ajouter_Peripheriques_EN.htm'],s:['0','option'],p:[['0',4],['cleans',19],['for',19],['no',1],['security',7],['user',8]]});
+define({r:0.5,st:'Stem',n:1,t:[0],m:[],u:['../B_Procedure Topics/Ajouter_Peripheriques.htm'],s:['0','faibl','recadrag'],p:[['0',0],['c792dte',5],['csv',18],['disposition',12],['expression',1],['l\u0027intégration',2],['maximum',31],['pas',1],['requise',10],['sur',18],['watchdoc',28]]});
