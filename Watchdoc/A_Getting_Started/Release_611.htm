@@ -22,6 +22,7 @@
         <link href="../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
+        <link href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
         <style>/*&lt;meta /&gt;*/
 
 .button.topic-ratings-button
@@ -238,15 +239,17 @@
                                             <col class="TableStyle-Standard-Column-Regular" />
                                             <col class="TableStyle-Standard-Column-Regular" />
                                             <col class="TableStyle-Standard-Column-Regular" />
+                                            <col class="TableStyle-Standard-Column-Regular" />
                                             <thead>
                                                 <tr class="TableStyle-Standard-Head-Header1">
                                                     <th style="text-align: center;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;" class="TableStyle-Standard-HeadE-Regular-Header1">Versions</th>
                                                     <th style="padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;" class="TableStyle-Standard-HeadE-Regular-Header1">
                                                         <MadCap:conditionalText data-mc-conditions="Langues.FR">Produits</MadCap:conditionalText>
                                                     </th>
-                                                    <th style="padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;" class="TableStyle-Standard-HeadD-Regular-Header1">
+                                                    <th style="padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;" class="TableStyle-Standard-HeadE-Regular-Header1">
                                                         <MadCap:conditionalText data-mc-conditions="Langues.FR">Téléchargements</MadCap:conditionalText>
                                                     </th>
+                                                    <th class="TableStyle-Standard-HeadD-Regular-Header1">SHA 256</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -256,42 +259,59 @@
                                                         </p>
                                                     </td>
                                                     <td style="font-size: 12pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;" class="TableStyle-Standard-BodyE-Regular-Row2">Watchdoc / WSC - <MadCap:conditionalText data-mc-conditions="Langues.FR">Programme d'installation</MadCap:conditionalText></td>
-                                                    <td style="font-size: 12pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;" class="TableStyle-Standard-BodyD-Regular-Row2"><a href="https://downloads.doxense.fr/files/watchdoc/6110/Watchdoc_Express_6.1.1.5585.zip" alt="Lien vers le package de téléchagement du programme Watchdoc Setup" title="Lien vers le package de téléchagement du programme Watchdoc Setup">Watchdoc Express</a>
+                                                    <td style="font-size: 12pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;" class="TableStyle-Standard-BodyE-Regular-Row2"><a href="https://downloads.doxense.fr/files/watchdoc/6110/Watchdoc_Express_6.1.1.5585.zip" alt="Lien vers le package de téléchagement du programme Watchdoc Setup" title="Lien vers le package de téléchagement du programme Watchdoc Setup">Watchdoc Express</a>
                                                     </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">&#160;</td>
                                                 </tr>
                                                 <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td style="font-size: 12pt;text-align: left;vertical-align: top;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;" class="TableStyle-Standard-BodyE-Regular-Row1">Watchdoc <p><span class="mc-variable Versions.VersionCourante variable">6.1.1.5585</span></p></td>
-                                                    <td style="font-size: 12pt;vertical-align: top;text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;" class="TableStyle-Standard-BodyE-Regular-Row1">Watchdoc Standard - <MadCap:conditionalText data-mc-conditions="Langues.FR">Programme d'installation</MadCap:conditionalText><br />Watchdoc Standard - <MadCap:conditionalText data-mc-conditions="Langues.FR">Programme de mise à jour</MadCap:conditionalText> </td>
-                                                    <td style="font-size: 12pt;text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;" class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                        <p><a href="https://downloads.doxense.fr/files/watchdoc/6110/Watchdoc_Setup_6.1.1.5585.zip" alt="Lien vers le package de téléchagement du programme Watchdoc Setup" title="Lien vers le package de téléchagement du programme Watchdoc Setup">Watchdoc Setup</a><a href="https://downloads.doxense.fr/files/watchdoc/6100/Watchdoc_Setup_6.1.0.5058.zip" alt="Lien vers le package de téléchagement du programme Watchdoc Setup" title="Lien vers le package de téléchagement du programme Watchdoc Setup"><br /></a><a href="https://downloads.doxense.fr/files/watchdoc/6110/Watchdoc_Update_6.1.1.5585.zip" alt="Lien vers le package de téléchagement du programme Watchdoc Express" title="Lien vers le package de téléchagement du programme Watchdoc Express">Watchdoc Update</a>
+                                                    <td style="font-size: 12pt;text-align: left;vertical-align: top;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;" class="TableStyle-Standard-BodyE-Regular-Row1" rowspan="2">Watchdoc <p><span class="mc-variable Versions.VersionCourante variable">6.1.1.5585</span></p></td>
+                                                    <td style="font-size: 12pt;vertical-align: top;text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;" class="TableStyle-Standard-BodyE-Regular-Row1">Watchdoc Standard - <MadCap:conditionalText data-mc-conditions="Langues.FR">Programme d'installation</MadCap:conditionalText><br /></td>
+                                                    <td style="font-size: 12pt;text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;" class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p><a href="https://downloads.doxense.fr/files/watchdoc/6110/Watchdoc_Setup_6.1.1.5585.zip" alt="Lien vers le package de téléchagement du programme Watchdoc Setup" title="Lien vers le package de téléchagement du programme Watchdoc Setup">Watchdoc Setup</a><a href="https://downloads.doxense.fr/files/watchdoc/6100/Watchdoc_Setup_6.1.0.5058.zip" alt="Lien vers le package de téléchagement du programme Watchdoc Setup" title="Lien vers le package de téléchagement du programme Watchdoc Setup"><br /></a>
                                                         </p>
                                                     </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">&#160;</td>
                                                 </tr>
                                                 <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td style="font-size: 12pt;text-align: left;vertical-align: top;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;" class="TableStyle-Standard-BodyE-Regular-Row2">WSC&#160;<span class="mc-variable Versions.WSC variable">6.1.1.5584</span></td>
-                                                    <td style="font-size: 12pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;" class="TableStyle-Standard-BodyE-Regular-Row2"><span style="font-size: 12pt;">Watchdoc Supervision Console (WSC)&#160;-</span>
-                                                        <MadCap:conditionalText style="font-size: 12pt;" data-mc-conditions="Langues.FR">Programme d'installation</MadCap:conditionalText>
-                                                        <br style="font-size: 12pt;" /><span style="font-size: 12pt;">Watchdoc Supervision Console (WSC) - </span>
-                                                        <MadCap:conditionalText style="font-size: 12pt;" data-mc-conditions="Langues.FR">Programme de mise à jour</MadCap:conditionalText>
+                                                    <td style="font-size: 12pt;vertical-align: top;text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;" class="TableStyle-Standard-BodyE-Regular-Row2">Watchdoc Standard - <MadCap:conditionalText data-mc-conditions="Langues.FR">Programme de mise à jour</MadCap:conditionalText></td>
+                                                    <td style="font-size: 12pt;text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;" class="TableStyle-Standard-BodyE-Regular-Row2"><a href="https://downloads.doxense.fr/files/watchdoc/6110/Watchdoc_Update_6.1.1.5585.zip" alt="Lien vers le package de téléchagement du programme Watchdoc Express" title="Lien vers le package de téléchagement du programme Watchdoc Express">Watchdoc Update</a>
                                                     </td>
-                                                    <td style="font-size: 12pt;text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #ffffff;" class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                        <p><a href="https://downloads.doxense.fr/files/supervision/Supervision_Setup_6.1.1.5584.zip" alt="Link to the setup file" title="Link to the setup file">Supervision Setup</a><a href="https://downloads.doxense.fr/files/supervision/Supervision_Setup_6.1.0.5058.zip" alt="Link to the setup file" title="Link to the setup file"><br /></a><a href="https://downloads.doxense.fr/files/supervision/Supervision_Update_6.1.1.5584.zip" alt="Lien de téléchargement du programme de mise à jour" title="Lien de téléchargement du programme de mise à jour">Supervision Update</a>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">&#160;</td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1" style="height: 60px;">
+                                                    <td style="font-size: 12pt;vertical-align: top;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;text-align: left;background-color: #d3d3d3;" class="TableStyle-Standard-BodyE-Regular-Row1" rowspan="2">WSC&#160;<span class="mc-variable Versions.WSC variable">6.1.1.5584</span></td>
+                                                    <td style="font-size: 12pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;" class="TableStyle-Standard-BodyE-Regular-Row1"><span style="font-size: 12pt;">Watchdoc Supervision Console (WSC)&#160;-</span>
+                                                        <MadCap:conditionalText style="font-size: 12pt;" data-mc-conditions="Langues.FR">Programme d'installation</MadCap:conditionalText>
+                                                    </td>
+                                                    <td style="font-size: 12pt;text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #ffffff;" class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p><a href="https://downloads.doxense.fr/files/supervision/Supervision_Setup_6.1.1.5584.zip" alt="Link to the setup file" title="Link to the setup file">Supervision Setup</a>
                                                         </p>
                                                     </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">&#160;</td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td style="font-size: 12pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;" class="TableStyle-Standard-BodyE-Regular-Row2"><span style="font-size: 12pt;">Watchdoc Supervision Console (WSC) - </span>
+                                                        <MadCap:conditionalText style="font-size: 12pt;" data-mc-conditions="Langues.FR">Programme de mise à jour</MadCap:conditionalText>
+                                                    </td>
+                                                    <td style="font-size: 12pt;text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #ffffff;" class="TableStyle-Standard-BodyE-Regular-Row2"><a href="https://downloads.doxense.fr/files/supervision/Supervision_Update_6.1.1.5584.zip" alt="Lien de téléchargement du programme de mise à jour" title="Lien de téléchargement du programme de mise à jour">Supervision Update</a>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">&#160;</td>
                                                 </tr>
                                                 <tr class="TableStyle-Standard-Body-Row1">
                                                     <td style="font-size: 12pt;text-align: left;vertical-align: top;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;" class="TableStyle-Standard-BodyE-Regular-Row1"><span style="font-size: 12pt;">WPC for Windows </span><span style="font-size: 12pt;" class="mc-variable Versions.WPC_for_Windows variable">7.0.6003</span>
                                                     </td>
                                                     <td style="font-size: 12pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;" class="TableStyle-Standard-BodyE-Regular-Row1">Watchdoc Print Client for Windows</td>
-                                                    <td style="font-size: 12pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;" class="TableStyle-Standard-BodyD-Regular-Row1"><a href="https://downloads.doxense.fr/files/watchdoc/6110/WatchdocPrintClient-7.0.6003.msi" target="_blank">Watchdoc Print Client for Windows Setup</a>
+                                                    <td style="font-size: 12pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;" class="TableStyle-Standard-BodyE-Regular-Row1"><a href="https://downloads.doxense.fr/files/watchdoc/6110/WatchdocPrintClient-7.0.6003.msi" target="_blank">Watchdoc Print Client for Windows Setup</a>
                                                     </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">&#160;</td>
                                                 </tr>
                                                 <tr class="TableStyle-Standard-Body-Row2">
                                                     <td style="font-size: 12pt;text-align: left;vertical-align: top;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;" class="TableStyle-Standard-BodyB-Regular-Row2"><span style="font-size: 12pt;">Skyprint </span><span style="font-size: 12pt;" class="mc-variable Versions.Skyprint variable">7.0.6002</span>
                                                     </td>
                                                     <td style="font-size: 12pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;" class="TableStyle-Standard-BodyB-Regular-Row2">Watchdoc Skyprint</td>
-                                                    <td style="font-size: 12pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;" class="TableStyle-Standard-BodyA-Regular-Row2"><a href="https://downloads.doxense.fr/files/watchdoc/6110/Skyprint-7.0.6002.msi" target="_blank">Watchdoc Skyprint</a>
+                                                    <td style="font-size: 12pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;" class="TableStyle-Standard-BodyB-Regular-Row2"><a href="https://downloads.doxense.fr/files/watchdoc/6110/Skyprint-7.0.6002.msi" target="_blank">Watchdoc Skyprint</a>
                                                     </td>
+                                                    <td class="TableStyle-Standard-BodyA-Regular-Row2">&#160;</td>
                                                 </tr>
                                             </tbody>
                                         </table>
