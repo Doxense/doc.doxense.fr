@@ -24,11 +24,6 @@
         <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
         <style>/*&lt;meta /&gt;*/
 
-.button.topic-ratings-button
-{
-	-pie-background: transparent url('../Skins/Default/Stylesheets/Images/star-full.png') no-repeat center center;
-}
-
 .button.print-button
 {
 	-pie-background: linear-gradient(transparent, transparent);
@@ -60,6 +55,11 @@
 .button.previous-topic-button
 {
 	-pie-background: linear-gradient(transparent, #fcfaf8);
+}
+
+.button.next-topic-button
+{
+	-pie-background: linear-gradient(#ffffff, #fcfaf8);
 }
 
 .needs-pie
@@ -172,33 +172,6 @@
                                     <!-- End Google Tag Manager (noscript) -->
                                     <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Toolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
                                         <div class="button-group-container-left">
-                                            <div class="button-group star-buttons loading feedback-topic-required">
-                                                <div class="button star-button topic-ratings-empty-button" data-state1-class="topic-ratings-empty-button" data-state2-class="topic-ratings-button" title="Cliquez sur une étoile pour évaluer cette rubrique" data-state1-title="Cliquez sur une étoile pour évaluer cette rubrique" data-state2-title="Cliquez sur une étoile pour évaluer cette rubrique">
-                                                    <div role="img" class="button-icon-wrapper" aria-label="Cliquez sur une étoile pour évaluer cette rubrique" data-state1-alt="Cliquez sur une étoile pour évaluer cette rubrique" data-state2-alt="Cliquez sur une étoile pour évaluer cette rubrique">
-                                                        <div class="button-icon"> </div>
-                                                    </div>
-                                                </div>
-                                                <div class="button star-button topic-ratings-empty-button" data-state1-class="topic-ratings-empty-button" data-state2-class="topic-ratings-button" title="Cliquez sur une étoile pour évaluer cette rubrique" data-state1-title="Cliquez sur une étoile pour évaluer cette rubrique" data-state2-title="Cliquez sur une étoile pour évaluer cette rubrique">
-                                                    <div role="img" class="button-icon-wrapper" aria-label="Cliquez sur une étoile pour évaluer cette rubrique" data-state1-alt="Cliquez sur une étoile pour évaluer cette rubrique" data-state2-alt="Cliquez sur une étoile pour évaluer cette rubrique">
-                                                        <div class="button-icon"> </div>
-                                                    </div>
-                                                </div>
-                                                <div class="button star-button topic-ratings-empty-button" data-state1-class="topic-ratings-empty-button" data-state2-class="topic-ratings-button" title="Cliquez sur une étoile pour évaluer cette rubrique" data-state1-title="Cliquez sur une étoile pour évaluer cette rubrique" data-state2-title="Cliquez sur une étoile pour évaluer cette rubrique">
-                                                    <div role="img" class="button-icon-wrapper" aria-label="Cliquez sur une étoile pour évaluer cette rubrique" data-state1-alt="Cliquez sur une étoile pour évaluer cette rubrique" data-state2-alt="Cliquez sur une étoile pour évaluer cette rubrique">
-                                                        <div class="button-icon"> </div>
-                                                    </div>
-                                                </div>
-                                                <div class="button star-button topic-ratings-empty-button" data-state1-class="topic-ratings-empty-button" data-state2-class="topic-ratings-button" title="Cliquez sur une étoile pour évaluer cette rubrique" data-state1-title="Cliquez sur une étoile pour évaluer cette rubrique" data-state2-title="Cliquez sur une étoile pour évaluer cette rubrique">
-                                                    <div role="img" class="button-icon-wrapper" aria-label="Cliquez sur une étoile pour évaluer cette rubrique" data-state1-alt="Cliquez sur une étoile pour évaluer cette rubrique" data-state2-alt="Cliquez sur une étoile pour évaluer cette rubrique">
-                                                        <div class="button-icon"> </div>
-                                                    </div>
-                                                </div>
-                                                <div class="button star-button topic-ratings-empty-button" data-state1-class="topic-ratings-empty-button" data-state2-class="topic-ratings-button" title="Cliquez sur une étoile pour évaluer cette rubrique" data-state1-title="Cliquez sur une étoile pour évaluer cette rubrique" data-state2-title="Cliquez sur une étoile pour évaluer cette rubrique">
-                                                    <div role="img" class="button-icon-wrapper" aria-label="Cliquez sur une étoile pour évaluer cette rubrique" data-state1-alt="Cliquez sur une étoile pour évaluer cette rubrique" data-state2-alt="Cliquez sur une étoile pour évaluer cette rubrique">
-                                                        <div class="button-icon"> </div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                             <button class="button needs-pie print-button" title="Imprimer">
                                                 <div>
                                                     <div role="img" class="button-icon-wrapper" aria-label="Imprimer">
@@ -253,13 +226,20 @@
                                         <p><span style="font-family: 'Wingdings'">è</span>Dans l'interface de gestion de la file d'impression, les informations <strong>SNMP</strong> sont affichées dans l’onglet <strong>Etat.</strong> (cf.&#160;tutoriel "<a href="http://downloads.doxense.fr/doc.doxense/WD_SNMPWalker_TUT_CapturerWalks_FR.mp4" alt="Lien de téléchargement du tutoriel">Capturer des dumps avec SNMP Walker</a>" (mp4)).</p>
                                     </div>
                                     <p>&#160;</p>
-                                    <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy_Last mc-component nocontent">
+                                    <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">
                                             <button class="button elearning-button needs-pie previous-topic-button" title="Précédent" disabled="true">
                                                 <div>
                                                     <div role="img" class="button-icon-wrapper" aria-label="Précédent">
                                                         <div class="button-icon"> </div>
                                                     </div><span class="button-text">Précédent</span>
+                                                </div>
+                                            </button>
+                                            <button class="button elearning-button needs-pie next-topic-button" title="Suivant" disabled="true">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Suivant">
+                                                        <div class="button-icon"> </div>
+                                                    </div><span class="button-text">Suivant</span>
                                                 </div>
                                             </button>
                                         </div>

@@ -25,11 +25,6 @@
         <link href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
         <style>/*&lt;meta /&gt;*/
 
-.button.topic-ratings-button
-{
-	-pie-background: transparent url('../../Skins/Default/Stylesheets/Images/star-full.png') no-repeat center center;
-}
-
 .button.print-button
 {
 	-pie-background: linear-gradient(transparent, transparent);
@@ -57,6 +52,11 @@
 
 </style>
         <style>/*&lt;meta /&gt;*/
+
+.button.previous-topic-button
+{
+	-pie-background: linear-gradient(transparent, #fcfaf8);
+}
 
 .button.next-topic-button
 {
@@ -173,33 +173,6 @@
                                     <!-- End Google Tag Manager (noscript) -->
                                     <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Toolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
                                         <div class="button-group-container-left">
-                                            <div class="button-group star-buttons loading feedback-topic-required">
-                                                <div class="button star-button topic-ratings-empty-button" data-state1-class="topic-ratings-empty-button" data-state2-class="topic-ratings-button" title="Cliquez sur une étoile pour évaluer cette rubrique" data-state1-title="Cliquez sur une étoile pour évaluer cette rubrique" data-state2-title="Cliquez sur une étoile pour évaluer cette rubrique">
-                                                    <div role="img" class="button-icon-wrapper" aria-label="Cliquez sur une étoile pour évaluer cette rubrique" data-state1-alt="Cliquez sur une étoile pour évaluer cette rubrique" data-state2-alt="Cliquez sur une étoile pour évaluer cette rubrique">
-                                                        <div class="button-icon"> </div>
-                                                    </div>
-                                                </div>
-                                                <div class="button star-button topic-ratings-empty-button" data-state1-class="topic-ratings-empty-button" data-state2-class="topic-ratings-button" title="Cliquez sur une étoile pour évaluer cette rubrique" data-state1-title="Cliquez sur une étoile pour évaluer cette rubrique" data-state2-title="Cliquez sur une étoile pour évaluer cette rubrique">
-                                                    <div role="img" class="button-icon-wrapper" aria-label="Cliquez sur une étoile pour évaluer cette rubrique" data-state1-alt="Cliquez sur une étoile pour évaluer cette rubrique" data-state2-alt="Cliquez sur une étoile pour évaluer cette rubrique">
-                                                        <div class="button-icon"> </div>
-                                                    </div>
-                                                </div>
-                                                <div class="button star-button topic-ratings-empty-button" data-state1-class="topic-ratings-empty-button" data-state2-class="topic-ratings-button" title="Cliquez sur une étoile pour évaluer cette rubrique" data-state1-title="Cliquez sur une étoile pour évaluer cette rubrique" data-state2-title="Cliquez sur une étoile pour évaluer cette rubrique">
-                                                    <div role="img" class="button-icon-wrapper" aria-label="Cliquez sur une étoile pour évaluer cette rubrique" data-state1-alt="Cliquez sur une étoile pour évaluer cette rubrique" data-state2-alt="Cliquez sur une étoile pour évaluer cette rubrique">
-                                                        <div class="button-icon"> </div>
-                                                    </div>
-                                                </div>
-                                                <div class="button star-button topic-ratings-empty-button" data-state1-class="topic-ratings-empty-button" data-state2-class="topic-ratings-button" title="Cliquez sur une étoile pour évaluer cette rubrique" data-state1-title="Cliquez sur une étoile pour évaluer cette rubrique" data-state2-title="Cliquez sur une étoile pour évaluer cette rubrique">
-                                                    <div role="img" class="button-icon-wrapper" aria-label="Cliquez sur une étoile pour évaluer cette rubrique" data-state1-alt="Cliquez sur une étoile pour évaluer cette rubrique" data-state2-alt="Cliquez sur une étoile pour évaluer cette rubrique">
-                                                        <div class="button-icon"> </div>
-                                                    </div>
-                                                </div>
-                                                <div class="button star-button topic-ratings-empty-button" data-state1-class="topic-ratings-empty-button" data-state2-class="topic-ratings-button" title="Cliquez sur une étoile pour évaluer cette rubrique" data-state1-title="Cliquez sur une étoile pour évaluer cette rubrique" data-state2-title="Cliquez sur une étoile pour évaluer cette rubrique">
-                                                    <div role="img" class="button-icon-wrapper" aria-label="Cliquez sur une étoile pour évaluer cette rubrique" data-state1-alt="Cliquez sur une étoile pour évaluer cette rubrique" data-state2-alt="Cliquez sur une étoile pour évaluer cette rubrique">
-                                                        <div class="button-icon"> </div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                             <button class="button needs-pie print-button" title="Imprimer">
                                                 <div>
                                                     <div role="img" class="button-icon-wrapper" aria-label="Imprimer">
@@ -251,8 +224,15 @@
                                         <fieldset class="astuce">Dans Watchdoc, la notion de <strong>Rôle </strong>étant utilisée pour connaître la répartition de l'activité d'impression par service d'une organisation afin de faciliter la ventilation des coûts, l'interface s'intitule <strong>Rôles et Services</strong>.</fieldset>
                                     </div>
                                     <p>&#160;</p>
-                                    <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy_First mc-component nocontent">
+                                    <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">
+                                            <button class="button elearning-button needs-pie previous-topic-button" title="Précédent" disabled="true">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Précédent">
+                                                        <div class="button-icon"> </div>
+                                                    </div><span class="button-text">Précédent</span>
+                                                </div>
+                                            </button>
                                             <button class="button elearning-button needs-pie next-topic-button" title="Suivant" disabled="true">
                                                 <div>
                                                     <div role="img" class="button-icon-wrapper" aria-label="Suivant">
