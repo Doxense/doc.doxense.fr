@@ -177,35 +177,40 @@
                                         </div>
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor403"></a>
+                                        <h1><a name="aanchor405"></a>
                                             <MadCap:concept term="WPC" />Watchdoc Print Client&#160;for Windows - Mode silence / Silent mode</h1>
                                         <h2>Principe</h2>
                                         <p>Lors de son installation, il est possible de préciser que WPC for Windows fonctionne en mode normal ou en mode silence (silent mode).</p>
-                                        <p>Ce mode permet à WPC&#160;for Windows de fonctionner sans l'intervention de l'utilisateur.&#160;Ce dernier  lance alors ses travaux d'impression sans avoir à choisir d'imprimante.&#160;Il valide ensuite ses impressions sur le périphérique d'impression configuré par le référent Watchdoc.&#160;</p>
                                         <p>&#160;</p>
-                                        <p>L'interface graphique WPC&#160;for Windows est alors masquée car non-nécessaire.&#160;L'utilisateur peut cependant l'activer pour accéder aux onglets  <b>Profil</b> et <b>Travaux</b> d'où il peut consulter ses données personnelles (codes et badges, par exemple), des données d'éco-responsabilité et la liste des travaux traités par Watchdoc.</p>
+                                        <p>Ce mode permet à WPC&#160;for Windows de fonctionner sans l'intervention de l'utilisateur.&#160;Ce dernier  lance ses travaux d'impression sans avoir à choisir d'imprimante.&#160;Il valide ensuite ses impressions sur le périphérique configuré par l'administrateur Watchdoc.&#160;</p>
+                                        <p>&#160;</p>
+                                        <p>L'interface graphique WPC&#160;for Windows est alors masquée car non-nécessaire.&#160;L'utilisateur peut cependant l'activer pour accéder aux onglets  <b>Profil</b> et <b>Travaux</b> d'où il peut consulter ses données personnelles (codes et badges, par exemple), son impact écologique et la liste des travaux traités par Watchdoc.<br /></p>
                                         <h2>Configuration / installation</h2>
-                                        <p>Pour permettre le fonctionnement de WPC&#160;for Windows en mode silence, il convient de configurer ce mode&#160;:</p>
+                                        <p>Pour permettre le fonctionnement de WPC&#160;for Windows en mode silence, il convient de le configurer:</p>
                                         <ol>
                                             <li value="1">
-                                                <p>lors de la configuration de Watchdoc Print Client for Windows, section <strong>Interface utilisateur</strong>, paramètre <strong>Mode silence</strong> (cf.&#160;<a href="WPCW_Configuration.htm" target="_blank">Configurer WPC for Windows</a>)&#160;;</p>
+                                                <p>lors de la configuration de Watchdoc Print Client for Windows, section <strong>Interface utilisateur</strong>, paramètre <strong>Mode silence</strong> (cf.&#160;<a href="WPCW_Configuration.htm#Mode_silence" target="_blank">Configurer WPC for Windows</a>)&#160;;</p>
                                             </li>
                                             <li value="2">
-                                                <p>lors de l'installation de WPC for Windows sur le poste client, il (ou les postes clients par déploiement GPO), interface Paramètres, la case <strong>Operates in Silent Mode</strong> doit être cochée ; dans l'interface <strong>Parameters</strong> (cf. <a href="WPCW_Installation.htm">Installer WPC&#160;for Windows sur le poste utilisateur</a>).</p>
+                                                <p>lors de l'installation de WPC for Windows sur le poste client (ou les postes clients par déploiement GPO), dans l'interface <strong>Parameters</strong>, la case <strong>Operates in Silent Mode</strong> doit être cochée (cf. <a href="WPCW_Installation.htm">Installer WPC&#160;for Windows sur le poste utilisateur</a>).</p>
                                             </li>
                                         </ol>
                                         <h2>Utilisation</h2>
-                                        <p>Lorsque WPC&#160;for Windows est installé en mode silence, pour imprimer : </p>
+                                        <p>Lorsque WPC&#160;for Windows est installé en mode silence, </p>
+                                        <p>pour imprimer&#160;: </p>
                                         <ol>
                                             <li value="1">
-                                                <p>l'utilisateur lance la demande d'impression depuis son application&#160;;</p>
+                                                <p>l'utilisateur lance sa demande d'impression depuis son application&#160;;</p>
                                             </li>
                                             <li value="2">
-                                                <p>il valide l'impression sur le périphérique  désigné par le référent Watchdoc et récupère son impression.</p>
+                                                <p>il s'authentifie sur le WES&#160;du périphérique configuré par le référent Watchdoc ; </p>
+                                            </li>
+                                            <li value="3">
+                                                <p>il valide son impression  depuis la liste des documents en attente du WES.</p>
                                             </li>
                                         </ol>
                                         <p>&#160;</p>
-                                        <p>Pour accéder à son profil&#160;: <br /></p>
+                                        <p>Pour accéder à son profil&#160;et à la liste des travaux traités par Watchdoc : <br /></p>
                                         <ol>
                                             <li value="1">
                                                 <p>sur son poste de travail, parmi les icones cachées, l'utilisateur clique sur l'icone WPC for Windows&#160;: <br /><br /><a class="MCPopupThumbnailLink" href="WPCW_icon.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="328" data-mc-height="139" src="WPCW_icon.png" tabindex="" style="max-width: 1000px;" /></a></p>
@@ -216,8 +221,7 @@
                                                 <p>&#160;</p>
                                             </li>
                                             <li value="3">
-                                                <p>Il accède alors aux onglets <strong>Profil </strong>et <strong>Travaux</strong> : <br /><br /><a class="MCPopupThumbnailLink" href="WPCW_Util_SilenceMode.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1263" data-mc-height="937" src="WPCW_Util_SilenceMode.png" tabindex="" style="max-width: 1000px;" /></a>2</p>
-                                                <p>&#160;</p>
+                                                <p>Il accède alors aux onglets <strong>Travaux</strong> et <strong>Profil</strong> : <br /><br /><a class="MCPopupThumbnailLink" href="WPCW_Util_SilenceMode.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1263" data-mc-height="937" src="WPCW_Util_SilenceMode.png" tabindex="" style="max-width: 1000px;" /></a><br /><br /></p>
                                             </li>
                                             <li value="4">
                                                 <p>L'utilisateur peut aussi consulter ses demandes d'impressions sous l'onglet <strong class="">Travaux</strong>.</p>

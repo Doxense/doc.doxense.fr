@@ -3,7 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>WDIS Data Integration Service - Présentation</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Watchdoc Data Integration Service (WDIS) - Utilisation</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -199,31 +199,31 @@
                                         </div>
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor269"></a>
-                                            <MadCap:concept term="WDIS" />WDIS Data Integration Service - Présentation</h1>
+                                        <h1><a name="aanchor270"></a>
+                                            <MadCap:concept term="WDIS" />Watchdoc Data Integration Service (WDIS) - Utilisation</h1>
                                         <h2>Modes d'utilisation de WDIS</h2>
                                         <p>Vous pouvez utiliser l'outil WDIS&#160;pour générer un export ponctuellement à l'aide d'une invite de commande.&#160;</p>
                                         <p>Vous pouvez aussi concevoir une tâche permettant d'automatiser la génération des exports selon une fréquence prédéfinie (fichier de batch).</p>
                                         <h2>Lancer une commande WDIS</h2>
                                         <p>L'outil WDIS est enregistré sur le serveur hébergeant le <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term0">kernel<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>En anglais, Kernel signifie "noyau". Dans nos documents, il désigne le service de Watchdoc chargé de la gestion des impressions hors Site web.</span></a> (par défaut : C:\Program Files\Doxense\Watchdoc).</p>
-                                        <p>Pour générer des exports à l'aide de<strong> wdis.exe</strong> : </p>
+                                        <p>Pour générer des exports à l'aide de<strong> wdis.exe</strong>&#160;: </p>
                                         <ol>
                                             <li value="1">
-                                                <p class="Liste_num_1">vérifiez le chemin d'accès à l'exécutable  <strong>wdis.exe</strong> ; </p>
+                                                <p class="Liste_num_1">vérifiez le chemin d'accès à l'exécutable  <strong>wdis.exe</strong>&#160;; </p>
                                             </li>
                                             <li value="2">
-                                                <p class="Liste_num_1">lancez une invite de commande ; </p>
+                                                <p class="Liste_num_1">lancez une invite de commande&#160;; </p>
                                             </li>
                                             <li value="3">
-                                                <p class="Liste_num_1">dans l'outil de commande, indiquez le chemin permettant l'accès à l'exécutable <strong>wdis.exe</strong> ;</p>
+                                                <p class="Liste_num_1">dans l'outil de commande, indiquez le chemin permettant l'accès à l'exécutable <strong>wdis.exe</strong>&#160;;</p>
                                             </li>
                                             <li value="4">
-                                                <p class="Liste_num_1">lancez les commandes d'export en respectant la syntaxe et en utilisant les arguments et valeurs précisées ci-après&#160;:<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_WDIS_InvitCommande.png" style="width: 700px;height: auto;" /></p>
+                                                <p class="Liste_num_1">lancez les commandes d'export en respectant la syntaxe et en utilisant les arguments et valeurs précisées ci-après&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_WDIS_InvitCommande.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="986" data-mc-height="559" src="../../Z_Resources/Images/02_Captures/Config_WDIS_InvitCommande.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a></p>
                                             </li>
                                         </ol>
                                         <h2>Concevoir des commandes WDIS</h2>
                                         <h3>Syntaxe</h3>
-                                        <p>La syntaxe à respecter est la suivante : </p>
+                                        <p>La syntaxe à respecter est la suivante&#160;: </p>
                                         <p style="text-align: left;text-indent: 0.5in;"><b style="font-family: 'Courier New';">WDIS.EXE [OPTIONS] EXPORT EXPORTID</b>
                                         </p>
                                         <p>Les paramètres sont précédés d'un barre de fraction <strong>/</strong> et suivis par signe égal <strong>= </strong>qui introduit la valeur.</p>
@@ -295,10 +295,13 @@
                                                     <li>
                                                         <p class="Liste_puce_2"><strong>excel </strong>: génère un fichier d'export au format MS Excel<sup>®</sup>.</p>
                                                     </li>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Media</strong>
-                                                        </p>
-                                                    </li>
+                                                </ul>
+                                                <p>&#160;</p>
+                                            </li>
+                                            <li>
+                                                <p class="Liste_puce_1"><strong>Media</strong>
+                                                </p>
+                                                <ul style="list-style-type: circle;">
                                                     <li>
                                                         <p class="Liste_puce_2"><strong>mail </strong>: précise l'adresse e-mail à laquelle est envoyé le rapport ;</p>
                                                     </li>
@@ -334,6 +337,7 @@
                                             <li>
                                                 <p class="Liste_puce_1"><strong>Localisation des données à exploiter</strong>
                                                 </p>
+                                                <fieldset>Depuis la version 6.1.1, il est obligatoire d'ajouter l'argument <strong>-uri&#160;= https://[adresse_server]:5744</strong> qui précise le serveur et le port d'accès du serveur sur lequel sont enregistrées les données (par exemple, "<strong>-uri&#160;= https://localhost:5744</strong>", si je lance la commande depuis le serveur Watchdoc).<br /></fieldset>
                                                 <ul style="list-style-type: circle;">
                                                     <li>
                                                         <p class="Liste_puce_2"><strong>server </strong>: précise l'adresse du serveur Watchdoc dont WDIS doit exploiter les données (dans le cas d'une installation en cluster ou en Master).</p>
@@ -357,7 +361,7 @@
                                                         <p class="Liste_puce_1"><strong>smtp </strong>: permet de préciser les caractéristiques d'un serveur SMTP à utiliser pour envoyer par mail le rapport généré. Par défaut, WDIS utilise les paramètres SMTP configurés dans Watchdoc ; </p>
                                                     </li>
                                                     <li>
-                                                        <p class="Liste_puce_1"><strong>level </strong>: précise, en pourcentage, un seuil   en-deçà duquel Watcdhoc<sup>®</sup> informe que les consommables sont bientôt vides. Par défaut, ce seuil est à 20%.</p>
+                                                        <p class="Liste_puce_1"><strong>level </strong>: précise, en pourcentage, un seuil   en-deçà duquel Watchdoc<sup>®</sup> informe que les consommables sont bientôt vides. Par défaut, ce seuil est à 20%.</p>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -445,6 +449,8 @@ durée. </p>
                                                 </ul>
                                             </li>
                                         </ol>
+                                        <h2>Exemple</h2>
+                                        <p>Exemple de commande : "d:\Program Files\Doxense\Watchdoc" wdis -csv -file="c:\temp\delta.csv" -from=20260101 -to=20260408 EXPORT HARDWARECOUNTERS -uri="https://localhost:5744"</p>
                                     </div>
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">

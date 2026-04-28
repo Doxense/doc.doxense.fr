@@ -261,6 +261,8 @@
                                                     </li>
                                                     <li class="tree-node"><a href="#ServicedimpressionMicrosoftWindows">Service d'impression Microsoft Windows</a>
                                                     </li>
+                                                    <li class="tree-node"><a href="#WDIS">WDIS</a>
+                                                    </li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -1757,6 +1759,14 @@ Aucun numéro de port TCP ou UDP n'est associé aux paquets ICMP, car ces numér
                                                     </li>
                                                 </ol>
                                                 <p>==&gt;&#160;Vous disposerez dès lors d'un journal traçant les problèmes mineurs relatifs au service d'impression.</p>
+                                            </div>
+                                        </div>
+                                        <h2 id="WDIS" data-magellan-target="WDIS"><a name="WDIS" id="WDIS"></a>WDIS</h2>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />La commande d'export échoue - Message d'erreur "Export query failed!"</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> sur un serveur équipé de Watchoc v 6.1.1, en tant qu'administrateur, je tente de lancer une commande d'export. Cette commande échoue. <br />L'outil précise "Connection problem with the server at "tcp://[adresse du serveur]" et "Parameter name: requestUri".<br /></p>
+                                                <p><strong>Cause :</strong> en version v 6.1.1, il est nécessaire de saisir le paramètre <b>-uri </b>dans la commande pour préciser la localisation et le port d'accès au serveur.<br /><strong>Résolution :</strong> relancez la commande d'export en ajoutant l'option <strong>-uri="https://localhost:5744"</strong> dans la commande. Par exemple "c:\Program Files\Doxense\Watchdoc\wdis.exe" -csv -file="c:\temp\queues.csv" </p>
+                                                <p>-from=20260101 -to=20260408 EXPORT HARDWARECOUNTERS -uri="https://localhost:5744"</p>
                                             </div>
                                         </div>
                                     </div>
