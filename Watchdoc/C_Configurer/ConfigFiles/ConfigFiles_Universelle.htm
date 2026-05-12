@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="Présentation du concept de file universelle et procédure de configuration." /><title>Watchdoc - Files - Configurer une file universelle</title>
+        <meta name="description" content="Présentation du concept de file universelle et procédure de configuration." /><title>Watchdoc - Files d'impression - Configurer une file universelle</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -200,12 +200,12 @@
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
                                         <h1><a name="aanchor41"></a>
-                                            <MadCap:concept term="WD" />Watchdoc - Files - Configurer une file universelle</h1>
+                                            <MadCap:concept term="WD" />Watchdoc - Files d'impression - Configurer une file universelle</h1>
                                         <h2>Principe</h2>
                                         <p>Une file universelle </p>
                                         <ul>
                                             <li>
-                                                <p>est une file logique créée exclusivement pour la fonction Watchdoc Print Client (WPC).&#160;<br />Elle permet aux utilisateurs de lance une impression à l'aide des outils WPC for Windows, WPC&#160;for Android ou Skyprint, puis de le débloquer physiquement sur l'un des périphériques d'impression compatibles&#160;; </p>
+                                                <p>est une file logique créée exclusivement pour la fonction Watchdoc Print Client (WPC).&#160;<br />Elle permet aux utilisateurs de lancer une impression à l'aide des outils WPC for Windows, WPC&#160;for Android ou Skyprint, puis de la débloquer physiquement sur l'un des périphériques d'impression compatibles&#160;; </p>
                                             </li>
                                             <li>
                                                 <p>est créée automatiquement  et nommée par défaut "Impression Universelle" lors de l'installation de Watchdoc&#160;; </p>
@@ -217,7 +217,7 @@
                                                 <p>utilise le spouleur Doxense (custom spooler) et n'utilise pas le spouleur MS&#160;Windows&#160;;</p>
                                             </li>
                                             <li>
-                                                <p>est préconfigurée pour rediriger les fichiers de spool vers le pool d'impression global (#global) sans utiliser le spouleur MS Windows&#160;;</p>
+                                                <p>est préconfigurée pour rediriger les fichiers de spool vers le pool d'impression global (#global) sans utiliser le spouleur MS Windows<sup>®</sup>&#160;;</p>
                                             </li>
                                             <li>
                                                 <p>doit être associée à un pilote d'impression de type 3 pour fonctionner (lors du chargement d'un pilote dans WSC, une file universelle peut y être associée)&#160;;</p>
@@ -426,11 +426,49 @@ Le fait que les messages soient archivés sur le serveur fait que l'utilisateur 
                                         <p>Outre ces pools par défaut, vous pouvez créer autant de pools que nécessaire (cf.&#160;Créer un pool).<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Files_Redirections_V541.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="895" data-mc-height="97" src="../../Z_Resources/Images/02_Captures/Config_Files_Redirections_V541.png" tabindex="" style="max-width: 1000px;" /></a></p>
                                         <p>&#160;</p>
                                         <h3>Section <a name="Plateforme" id="Plateforme"></a>Plateforme</h3>
+                                        <p>Cette section permet de préciser les plateformes WPC sur lesquelles la file  peut être utilisée : WPC&#160;for Android, for Chrome, for iOS, for Windows et /ou Skyprint.&#160;</p>
+                                        <p>&#160;</p>
                                         <ol>
                                             <li value="1">
-                                                <p>Complétez la section <strong>Plateforme</strong> : <br />Cette section permet de préciser les plateformes WPC à partir desquelles la file  peut être utilisée : WPC&#160;for Android, for Chrome, for IOS, for Windows et /ou Skyprint.&#160;Cochez la ou les cases correspondant aux plateformes sur lesquelles la file est proposée :<b>Windows :</b> la file est proposée sur WPC&#160;for Windows ;<b>Plateformes PDF&#160;:</b> inclut tous les  WPC&#160;traitant des fichiers au format .pdf : for Chrome, for Android, for IOS&#160;et Skyprint. Activé : la file est proposée sur toutes les plateformes PDF&#160;; Désactivé : la file n'est pas proposée sur les plateformes PDF&#160;(aucun WPC&#160;PDF&#160;ne peut être sélectionné) ; Auto-détection : Watchdoc examine les capacités du périphérique pour proposer ou ne pas proposer la file ; <b>Mobile :</b> la file est proposée sur les WPC&#160;mobiles : for Android et IOS ; Android : la file est proposée sur WPC&#160;for Android ; IOS : la file est proposée sur WPC&#160;for IOS ; <b>Skyprint :</b> la file est proposée sur Skyprint.<br /><br /><a class="MCPopupThumbnailLink" href="Config_Files_SectionPlateforme.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="673" data-mc-height="251" src="Config_Files_SectionPlateforme.png" tabindex="" style="max-width: 1000px;" /></a><br />N.B. : notez que si la file n'est associée à aucun pilote d'impression, elle n'est pas proposée à l'utilisateur.<br /></p>
+                                                <p>Cochez la ou les cases correspondant aux plateformes sur lesquelles la file est proposée :</p>
+                                                <ul>
+                                                    <li>
+                                                        <p><b>Windows :</b> la file est proposée sur WPC&#160;for Windows ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><b>Plateformes PDF&#160;:</b> inclut tous les  WPC&#160;traitant des fichiers au format .pdf : for Chrome, for Android, for iOS&#160;et Skyprint. </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>Activé : la file est proposée sur toutes les plateformes PDF&#160;; </p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Désactivé : la file n'est pas proposée sur les plateformes PDF&#160;(aucun WPC&#160;PDF&#160;ne peut être sélectionné) ; </p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Auto-détection : Watchdoc examine les capacités du périphérique pour proposer ou ne pas proposer la file en fonction des critères d'impression choisis par l'utilisateur&#160;;</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p><b>Mobile :</b> la file est proposée sur les WPC&#160;mobiles : for Android et iOS ; </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>Android : la file est proposée sur WPC&#160;for Android ; </p>
+                                                            </li>
+                                                            <li>
+                                                                <p>iOS : la file est proposée sur WPC&#160;for iOS ; </p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p><b>Skyprint :</b> la file est proposée sur Skyprint.<br /><br /><a class="MCPopupThumbnailLink" href="Config_Files_SectionPlateforme.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="673" data-mc-height="251" src="Config_Files_SectionPlateforme.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                        <p>&#160;</p>
+                                                        <p>N.B. : notez que si la file n'est associée à aucun pilote d'impression, elle n'est pas proposée à l'utilisateur.</p>
+                                                    </li>
+                                                </ul>
                                             </li>
                                         </ol>
+                                        <p>&#160;</p>
                                         <ol data-mc-continue="true">
                                             <li value="2">
                                                 <p>Si le tag <b>Windows</b> est coché, complétez les paramètres associés&#160;: </p>

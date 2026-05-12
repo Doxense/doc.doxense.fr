@@ -622,45 +622,66 @@ Le fait que les messages soient archivés sur le serveur fait que l'utilisateur 
                                         </ul>
                                         <p>&#160;</p>
                                         <h3 id="SectionPlateforme" data-magellan-target="SectionPlateforme">Section <a name="Plateforme" id="Plateforme"></a>Plateforme<br /></h3>
-                                        <p>Cette section permet de préciser les plateformes WPC à partir desquelles la file  peut être utilisée : WPC&#160;for Android, for Chrome, for IOS, for Windows et /ou Skyprint.&#160;</p>
-                                        <p>Cochez la ou les cases correspondant aux plateformes sur lesquelles la file est proposée :</p>
-                                        <ul>
-                                            <li>
-                                                <p><b>Windows :</b> la file est proposée sur WPC&#160;for Windows ;</p>
-                                            </li>
-                                            <li>
-                                                <p><b>Plateformes PDF&#160;:</b> inclut tous les  WPC&#160;traitant des fichiers au format .pdf : for Chrome, for Android, for IOS&#160;et Skyprint. </p>
+                                        <p>Cette section permet de préciser les plateformes WPC sur lesquelles la file  peut être utilisée : WPC&#160;for Android, for Chrome, for iOS, for Windows et /ou Skyprint.&#160;</p>
+                                        <p>&#160;</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Cochez la ou les cases correspondant aux plateformes sur lesquelles la file est proposée :</p>
                                                 <ul>
                                                     <li>
-                                                        <p>Activé : la file est proposée sur toutes les plateformes PDF&#160;; </p>
+                                                        <p><b>Windows :</b> la file est proposée sur WPC&#160;for Windows ;</p>
                                                     </li>
                                                     <li>
-                                                        <p>Désactivé : la file n'est pas proposée sur les plateformes PDF&#160;(aucun WPC&#160;PDF&#160;ne peut être sélectionné) ; </p>
+                                                        <p><b>Plateformes PDF&#160;:</b> inclut tous les  WPC&#160;traitant des fichiers au format .pdf : for Chrome, for Android, for iOS&#160;et Skyprint. </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>Activé : la file est proposée sur toutes les plateformes PDF&#160;; </p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Désactivé : la file n'est pas proposée sur les plateformes PDF&#160;(aucun WPC&#160;PDF&#160;ne peut être sélectionné) ; </p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Auto-détection : Watchdoc examine les capacités du périphérique pour proposer ou ne pas proposer la file en fonction des critères d'impression choisis par l'utilisateur&#160;;</p>
+                                                            </li>
+                                                        </ul>
                                                     </li>
                                                     <li>
-                                                        <p>Auto-détection : Watchdoc examine les capacités du périphérique pour proposer ou ne pas proposer la file ; </p>
+                                                        <p><b>Mobile :</b> la file est proposée sur les WPC&#160;mobiles : for Android et iOS ; </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>Android : la file est proposée sur WPC&#160;for Android ; </p>
+                                                            </li>
+                                                            <li>
+                                                                <p>iOS : la file est proposée sur WPC&#160;for iOS ; </p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p><b>Skyprint :</b> la file est proposée sur Skyprint.<br /><br /><a class="MCPopupThumbnailLink" href="Config_Files_SectionPlateforme.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="673" data-mc-height="251" src="Config_Files_SectionPlateforme.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                        <p>&#160;</p>
+                                                        <p>N.B. : notez que si la file n'est associée à aucun pilote d'impression, elle n'est pas proposée à l'utilisateur.</p>
                                                     </li>
                                                 </ul>
                                             </li>
-                                            <li>
-                                                <p><b>Mobile :</b> la file est proposée sur les WPC&#160;mobiles : for Android et IOS ; </p>
-                                                <ul>
-                                                    <li>
-                                                        <p>Android : la file est proposée sur WPC&#160;for Android ; </p>
-                                                    </li>
-                                                    <li>
-                                                        <p>IOS : la file est proposée sur WPC&#160;for IOS ; </p>
-                                                    </li>
-                                                </ul>
+                                        </ol>
+                                        <p>&#160;</p>
+                                        <ol data-mc-continue="true">
+                                            <li value="2">
+                                                <p>Si le tag <b>Windows</b> est coché, complétez les paramètres associés&#160;: </p>
                                             </li>
-                                            <li>
-                                                <p><b>Skyprint :</b> la file est proposée sur Skyprint.<br /><br /><a class="MCPopupThumbnailLink" href="Config_Files_SectionPlateforme.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="673" data-mc-height="251" src="Config_Files_SectionPlateforme.png" tabindex="" style="max-width: 1000px;" /></a></p>
-                                                <p>
-                                                    <br />
-                                                </p>
-                                            </li>
-                                        </ul>
-                                        <p>N.B. : notez que si la file n'est associée à aucun pilote d'impression, elle n'est pas proposée à l'utilisateur.</p>
+                                            <ul>
+                                                <li>
+                                                    <p><b>pilote</b> : sélectionnez le pilote (préalablement installé sur WSC) que vous voulez associer à cette file .&#160;Note : vous ne pouvez pas créer une file universelle sans pilote associé ;</p>
+                                                </li>
+                                                <li>
+                                                    <p><b style="font-size: 12pt;">template </b><span style="font-size: 12pt;">: le template (modèle de configuration d'une file d'impression) préalablement associé au pilote dans  WSC&#160;:</span>
+                                                        <br />
+                                                        <br />
+                                                        <img src="Config_File_Univ_PlateformeWindows.png" />
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </ol>
                                         <p>&#160;</p>
                                         <h3 id="SectionContacts" data-magellan-target="SectionContacts">Section Contacts</h3>
                                         <p>Les informations saisies dans cette section sont affichées dans l'interface d'administration et l'interface web d'utilisation de l'outil.&#160;Elles permettent d'orienter l'utilisateur vers le référent Watchdoc en mesure de les dépanner en cas de problème ou de question sur le périphérique contrôlé par Watchdoc :<br /></p>
