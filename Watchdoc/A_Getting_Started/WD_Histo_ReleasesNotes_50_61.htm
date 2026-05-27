@@ -206,6 +206,8 @@
                                                 <ul>
                                                     <li class="tree-node"><a href="#Watchdoc61x">Watchdoc 6.1.x</a>
                                                     </li>
+                                                    <li class="tree-node"><a href="#WatchdocetWSC6115626WPCforWindowsetSkyprint70605527052026">Watchdoc et WSC&#160;6.1.1.5626,  WPC for Windows et Skyprint 7.0.6055 - 27/05/2026</a>
+                                                    </li>
                                                     <li class="tree-node"><a href="#WatchdocetWSC6115612WPCforWindowsetSkyprint70604412052026">Watchdoc et WSC&#160;6.1.1.5612,  WPC for Windows et Skyprint 7.0.6044 - 12/05/2026</a>
                                                     </li>
                                                     <li class="tree-node"><a href="#WatchdocetWSC6115598WPCforWindows706023etSkyprint70602329042026">Watchdoc et WSC&#160;6.1.1.5598,  WPC for Windows 7.0.6023 et Skyprint 7.0.6023 - 29/04/2026</a>
@@ -337,7 +339,50 @@
                                         <hr width="100%" size="0" align="center" data-mc-conditions="General.Online">
                                         </hr>
                                         <h2 data-mc-conditions="General.Online" id="Watchdoc61x" data-magellan-target="Watchdoc61x">Watchdoc 6.1.x</h2>
-                                        <h2 style="color: #000000;" id="WatchdocetWSC6115612WPCforWindowsetSkyprint70604412052026" data-magellan-target="WatchdocetWSC6115612WPCforWindowsetSkyprint70604412052026">Watchdoc et WSC&#160;<span class="mc-variable Versions.Watchdoc variable">6.1.1.5612</span>,  WPC for Windows et Skyprint <span class="mc-variable Versions.WPC_for_Windows variable">7.0.6044</span> - 12/05/2026</h2>
+                                        <h2 style="color: #000000;" id="WatchdocetWSC6115626WPCforWindowsetSkyprint70605527052026" data-magellan-target="WatchdocetWSC6115626WPCforWindowsetSkyprint70605527052026">Watchdoc et WSC&#160;<span class="mc-variable Versions.Watchdoc variable">6.1.1.5626</span>,  WPC for Windows et Skyprint <span class="mc-variable Versions.WPC_for_Windows variable">7.0.6055</span> - 27/05/2026</h2>
+                                        <p>
+                                            <p.bold style="font-weight: bold;">Nouvelle fonctionnalité</p.bold>
+                                        </p>
+                                        <ul>
+                                            <li style="font-size: 12pt;">
+                                                <p><strong>Watchdoc :</strong> possibilité d'importer en masse une liste d'emplacements au format .csv&#160;</p>
+                                                <p>&#160;</p>
+                                            </li>
+                                        </ul>
+                                        <p>
+                                            <p.bold style="font-weight: bold;">Améliorations</p.bold>
+                                        </p>
+                                        <ul>
+                                            <li style="font-size: 12pt;">
+                                                <p><strong>Watchdoc :</strong> lorsque la plateforme sélectionnée est de type "mobile", désactivation des champs "Windows pilote" et "Windows template", inutiles dans un tel cas</p>
+                                            </li>
+                                        </ul>
+                                        <p>&#160;</p>
+                                        <p>
+                                            <p.bold style="font-weight: bold;">Correctifs</p.bold>
+                                        </p>
+                                        <ul>
+                                            <li style="font-size: 12pt;">
+                                                <p><strong>Watchdoc :</strong> lors de la suppression d'une file, son historique et ses statistiques n'étaient pas toujours supprimées, même lorsque c'était demandé. L'historique et les statistiques sont désormais correctement supprimées&#160;</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>WPC for Windows :</strong> correction de la fonction Haute-disponibilité qui était inopérante.&#160;Désormais, un message demande à l'utilisateur vers quel périphérique il souhaite rediriger son impression en cas du panne du périphérique choisi initialement</p>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <p><strong>WSC :</strong> </p>
+                                                <ul>
+                                                    <li>
+                                                        <p>correction de la configuration SMTP&#160;&gt; mode TLS pour tenir compte du mode immédiat ou différé ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>conservation des paramètres SMTP qui n'étaient pas conservés dans le cas d'une configuration de type Exchange Online</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <h2 style="color: #000000;" id="WatchdocetWSC6115612WPCforWindowsetSkyprint70604412052026" data-magellan-target="WatchdocetWSC6115612WPCforWindowsetSkyprint70604412052026">Watchdoc et WSC&#160;6.1.1.5612,  WPC for Windows et Skyprint 7.0.6044 - 12/05/2026</h2>
                                         <p>
                                             <p.bold style="font-weight: bold;">Améliorations</p.bold>
                                         </p>
@@ -621,7 +666,7 @@
                                                         <p>correction du programme de mise à jour d'une base Postgre SQL&#160;(pgsql_update_[n°_v].sql) garantissant la mise à jour de la base sans problème de docID</p>
                                                     </li>
                                                     <li>
-                                                        <p>correction du paramètre "Code PIN" qui apparaissait en erreur dans la configuration de l'annuaire META après mise à jour en version <span class="mc-variable Versions.Watchdoc variable">6.1.1.5612</span></p>
+                                                        <p>correction du paramètre "Code PIN" qui apparaissait en erreur dans la configuration de l'annuaire META après mise à jour en version <span class="mc-variable Versions.Watchdoc variable">6.1.1.5626</span></p>
                                                     </li>
                                                     <li>
                                                         <p>correction d'une anomalie provoquant une erreur dans la page "Mon compte" (message "Une erreur s'est produite - Error while calling method ScreenMyAccountStats") liée à l'activation du paramètre "Afficher les statistiques d'équipes" quand l'utilisateur n'appartient à aucune équipe</p>
