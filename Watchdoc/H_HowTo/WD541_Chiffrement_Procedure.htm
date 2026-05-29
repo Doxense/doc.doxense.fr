@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="Procédure de configuration du chiffrement." /><title>Watchdoc - Chiffrement des fichiers - Configurer</title>
+        <meta name="description" content="Procédure de configuration du chiffrement." /><title>Watchdoc - Chiffrement des spools - Configurer</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -200,7 +200,7 @@
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
                                         <h1><a name="aanchor382"></a>
-                                            <MadCap:concept term="WD" />Watchdoc - Chiffrement des fichiers - Configurer</h1>
+                                            <MadCap:concept term="WD" />Watchdoc - Chiffrement des spools - Configurer</h1>
                                         <h2>Accéder au fichier de configuration</h2>
                                         <ol>
                                             <li value="1">
@@ -218,29 +218,30 @@
                                         </ol>
                                         <h2>Activer la fonction chiffrement</h2>
                                         <h3>Pour les spools </h3>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">Pour activer le chiffrement des spools, sous le nœud "doxense-spooler/local", ajoutez les balises suivantes&#160;: <br /></p>
-                                                <p style="font-weight: bold;">&lt;secure-storage enabled="true"&gt;</p>
-                                                <p style="font-weight: bold;"> &lt;compression-provider&gt;Zstd&lt;/compression-provider&gt;</p>
-                                                <p style="font-weight: bold;"> &lt;protection-provider&gt;AES&lt;/protection-provider&gt;</p>
-                                                <p style="font-weight: bold;">&lt;/secure-storage&gt;<br /><br /><img src="../Z_Resources/Images/02_Captures/WD_Config_Chiffrement.png" /><br /></p>
-                                                <p style="font-weight: bold;">
-                                                    <br />
-                                                </p>
-                                            </li>
-                                        </ol>
+                                        <p class="Liste_num_1">Pour activer le chiffrement des spools, sous le nœud "doxense-spooler/local", ajoutez les balises suivantes&#160;: </p>
+                                        <div class="codeSnippet"><a class="codeSnippetCopyButton" role="button" href="javascript:void(0);">Copier</a>
+                                            <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code><span style="color: #63a35c; ">&lt;secure-storage <span style="color: #795da3; ">enabled</span><span style="color: #df5000; ">="true"</span>&gt;</span><br />&#160;&#160;&#160;&#160;<span style="color: #63a35c; ">&lt;compression-provider&gt;</span>Zstd<span style="color: #63a35c; ">&lt;/compression-provider&gt;</span><br />&#160;&#160;&#160;&#160;<span style="color: #63a35c; ">&lt;protection-provider&gt;</span>AES<span style="color: #63a35c; ">&lt;/protection-provider&gt;</span><br /><span style="color: #63a35c; ">&lt;/secure-storage&gt;</span></code></pre>
+                                            </div>
+                                        </div>
+                                        <p style="font-weight: bold;">
+                                            <br />
+                                            <img src="../Z_Resources/Images/02_Captures/WD_Config_Chiffrement.png" />
+                                            <br />
+                                        </p>
+                                        <p style="font-weight: bold;">
+                                            <br />
+                                        </p>
                                         <ol data-mc-continue="true">
-                                            <li value="2">
+                                            <li value="5">
                                                 <p class="Liste_num_1">Si vous ne souhaitez activer le chiffrement que pour les spools, enregistrez le fichier <strong>config.xml</strong>.</p>
                                             </li>
-                                            <li value="3">
+                                            <li value="6">
                                                 <p class="Liste_num_1">Enregistrez le fichier <strong>config.xml</strong>.</p>
                                             </li>
-                                            <li value="4">
+                                            <li value="7">
                                                 <p class="Liste_num_1">Redémarrez le service Watchdoc.</p>
                                             </li>
-                                            <li value="5">
+                                            <li value="8">
                                                 <p class="Liste_num_1">Autrement, ajoutez les balises ci-dessous pour chiffrer également les scans avant d'enregistrer le fichier config.xml et redémarrer le service.</p>
                                             </li>
                                         </ol>
@@ -248,18 +249,20 @@
                                         <ol>
                                             <li value="1">
                                                 <p class="Liste_num_1">Ouvrez le fichier <b>config. xml</b> à l'aide d'un éditeur de texte et créez la balise suivante sous la balise &lt;scan-destinations&gt; (au pluriel) :</p>
+                                                <div class="codeSnippet"><a class="codeSnippetCopyButton" role="button" href="javascript:void(0);">Copier</a>
+                                                    <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code><span style="color: #63a35c; ">&lt;local&gt;</span><br />&#160;&#160;&#160;&#160;<span style="color: #63a35c; ">&lt;secure-storage <span style="color: #795da3; ">enabled</span><span style="color: #df5000; ">="true"</span>&gt;</span><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color: #63a35c; ">&lt;compression-provider&gt;</span>Zstd<span style="color: #63a35c; ">&lt;/compression-provider&gt;</span><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color: #63a35c; ">&lt;protection-provider&gt;</span>AES<span style="color: #63a35c; ">&lt;/protection-provider&gt;</span><br />&#160;&#160;&#160;&#160;<span style="color: #63a35c; ">&lt;/secure-storage&gt;</span><br /><span style="color: #63a35c; ">&lt;/local&gt;</span></code></pre>
+                                                    </div>
+                                                    <p>
+                                                        <br />
+                                                    </p>
+                                                </div>
                                             </li>
                                         </ol>
-                                        <blockquote>
-                                            <blockquote>
-                                                <p class="MsgSysteme" style="font-weight: bold;">&lt;local&gt;</p>
-                                                <p class="MsgSysteme" style="font-weight: bold;">&lt;secure-storage enabled="true"&gt;</p>
-                                                <p class="MsgSysteme" style="font-weight: bold;">&lt;compression-provider&gt;Zstd&lt;/compression-provider&gt;</p>
-                                                <p class="MsgSysteme" style="font-weight: bold;">&lt;protection-provider&gt;AES&lt;/protection-provider&gt;</p>
-                                                <p class="MsgSysteme" style="font-weight: bold;">&lt;/secure-storage&gt;</p>
-                                                <p class="MsgSysteme" style="font-weight: bold;">&lt;/local&gt;<br /><br /><img src="../Z_Resources/Images/02_Captures/WD_Config_Chiffrement_Scans.png" /><br /></p>
-                                            </blockquote>
-                                        </blockquote>
+                                        <p>&#160;</p>
+                                        <p>
+                                            <img src="../Z_Resources/Images/02_Captures/WD_Config_Chiffrement_Scans.png" />
+                                        </p>
+                                        <p>&#160;</p>
                                         <ol data-mc-continue="true">
                                             <li value="2">
                                                 <p class="Liste_num_1">Si vous ne souhaitez activer le chiffrement que pour les scans, enregistrez le fichier <strong>config.xml</strong>.</p>
@@ -268,7 +271,7 @@
                                                 <p>Redémarrez le service Watchdoc avant de vérifier.</p>
                                             </li>
                                             <li value="4">
-                                                <p class="Liste_num_1">Autrement, ajoutez les balises ci-dessous pour chiffrer également les spools.</p>
+                                                <p class="Liste_num_1" style="font-style: italic;">Autrement, ajoutez les balises ci-dessous pour chiffrer également les spools.</p>
                                             </li>
                                         </ol>
                                         <h2>Vérifier l'activation du chiffrement</h2>

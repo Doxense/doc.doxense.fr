@@ -267,6 +267,15 @@
                                             </li>
                                         </ul>
                                         <h2 id="Watchdoc" data-magellan-target="Watchdoc"><a name="Watchdoc" id="Watchdoc"></a>Watchdoc</h2>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Watchdoc - Notifications - Après changement du serveur de mails, la notification ne fonctionne plus - mai 2026</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> en tant qu'administrateur de Watchdoc, après avoir changé de serveur de mails, vous modifiez les paramètres de configuration dans Watchdoc.&#160;Après modification, vous constatez que vous ne recevez pas le mail de test. <br /></p>
+                                                <p>Dans les logs, le message d'erreur suivant s'affiche : |MailNotifier       "Mail '[Watchdoc]Test de notification par e-mail' unsuccessfully sent to [adresse_email_test].</p>
+                                                <p><strong>Cause :</strong> ce problème survient parce que la configuration SMTP &gt; Mode de connexion TSL&#160;(immédiat ou différé) n'est pas synchronisée entre Watchdoc et WSC.</p>
+                                                <p><strong>Résolution :</strong> pour résoudre le problème, il convient de mettre à jour Watchdoc et WSC en version 6.1.1.5626 qui comporte un correctif.</p>
+                                            </div>
+                                        </div>
+                                        <p>&#160;</p>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WatchdocGDPRComplier - Message d'erreur "Cannot decrypt value that uses a custom AES&#160;policy..."- mars 2026</a></span>
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong>lorsque l'administrateur lance l'outil WatchdocGDPRComplier pour anonymiser les travaux d'impression d'un utilisateur, l'outil affiche le message d'erreur suivant&#160;: "An error has occured while fetching document's data.&#160;Cannot decrypt value that uses a custom AES policy because we don't know the decryption key!"</p>
