@@ -212,13 +212,16 @@
                                                 <p><strong>Notifications - Activer l'envoi de mails aux administrateurs et utilisateurs</strong> : cochez la case si vous souhaitez que Watchdoc notifie les administrateurs et utilisateurs par e-mail. Si vous activez cette fonction, complétez les sections suivantes&#160;:</p>
                                             </li>
                                             <li>
-                                                <p><strong><a name="Serveur" id="Serveur"></a>Serveur </strong><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term6">SMTP<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Simple Mail Transfer Protocol (Protocole simple de transfert de courrier). Protocole de communication utilisé pour transférer le courrier électronique (e-mail) vers les serveurs de messagerie électronique.</span></a> : indiquez au minimum les paramètres suivants : </p>
+                                                <p><strong><a name="Serveur" id="Serveur"></a>Serveur </strong><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term6">SMTP<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Simple Mail Transfer Protocol (Protocole simple de transfert de courrier). Protocole de communication utilisé pour transférer le courrier électronique (e-mail) vers les serveurs de messagerie électronique.</span></a> - <strong>Une identification est requise : </strong>cochez cette case si l'utilisation du serveur SMTP nécessite une identification.&#160;Précisez les modalités de cette identification : </p>
                                                 <ul>
                                                     <li>
                                                         <p class="Liste_puce_1"><strong>Nom Serveur :</strong> saisissez dans ce champ l'adresse IP du serveur SMTP utilisé par Watchdoc pour envoyer les e-mails aux usagers ;</p>
                                                     </li>
                                                     <li>
-                                                        <p class="Liste_puce_1"><strong><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term4">TLS<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Protocole de sécurisation des Transport Layer Security. Protocole de sécurisation des échanges sur Internet, remplaçant le protocole SSL en 2001. SSL et le TLS sont des protocoles de chiffrement qui garantissent pleinement la sécurité des communications pour tous les mails échangés. Ces systèmes sont largement utilisés pour garantir la sécurité des communications sur internet.</span></a>/<a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term5">SSL<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Secure Sockets Layer. Protocole de sécurisation des échanges sur Internet, devenu Transport Layer Security (TLS) en 2001.</span></a> :</strong> cochez la case si le serveur SMTP impose le protocole de sécurisation Transport Layer Security (TLS) ou Secure Sockets Layer (SSL). <br />Ce paramètre est obligatoire avec le mode de connexion Exchange Online.</p>
+                                                        <p class="Liste_puce_1"><strong><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term4">TLS<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Protocole de sécurisation des Transport Layer Security. Protocole de sécurisation des échanges sur Internet, remplaçant le protocole SSL en 2001. SSL et le TLS sont des protocoles de chiffrement qui garantissent pleinement la sécurité des communications pour tous les mails échangés. Ces systèmes sont largement utilisés pour garantir la sécurité des communications sur internet.</span></a>/<a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term5">SSL<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Secure Sockets Layer. Protocole de sécurisation des échanges sur Internet, devenu Transport Layer Security (TLS) en 2001.</span></a> :</strong> cochez la case si le serveur SMTP impose le protocole de sécurisation Transport Layer Security (TLS) ou Secure Sockets Layer (SSL). Notez que ce paramètre est obligatoire avec le mode de connexion Exchange Online.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Mode de connexion TLS : </strong>choisissez si vous optez pour la connexion immédiate ou différé.&#160;Le mode <strong>immédiat </strong>est notamment obligatoire dans le cas où le serveur de mails ne supporte pas la commande <strong>StartTls</strong>.</p>
                                                     </li>
                                                     <li>
                                                         <p><strong>Port : </strong>indiquez le port d'accès au serveur SMTP.</p>
@@ -227,9 +230,6 @@
                                                 <p>&#160;</p>
                                                 <p>Si nécessaire, précisez les paramètres suivants :</p>
                                                 <ul>
-                                                    <li>
-                                                        <p><strong>Une identification est requise : </strong>cochez cette case si l'utilisation du serveur SMTP nécessite une identification.&#160;Précisez les modalités de cette identification : </p>
-                                                    </li>
                                                     <li>
                                                         <p><strong>Mode de connexion : </strong>sélectionnez : </p>
                                                         <ul>
@@ -251,7 +251,7 @@
                                                                     <p style="font-weight: bold;">Client-Id <span style="font-weight: normal;">:</span> <span style="font-weight: normal;">saisissez l'identifiant de l'application</span>&#160;;</p>
                                                                 </li>
                                                                 <li>
-                                                                    <p style="font-weight: bold;">Client-Secret <span style="font-weight: normal;">: saisissez le secret de l'application.</span><br /><span style="font-weight: normal;">N.B. : le Secret expire au terme d'un délai prédéfini dans MS Entra. Il est donc nécessaire de le mettre à jour dès qu'il est renouvelé, sous peine de ne plus pouvoir utiliser la fonction de Notifications et d'obtenir le message d'alerte "Failed to get an accessToken from Azure".</span><br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Notifs_Exchange.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1143" data-mc-height="378" src="../../Z_Resources/Images/02_Captures/Config_Notifs_Exchange.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a></p>
+                                                                    <p style="font-weight: bold;">Client-Secret <span style="font-weight: normal;">: saisissez le secret de l'application.</span><br /><span style="font-weight: normal;">N.B. : le Secret expire au terme d'un délai prédéfini dans MS Entra. Il est donc nécessaire de le mettre à jour dès qu'il est renouvelé, sous peine de ne plus pouvoir utiliser la fonction de Notifications et d'obtenir le message d'alerte "Failed to get an accessToken from Azure".</span><br /><br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Notifs_Exchange.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1146" data-mc-height="376" src="../../Z_Resources/Images/02_Captures/Config_Notifs_Exchange.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a></p>
                                                                 </li>
                                                             </ul>
                                                             <p>&#160;</p>
@@ -259,6 +259,8 @@
                                                     </ul>
                                                 </ul>
                                             </li>
+                                        </ul>
+                                        <ul>
                                             <li>
                                                 <p><strong>Sous-section E-mail</strong> :</p>
                                                 <ul>
@@ -273,8 +275,6 @@
                                                     </li>
                                                 </ul>
                                             </li>
-                                        </ul>
-                                        <ul>
                                             <li>
                                                 <p><strong>Sous-section Destinataires :</strong> saisissez les adresses e-mail de référents habilités à intervenir en cas de problèmes techniques détectés par le système, tels que l'arrêt d'un périphérique ou une alerte en cas de détection d'un niveau bas de consommable, par exemple.</p>
                                                 <ul>

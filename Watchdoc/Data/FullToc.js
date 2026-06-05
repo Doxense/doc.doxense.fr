@@ -1,6 +1,6 @@
 var xmlFullTocData = "";
 xmlFullTocData += '<?xml version=\"1.0\" encoding=\"utf-8\"?>';
-xmlFullTocData += '<CatapultToc Version=\"1\" conditions=\"General.Online,Langues.FR\" DescendantCount=\"513\">';
+xmlFullTocData += '<CatapultToc Version=\"1\" conditions=\"General.Online,Langues.FR\" DescendantCount=\"514\">';
 xmlFullTocData += '    <TocEntry Title=\"Accueil\" Link=\"/index.html\" ComputedResetPageLayout=\"true\" ComputedFirstTopic=\"true\" DescendantCount=\"0\" />';
 xmlFullTocData += '    <TocEntry Title=\"Versions téléchargeables des produits\" Link=\"/A_Getting_Started/Versions_FR.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ReplaceMergeNode=\"false\" ComputedFirstTopic=\"false\" DescendantCount=\"3\">';
 xmlFullTocData += '        <TocEntry Title=\"6.1.1 - Packages et notes de versions\" Link=\"/A_Getting_Started/Release_611.htm\" StartSection=\"false\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
@@ -469,8 +469,8 @@ xmlFullTocData += '        <TocEntry Title=\"Page Accueil\" Link=\"/M_Skyprint/S
 xmlFullTocData += '        <TocEntry Title=\"Configurer l\'envoi des documents\" Link=\"/M_Skyprint/SP_Config_Srv_EnvoiDoc.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Configurer les utilisateurs\" Link=\"/M_Skyprint/SP_Config_Srv_GestionUtils.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Configurer les options de finition\" Link=\"/M_Skyprint/SP_Config_travaux_Options.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
+xmlFullTocData += '        <TocEntry Title=\"Configurer les boîtes mail supervisées\" Link=\"/M_Skyprint/SP_Config_boitesmail.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Configurer l\'acceptation des mails\" Link=\"/M_Skyprint/SP_Config_travaux_Conditions.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
-xmlFullTocData += '        <TocEntry Title=\"Configurer les boîtes mails supervisées\" Link=\"/M_Skyprint/SP_Config_boitesmail.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Configurer les paramètres généraux\" Link=\"/M_Skyprint/SP_Config_generales.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Consulter la liste des travaux\" Link=\"/M_Skyprint/SP_Config_ListeTravaux.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Dépanner Skyprint\" Link=\"/M_Skyprint/SP_Depannage.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
@@ -584,7 +584,7 @@ xmlFullTocData += '    <TocEntry Title=\"Sécurité\" ComputedFirstTopic=\"false
 xmlFullTocData += '        <TocEntry Title=\"CVE-2025-58384 : exécution de code à distance\" Link=\"/J_Securite/cve-2025-58384.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"CVE-2025-58385 : Usurpation d’identité, vol de données\" Link=\"/J_Securite/cve-2025-58385.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '    </TocEntry>';
-xmlFullTocData += '    <TocEntry Title=\"Utiliser Watchdoc\" StartSection=\"false\" Link=\"/S_AideUtilisateurFinal/Util_fr.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"15\">';
+xmlFullTocData += '    <TocEntry Title=\"Utiliser Watchdoc\" StartSection=\"false\" Link=\"/S_AideUtilisateurFinal/Util_fr.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"16\">';
 xmlFullTocData += '        <TocEntry Title=\"Première utilisation\" Link=\"/S_AideUtilisateurFinal/Premiere_Utilisation_WD.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Imprimer avec Watchdoc\" Link=\"/S_AideUtilisateurFinal/Util_Imprimer_WD.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Imprimer avec WPC for Windows\" Link=\"/S_AideUtilisateurFinal/Util_Initialiser_WPCW.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"3\">';
@@ -594,6 +594,7 @@ xmlFullTocData += '            <TocEntry Title=\"Imprimer en cas de panne\" Link
 xmlFullTocData += '        </TocEntry>';
 xmlFullTocData += '        <TocEntry Title=\"Installer l\'app. mobile Android\" Link=\"/T_WPC/Android/WPCA_Installation_v61.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Imprimer avec l\'app. mobile Android\" Link=\"/T_WPC/Android/WPCA_Utilisation_v61.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
+xmlFullTocData += '        <TocEntry Title=\"Imprimer avec Skyprint\" Link=\"/C_Configurer/ConfigWEScan/Skyprint_Utiliser.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Numériser avec Watchdoc\" Link=\"/S_AideUtilisateurFinal/Numeriser.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Dissocier son badge\" Link=\"/S_AideUtilisateurFinal/DissocierBadge_WD.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Consulter la page des documents en attente\" Link=\"/S_AideUtilisateurFinal/Util_Web_TravauxAttente.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
