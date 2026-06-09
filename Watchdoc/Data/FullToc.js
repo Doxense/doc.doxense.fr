@@ -1,6 +1,6 @@
 var xmlFullTocData = "";
 xmlFullTocData += '<?xml version=\"1.0\" encoding=\"utf-8\"?>';
-xmlFullTocData += '<CatapultToc Version=\"1\" conditions=\"General.Online,Langues.FR\" DescendantCount=\"514\">';
+xmlFullTocData += '<CatapultToc Version=\"1\" conditions=\"General.Online,Langues.FR\" DescendantCount=\"517\">';
 xmlFullTocData += '    <TocEntry Title=\"Accueil\" Link=\"/index.html\" ComputedResetPageLayout=\"true\" ComputedFirstTopic=\"true\" DescendantCount=\"0\" />';
 xmlFullTocData += '    <TocEntry Title=\"Versions téléchargeables des produits\" Link=\"/A_Getting_Started/Versions_FR.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ReplaceMergeNode=\"false\" ComputedFirstTopic=\"false\" DescendantCount=\"3\">';
 xmlFullTocData += '        <TocEntry Title=\"6.1.1 - Packages et notes de versions\" Link=\"/A_Getting_Started/Release_611.htm\" StartSection=\"false\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
@@ -60,7 +60,7 @@ xmlFullTocData += '        <TocEntry Title=\"Mettre à jour en ligne de commande
 xmlFullTocData += '        <TocEntry Title=\"Mettre à jour WPC for Windows\" Link=\"/E_MettreAJour/WD611_MaJ_WPCW_Procedure.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Restaurer une version antérieure\" Link=\"/E_MettreAJour/WD61_Restaurer_WD_Procedure.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '    </TocEntry>';
-xmlFullTocData += '    <TocEntry Title=\"Administrer Watchdoc\" ComputedFirstTopic=\"false\" DescendantCount=\"122\">';
+xmlFullTocData += '    <TocEntry Title=\"Administrer Watchdoc\" ComputedFirstTopic=\"false\" DescendantCount=\"125\">';
 xmlFullTocData += '        <TocEntry Title=\"Annuaires\" Link=\"/C_Configurer/ConfigAnnuaires/ConfigAnnuaires_Principes.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"15\">';
 xmlFullTocData += '            <TocEntry Title=\"Présentation de l\'interface\" Link=\"/C_Configurer/ConfigAnnuaires/ConfigAnnuaires_PresInterfaceAdmin.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '            <TocEntry Title=\"Configurer\" Link=\"/C_Configurer/ConfigAnnuaires/ConfigAnnuaires_ProcedureCreation.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
@@ -198,6 +198,10 @@ xmlFullTocData += '            <TocEntry Title=\"Présentation de l\'interface\"
 xmlFullTocData += '            <TocEntry Title=\"Configurer\" Link=\"/C_Configurer/ConfigRoles/ConfigRoles_Procedure.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        </TocEntry>';
 xmlFullTocData += '        <TocEntry Title=\"Serveur web\" Link=\"/C_Configurer/ConfigServeurWeb/Config_ServeurWeb_Presentation.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
+xmlFullTocData += '        <TocEntry Title=\"Services externes\" Link=\"/C_Configurer/ConfigServicesExt/Config_ServExt_Pres.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"2\">';
+xmlFullTocData += '            <TocEntry Title=\"Configurer le service OneDrive\" Link=\"/C_Configurer/ConfigServicesExt/Config_ServExtl_OneDrive.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
+xmlFullTocData += '            <TocEntry Title=\"Configurer le service Open Bee\" Link=\"/C_Configurer/ConfigServicesExt/Config_ServExtl_OpenBee.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
+xmlFullTocData += '        </TocEntry>';
 xmlFullTocData += '        <TocEntry Title=\"Spools - Capturer les spools\" Link=\"/H_HowTo/WD5_GestionCourante_PbCompteurs_CapturerSpools.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"1\">';
 xmlFullTocData += '            <TocEntry Title=\"Archiver les spools - Procédure\" Link=\"/C_Configurer/ConfigArchivage/ConfigArchivage_Procedure.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        </TocEntry>';
