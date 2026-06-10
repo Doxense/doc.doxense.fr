@@ -221,186 +221,37 @@
                                         <h2>Commandes principales</h2>
                                         <h3>Gestion multi serveurs (Master)</h3>
                                         <p>COMMANDES: </p>
-                                        <p style="text-indent: 0.5in;">CREATEMASTER créer ou mettre à jour un serveur Maître</p>
-                                        <p style="text-indent: 0.5in;">[OPTIONS]:</p>
-                                        <p style="text-indent: 0.5in;">/master=DNSMAITRE</p>
-                                        <p style="text-indent: 0.5in;">/domain=NOM_CLIENT</p>
-                                        <p style="text-indent: 0.5in;">/password=MOT DE PASSE_MAINTENANCE</p>
-                                        <p style="text-indent: 0.5in;">&#160;</p>
-                                        <p style="text-indent: 0.5in;">CREATESLAVE     créer ou mettre à jour un serveur dans un domaine</p>
-                                        <p style="text-indent: 0.5in;">[OPTIONS]:</p>
-                                        <p style="text-indent: 0.5in;">/master=DNSMAITRE</p>
-                                        <p style="text-indent: 0.5in;">/slave=DNSESCLAVE</p>
-                                        <p style="text-indent: 0.5in;">/password=MOT DE PASSE_MAINTENANCE</p>
-                                        <p style="text-indent: 0.5in;">&#160;</p>
-                                        <p style="text-indent: 0.5in;">SINGLEIFY : convertir un fichier à l'état SINGLE (unique)</p>
-                                        <p style="text-indent: 0.5in;">[OPTIONS]:</p>
-                                        <p style="text-indent: 0.5in;">/configpath= chemin du fichier Config.xml</p>
-                                        <p style="text-indent: 0.5in;">/forcer le contournement de l'état du service</p>
-                                        <p style="text-indent: 0.5in;">&#160;</p>
-                                        <p style="text-indent: 0.5in;">SYNC     synchronisation EXTERNAL/RIGHTS/NOTIFICATIONS</p>
-                                        <p style="text-indent: 0.5in;">[OPTIONS]:</p>
-                                        <p style="text-indent: 0.5in;">/master=DNSMAITRE | Synchronise tous les serveurs déclarés sur le serveur maître</p>
-                                        <p style="text-indent: 0.5in;">/password=MOT DE PASSE_MAINTENANCE| Mot de passe admin.&#160;Watchdoc (Root password)</p>
-                                        <p style="text-indent: 0.5in;">/parallel | Recommandé si vous avez plusieus serveurs</p>
-                                        <p style="text-indent: 0.5in;">&#160;</p>
-                                        <p style="text-indent: 0.5in;">SYNCQUOTAS       Synchronise la configuration de la base de données des quotas + le noeud  de vérificationracine (pricings/pmv-rules/pmv-codes)</p>
-                                        <p style="text-indent: 0.5in;">[OPTIONS]:</p>
-                                        <p style="text-indent: 0.5in;">/master=DNSMAITRE | Synchronise tous les serveurs déclarés sur ce serveur maître</p>
-                                        <p style="text-indent: 0.5in;">/password=MOT DE PASSE_MAINTENANCE | Mot de passe admin.&#160;Watchdoc (Root password)</p>
-                                        <p style="text-indent: 0.5in;">/parallel | Recommandé si vous avez plusieus serveurs</p>
-                                        <h3>Export/Import SQL</h3>
-                                        <p style="text-indent: 0.5in;">EXPORT   Exporte vers SQL (table ASSETS) toutes les files contrôlées</p>
-                                        <p style="text-indent: 0.5in;">[OPTIONS]:</p>
-                                        <p style="text-indent: 0.5in;">/server=DNS_SERVEUR</p>
-                                        <p style="text-indent: 0.5in;">/password=MOT DE PASSE_MAINTENANCE</p>
-                                        <p style="text-indent: 0.5in;">/configpath=chemin/config.xml</p>
-                                        <p style="text-indent: 0.5in;">/ServerWebPath=chemin/servers.xml</p>
-                                        <p style="text-indent: 0.5in;">&#160;</p>
-                                        <p style="text-indent: 0.5in;">INC      Exporte vers SQL (table QUEUESFAILURES) toutes les files en erreur</p>
-                                        <p style="text-indent: 0.5in;">[OPTIONS]:</p>
-                                        <p style="text-indent: 0.5in;">/server= SERVEURDNS -- Pour 1 SERVEUR</p>
-                                        <p style="text-indent: 0.5in;">/password=MOTDEPASSE_MAINTENANCE</p>
-                                        <p style="text-indent: 0.5in;">/configpath=chemn/config.xml</p>
-                                        <p style="text-indent: 0.5in;">/ServerWebPath=chemin/serveurs.xml -- POUIR 1 SERVEUR ET&#160;PLUS</p>
+                                        <div class="codeSnippet"><a class="codeSnippetCopyButton" role="button" href="javascript:void(0);">Copier</a>
+                                            <div class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>CREATEMASTER créer ou mettre à jour un serveur Maître<br />[OPTIONS]:<br />/master=DNSMAITRE<br />/domain=NOM_CLIENT<br />/password=MOT DE PASSE_MAINTENANCE<br />&#160;<br />CREATESLAVE&#160;&#160;&#160;&#160;&#160;créer ou mettre à jour un serveur dans un domaine<br />[OPTIONS]:<br />/master=DNSMAITRE<br />/slave=DNSESCLAVE<br />/password=MOT DE PASSE_MAINTENANCE<br />&#160;<br />SINGLEIFY : convertir un fichier à l'état SINGLE (unique)<br />[OPTIONS]:<br />/configpath= chemin du fichier Config.xml<br />/forcer le contournement de l'état du service<br />&#160;<br />SYNC&#160;&#160;&#160;&#160;&#160;synchronisation EXTERNAL/RIGHTS/NOTIFICATIONS<br />[OPTIONS]:<br />/master=DNSMAITRE | Synchronise tous les serveurs déclarés sur le serveur maître<br />/password=MOT DE PASSE_MAINTENANCE| Mot de passe admin.&#160;Watchdoc (Root password)<br />/parallel | Recommandé si vous avez plusieus serveurs<br />&#160;<br />SYNCQUOTAS&#160;&#160;&#160;&#160;&#160;&#160;&#160;Synchronise la configuration de la base de données des quotas + le noeud&#160;&#160;de vérificationracine (pricings/pmv-rules/pmv-codes)<br />[OPTIONS]:<br />/master=DNSMAITRE | Synchronise tous les serveurs déclarés sur ce serveur maître<br />/password=MOT DE PASSE_MAINTENANCE | Mot de passe admin.&#160;Watchdoc (Root password)<br />/parallel | Recommandé si vous avez plusieus serveurs<br /></code></pre>
+                                            </div>
+                                        </div>
+                                        <h3>Export/Import SQL : EXPORT   Exporte vers SQL (table ASSETS) toutes les files contrôlées</h3>
+                                        <div class="codeSnippet"><a class="codeSnippetCopyButton" role="button" href="javascript:void(0);">Copier</a>
+                                            <div class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>EXPORT&#160;&#160;&#160;Exporte vers SQL (table ASSETS) toutes les files contrôlées<br />[OPTIONS]:<br />/server=DNS_SERVEUR<br />/password=MOT DE PASSE_MAINTENANCE<br />/configpath=chemin/config.xml<br />/ServerWebPath=chemin/servers.xml<br />&#160;<br />INC&#160;&#160;&#160;&#160;&#160;&#160;Exporte vers SQL (table QUEUESFAILURES) toutes les files en erreur<br />[OPTIONS]:<br />/server= SERVEURDNS -- Pour 1 SERVEUR<br />/password=MOTDEPASSE_MAINTENANCE<br />/configpath=chemn/config.xml<br />/ServerWebPath=chemin/serveurs.xml -- POUIR 1 SERVEUR ET&#160;PLUS</code></pre>
+                                            </div>
+                                        </div>
                                         <p>&#160;</p>
                                         <h3>Gestion de Watchdoc</h3>
-                                        <p style="text-indent: 0.5in;">RESTORESHADOW    Restaure toutes les <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term60">files shadow<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>File créée par Watchdoc lors de la configuration d'une file partagée. Cette file shadow reçoit le spool d'impression contrôlé par Watchdoc et a pour fonction de l'envoyer vers le périphérique d'impression après analyse.</span></a> manquantes</p>
-                                        <p style="text-indent: 0.5in;">[OPTIONS]:</p>
-                                        <p style="text-indent: 0.5in;">/server=SERVEURKERNEL</p>
-                                        <p style="text-indent: 0.5in;">/password=MOT DE PASSE_MAINTENANCE</p>
-                                        <p style="text-indent: 0.5in;">&#160;</p>
-                                        <p style="text-indent: 0.5in;">CREATEALL Crée tous les périphériques partagés (avec port IP)</p>
-                                        <p style="text-indent: 0.5in;">[OPTIONS]:</p>
-                                        <p style="text-indent: 0.5in;">/server=SERVEURDNS</p>
-                                        <p style="text-indent: 0.5in;">/password=MOT DE PASSE_MAINTENANCE</p>
-                                        <p style="text-indent: 0.5in;">/obfuscate=true : masque le titre du document.</p>
-                                        <p style="text-indent: 0.5in;">/blacklist=chemin/folder.txt : Contient le nom de tous les pilotes placés sur liste noire</p>
-                                        <p style="text-indent: 0.5in;">/force=true     (force) GROUPE&#160;DE&#160;FILE=FILE&#160;RESEAU.</p>
-                                        <p style="text-indent: 0.5in;">(défaut) GROUPE DE&#160;FILE= NOM DU&#160;SERVEUR.</p>
-                                        <p style="text-indent: 0.5in;">&#160;</p>
-                                        <p style="text-indent: 0.5in;">MERGE    Transfère toutes les files d'impression externes vers un autre serveur</p>
-                                        <p style="text-indent: 0.5in;">[OPTIONS]:</p>
-                                        <p style="text-indent: 0.5in;">/slave=DNS_ESCLAVE</p>
-                                        <p style="text-indent: 0.5in;">/master=DNS_MAITRE</p>
-                                        <p style="text-indent: 0.5in;">/domain=NOM_DU_CLIENT</p>
-                                        <p style="text-indent: 0.5in;">/password=MOT DE PASSE_MAINTENANCE</p>
-                                        <p style="text-indent: 0.5in;">&#160;</p>
-                                        <p style="text-indent: 0.5in;">LOG      Change le statut des logs du kernel</p>
-                                        <p style="text-indent: 0.5in;">[OPTIONS]:</p>
-                                        <p style="text-indent: 0.5in;">/server=SERVEUR_KERNEL</p>
-                                        <p style="text-indent: 0.5in;">/level=NIVEAU_DE_TRACE</p>
-                                        <p style="text-indent: 0.5in;">TRACELEVEL : PROFILE(ALL), DEBUG, INFO, WARNING, ERROR, FATAL (ONLY FATAL)</p>
-                                        <p style="text-indent: 0.5in;">/password=MOT DE PASSE_MAINTENANCE</p>
-                                        <p style="text-indent: 0.5in;">&#160;</p>
-                                        <p style="text-indent: 0.5in;">FINDPUK  Extrait tous les codes PUK&#160;dans un fichier texte (.txt)</p>
-                                        <p style="text-indent: 0.5in;">[OPTIONS]:</p>
-                                        <p style="text-indent: 0.5in;">/server=SERVEUR KERNEL</p>
-                                        <p style="text-indent: 0.5in;">/accountpath=chemin/accounts.txt avec comptes</p>
-                                        <p style="text-indent: 0.5in;">/configpath=chemin/config.xml</p>
-                                        <p style="text-indent: 0.5in;">&#160;</p>
-                                        <p style="text-indent: 0.5in;">CHECKSERVER      vérifie le statut du serveur</p>
-                                        <p style="text-indent: 0.5in;">[OPTIONS]:</p>
-                                        <p style="text-indent: 0.5in;">/password=MOT DE PASSE_MAINTENANCE</p>
-                                        <p style="text-indent: 0.5in;">/port=PORT_DU_SERVEUR_KERNEL-- 5744 par défaut</p>
-                                        <p style="text-indent: 0.5in;">Source data : two ways :</p>
-                                        <p>---------------------------------</p>
-                                        <p>-=&gt; SERVERS.XML</p>
-                                        <p>/ServerWebPath=chemin/serveurs.xml</p>
-                                        <p>---------------------------------</p>
-                                        <p>-=&gt; SQL Table ou Vue</p>
-                                        <p>/dbserver=Nom du serveur de base de données</p>
-                                        <p>/dbdatabase=Nom de la base de données</p>
-                                        <p>/dbaccount=Compte d'accès à la base de données</p>
-                                        <p>/dbpassword=Mot de passe du compte d'accès à la base de données</p>
-                                        <p>/dbtable=Nom de la table ou nom de la vue de la base de données</p>
-                                        <p>&#160;</p>
+                                        <div class="codeSnippet"><a class="codeSnippetCopyButton" role="button" href="javascript:void(0);">Copier</a>
+                                            <div class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>RESTORESHADOW&#160;&#160;&#160;&#160;Restaure toutes les files shadow manquantes<br />[OPTIONS]:<br />/server=SERVEURKERNEL<br />/password=MOT DE PASSE_MAINTENANCE<br />&#160;<br />CREATEALL Crée tous les périphériques partagés (avec port IP)<br />[OPTIONS]:<br />/server=SERVEURDNS<br />/password=MOT DE PASSE_MAINTENANCE<br />/obfuscate=true : masque le titre du document.<br />/blacklist=chemin/folder.txt : Contient le nom de tous les pilotes placés sur liste noire<br />/force=true&#160;&#160;&#160;&#160;&#160;(force) GROUPE&#160;DE&#160;FILE=FILE&#160;RESEAU.<br />(défaut) GROUPE DE&#160;FILE= NOM DU&#160;SERVEUR.<br />&#160;<br />MERGE&#160;&#160;&#160;&#160;Transfère toutes les files d'impression externes vers un autre serveur<br />[OPTIONS]:<br />/slave=DNS_ESCLAVE<br />/master=DNS_MAITRE<br />/domain=NOM_DU_CLIENT<br />/password=MOT DE PASSE_MAINTENANCE<br />&#160;<br />LOG&#160;&#160;&#160;&#160;&#160;&#160;Change le statut des logs du kernel<br />[OPTIONS]:<br />/server=SERVEUR_KERNEL<br />/level=NIVEAU_DE_TRACE<br />TRACELEVEL : PROFILE(ALL), DEBUG, INFO, WARNING, ERROR, FATAL (ONLY FATAL)<br />/password=MOT DE PASSE_MAINTENANCE<br />&#160;<br />FINDPUK&#160;&#160;Extrait tous les codes PUK&#160;dans un fichier texte (.txt)<br />[OPTIONS]:<br />/server=SERVEUR KERNEL<br />/accountpath=chemin/accounts.txt avec comptes<br />/configpath=chemin/config.xml<br />&#160;<br />CHECKSERVER&#160;&#160;&#160;&#160;&#160;&#160;vérifie le statut du serveur<br />[OPTIONS]:<br />/password=MOT DE PASSE_MAINTENANCE<br />/port=PORT_DU_SERVEUR_KERNEL-- 5744 par défaut<br />Source data : two ways :<br />---------------------------------<br />-=&gt; SERVERS.XML<br />/ServerWebPath=chemin/serveurs.xml<br />---------------------------------<br />-=&gt; SQL Table ou Vue<br />/dbserver=Nom du serveur de base de données<br />/dbdatabase=Nom de la base de données<br />/dbaccount=Compte d'accès à la base de données<br />/dbpassword=Mot de passe du compte d'accès à la base de données<br />/dbtable=Nom de la table ou nom de la vue de la base de données</code></pre>
+                                            </div>
+                                        </div>
                                         <h3>Gestion des badges</h3>
-                                        <p style="text-indent: 0.5in;">CHKUSER  Supprime tous les badges pour un utilisateur qui n'existe plus dans l'annuaire.</p>
-                                        <p style="text-indent: 0.5in;">[OPTIONS]:</p>
-                                        <p style="text-indent: 0.5in;">/configpath= chemin du fichier Config.xml </p>
-                                        <p style="text-indent: 0.5in;">/forceDelete=true : supprime toutes les entrées (sans confirmation)</p>
+                                        <div class="codeSnippet"><a class="codeSnippetCopyButton" role="button" href="javascript:void(0);">Copier</a>
+                                            <div class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>CHKUSER&#160;&#160;Supprime tous les badges pour un utilisateur qui n'existe plus dans l'annuaire.<br />[OPTIONS]:<br />/configpath= chemin du fichier Config.xml&#160;<br />/forceDelete=true : supprime toutes les entrées (sans confirmation)</code></pre>
+                                            </div>
+                                        </div>
                                         <p>&#160;</p>
                                         <h3>Configuration de la sécurité</h3>
-                                        <p style="text-indent: 0.5in;">CHANGEPASSWORDENCRYPTION         change (et active) l'obfuscationdes mots de passe sur les serveurs</p>
-                                        <p style="text-indent: 0.5in;">/enabled=true|false </p>
-                                        <p style="text-indent: 0.5in;">(false par défaut)</p>
-                                        <p style="text-indent: 0.5in;">&#160;</p>
-                                        <p style="text-indent: 0.5in;">[OPTIONS LOCAL (serveur unique)]:</p>
-                                        <p style="text-indent: 0.5in;">/server=nom_serveur_dns - localhost par défaut</p>
-                                        <p style="text-indent: 0.5in;">/password=mot_de_passe de maintenance</p>
-                                        <p style="text-indent: 0.5in;">/enabled=true|false - (false par défaut)</p>
-                                        <p style="text-indent: 0.5in;">/algorithm=rot13|base64|baka|aes - Par défaut : aes si activé=true, (plain autrement)</p>
-                                        <p style="text-indent: 0.5in;">&#160;</p>
-                                        <p style="text-indent: 0.5in;">[OPTIONS MASTER/SLAVE (avec propagation sur plusieurs serveurs)]:</p>
-                                        <p style="text-indent: 0.5in;">/master=dnsmaître</p>
-                                        <p style="text-indent: 0.5in;">/masterport=0 - 0 par défaut, trouvera le port automatiquement</p>
-                                        <p style="text-indent: 0.5in;">/password=mot_de_passe_de_maintenance</p>
-                                        <p style="text-indent: 0.5in;">/algorithm=rot13|base64|baka|aes - Par défaut : aes si activé=true, (plain autrement)</p>
-                                        <p style="text-indent: 0.5in;">/parallel=true|false - Précise la manière dont les serveurs Watchdoc procèdent (séquentiellement ou parallèle)</p>
-                                        <p>&#160;</p>
+                                        <div class="codeSnippet"><a class="codeSnippetCopyButton" role="button" href="javascript:void(0);">Copier</a>
+                                            <div class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>CHANGEPASSWORDENCRYPTION change (et active) l'obfuscationdes mots de passe sur les serveurs<br />/enabled=true|false&#160;<br />(false par défaut)<br />&#160;<br />[OPTIONS LOCAL (serveur unique)]:<br />/server=nom_serveur_dns - localhost par défaut<br />/password=mot_de_passe de maintenance<br />/enabled=true|false - (false par défaut)<br />/algorithm=rot13|base64|baka|aes - Par défaut : aes si activé=true, (plain autrement)<br />&#160;<br />[OPTIONS MASTER/SLAVE (avec propagation sur plusieurs serveurs)]:<br />/master=dnsmaître<br />/masterport=0 - 0 par défaut, trouvera le port automatiquement<br />/password=mot_de_passe_de_maintenance<br />/algorithm=rot13|base64|baka|aes - Par défaut : aes si activé=true, (plain autrement)<br />/parallel=true|false - Précise la manière dont les serveurs Watchdoc procèdent (séquentiellement ou parallèle)</code></pre>
+                                            </div>
+                                        </div>
                                         <h3>RestAPI&#160;avec certificats</h3>
-                                        <p style="text-indent: 0.5in;">REGENCLIENTCERT  Regénère un certificat sur le serveur (ex: tools)</p>
-                                        <p style="text-indent: 0.5in;">[OPTIONS]:</p>
-                                        <p style="text-indent: 0.5in;">/server="localhost" ip ou fqdn du serveur qui a besoin de régénérer son propre certificat</p>
-                                        <p style="text-indent: 0.5in;">/port="5744" port de l'API&#160;Crystal</p>
-                                        <p style="text-indent: 0.5in;">/certid="tools" nom du certificat à supprimer ou regénérer</p>
-                                        <p style="text-indent: 0.5in;">/password=MOT_DE_PASSE_MAINTENANCE </p>
-                                        <p style="text-indent: 0.5in;">/auth="auto" utilisez cette valeur si vous ne souhaitez pas fournir un mot de passe et que l'utilisateur qui exécute la précédure est opérateur dans  Watchdoc</p>
-                                        <p>&#160;</p>
-                                        <p style="text-indent: 0.5in;">REGENDOMCERT     Regénère le certificat du domaine sur le serveur Maître du domaine </p>
-                                        <p style="text-indent: 0.5in;">[OPTIONS]:</p>
-                                        <p style="text-indent: 0.5in;">/configpath="Chemin_Vers_Maître_Config.xml" Si précisé, regénère le certificat pour un serveur hors-ligne. Si non précisé, contactera le serveur avec d'autres paramètres.</p>
-                                        <p style="text-indent: 0.5in;">/server="localhost" ip ou fqdn du serveur qui a besoin de regénérer son propre certificat</p>
-                                        <p style="text-indent: 0.5in;">/port="5744" port de l'API Crystal</p>
-                                        <p style="text-indent: 0.5in;">/password=MOT_DE_PASSE_MAINTENANCE</p>
-                                        <p style="text-indent: 0.5in;">/auth="auto"  utilisez cette valeur si vous ne souhaitez pas fournir un mot de passe et que l'utilisateur qui exécute la précédure est opérateur dans  Watchdoc</p>
-                                        <p>&#160;</p>
-                                        <p style="text-indent: 0.5in;">PATCH    Fournit un chemin rapide pour corriger la configuration.</p>
-                                        <p style="text-indent: 0.5in;">[OPTIONS]:</p>
-                                        <p style="text-indent: 0.5in;">/xpath="serveur/local[@id=\"test\"]" xpath (chemin) du noeud où appliquer l'action</p>
-                                        <p style="text-indent: 0.5in;">/value="true" valeur à inclure dans le noeud si l'action est Create / CreateOrUpdate / Update [Inutile si l'action est Delete]</p>
-                                        <p style="text-indent: 0.5in;">[OPTIONAL OPTIONS]:</p>
-                                        <p style="text-indent: 0.5in;">/action="CreateOrUpdate" Les différentes valeurs sont Create | CreateOrUpdate (par défaut) | Update | Delete</p>
-                                        <p style="text-indent: 0.5in;">/configpath="Config.xml" chemin du fichier de configuration (où se trouve le certificate). </p>
-                                        <p style="text-indent: 0.5in;">Par défaut c'est le chemin du dossier Doxense créé lors de l'installation.</p>
-                                        <p style="text-indent: 0.5in;">/certid="tools" Identifiant du certificat à utiliser pour s'authentifier à la RestAPI</p>
-                                        <p style="text-indent: 0.5in;">/server="localhost" serveur sur lequel l'opération doit être menée</p>
-                                        <p style="text-indent: 0.5in;">/port=5753 port qui sera utilisé pour contacter l'API&#160;du serveur</p>
-                                        <p>&#160;</p>
-                                        <p style="text-indent: 0.5in;">DELETEQUEUEBYIDFROMFILE  Fournit un chemin ramide pour supprimer des noeuds de files depuis le fichier de configuration.</p>
-                                        <p style="text-indent: 0.5in;">[OPTIONS]:</p>
-                                        <p style="text-indent: 0.5in;">/configpath="Config.xml" chemin du fichier de configuration. </p>
-                                        <p style="text-indent: 0.5in;">Par défaut, c'est le chemin du dossier Doxense créé à l'nstallation.</p>
-                                        <p style="text-indent: 0.5in;">/queueid="SOME_QUEUE_ID" Identifiant de la file qui doit être retirée de la configuration.</p>
-                                        <p style="text-indent: 0.5in;">MAILWESPHONE     envoie un mail aux utilisateurs les informant qu'ils peuvent utiliser WESphone et fournissant l'URL de  WESphone URL.</p>
-                                        <p style="text-indent: 0.5in;">[OPTIONS]:</p>
-                                        <p style="text-indent: 0.5in;">/wesphoneid=the id of the WESphone instance you created (mandatory)</p>
-                                        <p>&#160;</p>
-                                        <p>POUR&#160;LES&#160;MAILS:</p>
-                                        <p>/csv=c:/MonChemin/MonCsv.csv (optionnel)</p>
-                                        <p>monCsv.csv peut contenir une ou deux 'colonnes' .l'une nommée <strong>Account </strong>et l'autre <strong>Mail</strong>.</p>
-                                        <p>La colonne Account (facultative) correspond au compte de l'utilisateur : DOMAIN\Username. Si elle n'est pas fournie, le courrier ne sera pas personnalisé avec le nom complet de l'utilisateur.</p>
-                                        <p>La colonne Mail (facultative) correspond au courrier de l'utilisateur. Si elle n'est pas fournie, le courrier de l'utilisateur sera récupéré à partir du nom d'utilisateur si possible.</p>
-                                        <p>/separator=virgule ou tabulation comme séparateur pour le csv. (obligatoire)</p>
-                                        <p>/mails=adresses mail@additionnels@separés par@le séparateur précisé dans le paramétrage (facultatif)</p>
-                                        <p>Note : vous pouvez préciser soit les mails, soit le csv, soit les deux paramètres. Le paramètre séparateur est obligatoire.</p>
-                                        <p>/message=Remplacer le message générique par un message personnalisé. (facultatif)</p>
-                                        <p>/certificate=Chemin vers le certificat auquel les utilisateurs doivent faire confiance sur leur téléphone. (facultatif)</p>
-                                        <p>&#160;</p>
-                                        <p>POUR&#160;LES&#160;APPELS&#160;SERVEUR WATCHDOC:</p>
-                                        <p style="text-indent: 0.5in;">/host=SERVEURKERNEL (optionnel) -- (localhost par défaut)</p>
-                                        <p style="text-indent: 0.5in;">/port=PORT_SERVEUR_KERNEL (optionnel) -- (5744 par défaut)</p>
-                                        <p style="text-indent: 0.5in;">/password=MOT_DE_PASSE_MAINTENANCE (optionnel)</p>
-                                        <p style="text-indent: 0.5in;">REFRESHWMLS      recharger les fichiers wml.</p>
-                                        <p style="text-indent: 0.5in;">[OPTIONS]:</p>
-                                        <p style="text-indent: 0.5in;">POUR&#160;UN&#160;APPEL&#160;AU&#160;SERVEUR&#160;WATCHDOC:</p>
-                                        <p style="text-indent: 0.5in;">/host=SERVEUR_KERNEL (optionnel) -- (localhost par défaut)</p>
-                                        <p style="text-indent: 0.5in;">/port=PORT_SERVEUR_ERNEL (optionnel) -- (5744 par défaut)</p>
-                                        <p style="text-indent: 0.5in;">/password=MOTDEPASSE_MAINTENANCE (optionnel)</p>
-                                        <p style="text-indent: 0.5in;">[REMARQUES]:</p>
-                                        <p style="text-indent: 0.5in;">Ne modifiez pas les fichiers .wml d'origine.&#160;</p>
-                                        <p style="text-indent: 0.5in;">Vous pouvez écraser les clés .wml existantes en créant un fichier  lang_[application].override.[culture].wml</p>
+                                        <div class="codeSnippet"><a class="codeSnippetCopyButton" role="button" href="javascript:void(0);">Copier</a>
+                                            <div class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>REGENCLIENTCERT&#160;&#160;Regénère un certificat sur le serveur (ex: tools)<br />[OPTIONS]:<br />/server="localhost" ip ou fqdn du serveur qui a besoin de régénérer son propre certificat<br />/port="5744" port de l'API&#160;Crystal<br />/certid="tools" nom du certificat à supprimer ou regénérer<br />/password=MOT_DE_PASSE_MAINTENANCE&#160;<br />/auth="auto" utilisez cette valeur si vous ne souhaitez pas fournir un mot de passe et que l'utilisateur qui exécute la précédure est opérateur dans&#160;&#160;Watchdoc<br />&#160;<br />REGENDOMCERT&#160;&#160;&#160;&#160;&#160;Regénère le certificat du domaine sur le serveur Maître du domaine&#160;<br />[OPTIONS]:<br />/configpath="Chemin_Vers_Maître_Config.xml" Si précisé, regénère le certificat pour un serveur hors-ligne. Si non précisé, contactera le serveur avec d'autres paramètres.<br />/server="localhost" ip ou fqdn du serveur qui a besoin de regénérer son propre certificat<br />/port="5744" port de l'API Crystal<br />/password=MOT_DE_PASSE_MAINTENANCE<br />/auth="auto"&#160;&#160;utilisez cette valeur si vous ne souhaitez pas fournir un mot de passe et que l'utilisateur qui exécute la précédure est opérateur dans&#160;&#160;Watchdoc<br />&#160;<br />PATCH&#160;&#160;&#160;&#160;Fournit un chemin rapide pour corriger la configuration.<br />[OPTIONS]:<br />/xpath="serveur/local[@id=\"test\"]" xpath (chemin) du noeud où appliquer l'action<br />/value="true" valeur à inclure dans le noeud si l'action est Create / CreateOrUpdate / Update [Inutile si l'action est Delete]<br />[OPTIONAL OPTIONS]:<br />/action="CreateOrUpdate" Les différentes valeurs sont Create | CreateOrUpdate (par défaut) | Update | Delete<br />/configpath="Config.xml" chemin du fichier de configuration (où se trouve le certificate).&#160;<br />Par défaut c'est le chemin du dossier Doxense créé lors de l'installation.<br />/certid="tools" Identifiant du certificat à utiliser pour s'authentifier à la RestAPI<br />/server="localhost" serveur sur lequel l'opération doit être menée<br />/port=5753 port qui sera utilisé pour contacter l'API&#160;du serveur<br />&#160;<br />DELETEQUEUEBYIDFROMFILE&#160;&#160;Fournit un chemin ramide pour supprimer des noeuds de files depuis le fichier de configuration.<br />[OPTIONS]:<br />/configpath="Config.xml" chemin du fichier de configuration.&#160;<br />Par défaut, c'est le chemin du dossier Doxense créé à l'nstallation.<br />/queueid="SOME_QUEUE_ID" Identifiant de la file qui doit être retirée de la configuration.<br />MAILWESPHONE&#160;&#160;&#160;&#160;&#160;envoie un mail aux utilisateurs les informant qu'ils peuvent utiliser WESphone et fournissant l'URL de&#160;&#160;WESphone URL.<br />[OPTIONS]:<br />/wesphoneid=the id of the WESphone instance you created (mandatory)<br />&#160;<br />POUR&#160;LES&#160;MAILS:<br />/csv=c:/MonChemin/MonCsv.csv (optionnel)<br />monCsv.csv peut contenir une ou deux 'colonnes' .l'une nommée Account et l'autre Mail.<br />La colonne Account (facultative) correspond au compte de l'utilisateur : DOMAIN\Username. Si elle n'est pas fournie, le courrier ne sera pas personnalisé avec le nom complet de l'utilisateur.<br />La colonne Mail (facultative) correspond au courrier de l'utilisateur. Si elle n'est pas fournie, le courrier de l'utilisateur sera récupéré à partir du nom d'utilisateur si possible.<br />/separator=virgule ou tabulation comme séparateur pour le csv. (obligatoire)<br />/mails=adresses mail@additionnels@separés par@le séparateur précisé dans le paramétrage (facultatif)<br />Note : vous pouvez préciser soit les mails, soit le csv, soit les deux paramètres. Le paramètre séparateur est obligatoire.<br />/message=Remplacer le message générique par un message personnalisé. (facultatif)<br />/certificate=Chemin vers le certificat auquel les utilisateurs doivent faire confiance sur leur téléphone. (facultatif)<br />&#160;<br />POUR&#160;LES&#160;APPELS&#160;SERVEUR WATCHDOC:<br />/host=SERVEURKERNEL (optionnel) -- (localhost par défaut)<br />/port=PORT_SERVEUR_KERNEL (optionnel) -- (5744 par défaut)<br />/password=MOT_DE_PASSE_MAINTENANCE (optionnel)<br />REFRESHWMLS&#160;&#160;&#160;&#160;&#160;&#160;recharger les fichiers wml.<br />[OPTIONS]:<br />POUR&#160;UN&#160;APPEL&#160;AU&#160;SERVEUR&#160;WATCHDOC:<br />/host=SERVEUR_KERNEL (optionnel) -- (localhost par défaut)<br />/port=PORT_SERVEUR_ERNEL (optionnel) -- (5744 par défaut)<br />/password=MOTDEPASSE_MAINTENANCE (optionnel)<br />[REMARQUES]:<br />Ne modifiez pas les fichiers .wml d'origine.&#160;<br />Vous pouvez écraser les clés .wml existantes en créant un fichier&#160;&#160;lang_[application].override.[culture].wml</code></pre>
+                                            </div>
+                                        </div>
                                     </div>
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">

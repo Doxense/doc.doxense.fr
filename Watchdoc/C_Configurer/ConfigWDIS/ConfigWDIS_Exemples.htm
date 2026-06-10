@@ -206,21 +206,23 @@
                                             <li>
                                                 <p class="Liste_num_1">Export des impressions du 01/03/2010 jusqu’au 31/03/2010 dans un fichier CSV. </p>
                                                 <p class="Liste_num_1">Les dates sont à renseigner avec le format AAAAMMJJ :</p>
+                                                <div class="codeSnippet"><a class="codeSnippetCopyButton" role="button" href="javascript:void(0);">Copier</a>
+                                                    <div class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>WDIS -csv -file="c:\temp\test.csv" -from=20100301 -to=20100331 EXPORT QUEUES</code></pre>
+                                                    </div>
+                                                </div>
                                             </li>
                                         </ul>
-                                        <blockquote>
-                                            <p><span style="font-family: 'Courier New'; font-weight: bold;">WDIS -csv -file="c:\temp\test.csv" -from=20100301 -to=20100331 EXPORT QUEUES</span>
-                                            </p>
-                                            <p>&#160;</p>
-                                        </blockquote>
+                                        <p>&#160;</p>
                                         <ul>
                                             <li>
-                                                <p class="Liste_num_1">Export des impressions du mois dernier de tous les consommables &lt;20% dans un fichier CSV : </p>
+                                                <p class="Liste_num_1">Export des impressions du mois dernier de tous les consommables &lt;20% dans un fichier CSV : <br /></p>
+                                                <div class="codeSnippet"><a class="codeSnippetCopyButton" role="button" href="javascript:void(0);">Copier</a>
+                                                    <div class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>WDIS -file=C:\temp\lowconso.csv –period=lastmonth –csv EXPORT SUPPLIES</code></pre>
+                                                    </div>
+                                                </div>
                                             </li>
                                         </ul>
                                         <blockquote>
-                                            <p class="Bold"><span style="font-family: 'Courier New'; font-weight: bold;">WDIS -file=C:\temp\lowconso.csv –period=lastmonth –csv EXPORT SUPPLIES</span>
-                                            </p>
                                             <p>&#160;</p>
                                             <p>
                                                 <img src="../../Z_Resources/Images/02_Captures/Config_WDIS_ExempleExport.png" style="width: 1156px;height: 49px;" />
@@ -230,12 +232,12 @@
                                         <ul>
                                             <li>
                                                 <p class="Liste_num_1">Export et envoi par mail, pour le mois en cours, des compteurs SNMP du serveur PRINT1 au format MS<sup>®</sup> Excel, en passant par le serveur SMTP&#160;précisé.</p>
+                                                <div class="codeSnippet"><a class="codeSnippetCopyButton" role="button" href="javascript:void(0);">Copier</a>
+                                                    <div class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>WDIS -smtp=192.168.1.1 -period=thismonth -mail=test@doxense.fr -excel -server=PRINT01 EXPORT HARDWARECOUNTERS</code></pre>
+                                                    </div>
+                                                </div>
                                             </li>
                                         </ul>
-                                        <blockquote>
-                                            <p class="MsgSysteme"><span style="font-family: 'Courier New'; font-weight: bold;">WDIS -smtp=192.168.1.1 -period=thismonth -mail=test@doxense.fr -excel -server=PRINT01 EXPORT HARDWARECOUNTERS</span>
-                                            </p>
-                                        </blockquote>
                                         <blockquote>
                                             <p>
                                                 <img src="../../Z_Resources/Images/02_Captures/Config_WDIS_Exemple_2.png" style="width: 1188px;height: 98px;" />
@@ -245,12 +247,12 @@
                                         <ul>
                                             <li>
                                                 <p class="Liste_num_1">Export et enregistrement dans un fichier MS<sup>®</sup> Excel (en .csv), dans un dossier temporaire, pour le dernier mois glissant, des données  du serveur d’impression PRINT01 en cluster.</p>
+                                                <div class="codeSnippet"><a class="codeSnippetCopyButton" role="button" href="javascript:void(0);">Copier</a>
+                                                    <div class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>WDIS -file=C:\temp\hardware.csv -period=last -range=1m&#160;&#160;-excel -server=PRINT01 EXPORT HARDWARECOUNTERS</code></pre>
+                                                    </div>
+                                                </div>
                                             </li>
                                         </ul>
-                                        <blockquote style="font-family: 'Courier New';">
-                                            <p class="Bold"><strong style="font-family: 'Courier New';">WDIS -file=C:\temp\hardware.csv -period=last -range=1m  -excel -server=PRINT01 EXPORT HARDWARECOUNTERS</strong>
-                                            </p>
-                                        </blockquote>
                                     </div>
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
