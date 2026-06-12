@@ -227,9 +227,9 @@
                                                     </li>
                                                     <li class="tree-node"><a href="#Impossibilit%C3%A9dinstallerunWESUneerreursestproduitelorsdeladerni%C3%A8reop%C3%A9rationCouldnotenableRelayServerauthentication1">Impossibilité d'installer un WES - Une erreur s'est produite lors de la dernière opération - Could not enable Relay Server authentication : (-1)</a>
                                                     </li>
-                                                    <li class="tree-node"><a href="#FonctionScanToMaildunMFPKonicanefonctionnepasavecSMTPWindowsOffice3651">Fonction ScanToMail d'un MFP Konica ne fonctionne pas avec SMTP Windows Office 365</a>
-                                                    </li>
                                                     <li class="tree-node"><a href="#MessagederreurWebbrowsernonactiv%C3%A9Serveurwebnonactiv%C3%A9">Message d'erreur Web browser non-activé / Serveur web non-activé</a>
+                                                    </li>
+                                                    <li class="tree-node"><a href="#FonctionScanToMaildunMFPKonicanefonctionnepasavecSMTPWindowsOffice3651">Fonction ScanToMail d'un MFP Konica ne fonctionne pas avec SMTP Windows Office 365</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -749,27 +749,17 @@
                                             </li>
                                         </ol>
                                         <hr width="100%" size="0" align="center" />
-                                        <h2 id="FonctionScanToMaildunMFPKonicanefonctionnepasavecSMTPWindowsOffice3651" data-magellan-target="FonctionScanToMaildunMFPKonicanefonctionnepasavecSMTPWindowsOffice3651">Fonction ScanToMail d'un MFP Konica ne fonctionne pas avec SMTP Windows Office 365</h2>
-                                        <h3 data-mc-conditions="General.Online">Contexte</h3>
-                                        <p>Lorsqu'un utilisateur active la fonction ScanToMail depuis un WES Konica installé dans un environnement d'impression MS Windows Office 365, il arrive que les mails soient rejetés.</p>
-                                        <h3 data-mc-conditions="General.Online">Cause</h3>
-                                        <p>Dans ce contexte, le rejet est dû au remplacement de l'e-mail d'émission : l'e-mail configuré comme émetteur par défaut dans le MFP est remplacé par l'e-mail de l'utilisateur authentifié sur le WES et génère un rejet de la part du service SMTP de Microsoft (spoofing).</p>
-                                        <h3 data-mc-conditions="General.Online">Résolution</h3>
-                                        <p>Changez la configuration du MFP :</p>
-                                        <p>1. depuis l'interface de configuration du MFP, cliquez sur <strong>Sécurité &gt; Accès Restreint Utilisateur &gt; Changement de l'adresse "De" </strong>&gt;</p>
-                                        <p>2. sélectionnez <strong>Adr. e-mail administrateur</strong> à la place de<strong> Adr. Util Connexion</strong>.</p>
-                                        <hr width="100%" size="0" align="center" />
-                                        <h2 id="MessagederreurWebbrowsernonactivéServeurwebnonactivé" data-magellan-target="MessagederreurWebbrowsernonactivéServeurwebnonactivé"><a name="WebDAV" id="WebDAV">Message d'erreur Web browser non-activé / Serveur web non-activé</a>
-                                        </h2>
+                                        <h2 id="MessagederreurWebbrowsernonactivéServeurwebnonactivé" data-magellan-target="MessagederreurWebbrowsernonactivéServeurwebnonactivé">Message d'erreur Web browser non-activé / Serveur web non-activé</h2>
                                         <p style="text-align: left;"><strong style="font-size: 14pt;">Contexte</strong>
                                         </p>
-                                        <p style="text-align: left;"> Lors de l'installation d'un WES KM, le message suivant s'affiche : Web browser non-activé (ou Serveur web non-activé).<br /></p>
+                                        <p style="text-align: left;"> Lors de l'installation d'un WES KM, le message suivant s'affiche : Web browser non-activé (ou Serveur web non-activé).<br></br></p>
                                         <p>&#160;</p>
                                         <p><b style="font-size: 14pt;">Cause</b>
                                         </p>
                                         <p>Le problème est dû au fait que le protocole WebDAV n'est pas activé sur le périphérique, ce qui empêche le transfert de fichiers entre le serveur Watchdoc et le périphérique d'impression.</p>
                                         <p>
-                                            <br />
+                                            <br>
+                                            </br>
                                         </p>
                                         <p><strong style="font-size: 14pt;">Résolution</strong>
                                         </p>
@@ -812,7 +802,7 @@
                                                 <p>&#160;</p>
                                             </li>
                                         </ol>
-                                        <p style="text-align: left;">NB.&#160;il se peut que l'activation de Web Browser échoue et qu'une clé de licence vous soit demandée :<br /> <br /><img src="ErreurWebDAV_Cle.png" /><img src="ErreurWebDAV_SaisieCle.png" /><br />Dans ce cas : </p>
+                                        <p style="text-align: left;">NB.&#160;il se peut que l'activation de Web Browser échoue et qu'une clé de licence vous soit demandée :<br></br><br></br><img src="ErreurWebDAV_Cle.png"></img><img src="ErreurWebDAV_SaisieCle.png"></img><br></br>Dans ce cas : </p>
                                         <ol>
                                             <li value="1">
                                                 <p style="text-align: left;">dans l'interface d'administration du périphérique d'impression, cherchez et copiez le <strong>MFP&#160;Serial Number</strong>;</p>
@@ -824,12 +814,22 @@
                                                 <p>dans le champ<strong> MFP&#160;Serial Number</strong>, collez le numéro de série du périphérique ;</p>
                                             </li>
                                             <li value="4">
-                                                <p>copiez la clé de licence fournie (To enable via MFP) et collez-la dans l'interface<strong> Licence Code Input</strong> du périphérique d'impression ;</p>
+                                                <p>copiez la clé de licence fournie (To enable via MFP) et collez-la dans l'interface<strong> Licence Code Input</strong> du périphérique d'impression&#160;;</p>
                                             </li>
                                             <li value="5">
                                                 <p>poursuivez la configuration de WebDAV (cf. étape 5).</p>
                                             </li>
                                         </ol>
+                                        <hr class="bookmark-hotspot" width="100%" size="0" align="center" />
+                                        <h2 id="FonctionScanToMaildunMFPKonicanefonctionnepasavecSMTPWindowsOffice3651" data-magellan-target="FonctionScanToMaildunMFPKonicanefonctionnepasavecSMTPWindowsOffice3651">Fonction ScanToMail d'un MFP Konica ne fonctionne pas avec SMTP Windows Office 365</h2>
+                                        <h3 data-mc-conditions="General.Online">Contexte</h3>
+                                        <p>Lorsqu'un utilisateur active la fonction ScanToMail depuis un WES Konica installé dans un environnement d'impression MS Windows Office 365, il arrive que les mails soient rejetés.</p>
+                                        <h3 data-mc-conditions="General.Online">Cause</h3>
+                                        <p>Dans ce contexte, le rejet est dû au remplacement de l'e-mail d'émission : l'e-mail configuré comme émetteur par défaut dans le MFP est remplacé par l'e-mail de l'utilisateur authentifié sur le WES et génère un rejet de la part du service SMTP de Microsoft (spoofing).</p>
+                                        <h3 data-mc-conditions="General.Online">Résolution</h3>
+                                        <p>Changez la configuration du MFP :</p>
+                                        <p>1. depuis l'interface de configuration du MFP, cliquez sur <strong>Sécurité &gt; Accès Restreint Utilisateur &gt; Changement de l'adresse "De" </strong>&gt;</p>
+                                        <p>2. sélectionnez <strong>Adr. e-mail administrateur</strong> à la place de<strong> Adr. Util Connexion</strong>.</p>
                                     </div>
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
