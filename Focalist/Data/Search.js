@@ -1,1 +1,1 @@
-define({r:0.5,st:'Stem',n:1,t:[0],m:[],u:['../A_Admin_Manuel/Entreprises.htm'],s:['0','infrastructur','ultérieur'],p:[['0',0],['choisissez',5],['demandeur',15],['fourni',5],['lisibles',5],['pouvoir',17],['sur',6]]});
+define({r:0.5,st:'Stem',n:1,t:[0],m:[],u:['../A_Admin_Manuel/Entreprises.htm'],s:['0','indiqu','travail'],p:[['0',0],['chaque',11],['de',11],['fixe',1],['les',1],['plus',1],['source',1]]});
