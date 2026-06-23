@@ -213,6 +213,8 @@
                                                     </li>
                                                     <li class="tree-node"><a href="#Probl%C3%A8medequotadoubl%C3%A9lorsdelimpressiondunformatlargeA3">Problème de quota doublé lors de l'impression d'un format large (A3)</a>
                                                     </li>
+                                                    <li class="tree-node"><a href="#Impossibilit%C3%A9dinstallerleWESsurdesp%C3%A9riph%C3%A9riques%C3%A9quip%C3%A9sdufirmwareHP5923">Impossibilité d'installer le WES&#160;sur des périphériques équipés du firmware HP 5.9.2.3</a>
+                                                    </li>
                                                     <li class="tree-node"><a href="#Probl%C3%A8medaffichagedelic%C3%B4nedacc%C3%A8saucarnetdecontactsdansleWES">Problème d'affichage de l'icône d'accès au carnet de contacts dans le WES</a>
                                                     </li>
                                                     <li class="tree-node"><a href="#Probl%C3%A8medinstallationdulecteurdebadge">Problème d'installation du lecteur de badge</a>
@@ -347,6 +349,20 @@
                                                 <p>Lancez une impression grand format pour vérifier que le quota n'est plus doublé.</p>
                                             </li>
                                         </ol>
+                                        <hr width="100%" size="0" align="center" />
+                                        <h2 id="ImpossibilitédinstallerleWESsurdespériphériqueséquipésdufirmwareHP5923" data-magellan-target="ImpossibilitédinstallerleWESsurdespériphériqueséquipésdufirmwareHP5923">Impossibilité d'installer le WES&#160;sur des périphériques équipés du firmware HP 5.9.2.3</h2>
+                                        <p style="font-weight: bold;font-size: 14pt;color: #696969;">Juin 2026</p>
+                                        <p style="font-size: 14pt;"><strong>Contexte</strong> </p>
+                                        <p style="text-align: left;">En tant qu'administrateur, lorsque je tente d'installer le WES&#160;sur un périphérique HP doté du firmware 5.9.2.3, dans le rapport d'installation, un message m'informe que le certificat importé est invalide ou non-supporté&#160;("The certificate is invalid or unsupported")&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="ADE_Echec_InstallWES_Cert.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="967" data-mc-height="326" src="ADE_Echec_InstallWES_Cert.png" tabindex="" style="max-width: 1000px;" /></a><br /><br />Dans les logs, le message "The certificate chain was issued by an authority that is not trusted" indique la cause du problème.<br />Dans l'interface du périphérique (Informations &gt;&#160;Page du journal des événements), l'erreur est décrite ainsi : "Echec SSL Certificat non valide" :<br /><br /><a class="MCPopupThumbnailLink" href="ADE_Echec_InstallWES_Cert_MFP.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="2121" data-mc-height="612" src="ADE_Echec_InstallWES_Cert_MFP.png" tabindex="" style="max-width: 1000px;" /></a><br /></p>
+                                        <p>&#160;</p>
+                                        <p style="font-size: 14pt;"><strong>Cause</strong>
+                                        </p>
+                                        <p>Avec le firmware 5.9.2.3, les périphériques Hewlett Packard exigent que les communications avec Watchdoc soient sécurisées par un certificat dont l’extension CA=TRUE signifie qu’il est marqué comme une autorité de certification (CA). Le certificat auto-signé fourni par Watchdoc par défaut n'est pas suffisant.</p>
+                                        <p>&#160;</p>
+                                        <p style="font-size: 14pt;"><strong>Résolution</strong>
+                                        </p>
+                                        <p>Pour résoudre ce problème de manière pérenne et régulière, nous vous recommandons d'obtenir de la part de votre contrôleur de domaine un certificat d'autorité (CA) pour le site web Watchdoc.</p>
+                                        <p>Suivez ensuite la procédure permettant de générer puis de faire signer un certificat  pour Watchdoc et WSC (cf. <a href="../../C_Configurer/ConfigCertificats/ConfigCertificats_Procedure.htm" target="_blank">Gérer les certificats du serveur web</a>). Au terme de cette procédure, il ne sera pas nécessaire de réinstaller les WES sur les périphériques.</p>
                                         <hr width="100%" size="0" align="center" />
                                         <h2 id="ProblèmedaffichagedelicônedaccèsaucarnetdecontactsdansleWES" data-magellan-target="ProblèmedaffichagedelicônedaccèsaucarnetdecontactsdansleWES">Problème d'affichage de l'icône d'accès au <a name="Icone_Contacts" id="Icone_Contacts"></a>carnet de contacts dans le WES</h2>
                                         <p style="font-size: 14pt;font-weight: bold;">Juin 2025</p>
@@ -555,6 +571,16 @@
                                                 <p>retournez sur le périphérique d'impression pour vérifier que le message d'erreur ne s'affiche plus.</p>
                                             </li>
                                         </ol>
+                                        <hr width="100%" size="0" align="center">
+                                            <ol>
+                                                <li>
+                                                    <p>
+                                                    </p>
+                                                </li>
+                                            </ol>
+                                            <hr />
+                                        </hr>
+                                        <p>&#160;</p>
                                     </div>
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">

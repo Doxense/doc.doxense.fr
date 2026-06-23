@@ -231,6 +231,23 @@
                                         <p>Notez que si le dysfonctionnement relève de la communication avec le serveur mail et que vous n'avez pas activé  la fonction <b>Tracer les communications avec le serveur mail</b>, il convient de le faire (section <b>&#160;Logs du client mail</b>), puis de reproduire l'incident avant de télécharger les logs.&#160;</p>
                                         <p>&#160;</p>
                                         <p>Notez également qu'il est possible que le Support Doxense vous demande d'augmenter le niveau de log du serveur afin de disposer de journaux plus complets.&#160;Dans ce cas, modifiez le niveau suivant les recommandations du Support Doxense (<b>Configuration générale&#160;&gt;&#160;Gestion des logs&#160;&gt;&#160;Niveau de log du serveur</b>), puis reproduisez l'incident avant de télécharger les logs.&#160;</p>
+                                        <h2>Configurer le taux de <a name="rotation" id="rotation"></a>rotation les journaux (logs) Skyprint</h2>
+                                        <p>Par défaut, Skyprint conserve en mémoire 3&#160;fichiers de logs.&#160;Il peut être utile d'augmenter ce chiffre pour permettre une meilleure analyse des dysfonctionnements ou de le diminuer pour ne pas risquer de saturer l'espace disque.<br />Pour modifier ce chiffre :</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>en tant qu'administrateur, accédez au serveur qui héberge Skyprint&#160;;</p>
+                                            </li>
+                                            <li value="2">
+                                                <p>éditez le fichier "C:\Program Files\Doxense\SkyPrint\Data\config.json" : </p>
+                                            </li>
+                                            <li value="3">
+                                                <p>modifiez la valeur de la clé Logging &gt; LogLevel &gt; NbFiles&#160;:<br /><br /><img src="ADE_Config_RotationLogs.png" /></p>
+                                                <p>&#160;</p>
+                                            </li>
+                                            <li value="4">
+                                                <p>enregistrez le fichier Json.</p>
+                                            </li>
+                                        </ol>
                                         <h2><a name="Messages_erreur" id="Messages_erreur"></a>Messages d'erreur</h2>
                                         <h3>Dans la page Accueil</h3>
                                         <table style="width: 100%;mc-table-style: url('../Resources/TableSlylesheets/Standard.css');" class="TableStyle-Standard" cellspacing="0">

@@ -239,7 +239,7 @@
                                                 <p>depuis le <strong>Menu principal</strong>, cliquez sur <strong>Configuration avancée</strong> ; </p>
                                             </li>
                                             <li value="3">
-                                                <p>dans l'interface <strong>Configuration avancée</strong>, cliquez sur <strong>Gestion du domaine</strong> : <br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Domaine_Acces.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1273" data-mc-height="828" src="../../Z_Resources/Images/02_Captures/Config_Domaine_Acces.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a></p>
+                                                <p>dans l'interface <strong>Configuration avancée</strong>, cliquez sur <strong>Gestion du domaine</strong> : <br /><br /><a class="MCPopupThumbnailLink" href="Config_Domaine_Access.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1628" data-mc-height="898" src="Config_Domaine_Access.png" tabindex="" style="max-width: 1000px;" /></a><br /></p>
                                             </li>
                                         </ol>
                                         <h2>Déclarer le serveur master</h2>
@@ -259,13 +259,8 @@
                                                         <p><strong>Nom </strong>: le nom du serveur qui servira à l'identifier dans Watchdoc ;</p>
                                                     </li>
                                                     <li>
-                                                        <p><strong>Description </strong>: un complément d'information permettant d'identifier le serveur si nécessaire&#160;:<br /></p>
+                                                        <p><strong>Description </strong>: un complément d'information permettant d'identifier le serveur si nécessaire&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="Config_Domaine_Creer.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1868" data-mc-height="880" src="Config_Domaine_Creer.png" tabindex="" style="max-width: 1000px;" /></a><br /></p>
                                                         <p>&#160;</p>
-                                                        <p><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Domaine_CreerMaster.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1606" data-mc-height="731" src="../../Z_Resources/Images/02_Captures/Config_Domaine_CreerMaster.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a>
-                                                        </p>
-                                                        <p>
-                                                            <br />
-                                                        </p>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -314,38 +309,53 @@
                                                 <p>dans l'interface de<strong> Gestion du domaine</strong>, les autres serveurs s'ajoutent dans la liste des serveurs, sous le serveur master.</p>
                                             </li>
                                         </ol>
-                                        <h2>Configurer l'accès au serveur web <a name="WebSiteConfig" id="WebSiteConfig"></a>du serveur master</h2>
+                                        <h2>Configurer l'accès au serveur web <a name="WebSiteConfig" id="WebSiteConfig"></a>du serveur master </h2>
                                         <p>Une fois le domaine constitué, il est nécessaire d'indiquer quels sont les serveurs web slaves qui peuvent accéder au serveur web IIS du master. Cette opération repose sur l'outil WebSiteConfig.exe&#160;: </p>
                                         <ol>
                                             <li value="1">
-                                                <p>depuis l'interface d'administration du domaine dans la liste des serveurs, cliquez sur le bouton <b>Exporter la liste des serveurs</b><img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_ExporterListServeurs.png" style="width: 145px;height: 16px;" /> </p>
+                                                <p>depuis l'interface d'administration du domaine dans la liste des serveurs, cliquez sur le bouton <b>Exporter la liste des serveurs</b><img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_ExporterListServeurs.png" style="width: 145px;height: 16px;" /> ;</p>
                                             </li>
                                             <li value="2">
-                                                <p>l'export génère un fichier "servers.xml" dans lequel sont listés tous les serveurs du domaine&#160;; </p>
+                                                <p>l'export génère un fichier "servers.xml" dans lequel sont listés ll'adresse url de la page Mon compte ainsi que tous les serveurs du domaine (master et slaves)&#160;;</p>
                                             </li>
                                             <li value="3">
                                                 <p>conservez ce fichier à disposition et rendez-vous en tant qu'administrateur sur le serveur master&#160;; </p>
                                             </li>
                                             <li value="4">
+                                                <p>poursuivez la procédure en fonction de la version que vous installez. </p>
+                                            </li>
+                                        </ol>
+                                        <h3>Procédure jusqu'à la version Watchdoc <span style="background-color: #ffff00;">v. 6.1.1.</span></h3>
+                                        <ol>
+                                            <li value="1">
                                                 <p>sur le master, exécutez l'outil <b>WebSiteConfig.exe</b> (enregistré par défaut dans le dossier C:\Program Files\Doxense\Watchdoc\Tools)&#160;;</p>
                                             </li>
-                                            <li value="5">
+                                            <li value="2">
                                                 <p>ouvrez en parallèle le fichier "servers.xml"&#160;;</p>
                                             </li>
-                                            <li value="6">
+                                            <li value="3">
                                                 <p>dans l'outil WebSiteConfigurator, cliquez sur <b>Add new</b> ;</p>
                                             </li>
-                                            <li value="7">
+                                            <li value="4">
                                                 <p>dans l'interface <b>Server Connection Properties</b>, reportez l'identifiant et l'URI d'un serveur slave du domaine du fichier "servers.xml"&#160;; </p>
                                             </li>
-                                            <li value="8">
+                                            <li value="5">
                                                 <p>cliquez sur <b>OK</b> pour autoriser le serveur slave  à accéder au serveur web IIS&#160;du master ;</p>
                                             </li>
-                                            <li value="9">
+                                            <li value="6">
                                                 <p>réitérez l'opération pour tous les serveurs slaves du domaine inscrits dans le fichier "servers.xlm"&#160;:</p>
                                                 <p>
                                                     <br /><a class="MCPopupThumbnailLink" href="ConfigDomaineWebSiteConfig.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1284" data-mc-height="506" src="ConfigDomaineWebSiteConfig.png" tabindex="" style="max-width: 1000px;" /></a>
                                                 </p>
+                                            </li>
+                                        </ol>
+                                        <h3>Procédure à partir de la version Watchdoc <span style="background-color: #ffff00;">v. 6.1.1.</span></h3>
+                                        <ol>
+                                            <li value="1">
+                                                <p>sur le serveur IIS,&#160;rendez-vous dans le dossier&#160;Windows\inetpub\wwwroot\includes ; </p>
+                                            </li>
+                                            <li value="2">
+                                                <p>collez le fichier servers.xml dans ce dossier.</p>
                                             </li>
                                         </ol>
                                         <h2>Gérer le domaine avec WCLI</h2>
