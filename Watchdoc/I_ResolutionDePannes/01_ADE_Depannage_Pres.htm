@@ -267,6 +267,69 @@
                                             </li>
                                         </ul>
                                         <h2 id="Watchdoc" data-magellan-target="Watchdoc"><a name="Watchdoc" id="Watchdoc"></a>Watchdoc</h2>
+                                        <p>&#160;</p>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Watchdoc - Problème de connexion à la base de données - Message "The account '[login]' or password has been rejected by the server mssql://..." / Echec de l'ouverture de sesssion de l'utilisateur</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> un utilisateur n'arrive pas à  se connecter avec un compte invité sur un périphérique d'impression.</p>
+                                                <p>Dans les logs, en tant qu'administrateur, je découvre le message suivant : ERROR 03-09 15:22:06.818 [#33] AUTH|SQLGenericAuthority        "Internal error while fetching user for puk '59650': The account 'WatchdocUser' or password has been rejected by the server mssql://WatchdocUser@localhost\WATCHDOC/watchdocstats. Type again the password, or try with another account. THE ACCOUNT MUST BE ENABLED, AND MUST BE GRANTED ACCESS TO THE DATABASE! Original error: Échec de l'ouverture de session de l'utilisateur 'WatchdocUser'. (Code 0x4818 State 1 Class 14 in .Net SqlClient Data Provider)"</p>
+                                                <p>Par ailleurs, dans WSC, le message "Le serveur n'a pas répondu dans le délai imparti..." s'affiche dans l'interface de configuration de la base des Invités.</p>
+                                                <p><strong>Cause :</strong> il est possible que le compte d'accès configuré dans Watchdoc ne soit pas activé dans la base de données MSS SQL. Il est aussi possible que le mot de passe associé au compte d'accès à la base de statistiques MS SQL&#160;soit erroné.&#160;Watchdoc ne peut donc pas identifier les invités dont les comptes sont enregistrés dans la base de statistiques MS&#160;SQL.</p>
+                                                <p><strong>Résolution :</strong> pour résoudre le problème, il convient : </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>dans l'administration de Watchdoc, de vérifier le compte d'accès configuré pour la base de statistiques (Menu principal &gt; Configuration avancée &gt; Base de statistiques &gt; Vérifier la base de données...).</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>si la vérification échoue, cliquez sur "éditer la configuration de la base de données" ; </p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>vérifiez le nom d'utilisateur et le mot de passe saisis ;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>dans SQL Server Management Studio (SSMS), rendez-vous dans l'interface Propriétés de la connexion pour vérifier qu'elle est activée (bdd &gt; Sécurité &gt;&#160;Connexions &gt;&#160;[Utilisateur] &gt; clic-droit Propriétés &gt;&#160;page "Etat" &gt; paramètre Connexion : "Activée") ; </p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p>si la connexion est activée, rendez vous dans l'interface Propriétés &gt;&#160;Général pour modifier le mot de passe ;</p>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p>configurez dans la base Statistiques de Watchdoc le nouveau mot de passe attribué au compte d'accès ;</p>
+                                                    </li>
+                                                    <li value="7">
+                                                        <p>redémarrez le service Watchdoc et WSC ;</p>
+                                                    </li>
+                                                    <li value="8">
+                                                        <p>vérifiez le succès de l'authentification du compte invité sur le périphérique d'impression.</p>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <p>&#160;</p>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Watchdoc - Time out fréquents - Message "Failed to contact the Windows Spooler Service"</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> alors que Watchdoc est installé sur une configuration  robuste (en nombre de coeurs et de RAM), en tant qu'administrateur, je constate de nombreuses pannes (time out lors de connexions) et je dois souvent redémarrer le service Watchdoc. <br />Dans les logs, on trouve le message [Alarm] SPL|WatchdocContext "Failed to contact the Windows Spooler Service !" et "This is certainly due to an undetected spooler crash!!!".<br /></p>
+                                                <p>En analysant le gestionnaire de pilotes d'impression, on constate que le paramètre "Isolement du pilote" varie entre "Partagé" et "Aucun". <br /></p>
+                                                <p><strong>Cause :</strong> pour les pilotes récents, c'est le paramètre "Isolé" qui est recommandé : ainsi, s'il tombe en panne, seul le processus isolé est affecté et n'entraîne pas la panne de tout le système. <br />Windows peut alors redémarrer automatiquement le processus sans dépendre d'un redémarrage manuel de Watchdoc.</p>
+                                                <p><strong>Résolution :</strong> pour résoudre le problème, il convient : </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>d'arrêter les services Watchdoc et spooler Windows ;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>de nettoyer le dossier de spools (par défaut dans C:\Windows\system32\spool\PRINTERS) ;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>dans le gestionnaire d'impression, de vérifier que le paramètre "Isolement du pilote" est fixé à "Isolé" pour tous les pilotes récents&#160;; </p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>de redémarrer le spooler d'impression et de vérifier s'il fonctionne correctement en ouvrant le gestionnaire d'impression</p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p>de redémarrer Watchdoc.</p>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <p>&#160;</p>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Watchdoc - Notifications par e-mails - Après changement du serveur d'e-mails, la notification ne fonctionne plus et l'e-mail de test n'est pas reçu - mai 2026</a></span>
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> en tant qu'administrateur de Watchdoc, vous changez de serveur d'e-mails.&#160;Vous ajustez donc les paramètres du serveur SMTP&#160;dans Watchdoc (nom du serveur, mode de connexion, etc. dans l'interface Configuration des notifications).&#160;<br />Mais après modification, vous constatez que vous ne recevez pas l'e-mail de test. <br /></p>
