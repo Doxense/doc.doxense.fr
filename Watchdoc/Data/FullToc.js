@@ -130,7 +130,7 @@ xmlFullTocData += '            <TocEntry Title=\"FP - Gérer les droits d\'admin
 xmlFullTocData += '            <TocEntry Title=\"FP - Autoriser un droit spécifique à un utilisateur\" Link=\"/H_HowTo/WD_Autoriser_DroitSpecific_Utilisateur.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        </TocEntry>';
 xmlFullTocData += '        <TocEntry Title=\"Emplacements\" Link=\"/C_Configurer/ConfigEmplacements/ConfigEmplacements.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"4\">';
-xmlFullTocData += '            <TocEntry Title=\"Créer les emplacemenents\" Link=\"/C_Configurer/ConfigEmplacements/ConfigEmplacements_Creer.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
+xmlFullTocData += '            <TocEntry Title=\"Créer des emplacemenents\" Link=\"/C_Configurer/ConfigEmplacements/ConfigEmplacements_Creer.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '            <TocEntry Title=\"Configurer un emplacement\" Link=\"/C_Configurer/ConfigEmplacements/ConfigEmplacements_Configurer.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '            <TocEntry Title=\"Associer un serveur à l\'emplacement\" Link=\"/C_Configurer/ConfigEmplacements/ConfigEmplacements_AssocierServeur.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '            <TocEntry Title=\"Importer des emplacements\" Link=\"/C_Configurer/ConfigEmplacements/ConfigEmplacements_Importer.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
