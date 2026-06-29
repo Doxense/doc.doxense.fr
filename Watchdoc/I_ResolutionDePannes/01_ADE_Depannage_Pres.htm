@@ -686,6 +686,23 @@
                                         </div>
                                         <p>&#160;</p>
                                         <h2 id="WSCWatchdocSupervisionConsole" data-magellan-target="WSCWatchdocSupervisionConsole">WSC&#160;-<a name="WSC" id="WSC"></a> Watchdoc Supervision Console</h2>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Identifiant $AUTOSERIAL$ du WES manquantet autres dysfonctionnements lors de la création de files Kyocera ou Sharp via import .csv - juin 2026</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> dans WSC, en tant qu'administrateur, je crée des files Kyocera et Sharp en masse par import d'un fichier .csv. Alors que l'identifiant est renseigné avec la valeur $AUTOSERIAL$ dans le .csv, il n'est pas récupéré lors de l'import.&#160;Les files sont donc créées sans identifiants des files d'impression Kyocera "Autoserial" ne sont pas pris en compte : les files sont créées sans identifiant.</p>
+                                                <p>Par ailleurs, la valeur saisie dans la colonne ModelName du fichier .csv modifie l'installation du pilote : lorsque le 'printer model" est indiqué, le pilote est correctement installé ; en revanche, lorsque le nom du modèle est indiqué, c'est un autre pilote quii est installé.&#160;</p>
+                                                <p><strong>Résolution :</strong> pour résoudre ce dysfonctionnement, mettez à jour Watchdoc et WSC en <a href="../A_Getting_Started/Release_611.htm">version 6.1.1.5654</a> qui comporte un correctif.</p>
+                                            </div>
+                                        </div>
+                                        <p>
+                                            <br />
+                                        </p>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Message d'erreur - Process exited prematurely with code -532462766 - juin 2026</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> dans WSC fonctionnant avec des comptes GMSA, en tant qu'administrateur, je lance une mise à jour.&#160;La mise à jour échoue et le message d'erreur suivant s'affiche : Failed to apply the update locally : Process exited prematurely with code -532462766<br /></p>
+                                                <p><strong>Résolution :</strong> pour résoudre ce dysfonctionnement, mettez à jour Watchdoc et WSC en <a href="../A_Getting_Started/Release_611.htm">version 6.1.1.5654</a> qui comporte un correctif.</p>
+                                            </div>
+                                        </div>
+                                        <p>&#160;</p>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Message d'erreur - Propagation de mise à jour Watchdoc :  "GetPackageFromMaster.&#160;Security check failed.&#160;Removing package"</a></span>
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> dans WSC, en tant qu'administrateur, je lance la propagation de la mise à jour après avoir téléchargé le package de la nouvelle version.&#160;<br />Le message d'erreur suivant s'affiche dans l'interface de suivi des opérations : [GetPackageFromMaster]&#160;[...] Security check failed.&#160;Removing package.<br /></p>
@@ -943,6 +960,7 @@
                                                 <p><strong>Résolution :</strong> il convient d'augmenter la taille limite du tampon de réponse IIS (cf.&#160;<a href="../W_WES/10_Canon/06_Canon_WES_Depannage.htm#Taille_IIS" target="_blank" title="Lien vers l'article de dépannage" alt="Lien vers l'article de dépannage">WES&#160;Canon - Impossible de configurer l'application embarquée</a>).</p>
                                             </div>
                                         </div>
+                                        <p>&#160;</p>
                                         <h3 id="WESHPHewlettPackard" data-magellan-target="WESHPHewlettPackard">WES&#160;HP - Hewlett Packard</h3>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WES&#160;HP. Impossibilité d'installer le WES&#160;sur des périphériques équipés du firmware HP 5.9.2.3 - Juin 2026</a></span>
                                             <div class="MCDropDownBody dropDownBody">
@@ -1000,6 +1018,7 @@
                                                 <p><strong>Résolution :</strong> il convient de vérifier l'adéquation entre le compte d'accès configuré dans les propriétés de la file avec le compte d'accès du périphérique (cf.&#160;<a href="../W_WES/10_HP/06_HP_WES_Depannage.htm#Services_SOAP" target="_blank">Dépanner le WESl</a>).</p>
                                             </div>
                                         </div>
+                                        <p>&#160;</p>
                                         <h3 id="WESKonicaMinolta" data-magellan-target="WESKonicaMinolta">WES&#160;Konica Minolta</h3>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WES Konica-Minolta. The remote OpenAPI device has failed with an InvalidArgument (3) error : ApplicationID.</a></span>
                                             <div class="MCDropDownBody dropDownBody">
@@ -1078,6 +1097,7 @@
                                                 </ol>
                                             </div>
                                         </div>
+                                        <p>&#160;</p>
                                         <h3 id="WESKyocera" data-magellan-target="WESKyocera"><a name="WES_Kyocera" id="WES_Kyocera"></a>WES&#160;Kyocera</h3>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" /></a><a name="WEScan_OCRKO" id="WEScan_OCRKO"></a><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" aria-expanded="false">WES Kyocera. WEScan - Erreur lors de la numérisation, le traitement OCR n'est pas appliqué.</a></span>
                                             <div class="MCDropDownBody dropDownBody">
@@ -1094,6 +1114,7 @@
                                                 <p><strong>Résolution :</strong> il convient de mettre à jour l'application WESAuthentication v3.0.7, embarquée dans le package d'installation Watchdoc v6.0.0.4843.</p>
                                             </div>
                                         </div>
+                                        <p>&#160;</p>
                                         <h3 id="WESLexmark" data-magellan-target="WESLexmark"><a name="WESLexmark" id="WESLexmark"></a>WES&#160;Lexmark</h3>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WES </a><a name="Unite_transfert" id="Unite_transfert"></a><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" aria-expanded="false">Lexmark. Anomalie relative aux consommables sur les modèles CX961 - Message d'alerte informant que l'unité de transfert est à 0% - Juin 2025</a></span>
                                             <div class="MCDropDownBody dropDownBody">
@@ -1160,6 +1181,7 @@
                                                 <p><strong>Résolution :</strong> configurer le paramètre de gestion du journal de numérisations sur le périphérique d'impression (cf. <a href="../W_WES/10_Ricoh/06_Ricoh_WES_Depannage.htm#JournalScannerPlein" target="_blank">Dépanner le WES</a>).&#160;</p>
                                             </div>
                                         </div>
+                                        <p>&#160;</p>
                                         <h3 id="WESSamsung" data-magellan-target="WESSamsung">WES&#160;Samsung</h3>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WES Samsung. Comptabilisation des fax, scans et photocopies inopérante.</a></span>
                                             <div class="MCDropDownBody dropDownBody">
@@ -1168,6 +1190,7 @@
                                                 <p><strong>Résolution :</strong> vérifiez et modifiez au besoin l'adresse IP&#160;enregistrée dans le périphérique correspond bien à l'adresse ip du serveur Watchdoc (cf. WES&#160;Samsung - Problème de comptabilisation des fax, scans et photocopies).</p>
                                             </div>
                                         </div>
+                                        <p>&#160;</p>
                                         <h3 id="WESSharp" data-magellan-target="WESSharp"><a name="WES_Sharp" id="WES_Sharp"></a>WES&#160;Sharp</h3>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WES Sharp. Lors de l'installation du profil WES, message d'erreur "WES Java request to [server_IP] failed with status 302 Moved Temporarily - Déc.&#160;2025</a></span>
                                             <div class="MCDropDownBody dropDownBody">
@@ -1376,6 +1399,7 @@
                                                 <p><strong>Résolution :</strong> Pour ne plus voir ce message, vous devez ajouter le certificat web dans le périphérique afin qu'il puisse être testé.(cf.&#160;Dépanner le WES&#160;Toshiba).</p>
                                             </div>
                                         </div>
+                                        <p>&#160;</p>
                                         <h3 id="WESXerox" data-magellan-target="WESXerox"><a name="WES_Xerox" id="WES_Xerox"></a>WES&#160;Xerox</h3>
                                         <p>&#160;</p>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WES Xerox.  Erreur lors d'un scan avec la fonction native de scan - Terminé (erreur) 027-504.Terminé (erreur) 027-504. Une erreur s'est produite lors de la numérisation vers le serveur SMTP</a></span>
@@ -1805,6 +1829,7 @@ Aucun numéro de port TCP ou UDP n'est associé aux paquets ICMP, car ces numér
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> lors d'une tentative de connexion à WRS, un message indique que "Les autorisations accordées sont insuffisantes".<br /><strong>Cause :</strong> le dysfonctionnement est dû à un problème de configuration de droits.</p>
                                                 <p><strong>Résolution :</strong> il convient d'ajouter des droits à un utilisateur du domaine (cf.&#160;Erreur de Reporting Services : autorisations insuffisantes).</p>
+                                                <p>&#160;</p>
                                             </div>
                                         </div>
                                         <h2 id="WatchdocScanCare" data-magellan-target="WatchdocScanCare">Watchdoc ScanCare</h2>
@@ -1813,7 +1838,16 @@ Aucun numéro de port TCP ou UDP n'est associé aux paquets ICMP, car ces numér
                                                 <p><strong>Contexte :</strong> Il arrive que l'installation automatique de Watchdoc ScanCare sur un périphérique Lexmark échoue. <br /><strong>Résolution :</strong>il est nécessaire de procéder à l'installation manuelle de ScanCare (cf.&#160;Enregistrer manuellement Watchdoc ScanCare sur un périphérique Lexmark).</p>
                                             </div>
                                         </div>
+                                        <p>&#160;</p>
                                         <h2 id="Skyprint" data-magellan-target="Skyprint"><a name="Skyprint" id="Skyprint"></a>Skyprint</h2>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Skyprint - Arrêt automatique de la boîte mail supervisée - Message d'erreur ; "The IMAP server has unexpectedly disconnected" - juin 2026</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> dans Skyprint, après la configuration d'une boîte mail supervisée, son statut est automatiquement modifié : il passe de "running" à "stopped". Dans les logs, on trouve le message d'erreur suivant : MailReceiver[...] stopping loop because of exception: The IMAP server has unexpectedly disconnected".</p>
+                                                <p><strong>Cause :</strong> ce dysfonctionnement&#160;est lié à des conditions d'arrêt de la boîte trop rigoureuses.&#160;</p>
+                                                <p><strong>Résolution :</strong>  il convient de mettre à jour Watchdoc en v.&#160;6.1.1.5654 qui contient le correctif.</p>
+                                            </div>
+                                        </div>
+                                        <p>&#160;</p>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Skyprint - Impossible de configurer le serveur d'envoi des documents - La connexion à Entra ID échoue - Entra ID connection failed</a></span>
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> dans Skyprint, après la configuration du serveur d'envoi des documents, dans la page d'accueil, un msg informe que la connexion n'aboutit pas en raison&#160;de l'échec de l'authentification. Le compte de service configuré pour Skyprint est inscrit dans un annuaire Entra-id.&#160;Dans cet annuaire, la double-authentification (2FA) est activée.&#160;Dans les logs Skyprint, le message "EntraId connection failed", </p>
