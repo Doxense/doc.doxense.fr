@@ -1,6 +1,6 @@
 var xmlFullTocData = "";
 xmlFullTocData += '<?xml version=\"1.0\" encoding=\"utf-8\"?>';
-xmlFullTocData += '<CatapultToc Version=\"1\" conditions=\"General.Online,Langues.FR\" DescendantCount=\"517\">';
+xmlFullTocData += '<CatapultToc Version=\"1\" conditions=\"General.Online,Langues.FR\" DescendantCount=\"519\">';
 xmlFullTocData += '    <TocEntry Title=\"Accueil\" Link=\"/index.html\" ComputedResetPageLayout=\"true\" ComputedFirstTopic=\"true\" DescendantCount=\"0\" />';
 xmlFullTocData += '    <TocEntry Title=\"Versions téléchargeables des produits\" Link=\"/A_Getting_Started/Versions_FR.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ReplaceMergeNode=\"false\" ComputedFirstTopic=\"false\" DescendantCount=\"3\">';
 xmlFullTocData += '        <TocEntry Title=\"6.1.1 - Packages et notes de versions\" Link=\"/A_Getting_Started/Release_611.htm\" StartSection=\"false\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
@@ -48,10 +48,11 @@ xmlFullTocData += '        <TocEntry Title=\"Déplacer Watchdoc d\'un domaine AD
 xmlFullTocData += '        <TocEntry Title=\"Désinstaller Watchdoc\" Link=\"/C_Configurer/ConfigDomaine/ConfigDomaine_Desinstallation.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Sauvegarder Watchdoc\" Link=\"/H_HowTo/WD5_GestionCourante_Sauvegarder_WD.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '    </TocEntry>';
-xmlFullTocData += '    <TocEntry Title=\"Mettre à jour / restaurer\" ComputedFirstTopic=\"false\" DescendantCount=\"10\">';
+xmlFullTocData += '    <TocEntry Title=\"Mettre à jour / restaurer\" ComputedFirstTopic=\"false\" DescendantCount=\"11\">';
 xmlFullTocData += '        <TocEntry Title=\"Prérequis et préparation de mise à jour\" Link=\"/E_MettreAJour/WD61_MaJ_WD_Prerequis.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Synthèse de mise à jour vers v. 6.1.1\" Link=\"/E_MettreAJour/MAJ_presentation.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Sauvegarder la précédente version site web\" Link=\"/E_MettreAJour/MAJ_WD_SauvSiteWeb.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
+xmlFullTocData += '        <TocEntry Title=\"Mettre à jour page Mon Compte v.2 \" Link=\"/B_Installer/Installer_PageMCv2.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Mettre à jour Watchdoc avec l\'assistant\" Link=\"/E_MettreAJour/WD61_MaJ_WD_Procedure.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Mettre à jour WSC\" Link=\"/F_WSC/WSC_Gestion_MiseAJour.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Mettre à jour un domaine via WSC\" Link=\"/E_MettreAJour/WSC_Gestion_MettreAJour_Domaine.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
@@ -60,7 +61,7 @@ xmlFullTocData += '        <TocEntry Title=\"Mettre à jour en ligne de commande
 xmlFullTocData += '        <TocEntry Title=\"Mettre à jour WPC for Windows\" Link=\"/E_MettreAJour/WD611_MaJ_WPCW_Procedure.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Restaurer une version antérieure\" Link=\"/E_MettreAJour/WD61_Restaurer_WD_Procedure.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '    </TocEntry>';
-xmlFullTocData += '    <TocEntry Title=\"Administrer Watchdoc\" ComputedFirstTopic=\"false\" DescendantCount=\"125\">';
+xmlFullTocData += '    <TocEntry Title=\"Administrer Watchdoc\" ComputedFirstTopic=\"false\" DescendantCount=\"126\">';
 xmlFullTocData += '        <TocEntry Title=\"Annuaires\" Link=\"/C_Configurer/ConfigAnnuaires/ConfigAnnuaires_Principes.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"15\">';
 xmlFullTocData += '            <TocEntry Title=\"Présentation de l\'interface\" Link=\"/C_Configurer/ConfigAnnuaires/ConfigAnnuaires_PresInterfaceAdmin.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '            <TocEntry Title=\"Configurer\" Link=\"/C_Configurer/ConfigAnnuaires/ConfigAnnuaires_ProcedureCreation.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
@@ -173,10 +174,11 @@ xmlFullTocData += '        <TocEntry Title=\"Paybox\" Link=\"/H_HowTo/WD5_Gestio
 xmlFullTocData += '            <TocEntry Title=\"Configurer\" Link=\"/H_HowTo/WD5_GestionCourante_Paybox_Configurer.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '            <TocEntry Title=\"Recharger\" Link=\"/H_HowTo/WD5_GestionCourante_Paybox_Recharger.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        </TocEntry>';
-xmlFullTocData += '        <TocEntry Title=\"Profils de déblocage web\" Link=\"/C_Configurer/ConfigProfilWeb/ConfigProfilWeb_Principe.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"3\">';
+xmlFullTocData += '        <TocEntry Title=\"Profils de déblocage web\" Link=\"/C_Configurer/ConfigProfilWeb/ConfigProfilWeb_Principe.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"4\">';
 xmlFullTocData += '            <TocEntry Title=\"Présentation de l\'interface\" Link=\"/C_Configurer/ConfigProfilWeb/ConfigProfilWeb_PresInterfaceAdminProfil.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '            <TocEntry Title=\"Configurer\" Link=\"/C_Configurer/ConfigProfilWeb/ConfigProfilWeb_Procedure.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '            <TocEntry Title=\"Activer\" Link=\"/C_Configurer/ConfigProfilWeb/ConfigProfilWeb_Activer.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
+xmlFullTocData += '            <TocEntry Title=\"Mon Compte v. 2\" Link=\"/C_Configurer/ConfigProfilWeb/ConfigProfilWeb_v2_Procedure.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        </TocEntry>';
 xmlFullTocData += '        <TocEntry Title=\"Profils de sécurité\" Link=\"/H_HowTo/WD5_GestionCourante_ProfilsSecurite.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Quota\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"5\">';
