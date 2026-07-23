@@ -221,6 +221,67 @@
                                         <p>&#160;</p>
                                         <p>Chaque service a besoin de dialoguer avec les autres, soit en local, soit via le réseau. En réseau, il faut donc connaître les ports (cf. <a href="FluxReseau_OnPremise.htm" target="_blank" alt="Lien vers le schéma des flux réseau">matrice des flux réseau</a>) nécessaires au bon fonctionnement de la solution.</p>
                                         <p>&#160;</p>
+                                        <p>Par ailleurs, il convient de paramétrer des exclusions sur les antivirus, EDR ou firewall pour faire en sorte qu'ils ne bloquent pas les flux : </p>
+                                        <ol>
+                                            <li value="1">
+                                                <p>Exclusions de processus</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>Watchdoc.exe</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>WatchdocNotificationServer.exe</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>WatchdocTelemetryServer.exe</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>spoolsv.exe</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                        <ol data-mc-continue="true">
+                                            <li value="2">
+                                                <p>Exclusions de dossiers</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>C:\Windows\system32\spool\PRINTERS</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>C:\Program Files\Doxense</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li value="3">
+                                                <p>Exclusions spécifiques aux serveurs d’impression</p>
+                                                <p>Veuillez vous référer à la documentation officielle Microsoft : <a href="https://learn.microsoft.com/fr-fr/defender-endpoint/microsoft-defender-antivirus-exclusions-windows-server" target="_blank">Exclusions recommandées pour serveurs d’impression – Microsoft Defender</a></p>
+                                            </li>
+                                        </ol>
+                                        <ol data-mc-continue="true">
+                                            <li value="4">
+                                                <p>Exclusions par type de fichiers</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>*.shd</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>*.spl</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                        <ol data-mc-continue="true">
+                                            <li value="5">
+                                                <p>Exclusions par dossier (via clé de registre)</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Printers\DefaultSpoolDirectory%system32%\spool\printers\*</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                        <p>&#160;</p>
                                         <p>Les interfaces d'administration et de consultation de Watchdoc sont entièrement web. <br />Elles sont compatibles avec les navigateurs suivants&#160;(mis à jour automatiquement) :</p>
                                         <ul>
                                             <li>
@@ -241,7 +302,7 @@
                                         <p>Par ailleurs, la mise à jour appliquée au serveur master peut être propagée sur l'ensemble des serveurs qui en dépendent (via WSC - Console de supervision).</p>
                                         <p>&#160;</p>
                                         <p>Watchdoc permet l'impression à la demande interserveur lorsque les serveurs appartiennent à un même domaine. L'impression interserveur repose sur un pool dans lequel  les données de configuration des périphériques d'impression et données utilisateurs sont mutualisées.</p>
-                                        <h2>Prérequis propres à WEScan</h2>
+                                        <h2>Prérequis propres à <a name="WEScan" id="WEScan"></a>WEScan</h2>
                                         <p>Watchdoc intègre WEScan, fonctionnalité de numérisation depuis le périphérique d'impression avec envoi du document numérisé vers une adresse e-mail ou vers un dossier spécifique du réseau.</p>
                                         <p>&#160;</p>
                                         <p>L'enregistrement du document numérisé dans un dossier partagé du réseau nécessite de disposer d'un compte disposant d'un droit en écriture et lecture sur ce dossier de destination.&#160;Ce compte doit :</p>

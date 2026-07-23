@@ -206,6 +206,10 @@
                                             <li class="tree-node"><a href="#D%C3%A9pannageMessagesderreurAlertes">Dépannage - Messages d'erreur - Alertes</a>
                                                 <ul>
                                                     <li class="tree-node"><a href="#Watchdoc">Watchdoc</a>
+                                                        <ul>
+                                                            <li class="tree-node"><a href="#Badges">Badges</a>
+                                                            </li>
+                                                        </ul>
                                                     </li>
                                                     <li class="tree-node"><a href="#WSCWatchdocSupervisionConsole">WSC&#160;- Watchdoc Supervision Console</a>
                                                     </li>
@@ -266,7 +270,17 @@
                                                 </ul>
                                             </li>
                                         </ul>
-                                        <h2 id="Watchdoc" data-magellan-target="Watchdoc"><a name="Watchdoc" id="Watchdoc"></a>Watchdoc<br /></h2>
+                                        <h2 id="Watchdoc" data-magellan-target="Watchdoc"><a name="Watchdoc" id="Watchdoc"></a>Watchdoc</h2>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Watchdoc - Annuaire - Erreur de connexion à l'annuaire - An error occurred during the connection to the directory - juin 2026</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> en tant qu'administrateur de Watchdoc, je constate le message d'erreur "An error occurred during the connection to the directory" dans l'interface de configuration des annuaires utilisateurs.</p>
+                                                <p><strong>Cause :</strong> ce problème peut survenir lorsque les paramètres de l'annuaire ne sont pas corrects.</p>
+                                                <p><strong>Résolution :</strong> pour résoudre le problème, rendez-vous dans l'interface de configuration de l'annuaire, section Paramètres pour vérifier les paramètres  DN et Nom ou IP&#160;du serveur LDAP. Utilisez au besoin une commande "ping" pour vérifier la disponibilité du serveur.<br />Enregistrez la configuration après modification des paramètres et vérifiez que le message d'erreur n'apparaît plus.&#160;</p>
+                                            </div>
+                                        </div>
+                                        <p>
+                                            <br />
+                                        </p>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Watchdoc - Emplacements - L'import en masse des emplacements s'arrête en cours de procédure  - juin 2026</a></span>
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> en tant qu'administrateur de Watchdoc, je tente d'importer une liste d'emplacements au format .csv, la procédure s'arrête à la deuxième étape : mon fichier .csv s'inscrit bien dans la boîte de téléchargement, mais lorsque je clique sur Suivant, il ne se passe rien.&#160;</p>
@@ -651,10 +665,26 @@
                                             </div>
                                         </div>
                                         <p>&#160;</p>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Notifications Watchdoc - Problème lié aux notifications type Exchange Online - Failed to get an accessToken from Azure</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> les utilisateurs ne reçoivent plus de notifications.&#160;Dans Watchdoc, lorsque la fonction de notification exploite Exchange Online, la section Etat du système des Notifications affiche le message d'alerte suivant : Le dernier e-mail n'a pas été envoyé correctement. L'erreur suivante s'est produite : Failed to get an accessToken from Azure<br /><strong>Cause :</strong> ce dysfonctionnement est sans doute lié au Secret du client permettant d'accéder à l'application, ce Secret étant doté d'une date d'expiration qui nécessite un renouvellement.&#160;</p>
+                                                <p><strong>Résolution :</strong> vérifiez la valeur du Secret-id dans MS&#160;Entra, renouvelez le secret si nécessaire et reportez sa valeur dans l'interface de configuration des Notifications Watchdoc (cf. <a href="../C_Configurer/ConfigNotifs/ConfigNotifs_Procedure.htm">Configurer les notifications</a>).</p>
+                                            </div>
+                                        </div>
+                                        <p>&#160;</p>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Watchdoc Express - Dysfonctionnement du bouton Repair.</a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> lors d'une tentative de réparation d'une version Watchdoc Express à l'aide du bouton Repair de l'assistant (wizard), l'opération semble se réaliser correctement, mais les raccourcis sont effacés et Watchdoc désinstallé.<br /><strong>Cause :</strong> ce dysfonctionnement est dû à un dysfonctionnement du bouton&#160;</p>
+                                                <p><strong>Résolution :</strong> ne pas utiliser le bouton Repair et procéder à une mise à jour du produit.</p>
+                                            </div>
+                                        </div>
+                                        <p>&#160;</p>
+                                        <h3 id="Badges" data-magellan-target="Badges">Badges</h3>
+                                        <p>&#160;</p>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Badges - Enrôlement des badges impossible : compte utilisateur inconnu - mot de passe incorrect. </a></span>
                                             <div class="MCDropDownBody dropDownBody">
-                                                <p><strong>Contexte :</strong> après mise à jour de Watchdoc, il est impossible d'enrôler un badge : lorsqu'un utilisateur présente son badge non-enrôlé sur le périphérique d'impression, un message d'erreur s'affiche ("compte utilisateur inconnu" ou "mot de passe incorrect") ..<br /><strong>Cause :</strong> ce dysfonctionnement peut être dû à un paramétrage spécifique de l'annuaire CARDS dans lequel sont enregistrés les badges.</p>
-                                                <p><strong>Résolution :</strong> il convient de vérifier le paramètre "Routage" de l'annuaire CARDS :(cf.&#160;Enrôlement des badges impossible).</p>
+                                                <p><strong>Contexte :</strong> après mise à jour de Watchdoc, il est impossible d'enrôler un badge : lorsqu'un utilisateur présente son badge non-enrôlé sur le périphérique d'impression, un message d'erreur s'affiche ("compte utilisateur inconnu" ou "mot de passe incorrect") ..<br /><strong>Cause :</strong> ce dysfonctionnement peut être dû à un paramétrage spécifique de l'annuaire CARDS (Badges) dans lequel sont enregistrés les badges.</p>
+                                                <p><strong>Résolution :</strong> il convient de vérifier le paramètre "Routage" de l'annuaire CARDS (cf.&#160;<a href="ADE_Badges_EnrolementImpossible.htm" target="_blank" alt="Lien vers l'article de dépannage" title="Lien vers l'article de dépannage">Enrôlement des badges impossible</a>).</p>
                                             </div>
                                         </div>
                                         <p>
@@ -668,20 +698,6 @@
                                                 <p>SET crdLOCKED = '0'</p>
                                                 <p>FROM dbo.cards</p>
                                                 <p>WHERE crdLOCKED = '2'</p>
-                                            </div>
-                                        </div>
-                                        <p>&#160;</p>
-                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Notifications Watchdoc - Problème lié aux notifications type Exchange Online - Failed to get an accessToken from Azure</a></span>
-                                            <div class="MCDropDownBody dropDownBody">
-                                                <p><strong>Contexte :</strong> les utilisateurs ne reçoivent plus de notifications.&#160;Dans Watchdoc, lorsque la fonction de notification exploite Exchange Online, la section Etat du système des Notifications affiche le message d'alerte suivant : Le dernier e-mail n'a pas été envoyé correctement. L'erreur suivante s'est produite : Failed to get an accessToken from Azure<br /><strong>Cause :</strong> ce dysfonctionnement est sans doute lié au Secret du client permettant d'accéder à l'application, ce Secret étant doté d'une date d'expiration qui nécessite un renouvellement.&#160;</p>
-                                                <p><strong>Résolution :</strong> vérifiez la valeur du Secret-id dans MS&#160;Entra, renouvelez le secret si nécessaire et reportez sa valeur dans l'interface de configuration des Notifications Watchdoc (cf. <a href="../C_Configurer/ConfigNotifs/ConfigNotifs_Procedure.htm">Configurer les notifications</a>).</p>
-                                            </div>
-                                        </div>
-                                        <p>&#160;</p>
-                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Watchdoc Express - Dysfonctionnement du bouton Repair.</a></span>
-                                            <div class="MCDropDownBody dropDownBody">
-                                                <p><strong>Contexte :</strong> lors d'une tentative de réparation d'une version Watchdoc Express à l'aide du bouton Repair de l'assistant (wizard), l'opération semble se réaliser correctement, mais les raccourcis sont effacés et Watchdoc désinstallé.<br /><strong>Cause :</strong> ce dysfonctionnement est dû à un dysfonctionnement du bouton&#160;</p>
-                                                <p><strong>Résolution :</strong> ne pas utiliser le bouton Repair et procéder à une mise à jour du produit.</p>
                                             </div>
                                         </div>
                                         <p>&#160;</p>
@@ -1283,6 +1299,13 @@
                                             </div>
                                         </div>
                                         <p>&#160;</p>
+                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WES&#160;Toshiba - Impossibilité de s'authentifier par badge - Avril 2026 </a></span>
+                                            <div class="MCDropDownBody dropDownBody">
+                                                <p><strong>Contexte :</strong> après mise à jour de Watchdoc en v. 6.1.0.5206, l'utilisateur ne peut plus s'authentifier par badge sur les périphériques d'impression Toshiba :  lorsqu'un utilisateur présente son badge, le lecteur bippe mais n'ouvre pas la session.&#160;En revanche, l'authentification par code PUK fonctionne.&#160;<br />Comme le problème se produit sur tous les périphériques, cela écarte l'hypothèse d'un problème lié à un lecteur de badge spécifique.&#160;</p>
+                                                <p><strong>Résolution :</strong> il convient de modifier le paramétrage du profil WES : dans la section Périphérique &gt;&#160;Réseau, il faut cocher la case <b>Utiliser une connexion sécurisée avec le périphérique pour les appels SOAP</b> (cf.&#160;<a href="../W_WES/10_Toshiba/03_Toshiba_WES_ConfigProfil.htm#Réseau" target="_blank">Configurer le profil WES&#160;Toshiba</a>).</p>
+                                            </div>
+                                        </div>
+                                        <p>&#160;</p>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WES&#160;Toshiba - Impossibilité de s'authentifier par badge  - Message d'erreur : "?common/error/couldnotsetcookie?" - Février 2026</a></span>
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> avec Watchdoc 6.1.0.4940, alors que WES Toshiba est correctement installé sur des périphériques,  lorsqu’un utilisateur tente de s’authentifier par badge, l’authenfication n’a pas lieu et un message d’erreur s’affiche sur l'écran du périphérique : ?common/error/couldnotsetcookie?</p>
@@ -1554,6 +1577,7 @@ dans la boîte de dialogue, activez le <strong>protocole SOAP.</strong></p>
                                             </div>
                                         </div>
                                         <h2 id="WEScan" data-magellan-target="WEScan"><a name="WEScan" id="WEScan"></a>WEScan</h2>
+                                        <p>&#160;</p>
                                         <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />WEScan - Les numérisations Scan to folder sont bloquées - Fév.&#160;2026</a></span>
                                             <div class="MCDropDownBody dropDownBody">
                                                 <p><strong>Contexte :</strong> lorsqu'un utilisateur utilise la fonction ScanToFolder et qu'une panne (de la base de données) survient, ses numérisations sont bloquées.&#160;<br /><strong>Cause :</strong> cette anomalie survient parce qu'en cas de panne de la base de données, WEScan écrit dans une base de données locale pour garantir la continuité de service. Dans les logs, on constate alors des erreurs relatifs au PrivilegedWorkerManager    "Failed to process PrivilegedWorkerManager Queue"</p>
