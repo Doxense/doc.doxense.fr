@@ -213,7 +213,7 @@
                                                     </li>
                                                     <li class="tree-node"><a href="#Licence">Licence</a>
                                                     </li>
-                                                    <li class="tree-node"><a href="#VersiondeMicrosoftNet">Version de Microsoft® .Net</a>
+                                                    <li class="tree-node"><a href="#VersiondeMicrosoftNetframework">Version de Microsoft® .Net framework</a>
                                                     </li>
                                                     <li class="tree-node"><a href="#Droits">Droits</a>
                                                     </li>
@@ -233,7 +233,7 @@
                                             </li>
                                         </ul>
                                         <h2 id="Arrêtdeproduction" data-magellan-target="Arrêtdeproduction">Arrêt de production</h2>
-                                        <p>La mise à jour nécessite un arrêt de production.<br />Il convient donc de la programmer à un moment où l'impact sur l'activité d'impression n'est pas trop important (idéalement HNO).&#160;</p>
+                                        <p>La mise à jour nécessite un arrêt de production.<br />Il convient donc de la programmer lorsque l'impact sur l'activité d'impression n'est pas trop important (idéalement HNO).&#160;</p>
                                         <h2 id="Licence" data-magellan-target="Licence">Licence</h2>
                                         <p>Pour mettre à jour Watchdoc en version 6.1.x, vous avez besoin d'une <b>nouvelle licence</b>.<br />C'est aussi le cas si la composition de votre architecture a changé (nouveaux serveurs, nouveaux périphériques d'impression, changement de marque de périphériques, notamment).</p>
                                         <p>Pour connaître la version Watchdoc installée sur votre serveur :</p>
@@ -242,24 +242,27 @@
                                                 <p class="Liste_num_1">connectez-vous en tant qu'administrateur dans l'interface web d'administration de Watchdoc&#160;; </p>
                                             </li>
                                             <li value="2">
-                                                <p class="Liste_num_1">depuis le <strong>Menu Principal</strong>, vérifiez le numéro de version affiché&#160;:.<br /><br /><img src="../Z_Resources/Images/02_Captures/WD61_Admin_VerifLicence.png" style="width: 700px;height: auto;" /></p>
+                                                <p class="Liste_num_1">depuis le <strong>Menu Principal</strong>, vérifiez le numéro de version affiché&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/WD61_Admin_VerifLicence.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1606" data-mc-height="846" src="../Z_Resources/Images/02_Captures/WD61_Admin_VerifLicence.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a></p>
                                                 <p class="Liste_num_1">Si nécessaire, consultez la procédure <a href="WD_MaJ_CleLicence.htm" target="_blank">Mettre à jour la clé de licence.</a></p>
                                                 <p class="Liste_num_1">Si nécessaire, <a href="https://downloads.doxense.fr/doc.doxense/DOX_SUP_FDL_FormulaireDemandeLicences_FR.docx">téléchargez le formulaire de demande de licence</a> et communiquez-le au Support Doxense via site <a href="https://connect.doxense.com/hc/fr" target="_blank">Connect</a>.<br /></p>
                                             </li>
                                         </ol>
-                                        <h2 id="VersiondeMicrosoftNet" data-magellan-target="VersiondeMicrosoftNet">Version de Microsoft<sup>®</sup> .Net</h2>
+                                        <h2 id="VersiondeMicrosoftNetframework" data-magellan-target="VersiondeMicrosoftNetframework">Version de Microsoft<sup>®</sup> .Net framework</h2>
                                         <p>Le serveur d'impression et le serveur web&#160;doivent tous deux être équipés au minimum de la version <span class="mc-variable Versions.Dotnet_Framework variable">.net Framework 4.8 de Microsoft</span>  (<a href="https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48" target="_blank" title="Link to the Microsoft web site" alt="Link to the Microsoft web site">à télécharger ici</a>).<br /></p>
                                         <p class="Liste_puce_1">&#160;</p>
-                                        <p class="Liste_puce_1">Pour connaître la version du .Net Framework installée sur votre serveur&#160;: </p>
+                                        <p class="Liste_puce_1">Pour connaître la version du .Net Framework installée sur votre serveur&#160;: <br /></p>
                                         <ol>
                                             <li value="1">
-                                                <p class="Liste_num_1">lancez l'outil de gestion de la base de registre (<strong>regedit</strong>)&#160;;</p>
+                                                <p class="Liste_num_1">saisissez la commande "<strong>regedit</strong>" dans l'outil de recherche MS Windows du serveur pour lancer l'outil de gestion de la base de registre Registy Editor&#160;;</p>
                                             </li>
                                             <li value="2">
-                                                <p class="Liste_num_1">dans l'éditeur de base de registre (Registry Editor), cliquez sur HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework&#160;;</p>
+                                                <p class="Liste_num_1">dans Registry Editor, ouvrez le dossier <strong>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework</strong>&#160;;</p>
                                             </li>
                                             <li value="3">
-                                                <p class="Liste_num_1">sélectionnez le dernier dossier préfixé par <b>"v"</b> dans lequel sont enregistrés les dossiers de versions, cliquez sur <strong>SKUs</strong> et déployez l'arborescence pour connaître la dernière version installée&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/MAJ_WD_Verif_Version_DotNet472.png" style="width: 699px;height: 443px;" /><br /></p>
+                                                <p class="Liste_num_1">ouvrez le dernier dossier préfixé par <b>"v"</b> dans lequel sont enregistrés les dossiers de versions ;</p>
+                                            </li>
+                                            <li value="4">
+                                                <p class="Liste_num_1">ouvrez le dossier <strong>SKUs</strong> et déployez l'arborescence pour connaître la dernière version installée&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/MAJ_WD_Verif_Version_DotNet472.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="953" data-mc-height="611" src="../Z_Resources/Images/02_Captures/MAJ_WD_Verif_Version_DotNet472.png" tabindex="" style="width: 699px;height: 443px;max-width: 1000px;" /></a></p>
                                             </li>
                                         </ol>
                                         <h2 id="Droits" data-magellan-target="Droits">Droits</h2>

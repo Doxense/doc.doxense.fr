@@ -51,6 +51,7 @@ xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"haché\" To
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"compatible\" To=\"compatibil\" FromStem=\"compatibl\" />';
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"marque\" To=\"constructeur\" FromStem=\"marqu\" />';
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"connexion\" To=\"connect\" FromStem=\"connexion\" />';
+xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"billing code\" To=\"cod analyt\" FromStem=\"billing cod\" />';
 xmlSynonymsData += '    </Directional>';
 xmlSynonymsData += '</MadCapSynonyms>';
 MadCap.Utilities.Xhr._FilePathToXmlStringMap.Add('Synonyms', xmlSynonymsData);
