@@ -3,7 +3,6 @@
 let blockNews = document.querySelector('.doc_news--ul');
 
 let arrayContent = [
-	5696
 {
 	date: "05 août 2026",
 	link: "/Watchdoc/A_Getting_Started/Release_611.htm",
