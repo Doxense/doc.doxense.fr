@@ -6,7 +6,7 @@ let arrayContent = [
 {
 	date: "05 août 2026",
 	link: "/Watchdoc/A_Getting_Started/Release_611.htm",
-	content: "nouvelles versions de Watchdoc, Console de Supervision 6.1.1.5696, Watchdoc Print Client for Windows et Skyprint 7.0.6104"
+	content: "nouvelles versions de Watchdoc, Console de Supervision 6.1.1.5696, Watchdoc Print Client for Windows 7.0.6104 et Skyprint 7.0.6104"
 },	
 {
 	date: "07 juillet 2026",
