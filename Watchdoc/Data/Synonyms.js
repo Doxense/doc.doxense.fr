@@ -21,6 +21,8 @@ xmlSynonymsData += '        <DirectionalSynonym From=\"iR-ADV\" To=\"imagerunn a
 xmlSynonymsData += '        <DirectionalSynonym From=\"iP\" To=\"imagepress\" />';
 xmlSynonymsData += '        <DirectionalSynonym From=\"iC\" To=\"imageclass\" />';
 xmlSynonymsData += '        <DirectionalSynonym From=\"iF\" To=\"imageforc\" />';
+xmlSynonymsData += '        <DirectionalSynonym From=\"postscan\" To=\"post-scan\" />';
+xmlSynonymsData += '        <DirectionalSynonym From=\"WPC\" To=\"watchdoc print client\" />';
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"Améliorer\" To=\"amélior\" FromStem=\"amélior\" />';
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"cacher\" To=\"transform\" FromStem=\"cach\" />';
 xmlSynonymsData += '        <DirectionalSynonym Stem=\"true\" From=\"créer\" To=\"cre\" FromStem=\"cré\" />';

@@ -201,7 +201,7 @@
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
                                         <fieldset class="orange">La version 6.1.1 est disponible. <br />Pour la mise à jour, reportez-vous au <a href="../E_MettreAJour/MAJ_presentation.htm" target="_blank">tableau des procédures</a> pour trouver celle qui correspond à votre besoin.&#160;<br />Si vous avez besoin d'une nouvelle licence (à partir de la v. 6.1) ou d'aide pour la mise à jour, contactez l'équipe Support de Doxense en déclarant un ticket dans <a href="https://connect.doxense.com/hc/fr" target="_blank">Connect</a> (précisez le type "licence" ou "tâche" si vous avez besoin d'assistance).<br /></fieldset>
-                                        <h1><a name="aanchor227"></a>
+                                        <h1><a name="aanchor226"></a>
                                             <MadCap:concept term="RNO" />Watchdoc / WSC 6.1 - Packages et notes de versions</h1>
                                         <table style="border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableSlylesheets/Standard.css');" class="TableStyle-Standard" cellspacing="0">
                                             <col class="TableStyle-Standard-Column-Regular" />
@@ -314,11 +314,24 @@
                                         <p style="color: #000000;"><b style="color: #696969;">Améliorations</b>
                                         </p>
                                         <ul style="font-size: 12pt;">
-                                            <li style="font-size: 12pt;"><b>Watchdoc</b> : amélioration de la configuration des emplacements dans WPC&#160;for Windows. Un emplacement "parent" ne pouvait pas être sélectionné.&#160;Désormais, un emplacement parent est sélectionnable s'il est correctement configuré</li>
+                                            <li style="font-size: 12pt;"><b>Watchdoc</b> : amélioration de la configuration des emplacements dans WPC&#160;for Windows. Un emplacement "parent" ne pouvait pas être sélectionné.&#160;Désormais, un emplacement parent est sélectionnable si les paramètres <b>Utilisateurs</b> et <b>Appareils</b> sont cochés (cf.&#160;<a href="../C_Configurer/ConfigEmplacements/ConfigEmplacements_Configurer.htm" target="_blank">Configurer les emplacements</a>)</li>
                                             <li style="font-size: 12pt;"><strong><span style="font-size: 12pt;">WES</span> :</strong> amélioration de l'interface de personnalisation des couleurs des WES&#160;(colorpicker) pour l'ensemble des WES</li>
-                                            <li style="font-size: 12pt;"><b>WES Canon</b> : test de nouveaux périphériques compatibles</li>
+                                            <li style="font-size: 12pt;"><b>WES Canon</b> : test de nouveaux <a href="../W_WES/10_Canon/01_Canon_WES_Compat.htm" target="_blank">périphériques compatibles</a></li>
+                                            <li style="font-size: 12pt;"><b>WPC&#160;for Windows :</b>
+                                                <ul style="font-size: 12pt;">
+                                                    <li style="font-size: 12pt;">simplification lors d'un  changement d'emplacement : lors du passage sur un nouvel emplacement, celui-ci est désormais sélectionné automatiquement sans demande de confirmation.&#160;Il reste modifiable manuellemen depuis l'onglet des emplacements</li>
+                                                    <li>
+                                                        <p>files d'impression mémorisées : les files installées manuellement sur un emplacement sont maintenant conservées et automatiquement réinstallées au retour sur cet emplacement, même après une déconnexion ou un redémarrage du poste</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>fenêtre d'authentification moins intrusive :elle ne se rouvre plus automatiquement après une coupure réseau ou VPN temporaire. Elle continue de s'afficher normalement au démarrage, depuis la barre des tâches ou lors d'une demande d'impression non-authentifiée</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>tutoriel désactivable : les administrateurs peuvent désormais désactiver globalement l'affichage du tutoriel du client Windows depuis l'administration Watchdoc. L'option reste activée par défaut pour ne pas modifier le comportement existant (cf. <a href="../T_WPC/Windows/WPCW_Configuration.htm#WPCW_Tuto" target="_blank">Configurer WPC for Windows</a>)</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
                                         </ul>
-                                        <p>&#160;</p>
                                         <p style="font-weight: bold;">Correctifs<br /></p>
                                         <ul>
                                             <li>
@@ -335,6 +348,15 @@
                                                     </li>
                                                     <li>
                                                         <p>correction des pools de travaux clonés sur les serveurs  slaves : il n'est plus possible de modifier une configuration sur un serveur slave.&#160;La modification n'est possible que depuis le master.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p><strong><span style="font-size: 12pt;">WPC&#160;for Windows</span> :</strong>
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <p>amélioration des opérations de désinstallation :la suppression d'une file déjà supprimée manuellement ou refusée par Windows ne bloque plus l'application. Un message d'erreur explicite s'affiche désormais lorsque la suppression échoue.</p>
                                                     </li>
                                                 </ul>
                                             </li>

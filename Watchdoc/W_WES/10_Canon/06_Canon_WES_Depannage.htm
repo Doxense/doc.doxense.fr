@@ -215,6 +215,8 @@
                                                     </li>
                                                     <li class="tree-node"><a href="#Probl%C3%A8medequotadoubl%C3%A9lorsdelimpressiondunformatlargeA3">Problème de quota doublé lors de l'impression d'un format large (A3)</a>
                                                     </li>
+                                                    <li class="tree-node"><a href="#Droitsdacc%C3%A8sp%C3%A9riph%C3%A9riqueACLnonprisencompte">Droits d'accès périphérique ACL non pris en compte</a>
+                                                    </li>
                                                     <li class="tree-node"><a href="#MessagederreurlorsdelinstallationduWESTheconfigurationoftheEmbeddedapplicationisnotpossibleWESJavarequesttoIPduserveurfailedwithstatus302MovedTemporarily">Message d'erreur lors de l'installation du WES&#160;: The configuration of the Embedded application is not possible.&#160;WES Java request to [IP du serveur] failed with status 302 Moved Temporarily</a>
                                                     </li>
                                                     <li class="tree-node"><a href="#LemodedeconnexionSSLd%C3%A9sactiv%C3%A9nestpasenregistr%C3%A9lorsdelaconfigurationduWESPertedeladresseduserveurh%C3%B4ted%C3%A9c2025">Le mode de connexion "SSL désactivé" n'est pas enregistré lors de la configuration du WES&#160;- Perte de l'adresse du serveur hôte - déc. 2025</a>
@@ -353,6 +355,19 @@
                                                 <p>Lancez une impression grand format pour vérifier que le quota n'est plus doublé.</p>
                                             </li>
                                         </ol>
+                                        <hr width="100%" size="0" align="center" />
+                                        <h2 id="DroitsdaccèspériphériqueACLnonprisencompte" data-magellan-target="DroitsdaccèspériphériqueACLnonprisencompte">Droits d'accès périphérique ACL non pris en compte</h2>
+                                        <p><strong style="font-size: 14pt;">Contexte</strong> </p>
+                                        <p>En tant qu'administrateur, je configure des droits d'accès périphérique depuis Watchdoc,&#160;par exemple pour restreindre la photocopie couleur aux seuls utilisateurs authentifiés.</p>
+                                        <p>Lors du test depuis le périphérique, je constate que ces restrictions n'ont pas été prises en compte : la photocopie couleur est disponible aux utilisateurs anonymes.</p>
+                                        <p>&#160;</p>
+                                        <p><strong style="font-size: 14pt;">Cause</strong>
+                                        </p>
+                                        <p>Cette anomalie est due à la configuration du périphérique qui n'est pas configuré pour gérer les droits d'accès.</p>
+                                        <p>&#160;</p>
+                                        <p><strong style="font-size: 14pt;">Résolution</strong>
+                                        </p>
+                                        <p>Il convient d'activer le paramètre AMS&#160;(Access Management System) sur le périphérique (cf. <a href="02_Canon_WES_ConfigPrea.htm#AMS" target="_blank">Prérequis et configuration préalable</a>) puis de vérifier l'application des droits sur le périphérique.</p>
                                         <hr width="100%" size="0" align="center" />
                                         <h2 id="MessagederreurlorsdelinstallationduWESTheconfigurationoftheEmbeddedapplicationisnotpossibleWESJavarequesttoIPduserveurfailedwithstatus302MovedTemporarily" data-magellan-target="MessagederreurlorsdelinstallationduWESTheconfigurationoftheEmbeddedapplicationisnotpossibleWESJavarequesttoIPduserveurfailedwithstatus302MovedTemporarily">Message d'erreur lors de l'installation du WES&#160;: The configuration of the Embedded application is not possible.&#160;WES Java request to [IP du serveur] failed with status 302 <a name="Moved_Temporarily" id="Moved_Temporarily"></a>Moved Temporarily</h2>
                                         <p style="font-size: 14pt;font-weight: bold;">Contexte</p>

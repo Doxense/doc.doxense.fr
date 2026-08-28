@@ -1,6 +1,6 @@
 var xmlFullTocData = "";
 xmlFullTocData += '<?xml version=\"1.0\" encoding=\"utf-8\"?>';
-xmlFullTocData += '<CatapultToc Version=\"1\" conditions=\"General.Online,Langues.FR\" DescendantCount=\"534\">';
+xmlFullTocData += '<CatapultToc Version=\"1\" conditions=\"General.Online,Langues.FR\" DescendantCount=\"533\">';
 xmlFullTocData += '    <TocEntry Title=\"Accueil\" Link=\"/index.html\" ComputedResetPageLayout=\"true\" ComputedFirstTopic=\"true\" DescendantCount=\"0\" />';
 xmlFullTocData += '    <TocEntry Title=\"Versions téléchargeables des produits\" Link=\"/A_Getting_Started/Versions_FR.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ReplaceMergeNode=\"false\" ComputedFirstTopic=\"false\" DescendantCount=\"3\">';
 xmlFullTocData += '        <TocEntry Title=\"6.1.1 - Packages et notes de versions\" Link=\"/A_Getting_Started/Release_611.htm\" StartSection=\"false\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
@@ -425,7 +425,7 @@ xmlFullTocData += '        </TocEntry>';
 xmlFullTocData += '        <TocEntry Title=\"FP - Changer le mot de passe WES\" Link=\"/H_HowTo/WD5_GestionCourante_ChangerMdP_Periph.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"FP - Activer les WES traces\" Link=\"/H_HowTo/WD_Traces_Activer_WESTraces.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '    </TocEntry>';
-xmlFullTocData += '    <TocEntry Title=\"WEScan\" Link=\"/C_Configurer/ConfigWEScan/WEScan_Concept.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"17\">';
+xmlFullTocData += '    <TocEntry Title=\"WEScan\" Link=\"/C_Configurer/ConfigWEScan/WEScan_Concept.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"16\">';
 xmlFullTocData += '        <TocEntry Title=\"Présentation\" Link=\"/C_Configurer/ConfigWEScan/WEScan_Presentation.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Prérequis\" Link=\"/C_Configurer/ConfigWEScan/WEScan_Prerequis.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Configurer ScanToMyMail\" Link=\"/C_Configurer/ConfigWEScan/WEScan_Config_Profil_DestScanToMe.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
@@ -439,7 +439,7 @@ xmlFullTocData += '        <TocEntry Title=\"Configurer ScanToUrl\" Link=\"/C_Co
 xmlFullTocData += '        <TocEntry Title=\"Configurer ScanToSlack\" Link=\"/C_Configurer/ConfigWEScan/WEScan_Config_Profil_DestScanToSlack.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Configurer ScanToOneDrive\" Link=\"/C_Configurer/ConfigWEScan/WEScan_Config_Profil_DestScanToOneDrive.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Configurer ScanToOpenBee\" Link=\"/C_Configurer/ConfigWEScan/WEScan_Config_Profil_DestScanToOB.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
-xmlFullTocData += '        <TocEntry Title=\"Configurer un traitement post-scan\" Link=\"/C_Configurer/ConfigWEScan/WEScan_Config_TraitPostScan.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
+xmlFullTocData += '        <TocEntry Title=\"Configurer un traitement post-scan\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Personnaliser les profils de scan\" Link=\"/C_Configurer/ConfigWEScan/WEScan_Config_Profil_SPC_Presentation.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"1\">';
 xmlFullTocData += '            <TocEntry Title=\"Contraintes du ScanProfileCustomizer\" Link=\"/C_Configurer/ConfigWEScan/WEScan_Config_Profil_SPC_Contraintes.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        </TocEntry>';
