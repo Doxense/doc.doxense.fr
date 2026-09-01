@@ -532,7 +532,7 @@ xmlFullTocData += '            <TocEntry Title=\"Table billingcodes\" Link=\"/D_
 xmlFullTocData += '            <TocEntry Title=\"Table_billingcodesExceptions\" Link=\"/D_BDD/BDD_SQL_Table_BillingcodesExceptions_FR.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '            <TocEntry Title=\"Table cards\" Link=\"/D_BDD/BDD_SQL_Table_Cards_FR.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '            <TocEntry Title=\"Table device_settings\" Link=\"/D_BDD/BDD_SQL_Table_Device_settings_FR.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
-xmlFullTocData += '            <TocEntry Title=\"Table document\" Link=\"/D_BDD/BDD_SQL_Table_Document_FR.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
+xmlFullTocData += '            <TocEntry Title=\"Table documents\" Link=\"/D_BDD/BDD_SQL_Table_Document_FR.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '            <TocEntry Title=\"Table documents_events\" Link=\"/D_BDD/BDD_SQL_Table_Documents_events_FR.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '            <TocEntry Title=\"Table groups\" Link=\"/D_BDD/BDD_SQL_Table_Groups_FR.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '            <TocEntry Title=\"Table incidents\" Link=\"/D_BDD/BDD_SQL_Table_Incidents_FR.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
