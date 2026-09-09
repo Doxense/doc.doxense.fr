@@ -182,7 +182,6 @@
                                         <h4><span class="span_3">Description</span>
                                         </h4>
                                         <p>Cette table permet de stocker les infos relatives aux comptes invités (base guests).</p>
-                                        <p>&#160;</p>
                                         <h4><span class="span_3">Schéma</span>
                                         </h4>
                                         <table style="mc-table-style: url('../Resources/TableSlylesheets/Standard.css');" class="TableStyle-Standard" cellspacing="0">
@@ -191,364 +190,369 @@
                                             <col class="TableStyle-Standard-Column-Regular" />
                                             <col class="TableStyle-Standard-Column-Regular" />
                                             <col class="TableStyle-Standard-Column-Regular" />
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_14"><span class="Élevé">Field</span>
-                                                    </p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_5">Type</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_5">Requis</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_5">CP</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p class="p_14"><span class="Élevé">Description</span>
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>userID</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>bigint</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p class="p_2"><span class="span_2">Identifiant de l'invité</span>
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>userLOGIN</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>nvarchar(128)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>* </p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p class="p_2"><span class="span_2">COLLATE French_CI_AS login de l'utilisateur</span>
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>userPASSWORD</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>nvarchar(255)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p class="p_2">mot de passe de l'utilisateur</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>userFULLNAME</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>nvarchar(255)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p class="p_2"><span class="span_2">COLLATE French_CI_AS nom complet de l'utilisateur (nom prénom)</span>
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>userEMAIL</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>nvarchar(255)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p class="p_2"><span class="span_2">e-mail de l'utilisateur</span>
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>userDYNGROUP</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>nvarchar(128)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p class="p_2"><span class="span_7">Groupe auquel appartient l'utilisateur</span>
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>userCODE</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>nvarchar(255)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p class="p_2"><span class="span_2">code analytique de l'invité </span>
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>userHOMEFOLDER</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>nvarchar(255)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p class="p_2"><span class="span_2">nom du dossier de l'utilisateur dans lequel sont enregistrés ses travaux numérisés</span>
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>userPIN</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>varchar(64)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p class="p_2">code PIN associé à l'utilisateur</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>userCARD</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>nvarchar(255)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p class="p_2"><span class="span_2">code du badge de l'utilisateur</span>
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>userCOMPANY</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>nvarchar(255)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p class="p_2"><span class="span_2">COLLATE French_CI_AS entreprise à laquelle appartient l'utilisateur</span>
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>userCREATED</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>datetime</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p class="p_2"><span class="span_2">date de création de l'utilisateur</span>
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>userCREATEDBY</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>nvarchar(128)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p class="p_2"><span class="span_2">COLLATE French_CI_AS identifiant de l'administrateur ayant créé le compte utilisateur</span>
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>userUPDATED</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>datetime</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p class="p_2">Date de mise à jour de l'utilisateur</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>userUPDATEDBY</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>nvarchar(128)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p class="p_2"><span class="span_2">COLLATE French_CI_AS identifiant de l'administrateur ayant mis à jour le compte utilisateur </span>
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>userEXPIRATION</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>datetime</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p class="p_2"><span class="span_2">date d'expiration du compte utilisateur</span>
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>userLOCKED</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>tinyint</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p class="p_2"><span class="span_2">compte utilisateur verrouillé (0=non ; 1=oui).</span>
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>userVISITEDPERSON</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>nvarchar(128)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p class="p_2"><span class="span_2">COLLATE French_CI_AS identifiant d'un visiteur associé à l'utilisateur</span>
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>userPUK</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>varchar<span class="span_8">(</span>128<span class="span_8">)</span></p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p class="p_24">&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p class="p_24">&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p class="p_25"><span class="span_11">code PUK associé à l'utilisateur</span>
-                                                    </p>
-                                                </td>
-                                            </tr>
+                                            <tbody>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="background-color: #ff803b;font-weight: bold;">
+                                                        <p class="p_14" style="color: #000000;"><span class="Élevé">Field</span>
+                                                        </p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="background-color: #ff803b;font-weight: bold;">
+                                                        <p class="p_5"><span style="color: #000000;">Type</span>
+                                                        </p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="background-color: #ff803b;font-weight: bold;">
+                                                        <p class="p_5"><span style="color: #000000;">Requis</span>
+                                                        </p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="background-color: #ff803b;font-weight: bold;">
+                                                        <p class="p_5"><span style="color: #000000;">CP</span>
+                                                        </p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2" style="background-color: #ff803b;font-weight: bold;">
+                                                        <p class="p_14"><span class="Élevé" style="color: #000000;">Description</span>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>userID</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>bigint</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>*</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>*</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                        <p class="p_2"><span class="span_2">Identifiant de l'invité</span>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>userLOGIN</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>nvarchar(128)</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>* </p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                        <p class="p_2"><span class="span_2">COLLATE French_CI_AS login de l'utilisateur</span>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>userPASSWORD</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>nvarchar(255)</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                        <p class="p_2">mot de passe de l'utilisateur</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>userFULLNAME</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>nvarchar(255)</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                        <p class="p_2"><span class="span_2">COLLATE French_CI_AS nom complet de l'utilisateur (nom prénom)</span>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>userEMAIL</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>nvarchar(255)</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                        <p class="p_2"><span class="span_2">e-mail de l'utilisateur</span>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>userDYNGROUP</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>nvarchar(128)</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                        <p class="p_2"><span class="span_7">Groupe auquel appartient l'utilisateur</span>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>userCODE</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>nvarchar(255)</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                        <p class="p_2"><span class="span_2">code analytique de l'invité </span>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>userHOMEFOLDER</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>nvarchar(255)</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                        <p class="p_2"><span class="span_2">nom du dossier de l'utilisateur dans lequel sont enregistrés ses travaux numérisés</span>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>userPIN</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>varchar(64)</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                        <p class="p_2">code PIN associé à l'utilisateur</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>userCARD</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>nvarchar(255)</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                        <p class="p_2"><span class="span_2">code du badge de l'utilisateur</span>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>userCOMPANY</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>nvarchar(255)</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                        <p class="p_2"><span class="span_2">COLLATE French_CI_AS entreprise à laquelle appartient l'utilisateur</span>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>userCREATED</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>datetime</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                        <p class="p_2"><span class="span_2">date de création de l'utilisateur</span>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>userCREATEDBY</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>nvarchar(128)</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                        <p class="p_2"><span class="span_2">COLLATE French_CI_AS identifiant de l'administrateur ayant créé le compte utilisateur</span>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>userUPDATED</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>datetime</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                        <p class="p_2">Date de mise à jour de l'utilisateur</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>userUPDATEDBY</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>nvarchar(128)</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                        <p class="p_2"><span class="span_2">COLLATE French_CI_AS identifiant de l'administrateur ayant mis à jour le compte utilisateur </span>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>userEXPIRATION</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>datetime</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                        <p class="p_2"><span class="span_2">date d'expiration du compte utilisateur</span>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>userLOCKED</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>tinyint</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                        <p class="p_2"><span class="span_2">compte utilisateur verrouillé (0=non ; 1=oui).</span>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>userVISITEDPERSON</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>nvarchar(128)</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                        <p class="p_2"><span class="span_2">COLLATE French_CI_AS identifiant d'un visiteur associé à l'utilisateur</span>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1">
+                                                        <p>userPUK</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1">
+                                                        <p>varchar<span class="span_8">(</span>128<span class="span_8">)</span></p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1">
+                                                        <p class="p_24">&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1">
+                                                        <p class="p_24">&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyA-Regular-Row1">
+                                                        <p class="p_25"><span class="span_11">code PUK associé à l'utilisateur</span>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
                                         </table>
                                         <p class="p_3" style="text-align: right;">&#160;</p>
                                     </div>

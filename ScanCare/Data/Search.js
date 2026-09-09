@@ -1,1 +1,1 @@
-define({r:0.5,st:'Stem',n:1,t:[0],m:[],u:['../B_Procedure Topics/Ajouter_Peripheriques.htm'],s:['0','faibl','recadrag'],p:[['0',0],['c792dte',5],['csv',18],['disposition',12],['expression',1],['l\u0027intégration',2],['maximum',31],['pas',1],['requise',10],['sur',18],['watchdoc',28]]});
+define({r:0.5,st:'Stem',n:1,t:[0],m:[],u:['../B_Procedure Topics/Ajouter_Peripheriques.htm'],s:['0','extérieur','quot'],p:[['0',0],['bureau',11],['créé',10],['disposent',16],['existants',21],['l\u0027interface',11],['marchés',14],['parcourt',18],['remplir',16],['sur',5],['watchdoc',7]]});

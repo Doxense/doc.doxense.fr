@@ -185,290 +185,292 @@
                                         <p>&#160;</p>
                                         <h4><span class="span_1">Schéma</span>
                                         </h4>
-                                        <table style="mc-table-style: url('../Resources/TableSlylesheets/Standard.css');" class="TableStyle-Standard_test TableStyle-Standard" cellspacing="0">
+                                        <table style="mc-table-style: url('../Resources/TableSlylesheets/Standard.css');" class="TableStyle-Standard" cellspacing="0">
                                             <col class="TableStyle-Standard-Column-Regular" />
                                             <col class="TableStyle-Standard-Column-Regular" />
                                             <col class="TableStyle-Standard-Column-Regular" />
                                             <col class="TableStyle-Standard-Column-Regular" />
                                             <col style="width: 445px;" class="TableStyle-Standard-Column-Regular" />
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_1"><strong>Field</strong>
-                                                    </p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_1"><strong>Type</strong>
-                                                    </p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p><strong>Requis</strong>
-                                                    </p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_1"><strong>CP</strong>
-                                                    </p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p class="p_1"><strong>Description</strong>
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p class="p_2">opeID</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>uniqueidentifier</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p> Identifiant Guid</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>opeSTATUSID</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>int</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>Status de l’opération&#160;:</p>
-                                                    <p>17 = Waiting</p>
-                                                    <p>18 = Running</p>
-                                                    <p>19 = Succès</p>
-                                                    <p>20 = Failure</p>
-                                                    <p class="p_2">21 = Cancelled</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>opeSTEPID</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>int</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>Etape de l’opération&#160;:</p>
-                                                    <p>Entre 1 et 4</p>
-                                                    <p>1 = Pré-processing</p>
-                                                    <p>2 = Processing</p>
-                                                    <p>3 = Post processing</p>
-                                                    <p class="p_2">4 = Fin</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>opeTYPEID</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>int</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>Type d’opération&#160;:</p>
-                                                    <p>1 = Création de file d’impression</p>
-                                                    <p>2 = Création multiple de file</p>
-                                                    <p>3 = Modification de file</p>
-                                                    <p>4 = Suppression de file</p>
-                                                    <p>5 = Test de file</p>
-                                                    <p>6 = Suppression définitive d’une</p>
-                                                    <p>File</p>
-                                                    <p>7 = Changement d’état d’une file</p>
-                                                    <p>8 = Reprise de file</p>
-                                                    <p>9 = Installation de driver</p>
-                                                    <p>10 = Audit</p>
-                                                    <p>11 = Audit de la solution</p>
-                                                    <p>12 = Suppression de serveur</p>
-                                                    <p>13 = Modification de la bdd</p>
-                                                    <p>14 = Passage d’imprimante en multi OS</p>
-                                                    <p>15 = Passage d’imprimante en mono OS</p>
-                                                    <p>16 = Mise à jour des évènements</p>
-                                                    <p>22 = Purge des tables</p>
-                                                    <p>24 = Paramétrage général</p>
-                                                    <p>25 = Ajout d’un serveur d’impression</p>
-                                                    <p>26 = Modification d’un serveur</p>
-                                                    <p>27 = Ajout d’un type de serveur</p>
-                                                    <p>28 = Modification d’un type de serveur</p>
-                                                    <p>29 = Suppression d’un type de serveur</p>
-                                                    <p>30 = Configuration des modèles et driver</p>
-                                                    <p>31 = Suppression de serveur</p>
-                                                    <p>32 =  Transfert d’imprimante</p>
-                                                    <p>33 = Suppression des imprimantes</p>
-                                                    <p>Déplacées</p>
-                                                    <p>34 = Injection d’une imprimante dans le</p>
-                                                    <p>Référentiel</p>
-                                                    <p>36 = Passage en mode maintenance</p>
-                                                    <p>37 = Passage en mode normal</p>
-                                                    <p>39 = Modification d’une imprimante</p>
-                                                    <p>Dans le référentiel</p>
-                                                    <p>41 = Restauration d’imprimante</p>
-                                                    <p>47 = Récupération des informations</p>
-                                                    <p>De la file dans Watchdoc</p>
-                                                    <p>48 = Purge des imprimantes en état</p>
-                                                    <p>Supprimé</p>
-                                                    <p>50 = Récupération des drivers installés</p>
-                                                    <p>Sur le serveur</p>
-                                                    <p>51 = Création de backup de serveur</p>
-                                                    <p>52 = Restauration de serveur depuis</p>
-                                                    <p>Un backup</p>
-                                                    <p>54 = Suppression d’une imprimante</p>
-                                                    <p>Sur un serveur</p>
-                                                    <p>59 = Transfert en masse d’imprimante</p>
-                                                    <p>60 = Restauration du serveur et du </p>
-                                                    <p class="p_2">Référentiel</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>opePNPQUEUEID</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>uniqueidentifier</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>Si l’opération concerne une file,</p>
-                                                    <p>Alors on référence le guid qui l’identifie</p>
-                                                    <p class="p_2">Ici, NULL sinon</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>opeDRIVERID</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>int</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>Si l’opération concerne un driver,</p>
-                                                    <p>Alors on référence son identifiant,</p>
-                                                    <p>NULL sinon</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>opeSERVERFQDN</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>nvarchar(max)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>Si l’opération s’effectue sur un serveur,</p>
-                                                    <p>FQDN du serveur, NULL sinon</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>opeSERVERID</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>nvarchar(max)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>Si l’opération s’effectue sur un serveur,</p>
-                                                    <p>Identifiant du serveur, NULL sinon</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>opeBEGINDATE</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>datetime</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>Date de début de l’opération</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>opeENDDATE</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>datetime</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>Date de fin de l’opération lorsque</p>
-                                                    <p>Terminée, NULL sinon</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>opeUSER</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>nvarchar(max)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>Utilisateur qui a lancé l’opération,</p>
-                                                    <p>‘PnP’ lorsque l’opération a été</p>
-                                                    <p class="p_2">Généré via nos programmes</p>
-                                                </td>
-                                            </tr>
+                                            <tbody>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="background-color: #ff803b;">
+                                                        <p class="p_1"><strong style="color: #000000;">Field</strong>
+                                                        </p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="background-color: #ff803b;">
+                                                        <p class="p_1"><strong style="color: #000000;">Type</strong>
+                                                        </p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="background-color: #ff803b;">
+                                                        <p><strong style="color: #000000;">Requis</strong>
+                                                        </p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="background-color: #ff803b;">
+                                                        <p class="p_1"><strong style="color: #000000;">CP</strong>
+                                                        </p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2" style="background-color: #ff803b;">
+                                                        <p class="p_1"><strong style="color: #000000;">Description</strong>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p class="p_2">opeID</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>uniqueidentifier</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>*</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>*</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                        <p> Identifiant Guid</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>opeSTATUSID</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>int</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                        <p>Status de l’opération&#160;:</p>
+                                                        <p>17 = Waiting</p>
+                                                        <p>18 = Running</p>
+                                                        <p>19 = Succès</p>
+                                                        <p>20 = Failure</p>
+                                                        <p class="p_2">21 = Cancelled</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>opeSTEPID</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>int</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>*</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                        <p>Etape de l’opération&#160;:</p>
+                                                        <p>Entre 1 et 4</p>
+                                                        <p>1 = Pré-processing</p>
+                                                        <p>2 = Processing</p>
+                                                        <p>3 = Post processing</p>
+                                                        <p class="p_2">4 = Fin</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>opeTYPEID</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>int</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>*</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                        <p>Type d’opération&#160;:</p>
+                                                        <p>1 = Création de file d’impression</p>
+                                                        <p>2 = Création multiple de file</p>
+                                                        <p>3 = Modification de file</p>
+                                                        <p>4 = Suppression de file</p>
+                                                        <p>5 = Test de file</p>
+                                                        <p>6 = Suppression définitive d’une</p>
+                                                        <p>File</p>
+                                                        <p>7 = Changement d’état d’une file</p>
+                                                        <p>8 = Reprise de file</p>
+                                                        <p>9 = Installation de driver</p>
+                                                        <p>10 = Audit</p>
+                                                        <p>11 = Audit de la solution</p>
+                                                        <p>12 = Suppression de serveur</p>
+                                                        <p>13 = Modification de la bdd</p>
+                                                        <p>14 = Passage d’imprimante en multi OS</p>
+                                                        <p>15 = Passage d’imprimante en mono OS</p>
+                                                        <p>16 = Mise à jour des évènements</p>
+                                                        <p>22 = Purge des tables</p>
+                                                        <p>24 = Paramétrage général</p>
+                                                        <p>25 = Ajout d’un serveur d’impression</p>
+                                                        <p>26 = Modification d’un serveur</p>
+                                                        <p>27 = Ajout d’un type de serveur</p>
+                                                        <p>28 = Modification d’un type de serveur</p>
+                                                        <p>29 = Suppression d’un type de serveur</p>
+                                                        <p>30 = Configuration des modèles et driver</p>
+                                                        <p>31 = Suppression de serveur</p>
+                                                        <p>32 =  Transfert d’imprimante</p>
+                                                        <p>33 = Suppression des imprimantes</p>
+                                                        <p>Déplacées</p>
+                                                        <p>34 = Injection d’une imprimante dans le</p>
+                                                        <p>Référentiel</p>
+                                                        <p>36 = Passage en mode maintenance</p>
+                                                        <p>37 = Passage en mode normal</p>
+                                                        <p>39 = Modification d’une imprimante</p>
+                                                        <p>Dans le référentiel</p>
+                                                        <p>41 = Restauration d’imprimante</p>
+                                                        <p>47 = Récupération des informations</p>
+                                                        <p>De la file dans Watchdoc</p>
+                                                        <p>48 = Purge des imprimantes en état</p>
+                                                        <p>Supprimé</p>
+                                                        <p>50 = Récupération des drivers installés</p>
+                                                        <p>Sur le serveur</p>
+                                                        <p>51 = Création de backup de serveur</p>
+                                                        <p>52 = Restauration de serveur depuis</p>
+                                                        <p>Un backup</p>
+                                                        <p>54 = Suppression d’une imprimante</p>
+                                                        <p>Sur un serveur</p>
+                                                        <p>59 = Transfert en masse d’imprimante</p>
+                                                        <p>60 = Restauration du serveur et du </p>
+                                                        <p class="p_2">Référentiel</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>opePNPQUEUEID</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>uniqueidentifier</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                        <p>Si l’opération concerne une file,</p>
+                                                        <p>Alors on référence le guid qui l’identifie</p>
+                                                        <p class="p_2">Ici, NULL sinon</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>opeDRIVERID</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>int</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                        <p>Si l’opération concerne un driver,</p>
+                                                        <p>Alors on référence son identifiant,</p>
+                                                        <p>NULL sinon</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>opeSERVERFQDN</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>nvarchar(max)</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                        <p>Si l’opération s’effectue sur un serveur,</p>
+                                                        <p>FQDN du serveur, NULL sinon</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>opeSERVERID</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>nvarchar(max)</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                        <p>Si l’opération s’effectue sur un serveur,</p>
+                                                        <p>Identifiant du serveur, NULL sinon</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>opeBEGINDATE</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>datetime</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>*</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                        <p>Date de début de l’opération</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>opeENDDATE</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>datetime</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                        <p>Date de fin de l’opération lorsque</p>
+                                                        <p>Terminée, NULL sinon</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1">
+                                                        <p>opeUSER</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1">
+                                                        <p>nvarchar(max)</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyA-Regular-Row1">
+                                                        <p>Utilisateur qui a lancé l’opération,</p>
+                                                        <p>‘PnP’ lorsque l’opération a été</p>
+                                                        <p class="p_2">Généré via nos programmes</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
                                         </table>
                                     </div>
                                     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">

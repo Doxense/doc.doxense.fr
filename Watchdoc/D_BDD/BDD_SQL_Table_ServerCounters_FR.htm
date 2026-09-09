@@ -182,7 +182,6 @@
                                         <h4><span class="span_3">Description</span>
                                         </h4>
                                         <p class="p_16">Cette table contient les métriques relatives aux serveurs d'impression. Valeurs relevées dans l'intervalle défini par le couple cntTIMESLOT et cntLEVEL.</p>
-                                        <p class="p_16">&#160;</p>
                                         <h4><span class="span_3">Schéma</span>
                                         </h4>
                                         <table style="mc-table-style: url('../Resources/TableSlylesheets/Standard.css');" class="TableStyle-Standard" cellspacing="0">
@@ -191,506 +190,574 @@
                                             <col class="TableStyle-Standard-Column-Regular" />
                                             <col class="TableStyle-Standard-Column-Regular" />
                                             <col class="TableStyle-Standard-Column-Regular" />
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_17">Field</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_17">Type</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_18"><span class="Élevé">Requis</span>
-                                                    </p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_17">CP</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p class="p_18"><span class="Élevé">Description</span>
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p class="p_16">cntDATE</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p class="p_16">datetime</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p class="p_16">*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p class="p_16">&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p class="p_16">Date du relevé de compteur.</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_16">cntTIMESLOT</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_16">int</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_16">*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_16">&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p class="p_16">Clé d'optimisation.</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p class="p_16">cntLEVEL</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p class="p_16">tinyint</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p class="p_16">*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p class="p_16">&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p class="p_16">Niveau de granularité du compteur (0=5 min, 1=1 h et 2= 1 jour).</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>cntSERVER</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>varchar (64)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>Identifiant du serveur tel que défini dans Watchdoc.</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>cntSRVMEMORY</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>bigint</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>Taille de la mémoire utilisée du serveur (en octets).</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>cntSRVUPTIME</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>int</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>Temps depuis lequel le serveur Watchdoc est démarré (en secondes).</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td colspan="5" class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>Les champs dlt (delta) contiennent des valeurs relatives à l'intervalle défini par le couple cntTIMESLOT et cntLEVEL) : </p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>dltSRVSQLQUERIES</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>int</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>Nombre de requêtes SQL réalisées dans l'intervalle défini par le couple CNT timeslot et cntlevel</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>dltSRVDOCSSPOOLED</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>int</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>Nombre de docs arrivés et analysés dans l'intervalle. </p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>dltSRVPAGESSPOOLED</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>int</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>Nombre de pages arrivées et analysées dans l'intervalle.</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>dltSRVDOCSPRINTED</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>int</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>Nombre de documents imprimés dans l'intervalle. </p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>dltSRVPAGESPRINTED</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>int</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>Nombre de pages imprimées dans l'intervalle.</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>dltSRVDOCSDELETED</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>int</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>Nombre de documents supprimés dans l'intervalle.</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>dltSRVPAGESDELETED</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>int</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>Nombre de pages supprimées dans l'intervalle.</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>cntSRVSTATIONS</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>int</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>Nombre moyen de postes de travail dépendant du serveur.</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>cntSRVSPOOLDISKFREE</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>bigint</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>Taille minimale d'espace disque libre dans le spouleur.</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>cntSRVFREEMEMORY</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>bigint</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>Taille minimale de la mémoire libre sur le serveur.</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>cntSRVLOADAVERAGE</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>int</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>Charge processeur (CPU) moyenne dans l'intervalle.</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>cntSRVQUEUEDJOBS</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>int</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>Nombre moyen de documents en attente dans les files d'impression.</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>cntMOVED</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>tinyint</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>Champ système utilisé dans une architecture master et utilisé sur les serveurs Watchdoc pour préciser si la valeur du champ a été répliquée sur le master et peut donc être supprimée (si NULL ou 0, document "local", si &gt;= 254, document archivé qui peut être supprimé).</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>cntSRVWDVERSION</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>VARCHAR(64)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>Version de Watchdoc la plus haute dans l'intervalle dans le cas où une mise à jour a été réalisée dans l'intervalle).</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>cntSRVNUMQUEUES</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>INT</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>Nombre de files d'impressions sur le serveur.</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>cntSRVNUMFIR</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>INT</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>Nombre de files d'impression réseau sur le serveur.</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>cntSRVNUMFIL</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>INT</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>Nombre de files d'impression locales sur le serveur.</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>cntSRVNUMWES</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>INT</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>Nombre de WES gérés par le serveur.</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>cntSRVWDLOADAVERAGE</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>INT</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>Charge processeur (CPU) moyenne relative à Watchdoc dans l'intervalle.</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>cntSRVSPLLOADAVERAGE</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>INT</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>Charge processeur (CPU) moyenne relative au spouleur d'impression MSWindows dans l'intervalle.</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>cntSRVSQLLOADAVERAGE</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>INT</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>Charge processeur (CPU) moyenne relative à SQL dans l'intervalle.</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>cntSRVLDAPLOADAVERAGE</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>INT</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>Charge processeur (CPU) moyenne relative à l'AD dans l'intervalle.</p>
-                                                </td>
-                                            </tr>
+                                            <tbody>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-weight: bold;background-color: #ff803b;">
+                                                        <p class="p_17"><span style="color: #000000;">Field</span>
+                                                        </p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-weight: bold;background-color: #ff803b;">
+                                                        <p class="p_17"><span style="color: #000000;">Type</span>
+                                                        </p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-weight: bold;color: #000000;background-color: #ff803b;">
+                                                        <p class="p_18"><span class="Élevé" style="color: #000000;">Requis</span>
+                                                        </p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-weight: bold;color: #000000;background-color: #ff803b;">
+                                                        <p class="p_17"><span style="color: #000000;">CP</span>
+                                                        </p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-weight: bold;background-color: #ff803b;">
+                                                        <p class="p_18"><span class="Élevé" style="color: #000000;">Description</span>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p class="p_16">cntDATE</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p class="p_16">datetime</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p class="p_16">*</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p class="p_16">&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                        <p class="p_16">Date du relevé de compteur.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p class="p_16">cntTIMESLOT</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p class="p_16">int</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p class="p_16">*</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p class="p_16">&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                        <p class="p_16">Clé d'optimisation.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p class="p_16">cntLEVEL</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p class="p_16">tinyint</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p class="p_16">*</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p class="p_16">&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                        <p class="p_16">Niveau de granularité du compteur (0=5 min, 1=1 h et 2= 1 jour).</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>cntSERVER</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>varchar (64)</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>*</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                        <p>Identifiant du serveur tel que défini dans Watchdoc.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>cntSRVMEMORY</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>bigint</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>*</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                        <p>Taille de la mémoire utilisée du serveur (en octets).</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>cntSRVUPTIME</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>int</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>*</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                        <p>Temps depuis lequel le serveur Watchdoc est démarré (en secondes).</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td colspan="5" class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                        <p>Les champs dlt (delta) contiennent des valeurs relatives à l'intervalle défini par le couple cntTIMESLOT et cntLEVEL) : </p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>dltSRVSQLQUERIES</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>int</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>*</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                        <p>Nombre de requêtes SQL réalisées dans l'intervalle défini par le couple CNT timeslot et cntlevel</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>dltSRVDOCSSPOOLED</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>int</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>*</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                        <p>Nombre de docs arrivés et analysés dans l'intervalle. </p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>dltSRVPAGESSPOOLED</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>int</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>*</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                        <p>Nombre de pages arrivées et analysées dans l'intervalle.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>dltSRVDOCSPRINTED</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>int</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>*</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                        <p>Nombre de documents imprimés dans l'intervalle. </p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>dltSRVPAGESPRINTED</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>int</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>*</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                        <p>Nombre de pages imprimées dans l'intervalle.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>dltSRVDOCSDELETED</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>int</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>*</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                        <p>Nombre de documents supprimés dans l'intervalle.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>dltSRVPAGESDELETED</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>int</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>*</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                        <p>Nombre de pages supprimées dans l'intervalle.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>cntSRVSTATIONS</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>int</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>*</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                        <p>Nombre moyen de postes de travail dépendant du serveur.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>cntSRVSPOOLDISKFREE</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>bigint</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>*</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                        <p>Taille minimale d'espace disque libre dans le spouleur.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>cntSRVFREEMEMORY</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>bigint</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>*</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                        <p>Taille minimale de la mémoire libre sur le serveur.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>cntSRVLOADAVERAGE</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>int</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>*</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                        <p>Charge processeur (CPU) moyenne dans l'intervalle.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>cntSRVQUEUEDJOBS</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>int</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>*</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                        <p>Nombre moyen de documents en attente dans les files d'impression.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>cntMOVED</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>tinyint</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>*</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                        <p>Champ système utilisé dans une architecture master et utilisé sur les serveurs Watchdoc pour préciser si la valeur du champ a été répliquée sur le master et peut donc être supprimée (si NULL ou 0, document "local", si &gt;= 254, document archivé qui peut être supprimé).</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>cntSRVWDVERSION</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>VARCHAR(64)</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>*</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                        <p>Version de Watchdoc la plus haute dans l'intervalle dans le cas où une mise à jour a été réalisée dans l'intervalle).</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>cntSRVNUMQUEUES</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">int</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                        <p>Nombre de files d'impressions sur le serveur.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>cntSRVNUMFIR</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">int</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                        <p>Nombre de files d'impression réseau sur le serveur.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>cntSRVNUMFIL</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">int</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                        <p>Nombre de files d'impression locales sur le serveur.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>cntSRVNUMWES</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">int</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                        <p>Nombre de WES gérés par le serveur.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>cntSRVWDLOADAVERAGE</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">int</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                        <p>Charge processeur (CPU) moyenne relative à Watchdoc dans l'intervalle.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>cntSRVSPLLOADAVERAGE</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">int</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                        <p>Charge processeur (CPU) moyenne relative au spouleur d'impression MSWindows dans l'intervalle.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>cntSRVSQLLOADAVERAGE</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">int</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                        <p>Charge processeur (CPU) moyenne relative à SQL dans l'intervalle.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>cntSRVLDAPLOADAVERAGE</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">int</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                        <p>&#160;</p>
+                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                        <p>Charge processeur (CPU) moyenne relative à l'AD dans l'intervalle.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">cntPRINTAPICALLS</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">int
+	</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">&#160;</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">&#160;</td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">&#160;</td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">cntPRINTAPISIZEIN</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">bigint
+	</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">&#160;</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">&#160;</td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">&#160;</td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">cntPRINTAPISIZEOUT</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">bigint
+</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">&#160;</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">&#160;</td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">&#160;</td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">cntPRINTAPIDISTINCTUSERS				
+	
+</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">int
+</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">&#160;</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">&#160;</td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">&#160;</td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">cntPRINTAPIDISTINCTDEVICES</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">int
+</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">&#160;</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">&#160;</td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">&#160;</td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">cntPRINTAPICLIENTSOUTDATED</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">int
+</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">&#160;</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">&#160;</td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">&#160;</td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">cntWESAUTH</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">int</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">&#160;</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">&#160;</td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">&#160;</td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">cntEXTRA1</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">nvarchar</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">&#160;</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">&#160;</td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">&#160;</td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row2">
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">cntEXTRA2	</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">nvarchar
+</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">&#160;</td>
+                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">&#160;</td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">&#160;</td>
+                                                </tr>
+                                                <tr class="TableStyle-Standard-Body-Row1">
+                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1">cntEXTRA3	</td>
+                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1">float</td>
+                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1">&#160;</td>
+                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1">&#160;</td>
+                                                    <td class="TableStyle-Standard-BodyA-Regular-Row1">&#160;</td>
+                                                </tr>
+                                            </tbody>
                                         </table>
                                     </div>
                                     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">

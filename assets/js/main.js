@@ -4,6 +4,11 @@ let blockNews = document.querySelector('.doc_news--ul');
 
 let arrayContent = [
 {
+	date: "02 septembre 2026",
+	link: "/ScanCare/C_Release_Notes/Release_Notes.htm",
+	content: "nouvelle version de Watchdoc ScanCare 9.10.810"
+},
+{
 	date: "1er septembre 2026",
 	link: "/Watchdoc/A_Getting_Started/Release_611.htm",
 	content: "nouvelle version de Watchdoc Print Client for Windows 7.0.6152"
