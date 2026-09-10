@@ -206,6 +206,8 @@
                                                 <ul>
                                                     <li class="tree-node"><a href="#Watchdoc61x">Watchdoc 6.1.x</a>
                                                     </li>
+                                                    <li class="tree-node"><a href="#WatchdocetWSC6115732WPCforWindowsetSkyprint70615210092026">Watchdoc et WSC&#160;6.1.1.5732,  WPC for Windows  et Skyprint 7.0.6152- 10/09/2026</a>
+                                                    </li>
                                                     <li class="tree-node"><a href="#WPCforWindows70615201092026">  WPC for Windows 7.0.6152 - 01/09/2026</a>
                                                     </li>
                                                     <li class="tree-node"><a href="#WatchdocetWSC6115717WPCforWindowsetSkyprint70615226082026">Watchdoc et WSC&#160;6.1.1.5717,  WPC for Windows  et Skyprint 7.0.6152 - 26/08/2026</a>
@@ -351,6 +353,50 @@
                                         <hr width="100%" size="0" align="center" data-mc-conditions="General.Online">
                                         </hr>
                                         <h2 data-mc-conditions="General.Online" id="Watchdoc61x" data-magellan-target="Watchdoc61x">Watchdoc 6.1.x</h2>
+                                        <h2 style="color: #000000;" id="WatchdocetWSC6115732WPCforWindowsetSkyprint70615210092026" data-magellan-target="WatchdocetWSC6115732WPCforWindowsetSkyprint70615210092026">Watchdoc et WSC&#160;<span class="mc-variable Versions.Watchdoc variable">6.1.1.5732</span>,  WPC for Windows  et Skyprint <span class="mc-variable Versions.WPC_for_Windows variable">7.0.6152</span>- 10/09/2026</h2>
+                                        <p style="color: #000000;"><b style="color: #696969;">Améliorations</b>
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                <p><b>Watchdoc :</b> amélioration du délai de redémarrage du Service Watchdoc</p>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <p style="font-weight: bold;">WES Canon :</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>depuis la configuration du WES Canon, ajout d’un bouton permettant un accès distant à l’écran d’administration (remote panel) du périphérique</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>en cas d’erreur lors de l’installation du WES sur le périphérique d’impression, le message d’erreur a été corrigé</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>dans le cas d’un pilote CPCA/PCL-XL avec IPP désactivé sur la file, la seule option de transformation disponible est la conversion en recto-verso. La correction permet  de ne plus afficher la suggestion de transformation lorsqu’un travail ne fait qu’une page.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p><b>WES&#160;Kyocera :</b> Wd admin IPP uri pour Kyocera MUL-5988</p>
+                                            </li>
+                                            <li>
+                                                <p><b>WPC&#160;for Android et iOS :</b> optimisation du temps de soumission pour les fichiers volumineux</p>
+                                            </li>
+                                        </ul>
+                                        <p style="font-weight: bold;">Correctifs</p>
+                                        <ul>
+                                            <li>
+                                                <p><span style="color: #000000; font-weight: bold;"><span style="color: #696969;">Watchdoc </span>:</span> un avertissement déconseillant le partage du périphérique de sortie s'affichait sur toutes les files, même lorsqu'aucun partage n'était configuré. Ce message ne s’affiche plus.</p>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <p><b>WPC :</b> correction d'une anomalie de détection des emplacements lorsqu'une adresse IP se situe entre deux plages de sous-réseaux disjointes </p>
+                                            </li>
+                                            <li>
+                                                <p><b>WES&#160;:</b> en configuration d’un WES, si le périphérique était en SSL et que l’on activait l’option multiserveur, le port non-sécurisé (Unsecured Port) était rempli automatiquement avec la valeur 5754 à la validation du formulaire si l'administrateur avait laissé le champ vide. Ce comportement a été modifié : s’il n’est pas rempli par l’administrateur, le champ reste vide</p>
+                                            </li>
+                                        </ul>
                                         <h2 style="color: #000000;" id="WPCforWindows70615201092026" data-magellan-target="WPCforWindows70615201092026">  WPC for Windows 7.0.6152 - 01/09/2026</h2>
                                         <p style="font-weight: bold;">Correctif</p>
                                         <ul>
@@ -389,6 +435,7 @@
                                                 </ul>
                                             </li>
                                         </ul>
+                                        <p style="font-weight: bold;">&#160;</p>
                                         <p style="font-weight: bold;">Correctifs<br /></p>
                                         <ul>
                                             <li>
@@ -885,7 +932,7 @@
                                                         <p>correction du programme de mise à jour d'une base Postgre SQL&#160;(pgsql_update_[n°_v].sql) garantissant la mise à jour de la base sans problème de docID</p>
                                                     </li>
                                                     <li>
-                                                        <p>correction du paramètre "Code PIN" qui apparaissait en erreur dans la configuration de l'annuaire META après mise à jour en version <span class="mc-variable Versions.Watchdoc variable">6.1.1.5717</span></p>
+                                                        <p>correction du paramètre "Code PIN" qui apparaissait en erreur dans la configuration de l'annuaire META après mise à jour en version <span class="mc-variable Versions.Watchdoc variable">6.1.1.5732</span></p>
                                                     </li>
                                                     <li>
                                                         <p>correction d'une anomalie provoquant une erreur dans la page "Mon compte" (message "Une erreur s'est produite - Error while calling method ScreenMyAccountStats") liée à l'activation du paramètre "Afficher les statistiques d'équipes" quand l'utilisateur n'appartient à aucune équipe</p>
