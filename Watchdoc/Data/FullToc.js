@@ -1,6 +1,6 @@
 var xmlFullTocData = "";
 xmlFullTocData += '<?xml version=\"1.0\" encoding=\"utf-8\"?>';
-xmlFullTocData += '<CatapultToc Version=\"1\" conditions=\"General.Online,Langues.FR\" DescendantCount=\"534\">';
+xmlFullTocData += '<CatapultToc Version=\"1\" conditions=\"General.Online,Langues.FR\" DescendantCount=\"535\">';
 xmlFullTocData += '    <TocEntry Title=\"Accueil\" Link=\"/index.html\" ComputedResetPageLayout=\"true\" ComputedFirstTopic=\"true\" DescendantCount=\"0\" />';
 xmlFullTocData += '    <TocEntry Title=\"Versions téléchargeables des produits\" Link=\"/A_Getting_Started/Versions_FR.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ReplaceMergeNode=\"false\" ComputedFirstTopic=\"false\" DescendantCount=\"3\">';
 xmlFullTocData += '        <TocEntry Title=\"6.1.1 - Packages et notes de versions\" Link=\"/A_Getting_Started/Release_611.htm\" StartSection=\"false\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
@@ -447,7 +447,7 @@ xmlFullTocData += '        <TocEntry Title=\"Personnaliser l\'interface graphiqu
 xmlFullTocData += '        <TocEntry Title=\"Activer WEScan\" Link=\"/C_Configurer/ConfigWEScan/WEScan_Config_ActiverFonction.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Utiliser WEScan\" Link=\"/C_Configurer/ConfigWEScan/WEScan_Utiliser.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '    </TocEntry>';
-xmlFullTocData += '    <TocEntry Title=\"WPC Watchdoc Print Client\" Link=\"/T_WPC/WPC_Presentation.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" StartSection=\"false\" ComputeToc=\"false\" ReplaceMergeNode=\"false\" ComputedFirstTopic=\"false\" DescendantCount=\"28\">';
+xmlFullTocData += '    <TocEntry Title=\"WPC Watchdoc Print Client\" Link=\"/T_WPC/WPC_Presentation.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" StartSection=\"false\" ComputeToc=\"false\" ReplaceMergeNode=\"false\" ComputedFirstTopic=\"false\" DescendantCount=\"29\">';
 xmlFullTocData += '        <TocEntry Title=\"Exporter le certificat Print API\" Link=\"/T_WPC/WPC_CertPrintAPI_Export.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"for Android\" Link=\"/T_WPC/Android/WPCA_Presentation_v61.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"6\">';
 xmlFullTocData += '            <TocEntry Title=\"Prérequis\" Link=\"/T_WPC/Android/WPCA_Prerequis_v61.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
@@ -466,7 +466,7 @@ xmlFullTocData += '        </TocEntry>';
 xmlFullTocData += '        <TocEntry Title=\"for iOS\" Link=\"/T_WPC/iOS/WPCI_Presentation_v61.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"1\">';
 xmlFullTocData += '            <TocEntry Title=\"Utiliser\" Link=\"/T_WPC/iOS/WPCI_Utilisation_v61.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        </TocEntry>';
-xmlFullTocData += '        <TocEntry Title=\"for Windows\" Link=\"/T_WPC/Windows/WPCW_Presentation.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"12\">';
+xmlFullTocData += '        <TocEntry Title=\"for Windows\" Link=\"/T_WPC/Windows/WPCW_Presentation.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"13\">';
 xmlFullTocData += '            <TocEntry Title=\"Configurer\" Link=\"/T_WPC/Windows/WPCW_Configuration.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '            <TocEntry Title=\"Configurer l\'emplacement\" Link=\"/T_WPC/Windows/WPCW_Configurer_dansWD.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '            <TocEntry Title=\"Configurer une file par défaut\" Link=\"/T_WPC/Windows/WPCW_Config_FileDefaut.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
@@ -479,6 +479,7 @@ xmlFullTocData += '            <TocEntry Title=\"Mettre à jour WPC\" Link=\"/T_
 xmlFullTocData += '            <TocEntry Title=\"Désinstaller WPC\" Link=\"/T_WPC/Windows/WPCW_Desinstall.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '            <TocEntry Title=\"Dépanner\" Link=\"/T_WPC/Windows/WPCW_Depannage.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '            <TocEntry Title=\"Mode silence\" Link=\"/T_WPC/Windows/WPCW_ModeSilent.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
+xmlFullTocData += '            <TocEntry Title=\"Configurer une autre instance\" Link=\"/T_WPC/Windows/WPCW_Configuration_NvelleInstance.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        </TocEntry>';
 xmlFullTocData += '        <TocEntry Title=\"Configurer les Print clients (Legacy)\" Link=\"/H_HowTo/WD54_PrintClient_Configuration.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '    </TocEntry>';
