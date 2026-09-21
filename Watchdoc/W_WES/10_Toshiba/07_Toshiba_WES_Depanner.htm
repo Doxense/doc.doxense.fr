@@ -213,6 +213,8 @@
                                                     </li>
                                                     <li class="tree-node"><a href="#Probl%C3%A8medequotadoubl%C3%A9lorsdelimpressiondunformatlargeA3">Problème de quota doublé lors de l'impression d'un format large (A3)</a>
                                                     </li>
+                                                    <li class="tree-node"><a href="#LeWESnetrouvepluslafiledesortieMessagederreurImpossiblederetrouverlafiledesortiesept2026">Le WES&#160;ne trouve plus la file de sortie - Message d'erreur "Impossible de retrouver la file de sortie" - sept.&#160;2026</a>
+                                                    </li>
                                                     <li class="tree-node"><a href="#Impossibilit%C3%A9dacc%C3%A9der%C3%A0lalistedestravauxenattenteapr%C3%A8sauthentificationMars2026">Impossibilité d'accéder à la liste des travaux en attente après authentification - Mars 2026</a>
                                                     </li>
                                                     <li class="tree-node"><a href="#Impossibilit%C3%A9desauthentifierparbadgeMessagederreurcommonerrorcouldnotsetcookie">Impossibilité de s'authentifier par badge  - Message d'erreur : "?common/error/couldnotsetcookie?"</a>
@@ -359,6 +361,27 @@
                                             </li>
                                             <li value="5">
                                                 <p>Lancez une impression grand format pour vérifier que le quota n'est plus doublé.</p>
+                                            </li>
+                                        </ol>
+                                        <hr />
+                                        <h2 id="LeWESnetrouvepluslafiledesortieMessagederreurImpossiblederetrouverlafiledesortiesept2026" data-magellan-target="LeWESnetrouvepluslafiledesortieMessagederreurImpossiblederetrouverlafiledesortiesept2026">Le WES&#160;ne trouve plus la <a name="file_de_sortie" id="file_de_sortie"></a>file de sortie - Message d'erreur "Impossible de retrouver la file de sortie" - sept.&#160;2026</h2>
+                                        <p style="text-align: left;"><strong>Contexte</strong>
+                                        </p>
+                                        <p style="text-align: left;">Une file d'impression utilisant la fonction d'impression interserveur est migrée d'un serveur vers un autre serveur. Après avoir lancé son impression sur cette file, l'utilisateur qui tente de la débloquer voit s'afficher le message d'erreur suivant : "Impossible de retrouver la file de sortie"&#160;:<br /><br /><img src="../../Resources/Images/9e01c20d-21e6-4ce2-93e6-50194a7a46cc.png" style="width: 500px;height: auto;" /></p>
+                                        <p style="text-align: left;">
+                                            <br />Dans les logs du WES, l'administrateur trouve le message suivant : "! WARN [...] WES|RestApi21Controller        "Could not find target 'Queue [Id_de_la_file]' in the local config. Any local job will be visible, be not able to print on that remote device!".</p>
+                                        <p style="text-align: left;">&#160;</p>
+                                        <p style="text-align: left;"><strong>Cause</strong>
+                                            <br />Le cache conserve l'identifiant de la file qui a été migrée vers un nouveau serveur.&#160;Donc, si la file est sollicitée trop rapidement après sa migration, son identifiant, associé à l'ancien serveur, est toujours présent dans le cache qui n'a pas eu le temps d'être vidé.<br /></p>
+                                        <p style="text-align: left;">&#160;</p>
+                                        <p style="text-align: left;"><strong>Résolution</strong>
+                                            <br />Il convient&#160;:</p>
+                                        <ol>
+                                            <li value="1">
+                                                <p style="text-align: left;">de redémarrer le service Watchdoc afin de vider le cache ;</p>
+                                            </li>
+                                            <li value="2">
+                                                <p style="text-align: left;">puis de relancer l'impression pour vérifier que l'opération a résolu le problème.</p>
                                             </li>
                                         </ol>
                                         <hr width="100%" size="0" align="center" />
