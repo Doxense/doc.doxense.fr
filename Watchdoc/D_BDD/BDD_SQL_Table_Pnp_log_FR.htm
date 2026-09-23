@@ -177,150 +177,156 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h3>Table pnp_log</h3>
-                                        <h4><span class="span_1">Description</span>
-                                        </h4>
-                                        <p>Les logs d’une opération, référence systématiquement une opération, permet de construire une suite de log pour une opération donnée</p>
-                                        <h4><span class="span_1">Schéma</span>
-                                        </h4>
-                                        <table style="mc-table-style: url('../Resources/TableSlylesheets/Standard.css');" class="TableStyle-Standard" cellspacing="0">
-                                            <col class="TableStyle-Standard-Column-Regular" />
-                                            <col class="TableStyle-Standard-Column-Regular" />
-                                            <col class="TableStyle-Standard-Column-Regular" />
-                                            <col class="TableStyle-Standard-Column-Regular" />
-                                            <col class="TableStyle-Standard-Column-Regular" />
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2" style="color: #000000;background-color: #ff803b;">
-                                                    <p class="p_1" style="color: #000000;"><strong>Field</strong>
-                                                    </p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2" style="color: #000000;background-color: #ff803b;">
-                                                    <p class="p_1"><strong style="color: #000000;">Type</strong>
-                                                    </p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2" style="color: #000000;background-color: #ff803b;">
-                                                    <p style="color: #000000;"><strong>Requis</strong>
-                                                    </p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2" style="color: #000000;background-color: #ff803b;">
-                                                    <p class="p_1"><strong style="color: #000000;">CP</strong>
-                                                    </p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2" style="color: #000000;background-color: #ff803b;">
-                                                    <p class="p_1"><strong style="color: #000000;">Description</strong>
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p class="p_2">logID</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>int</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>IDENTITY(1,1)</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>logOPERATIONID</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>uniqueidentifier</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>Identifiant de l’opération</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p class="p_2">logDATE</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>datetime</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>Date de génération du log</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_2">logMESSAGETYPEID</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>int</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>Identifiant du type de message&#160;:</p>
-                                                    <p>1 = Succès</p>
-                                                    <p>2 = Fail</p>
-                                                    <p>3 = Warning</p>
-                                                    <p>4 = Information</p>
-                                                    <p>5 = Erreur</p>
-                                                    <p class="p_2">6 = DEBUG</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p class="p_2">logMESSAGE</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>nvarchar(max)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p class="p_2">Message</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_2">logSOURCE</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>nvarchar(max)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>Module ayant généré le log</p>
-                                                </td>
-                                            </tr>
-                                        </table>
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h3>Table pnp_log</h3>
+                                                <h4><span class="span_1">Description</span>
+                                                </h4>
+                                                <p>Les logs d’une opération, référence systématiquement une opération, permet de construire une suite de log pour une opération donnée</p>
+                                                <h4><span class="span_1">Schéma</span>
+                                                </h4>
+                                                <table style="mc-table-style: url('../Resources/TableSlylesheets/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                    <col class="TableStyle-Standard-Column-Regular" />
+                                                    <col class="TableStyle-Standard-Column-Regular" />
+                                                    <col class="TableStyle-Standard-Column-Regular" />
+                                                    <col class="TableStyle-Standard-Column-Regular" />
+                                                    <col class="TableStyle-Standard-Column-Regular" />
+                                                    <tr class="TableStyle-Standard-Body-Row2">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2" style="color: #000000;background-color: #ff803b;">
+                                                            <p class="p_1" style="color: #000000;"><strong>Field</strong>
+                                                            </p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2" style="color: #000000;background-color: #ff803b;">
+                                                            <p class="p_1"><strong style="color: #000000;">Type</strong>
+                                                            </p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2" style="color: #000000;background-color: #ff803b;">
+                                                            <p style="color: #000000;"><strong>Requis</strong>
+                                                            </p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2" style="color: #000000;background-color: #ff803b;">
+                                                            <p class="p_1"><strong style="color: #000000;">CP</strong>
+                                                            </p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row2" style="color: #000000;background-color: #ff803b;">
+                                                            <p class="p_1"><strong style="color: #000000;">Description</strong>
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row1">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p class="p_2">logID</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>int</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>*</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                            <p>IDENTITY(1,1)</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row2">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>logOPERATIONID</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>uniqueidentifier</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>*</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                            <p>Identifiant de l’opération</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row1">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p class="p_2">logDATE</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>datetime</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>*</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                            <p>Date de génération du log</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row2">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p class="p_2">logMESSAGETYPEID</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>int</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>*</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                            <p>Identifiant du type de message&#160;:</p>
+                                                            <p>1 = Succès</p>
+                                                            <p>2 = Fail</p>
+                                                            <p>3 = Warning</p>
+                                                            <p>4 = Information</p>
+                                                            <p>5 = Erreur</p>
+                                                            <p class="p_2">6 = DEBUG</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row1">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p class="p_2">logMESSAGE</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>nvarchar(max)</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                            <p class="p_2">Message</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row2">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p class="p_2">logSOURCE</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>nvarchar(max)</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                            <p>Module ayant généré le log</p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                        </aside>
                                     </div>
                                     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
                                     </script>

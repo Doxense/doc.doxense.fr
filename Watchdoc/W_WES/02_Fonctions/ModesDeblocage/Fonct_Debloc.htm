@@ -165,6 +165,105 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WESDéblocagedestravauxdimpression" data-magellan-target="WESDéblocagedestravauxdimpression"><a name="aanchor287"></a>
+                                                    <MadCap:concept term="WES" />WES - Déblocage des travaux d'impression</h1>
+                                                <fieldset>Les fonctionnalités présentées dans ce chapitre ne sont pas toutes compatibles avec toutes les marques et tous les modèles des périphériques d'impression.&#160;<br />Consultez le tableau de fonctionnalités du WES&#160;dans les pages dédiées pour connaître les fonctions compatibles.</fieldset>
+                                                <p>Lorsque le WES&#160;est activé, les travaux d'impression sont en attente sur le serveur jusqu'à ce qu'un utilisateur s'authentifie  sur un périphérique d'impression et les valide.&#160;Les travaux sont alors imprimés via la file d'impression.</p>
+                                                <p>Deux modes de déblocage des impressions sont possibles : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p>l'impression sécurisée (secured printing)&#160;;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">l'impression à la demande (pull printing).</p>
+                                                    </li>
+                                                </ul>
+                                                <p class="TitreNiveau3">&#160;</p>
+                                                <h2 id="Impressionsécurisée" data-magellan-target="Impressionsécurisée">Impression sécurisée</h2>
+                                                <p> Ce mode permet de bloquer tous les documents dans la file d’impression partagée du périphérique.&#160;Cette file est configurée sur le poste de l'utilisateur.&#160;L’utilisateur ne peut donc débloquer ses impressions que sur ce seul périphérique après s'y être authentifié.</p>
+                                                <p>&#160;</p>
+                                                <p>  Pour ce type de configuration,   les files d'impression doivent être déployées sur les ordinateurs de chaque utilisateur et l'utilisateur doit choisir, parmi les périphériques configurés sur son poste, celui sur lequel il souhaite lancer ses travaux d'impression&#160;:<br /><br /><img src="WES_SCH_Secured_Printing_2_FR.png" style="width: 800px;" /><br /></p>
+                                                <h2 id="Impressionàlademande" data-magellan-target="Impressionàlademande">Impression à la demande</h2>
+                                                <p>Ce mode permet de rediriger les travaux d'une file logique vers une file physique dont les formats de spools sont compatibles. </p>
+                                                <p>&#160;</p>
+                                                <p>Grâce à cette fonction, il est possible de définir une file logique (ou plusieurs, l'une pour l'impression monochrome et l'autre pour l'impression couleur ; l'une pour le bac par défaut et l'autre pour le bac de papier à en-tête, par exemple). Installée sur l'ordinateur de l'usager, cette file logique permet à l'usager de débloquer ses impressions sur le périphérique de son choix (parmi les files physiques vers lesquelles la file logique peut rediriger les travaux). </p>
+                                                <p>Si vous activez la fonction<strong> Impression à la demande</strong>, vous aurez besoin d'une (ou de plusieurs) files supplémentaires dans votre licence Watchdoc&#160;(licences FIR)&#160;:<br /><br /><br /></p>
+                                                <fieldset style="text-align: left;">L'<strong>impression à la demande</strong> ne peut être mise en œuvre que si les pilotes de la file Impression à la demande et ceux des  périphériques sélectionnés pour le déblocage sont compatibles.<br /><br />Veillez à informer et à former vos utilisateurs dès la mise en œuvre du mode d'impression à la demande.</fieldset>
+                                                <h2 id="Validationdestravauxdimpression" data-magellan-target="Validationdestravauxdimpression">Validation des travaux d'impression</h2>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Après son authentification sur l'écran du périphérique, l’utilisateur est dirigé vers l’écran d’accueil standard qui affiche toutes les applications, dont l’application de libération des travaux Watchdoc&#160;:<br /><br /><img src="Config_WES_EcranLiberationTravaux_SansCiseaux_V3.png" style="width: 700px;" /><br /><i><span style="font-size: 11pt;">Liste des travaux d'impression </span><b style="font-size: 11pt;">sans</b><span style="font-size: 11pt;"> la fonction de suppression</span></i><br /><br /><img src="Config_WES_EcranLiberationTravaux_V3.png" style="width: 700px;" /><br /><i><span style="font-size: 11pt;">Liste des travaux d'impression </span><strong style="font-size: 11pt;">avec </strong><span style="font-size: 11pt;">la fonction de suppression</span></i><br /></p>
+                                                    </li>
+                                                </ol>
+                                                <p>&#160;</p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="2">
+                                                        <p>Dans la liste, l’utilisateur sélectionne les documents qu’il souhaite imprimer ou supprimer<b>*</b>. </p>
+                                                        <p>Par défaut, tous les documents sont sélectionnés. </p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>L’utilisateur peut libérer tous ses travaux en 2 clics :  pour lancer l’application, puis pour le bouton <strong>Tout imprimer</strong>.</p>
+                                                    </li>
+                                                </ol>
+                                                <ol data-mc-continue="true">
+                                                    <li value="4">
+                                                        <p>Dans la dernière colonne, il est possible de choisir l’affichage du coût, du prix ou le nombre de feuilles de chaque document.</p>
+                                                    </li>
+                                                </ol>
+                                                <h2 id="Consultationdétailléedestravauxdimpression" data-magellan-target="Consultationdétailléedestravauxdimpression">Consultation détaillée des travaux d'impression</h2>
+                                                <p>Il est possible d'obtenir plus  d’informations sur un travail en cliquant sur  le bouton <img src="Bouton_acces_outils.png" /> d'accès aux outils, puis en cliquant sur l'outil zoom :<br /><br /><img src="Config_WES_OutilZoomTravaux_V3.png" style="width: 700px;" /><br /><i style="font-size: 11pt;">Visualisation détaillée des travaux</i></p>
+                                                <h2 id="Suppressiondespagessuperflues" data-magellan-target="Suppressiondespagessuperflues">Suppression des pages superflues*</h2>
+                                                <p style="page-break-inside: avoid;">L' interface dispose d'un outil de suppression permettant à l'utilisateur de supprimer des pages d'un document de sorte qu'elles ne soient pas imprimées : </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>l'utilisateur clique sur le bouton d'accès aux outils <img src="Bouton_acces_outils.png" /></p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>il accède à la barre des outils <img src="Barre_outils_WES.png" /></p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>s'ils s'y trouvent, il clique  sur les ciseaux : <br /><br /><img src="Config_WES_OutilSuppressionTravaux_V3.png" style="width: 700px;height: auto;" /></p>
+                                                        <p>
+                                                            <br />
+                                                            <br />
+                                                        </p>
+                                                    </li>
+                                                </ol>
+                                                <ol data-mc-continue="true">
+                                                    <li value="4">
+                                                        <p>Il accède au détail du document.&#160;</p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p>Il clique sur les pages qu'il ne souhaite pas imprimer&#160;: les pages supprimées sont barrées en rouge.&#160;</p>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p> L'utilisateur peut alors cliquez sur <strong>Imprimer </strong>pour n'imprimer que les pages souhaitées&#160;:<br /><br /><img src="Config_WES_EcranSuppressionPages_V3.png" style="width: 700px;" /><br /><br /> (<b>* la fonction de suppression est supportée par la plupart des WES, mais pas par tous. Il convient de vérifier la compatibilité de la fonction avec les périphériques installés.</b>)</p>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WESD%C3%A9blocagedestravauxdimpression">WES - Déblocage des travaux d'impression</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Impressions%C3%A9curis%C3%A9e">Impression sécurisée</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Impression%C3%A0lademande">Impression à la demande</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Validationdestravauxdimpression">Validation des travaux d'impression</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Consultationd%C3%A9taill%C3%A9edestravauxdimpression">Consultation détaillée des travaux d'impression</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Suppressiondespagessuperflues">Suppression des pages superflues*</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -198,83 +297,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor287"></a>
-                                            <MadCap:concept term="WES" />WES - Déblocage des travaux d'impression</h1>
-                                        <fieldset>Les fonctionnalités présentées dans ce chapitre ne sont pas toutes compatibles avec toutes les marques et tous les modèles des périphériques d'impression.&#160;<br />Consultez le tableau de fonctionnalités du WES&#160;dans les pages dédiées pour connaître les fonctions compatibles.</fieldset>
-                                        <p>Lorsque le WES&#160;est activé, les travaux d'impression sont en attente sur le serveur jusqu'à ce qu'un utilisateur s'authentifie  sur un périphérique d'impression et les valide.&#160;Les travaux sont alors imprimés via la file d'impression.</p>
-                                        <p>Deux modes de déblocage des impressions sont possibles : </p>
-                                        <ul>
-                                            <li>
-                                                <p>l'impression sécurisée (secured printing)&#160;;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">l'impression à la demande (pull printing).</p>
-                                            </li>
-                                        </ul>
-                                        <p class="TitreNiveau3">&#160;</p>
-                                        <h2>Impression sécurisée</h2>
-                                        <p> Ce mode permet de bloquer tous les documents dans la file d’impression partagée du périphérique.&#160;Cette file est configurée sur le poste de l'utilisateur.&#160;L’utilisateur ne peut donc débloquer ses impressions que sur ce seul périphérique après s'y être authentifié.</p>
-                                        <p>&#160;</p>
-                                        <p>  Pour ce type de configuration,   les files d'impression doivent être déployées sur les ordinateurs de chaque utilisateur et l'utilisateur doit choisir, parmi les périphériques configurés sur son poste, celui sur lequel il souhaite lancer ses travaux d'impression&#160;:<br /><br /><img src="WES_SCH_Secured_Printing_2_FR.png" style="width: 800px;" /><br /></p>
-                                        <h2>Impression à la demande</h2>
-                                        <p>Ce mode permet de rediriger les travaux d'une file logique vers une file physique dont les formats de spools sont compatibles. </p>
-                                        <p>&#160;</p>
-                                        <p>Grâce à cette fonction, il est possible de définir une file logique (ou plusieurs, l'une pour l'impression monochrome et l'autre pour l'impression couleur ; l'une pour le bac par défaut et l'autre pour le bac de papier à en-tête, par exemple). Installée sur l'ordinateur de l'usager, cette file logique permet à l'usager de débloquer ses impressions sur le périphérique de son choix (parmi les files physiques vers lesquelles la file logique peut rediriger les travaux). </p>
-                                        <p>Si vous activez la fonction<strong> Impression à la demande</strong>, vous aurez besoin d'une (ou de plusieurs) files supplémentaires dans votre licence Watchdoc&#160;(licences FIR)&#160;:<br /><br /><br /></p>
-                                        <fieldset style="text-align: left;">L'<strong>impression à la demande</strong> ne peut être mise en œuvre que si les pilotes de la file Impression à la demande et ceux des  périphériques sélectionnés pour le déblocage sont compatibles.<br /><br />Veillez à informer et à former vos utilisateurs dès la mise en œuvre du mode d'impression à la demande.</fieldset>
-                                        <h2>Validation des travaux d'impression</h2>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Après son authentification sur l'écran du périphérique, l’utilisateur est dirigé vers l’écran d’accueil standard qui affiche toutes les applications, dont l’application de libération des travaux Watchdoc&#160;:<br /><br /><img src="Config_WES_EcranLiberationTravaux_SansCiseaux_V3.png" style="width: 700px;" /><br /><i><span style="font-size: 11pt;">Liste des travaux d'impression </span><b style="font-size: 11pt;">sans</b><span style="font-size: 11pt;"> la fonction de suppression</span></i><br /><br /><img src="Config_WES_EcranLiberationTravaux_V3.png" style="width: 700px;" /><br /><i><span style="font-size: 11pt;">Liste des travaux d'impression </span><strong style="font-size: 11pt;">avec </strong><span style="font-size: 11pt;">la fonction de suppression</span></i><br /></p>
-                                            </li>
-                                        </ol>
-                                        <p>&#160;</p>
-                                        <ol data-mc-continue="true">
-                                            <li value="2">
-                                                <p>Dans la liste, l’utilisateur sélectionne les documents qu’il souhaite imprimer ou supprimer<b>*</b>. </p>
-                                                <p>Par défaut, tous les documents sont sélectionnés. </p>
-                                            </li>
-                                            <li value="3">
-                                                <p>L’utilisateur peut libérer tous ses travaux en 2 clics :  pour lancer l’application, puis pour le bouton <strong>Tout imprimer</strong>.</p>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="4">
-                                                <p>Dans la dernière colonne, il est possible de choisir l’affichage du coût, du prix ou le nombre de feuilles de chaque document.</p>
-                                            </li>
-                                        </ol>
-                                        <h2>Consultation détaillée des travaux d'impression</h2>
-                                        <p>Il est possible d'obtenir plus  d’informations sur un travail en cliquant sur  le bouton <img src="Bouton_acces_outils.png" /> d'accès aux outils, puis en cliquant sur l'outil zoom :<br /><br /><img src="Config_WES_OutilZoomTravaux_V3.png" style="width: 700px;" /><br /><i style="font-size: 11pt;">Visualisation détaillée des travaux</i></p>
-                                        <h2>Suppression des pages superflues*</h2>
-                                        <p style="page-break-inside: avoid;">L' interface dispose d'un outil de suppression permettant à l'utilisateur de supprimer des pages d'un document de sorte qu'elles ne soient pas imprimées : </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>l'utilisateur clique sur le bouton d'accès aux outils <img src="Bouton_acces_outils.png" /></p>
-                                            </li>
-                                            <li value="2">
-                                                <p>il accède à la barre des outils <img src="Barre_outils_WES.png" /></p>
-                                            </li>
-                                            <li value="3">
-                                                <p>s'ils s'y trouvent, il clique  sur les ciseaux : <br /><br /><img src="Config_WES_OutilSuppressionTravaux_V3.png" style="width: 700px;height: auto;" /></p>
-                                                <p>
-                                                    <br />
-                                                    <br />
-                                                </p>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="4">
-                                                <p>Il accède au détail du document.&#160;</p>
-                                            </li>
-                                            <li value="5">
-                                                <p>Il clique sur les pages qu'il ne souhaite pas imprimer&#160;: les pages supprimées sont barrées en rouge.&#160;</p>
-                                            </li>
-                                            <li value="6">
-                                                <p> L'utilisateur peut alors cliquez sur <strong>Imprimer </strong>pour n'imprimer que les pages souhaitées&#160;:<br /><br /><img src="Config_WES_EcranSuppressionPages_V3.png" style="width: 700px;" /><br /><br /> (<b>* la fonction de suppression est supportée par la plupart des WES, mais pas par tous. Il convient de vérifier la compatibilité de la fonction avec les périphériques installés.</b>)</p>
-                                            </li>
-                                        </ol>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

@@ -177,298 +177,304 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h3>Table documents_events</h3>
-                                        <h4><span class="Élevé">Description</span>
-                                        </h4>
-                                        <p class="Corpsdetexte">Permet de stocker les info relatives à la transformation de spools et redirection entre files</p>
-                                        <p class="Corpsdetexte">&#160;</p>
-                                        <h4><span class="Élevé">Schéma</span>
-                                        </h4>
-                                        <table style="mc-table-style: url('../Resources/TableSlylesheets/Standard.css');" class="TableStyle-Standard" cellspacing="0">
-                                            <col class="TableStyle-Standard-Column-Regular" />
-                                            <col class="TableStyle-Standard-Column-Regular" />
-                                            <col class="TableStyle-Standard-Column-Regular" />
-                                            <col class="TableStyle-Standard-Column-Regular" />
-                                            <col class="TableStyle-Standard-Column-Regular" />
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-weight: bold;background-color: #ff803b;">
-                                                    <p class="p_14"><span class="Élevé" style="color: #000000;">Field</span>
-                                                    </p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-weight: bold;background-color: #ff803b;">
-                                                    <p class="p_5"><span style="color: #000000;">Type</span>
-                                                    </p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-weight: bold;background-color: #ff803b;">
-                                                    <p class="p_5"><span style="color: #000000;">R?</span>
-                                                    </p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-weight: bold;background-color: #ff803b;">
-                                                    <p class="p_5"><span style="color: #000000;">CP</span>
-                                                    </p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-weight: bold;background-color: #ff803b;">
-                                                    <p class="p_5"><span style="color: #000000;">Description</span>
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>docID</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>bigint </p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>identifiant interne du document</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>evtTYPE</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>int</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>type d’évènement appliqué sur le doc 0=invalide (none), 1=transformation, 2=redirection, 3=notification</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>docevtTIMESTAMP</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>datetime2(3)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>date (précise) de l’événement</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>docevtFILTER</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>varchar(64)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>dernier filtre (configuré dans Watchdoc) appliqué à l’événement</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>docevtSAVINGS</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>float</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>économies réalisées (positif ou négatif).</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>docevtMOVED</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>tinyint</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>événement du document répliqué sur la base de données d’un autre serveur (excepté sur le serveur Master)</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>docevtOBJECTID</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>varchar(255)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>utilisé uniquement en cas de redirection, contient l’id de la file source</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>docevtORIGIN</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>varchar(255)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>?</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>docevtFIELD</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>tinyint</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>dans le cas d’une transformation, contient le type de transformation 0=invalid , 1=color to n&amp;b, 2=simplextoduplex, 3=duplextosimplex, 4=chgemt du nb d’ex, 5=découpe de page couleur, 6=découpe (suppression) de page mono, 7=redirection</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>docevtVALUE</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>int</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>(lié à Field et a une signification différente en fonction de la nature du field) contient la valeur correspondant à l’événement appliqué au doc.</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>docevtPREVIOUS</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>int</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>valeur avant l’évenement</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>docevtFLAG</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>tinyint</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>permet de savoir, en cas de transfo, si c’est l’utilisateur qui a accepté la transfo 0=pas none, 1=spontanée (à l’initiative de l’utilisateur), 2=suggérée et refusée,3= suggérée et acceptée, 4=forcée</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>docevtAMOUNT</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>float</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>RFU</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>docevtTEXT</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>varchar(255)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>RFU</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>docevtEXTRA</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>ntext</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>RFU</p>
-                                                </td>
-                                            </tr>
-                                        </table>
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h3>Table documents_events</h3>
+                                                <h4><span class="Élevé">Description</span>
+                                                </h4>
+                                                <p class="Corpsdetexte">Permet de stocker les info relatives à la transformation de spools et redirection entre files</p>
+                                                <p class="Corpsdetexte">&#160;</p>
+                                                <h4><span class="Élevé">Schéma</span>
+                                                </h4>
+                                                <table style="mc-table-style: url('../Resources/TableSlylesheets/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                    <col class="TableStyle-Standard-Column-Regular" />
+                                                    <col class="TableStyle-Standard-Column-Regular" />
+                                                    <col class="TableStyle-Standard-Column-Regular" />
+                                                    <col class="TableStyle-Standard-Column-Regular" />
+                                                    <col class="TableStyle-Standard-Column-Regular" />
+                                                    <tr class="TableStyle-Standard-Body-Row2">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-weight: bold;background-color: #ff803b;">
+                                                            <p class="p_14"><span class="Élevé" style="color: #000000;">Field</span>
+                                                            </p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-weight: bold;background-color: #ff803b;">
+                                                            <p class="p_5"><span style="color: #000000;">Type</span>
+                                                            </p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-weight: bold;background-color: #ff803b;">
+                                                            <p class="p_5"><span style="color: #000000;">R?</span>
+                                                            </p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-weight: bold;background-color: #ff803b;">
+                                                            <p class="p_5"><span style="color: #000000;">CP</span>
+                                                            </p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-weight: bold;background-color: #ff803b;">
+                                                            <p class="p_5"><span style="color: #000000;">Description</span>
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row1">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>docID</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>bigint </p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>*</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                            <p>identifiant interne du document</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row2">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>evtTYPE</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>int</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>*</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                            <p>type d’évènement appliqué sur le doc 0=invalide (none), 1=transformation, 2=redirection, 3=notification</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row1">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>docevtTIMESTAMP</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>datetime2(3)</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>*</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                            <p>date (précise) de l’événement</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row2">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>docevtFILTER</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>varchar(64)</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                            <p>dernier filtre (configuré dans Watchdoc) appliqué à l’événement</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row1">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>docevtSAVINGS</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>float</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                            <p>économies réalisées (positif ou négatif).</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row2">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>docevtMOVED</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>tinyint</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                            <p>événement du document répliqué sur la base de données d’un autre serveur (excepté sur le serveur Master)</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row1">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>docevtOBJECTID</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>varchar(255)</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                            <p>utilisé uniquement en cas de redirection, contient l’id de la file source</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row2">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>docevtORIGIN</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>varchar(255)</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                            <p>?</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row1">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>docevtFIELD</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>tinyint</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                            <p>dans le cas d’une transformation, contient le type de transformation 0=invalid , 1=color to n&amp;b, 2=simplextoduplex, 3=duplextosimplex, 4=chgemt du nb d’ex, 5=découpe de page couleur, 6=découpe (suppression) de page mono, 7=redirection</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row2">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>docevtVALUE</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>int</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                            <p>(lié à Field et a une signification différente en fonction de la nature du field) contient la valeur correspondant à l’événement appliqué au doc.</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row1">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>docevtPREVIOUS</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>int</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                            <p>valeur avant l’évenement</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row2">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>docevtFLAG</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>tinyint</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                            <p>permet de savoir, en cas de transfo, si c’est l’utilisateur qui a accepté la transfo 0=pas none, 1=spontanée (à l’initiative de l’utilisateur), 2=suggérée et refusée,3= suggérée et acceptée, 4=forcée</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row1">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>docevtAMOUNT</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>float</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                            <p>RFU</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row2">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>docevtTEXT</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>varchar(255)</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                            <p>RFU</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row1">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>docevtEXTRA</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>ntext</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                            <p>RFU</p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                        </aside>
                                     </div>
                                     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
                                     </script>

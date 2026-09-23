@@ -165,6 +165,63 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocRegénérerunannuaireSQLdecodesPUK" data-magellan-target="WatchdocRegénérerunannuaireSQLdecodesPUK"><a name="aanchor423"></a>
+                                                    <MadCap:concept term="WD" />Watchdoc - Regénérer un annuaire SQL&#160;de codes PUK</h1>
+                                                <h2 id="Principe" data-magellan-target="Principe">Principe</h2>
+                                                <p>En règle générale, les codes PUK&#160;ne sont enregistrés nulle part. </p>
+                                                <p>Cependant, lorsque les utilisateurs de Watchdoc sont enregistrés dans un annuaire <strong>Entra ID (Microsoft Azure)</strong> s'ils s'authentifient à l'aide d'un code PUK, ces codes sont enregistrés dans un annuaire de codes PUK géré dans une table SQL.&#160; <br />Cet enregistrement en base de données SQL&#160;peut également s'appliquer à d'autres annuaires pour lesquels on a explicitement activé l'enregistrement du code PUK (mode déporté) (cf. <a href="../C_Configurer/ConfigAnnuaires/ConfigAnnuaires_LDAP_Procedure.htm#Code_PUK" target="_blank">Déclarer et configurer un annuaire Active Directory /&#160;LDAP</a>),</p>
+                                                <p>&#160;</p>
+                                                <p>Regénérer l'annuaire des codes PUK permet d'augmenter la sécurité de l'authentification en effaçant la liste des codes selon la fréquence définie et en regénérant les codes en fonction du besoin des utilisateurs.&#160;</p>
+                                                <fieldset>Par souci de sécurité, nous <strong>déconseillons </strong>l'authentification par code PUK et recommandons l'utilisation du compte utilisateur (login)/code PIN.</fieldset>
+                                                <h2 id="Procédure" data-magellan-target="Procédure">Procédure</h2>
+                                                <p>Pour configurer la regénération des codes PUK : </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>depuis le <strong>Menu principal</strong> de Watchdoc &gt; section <strong>Configuration</strong>, cliquez sur <strong>Annuaires Utilisateurs</strong> ; </p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>dans la liste des annuaires, repérez l'annuaire des <strong>codes PUK</strong> et cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Modifier.png" style="width: 18px;height: 19px;" /><![CDATA[  ]]><strong>Modifier cet annuaire</strong> correspondant ; </p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>dans l'interface de configuration de l'annuaire, section <strong>Options</strong>, paramètre <strong>Variabilité</strong>, choisissez la fréquence à laquelle l'annuaire doit être regénéré : </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>tous les jours</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>toutes les semaines</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>tous les mois</p>
+                                                                <p>
+                                                                    <br />
+                                                                    <img src="../Z_Resources/Images/02_Captures/FPR_RegenererCodesPuk.png" />
+                                                                </p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>Cliquez sur <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Valider.png" style="width: 30px;height: 29px;" /> pour valider la nouvelle configuration.</p>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocReg%C3%A9n%C3%A9rerunannuaireSQLdecodesPUK">Watchdoc - Regénérer un annuaire SQL&#160;de codes PUK</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Principe">Principe</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Proc%C3%A9dure">Procédure</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -198,47 +255,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor423"></a>
-                                            <MadCap:concept term="WD" />Watchdoc - Regénérer un annuaire SQL&#160;de codes PUK</h1>
-                                        <h2>Principe</h2>
-                                        <p>En règle générale, les codes PUK&#160;ne sont enregistrés nulle part. </p>
-                                        <p>Cependant, lorsque les utilisateurs de Watchdoc sont enregistrés dans un annuaire <strong>Entra ID (Microsoft Azure)</strong> s'ils s'authentifient à l'aide d'un code PUK, ces codes sont enregistrés dans un annuaire de codes PUK géré dans une table SQL.&#160; <br />Cet enregistrement en base de données SQL&#160;peut également s'appliquer à d'autres annuaires pour lesquels on a explicitement activé l'enregistrement du code PUK (mode déporté) (cf. <a href="../C_Configurer/ConfigAnnuaires/ConfigAnnuaires_LDAP_Procedure.htm#Code_PUK" target="_blank">Déclarer et configurer un annuaire Active Directory /&#160;LDAP</a>),</p>
-                                        <p>&#160;</p>
-                                        <p>Regénérer l'annuaire des codes PUK permet d'augmenter la sécurité de l'authentification en effaçant la liste des codes selon la fréquence définie et en regénérant les codes en fonction du besoin des utilisateurs.&#160;</p>
-                                        <fieldset>Par souci de sécurité, nous <strong>déconseillons </strong>l'authentification par code PUK et recommandons l'utilisation du compte utilisateur (login)/code PIN.</fieldset>
-                                        <h2>Procédure</h2>
-                                        <p>Pour configurer la regénération des codes PUK : </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>depuis le <strong>Menu principal</strong> de Watchdoc &gt; section <strong>Configuration</strong>, cliquez sur <strong>Annuaires Utilisateurs</strong> ; </p>
-                                            </li>
-                                            <li value="2">
-                                                <p>dans la liste des annuaires, repérez l'annuaire des <strong>codes PUK</strong> et cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Modifier.png" style="width: 18px;height: 19px;" /><![CDATA[  ]]><strong>Modifier cet annuaire</strong> correspondant ; </p>
-                                            </li>
-                                            <li value="3">
-                                                <p>dans l'interface de configuration de l'annuaire, section <strong>Options</strong>, paramètre <strong>Variabilité</strong>, choisissez la fréquence à laquelle l'annuaire doit être regénéré : </p>
-                                                <ul>
-                                                    <li>
-                                                        <p>tous les jours</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>toutes les semaines</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>tous les mois</p>
-                                                        <p>
-                                                            <br />
-                                                            <img src="../Z_Resources/Images/02_Captures/FPR_RegenererCodesPuk.png" />
-                                                        </p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li value="4">
-                                                <p>Cliquez sur <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Valider.png" style="width: 30px;height: 29px;" /> pour valider la nouvelle configuration.</p>
-                                            </li>
-                                        </ol>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

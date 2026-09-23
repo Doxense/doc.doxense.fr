@@ -166,6 +166,93 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 data-mc-conditions="General.Online" id="WEScanConfigurerunedestinationdeScanToUrl" data-magellan-target="WEScanConfigurerunedestinationdeScanToUrl"><a name="aanchor168"></a>
+                                                    <MadCap:concept term="WEScan;CFG" />
+                                                    <MadCap:conditionalText data-mc-conditions="General.Online">WEScan - Configurer une destination de ScanToUrl</MadCap:conditionalText>
+                                                </h1>
+                                                <h2 id="Principe" data-magellan-target="Principe">Principe</h2>
+                                                <p>Lorsqu'un fichier joint est trop volumineux, il arrive que le serveur de mail le bloque et ne le délivre pas à son destinataire.&#160;Pour éviter une telle situation, l'outil WEScan s'est doté de la fonction <strong>ScanToUrl</strong>.</p>
+                                                <p>&#160;</p>
+                                                <p>Cette fonction permet à WEScan d'enregistrer le fichier numérisé dans un dossier du serveur Watchdoc dès lors qu'il excède une taille prédéfinie.&#160;WEScan envoie au destinataire un lien de téléchargement à la place.&#160;Cette fonction est activée par défaut dès lors que la taille maximale du fichier  est dépassée. La taille maximale est configurée dans le profil de destination.<br /><br /><img src="../../Z_Resources/Images/02_Captures/WEScan_Util_Msg_ScanToUrl.png" /></p>
+                                                <p><cite style="font-size: 10pt;">Mail d'information avec lien url vers le document numérisé.</cite>
+                                                    <br />
+                                                </p>
+                                                <p>&#160;</p>
+                                                <h2 id="Prérequis" data-magellan-target="Prérequis">Prérequis</h2>
+                                                <p>Pour permettre l'enregistrement des fichiers numérisés dans un dossier en attendant que l'utlisateur reçoive le lien de téléchargement, il est nécessaire de configurer les droits sur le dossier ainsi que le <a href="WEScan_Config_PrivilegedServices.htm" class="MCTopic MCTopicPopupHotSpot a">Privileged service.</a></p>
+                                                <h2 id="ConfigurerScanToUrl" data-magellan-target="ConfigurerScanToUrl">Configurer ScanToUrl</h2>
+                                                <h3>Accéder à l'interface de configuration </h3>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Accédez à   l'interface d'administration de Watchdoc en tant qu'administrateur.</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>Depuis le  <strong>Menu principal</strong> &gt;<strong>&#160;Configuration</strong>, cliquez sur <strong>Configuration avancée</strong>&#160;:<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Avancee_AccesInterface.png" style="width: 700px;" /></p>
+                                                        <p>
+                                                            <br />
+                                                        </p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p class="Liste_num_1">Dans l'interface <strong>Configuration avancée</strong>, cliquez sur l'entrée <strong>Configuration système</strong> :<br /><br /><img src="../../Z_Resources/Images/02_Captures/WD54_Admin_ConfigurationSystem_Access.png" style="width: 700px;height: auto;" /></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p class="Liste_num_1">Rendez-vous dans la section Scan vers URL<br /></p>
+                                                    </li>
+                                                </ol>
+                                                <h3>Configurer la fonction Scan vers Url </h3>
+                                                <p class="Liste_puce_2">La fonction&#160;Scan vers URL est activée par défaut, mais vous pouvez personnaliser les paramètres de cette fonction.</p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Adresse du proxy : </strong>saisissez l'adresse du proxy s'il y en a un ; si le champ reste vide, les fichiers volumineux seront enregistrés dans un dossier du serveur Watchdoc par défaut ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Chemin de la route du proxy : </strong>précisez la route du proxy s'il existe ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Validité du lien : </strong> indiquez dans le champ le temps (1 h. min.) durant lequel le fichier numérisé reste téléchargeable.&#160;Au-delà de cette durée, le fichier numérisé est supprimé automatiquement et le lien de téléchargement devient invalide : <br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/WD54_Admin_WEScan_Config_ScanToUrl.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="761" data-mc-height="165" src="../../Z_Resources/Images/02_Captures/WD54_Admin_WEScan_Config_ScanToUrl.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a></p>
+                                                    </li>
+                                                </ul>
+                                                <h3>Configurer le mail  spécifique à la fonction Scan vers Url</h3>
+                                                <p> </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Depuis le <strong>Menu principal</strong>, section <strong>Configuration</strong>, cliquez sur <strong>Web, WES&#160;&amp; Destinations de numérisation</strong> ; </p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>Dans la section <strong>Destinations de numérisation</strong>, éditez la destination E-mail et/ou Mon e-mail sur laquelle vous souhaitez activer la fonction <strong>Scan vers URL</strong>.</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>Dans la destination de numérisation, section <strong>E-Mail</strong>, indiquez la <strong>Taille maxkmale des fichiers (en Mo).</strong></p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>Complétez le paramètre<strong> Corps du message</strong> en saisissant le message (destiné à l'utilisateur) qui accompagne le document numérisé. <br />Aidez-vous des mots-clés ($DATE, $USERNAME, $QUEUEID et $ACCOUNT) pour personnaliser le mail, si nécessaire :<br /><br /><img src="../../Z_Resources/Images/02_Captures/WEScan_Person_MsgScanToUrl.png" style="width: 700px;" /></p>
+                                                        <p>
+                                                            <br />
+                                                        </p>
+                                                    </li>
+                                                </ol>
+                                                <p><span style="font-family: 'Wingdings'">è</span> Dès qu'un document dépasse la taille limite indiquée, le mail intègre un lien url permettant de télécharger le document numérisé.</p>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WEScanConfigurerunedestinationdeScanToUrl">WEScan - Configurer une destination de ScanToUrl</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Principe">Principe</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Pr%C3%A9requis">Prérequis</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#ConfigurerScanToUrl">Configurer ScanToUrl</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -199,75 +286,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1 data-mc-conditions="General.Online"><a name="aanchor168"></a>
-                                            <MadCap:concept term="WEScan;CFG" />
-                                            <MadCap:conditionalText data-mc-conditions="General.Online">WEScan - Configurer une destination de ScanToUrl</MadCap:conditionalText>
-                                        </h1>
-                                        <h2>Principe</h2>
-                                        <p>Lorsqu'un fichier joint est trop volumineux, il arrive que le serveur de mail le bloque et ne le délivre pas à son destinataire.&#160;Pour éviter une telle situation, l'outil WEScan s'est doté de la fonction <strong>ScanToUrl</strong>.</p>
-                                        <p>&#160;</p>
-                                        <p>Cette fonction permet à WEScan d'enregistrer le fichier numérisé dans un dossier du serveur Watchdoc dès lors qu'il excède une taille prédéfinie.&#160;WEScan envoie au destinataire un lien de téléchargement à la place.&#160;Cette fonction est activée par défaut dès lors que la taille maximale du fichier  est dépassée. La taille maximale est configurée dans le profil de destination.<br /><br /><img src="../../Z_Resources/Images/02_Captures/WEScan_Util_Msg_ScanToUrl.png" /></p>
-                                        <p><cite style="font-size: 10pt;">Mail d'information avec lien url vers le document numérisé.</cite>
-                                            <br />
-                                        </p>
-                                        <p>&#160;</p>
-                                        <h2>Prérequis</h2>
-                                        <p>Pour permettre l'enregistrement des fichiers numérisés dans un dossier en attendant que l'utlisateur reçoive le lien de téléchargement, il est nécessaire de configurer les droits sur le dossier ainsi que le <a href="WEScan_Config_PrivilegedServices.htm" class="MCTopic MCTopicPopupHotSpot a">Privileged service.</a></p>
-                                        <h2>Configurer ScanToUrl</h2>
-                                        <h3>Accéder à l'interface de configuration </h3>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Accédez à   l'interface d'administration de Watchdoc en tant qu'administrateur.</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>Depuis le  <strong>Menu principal</strong> &gt;<strong>&#160;Configuration</strong>, cliquez sur <strong>Configuration avancée</strong>&#160;:<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Avancee_AccesInterface.png" style="width: 700px;" /></p>
-                                                <p>
-                                                    <br />
-                                                </p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1">Dans l'interface <strong>Configuration avancée</strong>, cliquez sur l'entrée <strong>Configuration système</strong> :<br /><br /><img src="../../Z_Resources/Images/02_Captures/WD54_Admin_ConfigurationSystem_Access.png" style="width: 700px;height: auto;" /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p class="Liste_num_1">Rendez-vous dans la section Scan vers URL<br /></p>
-                                            </li>
-                                        </ol>
-                                        <h3>Configurer la fonction Scan vers Url </h3>
-                                        <p class="Liste_puce_2">La fonction&#160;Scan vers URL est activée par défaut, mais vous pouvez personnaliser les paramètres de cette fonction.</p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Adresse du proxy : </strong>saisissez l'adresse du proxy s'il y en a un ; si le champ reste vide, les fichiers volumineux seront enregistrés dans un dossier du serveur Watchdoc par défaut ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Chemin de la route du proxy : </strong>précisez la route du proxy s'il existe ; </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Validité du lien : </strong> indiquez dans le champ le temps (1 h. min.) durant lequel le fichier numérisé reste téléchargeable.&#160;Au-delà de cette durée, le fichier numérisé est supprimé automatiquement et le lien de téléchargement devient invalide : <br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/WD54_Admin_WEScan_Config_ScanToUrl.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="761" data-mc-height="165" src="../../Z_Resources/Images/02_Captures/WD54_Admin_WEScan_Config_ScanToUrl.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a></p>
-                                            </li>
-                                        </ul>
-                                        <h3>Configurer le mail  spécifique à la fonction Scan vers Url</h3>
-                                        <p> </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Depuis le <strong>Menu principal</strong>, section <strong>Configuration</strong>, cliquez sur <strong>Web, WES&#160;&amp; Destinations de numérisation</strong> ; </p>
-                                            </li>
-                                            <li value="2">
-                                                <p>Dans la section <strong>Destinations de numérisation</strong>, éditez la destination E-mail et/ou Mon e-mail sur laquelle vous souhaitez activer la fonction <strong>Scan vers URL</strong>.</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>Dans la destination de numérisation, section <strong>E-Mail</strong>, indiquez la <strong>Taille maxkmale des fichiers (en Mo).</strong></p>
-                                            </li>
-                                            <li value="4">
-                                                <p>Complétez le paramètre<strong> Corps du message</strong> en saisissant le message (destiné à l'utilisateur) qui accompagne le document numérisé. <br />Aidez-vous des mots-clés ($DATE, $USERNAME, $QUEUEID et $ACCOUNT) pour personnaliser le mail, si nécessaire :<br /><br /><img src="../../Z_Resources/Images/02_Captures/WEScan_Person_MsgScanToUrl.png" style="width: 700px;" /></p>
-                                                <p>
-                                                    <br />
-                                                </p>
-                                            </li>
-                                        </ol>
-                                        <p><span style="font-family: 'Wingdings'">è</span> Dès qu'un document dépasse la taille limite indiquée, le mail intègre un lien url permettant de télécharger le document numérisé.</p>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

@@ -165,6 +165,62 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WEScanDésignerunattributLDAPautrequehomedansunprofildedestination" data-magellan-target="WEScanDésignerunattributLDAPautrequehomedansunprofildedestination"><a name="aanchor295"></a>
+                                                    <MadCap:concept term="WEScan" />
+                                                    <MadCap:conditionalText data-mc-conditions="General.Online">WEScan - </MadCap:conditionalText>Désigner un attribut LDAP autre que $home dans un profil de destination</h1>
+                                                <h2 id="Besoin" data-magellan-target="Besoin">Besoin</h2>
+                                                <p>Dans les profils de destinations WEScan, c'est l'attribut $HomeDirectory&#160;qui est utilisé par défaut pour indiquer le chemin vers le dossier dans lequel enregistrer les numérisations réalisées par un utilisateur authentifié.</p>
+                                                <p>Il arrive que le client ait besoin d'utiliser un autre attribut LDAP que $HomeDirectory.</p>
+                                                <h2 id="Solution" data-magellan-target="Solution">Solution</h2>
+                                                <p>Il convient d'indiquer à Watchdoc qu'un autre attribut LDAP doit être utilisé pour connaître le chemin d'accès au dossier d'enregistrement des numérisations.</p>
+                                                <h2 id="Procédure" data-magellan-target="Procédure">Procédure</h2>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Accédez en tant qu'administrateur au serveur maître Watchdoc.</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>Ouvrez le fichier de configuration de Watchdoc (par défaut<strong> C:\Program Files\Doxense\Watchdoc\Data\config.xml</strong>).</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>Dans la section &lt;!-- User Directories --&gt;, pour chaque balise &lt;ldap&gt;, ajoutez la balise<strong> &lt;ldap-homedirectory-attribute&gt;&lt;/ldap-homedirectory-attribute&gt;</strong>.</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>Dans cette balise, indiquez le nom de l'attribut de l'annuaire LDAP dans lequel est enregistré le chemin du dossier de sauvegarde des numérisations (par exemple : &lt;ldap-homedirectory-attribute&gt;<strong>comment</strong>&lt;/ldap-homedirectory-attribute&gt;).</p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p>Enregistrez le fichier config.xml.</p>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p>Redémarrez Watchdoc.</p>
+                                                    </li>
+                                                    <li value="7">
+                                                        <p>Toujours dans le serveur maître, ouvrez l'annuaire.</p>
+                                                    </li>
+                                                    <li value="8">
+                                                        <p>Refermez l'annuaire (ce qui aura pour effet d'ajouter une version à l'annuaire pour que Watchdoc mette à jour la configuration relative à l'annuaire).</p>
+                                                    </li>
+                                                </ol>
+                                                <fieldset>Attention : lors d'une mise à jour de Watchdoc, le nouveau fichier de configuration écrase l'ancien. Pour conserver la configuration spécifique à l'attribut LDAP, reportez cette configuration dans le nouveau fichier de configuration.&#160;<br />Si la configuration spécifique n'est pas reportée, c'est l'attribut $HomeDirectory du LDAP qui sera de nouveau utilisé par défaut.</fieldset>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WEScanD%C3%A9signerunattributLDAPautrequehomedansunprofildedestination">WEScan - Désigner un attribut LDAP autre que $home dans un profil de destination</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Besoin">Besoin</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Solution">Solution</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Proc%C3%A9dure">Procédure</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -198,44 +254,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor295"></a>
-                                            <MadCap:concept term="WEScan" />
-                                            <MadCap:conditionalText data-mc-conditions="General.Online">WEScan - </MadCap:conditionalText>Désigner un attribut LDAP autre que $home dans un profil de destination</h1>
-                                        <h2>Besoin</h2>
-                                        <p>Dans les profils de destinations WEScan, c'est l'attribut $HomeDirectory&#160;qui est utilisé par défaut pour indiquer le chemin vers le dossier dans lequel enregistrer les numérisations réalisées par un utilisateur authentifié.</p>
-                                        <p>Il arrive que le client ait besoin d'utiliser un autre attribut LDAP que $HomeDirectory.</p>
-                                        <h2>Solution</h2>
-                                        <p>Il convient d'indiquer à Watchdoc qu'un autre attribut LDAP doit être utilisé pour connaître le chemin d'accès au dossier d'enregistrement des numérisations.</p>
-                                        <h2>Procédure</h2>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Accédez en tant qu'administrateur au serveur maître Watchdoc.</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>Ouvrez le fichier de configuration de Watchdoc (par défaut<strong> C:\Program Files\Doxense\Watchdoc\Data\config.xml</strong>).</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>Dans la section &lt;!-- User Directories --&gt;, pour chaque balise &lt;ldap&gt;, ajoutez la balise<strong> &lt;ldap-homedirectory-attribute&gt;&lt;/ldap-homedirectory-attribute&gt;</strong>.</p>
-                                            </li>
-                                            <li value="4">
-                                                <p>Dans cette balise, indiquez le nom de l'attribut de l'annuaire LDAP dans lequel est enregistré le chemin du dossier de sauvegarde des numérisations (par exemple : &lt;ldap-homedirectory-attribute&gt;<strong>comment</strong>&lt;/ldap-homedirectory-attribute&gt;).</p>
-                                            </li>
-                                            <li value="5">
-                                                <p>Enregistrez le fichier config.xml.</p>
-                                            </li>
-                                            <li value="6">
-                                                <p>Redémarrez Watchdoc.</p>
-                                            </li>
-                                            <li value="7">
-                                                <p>Toujours dans le serveur maître, ouvrez l'annuaire.</p>
-                                            </li>
-                                            <li value="8">
-                                                <p>Refermez l'annuaire (ce qui aura pour effet d'ajouter une version à l'annuaire pour que Watchdoc mette à jour la configuration relative à l'annuaire).</p>
-                                            </li>
-                                        </ol>
-                                        <fieldset>Attention : lors d'une mise à jour de Watchdoc, le nouveau fichier de configuration écrase l'ancien. Pour conserver la configuration spécifique à l'attribut LDAP, reportez cette configuration dans le nouveau fichier de configuration.&#160;<br />Si la configuration spécifique n'est pas reportée, c'est l'attribut $HomeDirectory du LDAP qui sera de nouveau utilisé par défaut.</fieldset>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

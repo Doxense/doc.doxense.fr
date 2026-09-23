@@ -165,6 +165,177 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocDroitsGérerlesdroitsdadministrationdungroupedefiles" data-magellan-target="WatchdocDroitsGérerlesdroitsdadministrationdungroupedefiles"><a name="aanchor122"></a>
+                                                    <MadCap:concept term="WD" />Watchdoc - Droits  - Gérer les droits d'administration d'un groupe de files</h1>
+                                                <h2 id="Principe" data-magellan-target="Principe">Principe</h2>
+                                                <p>Lorsque le parc de périphériques d'impression est important, il peut être utile de gérer les droits d'administration des groupes de files, de manière à ce que les opérateurs d'un site accèdent uniquement au groupe de files qu'ils doivent gérer, sans être parasités par les files d'autres groupes.&#160;</p>
+                                                <p>&#160;</p>
+                                                <p>Ainsi, si vous disposez d'un parc de périphériques d'impression répartis entre un Site A et un Site B, la gestion des droits sur les groupes de files permet aux opérateurs du Site A de ne pas avoir accès à la gestion des files du Site B (et réciproquement), ce qui facilite la gestion courante des files dont ils ont la responsabilité.&#160;</p>
+                                                <p>&#160;</p>
+                                                <p>Cette configuration nécessite la configuration de rôles, de groupes de files, de droits d'administration et de profils de sécurité dans Watchdoc.</p>
+                                                <h2 id="Prérequis" data-magellan-target="Prérequis">Prérequis</h2>
+                                                <p>Avant de mettre en oeuvre la délégation de l'administration des files, nous vous recommandons définir préalablement l'organisation des tâches de gestion au sein de l'établissement. </p>
+                                                <p>Pour configurer ces droits, il convient idéalement, de disposer de groupe d'utilisateurs distincts créés dans l'annuaire ("Opérateurs_Site_A" et "Opérateurs_Site_ B", par exemple). De cette manière, il n'est pas nécessaire de modifier le rôle dans Watchdoc lorsque des membres intègrent ou quittent le groupe.</p>
+                                                <p>Si ces groupes n'existent pas dans l'annuaire, les utilisateurs autorisés à gérer les groupes de files peuvent cependant être ajoutés nominativement dans Watchdoc.</p>
+                                                <p>&#160;</p>
+                                                <p>Les étapes de cette configuration sont les suivantes : </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1">activation de la fonction  ;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1">création de rôles dédiés ;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>création et configuration des groupes de files&#160;;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p class="Liste_num_1">configuration des droits d'accès ; </p>
+                                                    </li>
+                                                </ol>
+                                                <h2 id="Procédure" data-magellan-target="Procédure">Procédure</h2>
+                                                <h3>Activer l'utilisation des Profils de sécurité</h3>
+                                                <p>Pour activer les <strong>Profils de sécurité </strong>pour restreindre les droits sur les groupes de files : </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>accédez à l'interface web d'administration de Watchdoc en tant qu'administrateur ;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>depuis le <strong>Menu principal</strong>, section <strong>Configuration</strong>, cliquez sur <strong>Configuration avancée</strong> ;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>dans l'interface<strong> Configuration avancée</strong>, cliquez sur <strong>Configuration Système</strong>&#160;;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>dans la section <strong>Sécurité</strong>, cliquez sur le bouton <strong>Utiliser les Profis de sécurité pour restreindre les droits d'administration par groupes de files d'impression</strong> : <br /><br /><img src="Gerer_Droits_Groupe_Securite.png" style="width: 700px;height: auto;" /></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p>Validez la <strong>Configuration Système</strong>.</p>
+                                                    </li>
+                                                </ol>
+                                                <h3>Créer de nouveaux rôles</h3>
+                                                <p>Pour distinguer les opérateurs autorisés à gérer les files du Site_A des opérateurs autorisés à gérer les files du Site_B, il est nécessaire de créer des rôles distincts. Pour créer les rôles&#160;:</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>depuis le <strong>Menu principal</strong>, section <strong>Gestion</strong>, cliquez sur <strong>Rôles &amp; Services :</strong></p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>dans la liste des Rôles &amp; Services cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_CreerNvRole.png" style="width: 33px;height: 25px;" /> <strong>Créer un nouveau rôle</strong> :</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>dans l'interface<strong> Création d'un rôle</strong>, configurez le rôle en lui attribuant au minimun un <strong>Nom</strong> (Ope_Site_A dans l'exemple) ; </p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>dans la section <strong>Membres</strong>, sélectionnez le groupe de l'annuaire autorisé à gérer le premier site. S'il n'existe pas de groupe, sélectionnez les utilisateurs autorisés à gérer le premier site (vous pouvez aussi associer groupe et utilisateurs) ;</p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p>validez <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Valider.png" />la création du premier rôle :<br /><br /><img src="Gerer_Droits_Role.png" style="width: 700px;height: auto;" /></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p>réitérez l'opération pour créer autant de rôles que nécessaire (2, dans notre exemple).</p>
+                                                    </li>
+                                                </ol>
+                                                <h3>Créer les groupes de files et y associer les files</h3>
+                                                <p>Pour créer les groupes de files (cf. <a href="WD5_GestionCourante_Files_CreerGroupe.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Créer un groupe de files</a> pour plus de détails) : </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>depuis le <strong>Menu principal</strong>, section <strong>Exploitation</strong>, cliquez sur <strong>Files d'impression, emplacements, groupes de files &amp; pools</strong> ;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>cliquez sous l'onglet <strong>Groupes de files</strong>&#160;;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Creer.png" style="width: 17px;height: 16px;" /> <strong>Créer un nouveau groupe de files</strong> ; </p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>configurez le groupe en précisant (entre autres paramètres) :</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>le nom du groupe</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>l'emplacement associé au groupe</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p>retournez dans l'interface de configuration des files d'impression (<strong>Menu principal</strong>, section <strong>Exploitation</strong>, <strong>Files d'impression, emplacements, groupes de files &amp; pools</strong>, onglet <strong>Files d'impression</strong>) ; </p>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p>dans la liste des files, pour chaque file à intégrer au groupe, cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Editer.png" style="width: 23px;height: 23px;" /> pour éditer les propriétés de la file ; </p>
+                                                    </li>
+                                                    <li value="7">
+                                                        <p>dans la section<strong> Informations générales</strong>, sélectionnez le <strong>Groupe</strong> de files auquel appartient la file&#160;:<br /><img src="Gerer_Droits_Files_Groupe.png" /></p>
+                                                        <p>
+                                                            <br />
+                                                        </p>
+                                                    </li>
+                                                    <li value="8">
+                                                        <p>validez la configuration de la file;</p>
+                                                    </li>
+                                                    <li value="9">
+                                                        <p>réitérez l'opération pour toutes les files appartenant au groupe.</p>
+                                                    </li>
+                                                </ol>
+                                                <p><span style="font-family: 'Wingdings'">è</span>Une fois le groupe de files configuré, appliquez-lui des droits d'administration.</p>
+                                                <h3>Appliquer un droit d'administration sur un groupe de files</h3>
+                                                <p>Pour appliquer un droit d'administration sur le groupe :</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>depuis le <strong>Menu principal</strong>, section <strong>Exploitation</strong>, cliquez sur <strong>Files d'impression, emplacements, groupes de files &amp; pools</strong> ;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>cliquez sous l'onglet <strong>Groupes de files</strong>&#160;;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>dans la liste des groupes, cliquez sur le nom du groupe de files à configurer ;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>dans l'interface de configuration du groupe, cliquez sur l'onglet <strong>Règles </strong>: <br /></p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p>dans l'interface <strong>Règles</strong>, cliquez sur le bouton <strong>Administration </strong>: </p>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p>dans la section<strong> Droits d'administration</strong> du périphérique, éditez les droits du <strong>Groupe </strong>en cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Editer.png" style="width: 27px;height: 27px;" />: <br /><br /><img src="Gerer_Droits_Groupe_Regles.png" style="width: 700px;" /></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="7">
+                                                        <p>dans l'interface<strong> ACLs d'un groupe de files</strong>, cochez le bouton-radio <strong>Utiliser les droits spécifiques ci-dessous </strong>: </p>
+                                                    </li>
+                                                    <li value="8">
+                                                        <p>dans la colonne <strong>Conditions</strong>, sélectionnez le groupe des utilisateurs autorisés à gérer le groupe de files ;</p>
+                                                    </li>
+                                                    <li value="9">
+                                                        <p>configurez ensuite les droits accordés au groupe d'utilisateurs pour le groupe de files concerné, en accordant au minimum le droit d'administration (admin) ; </p>
+                                                    </li>
+                                                    <li value="10">
+                                                        <p>validez les droits spécifiques une fois configurés&#160;: <br /><br /><img src="Gerer_Droits_Groupe_ACLs.png" style="width: 700px;height: auto;" /></p>
+                                                    </li>
+                                                </ol>
+                                                <p><span style="font-family: 'Wingdings'">è</span> Pour vérifier la configuation, demandez à un membre d'un groupe d'opérateurs de s'authentifier sur le site d'administration.&#160;Dans la liste des groupes de files, il voit uniquement le groupe de files qu'il est autorisé à gérer (ou les files dans la liste des files d'impression) : <br /><br /><img src="Gerer_Droits_Resultat.png" style="width: 700px;height: auto;" /></p>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocDroitsG%C3%A9rerlesdroitsdadministrationdungroupedefiles">Watchdoc - Droits  - Gérer les droits d'administration d'un groupe de files</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Principe">Principe</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Pr%C3%A9requis">Prérequis</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Proc%C3%A9dure">Procédure</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -198,159 +369,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor122"></a>
-                                            <MadCap:concept term="WD" />Watchdoc - Droits  - Gérer les droits d'administration d'un groupe de files</h1>
-                                        <h2>Principe</h2>
-                                        <p>Lorsque le parc de périphériques d'impression est important, il peut être utile de gérer les droits d'administration des groupes de files, de manière à ce que les opérateurs d'un site accèdent uniquement au groupe de files qu'ils doivent gérer, sans être parasités par les files d'autres groupes.&#160;</p>
-                                        <p>&#160;</p>
-                                        <p>Ainsi, si vous disposez d'un parc de périphériques d'impression répartis entre un Site A et un Site B, la gestion des droits sur les groupes de files permet aux opérateurs du Site A de ne pas avoir accès à la gestion des files du Site B (et réciproquement), ce qui facilite la gestion courante des files dont ils ont la responsabilité.&#160;</p>
-                                        <p>&#160;</p>
-                                        <p>Cette configuration nécessite la configuration de rôles, de groupes de files, de droits d'administration et de profils de sécurité dans Watchdoc.</p>
-                                        <h2>Prérequis</h2>
-                                        <p>Avant de mettre en oeuvre la délégation de l'administration des files, nous vous recommandons définir préalablement l'organisation des tâches de gestion au sein de l'établissement. </p>
-                                        <p>Pour configurer ces droits, il convient idéalement, de disposer de groupe d'utilisateurs distincts créés dans l'annuaire ("Opérateurs_Site_A" et "Opérateurs_Site_ B", par exemple). De cette manière, il n'est pas nécessaire de modifier le rôle dans Watchdoc lorsque des membres intègrent ou quittent le groupe.</p>
-                                        <p>Si ces groupes n'existent pas dans l'annuaire, les utilisateurs autorisés à gérer les groupes de files peuvent cependant être ajoutés nominativement dans Watchdoc.</p>
-                                        <p>&#160;</p>
-                                        <p>Les étapes de cette configuration sont les suivantes : </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">activation de la fonction  ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1">création de rôles dédiés ;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>création et configuration des groupes de files&#160;;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p class="Liste_num_1">configuration des droits d'accès ; </p>
-                                            </li>
-                                        </ol>
-                                        <h2>Procédure</h2>
-                                        <h3>Activer l'utilisation des Profils de sécurité</h3>
-                                        <p>Pour activer les <strong>Profils de sécurité </strong>pour restreindre les droits sur les groupes de files : </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>accédez à l'interface web d'administration de Watchdoc en tant qu'administrateur ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>depuis le <strong>Menu principal</strong>, section <strong>Configuration</strong>, cliquez sur <strong>Configuration avancée</strong> ;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>dans l'interface<strong> Configuration avancée</strong>, cliquez sur <strong>Configuration Système</strong>&#160;;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p>dans la section <strong>Sécurité</strong>, cliquez sur le bouton <strong>Utiliser les Profis de sécurité pour restreindre les droits d'administration par groupes de files d'impression</strong> : <br /><br /><img src="Gerer_Droits_Groupe_Securite.png" style="width: 700px;height: auto;" /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="5">
-                                                <p>Validez la <strong>Configuration Système</strong>.</p>
-                                            </li>
-                                        </ol>
-                                        <h3>Créer de nouveaux rôles</h3>
-                                        <p>Pour distinguer les opérateurs autorisés à gérer les files du Site_A des opérateurs autorisés à gérer les files du Site_B, il est nécessaire de créer des rôles distincts. Pour créer les rôles&#160;:</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>depuis le <strong>Menu principal</strong>, section <strong>Gestion</strong>, cliquez sur <strong>Rôles &amp; Services :</strong></p>
-                                            </li>
-                                            <li value="2">
-                                                <p>dans la liste des Rôles &amp; Services cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_CreerNvRole.png" style="width: 33px;height: 25px;" /> <strong>Créer un nouveau rôle</strong> :</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>dans l'interface<strong> Création d'un rôle</strong>, configurez le rôle en lui attribuant au minimun un <strong>Nom</strong> (Ope_Site_A dans l'exemple) ; </p>
-                                            </li>
-                                            <li value="4">
-                                                <p>dans la section <strong>Membres</strong>, sélectionnez le groupe de l'annuaire autorisé à gérer le premier site. S'il n'existe pas de groupe, sélectionnez les utilisateurs autorisés à gérer le premier site (vous pouvez aussi associer groupe et utilisateurs) ;</p>
-                                            </li>
-                                            <li value="5">
-                                                <p>validez <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Valider.png" />la création du premier rôle :<br /><br /><img src="Gerer_Droits_Role.png" style="width: 700px;height: auto;" /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="6">
-                                                <p>réitérez l'opération pour créer autant de rôles que nécessaire (2, dans notre exemple).</p>
-                                            </li>
-                                        </ol>
-                                        <h3>Créer les groupes de files et y associer les files</h3>
-                                        <p>Pour créer les groupes de files (cf. <a href="WD5_GestionCourante_Files_CreerGroupe.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Créer un groupe de files</a> pour plus de détails) : </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>depuis le <strong>Menu principal</strong>, section <strong>Exploitation</strong>, cliquez sur <strong>Files d'impression, emplacements, groupes de files &amp; pools</strong> ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>cliquez sous l'onglet <strong>Groupes de files</strong>&#160;;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Creer.png" style="width: 17px;height: 16px;" /> <strong>Créer un nouveau groupe de files</strong> ; </p>
-                                            </li>
-                                            <li value="4">
-                                                <p>configurez le groupe en précisant (entre autres paramètres) :</p>
-                                                <ul>
-                                                    <li>
-                                                        <p>le nom du groupe</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>l'emplacement associé au groupe</p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li value="5">
-                                                <p>retournez dans l'interface de configuration des files d'impression (<strong>Menu principal</strong>, section <strong>Exploitation</strong>, <strong>Files d'impression, emplacements, groupes de files &amp; pools</strong>, onglet <strong>Files d'impression</strong>) ; </p>
-                                            </li>
-                                            <li value="6">
-                                                <p>dans la liste des files, pour chaque file à intégrer au groupe, cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Editer.png" style="width: 23px;height: 23px;" /> pour éditer les propriétés de la file ; </p>
-                                            </li>
-                                            <li value="7">
-                                                <p>dans la section<strong> Informations générales</strong>, sélectionnez le <strong>Groupe</strong> de files auquel appartient la file&#160;:<br /><img src="Gerer_Droits_Files_Groupe.png" /></p>
-                                                <p>
-                                                    <br />
-                                                </p>
-                                            </li>
-                                            <li value="8">
-                                                <p>validez la configuration de la file;</p>
-                                            </li>
-                                            <li value="9">
-                                                <p>réitérez l'opération pour toutes les files appartenant au groupe.</p>
-                                            </li>
-                                        </ol>
-                                        <p><span style="font-family: 'Wingdings'">è</span>Une fois le groupe de files configuré, appliquez-lui des droits d'administration.</p>
-                                        <h3>Appliquer un droit d'administration sur un groupe de files</h3>
-                                        <p>Pour appliquer un droit d'administration sur le groupe :</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>depuis le <strong>Menu principal</strong>, section <strong>Exploitation</strong>, cliquez sur <strong>Files d'impression, emplacements, groupes de files &amp; pools</strong> ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>cliquez sous l'onglet <strong>Groupes de files</strong>&#160;;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>dans la liste des groupes, cliquez sur le nom du groupe de files à configurer ;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p>dans l'interface de configuration du groupe, cliquez sur l'onglet <strong>Règles </strong>: <br /></p>
-                                            </li>
-                                            <li value="5">
-                                                <p>dans l'interface <strong>Règles</strong>, cliquez sur le bouton <strong>Administration </strong>: </p>
-                                            </li>
-                                            <li value="6">
-                                                <p>dans la section<strong> Droits d'administration</strong> du périphérique, éditez les droits du <strong>Groupe </strong>en cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Editer.png" style="width: 27px;height: 27px;" />: <br /><br /><img src="Gerer_Droits_Groupe_Regles.png" style="width: 700px;" /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="7">
-                                                <p>dans l'interface<strong> ACLs d'un groupe de files</strong>, cochez le bouton-radio <strong>Utiliser les droits spécifiques ci-dessous </strong>: </p>
-                                            </li>
-                                            <li value="8">
-                                                <p>dans la colonne <strong>Conditions</strong>, sélectionnez le groupe des utilisateurs autorisés à gérer le groupe de files ;</p>
-                                            </li>
-                                            <li value="9">
-                                                <p>configurez ensuite les droits accordés au groupe d'utilisateurs pour le groupe de files concerné, en accordant au minimum le droit d'administration (admin) ; </p>
-                                            </li>
-                                            <li value="10">
-                                                <p>validez les droits spécifiques une fois configurés&#160;: <br /><br /><img src="Gerer_Droits_Groupe_ACLs.png" style="width: 700px;height: auto;" /></p>
-                                            </li>
-                                        </ol>
-                                        <p><span style="font-family: 'Wingdings'">è</span> Pour vérifier la configuation, demandez à un membre d'un groupe d'opérateurs de s'authentifier sur le site d'administration.&#160;Dans la liste des groupes de files, il voit uniquement le groupe de files qu'il est autorisé à gérer (ou les files dans la liste des files d'impression) : <br /><br /><img src="Gerer_Droits_Resultat.png" style="width: 700px;height: auto;" /></p>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

@@ -165,6 +165,115 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocWatchdocAgentSSOConfigurer" data-magellan-target="WatchdocWatchdocAgentSSOConfigurer"><a name="aanchor288"></a>
+                                                    <MadCap:concept term="WD" />Watchdoc - Watchdoc Agent SSO - Configurer</h1>
+                                                <h2 id="Configurerlesfilesdimpressionetougroupesdefiles" data-magellan-target="Configurerlesfilesdimpressionetougroupesdefiles">Configurer les files d'impression et/ou groupes de files</h2>
+                                                <p>Pour activer l'Agent SSO sur une file :</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>accédez à l'interface d'administration de Watchdoc en tant qu'administrateur ;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>depuis le <strong>Menu principal</strong>, section <strong>Exploitation</strong>, cliquez sur <strong>Files d'impression, emplacements, groupes de files &amp; pools</strong> :</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>dans la liste des files, sélectionnez celle pour laquelle vous configurez l'Agent SSO ;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>dans l'interface de configuration de la file, cliquez sur le bouton <strong>Editer les propriétés</strong> ;</p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p>dans l'interface <strong>Propriétés de la file d'impression</strong>, section Mode Expert, paramètre Identité, cochez la case <strong>Etablit la correspondance avec les utilisateurs authentifiés par logiciel SSO</strong><br /><br /><img src="../Z_Resources/Images/02_Captures/WD_AgentSSO_ConfigFile.png" style="width: 700px;height: auto;" /></p>
+                                                    </li>
+                                                </ol>
+                                                <h2 id="InstallerWatchdocAgentSSO" data-magellan-target="InstallerWatchdocAgentSSO">Installer Watchdoc Agent SSO</h2>
+                                                <h3>Configurer WatchdocSSOAgentDeployer.bat</h3>
+                                                <p>Pour installer l'Agent Watchdoc SSO :</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>dans un répertoire réseau accessible de tous les postes clients qui nécessitent l'Agent SSO, créez un dossier dédié à cet Agent SSO (par ex. : C:\temp\WatchdocSSO Agent) ;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p> décompressez l’archive WatchdocSSOAgent.rar (fournie par Doxense) et enregistrez les fichiers décompressés dans ce dossier dédié ;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>ouvrez le fichier WatchdocSSOAgentDeployer.bat à l'aide d'un éditeur de texte ;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>dans ce fichier .bat , personnalisez les valeurs des set de sorte qu'elles correspondent aux valeurs de votre environnement :</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>set networkLocation=C:\Temp\WatchdocSSOAgent (chemin vers le dossier</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>ssoAgent sur le répertoire partagé réseau) ;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>set watchdocServerName=localhost</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>set watchdocServerPort=5754</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>set watchdocServerSecure=false</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>set identityIgnoreDomain=true</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ol>
+                                                <p>&#160;</p>
+                                                <p>Les postes clients qui nécessitent l'Agent SSO sont ensuite configurés pour exécuter le fichier <strong>.bat </strong>lors de leur démarrage.</p>
+                                                <p>&#160;</p>
+                                                <h3>Etablir la connexion entre le logiciel SSO et WatchdocAgentSSO</h3>
+                                                <p>Pour établir la connexion entre le logiciel SSO et WatchdocAgentSSO, demandez à l'éditeur du logiciel SSO installé sur le poste client (comme SSOx, par exemple) de configurer son logiciel pour qu'il lance les deux lignes de commandes suivantes :</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>Logon SSO : “C:\temp\Watchdoc SSO Agent\WatchdocSSOAgent.exe” /standalone/event LogOn /user “DOMAIN\USER” (login de l’utilisateur connecté.avec nom de domaine facultatif ou obligatoire dans un environnement multi-domaine) ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Logoff SSO : “C:\temp\Watchdoc SSO Agent\WatchdocSSOAgent.exe” /standalone/event LogOff</p>
+                                                    </li>
+                                                </ul>
+                                                <h2 id="Dépannage" data-magellan-target="Dépannage">Dépannage</h2>
+                                                <p>Lorsque l'Agent SSO fonctionne correctement, les données suivantes figurent dans le fichier de trace Watchdoc&#160;:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>logon (authentification) ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>logoff (déconnexion) ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>minute event (au moins un événement une fois l'authentification effectuée) ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>événement lorsqu'un travail d'impression est associé à un utilsateur de l'A.D.</p>
+                                                    </li>
+                                                </ul>
+                                                <p>&#160;</p>
+                                                <p>La base Watchdoc jsonDB s'enrichit alors d'une liste des événements survenus sur les postes : %WATCHDOC_PATH%\Data\SSO.jsdb\Hosts (pour chaque poste client, un fichier json contenant la liste des événements).</p>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocWatchdocAgentSSOConfigurer">Watchdoc - Watchdoc Agent SSO - Configurer</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Configurerlesfilesdimpressionetougroupesdefiles">Configurer les files d'impression et/ou groupes de files</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#InstallerWatchdocAgentSSO">Installer Watchdoc Agent SSO</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#D%C3%A9pannage">Dépannage</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -198,97 +307,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor288"></a>
-                                            <MadCap:concept term="WD" />Watchdoc - Watchdoc Agent SSO - Configurer</h1>
-                                        <h2>Configurer les files d'impression et/ou groupes de files</h2>
-                                        <p>Pour activer l'Agent SSO sur une file :</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>accédez à l'interface d'administration de Watchdoc en tant qu'administrateur ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>depuis le <strong>Menu principal</strong>, section <strong>Exploitation</strong>, cliquez sur <strong>Files d'impression, emplacements, groupes de files &amp; pools</strong> :</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>dans la liste des files, sélectionnez celle pour laquelle vous configurez l'Agent SSO ;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p>dans l'interface de configuration de la file, cliquez sur le bouton <strong>Editer les propriétés</strong> ;</p>
-                                            </li>
-                                            <li value="5">
-                                                <p>dans l'interface <strong>Propriétés de la file d'impression</strong>, section Mode Expert, paramètre Identité, cochez la case <strong>Etablit la correspondance avec les utilisateurs authentifiés par logiciel SSO</strong><br /><br /><img src="../Z_Resources/Images/02_Captures/WD_AgentSSO_ConfigFile.png" style="width: 700px;height: auto;" /></p>
-                                            </li>
-                                        </ol>
-                                        <h2>Installer Watchdoc Agent SSO</h2>
-                                        <h3>Configurer WatchdocSSOAgentDeployer.bat</h3>
-                                        <p>Pour installer l'Agent Watchdoc SSO :</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>dans un répertoire réseau accessible de tous les postes clients qui nécessitent l'Agent SSO, créez un dossier dédié à cet Agent SSO (par ex. : C:\temp\WatchdocSSO Agent) ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p> décompressez l’archive WatchdocSSOAgent.rar (fournie par Doxense) et enregistrez les fichiers décompressés dans ce dossier dédié ;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>ouvrez le fichier WatchdocSSOAgentDeployer.bat à l'aide d'un éditeur de texte ;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p>dans ce fichier .bat , personnalisez les valeurs des set de sorte qu'elles correspondent aux valeurs de votre environnement :</p>
-                                                <ul>
-                                                    <li>
-                                                        <p>set networkLocation=C:\Temp\WatchdocSSOAgent (chemin vers le dossier</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>ssoAgent sur le répertoire partagé réseau) ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>set watchdocServerName=localhost</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>set watchdocServerPort=5754</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>set watchdocServerSecure=false</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>set identityIgnoreDomain=true</p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ol>
-                                        <p>&#160;</p>
-                                        <p>Les postes clients qui nécessitent l'Agent SSO sont ensuite configurés pour exécuter le fichier <strong>.bat </strong>lors de leur démarrage.</p>
-                                        <p>&#160;</p>
-                                        <h3>Etablir la connexion entre le logiciel SSO et WatchdocAgentSSO</h3>
-                                        <p>Pour établir la connexion entre le logiciel SSO et WatchdocAgentSSO, demandez à l'éditeur du logiciel SSO installé sur le poste client (comme SSOx, par exemple) de configurer son logiciel pour qu'il lance les deux lignes de commandes suivantes :</p>
-                                        <ul>
-                                            <li>
-                                                <p>Logon SSO : “C:\temp\Watchdoc SSO Agent\WatchdocSSOAgent.exe” /standalone/event LogOn /user “DOMAIN\USER” (login de l’utilisateur connecté.avec nom de domaine facultatif ou obligatoire dans un environnement multi-domaine) ;</p>
-                                            </li>
-                                            <li>
-                                                <p>Logoff SSO : “C:\temp\Watchdoc SSO Agent\WatchdocSSOAgent.exe” /standalone/event LogOff</p>
-                                            </li>
-                                        </ul>
-                                        <h2>Dépannage</h2>
-                                        <p>Lorsque l'Agent SSO fonctionne correctement, les données suivantes figurent dans le fichier de trace Watchdoc&#160;:</p>
-                                        <ul>
-                                            <li>
-                                                <p>logon (authentification) ;</p>
-                                            </li>
-                                            <li>
-                                                <p>logoff (déconnexion) ;</p>
-                                            </li>
-                                            <li>
-                                                <p>minute event (au moins un événement une fois l'authentification effectuée) ;</p>
-                                            </li>
-                                            <li>
-                                                <p>événement lorsqu'un travail d'impression est associé à un utilsateur de l'A.D.</p>
-                                            </li>
-                                        </ul>
-                                        <p>&#160;</p>
-                                        <p>La base Watchdoc jsonDB s'enrichit alors d'une liste des événements survenus sur les postes : %WATCHDOC_PATH%\Data\SSO.jsdb\Hosts (pour chaque poste client, un fichier json contenant la liste des événements).</p>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

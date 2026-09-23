@@ -165,6 +165,186 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="ConsoledeSupervisionWSCConfigurerlesystème" data-magellan-target="ConsoledeSupervisionWSCConfigurerlesystème"><a name="aanchor278"></a>
+                                                    <MadCap:concept term="WSC" />Console de Supervision (WSC) - Configurer le système</h1>
+                                                <h2 id="Principe" data-magellan-target="Principe">Principe</h2>
+                                                <p>Lors de l'installation de Watchdoc et de son installation, la Console de Supervision est configurée par défaut.&#160;<br />Vous pouvez avoir besoin de modifier certains paramètres de configuration.</p>
+                                                <h2 id="Accéderàlinterfacedeconfiguration" data-magellan-target="Accéderàlinterfacedeconfiguration">Accéder à l'interface de configuration</h2>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Depuis le <strong>Menu principal</strong> de WSC, cliquez sur bouton <strong>Configuration avancée</strong>&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V6_Admin_ConfigAvancee_Acces.png" style="width: 700px;height: auto;" /></p>
+                                                        <p>&#160;</p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>Dans l'interface <strong>Configuration avancée</strong>, cliquez sur <strong>Service</strong>&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V6_Admin_ConfigService_Access.png" style="width: 700px;" /><br /></p>
+                                                    </li>
+                                                </ol>
+                                                <p>&#160;</p>
+                                                <p>&#160;</p>
+                                                <p class="Resultat">→ Vous accédez à l'interface <strong>Configuration Système</strong>.&#160;<br />Les champs sont remplis à l'aide des paramètres indiqués lors de l'installation initiale à l'aide de l'assistant. Modifiez ou complétez ces paramètres si nécessaire.&#160;<br />Une fois les modifications apportées, sauvegardez-les en cliquant sur <strong>Enregistrer les modifications</strong> en fin de page.&#160;<br /></p>
+                                                <h2 id="Configurezlesystème" data-magellan-target="Configurezlesystème">Configurez le système</h2>
+                                                <h3>Section Configuration générale</h3>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Données</strong> : par défaut, les données de WSC&#160;sont enregistrées dans un dossier préconfiguré.&#160;Si vous souhaitez enregistrer les données dans un autre dossier, indiquez le chemin vers ce dossier dans le champ&#160;: </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Obfuscation </strong>: cochez la case pour activer l'obfuscation des mots de passe d'accès à WSC et sélectionnez dans la liste suivante l'algorithme utilisé pour le chiffrement.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Super Utilisateur</strong> : le Super Utilisateur est un administrateur disposant du droit d'accéder à l'interface d'administration en mode maintenance et habilité, de ce fait, à modifier toute la configuration de WSC. Saisissez dans ce champ le mot de passe  permettant d'accéder à l'interface d'administration en tant que Super Utilisateur.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Langue : </strong>dans la liste, sélectionnez la langue d'utilisation de WSC ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Expiration de session : IP </strong>: complétez les champs pour indiquer, en minutes le délai au-delà duquel la session d'administration et la session d'utilisation doivent expirer. Au-delà, les administrateurs ou utilisateurs devront s'authentifier de nouveau.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Connexion :</strong> cochez la case pour activer la passerelle <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term92">SSPI<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Interface du fournisseur de support de sécurité (Security Support Provider Interface). L'interface SSPI est une interface universelle, normalisée par l'industrie, pour les applications distribuées sécurisées.
+(Source : https://learn.microsoft.com/)</span></a>/<a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term111">NTLM<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>L’authentification NTLM désigne un ensemble de protocoles d’authentification inclus dans la bibliothèque Windows Msv1_0.dll. Les protocoles d’authentification NTLM comprennent les versions 1 et 2 de LAN Manager et les versions 1 et 2 de NTLM.
+
+Ils ont pour but d’authentifier des utilisateurs et des ordinateurs sur la base d’un mécanisme de stimulation/réponse destiné à prouver à un serveur ou un contrôleur de domaine qu’un utilisateur connaît le mot de passe associé à un compte. (Source : https://learn.microsoft.com/fr-fr/windows-server/security/kerberos/ntlm-overview)</span></a> de manière à ce que l'opérateur/administrateur puisse se connecter à l'aide de son compte de domaine : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V6_ConfigSystem_ConfigGen.png" /></p>
+                                                    </li>
+                                                </ul>
+                                                <h3>Serveur</h3>
+                                                <p>Vous disposez de différents outils permettant d'affiner la consultation&#160;:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Serveur web : </strong>
+                                                        </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p class="Liste_puce_1"><strong>Nom ou adresse IP&#160;du serveur :</strong> qui héberge WSC ;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Ports sécurisés : </strong>SSL ou SSLT</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>N'autoriser que les connexions sécurisées</strong> : cochez la case pour sécuriser les accès à WSC</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Autoriser les connexion </strong><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term112">Keep-Alive<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Un keepalive (KA) est un message envoyé par un appareil à un autre pour vérifier que le lien entre les deux est actif, ou pour empêcher que le lien soit brisé.
+(source : https://fr.wikipedia.org/wiki)</span></a> : cochez la case pour faire en sorte que la connexion entre le serveur Watchdoc et le serveur WSC&#160;soit maintenue suivant le protocole keep-alive.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Activer la compression automatique des réponses : </strong>cochez cette case pour optimiser la place occupée par les réponses.</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Protocole de sécurisation </strong>: </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p><strong>Utiliser la configuration du serveur :</strong> cochez cette case pour autoriser que WSC&#160;soit sécurisé de la même manière que le serveur.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term5">SSL/TLS<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Secure Sockets Layer. Protocole de sécurisation des échanges sur Internet, devenu Transport Layer Security (TLS) en 2001.</span></a> : cochez la case correspondant à la version du protocole que vous souhaitez utiliser pour sécuriser WSC. WSC&#160;est compatible TLS&#160;v1.3 depuis la version 6.1.0.4855.</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Journaux :</strong> cochez la case <strong>Activer le logging </strong><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term47">DSP<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Les fichiers SHD appartiennent principalement à Print Spooler de Microsoft. Un fichier SHD est un travail d'impression fantôme contenant des informations d'en-tête sur un travail d'impression lancé par le service Print Spooler sur Windows système d'exploitation. Les informations enregistrées dans un fichier SHD incluent une copie des paramètres de travail d'impression enregistrés dans le document spoule réel (fichier SPL). 
+(source : https://filext.com/)</span></a> pour conserver les traces de l'activité DSP de la Console de Supervision. <br />Indiquez ensuite le chemin du dossier dans lequel ces journaux doivent être conservés si vous ne souhaitez pas les conserver dans le dossier par défaut.&#160;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Profiling :</strong> cochez la case si, suite à des problèmes de performance sur certaines pages, le Support Doxense vous recommande d'activer le profiling à des fins de diagnostic.&#160;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Enregistrer toute l'activité réseau sur le disque : </strong>cochez la case pour conserver la trace des échanges entre Watchdoc et WSC.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Activer la REST&#160;API : </strong>cochez la case pour autoriser des applications tierces à utiliser l'application REST&#160;pour communiquer avec  WSC, puis complétez les informations de connexion :</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p><strong>Nom d'utilisateur :</strong> saisissez le nom du compte autorisé activer la REST&#160;API;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Mot de passe :</strong> saisissez le mot de passe du compte autorisé à activer la REST&#160;API.<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V6_ConfigSystem_Serveur.png" /></p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                                <h3>Serveur distant</h3>
+                                                <p>Ces paramètres concernent la configuration entre WSC et Watchdoc.</p>
+                                                <ul>
+                                                    <li>
+                                                        <p><strong>REST API :</strong> cochée par défaut, cette case sert à autoriser la communication entre Watchdoc et WSC.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Port : </strong>indiquez le port d'accès au serveur Watchdoc s'il ne s'agit pas du port par défaut 5753.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Cochez la case si le service REST&#160;est en <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term5">SSL<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Secure Sockets Layer. Protocole de sécurisation des échanges sur Internet, devenu Transport Layer Security (TLS) en 2001.</span></a>.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Cochez la case pour autoriser les connexion <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term112">Keep-Alive<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Un keepalive (KA) est un message envoyé par un appareil à un autre pour vérifier que le lien entre les deux est actif, ou pour empêcher que le lien soit brisé.
+(source : https://fr.wikipedia.org/wiki)</span></a>.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Timeout : </strong>saisissez, en secondes les délais pour établir une connexion, exécuter une requête et envoyer le corps de la requête au serveur. Lorsque ce délai est dépassé, vous recevez un message d'erreur. Nous vous recommandons de ne modifier ces paramètres qu'à la demande du Support Doxense à des fins d'analyse en cas de problème.</p>
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <p><strong>Serveur distant </strong>: indiquez l'adresse (DNS ou IP) de Watchdoc s'il est situé sur un ou des serveurs distants. Conservez la valeur par défaut localhost dans le cas où WSC&#160;et Watchdoc sont installés sur les mêmes serveurs : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V6_ConfigSystem_ServeurDistant.png" /> </p>
+                                                    </li>
+                                                </ul>
+                                                <h3>Envoi automatique des informations des périphériques dans la base de données</h3>
+                                                <ul>
+                                                    <li>
+                                                        <p><strong>Activation : </strong>cochez la case pour autoriser l'envoi des données des périphériques d'impression gérés dans WSC vers la base de données de Watchdoc. </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Fréquence :</strong> dans ce champ, indiquez (au format Crontab) la fréquence à laquelle vous souhaitez excécuter l'envoi.</p>
+                                                        <p>Cliquez sur le bouton<strong> Lancer l'assistant</strong> de configuration pour être aidé dans la saisie de la tâche planifiée :<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V6_ConfigSystem_EnvoiAuto.png" /></p>
+                                                    </li>
+                                                </ul>
+                                                <h3>Divers</h3>
+                                                <p>Dans cette section, précisez : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p><strong>Seuil : </strong>le seuil de consommables en-deça duquel WSC&#160;envoie une alerte ; <br /></p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Suffixe DNS :</strong> dans le cas où la connexion entre WSC&#160;et Watchdoc ne fonctionne pas (message d'erreur selon lequel WSC ne connaît pas le serveur Watchdoc lorsque vous cliquez sur un serveur dans WSC&#160;pour accéder à son paramétrage dans Watchdoc), il peut être nécessaire d'indiquer le suffixe DNS à la place du nom NetBIOS afin de faciliter la connexion.&#160;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Passage en erreur :</strong> indiquez, en secondes, le temps d'inactivité  avant que le(s) serveur(s) Watchdoc interrogé(s) soient considérés comme défaillants.&#160;Au-delà de ce délai, vous recevez un message d'erreur.&#160;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>NTLM :</strong> cochez la case si les serveurs IIS autorisent le <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term111">NTLM<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>L’authentification NTLM désigne un ensemble de protocoles d’authentification inclus dans la bibliothèque Windows Msv1_0.dll. Les protocoles d’authentification NTLM comprennent les versions 1 et 2 de LAN Manager et les versions 1 et 2 de NTLM.
+
+Ils ont pour but d’authentifier des utilisateurs et des ordinateurs sur la base d’un mécanisme de stimulation/réponse destiné à prouver à un serveur ou un contrôleur de domaine qu’un utilisateur connaît le mot de passe associé à un compte. (Source : https://learn.microsoft.com/fr-fr/windows-server/security/kerberos/ntlm-overview)</span></a>. Si le <strong>NTLM </strong>est autorisé, l'authentification n'est plus nécessaire lorsque vous passez de WSC&#160;à Watchdoc et inversement.&#160;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Liens externes : </strong>si la connexion entre WSC et Watchdoc est problématique,  il peut être nécessaire d'ajouter ce nom de domaine pour établir la connexion.&#160;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Oeufs de Pâques :</strong> cochez la case pour désactiver les oeufs de Pâques existants : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V6_ConfigSystem_Divers.png" />ll<br /></p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#ConsoledeSupervisionWSCConfigurerlesyst%C3%A8me">Console de Supervision (WSC) - Configurer le système</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Principe">Principe</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Acc%C3%A9der%C3%A0linterfacedeconfiguration">Accéder à l'interface de configuration</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Configurezlesyst%C3%A8me">Configurez le système</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -198,168 +378,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor278"></a>
-                                            <MadCap:concept term="WSC" />Console de Supervision (WSC) - Configurer le système</h1>
-                                        <h2>Principe</h2>
-                                        <p>Lors de l'installation de Watchdoc et de son installation, la Console de Supervision est configurée par défaut.&#160;<br />Vous pouvez avoir besoin de modifier certains paramètres de configuration.</p>
-                                        <h2>Accéder à l'interface de configuration</h2>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Depuis le <strong>Menu principal</strong> de WSC, cliquez sur bouton <strong>Configuration avancée</strong>&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V6_Admin_ConfigAvancee_Acces.png" style="width: 700px;height: auto;" /></p>
-                                                <p>&#160;</p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>Dans l'interface <strong>Configuration avancée</strong>, cliquez sur <strong>Service</strong>&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V6_Admin_ConfigService_Access.png" style="width: 700px;" /><br /></p>
-                                            </li>
-                                        </ol>
-                                        <p>&#160;</p>
-                                        <p>&#160;</p>
-                                        <p class="Resultat">→ Vous accédez à l'interface <strong>Configuration Système</strong>.&#160;<br />Les champs sont remplis à l'aide des paramètres indiqués lors de l'installation initiale à l'aide de l'assistant. Modifiez ou complétez ces paramètres si nécessaire.&#160;<br />Une fois les modifications apportées, sauvegardez-les en cliquant sur <strong>Enregistrer les modifications</strong> en fin de page.&#160;<br /></p>
-                                        <h2>Configurez le système</h2>
-                                        <h3>Section Configuration générale</h3>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Données</strong> : par défaut, les données de WSC&#160;sont enregistrées dans un dossier préconfiguré.&#160;Si vous souhaitez enregistrer les données dans un autre dossier, indiquez le chemin vers ce dossier dans le champ&#160;: </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Obfuscation </strong>: cochez la case pour activer l'obfuscation des mots de passe d'accès à WSC et sélectionnez dans la liste suivante l'algorithme utilisé pour le chiffrement.</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Super Utilisateur</strong> : le Super Utilisateur est un administrateur disposant du droit d'accéder à l'interface d'administration en mode maintenance et habilité, de ce fait, à modifier toute la configuration de WSC. Saisissez dans ce champ le mot de passe  permettant d'accéder à l'interface d'administration en tant que Super Utilisateur.</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Langue : </strong>dans la liste, sélectionnez la langue d'utilisation de WSC ; </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Expiration de session : IP </strong>: complétez les champs pour indiquer, en minutes le délai au-delà duquel la session d'administration et la session d'utilisation doivent expirer. Au-delà, les administrateurs ou utilisateurs devront s'authentifier de nouveau.</p>
-                                            </li>
-                                            <li>
-                                                <p><strong>Connexion :</strong> cochez la case pour activer la passerelle <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term92">SSPI<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Interface du fournisseur de support de sécurité (Security Support Provider Interface). L'interface SSPI est une interface universelle, normalisée par l'industrie, pour les applications distribuées sécurisées.
-(Source : https://learn.microsoft.com/)</span></a>/<a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term111">NTLM<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>L’authentification NTLM désigne un ensemble de protocoles d’authentification inclus dans la bibliothèque Windows Msv1_0.dll. Les protocoles d’authentification NTLM comprennent les versions 1 et 2 de LAN Manager et les versions 1 et 2 de NTLM.
-
-Ils ont pour but d’authentifier des utilisateurs et des ordinateurs sur la base d’un mécanisme de stimulation/réponse destiné à prouver à un serveur ou un contrôleur de domaine qu’un utilisateur connaît le mot de passe associé à un compte. (Source : https://learn.microsoft.com/fr-fr/windows-server/security/kerberos/ntlm-overview)</span></a> de manière à ce que l'opérateur/administrateur puisse se connecter à l'aide de son compte de domaine : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V6_ConfigSystem_ConfigGen.png" /></p>
-                                            </li>
-                                        </ul>
-                                        <h3>Serveur</h3>
-                                        <p>Vous disposez de différents outils permettant d'affiner la consultation&#160;:</p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Serveur web : </strong>
-                                                </p>
-                                                <ul>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Nom ou adresse IP&#160;du serveur :</strong> qui héberge WSC ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Ports sécurisés : </strong>SSL ou SSLT</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>N'autoriser que les connexions sécurisées</strong> : cochez la case pour sécuriser les accès à WSC</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Autoriser les connexion </strong><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term112">Keep-Alive<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Un keepalive (KA) est un message envoyé par un appareil à un autre pour vérifier que le lien entre les deux est actif, ou pour empêcher que le lien soit brisé.
-(source : https://fr.wikipedia.org/wiki)</span></a> : cochez la case pour faire en sorte que la connexion entre le serveur Watchdoc et le serveur WSC&#160;soit maintenue suivant le protocole keep-alive.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Activer la compression automatique des réponses : </strong>cochez cette case pour optimiser la place occupée par les réponses.</p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <p><strong>Protocole de sécurisation </strong>: </p>
-                                                <ul>
-                                                    <li>
-                                                        <p><strong>Utiliser la configuration du serveur :</strong> cochez cette case pour autoriser que WSC&#160;soit sécurisé de la même manière que le serveur.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term5">SSL/TLS<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Secure Sockets Layer. Protocole de sécurisation des échanges sur Internet, devenu Transport Layer Security (TLS) en 2001.</span></a> : cochez la case correspondant à la version du protocole que vous souhaitez utiliser pour sécuriser WSC. WSC&#160;est compatible TLS&#160;v1.3 depuis la version 6.1.0.4855.</p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <p><strong>Journaux :</strong> cochez la case <strong>Activer le logging </strong><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term47">DSP<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Les fichiers SHD appartiennent principalement à Print Spooler de Microsoft. Un fichier SHD est un travail d'impression fantôme contenant des informations d'en-tête sur un travail d'impression lancé par le service Print Spooler sur Windows système d'exploitation. Les informations enregistrées dans un fichier SHD incluent une copie des paramètres de travail d'impression enregistrés dans le document spoule réel (fichier SPL). 
-(source : https://filext.com/)</span></a> pour conserver les traces de l'activité DSP de la Console de Supervision. <br />Indiquez ensuite le chemin du dossier dans lequel ces journaux doivent être conservés si vous ne souhaitez pas les conserver dans le dossier par défaut.&#160;</p>
-                                            </li>
-                                            <li>
-                                                <p><strong>Profiling :</strong> cochez la case si, suite à des problèmes de performance sur certaines pages, le Support Doxense vous recommande d'activer le profiling à des fins de diagnostic.&#160;</p>
-                                            </li>
-                                            <li>
-                                                <p><strong>Enregistrer toute l'activité réseau sur le disque : </strong>cochez la case pour conserver la trace des échanges entre Watchdoc et WSC.</p>
-                                            </li>
-                                            <li>
-                                                <p><strong>Activer la REST&#160;API : </strong>cochez la case pour autoriser des applications tierces à utiliser l'application REST&#160;pour communiquer avec  WSC, puis complétez les informations de connexion :</p>
-                                                <ul>
-                                                    <li>
-                                                        <p><strong>Nom d'utilisateur :</strong> saisissez le nom du compte autorisé activer la REST&#160;API;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Mot de passe :</strong> saisissez le mot de passe du compte autorisé à activer la REST&#160;API.<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V6_ConfigSystem_Serveur.png" /></p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                        <h3>Serveur distant</h3>
-                                        <p>Ces paramètres concernent la configuration entre WSC et Watchdoc.</p>
-                                        <ul>
-                                            <li>
-                                                <p><strong>REST API :</strong> cochée par défaut, cette case sert à autoriser la communication entre Watchdoc et WSC.</p>
-                                            </li>
-                                            <li>
-                                                <p><strong>Port : </strong>indiquez le port d'accès au serveur Watchdoc s'il ne s'agit pas du port par défaut 5753.</p>
-                                            </li>
-                                            <li>
-                                                <p>Cochez la case si le service REST&#160;est en <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term5">SSL<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Secure Sockets Layer. Protocole de sécurisation des échanges sur Internet, devenu Transport Layer Security (TLS) en 2001.</span></a>.</p>
-                                            </li>
-                                            <li>
-                                                <p>Cochez la case pour autoriser les connexion <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term112">Keep-Alive<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Un keepalive (KA) est un message envoyé par un appareil à un autre pour vérifier que le lien entre les deux est actif, ou pour empêcher que le lien soit brisé.
-(source : https://fr.wikipedia.org/wiki)</span></a>.</p>
-                                            </li>
-                                            <li>
-                                                <p><strong>Timeout : </strong>saisissez, en secondes les délais pour établir une connexion, exécuter une requête et envoyer le corps de la requête au serveur. Lorsque ce délai est dépassé, vous recevez un message d'erreur. Nous vous recommandons de ne modifier ces paramètres qu'à la demande du Support Doxense à des fins d'analyse en cas de problème.</p>
-                                            </li>
-                                        </ul>
-                                        <ul>
-                                            <li>
-                                                <p><strong>Serveur distant </strong>: indiquez l'adresse (DNS ou IP) de Watchdoc s'il est situé sur un ou des serveurs distants. Conservez la valeur par défaut localhost dans le cas où WSC&#160;et Watchdoc sont installés sur les mêmes serveurs : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V6_ConfigSystem_ServeurDistant.png" /> </p>
-                                            </li>
-                                        </ul>
-                                        <h3>Envoi automatique des informations des périphériques dans la base de données</h3>
-                                        <ul>
-                                            <li>
-                                                <p><strong>Activation : </strong>cochez la case pour autoriser l'envoi des données des périphériques d'impression gérés dans WSC vers la base de données de Watchdoc. </p>
-                                            </li>
-                                            <li>
-                                                <p><strong>Fréquence :</strong> dans ce champ, indiquez (au format Crontab) la fréquence à laquelle vous souhaitez excécuter l'envoi.</p>
-                                                <p>Cliquez sur le bouton<strong> Lancer l'assistant</strong> de configuration pour être aidé dans la saisie de la tâche planifiée :<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V6_ConfigSystem_EnvoiAuto.png" /></p>
-                                            </li>
-                                        </ul>
-                                        <h3>Divers</h3>
-                                        <p>Dans cette section, précisez : </p>
-                                        <ul>
-                                            <li>
-                                                <p><strong>Seuil : </strong>le seuil de consommables en-deça duquel WSC&#160;envoie une alerte ; <br /></p>
-                                            </li>
-                                            <li>
-                                                <p><strong>Suffixe DNS :</strong> dans le cas où la connexion entre WSC&#160;et Watchdoc ne fonctionne pas (message d'erreur selon lequel WSC ne connaît pas le serveur Watchdoc lorsque vous cliquez sur un serveur dans WSC&#160;pour accéder à son paramétrage dans Watchdoc), il peut être nécessaire d'indiquer le suffixe DNS à la place du nom NetBIOS afin de faciliter la connexion.&#160;</p>
-                                            </li>
-                                            <li>
-                                                <p><strong>Passage en erreur :</strong> indiquez, en secondes, le temps d'inactivité  avant que le(s) serveur(s) Watchdoc interrogé(s) soient considérés comme défaillants.&#160;Au-delà de ce délai, vous recevez un message d'erreur.&#160;</p>
-                                            </li>
-                                            <li>
-                                                <p><strong>NTLM :</strong> cochez la case si les serveurs IIS autorisent le <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term111">NTLM<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>L’authentification NTLM désigne un ensemble de protocoles d’authentification inclus dans la bibliothèque Windows Msv1_0.dll. Les protocoles d’authentification NTLM comprennent les versions 1 et 2 de LAN Manager et les versions 1 et 2 de NTLM.
-
-Ils ont pour but d’authentifier des utilisateurs et des ordinateurs sur la base d’un mécanisme de stimulation/réponse destiné à prouver à un serveur ou un contrôleur de domaine qu’un utilisateur connaît le mot de passe associé à un compte. (Source : https://learn.microsoft.com/fr-fr/windows-server/security/kerberos/ntlm-overview)</span></a>. Si le <strong>NTLM </strong>est autorisé, l'authentification n'est plus nécessaire lorsque vous passez de WSC&#160;à Watchdoc et inversement.&#160;</p>
-                                            </li>
-                                            <li>
-                                                <p><strong>Liens externes : </strong>si la connexion entre WSC et Watchdoc est problématique,  il peut être nécessaire d'ajouter ce nom de domaine pour établir la connexion.&#160;</p>
-                                            </li>
-                                            <li>
-                                                <p><strong>Oeufs de Pâques :</strong> cochez la case pour désactiver les oeufs de Pâques existants : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V6_ConfigSystem_Divers.png" />ll<br /></p>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

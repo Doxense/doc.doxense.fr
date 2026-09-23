@@ -164,6 +164,220 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WESRicohInstallerleWESsurlafileautomatiquement" data-magellan-target="WESRicohInstallerleWESsurlafileautomatiquement"><a name="aanchor307"></a>
+                                                    <MadCap:concept term="WES;INS" />
+                                                    <MadCap:conditionalText data-mc-conditions="General.Online">WES&#160;Ricoh  - </MadCap:conditionalText>Installer le WES sur la file automatiquement</h1>
+                                                <h2 id="Principe" data-magellan-target="Principe">Principe</h2>
+                                                <p>Le WES&#160;Ricoh Smart Operation Panel s'installe à l'aide de l'exécutable <strong>WESRicohDeployer.jar</strong> fourni par Doxense<sup>®</sup> sous la forme d'un fichier d'archive JAVA (.jar) enregistré dans le pack d'installation Watchdoc.</p>
+                                                <p>Ce fichier peut être lancé depuis le serveur Watchdoc ou depuis tout poste de travail pouvant communiquer en réseau avec le serveur Watchdoc et les périphériques cibles. <br />Le serveur ou le poste depuis lequel est lancé l'exécutable doivent supporter l'application <strong>Java® 8</strong> min.</p>
+                                                <p>Pour que WESRicohDeployer puisse fonctionner correctement, <strong>il est nécessaire</strong> d'utiliser l'une des versions du JRE (Java Runtime Environement) suivantes  (restriction Ricoh)&#160;: </p>
+                                                <ul>
+                                                    <li>
+                                                        <p>Amazon Corretto v8, v11, v17 ou v19&#160;; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Liberica v19.</p>
+                                                    </li>
+                                                </ul>
+                                                <p>Dans le cas où l'installation du WES&#160;à l'aide de l'exécutable échoue, vous pouvez recourir à l'installation manuelle, décrite dans le chapitre suivant.</p>
+                                                <h2 id="Lancerlexécutable" data-magellan-target="Lancerlexécutable">Lancer l'exécutable</h2>
+                                                <p>N.B. : avant d'installer un WES, vérifiez qu'il n'existe pas déjà ou désinstallez le précédent WES&#160;avant d'installer le nouveau.</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Accédez au serveur Watchdoc en tant qu'administratreur.</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>Rendez-vous dans le dossier C:\Program Files\Doxense\Watchdoc\Redist\</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>Double-cliquez sur ce fichier <strong>WESRicohDeployer.jar</strong>&#160;;<br /><br /><img src="WESRicoh_InstallAuto_Deployer_Localisation.png" style="width: 700px;" /></p>
+                                                    </li>
+                                                </ol>
+                                                <p>&#160;</p>
+                                                <p>N.B.&#160;: l'application Java 8 sur laquelle repose WESRicohDeployer étant relativement lourde, vous pouvez aussi ne pas l'installer sur le serveur Watchdoc, mais sur un poste de travail communiquant avec le serveur et les périphériques, depuis lequel sera lancé WESRicohDeployer.jar : </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1">vérifiez que le poste de travail communique en réseau avec le serveur Watchdoc et avec les périphériques Ricoh<sup>®</sup> ; </p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1">copiez /collez le fichier <strong>WESRicohDeployer.jar</strong> sur le poste de travail ;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p class="Liste_num_1">double-cliquez sur WESRicohDeployer.jar pour lancer l'exécutable.</p>
+                                                    </li>
+                                                </ol>
+                                                <p>&#160;</p>
+                                                <p class="Resultat">L'interface <strong>WES&#160;Ricoh deployer</strong> qui s'affiche se compose de 3 parties : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_2">la section <strong>Server Info</strong> comporte des champs relatifs au serveur Watchdoc ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2">la section <strong>Actions</strong> comporte des boutons permettant de lancer les actions d'installation et de désinstallation ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2">la section <strong>Report </strong>comporte un champ dans lequel vous pouvez indiquer le dossier dans leque seront enregistrés les rapports relatifs aux opérations d'installatione et de désinstallation du WES ;</p>
+                                                    </li>
+                                                </ul>
+                                                <p class="Liste_puce_2">La section inférieure (vierge au démarrage) affiche des informations relatives aux actions lancées ainsi qu'un curseur de progression :<br /><br /><img src="WESRicoh_IntstallAuto_Interface_V2.png" style="width: 700px;" /></p>
+                                                <h2 id="Configurerlaccèsauserveur" data-magellan-target="Configurerlaccèsauserveur">Configurer l'accès au serveur</h2>
+                                                <p>Dans la section <strong>Server Info</strong>, complétez les champs suivants qui permettront d'identifier et de localiser le serveur sur lequel doit être installé le WES : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Server address : </strong>indiquez l'adresse (adresse IP) du serveur Watchdoc&#160;;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Server port : </strong>indiquez le port d'accès au serveur Watchdoc ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Authentication mode :</strong> dans la liste, sélectionnez le mode d'authentification choisi pour accéder au serveur. </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>Maintenance Password :</strong> sélectionnez ce mode si vous souhaitez accéder au serveur à l'aide d'un compte de maintenance et complétez le champ Password.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>Login/Password : </strong>sélectionnez ce mode si vous souhaitez accéder au serveur à l'aide d'un compte d'administration, puis complétez les champs relatifs à ce compte :</p>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p><strong>Login : </strong>saisissez le login du compte d'administration ; </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p><strong>Password :</strong> saisissez le mot de passe du compte d'administration ; </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p><strong>Domain :</strong> saisissez le domaine du compte d'administration.</p>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                                <h2 id="InstallerleWES" data-magellan-target="InstallerleWES">Installer le WES</h2>
+                                                <p>Une fois les données relatives au serveur saisies, </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1">dans la section <strong>Actions</strong>, cliquez sur le bouton <strong>Get Devices ;</strong></p>
+                                                    </li>
+                                                </ol>
+                                                <p class="Resultat"><span style="font-family: 'Wingdings'">è</span> dans la section inférieure s'affichent tous les périphériques Ricoh<sup>®</sup> installés sur le serveur ;</p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="2">
+                                                        <p class="Liste_num_1">cliquez sur le bouton <strong>Install Application </strong>pour lancer l'installation du WES sur les périphériques détectés&#160;;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p class="Liste_num_1">un curseur indique la progression de l'opération ;<br /><br /><img src="WESRicoh_IntstallAuto_Interface_V2.png" style="width: 700px;" /></p>
+                                                    </li>
+                                                </ol>
+                                                <p>&#160;</p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="4">
+                                                        <p class="Liste_num_1">au terme de l'opération, un message indique que l'installation s'est déroulée avec succès sur le ou les périphériques :<br />Vous pouvez vérifier le fonctionnement du WES&#160;depuis le ou les périphériques.<br />Pour obtenir les détails de l'opération, cliquez sur le bouton <strong>Check install</strong>.</p>
+                                                    </li>
+                                                </ol>
+                                                <h2 id="Vérifierlinstallation" data-magellan-target="Vérifierlinstallation">Vérifier l'installation</h2>
+                                                <p>Pour vérifier l'installation du WES sur l'un des périphériques : </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1">dans la section <strong>Actions</strong>, cliquez sur le bouton <strong>Get Devices</strong>&#160;;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1">dans la liste des périphériques, cochez la case du ou des périphériques dont vous souhaitez vérifier l'installation ; </p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p class="Liste_num_1">cliquez sur le bouton <strong>Check install status</strong> ;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p class="Liste_num_1">un message indique que la vérification a bien été effectuée&#160;;</p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p class="Liste_num_1"> cliquez sur la ligne correspondant au périphérique pour accéder au détail : <br /><br /><img src="WESRicoh_IntstallAuto_Rapport.png" style="width: 700px;" /></p>
+                                                    </li>
+                                                </ol>
+                                                <h2 id="FinaliserlinstallationdansWatchdoc" data-magellan-target="FinaliserlinstallationdansWatchdoc">Finaliser l'installation dans Watchdoc </h2>
+                                                <p>Depuis le <strong>Menu principal</strong> de l'interface d'administration, </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>dans la section <strong>Exploitation</strong>, cliquez sur <strong>Files d'impression </strong>:</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>dans la liste des files, cliquez sur la file sur laquelle vous souhaitez installer le WES&#160;Ricoh&#160;;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>dans l'interface de la file, cliquez sur l'onglet <strong>Propriétés </strong>;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>Dans la section <strong>WES Ricoh SOP</strong>, plusieurs boutons s'affichent : <br /><img src="Config_WES_Install_RicohSOP2_Boutons.png" /></p>
+                                                        <p>&#160;</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p><strong>Accéder à l'interface Web du périphérique :</strong> raccourci vers le site web d'administration interne du périphérique&#160;;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Périphériques WES :</strong> donne accès à la liste des périphériques équipés d'un WES&#160;dans Watchdoc ;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><b>Servlet de config : </b>permet d'accéder à l'interface de configuration du WES&#160;dans Watchdoc ; </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Etat de l'application :</strong> permet d'accéder à la section Monitoring (en-dessous dans l'interface) ;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Configurer:</strong> permet à Watchdoc d'installer le WES sur le périphérique (peut prendre 30 sec.)&#160;;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Activer / Désactiver les logs :</strong> permet d'activer les logs spécifiques au WES&#160;en vue d'une analyse ; </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Télécharger les logs :</strong> permet de télécharger les logs spécifiques au WES&#160;(s'ils ont été activés) en vue d'un diagnostic ; </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Réinitialiser : </strong>rafraîchit la page ; </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Editer la configuration :</strong> permet d'accéder à la configuration du WES&#160;sur la file.</p>
+                                                            </li>
+                                                        </ul>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p>  cliquez sur le bouton <strong>Configurer</strong> pour installer l'application ;<img src="Config_WES_Install_RicohSOP2.png" /> </p>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p>Au terme de cette installation, l'état de l'application est affiché&#160;:<br /><br /><img src="WESRicoh_Install_RicohSOP2_OK.png" style="width: 700px;" /></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                </ol>
+                                                <ol data-mc-continue="true">
+                                                    <li value="7">
+                                                        <p>Depuis l'interface d'administration du périphérique, vous pouvez vérifier sur le &#160;simulateur d'écran que l'application Watchdoc est correctement installée&#160;:<br /><br /><img src="WESRicoh_InstallManuelle_Verif.png" /></p>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WESRicohInstallerleWESsurlafileautomatiquement">WES&#160;Ricoh  - Installer le WES sur la file automatiquement</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Principe">Principe</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Lancerlex%C3%A9cutable">Lancer l'exécutable</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Configurerlacc%C3%A8sauserveur">Configurer l'accès au serveur</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#InstallerleWES">Installer le WES</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#V%C3%A9rifierlinstallation">Vérifier l'installation</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#FinaliserlinstallationdansWatchdoc">Finaliser l'installation dans Watchdoc </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -197,196 +411,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor307"></a>
-                                            <MadCap:concept term="WES;INS" />
-                                            <MadCap:conditionalText data-mc-conditions="General.Online">WES&#160;Ricoh  - </MadCap:conditionalText>Installer le WES sur la file automatiquement</h1>
-                                        <h2>Principe</h2>
-                                        <p>Le WES&#160;Ricoh Smart Operation Panel s'installe à l'aide de l'exécutable <strong>WESRicohDeployer.jar</strong> fourni par Doxense<sup>®</sup> sous la forme d'un fichier d'archive JAVA (.jar) enregistré dans le pack d'installation Watchdoc.</p>
-                                        <p>Ce fichier peut être lancé depuis le serveur Watchdoc ou depuis tout poste de travail pouvant communiquer en réseau avec le serveur Watchdoc et les périphériques cibles. <br />Le serveur ou le poste depuis lequel est lancé l'exécutable doivent supporter l'application <strong>Java® 8</strong> min.</p>
-                                        <p>Pour que WESRicohDeployer puisse fonctionner correctement, <strong>il est nécessaire</strong> d'utiliser l'une des versions du JRE (Java Runtime Environement) suivantes  (restriction Ricoh)&#160;: </p>
-                                        <ul>
-                                            <li>
-                                                <p>Amazon Corretto v8, v11, v17 ou v19&#160;; </p>
-                                            </li>
-                                            <li>
-                                                <p>Liberica v19.</p>
-                                            </li>
-                                        </ul>
-                                        <p>Dans le cas où l'installation du WES&#160;à l'aide de l'exécutable échoue, vous pouvez recourir à l'installation manuelle, décrite dans le chapitre suivant.</p>
-                                        <h2>Lancer l'exécutable</h2>
-                                        <p>N.B. : avant d'installer un WES, vérifiez qu'il n'existe pas déjà ou désinstallez le précédent WES&#160;avant d'installer le nouveau.</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Accédez au serveur Watchdoc en tant qu'administratreur.</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>Rendez-vous dans le dossier C:\Program Files\Doxense\Watchdoc\Redist\</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>Double-cliquez sur ce fichier <strong>WESRicohDeployer.jar</strong>&#160;;<br /><br /><img src="WESRicoh_InstallAuto_Deployer_Localisation.png" style="width: 700px;" /></p>
-                                            </li>
-                                        </ol>
-                                        <p>&#160;</p>
-                                        <p>N.B.&#160;: l'application Java 8 sur laquelle repose WESRicohDeployer étant relativement lourde, vous pouvez aussi ne pas l'installer sur le serveur Watchdoc, mais sur un poste de travail communiquant avec le serveur et les périphériques, depuis lequel sera lancé WESRicohDeployer.jar : </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">vérifiez que le poste de travail communique en réseau avec le serveur Watchdoc et avec les périphériques Ricoh<sup>®</sup> ; </p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1">copiez /collez le fichier <strong>WESRicohDeployer.jar</strong> sur le poste de travail ;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1">double-cliquez sur WESRicohDeployer.jar pour lancer l'exécutable.</p>
-                                            </li>
-                                        </ol>
-                                        <p>&#160;</p>
-                                        <p class="Resultat">L'interface <strong>WES&#160;Ricoh deployer</strong> qui s'affiche se compose de 3 parties : </p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_2">la section <strong>Server Info</strong> comporte des champs relatifs au serveur Watchdoc ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2">la section <strong>Actions</strong> comporte des boutons permettant de lancer les actions d'installation et de désinstallation ; </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2">la section <strong>Report </strong>comporte un champ dans lequel vous pouvez indiquer le dossier dans leque seront enregistrés les rapports relatifs aux opérations d'installatione et de désinstallation du WES ;</p>
-                                            </li>
-                                        </ul>
-                                        <p class="Liste_puce_2">La section inférieure (vierge au démarrage) affiche des informations relatives aux actions lancées ainsi qu'un curseur de progression :<br /><br /><img src="WESRicoh_IntstallAuto_Interface_V2.png" style="width: 700px;" /></p>
-                                        <h2>Configurer l'accès au serveur</h2>
-                                        <p>Dans la section <strong>Server Info</strong>, complétez les champs suivants qui permettront d'identifier et de localiser le serveur sur lequel doit être installé le WES : </p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Server address : </strong>indiquez l'adresse (adresse IP) du serveur Watchdoc&#160;;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Server port : </strong>indiquez le port d'accès au serveur Watchdoc ; </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Authentication mode :</strong> dans la liste, sélectionnez le mode d'authentification choisi pour accéder au serveur. </p>
-                                                <ul>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>Maintenance Password :</strong> sélectionnez ce mode si vous souhaitez accéder au serveur à l'aide d'un compte de maintenance et complétez le champ Password.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>Login/Password : </strong>sélectionnez ce mode si vous souhaitez accéder au serveur à l'aide d'un compte d'administration, puis complétez les champs relatifs à ce compte :</p>
-                                                        <ul>
-                                                            <li>
-                                                                <p><strong>Login : </strong>saisissez le login du compte d'administration ; </p>
-                                                            </li>
-                                                            <li>
-                                                                <p><strong>Password :</strong> saisissez le mot de passe du compte d'administration ; </p>
-                                                            </li>
-                                                            <li>
-                                                                <p><strong>Domain :</strong> saisissez le domaine du compte d'administration.</p>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                        <h2>Installer le WES</h2>
-                                        <p>Une fois les données relatives au serveur saisies, </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">dans la section <strong>Actions</strong>, cliquez sur le bouton <strong>Get Devices ;</strong></p>
-                                            </li>
-                                        </ol>
-                                        <p class="Resultat"><span style="font-family: 'Wingdings'">è</span> dans la section inférieure s'affichent tous les périphériques Ricoh<sup>®</sup> installés sur le serveur ;</p>
-                                        <ol data-mc-continue="true">
-                                            <li value="2">
-                                                <p class="Liste_num_1">cliquez sur le bouton <strong>Install Application </strong>pour lancer l'installation du WES sur les périphériques détectés&#160;;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1">un curseur indique la progression de l'opération ;<br /><br /><img src="WESRicoh_IntstallAuto_Interface_V2.png" style="width: 700px;" /></p>
-                                            </li>
-                                        </ol>
-                                        <p>&#160;</p>
-                                        <ol data-mc-continue="true">
-                                            <li value="4">
-                                                <p class="Liste_num_1">au terme de l'opération, un message indique que l'installation s'est déroulée avec succès sur le ou les périphériques :<br />Vous pouvez vérifier le fonctionnement du WES&#160;depuis le ou les périphériques.<br />Pour obtenir les détails de l'opération, cliquez sur le bouton <strong>Check install</strong>.</p>
-                                            </li>
-                                        </ol>
-                                        <h2>Vérifier l'installation</h2>
-                                        <p>Pour vérifier l'installation du WES sur l'un des périphériques : </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">dans la section <strong>Actions</strong>, cliquez sur le bouton <strong>Get Devices</strong>&#160;;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1">dans la liste des périphériques, cochez la case du ou des périphériques dont vous souhaitez vérifier l'installation ; </p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1">cliquez sur le bouton <strong>Check install status</strong> ;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p class="Liste_num_1">un message indique que la vérification a bien été effectuée&#160;;</p>
-                                            </li>
-                                            <li value="5">
-                                                <p class="Liste_num_1"> cliquez sur la ligne correspondant au périphérique pour accéder au détail : <br /><br /><img src="WESRicoh_IntstallAuto_Rapport.png" style="width: 700px;" /></p>
-                                            </li>
-                                        </ol>
-                                        <h2>Finaliser l'installation dans Watchdoc </h2>
-                                        <p>Depuis le <strong>Menu principal</strong> de l'interface d'administration, </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>dans la section <strong>Exploitation</strong>, cliquez sur <strong>Files d'impression </strong>:</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>dans la liste des files, cliquez sur la file sur laquelle vous souhaitez installer le WES&#160;Ricoh&#160;;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>dans l'interface de la file, cliquez sur l'onglet <strong>Propriétés </strong>;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p>Dans la section <strong>WES Ricoh SOP</strong>, plusieurs boutons s'affichent : <br /><img src="Config_WES_Install_RicohSOP2_Boutons.png" /></p>
-                                                <p>&#160;</p>
-                                                <ul>
-                                                    <li>
-                                                        <p><strong>Accéder à l'interface Web du périphérique :</strong> raccourci vers le site web d'administration interne du périphérique&#160;;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Périphériques WES :</strong> donne accès à la liste des périphériques équipés d'un WES&#160;dans Watchdoc ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><b>Servlet de config : </b>permet d'accéder à l'interface de configuration du WES&#160;dans Watchdoc ; </p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Etat de l'application :</strong> permet d'accéder à la section Monitoring (en-dessous dans l'interface) ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Configurer:</strong> permet à Watchdoc d'installer le WES sur le périphérique (peut prendre 30 sec.)&#160;;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Activer / Désactiver les logs :</strong> permet d'activer les logs spécifiques au WES&#160;en vue d'une analyse ; </p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Télécharger les logs :</strong> permet de télécharger les logs spécifiques au WES&#160;(s'ils ont été activés) en vue d'un diagnostic ; </p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Réinitialiser : </strong>rafraîchit la page ; </p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Editer la configuration :</strong> permet d'accéder à la configuration du WES&#160;sur la file.</p>
-                                                    </li>
-                                                </ul>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="5">
-                                                <p>  cliquez sur le bouton <strong>Configurer</strong> pour installer l'application ;<img src="Config_WES_Install_RicohSOP2.png" /> </p>
-                                            </li>
-                                            <li value="6">
-                                                <p>Au terme de cette installation, l'état de l'application est affiché&#160;:<br /><br /><img src="WESRicoh_Install_RicohSOP2_OK.png" style="width: 700px;" /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="7">
-                                                <p>Depuis l'interface d'administration du périphérique, vous pouvez vérifier sur le &#160;simulateur d'écran que l'application Watchdoc est correctement installée&#160;:<br /><br /><img src="WESRicoh_InstallManuelle_Verif.png" /></p>
-                                            </li>
-                                        </ol>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

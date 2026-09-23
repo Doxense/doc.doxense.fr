@@ -164,6 +164,105 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="GérerlesserveursavecWCLI" data-magellan-target="GérerlesserveursavecWCLI"><a name="aanchor209"></a>
+                                                    <MadCap:concept term="WCLI" />Gérer les serveurs avec WCLI</h1>
+                                                <h2 id="Déclarerunserveurmaster" data-magellan-target="Déclarerunserveurmaster">Déclarer un serveur master</h2>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1">A l'aide de l'outil de commande, placez-vous dans le répertoire d'installation de Watchdoc : <code>cd "\Program Files\Doxense\Watchdoc"</code>&#160;;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1">lancez ensuite la commande de création du Master (en respectant la casse)&#160;: <br /><br /><code>WCLI CREATEMASTER /master=adresse /password=mot_de_passe_de_maintenance<br /></code><br /><img src="../Z_Resources/Images/02_Captures/FT_MasterSlave_CMD_WCLI.png" /></p>
+                                                        <p>Dans cette commande, la valeur <strong>adresse </strong>peut être représentée sous les formes suivantes&#160;:</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p class="Liste_puce_1">une <strong>adresse IP</strong> (ex: 10.10.0.110)</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_1">un <strong>hostname </strong>(ex: printserver1)</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_1">un <strong>FQDN </strong>(ex: printserver1.doxense.local)</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_1">une <strong>URI </strong>(ex: https://printserver1:5753/watchdoc/server)</p>
+                                                            </li>
+                                                        </ul>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p class="Liste_num_1">vérifiez que vous recevez le message de confirmation suivant&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/FT_MasterSlave_MsgConfirmMaster.png" /></p>
+                                                    </li>
+                                                </ol>
+                                                <p>&#160;</p>
+                                                <p>&#160;</p>
+                                                <p>&#160;</p>
+                                                <p>Avec l'outil en ligne de commande, placez-vous dans le dossier d'installation de Watchdoc;lancez la commande d'enregistrement du serveur dans le domaine (en respectant la casse)&#160;: <code>WCLI CREATESLAVE /master=server_master /slave=server_watchdoc /password=mot_de_passe_de_maintenance</code>vérifiez que vous recevez le message de confirmation suivant&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/FT_WD5x_MasterSlave_statut1_Slave.png" /></p>
+                                                <p>&#160;</p>
+                                                <h2 id="Déclarerunautreserveur" data-magellan-target="Déclarerunautreserveur">Déclarer un autre serveur</h2>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Avec l'outil en ligne de commande, placez-vous dans le dossier d'installation de Watchdoc;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1">lancez la commande d'enregistrement du serveur dans le domaine (en respectant la casse)&#160;: </p>
+                                                        <blockquote>
+                                                            <p><code>WCLI CREATESLAVE /master=server_master /slave=server_watchdoc /password=mot_de_passe_de_maintenance</code>
+                                                            </p>
+                                                        </blockquote>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p class="Liste_num_1">vérifiez que vous recevez le message de confirmation suivant&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/FT_WD5x_MasterSlave_statut1_Slave.png" /></p>
+                                                    </li>
+                                                </ol>
+                                                <h2 id="Déclasserunserveurmaster" data-magellan-target="Déclasserunserveurmaster">Déclasser un serveur master</h2>
+                                                <p>Ponctuellement, il peut être nécessaire de déclasser un serveur master, c'est-à-dire lui enlever son rôle de master. </p>
+                                                <fieldset>Déclasser un serveur master est une opération dont les conséquences sont importantes, notamment pour les autres serveurs qui en dépendent.&#160;</fieldset>
+                                                <p>Cette opération doit être réalisée à l'aide de WCLI.<br /></p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1">à l'aide de l'outil de commande, placez-vous dans le répertoire d'installation de Watchdoc : <code>cd "\Program Files\Doxense\Watchdoc"</code> ;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1">lancez la commande permettant d'arrêter le serveur :<code style="font-family: 'Courier New';"> &gt;<b style="font-family: 'Courier New';">net stop watchdoc</b></code></p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p class="Liste_num_1">lorsque le service est arrêté, lancez la commande permettant de déclasser le serveur : &gt;<strong style="font-family: 'Courier New';">wcli SINGLEIFY /force</strong></p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p class="Liste_num_1">confirmez votre demande de déclassement par "<strong style="font-family: 'Courier New';">y</strong>" ;</p>
+                                                    </li>
+                                                </ol>
+                                                <p class="Liste_num_1"><span style="font-family: 'Wingdings'">è</span> l'outil procède au déclassement du master : il vous informe que le serveur est devenu "single master" et vous rend la main.<br />Par ailleurs, depuis la version&#160;6.1.0.5276, Watchdoc génère automatiquement une sauvegarde du fichier de configuration permettant une restauration en cas d'erreur lors de l'opération.&#160;Ce fichier de sauvegarde est enregistré par défaut dans C:Program Files\Doxense\Watchdoc\Data\ et porte la date de sa création.</p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="5">
+                                                        <p class="Liste_num_1">lancez la commande permettant de redémarrer le serveur : &gt; <code style="font-family: 'Courier New';"><b style="font-family: 'Courier New';">net start watchdoc</b></code>:<br /><br /><img src="../Z_Resources/Images/02_Captures/Config_Domaine_DeclasserMasterWCLI.png" style="width: 700px;" /></p>
+                                                        <p class="Liste_num_1">
+                                                            <br />
+                                                        </p>
+                                                    </li>
+                                                </ol>
+                                                <p class="Liste_num_1"><span style="font-family: 'Wingdings'">è</span> une fois Watchdoc redémarré, vérifiez dans <strong>Gestion du domaine</strong> que le serveur n'a plus le rôle de master.&#160;</p>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#G%C3%A9rerlesserveursavecWCLI">Gérer les serveurs avec WCLI</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#D%C3%A9clarerunserveurmaster">Déclarer un serveur master</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#D%C3%A9clarerunautreserveur">Déclarer un autre serveur</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#D%C3%A9classerunserveurmaster">Déclasser un serveur master</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -197,87 +296,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor209"></a>
-                                            <MadCap:concept term="WCLI" />Gérer les serveurs avec WCLI</h1>
-                                        <h2>Déclarer un serveur master</h2>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">A l'aide de l'outil de commande, placez-vous dans le répertoire d'installation de Watchdoc : <code>cd "\Program Files\Doxense\Watchdoc"</code>&#160;;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1">lancez ensuite la commande de création du Master (en respectant la casse)&#160;: <br /><br /><code>WCLI CREATEMASTER /master=adresse /password=mot_de_passe_de_maintenance<br /></code><br /><img src="../Z_Resources/Images/02_Captures/FT_MasterSlave_CMD_WCLI.png" /></p>
-                                                <p>Dans cette commande, la valeur <strong>adresse </strong>peut être représentée sous les formes suivantes&#160;:</p>
-                                                <ul>
-                                                    <li>
-                                                        <p class="Liste_puce_1">une <strong>adresse IP</strong> (ex: 10.10.0.110)</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_1">un <strong>hostname </strong>(ex: printserver1)</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_1">un <strong>FQDN </strong>(ex: printserver1.doxense.local)</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_1">une <strong>URI </strong>(ex: https://printserver1:5753/watchdoc/server)</p>
-                                                    </li>
-                                                </ul>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1">vérifiez que vous recevez le message de confirmation suivant&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/FT_MasterSlave_MsgConfirmMaster.png" /></p>
-                                            </li>
-                                        </ol>
-                                        <p>&#160;</p>
-                                        <p>&#160;</p>
-                                        <p>&#160;</p>
-                                        <p>Avec l'outil en ligne de commande, placez-vous dans le dossier d'installation de Watchdoc;lancez la commande d'enregistrement du serveur dans le domaine (en respectant la casse)&#160;: <code>WCLI CREATESLAVE /master=server_master /slave=server_watchdoc /password=mot_de_passe_de_maintenance</code>vérifiez que vous recevez le message de confirmation suivant&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/FT_WD5x_MasterSlave_statut1_Slave.png" /></p>
-                                        <p>&#160;</p>
-                                        <h2>Déclarer un autre serveur</h2>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Avec l'outil en ligne de commande, placez-vous dans le dossier d'installation de Watchdoc;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1">lancez la commande d'enregistrement du serveur dans le domaine (en respectant la casse)&#160;: </p>
-                                                <blockquote>
-                                                    <p><code>WCLI CREATESLAVE /master=server_master /slave=server_watchdoc /password=mot_de_passe_de_maintenance</code>
-                                                    </p>
-                                                </blockquote>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1">vérifiez que vous recevez le message de confirmation suivant&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/FT_WD5x_MasterSlave_statut1_Slave.png" /></p>
-                                            </li>
-                                        </ol>
-                                        <h2>Déclasser un serveur master</h2>
-                                        <p>Ponctuellement, il peut être nécessaire de déclasser un serveur master, c'est-à-dire lui enlever son rôle de master. </p>
-                                        <fieldset>Déclasser un serveur master est une opération dont les conséquences sont importantes, notamment pour les autres serveurs qui en dépendent.&#160;</fieldset>
-                                        <p>Cette opération doit être réalisée à l'aide de WCLI.<br /></p>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">à l'aide de l'outil de commande, placez-vous dans le répertoire d'installation de Watchdoc : <code>cd "\Program Files\Doxense\Watchdoc"</code> ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1">lancez la commande permettant d'arrêter le serveur :<code style="font-family: 'Courier New';"> &gt;<b style="font-family: 'Courier New';">net stop watchdoc</b></code></p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1">lorsque le service est arrêté, lancez la commande permettant de déclasser le serveur : &gt;<strong style="font-family: 'Courier New';">wcli SINGLEIFY /force</strong></p>
-                                            </li>
-                                            <li value="4">
-                                                <p class="Liste_num_1">confirmez votre demande de déclassement par "<strong style="font-family: 'Courier New';">y</strong>" ;</p>
-                                            </li>
-                                        </ol>
-                                        <p class="Liste_num_1"><span style="font-family: 'Wingdings'">è</span> l'outil procède au déclassement du master : il vous informe que le serveur est devenu "single master" et vous rend la main.<br />Par ailleurs, depuis la version&#160;6.1.0.5276, Watchdoc génère automatiquement une sauvegarde du fichier de configuration permettant une restauration en cas d'erreur lors de l'opération.&#160;Ce fichier de sauvegarde est enregistré par défaut dans C:Program Files\Doxense\Watchdoc\Data\ et porte la date de sa création.</p>
-                                        <ol data-mc-continue="true">
-                                            <li value="5">
-                                                <p class="Liste_num_1">lancez la commande permettant de redémarrer le serveur : &gt; <code style="font-family: 'Courier New';"><b style="font-family: 'Courier New';">net start watchdoc</b></code>:<br /><br /><img src="../Z_Resources/Images/02_Captures/Config_Domaine_DeclasserMasterWCLI.png" style="width: 700px;" /></p>
-                                                <p class="Liste_num_1">
-                                                    <br />
-                                                </p>
-                                            </li>
-                                        </ol>
-                                        <p class="Liste_num_1"><span style="font-family: 'Wingdings'">è</span> une fois Watchdoc redémarré, vérifiez dans <strong>Gestion du domaine</strong> que le serveur n'a plus le rôle de master.&#160;</p>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

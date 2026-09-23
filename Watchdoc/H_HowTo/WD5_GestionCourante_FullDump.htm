@@ -164,6 +164,57 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocRéaliserdesdumpsavecMSProcessExplorer" data-magellan-target="WatchdocRéaliserdesdumpsavecMSProcessExplorer">Watchdoc - Réaliser des dumps avec MS&#160;Process Explorer</h1>
+                                                <h2 id="Définition" data-magellan-target="Définition">Définition</h2>
+                                                <p>En informatique, le dump est une opération qui consiste à afficher, copier (sur un support) ou imprimer, à un instant déterminé, le contenu de tout ou partie d'une mémoire pour en faciliter l'analyse.</p>
+                                                <h2 id="Contexte" data-magellan-target="Contexte">Contexte</h2>
+                                                <p> Il arrive que des anomalies liées à l'utilisation de Watchdoc surviennent sur le serveur&#160;: par exemple, une consommation CPU ou un espace mémoire anormalement élevés.&#160;</p>
+                                                <p>&#160;</p>
+                                                <p>Watchdoc est un produit dont l'activité peut être tracée au sein de journaux d'événements (fichiers de logs), mais si ces fichiers ne contiennent pas assez d'informations, il peut être nécessaire de réaliser un "full-dump" du processus concerné pendant son exécution pour collecter les informations permettant d'établir un diagnostic précis. </p>
+                                                <h2 id="Procédure" data-magellan-target="Procédure">Procédure</h2>
+                                                <p>Pour réaliser un full-dump, nous préconisons l'emploi de l'utilitaire Microsoft<sup>®</sup> Process Explorer.</p>
+                                                <p>L'outil doit être exécuté depuis le serveur sur lequel se trouve le processus Watchdoc et ne nécessite aucune installation préalable. </p>
+                                                <fieldset>Un "full dump" nécessite plusieurs centaines de méga-octets, voire des giga-octets. Il est donc nécessaire de vérifier l'espace disponible sur la partition où doit être sauvegardé le fichier de dump.<br /></fieldset>
+                                                <p>&#160;</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Téléchargez l'utilitaire Process Explorer depuis le site <a href="https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer" target="_blank" title="Lien vers le site de téléchargement MS Windows" alt="Lien vers le site de téléchargement MS Windows">MS&#160;Process Explorer</a> et enregistrez-le sur votre espace de travail.</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>Depuis le dossier dans lequel vous avez enregistré Process Explorer, exécutez <strong>procexp.exe</strong>; </p>
+                                                    </li>
+                                                </ol>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1">Dans l'utilitaire <strong>Process Explorer - Sysinternals www.sysinternals.com</strong>, cliquez droit sur le service <strong>Watchdoc.exe &gt; Create Dump &gt; Create Full Dump</strong>;<br /><br /><img src="../Z_Resources/Images/02_Captures/FT_GestionCourante-RealiserFullDump_SysInternals.png" style="width: 464px;height: 353px;" /></p>
+                                                    </li>
+                                                </ol>
+                                                <p>&#160;</p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="2">
+                                                        <p class="Liste_num_1">Enregistrez le fichier de dump généré (nommé <strong>Watchdoc.dmp</strong> par défaut) dans votre espace de travail.<br /><br /><img src="../Z_Resources/Images/02_Captures/FT_GestionCourante_RealiserFullDump_Save.png" style="width: 459px;height: 410px;" /></p>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocR%C3%A9aliserdesdumpsavecMSProcessExplorer">Watchdoc - Réaliser des dumps avec MS&#160;Process Explorer</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#D%C3%A9finition">Définition</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Contexte">Contexte</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Proc%C3%A9dure">Procédure</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -197,39 +248,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1>Watchdoc - Réaliser des dumps avec MS&#160;Process Explorer</h1>
-                                        <h2>Définition</h2>
-                                        <p>En informatique, le dump est une opération qui consiste à afficher, copier (sur un support) ou imprimer, à un instant déterminé, le contenu de tout ou partie d'une mémoire pour en faciliter l'analyse.</p>
-                                        <h2>Contexte</h2>
-                                        <p> Il arrive que des anomalies liées à l'utilisation de Watchdoc surviennent sur le serveur&#160;: par exemple, une consommation CPU ou un espace mémoire anormalement élevés.&#160;</p>
-                                        <p>&#160;</p>
-                                        <p>Watchdoc est un produit dont l'activité peut être tracée au sein de journaux d'événements (fichiers de logs), mais si ces fichiers ne contiennent pas assez d'informations, il peut être nécessaire de réaliser un "full-dump" du processus concerné pendant son exécution pour collecter les informations permettant d'établir un diagnostic précis. </p>
-                                        <h2>Procédure</h2>
-                                        <p>Pour réaliser un full-dump, nous préconisons l'emploi de l'utilitaire Microsoft<sup>®</sup> Process Explorer.</p>
-                                        <p>L'outil doit être exécuté depuis le serveur sur lequel se trouve le processus Watchdoc et ne nécessite aucune installation préalable. </p>
-                                        <fieldset>Un "full dump" nécessite plusieurs centaines de méga-octets, voire des giga-octets. Il est donc nécessaire de vérifier l'espace disponible sur la partition où doit être sauvegardé le fichier de dump.<br /></fieldset>
-                                        <p>&#160;</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Téléchargez l'utilitaire Process Explorer depuis le site <a href="https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer" target="_blank" title="Lien vers le site de téléchargement MS Windows" alt="Lien vers le site de téléchargement MS Windows">MS&#160;Process Explorer</a> et enregistrez-le sur votre espace de travail.</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>Depuis le dossier dans lequel vous avez enregistré Process Explorer, exécutez <strong>procexp.exe</strong>; </p>
-                                            </li>
-                                        </ol>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">Dans l'utilitaire <strong>Process Explorer - Sysinternals www.sysinternals.com</strong>, cliquez droit sur le service <strong>Watchdoc.exe &gt; Create Dump &gt; Create Full Dump</strong>;<br /><br /><img src="../Z_Resources/Images/02_Captures/FT_GestionCourante-RealiserFullDump_SysInternals.png" style="width: 464px;height: 353px;" /></p>
-                                            </li>
-                                        </ol>
-                                        <p>&#160;</p>
-                                        <ol data-mc-continue="true">
-                                            <li value="2">
-                                                <p class="Liste_num_1">Enregistrez le fichier de dump généré (nommé <strong>Watchdoc.dmp</strong> par défaut) dans votre espace de travail.<br /><br /><img src="../Z_Resources/Images/02_Captures/FT_GestionCourante_RealiserFullDump_Save.png" style="width: 459px;height: 410px;" /></p>
-                                            </li>
-                                        </ol>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

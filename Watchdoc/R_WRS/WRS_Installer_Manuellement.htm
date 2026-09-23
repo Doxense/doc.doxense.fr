@@ -164,6 +164,119 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WRSInstallermanuellementWatchdocforReportingServices" data-magellan-target="WRSInstallermanuellementWatchdocforReportingServices"><a name="aanchor162"></a>
+                                                    <MadCap:concept term="WRS" />WRS&#160;- Installer manuellement Watchdoc for Reporting Services </h1>
+                                                <p>Dans le cas où vous installez le jeu de rapports WRS<sup>®</sup> pour un serveur SQL 2012 ou supérieur, la procédure d'installation est la suivante&#160;: </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1">créer un dossier; </p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1">créer une source de données&#160;;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p class="Liste_num_1">déployer des rapports.</p>
+                                                    </li>
+                                                </ol>
+                                                <h2 id="Créerledossier" data-magellan-target="Créerledossier">Créer le dossier</h2>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1">Accédez au Gestionnaire de rapports de:
+Reporting Services
+(http://nomduserveur/Reports_WATCHDOC)</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1">
+
+Cliquez sur <strong>Nouveau dossier</strong>
+;<br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Executer_WRS_DossierRacine_NvDossier.png" /></p>
+                                                        <p style="text-align: center;">&#160;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p class="Liste_num_1">Dans la boîte Nouveau dossier, indiquez le nom du dossier dans lequel seront enregistrés les rapports WRS&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Install_WRS_NouveauDossierL.png" style="width: 387px;height: 266px;" /></p>
+                                                        <p style="text-align: center;">&#160;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p class="Liste_num_1">Cliquez sur le bouton <strong>OK </strong>pour valider l'ajout du dossier. </p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p class="Liste_num_1">Cliquez sur le dossier créé : dans le formulaire, complétez les champs suivants&#160;:</p>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p class="Liste_puce_2"><strong>Nom </strong>: indiquez dans ce champ le nom de la base de données&#160;;</p>
+                                                    </li>
+                                                    <li value="7">
+                                                        <p class="Liste_puce_2"><strong>Chaîne de connexion </strong>:indiquez dans ce champ : </p>
+                                                    </li>
+                                                    <li value="8">
+                                                        <p>
+                                                            <p class="Liste_puce_2"><strong>Data Source=</strong> indiquez le chemin menant à l'instance de la base de données ; </p>
+                                                            <p class="Liste_puce_2"><strong>Initial Catalog= i</strong>ndiquez le nom de la base de données.</p>
+                                                        </p>
+                                                    </li>
+                                                    <li value="9">
+                                                        <p class="Liste_puce_2"><strong>Sécurité intégrée de Windows</strong> :</p>
+                                                    </li>
+                                                    <li value="10">
+                                                        <p class="Liste_num_1">cochez le bouton radio correspondant au mode d'authentification adopté ;</p>
+                                                    </li>
+                                                    <li value="11">
+                                                        <p class="Liste_num_1">Clquez sur le bouton <strong>Tester la connexion</strong> pour vérifier la validité des informations fournies.</p>
+                                                    </li>
+                                                    <li value="12">
+                                                        <p class="Liste_num_1">cliquez sur le bouton <strong>Appliquer</strong>.<br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Install_WRS_NouvelleSourceDonneesL.png" /><br /></p>
+                                                    </li>
+                                                </ol>
+                                                <p>&#160;</p>
+                                                <h2 id="Déployerlesrapports" data-magellan-target="Déployerlesrapports">Déployer les rapports</h2>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1">Dans SQL&#160;Server Reporting Services, rendez-vous dans le dossier Watchdoc&#160;;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1">Dans le menu du dossier, cliquez sur le bouton Télécharger un fichier ; <br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Deployer_TelechargerFichier.png" /><br /></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p class="Liste_num_1">Cliquez sur <strong>Browse</strong> et parcourez votre espace de travail pour sélectionnez le premier rapport .rdl (nommé <strong>Reports</strong>  dans le sous-dossier WRS ;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p class="Liste_num_1">cliquez sur <strong>OK </strong>pour valider le choix du rapport&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Deployer_SelectionnerFichier.png" /></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p class="Liste_num_1">Réitérez l'opération pour chacun des fichiers .rdl présent dans le dossier <strong>Reports</strong>.</p>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p class="Liste_num_1">Une fois terminé, vous pouvez changer la vue en cliquant sur<strong> Mode détail</strong> en haut à droite pour afficher les rapports sous forme de liste.<br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Deployer_AffichageModeDetail.png" /></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="7">
+                                                        <p class="Liste_num_1">Cliquez sur le bilan <strong>Statement</strong> pour ouvrir le gestionnaire de rapports ;</p>
+                                                    </li>
+                                                    <li value="8">
+                                                        <p class="Liste_num_1">dans le gestionnaire de rapports, précisez la  période pour laquelle vous souhaitez connaître les statistiques, puis cliquez sur <strong>Afficher le rapport</strong>.<br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Deployer_AfficherRapport.png" /><br /><br /></p>
+                                                    </li>
+                                                </ol>
+                                                <p class="Resultat">→ La mise en place du rapport WRS&#160;est terminée.</p>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WRSInstallermanuellementWatchdocforReportingServices">WRS&#160;- Installer manuellement Watchdoc for Reporting Services </a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Cr%C3%A9erledossier">Créer le dossier</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#D%C3%A9ployerlesrapports">Déployer les rapports</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -197,103 +310,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor162"></a>
-                                            <MadCap:concept term="WRS" />WRS&#160;- Installer manuellement Watchdoc for Reporting Services </h1>
-                                        <p>Dans le cas où vous installez le jeu de rapports WRS<sup>®</sup> pour un serveur SQL 2012 ou supérieur, la procédure d'installation est la suivante&#160;: </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">créer un dossier; </p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1">créer une source de données&#160;;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1">déployer des rapports.</p>
-                                            </li>
-                                        </ol>
-                                        <h2>Créer le dossier</h2>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">Accédez au Gestionnaire de rapports de:
-Reporting Services
-(http://nomduserveur/Reports_WATCHDOC)</p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1">
-
-Cliquez sur <strong>Nouveau dossier</strong>
-;<br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Executer_WRS_DossierRacine_NvDossier.png" /></p>
-                                                <p style="text-align: center;">&#160;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1">Dans la boîte Nouveau dossier, indiquez le nom du dossier dans lequel seront enregistrés les rapports WRS&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Install_WRS_NouveauDossierL.png" style="width: 387px;height: 266px;" /></p>
-                                                <p style="text-align: center;">&#160;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p class="Liste_num_1">Cliquez sur le bouton <strong>OK </strong>pour valider l'ajout du dossier. </p>
-                                            </li>
-                                            <li value="5">
-                                                <p class="Liste_num_1">Cliquez sur le dossier créé : dans le formulaire, complétez les champs suivants&#160;:</p>
-                                            </li>
-                                            <li value="6">
-                                                <p class="Liste_puce_2"><strong>Nom </strong>: indiquez dans ce champ le nom de la base de données&#160;;</p>
-                                            </li>
-                                            <li value="7">
-                                                <p class="Liste_puce_2"><strong>Chaîne de connexion </strong>:indiquez dans ce champ : </p>
-                                            </li>
-                                            <li value="8">
-                                                <p>
-                                                    <p class="Liste_puce_2"><strong>Data Source=</strong> indiquez le chemin menant à l'instance de la base de données ; </p>
-                                                    <p class="Liste_puce_2"><strong>Initial Catalog= i</strong>ndiquez le nom de la base de données.</p>
-                                                </p>
-                                            </li>
-                                            <li value="9">
-                                                <p class="Liste_puce_2"><strong>Sécurité intégrée de Windows</strong> :</p>
-                                            </li>
-                                            <li value="10">
-                                                <p class="Liste_num_1">cochez le bouton radio correspondant au mode d'authentification adopté ;</p>
-                                            </li>
-                                            <li value="11">
-                                                <p class="Liste_num_1">Clquez sur le bouton <strong>Tester la connexion</strong> pour vérifier la validité des informations fournies.</p>
-                                            </li>
-                                            <li value="12">
-                                                <p class="Liste_num_1">cliquez sur le bouton <strong>Appliquer</strong>.<br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Install_WRS_NouvelleSourceDonneesL.png" /><br /></p>
-                                            </li>
-                                        </ol>
-                                        <p>&#160;</p>
-                                        <h2>Déployer les rapports</h2>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">Dans SQL&#160;Server Reporting Services, rendez-vous dans le dossier Watchdoc&#160;;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1">Dans le menu du dossier, cliquez sur le bouton Télécharger un fichier ; <br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Deployer_TelechargerFichier.png" /><br /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1">Cliquez sur <strong>Browse</strong> et parcourez votre espace de travail pour sélectionnez le premier rapport .rdl (nommé <strong>Reports</strong>  dans le sous-dossier WRS ;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p class="Liste_num_1">cliquez sur <strong>OK </strong>pour valider le choix du rapport&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Deployer_SelectionnerFichier.png" /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="5">
-                                                <p class="Liste_num_1">Réitérez l'opération pour chacun des fichiers .rdl présent dans le dossier <strong>Reports</strong>.</p>
-                                            </li>
-                                            <li value="6">
-                                                <p class="Liste_num_1">Une fois terminé, vous pouvez changer la vue en cliquant sur<strong> Mode détail</strong> en haut à droite pour afficher les rapports sous forme de liste.<br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Deployer_AffichageModeDetail.png" /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="7">
-                                                <p class="Liste_num_1">Cliquez sur le bilan <strong>Statement</strong> pour ouvrir le gestionnaire de rapports ;</p>
-                                            </li>
-                                            <li value="8">
-                                                <p class="Liste_num_1">dans le gestionnaire de rapports, précisez la  période pour laquelle vous souhaitez connaître les statistiques, puis cliquez sur <strong>Afficher le rapport</strong>.<br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Deployer_AfficherRapport.png" /><br /><br /></p>
-                                            </li>
-                                        </ol>
-                                        <p class="Resultat">→ La mise en place du rapport WRS&#160;est terminée.</p>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

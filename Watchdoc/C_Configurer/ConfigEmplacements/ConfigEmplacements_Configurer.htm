@@ -165,6 +165,123 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocEmplacementsConfigurer" data-magellan-target="WatchdocEmplacementsConfigurer"><a name="aanchor291"></a>
+                                                    <MadCap:concept term="WD" />Watchdoc - Emplacements - Configurer</h1>
+                                                <h2 id="Informationsgénérales" data-magellan-target="Informationsgénérales">Informations générales</h2>
+                                                <p>Configurez les Informations générales de l'emplacement : </p>
+                                                <ol data-mc-continue="false">
+                                                    <li value="1">
+                                                        <p>dans  la boîte <strong>Créer un nouvel emplacement</strong>, indiquez le type d'emplacement que vous souhaitez ajouter (cette étape n'apparaît plus si vous êtes au niveau d'un site/agence, dernier niveau de la hiérarchie)&#160;; <br /></p>
+                                                    </li>
+                                                </ol>
+                                                <ol data-mc-continue="true">
+                                                    <li value="2">
+                                                        <p class="Liste_num_1">dans l'interface Créer un nouvel emplacement, complétez les <strong>Informations générales</strong> de l'emplacement&#160;: </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>Nom :</strong> nom affiché dans les interfaces d'administration et aux utilisateurs ;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Sub-Type :</strong> pays, région, département, ville, site, bâtiment, bureau...</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Code Pays :</strong> code correspondant au pays, automatiquement renseigné à l'aide de l'emplacement-parent sous lequel le nouvel emplacement est créé&#160;; </p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>Label (Intl.) :</strong> libellé compréhensible (attribué à l'emplacement) qui s'affiche dans les interfaces utilisateurs ;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Description :</strong> complément d'information relatif à l'emplacement affiché dans les interfaces d'administration et aux utilisateurs ;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Label (Local) :</strong> libellé compréhensible (attribué à l'emplacement), écrit dans la langue du lieu où va être affiché le libellé&#160;;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Tags :</strong> saisissez un ou plusieurs qui contribuent à qualifier l'emplacement. Le ou les tags servent de critères de discrimination; </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Connectivité :</strong> spécifiez un ou plusieurs sites distants auxquels Watchdoc est autorisé (ou non) à envoyer des demandes d'impression. Cette fonction est utile si les périphériques d'un site ne sont pas disponibles (en cas de panne) ou pour faciliter l'impression aux utilisateurs mobiles.</p>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p><strong>site distant :</strong> sélectionnez un ou plusieurs sites distants dans la liste ;</p>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Type de lien :</strong> dans la liste, sélectionnez le type de lien qui peut être établi ;</p>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p><strong>bloqué :</strong> sélectionnez cette option pour bloquer explicitement tout transfert entre le site et un autre site ;</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p><strong>sortant uniquement :</strong> sélectionnez cette option pour autoriser un flux sortant de l'emplacement configuré vers l'emplacement distant désigné&#160;;</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p><strong>VPN de site à site :</strong> sélectionnez cette option pour autoriser les transferts bidirectionnels entre l'emplacement configuré et l'emplacement distant désigné :</p>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>File(s) par défaut :</strong> vous pouvez configurer une file, proposée par défaut pour cet emplacement et pour un rôle prédéfini&#160;(cf.&#160;<a href="../../T_WPC/Windows/WPCW_Config_FileDefaut.htm" target="_blank">Configurer une file par défaut</a>) ; réitérez l'opération si vous souhaitez associer plusieurs files par défaut à d'autres rôles pour cet emplacement : <br /><br /><img src="../../Z_Resources/Images/02_Captures/WD_Admin_Emplacements_CreerInfosGen.png" style="width: 700px;height: auto;" /></p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ol>
+                                                <h2 id="Paramètresadditionnels" data-magellan-target="Paramètresadditionnels">Paramètres additionnels</h2>
+                                                <p>Pour un emplacement de type <b>Site</b> ou <b>Cloud</b>, configurez les paramètres additionnels.&#160;Il s'agit des paramètres qui permettent à Watchdoc Print Client de proposer aux utilisateurs les périphériques d'impressions disponibles en fonction de leur localisation : </p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="3">
+                                                        <p>complétez les <strong>Paramètres additionnels</strong>&#160;:</p>
+                                                    </li>
+                                                    <ul>
+                                                        <li>
+                                                            <p class="Liste_puce_2"><strong><a name="Appareils" id="Appareils"></a>Appareils :</strong> cochez cette case pour autoriser que des périphériques d'impression soient associés à cet emplacement.&#160;Ce paramètre permet, par exemple, de ne pas autoriser l'association des périphériques à certains niveaux (génériques, car trop vagues, par exemple) pour privilégier l'association des périphériques à un niveau spécifique.&#160;<br />N.B.&#160;il est cependant important de cocher cette case pour l'emplacement "Cloud" afin de permettre d'associer des périphériques d'impression en cas de télétravail.</p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="Liste_puce_2"><strong>Utilisateurs :</strong> cochez cette case pour permettre à l'utilisateur de Watchdoc Print Client de sélectionner l'emplacement (et les périphériques d'impression qui y sont associés).</p>
+                                                            <p class="Liste_puce_2">
+                    Ce paramètre est utile dans le cas d'une infrastructure comportant une arborescence importante d'emplacements, afin de rendre le choix plus facile aux utilisateurs. Dans ce cas, typiquement, il est recommandé de ne cocher que le dernier niveau "enfant" pour permettre à l'utilisateur d'accéder aux périphériques de proximité. Cependant, cette case peut aussi être cochée pour un emplacement 
+de niveau "parent" comportant d'autres emplacements.        </p>
+                                                        </li>
+                                                        <li>
+                                                            <p><strong>Sous-réseaux</strong>
+                                                            </p>
+                                                            <ul>
+                                                                <li>
+                                                                    <p>dans <strong>Sous-réseau</strong>, saisissez la plage d'adresses IP associée à l'emplacement : ainsi, tous les périphériques d'impression et postes utilisateurs inclus dans cette plage seront rattachés à cet emplacement. <br />Un emplacement peut avoir plusieurs sous-réseaux.<br />Vous pouvez indiquer une plage d'adresses IP privées ou une adresse IP publique.<br />Dans une architecture cloud, la déclaration de l'IP publique permet de localiser tous les périphériques et les postes utilisateurs connectés à cet emplacement.</p>
+                                                                </li>
+                                                            </ul>
+                                                            <ul>
+                                                                <li>
+                                                                    <p class="Liste_puce_2">dans <strong>Liste de tags</strong>, saisissez des libellés permettant de caractériser le sous-réseau.&#160;Les tags constituent des critères de discrimination (pour un usage ultérieur ou pour faciliter la recherche).<br />Si vous souhaitez exclure un sous-réseau de la détection automatique des périphériques, saisissez le tag <strong>users</strong> dans ce champ.</p>
+                                                                </li>
+                                                            </ul>
+                                                            <ul>
+                                                                <li>
+                                                                    <p class="Liste_puce_2">Emplacement par défaut pour les adresses IP n'appartenant à aucun sous-réseau : cochez la case pour permettre d'associer à cet emplacement les adresses IP qui ne seraient pas incluses dans les sous-réseaux configurés précédemment.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/WD6_Admin_Emplacements_CreerParamAdd.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="854" data-mc-height="327" src="../../Z_Resources/Images/02_Captures/WD6_Admin_Emplacements_CreerParamAdd.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a></p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </ol>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocEmplacementsConfigurer">Watchdoc - Emplacements - Configurer</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Informationsg%C3%A9n%C3%A9rales">Informations générales</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Param%C3%A8tresadditionnels">Paramètres additionnels</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -198,107 +315,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor291"></a>
-                                            <MadCap:concept term="WD" />Watchdoc - Emplacements - Configurer</h1>
-                                        <h2>Informations générales</h2>
-                                        <p>Configurez les Informations générales de l'emplacement : </p>
-                                        <ol data-mc-continue="false">
-                                            <li value="1">
-                                                <p>dans  la boîte <strong>Créer un nouvel emplacement</strong>, indiquez le type d'emplacement que vous souhaitez ajouter (cette étape n'apparaît plus si vous êtes au niveau d'un site/agence, dernier niveau de la hiérarchie)&#160;; <br /></p>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="2">
-                                                <p class="Liste_num_1">dans l'interface Créer un nouvel emplacement, complétez les <strong>Informations générales</strong> de l'emplacement&#160;: </p>
-                                                <ul>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>Nom :</strong> nom affiché dans les interfaces d'administration et aux utilisateurs ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Sub-Type :</strong> pays, région, département, ville, site, bâtiment, bureau...</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Code Pays :</strong> code correspondant au pays, automatiquement renseigné à l'aide de l'emplacement-parent sous lequel le nouvel emplacement est créé&#160;; </p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>Label (Intl.) :</strong> libellé compréhensible (attribué à l'emplacement) qui s'affiche dans les interfaces utilisateurs ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Description :</strong> complément d'information relatif à l'emplacement affiché dans les interfaces d'administration et aux utilisateurs ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Label (Local) :</strong> libellé compréhensible (attribué à l'emplacement), écrit dans la langue du lieu où va être affiché le libellé&#160;;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Tags :</strong> saisissez un ou plusieurs qui contribuent à qualifier l'emplacement. Le ou les tags servent de critères de discrimination; </p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Connectivité :</strong> spécifiez un ou plusieurs sites distants auxquels Watchdoc est autorisé (ou non) à envoyer des demandes d'impression. Cette fonction est utile si les périphériques d'un site ne sont pas disponibles (en cas de panne) ou pour faciliter l'impression aux utilisateurs mobiles.</p>
-                                                        <ul>
-                                                            <li>
-                                                                <p><strong>site distant :</strong> sélectionnez un ou plusieurs sites distants dans la liste ;</p>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Type de lien :</strong> dans la liste, sélectionnez le type de lien qui peut être établi ;</p>
-                                                        <ul>
-                                                            <li>
-                                                                <p><strong>bloqué :</strong> sélectionnez cette option pour bloquer explicitement tout transfert entre le site et un autre site ;</p>
-                                                            </li>
-                                                            <li>
-                                                                <p><strong>sortant uniquement :</strong> sélectionnez cette option pour autoriser un flux sortant de l'emplacement configuré vers l'emplacement distant désigné&#160;;</p>
-                                                            </li>
-                                                            <li>
-                                                                <p><strong>VPN de site à site :</strong> sélectionnez cette option pour autoriser les transferts bidirectionnels entre l'emplacement configuré et l'emplacement distant désigné :</p>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>File(s) par défaut :</strong> vous pouvez configurer une file, proposée par défaut pour cet emplacement et pour un rôle prédéfini&#160;(cf.&#160;<a href="../../T_WPC/Windows/WPCW_Config_FileDefaut.htm" target="_blank">Configurer une file par défaut</a>) ; réitérez l'opération si vous souhaitez associer plusieurs files par défaut à d'autres rôles pour cet emplacement : <br /><br /><img src="../../Z_Resources/Images/02_Captures/WD_Admin_Emplacements_CreerInfosGen.png" style="width: 700px;height: auto;" /></p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ol>
-                                        <h2>Paramètres additionnels</h2>
-                                        <p>Pour un emplacement de type <b>Site</b> ou <b>Cloud</b>, configurez les paramètres additionnels.&#160;Il s'agit des paramètres qui permettent à Watchdoc Print Client de proposer aux utilisateurs les périphériques d'impressions disponibles en fonction de leur localisation : </p>
-                                        <ol data-mc-continue="true">
-                                            <li value="3">
-                                                <p>complétez les <strong>Paramètres additionnels</strong>&#160;:</p>
-                                            </li>
-                                            <ul>
-                                                <li>
-                                                    <p class="Liste_puce_2"><strong><a name="Appareils" id="Appareils"></a>Appareils :</strong> cochez cette case pour autoriser que des périphériques d'impression soient associés à cet emplacement.&#160;Ce paramètre permet, par exemple, de ne pas autoriser l'association des périphériques à certains niveaux (génériques, car trop vagues, par exemple) pour privilégier l'association des périphériques à un niveau spécifique.&#160;<br />N.B.&#160;il est cependant important de cocher cette case pour l'emplacement "Cloud" afin de permettre d'associer des périphériques d'impression en cas de télétravail.</p>
-                                                </li>
-                                                <li>
-                                                    <p class="Liste_puce_2"><strong>Utilisateurs :</strong> cochez cette case pour permettre à l'utilisateur de Watchdoc Print Client de sélectionner l'emplacement (et les périphériques d'impression qui y sont associés).</p>
-                                                    <p class="Liste_puce_2">
-                    Ce paramètre est utile dans le cas d'une infrastructure comportant une arborescence importante d'emplacements, afin de rendre le choix plus facile aux utilisateurs. Dans ce cas, typiquement, il est recommandé de ne cocher que le dernier niveau "enfant" pour permettre à l'utilisateur d'accéder aux périphériques de proximité. Cependant, cette case peut aussi être cochée pour un emplacement 
-de niveau "parent" comportant d'autres emplacements.        </p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>Sous-réseaux</strong>
-                                                    </p>
-                                                    <ul>
-                                                        <li>
-                                                            <p>dans <strong>Sous-réseau</strong>, saisissez la plage d'adresses IP associée à l'emplacement : ainsi, tous les périphériques d'impression et postes utilisateurs inclus dans cette plage seront rattachés à cet emplacement. <br />Un emplacement peut avoir plusieurs sous-réseaux.<br />Vous pouvez indiquer une plage d'adresses IP privées ou une adresse IP publique.<br />Dans une architecture cloud, la déclaration de l'IP publique permet de localiser tous les périphériques et les postes utilisateurs connectés à cet emplacement.</p>
-                                                        </li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li>
-                                                            <p class="Liste_puce_2">dans <strong>Liste de tags</strong>, saisissez des libellés permettant de caractériser le sous-réseau.&#160;Les tags constituent des critères de discrimination (pour un usage ultérieur ou pour faciliter la recherche).<br />Si vous souhaitez exclure un sous-réseau de la détection automatique des périphériques, saisissez le tag <strong>users</strong> dans ce champ.</p>
-                                                        </li>
-                                                    </ul>
-                                                    <ul>
-                                                        <li>
-                                                            <p class="Liste_puce_2">Emplacement par défaut pour les adresses IP n'appartenant à aucun sous-réseau : cochez la case pour permettre d'associer à cet emplacement les adresses IP qui ne seraient pas incluses dans les sous-réseaux configurés précédemment.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/WD6_Admin_Emplacements_CreerParamAdd.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="854" data-mc-height="327" src="../../Z_Resources/Images/02_Captures/WD6_Admin_Emplacements_CreerParamAdd.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a></p>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </ol>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

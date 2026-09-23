@@ -165,6 +165,476 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WESSharpDépannerleWES" data-magellan-target="WESSharpDépannerleWES"><a name="aanchor62"></a>
+                                                    <MadCap:concept term="ADE;WES" /><a name="aanchor63"></a>
+                                                    <MadCap:concept term="WES;ADE" />
+                                                    <MadCap:conditionalText data-mc-conditions="General.Online">WES&#160;Sharp - </MadCap:conditionalText>Dépanner le WES</h1>
+                                                <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                    <li class="tree-node"><a href="#WESSharpD%C3%A9pannerleWES">WES&#160;Sharp - Dépanner le WES</a>
+                                                        <ul>
+                                                            <li class="tree-node"><a href="#R%C3%A8glesg%C3%A9n%C3%A9ralespourled%C3%A9pannage">Règles générales pour le dépannage</a>
+                                                            </li>
+                                                            <li class="tree-node"><a href="#ActiverlestracesduWESWEStraces">Activer les traces du WES (WEStraces)</a>
+                                                            </li>
+                                                            <li class="tree-node"><a href="#Travauxdenum%C3%A9risationfaxetphotocopienoncomptabilis%C3%A9s">Travaux de numérisation, fax et photocopie non comptabilisés</a>
+                                                            </li>
+                                                            <li class="tree-node"><a href="#Probl%C3%A8medequotadoubl%C3%A9lorsdelimpressiondunformatlargeA3">Problème de quota doublé lors de l'impression d'un format large (A3)</a>
+                                                            </li>
+                                                            <li class="tree-node"><a href="#LeWESnetrouvepluslafiledesortieMessagederreurImpossiblederetrouverlafiledesortiesept2026">Le WES&#160;ne trouve plus la file de sortie - Message d'erreur "Impossible de retrouver la file de sortie" - sept.&#160;2026</a>
+                                                            </li>
+                                                            <li class="tree-node"><a href="#IconesWatchdocetWEScanmaldimensionn%C3%A9es">Icones Watchdoc et WEScan mal dimensionnées</a>
+                                                            </li>
+                                                            <li class="tree-node"><a href="#InstallationduWESimpossibleMessagederreur302MovedTemporarily">Installation du WES&#160;impossible - Message d'erreur "302 Moved Temporarily"</a>
+                                                            </li>
+                                                            <li class="tree-node"><a href="#InstallationduWESimpossibleprobl%C3%A8medecommunicationli%C3%A9auxoptionsAMX2etAMX3">Installation du WES&#160;impossible  problème de communication lié aux options AMX2 et AMX3</a>
+                                                            </li>
+                                                            <li class="tree-node"><a href="#WESSharpAcc%C3%A8sauWESimpossibledepuisl%C3%A9crandaccueildup%C3%A9riph%C3%A9rique">WES Sharp - Accès au WES&#160;impossible depuis l'écran d'accueil du périphérique</a>
+                                                            </li>
+                                                            <li class="tree-node"><a href="#DysfonctionnementdesMFPSharpavecSNMP">Dysfonctionnement des MFP Sharp avec SNMP</a>
+                                                            </li>
+                                                            <li class="tree-node"><a href="#WESSharpImpressionimpossibledepuisunefilevirtuelle">WES Sharp - Impression impossible depuis une file virtuelle  </a>
+                                                            </li>
+                                                            <li class="tree-node"><a href="#MessagederreurImpossibledejoindreleserveurdauth">Message d'erreur - Impossible de joindre le serveur d'auth.</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                                <h2 style="text-align: justify;" id="Règlesgénéralespourledépannage" data-magellan-target="Règlesgénéralespourledépannage">Règles générales pour le dépannage</h2>
+                                                <p style="text-align: justify;">Afin de permettre à l'équipe Support Doxense<sup>®</sup> d'établir un diagnostic de panne rapide et fiable, merci de communiquer le maximum d'informations possible lors de la déclaration de l'incident : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1" style="text-align: justify;"><strong>Quoi ?</strong> Quelle est la procédure à suivre pour reproduire l'incident ?</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1" style="text-align: justify;"><strong>Quand ?</strong> A quelle date et à quelle heure a eu lieu l'incident ?&#160;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1" style="text-align: justify;"><strong>Où ?</strong> Sur quel périphérique et depuis quel poste de travail a eu lieu l'incident ?</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1" style="text-align: justify;"><strong>Qui ?</strong> Avec quel compte utilisateur s'est produit l'incident ?</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1" style="text-align: justify;"><strong>Fichier trace Watchdoc.log :</strong> merci de joindre le fichier de trace Watchdoc.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1" style="text-align: justify;"><strong>Fichier de traces WES :</strong> merci d'activer les fichiers de trace sur chaque file pour laquelle vous avez constaté un incident.&#160;</p>
+                                                    </li>
+                                                </ul>
+                                                <p style="text-align: justify;">&#160;</p>
+                                                <p style="text-align: justify;">Une fois ces informations rassemblées, vous pouvez envoyer une demande de résolution depuis le portail <a href="https://doxense.zendesk.com/hc/fr" title="Lien vers l'extranet dédié aux partenaires" alt="Lien vers l'extranet dédié aux partenaires">Connect</a>, outil de gestion des incidents dédié aux partenaires.</p>
+                                                <p style="text-align: justify;">&#160;</p>
+                                                <p style="text-align: left;">Pour obtenir un relevé optimal des données nécessaires au diagnostic, utilisez l'outil Watchdoc DiagTool fourni avec le programme d'installation de Watchdoc (cf.&#160;<a href="../../H_HowTo/WD5_DiagTool_Procedure.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Créer un rapport de logs avec DiagTool</a>).</p>
+                                                <hr />
+                                                <h2 style="text-align: justify;" id="ActiverlestracesduWESWEStraces" data-magellan-target="ActiverlestracesduWESWEStraces"><a name="WEStraces" id="WEStraces"></a>Activer les traces du WES (WEStraces)</h2>
+                                                <p style="text-align: justify;">Pour effectuer un diagnostic du problème rencontré sur les applications embarquées, il convient d'activer les fichiers traces (logs) spécifiques aux communications du WES. </p>
+                                                <p style="font-size: 14pt;font-weight: bold;">&#160;</p>
+                                                <p style="font-weight: normal;font-size: 12pt;">Pour activer les traces&#160;: </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1" style="text-align: left;">dans l'interface d'administration web de Watchdoc, depuis le <strong>Menu Principal</strong>, cliquez sur <strong>Files d'impression</strong>&#160;; </p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1" style="text-align: left;">dans la liste des files, cliquez sur la file dotée du WES&#160;pour lequel vous souhaitez activer les fichiers traces ;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p class="Liste_num_1" style="text-align: left;">dans l'interface de gestion de la file, cliquez sur le bouton <strong>Propriétés</strong>&#160;;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p class="Liste_num_1" style="text-align: left;">dans la rubrique [Nom_du_WES], cliquez sur le bouton <strong>Editer la configuration</strong>&#160;:<br /><br /><img src="Config_WES_Sharp_Troubleshooting_EditerConfig.png" style="width: 700px;height: auto;" /></p>
+                                                        <p class="Liste_num_1" style="text-align: justify;">
+                                                            <br />
+                                                        </p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p class="Liste_num_1" style="text-align: justify;">dans la section <strong>WES &gt; Diagnostic</strong>, cochez la case<strong> Activer les traces</strong>&#160;;</p>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p class="Liste_num_1" style="text-align: justify;">dans la liste <strong>Niveau de traces</strong>, sélectionnez : </p>
+                                                        <ul style="font-size: 12pt;">
+                                                            <li>
+                                                                <p class="Liste_puce_2" style="text-align: justify;"><strong>Auto :</strong> conserve les traces standard ;</p>
+                                                            </li>
+                                                            <li style="font-size: 12pt;"><strong>Inclure les contenus binaires :</strong> conserve les traces détaillées.</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li style="font-size: 12pt;text-align: left;" value="7">dans le champ <strong>Chemin</strong>, indiquez le chemin du dossier dans lequel doivent être enregistrés les fichiers de trace. Si vous laissez le champ vide, les fichiers trace seront enregistrés par défaut dans le dossier d'installation Watchdoc_install_dir/Logs/Wes_Traces/QueueId :<br /><br /><img src="../05_Depannage/WD_WES_Traces_Activer.png" style="width: 700px;height: auto;" /><br /><br /><img src="../05_Depannage/WD_Traces_DossierLogs_default.png" style="width: 700px;height: auto;" /></li>
+                                                </ol>
+                                                <p>
+                                                    <p>&#160;</p>
+                                                </p>
+                                                <fieldset style="text-align: left;">L'activation des journaux  risque de ralentir le fonctionnement du serveur.<br />Il est donc fortement recommandé de  désactiver cette option une fois le problème résolu.</fieldset>
+                                                <hr />
+                                                <h2 style="text-align: justify;" id="Travauxdenumérisationfaxetphotocopienoncomptabilisés" data-magellan-target="Travauxdenumérisationfaxetphotocopienoncomptabilisés">Travaux de numérisation, fax et photocopie non comptabilisés</h2>
+                                                <p style="text-align: justify;">Si les travaux de numérisation, fax et photocopie ne sont pas comptabilisés par Watchdoc, vérifiez que l'adresse (nom d'hôte ou IP) du serveur Watchdoc configurée dans le périphérique est correcte :</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1" style="text-align: justify;"> dans l'interface de configuration de la file, dans la section WES, cliquez sur le bouton <strong>Etat de l'application</strong> (affiché lorsque le WES&#160;est correctement installé) ;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1" style="text-align: justify;">cliquez sur le bouton <strong>Télécharger</strong> afin de télécharger les fichiers de logs et de configuration du WES ;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p class="Liste_num_1" style="text-align: justify;">si la configuration de l'adresse et/ou des ports n'est pas correcte, cliquez sur le bouton <strong>Configurer </strong>de l'interface de configuration de la file ;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p class="Resultat" style="text-align: justify;">vérifiez que la procédure a réglé le problème.</p>
+                                                    </li>
+                                                </ol>
+                                                <hr />
+                                                <h2 id="ProblèmedequotadoublélorsdelimpressiondunformatlargeA3" data-magellan-target="ProblèmedequotadoublélorsdelimpressiondunformatlargeA3">Problème de quota doublé lors de l'impression d'un format large (A3)</h2>
+                                                <p><strong>Contexte</strong> </p>
+                                                <p>Lorsqu'un double quota est activé pour tenir compte du format d'impression (un quota pour le format A4 et un autre pour le format A3), il arrive que l'on constate une erreur de comptabilisation, les impressions en grand format étant comptés deux fois dans le quota.<br />Par exemple, on dispose :</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>d'un quota appliquant un coût unitaire de 1 € pour une impression A4 ;<br /></p>
+                                                    </li>
+                                                    <li>
+                                                        <p>d'un quota appliquant un coût unitaire de 2 € pour une impression A3.</p>
+                                                    </li>
+                                                </ul>
+                                                <p>En cas d'impression A3, au lieu d'être débité de 2&#160;€, le quota est débité de 4 € .</p>
+                                                <p>&#160;</p>
+                                                <p><strong>Cause</strong>
+                                                    <br />L'erreur est due au système de comptabilisation du périphérique qui compte un grand format comme deux petits formats. Le coût est alors doublé, alors que le quota configuré pour un grand format est déjà plus élevé que le quota pour un petit format. </p>
+                                                <p>&#160;</p>
+                                                <p><strong>Résolution</strong>
+                                                </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Rendez-vous sur la file d'impression sur laquelle l'erreur de comptabilisation a été constatée&#160;;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>depuis l'interface de consultation de la file, cliquez sur le bouton <b>Editer les propriétés de la file</b>&#160;;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>dans l'interface <b>Propriétés de la file d'impression</b>, rendez-vous dans la section <b>Mode Expert</b>&#160;; </p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>pour le paramètre <b>Comptabilisation</b>, cochez la case <b>Redresser la comptabilisation pour les grands formats</b>&#160;: <br /><br /><a class="MCPopupThumbnailLink" href="../10_Xerox/ADE_WES_Xerox_ComptaGrdFormats.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1149" data-mc-height="320" src="../10_Xerox/ADE_WES_Xerox_ComptaGrdFormats.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p>Lancez une impression grand format pour vérifier que le quota n'est plus doublé.</p>
+                                                    </li>
+                                                </ol>
+                                                <hr />
+                                                <h2 id="LeWESnetrouvepluslafiledesortieMessagederreurImpossiblederetrouverlafiledesortiesept2026" data-magellan-target="LeWESnetrouvepluslafiledesortieMessagederreurImpossiblederetrouverlafiledesortiesept2026">Le WES&#160;ne trouve plus la <a name="file_de_sortie" id="file_de_sortie"></a>file de sortie - Message d'erreur "Impossible de retrouver la file de sortie" - sept.&#160;2026</h2>
+                                                <p style="text-align: left;"><strong>Contexte</strong>
+                                                </p>
+                                                <p style="text-align: left;">Une file d'impression utilisant la fonction d'impression interserveur est migrée d'un serveur vers un autre serveur. Après avoir lancé son impression sur cette file, l'utilisateur qui tente de la débloquer voit s'afficher le message d'erreur suivant : "Impossible de retrouver la file de sortie"&#160;:<br /><br /><img src="../../Resources/Images/9e01c20d-21e6-4ce2-93e6-50194a7a46cc.png" style="width: 500px;height: auto;" /></p>
+                                                <p style="text-align: left;">
+                                                    <br />Dans les logs du WES, l'administrateur trouve le message suivant : "! WARN [...] WES|RestApi21Controller        "Could not find target 'Queue [Id_de_la_file]' in the local config. Any local job will be visible, be not able to print on that remote device!".</p>
+                                                <p style="text-align: left;">&#160;</p>
+                                                <p style="text-align: left;"><strong>Cause</strong>
+                                                    <br />Le cache conserve l'identifiant de la file qui a été migrée vers un nouveau serveur.&#160;Donc, si la file est sollicitée trop rapidement après sa migration, son identifiant, associé à l'ancien serveur, est toujours présent dans le cache qui n'a pas eu le temps d'être vidé.<br /></p>
+                                                <p style="text-align: left;">&#160;</p>
+                                                <p style="text-align: left;"><strong>Résolution</strong>
+                                                    <br />Il convient&#160;:</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p style="text-align: left;">de redémarrer le service Watchdoc afin de vider le cache ;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p style="text-align: left;">puis de relancer l'impression pour vérifier que l'opération a résolu le problème.</p>
+                                                    </li>
+                                                </ol>
+                                                <hr width="100%" size="0" align="center" />
+                                                <h2 style="text-align: justify;" id="IconesWatchdocetWEScanmaldimensionnées" data-magellan-target="IconesWatchdocetWEScanmaldimensionnées"><a name="Icones" id="Icones"></a>Icones Watchdoc et WEScan mal dimensionnées</h2>
+                                                <p class="H2_Print" style="font-size: 14pt;">Contexte</p>
+                                                <p>Sur le WES, on constate que les icones Watchdoc et WEScan n'ont pas la même taille : <br /><br /><img src="ADE_WES_Sharp_Icones.png" style="width: 530px;height: 173px;" /><br /></p>
+                                                <p class="H2_Print">&#160;</p>
+                                                <p class="H2_Print"><span style="font-size: 14pt;">Résolution</span>
+                                                </p>
+                                                <p>Pour résoudre ce problème, il convient de mettre à jour Watchdoc en v.&#160;6.1.1. 5486 qui contient un correctif. </p>
+                                                <p>&#160;</p>
+                                                <hr width="100%" size="0" align="center">
+                                                </hr>
+                                                <h2 style="text-align: justify;" id="InstallationduWESimpossibleMessagederreur302MovedTemporarily" data-magellan-target="InstallationduWESimpossibleMessagederreur302MovedTemporarily">Installation du WES&#160;impossible - Message d'erreur "302 Moved Temporarily"</h2>
+                                                <p class="H2_Print"><span style="font-size: 14pt;">Contexte</span>
+                                                </p>
+                                                <p style="text-align: left;">Lors de l'installation du WES sur les périphériques Sharp, le message d'erreur suivant apparaît dans le rapport, empêchant l'installation du WES&#160;: <code>ssl_states : WES&#160;Java request to [IP&#160;Adress] failed with statuts 302 Moved Temporarily</code>:<br /><br /><img src="Sharp.png" /></p>
+                                                <p class="H2_Print">&#160;</p>
+                                                <p class="H2_Print" style="font-size: 14pt;">Résolution</p>
+                                                <p>Pour résoudre ce problème, il convient de mettre à jour Watchdoc en v.&#160;6.1.1. 5465 qui contient un correctif.</p>
+                                                <hr width="100%" size="0" align="center" />
+                                                <h2 style="text-align: justify;" id="InstallationduWESimpossibleproblèmedecommunicationliéauxoptionsAMX2etAMX3" data-magellan-target="InstallationduWESimpossibleproblèmedecommunicationliéauxoptionsAMX2etAMX3"><a name="404NotFound" id="404NotFound"></a>Installation du WES&#160;impossible  problème de communication lié aux options AMX2 et AMX3</h2>
+                                                <p class="H2_Print" style="font-size: 14pt;">Contexte</p>
+                                                <p style="text-align: justify;">Lors de l'installation du WES sur les périphériques Sharp MX-M2651, MX-M3051, MX-M3551, MX-M4051, MX-M5051 ou MX-M6051, le message d'erreur suivant apparaît dans le rapport, empêchant l'installation du WES&#160;: </p>
+                                                <p style="text-align: left;"><code>WES&#160;Java request to [IP&#160;Adress] failed with statuts 404 Not Found Login failed (check credentials)</code>:<br /><br /><img src="ADE_WES_Sharp_404NotFound.png" /><br /><br /></p>
+                                                <p style="text-align: left;">Dans l'interface de configuration du périphérique, sous l'onglet <strong>Règlages système &gt; Réglages Sharp OSA &gt;&#160;Réglages de l'application standard</strong>, l'interface se présente comme ci-dessous :<br /><br /><img src="ADE_WES_Sharp_InstallWESImposs_PasAMX.png" /><br /></p>
+                                                <p>&#160;</p>
+                                                <p class="H2_Print"><span style="font-size: 14pt;">Cause</span>
+                                                </p>
+                                                <p style="text-align: justify;">Ce problème est dû aux modules <strong>AMX2</strong> (module de communication avec une application)  et <strong>AMX3 </strong>(module de comptabilisation externe) qui n'ont pas été installés sur le périphérique*. Ce dernier ne peut donc pas communiquer avec Watchdoc.&#160;</p>
+                                                <p style="text-align: justify;">* ces modules sont installés par défaut sur les modèles MX-M3071, MX-M3071S, MX-M3571, MX-M3571S, MX-M4071, MX-M4071S, MX-M5071, MX-M5071S, MX-M6071 ou MX-M6071, mais <b>doivent être installés</b> sur les périphériques d'impression MX-M2651, MX-M3051, MX-M3551, MX-M4051, MX-M5051 ou MX-M6051.</p>
+                                                <p>&#160;</p>
+                                                <p class="H2_Print"><span style="font-size: 14pt;">Résolution</span>
+                                                </p>
+                                                <p>Pour résoudre ce problème</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p style="text-align: justify;">activez l'option AMX2 - BP-MX10 sur vos périphériques : </p>
+                                                        <ol style="list-style-type: upper-roman;">
+                                                            <li value="1">
+                                                                <p>à l'aide d'un navigateur, accédez à l'interface web du périphérique&#160;;</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>authentifiez-vous avec un compte administrateur&#160;; </p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>dans le menu, cliquez sur <b>Réglages système &gt; Réglages Sharp OSA &gt;&#160;Réglages de l'application standard</b>&#160;;</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>dans l'interface <b>Enregistrement de l'application standard,</b> complétez les champs&#160;: </p>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p><b>Nom de l'application :</b> saisissez le nom de l'application "Watchdoc" ou "Mes impressions"&#160;;</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p><b>Adresse de l'interface utilisateur de l'application&#160;:</b> saisissez l'url http://IPSERVEUR:5754/dsp/Sharp/Osa/2.0/Web/Jobs </p>
+                                                                        <p>ou, si vous êtes en SSL, saisissez l'url https://IPSERVEUR:5753/dsp/Sharp/Osa/2.0/Web/Jobs<br /><img src="Config_WES_Sharp_InstallManu_AppliStand.png" style="width: 700px;height: auto;" /></p>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ol>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>Activez l'option AMX3 - BP-MX11</p>
+                                                        <ol style="list-style-type: lower-roman;">
+                                                            <li value="1">
+                                                                <p>à l'aide d'un navigateur, accédez à l'interface web du périphérique&#160;;</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>authentifiez-vous avec un compte administrateur&#160;; </p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p>dans le menu, cliquez sur <strong>Réglages système</strong> &gt; <strong>Réglages Sharp OSA</strong> &gt;<strong>&#160;Réglages de compte externe&#160;</strong>;</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>dans l'interface <strong>Contrôle de compte externe</strong>, complétez les paramètres&#160;: </p>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p><strong>Contrôle externe de comptes :</strong>   &#160;sélectionnez <strong>Activer</strong>&#160;; </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p><strong>Régler le serveur d'authentification : </strong>cochez la case ;</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p><strong>Nom de l'application : </strong>saisissez le nom de l'application "Watchdoc" ou "Mes impressions"&#160;;</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p><strong>Adresse de l'interface utilisateur de l'application&#160;: </strong>saisissez l'url http://IPSERVEUR:5754/dsp/Sharp/Osa/3.0/Web/Login </p>
+                                                                        <p>ou, si vous êtes en SSL, https://IPSERVEUR:5753/dsp/Sharp/Osa/3.0/Web/Login</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p><strong>Adresse des services web :</strong> saisissez l'url http://IPSERVEUR:5754/dsp/Sharp/Osa/1.0/Service</p>
+                                                                        <p>ou, si vous êtes en SSL, https://IPSERVEUR:5753/dsp/Sharp/Osa/1.0/Service</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p><strong>Dépassement du délai :</strong> conservez la valeur choisie comme  délai durant lequel le périphérique dialogue avec le serveur.<br /><img src="Config_WES_Sharp_InstallManu_AppliExt.png" style="width: 700px;height: auto;" /></p>
+                                                                    </li>
+                                                                </ul>
+                                                                <p>&#160;</p>
+                                                            </li>
+                                                        </ol>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p style="text-align: justify;">Vérifiez que les deux options figurent sous l'onglet <strong>Règlages système &gt; Réglages Sharp OSA &gt;&#160;Réglages de l'application standard</strong>.</p>
+                                                    </li>
+                                                </ol>
+                                                <hr width="100%" size="0" align="center" />
+                                                <h2 id="WESSharpAccèsauWESimpossibledepuislécrandaccueildupériphérique" data-magellan-target="WESSharpAccèsauWESimpossibledepuislécrandaccueildupériphérique">WES Sharp - Accès au WES&#160;impossible depuis l'écran d'accueil du périphérique</h2>
+                                                <p class="H2_Print" style="font-size: 14pt;">Contexte</p>
+                                                <p>Lors de l'installation du WES sur des périphériques récents, aucun message d'erreur n'apparaît et le rapport d'installation indique qu'elle s'est bien déroulée. </p>
+                                                <p>Cependant, le WES&#160;(bouton "Mes impressions") n'apparaît pas sur l'écran d'accueil du périphérique Sharp.</p>
+                                                <p class="H2_Print">&#160;</p>
+                                                <p class="H2_Print" style="font-size: 14pt;">Cause</p>
+                                                <p>Ce problème peut être dû au fait que le WES&#160;n'est pas activé sur le périphérique qui ne le reconnaît donc pas.&#160;</p>
+                                                <p class="H2_Print">&#160;</p>
+                                                <p class="H2_Print" style="font-size: 14pt;">Résolution</p>
+                                                <p>Pour résoudre ce problème,</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>  accédez à l'interface de configuration du périphérique en tant qu'administrateur ;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>sous l'onglet <strong>Règlages système &gt; Réglages de l'écran d'accueil &gt;&#160;Réglage des conditions,</strong> c'est l'option <strong>Sharp OSA</strong>&#160;qui est cochée pour le paramètre <strong>Sharp OSA</strong>;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>cochez l'option <strong>Application</strong>&#160;:<br /><br /><img src="ADE_WES_Sharp_InstallWES_Accueil.png" /><br /></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                </ol>
+                                                <ol data-mc-continue="true">
+                                                    <li value="4">
+                                                        <p>
+                                                            <p><strong>validez </strong>ce nouveau paramétrage ;</p>
+                                                        </p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p>depuis l'écran d'accueil du périphérique, vérifiez que vous accédez à l'application WES&#160;"Mes impressions".</p>
+                                                    </li>
+                                                </ol>
+                                                <hr width="100%" size="0" align="center" />
+                                                <h2 id="DysfonctionnementdesMFPSharpavecSNMP" data-magellan-target="DysfonctionnementdesMFPSharpavecSNMP"><a name="Dysfonct_SNMP" id="Dysfonct_SNMP"></a>Dysfonctionnement des MFP Sharp avec SNMP</h2>
+                                                <p class="H2_Print" style="font-size: 14pt;">Contexte</p>
+                                                <p>Il arrive que les périphériques Sharp ne fonctionnent plus après l'activation du SNMP et envoient une erreur de type "maintenance préventive".</p>
+                                                <p>&#160;</p>
+                                                <p class="H2_Print" style="font-size: 14pt;">Cause</p>
+                                                <p>Les périphériques Sharp utilisent SNMP pour envoyer des informations de maintenance préventives (en cas de toner ou de bac papier vides, par exemple).</p>
+                                                <p>&#160;</p>
+                                                <p>Watchdoc est alors informé via SNMP que le périphérique est en panne alors que ce n'est pas le cas. Le message perdure, même après l'intervention qui permet de résoudre le problème (changement du toner et alimentation du bac à papier, par exemple).</p>
+                                                <p>&#160;</p>
+                                                <p class="H2_Print" style="font-size: 14pt;">Résolution</p>
+                                                <p style="font-weight: bold;">Modification unitaire</p>
+                                                <p>Pour résoudre le problème, il est possible de désactiver totalement le SNMP, mais on risque de perdre des données relatives à l'utilisation du périphérique. </p>
+                                                <p>Il est donc recommandé de  désactiver la surveillance de l'état du périphérique depuis l'interface d'administration Watchdoc : </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>depuis le <strong>Menu principal</strong>, section <strong>Configuration </strong>&gt;&#160;<strong>Imprimantes &amp; périphériques</strong>, sélectionnez le périphérique Sharp concerné par le problème ;</p>
+                                                    </li>
+                                                    <li style="font-size: 12pt;" value="2">dans l'interface de configuration du périphérique, section <strong>Monitoring </strong>:<ul><li><p>cochez la case <strong>SNMP Activer le monitoring réseau</strong> ;</p></li><li><p>décochez la case <strong>Etat &gt; Surveiller le niveau des consommables</strong> ;</p></li><li><p>décochez la case <strong>Etat &gt;  Surveiller le niveau des bacs papier</strong>.<br></br><br></br><img src="../../Z_Resources/Images/02_Captures/ADE_WES_Sharp_SNMP_Maintenance_Unitaire.png"></img><br></br><br></br></p></li></ul></li>
+                                                </ol>
+                                                <p style="font-weight: bold;">Modification en masse</p>
+                                                <p>Dans le cas où un grand nombre de périphériques est concerné par le problème, il est préférable d'utiliser l'outil de modification de masse <strong>ConfigTool</strong>.</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>En tant qu'<strong>Administrateur</strong>, accédez au serveur sur lequel est hébergé Watchdoc ;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>rendez vous dans <strong>C:\Program Files\Doxense\Watchdoc\Tools\ConfigTool </strong>et cliquez sur <strong>ConfigTool.exe</strong>&#160;;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>dans <strong>ConfigTool</strong>, sélectionnez les files d’impression à modifier&#160;;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>arrêtez le service Watchdoc ; </p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p>cliquez sur <strong>All </strong>en haut à gauche, puis sur Edit XML ; </p>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p>dans la boîte <strong>Field name</strong>, sélectionnez monitors/NETMON/@enabled : <br></br><br></br><img src="../../Z_Resources/Images/01_Generiques/ADE_WES_Sharp_SNMP_Maintenance_ConfigTool_SelectMonitor.png" style="width: 700px;height: auto;"></img><br></br><br></br></p>
+                                                    </li>
+                                                    <li value="7">
+                                                        <p> dans la boîte <strong>Specify the new value</strong>, saisissez la valeur "<strong>true</strong>" pour activer le SNMP en masse&#160;:<br></br><img src="../../Z_Resources/Images/01_Generiques/ADE_WES_Sharp_SNMP_Maintenance_ConfigTool_SelectMonitor_Value.png"></img><br></br><br></br></p>
+                                                    </li>
+                                                    <li value="8">
+                                                        <p>dans la boîte<strong> FieldName</strong>, sélectionnez ensuite <strong>monitors/NETMON/monitor-status</strong>&#160;:<br></br><img src="../../Z_Resources/Images/01_Generiques/ADE_WES_Sharp_SNMP_Maintenance_ConfigTool_SelectMonitor-Status.png" style="width: 700px;height: auto;"></img><br></br><br></br></p>
+                                                    </li>
+                                                    <li value="9">
+                                                        <p>dans la boîte <strong>Specify the new value</strong>, saisissez la valeur <strong>"false"</strong> pour désactiver le monitoring : <br /><br /><img src="../../Z_Resources/Images/01_Generiques/ADE_WES_Sharp_SNMP_Maintenance_ConfigTool_SelectMonitor-Status_Value.png" /><br /></p>
+                                                    </li>
+                                                </ol>
+                                                <hr width="100%" size="0" align="center" />
+                                                <h2 id="WESSharpImpressionimpossibledepuisunefilevirtuelle" data-magellan-target="WESSharpImpressionimpossibledepuisunefilevirtuelle">WES Sharp - Impression impossible depuis une file virtuelle  </h2>
+                                                <p class="H2_Print" style="font-size: 14pt;">Contexte</p>
+                                                <p>Sur des périphériques équipés du WES Sharp sur lesquels est appliquée une politique d'impression, le travail n'est pas imprimé.</p>
+                                                <p>Le travail est lancé et s'affiche dans la file d'attente du WES. Quand l'utilisateur valide, le périphérique s'active, mais le document n'est pas imprimé.</p>
+                                                <p>Dans les logs, les utilisateurs ne sont pas reconnus pour l'impression ou la copie "scan tous" se retrouve dans ?META/anonymous.</p>
+                                                <p>Pourtant, les travaux en attente apparaissent bien dans la file virtuelle.</p>
+                                                <p>&#160;</p>
+                                                <p class="H2_Print" style="font-size: 14pt;">Cause</p>
+                                                <p>Le problème est lié à une configuration du pilote de la file d'impression virtuelle Sharp qui ne reconnaît pas le nom de connexion comme nom d'utilisateur.</p>
+                                                <p>&#160;</p>
+                                                <p class="H2_Print" style="font-size: 14pt;">Résolution</p>
+                                                <p>Le problème doit être résolu dans l'interface de configuration du pilote Sharp :</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>rendez-vous sur l'interface d'administration du périphérique Sharp en tant qu'administrateur ;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>dans le menu, cliquez sur Configuration ;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>dans l'interface Configuration, cliquez sur Politique d'impression :</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>dans l'interface Politique d'impression, cochez les cases</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>Utilisez le Nom de connexion Windows comme 'Nom de Connexion'</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Utilisez le 'Nom de connexion' comme 'Nom d'utilisateur'.</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p>Appliquez ce paramétrage:<br></br><img src="../../Z_Resources/Images/02_Captures/ADE_WES_Sharp_NomUtil_NomLogin.png" style="width: 700px;"></img></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p>Rendez-vous ensuite sur l'interface "Préférences d'impression par défaut" et cliquez sur l'onglet "Gestion travaux"</p>
+                                                    </li>
+                                                    <li value="7">
+                                                        <p>Dans la section "Réglages initiaux", pour le paramètre "Authentification", sélectionnez "Nom de connexion" :<br /><br /><img src="../../Z_Resources/Images/02_Captures/ADE_WES_Sharp_NomUtil_NomLogin_PolitiqImpr.png" style="width: 700px;height: auto;" /></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="8">
+                                                        <p>Cliquez sur <b>OK</b> pour valider ce paramétrage.</p>
+                                                    </li>
+                                                </ol>
+                                                <hr width="100%" size="0" align="center" />
+                                                <h2 id="MessagederreurImpossibledejoindreleserveurdauth" data-magellan-target="MessagederreurImpossibledejoindreleserveurdauth">Message d'erreur - Impossible de joindre le <a name="serveur_d'auth" id="serveur_d'auth"></a>serveur d'auth.</h2>
+                                                <p><span style="font-size: 14pt; font-weight: bold; color: #000000;">Contexte</span>
+                                                </p>
+                                                <p>Alors que tous les prérequis d'installation sont respectés et que le WES&#160;a été installé sans problème sur des modèles v.6, le message d'erreur "Impossible de joindre le serveur d'auth." s'affiche sur le périphérique d'impression quand un utilisateur tente de s'identifier.</p>
+                                                <p>&#160;</p>
+                                                <p><b style="font-size: 14pt; color: #000000;">Cause</b>
+                                                </p>
+                                                <p>Le dysfonctionnement provient d'une configuration sur le périphérique d'impression : lors de l'installation du WES, le paramètre "Activer l'Authentification hors-ligne" est activée.<br /></p>
+                                                <p>&#160;</p>
+                                                <p><b style="color: #000000; font-size: 14pt;">Résolution</b>
+                                                </p>
+                                                <p>Après avoir installé le WES,</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>rendez-vous dans l'interface de configuration du périphérique ;</p>
+                                                    </li>
+                                                    <li style="font-size: 12pt;" value="2">sous l'onglet <b>Réglages système</b>, cliquez sur <b>Réglages d'authentification</b> &gt;&#160;<b>Réglages par défaut</b></li>
+                                                    <li style="font-size: 12pt;" value="3">dans la section <strong>Paramètres d'utilisation des Informations d'authentificatio</strong>n, décochez la case <strong>Activer l'authentification Hors-Ligne avec les Informations utilisateur stockées...<br /><br /><img src="ADE_WES_Sharp_Authent.png" style="width: 700px;height: auto;" /></strong></li>
+                                                </ol>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WESSharpD%C3%A9pannerleWES">WES&#160;Sharp - Dépanner le WES</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#R%C3%A8glesg%C3%A9n%C3%A9ralespourled%C3%A9pannage">Règles générales pour le dépannage</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#ActiverlestracesduWESWEStraces">Activer les traces du WES (WEStraces)</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Travauxdenum%C3%A9risationfaxetphotocopienoncomptabilis%C3%A9s">Travaux de numérisation, fax et photocopie non comptabilisés</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Probl%C3%A8medequotadoubl%C3%A9lorsdelimpressiondunformatlargeA3">Problème de quota doublé lors de l'impression d'un format large (A3)</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#LeWESnetrouvepluslafiledesortieMessagederreurImpossiblederetrouverlafiledesortiesept2026">Le WES&#160;ne trouve plus la file de sortie - Message d'erreur "Impossible de retrouver la file de sortie" - sept.&#160;2026</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#IconesWatchdocetWEScanmaldimensionn%C3%A9es">Icones Watchdoc et WEScan mal dimensionnées</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#InstallationduWESimpossibleMessagederreur302MovedTemporarily">Installation du WES&#160;impossible - Message d'erreur "302 Moved Temporarily"</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#InstallationduWESimpossibleprobl%C3%A8medecommunicationli%C3%A9auxoptionsAMX2etAMX3">Installation du WES&#160;impossible  problème de communication lié aux options AMX2 et AMX3</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#WESSharpAcc%C3%A8sauWESimpossibledepuisl%C3%A9crandaccueildup%C3%A9riph%C3%A9rique">WES Sharp - Accès au WES&#160;impossible depuis l'écran d'accueil du périphérique</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#DysfonctionnementdesMFPSharpavecSNMP">Dysfonctionnement des MFP Sharp avec SNMP</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#WESSharpImpressionimpossibledepuisunefilevirtuelle">WES Sharp - Impression impossible depuis une file virtuelle  </a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#MessagederreurImpossibledejoindreleserveurdauth">Message d'erreur - Impossible de joindre le serveur d'auth.</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -198,440 +668,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1 id="WESSharpDépannerleWES" data-magellan-target="WESSharpDépannerleWES"><a name="aanchor62"></a>
-                                            <MadCap:concept term="ADE;WES" /><a name="aanchor63"></a>
-                                            <MadCap:concept term="WES;ADE" />
-                                            <MadCap:conditionalText data-mc-conditions="General.Online">WES&#160;Sharp - </MadCap:conditionalText>Dépanner le WES</h1>
-                                        <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
-                                            <li class="tree-node"><a href="#WESSharpD%C3%A9pannerleWES">WES&#160;Sharp - Dépanner le WES</a>
-                                                <ul>
-                                                    <li class="tree-node"><a href="#R%C3%A8glesg%C3%A9n%C3%A9ralespourled%C3%A9pannage">Règles générales pour le dépannage</a>
-                                                    </li>
-                                                    <li class="tree-node"><a href="#ActiverlestracesduWESWEStraces">Activer les traces du WES (WEStraces)</a>
-                                                    </li>
-                                                    <li class="tree-node"><a href="#Travauxdenum%C3%A9risationfaxetphotocopienoncomptabilis%C3%A9s">Travaux de numérisation, fax et photocopie non comptabilisés</a>
-                                                    </li>
-                                                    <li class="tree-node"><a href="#Probl%C3%A8medequotadoubl%C3%A9lorsdelimpressiondunformatlargeA3">Problème de quota doublé lors de l'impression d'un format large (A3)</a>
-                                                    </li>
-                                                    <li class="tree-node"><a href="#LeWESnetrouvepluslafiledesortieMessagederreurImpossiblederetrouverlafiledesortiesept2026">Le WES&#160;ne trouve plus la file de sortie - Message d'erreur "Impossible de retrouver la file de sortie" - sept.&#160;2026</a>
-                                                    </li>
-                                                    <li class="tree-node"><a href="#IconesWatchdocetWEScanmaldimensionn%C3%A9es">Icones Watchdoc et WEScan mal dimensionnées</a>
-                                                    </li>
-                                                    <li class="tree-node"><a href="#InstallationduWESimpossibleMessagederreur302MovedTemporarily">Installation du WES&#160;impossible - Message d'erreur "302 Moved Temporarily"</a>
-                                                    </li>
-                                                    <li class="tree-node"><a href="#InstallationduWESimpossibleprobl%C3%A8medecommunicationli%C3%A9auxoptionsAMX2etAMX3">Installation du WES&#160;impossible  problème de communication lié aux options AMX2 et AMX3</a>
-                                                    </li>
-                                                    <li class="tree-node"><a href="#WESSharpAcc%C3%A8sauWESimpossibledepuisl%C3%A9crandaccueildup%C3%A9riph%C3%A9rique">WES Sharp - Accès au WES&#160;impossible depuis l'écran d'accueil du périphérique</a>
-                                                    </li>
-                                                    <li class="tree-node"><a href="#DysfonctionnementdesMFPSharpavecSNMP">Dysfonctionnement des MFP Sharp avec SNMP</a>
-                                                    </li>
-                                                    <li class="tree-node"><a href="#WESSharpImpressionimpossibledepuisunefilevirtuelle">WES Sharp - Impression impossible depuis une file virtuelle  </a>
-                                                    </li>
-                                                    <li class="tree-node"><a href="#MessagederreurImpossibledejoindreleserveurdauth">Message d'erreur - Impossible de joindre le serveur d'auth.</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                        <h2 style="text-align: justify;" id="Règlesgénéralespourledépannage" data-magellan-target="Règlesgénéralespourledépannage">Règles générales pour le dépannage</h2>
-                                        <p style="text-align: justify;">Afin de permettre à l'équipe Support Doxense<sup>®</sup> d'établir un diagnostic de panne rapide et fiable, merci de communiquer le maximum d'informations possible lors de la déclaration de l'incident : </p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1" style="text-align: justify;"><strong>Quoi ?</strong> Quelle est la procédure à suivre pour reproduire l'incident ?</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1" style="text-align: justify;"><strong>Quand ?</strong> A quelle date et à quelle heure a eu lieu l'incident ?&#160;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1" style="text-align: justify;"><strong>Où ?</strong> Sur quel périphérique et depuis quel poste de travail a eu lieu l'incident ?</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1" style="text-align: justify;"><strong>Qui ?</strong> Avec quel compte utilisateur s'est produit l'incident ?</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1" style="text-align: justify;"><strong>Fichier trace Watchdoc.log :</strong> merci de joindre le fichier de trace Watchdoc.</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1" style="text-align: justify;"><strong>Fichier de traces WES :</strong> merci d'activer les fichiers de trace sur chaque file pour laquelle vous avez constaté un incident.&#160;</p>
-                                            </li>
-                                        </ul>
-                                        <p style="text-align: justify;">&#160;</p>
-                                        <p style="text-align: justify;">Une fois ces informations rassemblées, vous pouvez envoyer une demande de résolution depuis le portail <a href="https://doxense.zendesk.com/hc/fr" title="Lien vers l'extranet dédié aux partenaires" alt="Lien vers l'extranet dédié aux partenaires">Connect</a>, outil de gestion des incidents dédié aux partenaires.</p>
-                                        <p style="text-align: justify;">&#160;</p>
-                                        <p style="text-align: left;">Pour obtenir un relevé optimal des données nécessaires au diagnostic, utilisez l'outil Watchdoc DiagTool fourni avec le programme d'installation de Watchdoc (cf.&#160;<a href="../../H_HowTo/WD5_DiagTool_Procedure.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Créer un rapport de logs avec DiagTool</a>).</p>
-                                        <hr />
-                                        <h2 style="text-align: justify;" id="ActiverlestracesduWESWEStraces" data-magellan-target="ActiverlestracesduWESWEStraces"><a name="WEStraces" id="WEStraces"></a>Activer les traces du WES (WEStraces)</h2>
-                                        <p style="text-align: justify;">Pour effectuer un diagnostic du problème rencontré sur les applications embarquées, il convient d'activer les fichiers traces (logs) spécifiques aux communications du WES. </p>
-                                        <p style="font-size: 14pt;font-weight: bold;">&#160;</p>
-                                        <p style="font-weight: normal;font-size: 12pt;">Pour activer les traces&#160;: </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1" style="text-align: left;">dans l'interface d'administration web de Watchdoc, depuis le <strong>Menu Principal</strong>, cliquez sur <strong>Files d'impression</strong>&#160;; </p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1" style="text-align: left;">dans la liste des files, cliquez sur la file dotée du WES&#160;pour lequel vous souhaitez activer les fichiers traces ;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1" style="text-align: left;">dans l'interface de gestion de la file, cliquez sur le bouton <strong>Propriétés</strong>&#160;;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p class="Liste_num_1" style="text-align: left;">dans la rubrique [Nom_du_WES], cliquez sur le bouton <strong>Editer la configuration</strong>&#160;:<br /><br /><img src="Config_WES_Sharp_Troubleshooting_EditerConfig.png" style="width: 700px;height: auto;" /></p>
-                                                <p class="Liste_num_1" style="text-align: justify;">
-                                                    <br />
-                                                </p>
-                                            </li>
-                                            <li value="5">
-                                                <p class="Liste_num_1" style="text-align: justify;">dans la section <strong>WES &gt; Diagnostic</strong>, cochez la case<strong> Activer les traces</strong>&#160;;</p>
-                                            </li>
-                                            <li value="6">
-                                                <p class="Liste_num_1" style="text-align: justify;">dans la liste <strong>Niveau de traces</strong>, sélectionnez : </p>
-                                                <ul style="font-size: 12pt;">
-                                                    <li>
-                                                        <p class="Liste_puce_2" style="text-align: justify;"><strong>Auto :</strong> conserve les traces standard ;</p>
-                                                    </li>
-                                                    <li style="font-size: 12pt;"><strong>Inclure les contenus binaires :</strong> conserve les traces détaillées.</li>
-                                                </ul>
-                                            </li>
-                                            <li style="font-size: 12pt;text-align: left;" value="7">dans le champ <strong>Chemin</strong>, indiquez le chemin du dossier dans lequel doivent être enregistrés les fichiers de trace. Si vous laissez le champ vide, les fichiers trace seront enregistrés par défaut dans le dossier d'installation Watchdoc_install_dir/Logs/Wes_Traces/QueueId :<br /><br /><img src="../05_Depannage/WD_WES_Traces_Activer.png" style="width: 700px;height: auto;" /><br /><br /><img src="../05_Depannage/WD_Traces_DossierLogs_default.png" style="width: 700px;height: auto;" /></li>
-                                        </ol>
-                                        <p>
-                                            <p>&#160;</p>
-                                        </p>
-                                        <fieldset style="text-align: left;">L'activation des journaux  risque de ralentir le fonctionnement du serveur.<br />Il est donc fortement recommandé de  désactiver cette option une fois le problème résolu.</fieldset>
-                                        <hr />
-                                        <h2 style="text-align: justify;" id="Travauxdenumérisationfaxetphotocopienoncomptabilisés" data-magellan-target="Travauxdenumérisationfaxetphotocopienoncomptabilisés">Travaux de numérisation, fax et photocopie non comptabilisés</h2>
-                                        <p style="text-align: justify;">Si les travaux de numérisation, fax et photocopie ne sont pas comptabilisés par Watchdoc, vérifiez que l'adresse (nom d'hôte ou IP) du serveur Watchdoc configurée dans le périphérique est correcte :</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1" style="text-align: justify;"> dans l'interface de configuration de la file, dans la section WES, cliquez sur le bouton <strong>Etat de l'application</strong> (affiché lorsque le WES&#160;est correctement installé) ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1" style="text-align: justify;">cliquez sur le bouton <strong>Télécharger</strong> afin de télécharger les fichiers de logs et de configuration du WES ;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1" style="text-align: justify;">si la configuration de l'adresse et/ou des ports n'est pas correcte, cliquez sur le bouton <strong>Configurer </strong>de l'interface de configuration de la file ;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p class="Resultat" style="text-align: justify;">vérifiez que la procédure a réglé le problème.</p>
-                                            </li>
-                                        </ol>
-                                        <hr />
-                                        <h2 id="ProblèmedequotadoublélorsdelimpressiondunformatlargeA3" data-magellan-target="ProblèmedequotadoublélorsdelimpressiondunformatlargeA3">Problème de quota doublé lors de l'impression d'un format large (A3)</h2>
-                                        <p><strong>Contexte</strong> </p>
-                                        <p>Lorsqu'un double quota est activé pour tenir compte du format d'impression (un quota pour le format A4 et un autre pour le format A3), il arrive que l'on constate une erreur de comptabilisation, les impressions en grand format étant comptés deux fois dans le quota.<br />Par exemple, on dispose :</p>
-                                        <ul>
-                                            <li>
-                                                <p>d'un quota appliquant un coût unitaire de 1 € pour une impression A4 ;<br /></p>
-                                            </li>
-                                            <li>
-                                                <p>d'un quota appliquant un coût unitaire de 2 € pour une impression A3.</p>
-                                            </li>
-                                        </ul>
-                                        <p>En cas d'impression A3, au lieu d'être débité de 2&#160;€, le quota est débité de 4 € .</p>
-                                        <p>&#160;</p>
-                                        <p><strong>Cause</strong>
-                                            <br />L'erreur est due au système de comptabilisation du périphérique qui compte un grand format comme deux petits formats. Le coût est alors doublé, alors que le quota configuré pour un grand format est déjà plus élevé que le quota pour un petit format. </p>
-                                        <p>&#160;</p>
-                                        <p><strong>Résolution</strong>
-                                        </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Rendez-vous sur la file d'impression sur laquelle l'erreur de comptabilisation a été constatée&#160;;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>depuis l'interface de consultation de la file, cliquez sur le bouton <b>Editer les propriétés de la file</b>&#160;;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>dans l'interface <b>Propriétés de la file d'impression</b>, rendez-vous dans la section <b>Mode Expert</b>&#160;; </p>
-                                            </li>
-                                            <li value="4">
-                                                <p>pour le paramètre <b>Comptabilisation</b>, cochez la case <b>Redresser la comptabilisation pour les grands formats</b>&#160;: <br /><br /><a class="MCPopupThumbnailLink" href="../10_Xerox/ADE_WES_Xerox_ComptaGrdFormats.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1149" data-mc-height="320" src="../10_Xerox/ADE_WES_Xerox_ComptaGrdFormats.png" tabindex="" style="max-width: 1000px;" /></a></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="5">
-                                                <p>Lancez une impression grand format pour vérifier que le quota n'est plus doublé.</p>
-                                            </li>
-                                        </ol>
-                                        <hr />
-                                        <h2 id="LeWESnetrouvepluslafiledesortieMessagederreurImpossiblederetrouverlafiledesortiesept2026" data-magellan-target="LeWESnetrouvepluslafiledesortieMessagederreurImpossiblederetrouverlafiledesortiesept2026">Le WES&#160;ne trouve plus la <a name="file_de_sortie" id="file_de_sortie"></a>file de sortie - Message d'erreur "Impossible de retrouver la file de sortie" - sept.&#160;2026</h2>
-                                        <p style="text-align: left;"><strong>Contexte</strong>
-                                        </p>
-                                        <p style="text-align: left;">Une file d'impression utilisant la fonction d'impression interserveur est migrée d'un serveur vers un autre serveur. Après avoir lancé son impression sur cette file, l'utilisateur qui tente de la débloquer voit s'afficher le message d'erreur suivant : "Impossible de retrouver la file de sortie"&#160;:<br /><br /><img src="../../Resources/Images/9e01c20d-21e6-4ce2-93e6-50194a7a46cc.png" style="width: 500px;height: auto;" /></p>
-                                        <p style="text-align: left;">
-                                            <br />Dans les logs du WES, l'administrateur trouve le message suivant : "! WARN [...] WES|RestApi21Controller        "Could not find target 'Queue [Id_de_la_file]' in the local config. Any local job will be visible, be not able to print on that remote device!".</p>
-                                        <p style="text-align: left;">&#160;</p>
-                                        <p style="text-align: left;"><strong>Cause</strong>
-                                            <br />Le cache conserve l'identifiant de la file qui a été migrée vers un nouveau serveur.&#160;Donc, si la file est sollicitée trop rapidement après sa migration, son identifiant, associé à l'ancien serveur, est toujours présent dans le cache qui n'a pas eu le temps d'être vidé.<br /></p>
-                                        <p style="text-align: left;">&#160;</p>
-                                        <p style="text-align: left;"><strong>Résolution</strong>
-                                            <br />Il convient&#160;:</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p style="text-align: left;">de redémarrer le service Watchdoc afin de vider le cache ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p style="text-align: left;">puis de relancer l'impression pour vérifier que l'opération a résolu le problème.</p>
-                                            </li>
-                                        </ol>
-                                        <hr width="100%" size="0" align="center" />
-                                        <h2 style="text-align: justify;" id="IconesWatchdocetWEScanmaldimensionnées" data-magellan-target="IconesWatchdocetWEScanmaldimensionnées"><a name="Icones" id="Icones"></a>Icones Watchdoc et WEScan mal dimensionnées</h2>
-                                        <p class="H2_Print" style="font-size: 14pt;">Contexte</p>
-                                        <p>Sur le WES, on constate que les icones Watchdoc et WEScan n'ont pas la même taille : <br /><br /><img src="ADE_WES_Sharp_Icones.png" style="width: 530px;height: 173px;" /><br /></p>
-                                        <p class="H2_Print">&#160;</p>
-                                        <p class="H2_Print"><span style="font-size: 14pt;">Résolution</span>
-                                        </p>
-                                        <p>Pour résoudre ce problème, il convient de mettre à jour Watchdoc en v.&#160;6.1.1. 5486 qui contient un correctif. </p>
-                                        <p>&#160;</p>
-                                        <hr width="100%" size="0" align="center">
-                                        </hr>
-                                        <h2 style="text-align: justify;" id="InstallationduWESimpossibleMessagederreur302MovedTemporarily" data-magellan-target="InstallationduWESimpossibleMessagederreur302MovedTemporarily">Installation du WES&#160;impossible - Message d'erreur "302 Moved Temporarily"</h2>
-                                        <p class="H2_Print"><span style="font-size: 14pt;">Contexte</span>
-                                        </p>
-                                        <p style="text-align: left;">Lors de l'installation du WES sur les périphériques Sharp, le message d'erreur suivant apparaît dans le rapport, empêchant l'installation du WES&#160;: <code>ssl_states : WES&#160;Java request to [IP&#160;Adress] failed with statuts 302 Moved Temporarily</code>:<br /><br /><img src="Sharp.png" /></p>
-                                        <p class="H2_Print">&#160;</p>
-                                        <p class="H2_Print" style="font-size: 14pt;">Résolution</p>
-                                        <p>Pour résoudre ce problème, il convient de mettre à jour Watchdoc en v.&#160;6.1.1. 5465 qui contient un correctif.</p>
-                                        <hr width="100%" size="0" align="center" />
-                                        <h2 style="text-align: justify;" id="InstallationduWESimpossibleproblèmedecommunicationliéauxoptionsAMX2etAMX3" data-magellan-target="InstallationduWESimpossibleproblèmedecommunicationliéauxoptionsAMX2etAMX3"><a name="404NotFound" id="404NotFound"></a>Installation du WES&#160;impossible  problème de communication lié aux options AMX2 et AMX3</h2>
-                                        <p class="H2_Print" style="font-size: 14pt;">Contexte</p>
-                                        <p style="text-align: justify;">Lors de l'installation du WES sur les périphériques Sharp MX-M2651, MX-M3051, MX-M3551, MX-M4051, MX-M5051 ou MX-M6051, le message d'erreur suivant apparaît dans le rapport, empêchant l'installation du WES&#160;: </p>
-                                        <p style="text-align: left;"><code>WES&#160;Java request to [IP&#160;Adress] failed with statuts 404 Not Found Login failed (check credentials)</code>:<br /><br /><img src="ADE_WES_Sharp_404NotFound.png" /><br /><br /></p>
-                                        <p style="text-align: left;">Dans l'interface de configuration du périphérique, sous l'onglet <strong>Règlages système &gt; Réglages Sharp OSA &gt;&#160;Réglages de l'application standard</strong>, l'interface se présente comme ci-dessous :<br /><br /><img src="ADE_WES_Sharp_InstallWESImposs_PasAMX.png" /><br /></p>
-                                        <p>&#160;</p>
-                                        <p class="H2_Print"><span style="font-size: 14pt;">Cause</span>
-                                        </p>
-                                        <p style="text-align: justify;">Ce problème est dû aux modules <strong>AMX2</strong> (module de communication avec une application)  et <strong>AMX3 </strong>(module de comptabilisation externe) qui n'ont pas été installés sur le périphérique*. Ce dernier ne peut donc pas communiquer avec Watchdoc.&#160;</p>
-                                        <p style="text-align: justify;">* ces modules sont installés par défaut sur les modèles MX-M3071, MX-M3071S, MX-M3571, MX-M3571S, MX-M4071, MX-M4071S, MX-M5071, MX-M5071S, MX-M6071 ou MX-M6071, mais <b>doivent être installés</b> sur les périphériques d'impression MX-M2651, MX-M3051, MX-M3551, MX-M4051, MX-M5051 ou MX-M6051.</p>
-                                        <p>&#160;</p>
-                                        <p class="H2_Print"><span style="font-size: 14pt;">Résolution</span>
-                                        </p>
-                                        <p>Pour résoudre ce problème</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p style="text-align: justify;">activez l'option AMX2 - BP-MX10 sur vos périphériques : </p>
-                                                <ol style="list-style-type: upper-roman;">
-                                                    <li value="1">
-                                                        <p>à l'aide d'un navigateur, accédez à l'interface web du périphérique&#160;;</p>
-                                                    </li>
-                                                    <li value="2">
-                                                        <p>authentifiez-vous avec un compte administrateur&#160;; </p>
-                                                    </li>
-                                                    <li value="3">
-                                                        <p>dans le menu, cliquez sur <b>Réglages système &gt; Réglages Sharp OSA &gt;&#160;Réglages de l'application standard</b>&#160;;</p>
-                                                    </li>
-                                                    <li value="4">
-                                                        <p>dans l'interface <b>Enregistrement de l'application standard,</b> complétez les champs&#160;: </p>
-                                                        <ul>
-                                                            <li>
-                                                                <p><b>Nom de l'application :</b> saisissez le nom de l'application "Watchdoc" ou "Mes impressions"&#160;;</p>
-                                                            </li>
-                                                            <li>
-                                                                <p><b>Adresse de l'interface utilisateur de l'application&#160;:</b> saisissez l'url http://IPSERVEUR:5754/dsp/Sharp/Osa/2.0/Web/Jobs </p>
-                                                                <p>ou, si vous êtes en SSL, saisissez l'url https://IPSERVEUR:5753/dsp/Sharp/Osa/2.0/Web/Jobs<br /><img src="Config_WES_Sharp_InstallManu_AppliStand.png" style="width: 700px;height: auto;" /></p>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ol>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>Activez l'option AMX3 - BP-MX11</p>
-                                                <ol style="list-style-type: lower-roman;">
-                                                    <li value="1">
-                                                        <p>à l'aide d'un navigateur, accédez à l'interface web du périphérique&#160;;</p>
-                                                    </li>
-                                                    <li value="2">
-                                                        <p>authentifiez-vous avec un compte administrateur&#160;; </p>
-                                                    </li>
-                                                    <li value="3">
-                                                        <p>dans le menu, cliquez sur <strong>Réglages système</strong> &gt; <strong>Réglages Sharp OSA</strong> &gt;<strong>&#160;Réglages de compte externe&#160;</strong>;</p>
-                                                    </li>
-                                                    <li value="4">
-                                                        <p>dans l'interface <strong>Contrôle de compte externe</strong>, complétez les paramètres&#160;: </p>
-                                                        <ul>
-                                                            <li>
-                                                                <p><strong>Contrôle externe de comptes :</strong>   &#160;sélectionnez <strong>Activer</strong>&#160;; </p>
-                                                            </li>
-                                                            <li>
-                                                                <p><strong>Régler le serveur d'authentification : </strong>cochez la case ;</p>
-                                                            </li>
-                                                            <li>
-                                                                <p><strong>Nom de l'application : </strong>saisissez le nom de l'application "Watchdoc" ou "Mes impressions"&#160;;</p>
-                                                            </li>
-                                                            <li>
-                                                                <p><strong>Adresse de l'interface utilisateur de l'application&#160;: </strong>saisissez l'url http://IPSERVEUR:5754/dsp/Sharp/Osa/3.0/Web/Login </p>
-                                                                <p>ou, si vous êtes en SSL, https://IPSERVEUR:5753/dsp/Sharp/Osa/3.0/Web/Login</p>
-                                                            </li>
-                                                            <li>
-                                                                <p><strong>Adresse des services web :</strong> saisissez l'url http://IPSERVEUR:5754/dsp/Sharp/Osa/1.0/Service</p>
-                                                                <p>ou, si vous êtes en SSL, https://IPSERVEUR:5753/dsp/Sharp/Osa/1.0/Service</p>
-                                                            </li>
-                                                            <li>
-                                                                <p><strong>Dépassement du délai :</strong> conservez la valeur choisie comme  délai durant lequel le périphérique dialogue avec le serveur.<br /><img src="Config_WES_Sharp_InstallManu_AppliExt.png" style="width: 700px;height: auto;" /></p>
-                                                            </li>
-                                                        </ul>
-                                                        <p>&#160;</p>
-                                                    </li>
-                                                </ol>
-                                            </li>
-                                            <li value="3">
-                                                <p style="text-align: justify;">Vérifiez que les deux options figurent sous l'onglet <strong>Règlages système &gt; Réglages Sharp OSA &gt;&#160;Réglages de l'application standard</strong>.</p>
-                                            </li>
-                                        </ol>
-                                        <hr width="100%" size="0" align="center" />
-                                        <h2 id="WESSharpAccèsauWESimpossibledepuislécrandaccueildupériphérique" data-magellan-target="WESSharpAccèsauWESimpossibledepuislécrandaccueildupériphérique">WES Sharp - Accès au WES&#160;impossible depuis l'écran d'accueil du périphérique</h2>
-                                        <p class="H2_Print" style="font-size: 14pt;">Contexte</p>
-                                        <p>Lors de l'installation du WES sur des périphériques récents, aucun message d'erreur n'apparaît et le rapport d'installation indique qu'elle s'est bien déroulée. </p>
-                                        <p>Cependant, le WES&#160;(bouton "Mes impressions") n'apparaît pas sur l'écran d'accueil du périphérique Sharp.</p>
-                                        <p class="H2_Print">&#160;</p>
-                                        <p class="H2_Print" style="font-size: 14pt;">Cause</p>
-                                        <p>Ce problème peut être dû au fait que le WES&#160;n'est pas activé sur le périphérique qui ne le reconnaît donc pas.&#160;</p>
-                                        <p class="H2_Print">&#160;</p>
-                                        <p class="H2_Print" style="font-size: 14pt;">Résolution</p>
-                                        <p>Pour résoudre ce problème,</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>  accédez à l'interface de configuration du périphérique en tant qu'administrateur ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>sous l'onglet <strong>Règlages système &gt; Réglages de l'écran d'accueil &gt;&#160;Réglage des conditions,</strong> c'est l'option <strong>Sharp OSA</strong>&#160;qui est cochée pour le paramètre <strong>Sharp OSA</strong>;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>cochez l'option <strong>Application</strong>&#160;:<br /><br /><img src="ADE_WES_Sharp_InstallWES_Accueil.png" /><br /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="4">
-                                                <p>
-                                                    <p><strong>validez </strong>ce nouveau paramétrage ;</p>
-                                                </p>
-                                            </li>
-                                            <li value="5">
-                                                <p>depuis l'écran d'accueil du périphérique, vérifiez que vous accédez à l'application WES&#160;"Mes impressions".</p>
-                                            </li>
-                                        </ol>
-                                        <hr width="100%" size="0" align="center" />
-                                        <h2 id="DysfonctionnementdesMFPSharpavecSNMP" data-magellan-target="DysfonctionnementdesMFPSharpavecSNMP"><a name="Dysfonct_SNMP" id="Dysfonct_SNMP"></a>Dysfonctionnement des MFP Sharp avec SNMP</h2>
-                                        <p class="H2_Print" style="font-size: 14pt;">Contexte</p>
-                                        <p>Il arrive que les périphériques Sharp ne fonctionnent plus après l'activation du SNMP et envoient une erreur de type "maintenance préventive".</p>
-                                        <p>&#160;</p>
-                                        <p class="H2_Print" style="font-size: 14pt;">Cause</p>
-                                        <p>Les périphériques Sharp utilisent SNMP pour envoyer des informations de maintenance préventives (en cas de toner ou de bac papier vides, par exemple).</p>
-                                        <p>&#160;</p>
-                                        <p>Watchdoc est alors informé via SNMP que le périphérique est en panne alors que ce n'est pas le cas. Le message perdure, même après l'intervention qui permet de résoudre le problème (changement du toner et alimentation du bac à papier, par exemple).</p>
-                                        <p>&#160;</p>
-                                        <p class="H2_Print" style="font-size: 14pt;">Résolution</p>
-                                        <p style="font-weight: bold;">Modification unitaire</p>
-                                        <p>Pour résoudre le problème, il est possible de désactiver totalement le SNMP, mais on risque de perdre des données relatives à l'utilisation du périphérique. </p>
-                                        <p>Il est donc recommandé de  désactiver la surveillance de l'état du périphérique depuis l'interface d'administration Watchdoc : </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>depuis le <strong>Menu principal</strong>, section <strong>Configuration </strong>&gt;&#160;<strong>Imprimantes &amp; périphériques</strong>, sélectionnez le périphérique Sharp concerné par le problème ;</p>
-                                            </li>
-                                            <li style="font-size: 12pt;" value="2">dans l'interface de configuration du périphérique, section <strong>Monitoring </strong>:<ul><li><p>cochez la case <strong>SNMP Activer le monitoring réseau</strong> ;</p></li><li><p>décochez la case <strong>Etat &gt; Surveiller le niveau des consommables</strong> ;</p></li><li><p>décochez la case <strong>Etat &gt;  Surveiller le niveau des bacs papier</strong>.<br></br><br></br><img src="../../Z_Resources/Images/02_Captures/ADE_WES_Sharp_SNMP_Maintenance_Unitaire.png"></img><br></br><br></br></p></li></ul></li>
-                                        </ol>
-                                        <p style="font-weight: bold;">Modification en masse</p>
-                                        <p>Dans le cas où un grand nombre de périphériques est concerné par le problème, il est préférable d'utiliser l'outil de modification de masse <strong>ConfigTool</strong>.</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>En tant qu'<strong>Administrateur</strong>, accédez au serveur sur lequel est hébergé Watchdoc ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>rendez vous dans <strong>C:\Program Files\Doxense\Watchdoc\Tools\ConfigTool </strong>et cliquez sur <strong>ConfigTool.exe</strong>&#160;;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>dans <strong>ConfigTool</strong>, sélectionnez les files d’impression à modifier&#160;;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p>arrêtez le service Watchdoc ; </p>
-                                            </li>
-                                            <li value="5">
-                                                <p>cliquez sur <strong>All </strong>en haut à gauche, puis sur Edit XML ; </p>
-                                            </li>
-                                            <li value="6">
-                                                <p>dans la boîte <strong>Field name</strong>, sélectionnez monitors/NETMON/@enabled : <br></br><br></br><img src="../../Z_Resources/Images/01_Generiques/ADE_WES_Sharp_SNMP_Maintenance_ConfigTool_SelectMonitor.png" style="width: 700px;height: auto;"></img><br></br><br></br></p>
-                                            </li>
-                                            <li value="7">
-                                                <p> dans la boîte <strong>Specify the new value</strong>, saisissez la valeur "<strong>true</strong>" pour activer le SNMP en masse&#160;:<br></br><img src="../../Z_Resources/Images/01_Generiques/ADE_WES_Sharp_SNMP_Maintenance_ConfigTool_SelectMonitor_Value.png"></img><br></br><br></br></p>
-                                            </li>
-                                            <li value="8">
-                                                <p>dans la boîte<strong> FieldName</strong>, sélectionnez ensuite <strong>monitors/NETMON/monitor-status</strong>&#160;:<br></br><img src="../../Z_Resources/Images/01_Generiques/ADE_WES_Sharp_SNMP_Maintenance_ConfigTool_SelectMonitor-Status.png" style="width: 700px;height: auto;"></img><br></br><br></br></p>
-                                            </li>
-                                            <li value="9">
-                                                <p>dans la boîte <strong>Specify the new value</strong>, saisissez la valeur <strong>"false"</strong> pour désactiver le monitoring : <br /><br /><img src="../../Z_Resources/Images/01_Generiques/ADE_WES_Sharp_SNMP_Maintenance_ConfigTool_SelectMonitor-Status_Value.png" /><br /></p>
-                                            </li>
-                                        </ol>
-                                        <hr width="100%" size="0" align="center" />
-                                        <h2 id="WESSharpImpressionimpossibledepuisunefilevirtuelle" data-magellan-target="WESSharpImpressionimpossibledepuisunefilevirtuelle">WES Sharp - Impression impossible depuis une file virtuelle  </h2>
-                                        <p class="H2_Print" style="font-size: 14pt;">Contexte</p>
-                                        <p>Sur des périphériques équipés du WES Sharp sur lesquels est appliquée une politique d'impression, le travail n'est pas imprimé.</p>
-                                        <p>Le travail est lancé et s'affiche dans la file d'attente du WES. Quand l'utilisateur valide, le périphérique s'active, mais le document n'est pas imprimé.</p>
-                                        <p>Dans les logs, les utilisateurs ne sont pas reconnus pour l'impression ou la copie "scan tous" se retrouve dans ?META/anonymous.</p>
-                                        <p>Pourtant, les travaux en attente apparaissent bien dans la file virtuelle.</p>
-                                        <p>&#160;</p>
-                                        <p class="H2_Print" style="font-size: 14pt;">Cause</p>
-                                        <p>Le problème est lié à une configuration du pilote de la file d'impression virtuelle Sharp qui ne reconnaît pas le nom de connexion comme nom d'utilisateur.</p>
-                                        <p>&#160;</p>
-                                        <p class="H2_Print" style="font-size: 14pt;">Résolution</p>
-                                        <p>Le problème doit être résolu dans l'interface de configuration du pilote Sharp :</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>rendez-vous sur l'interface d'administration du périphérique Sharp en tant qu'administrateur ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>dans le menu, cliquez sur Configuration ;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>dans l'interface Configuration, cliquez sur Politique d'impression :</p>
-                                            </li>
-                                            <li value="4">
-                                                <p>dans l'interface Politique d'impression, cochez les cases</p>
-                                                <ul>
-                                                    <li>
-                                                        <p>Utilisez le Nom de connexion Windows comme 'Nom de Connexion'</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>Utilisez le 'Nom de connexion' comme 'Nom d'utilisateur'.</p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li value="5">
-                                                <p>Appliquez ce paramétrage:<br></br><img src="../../Z_Resources/Images/02_Captures/ADE_WES_Sharp_NomUtil_NomLogin.png" style="width: 700px;"></img></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="6">
-                                                <p>Rendez-vous ensuite sur l'interface "Préférences d'impression par défaut" et cliquez sur l'onglet "Gestion travaux"</p>
-                                            </li>
-                                            <li value="7">
-                                                <p>Dans la section "Réglages initiaux", pour le paramètre "Authentification", sélectionnez "Nom de connexion" :<br /><br /><img src="../../Z_Resources/Images/02_Captures/ADE_WES_Sharp_NomUtil_NomLogin_PolitiqImpr.png" style="width: 700px;height: auto;" /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="8">
-                                                <p>Cliquez sur <b>OK</b> pour valider ce paramétrage.</p>
-                                            </li>
-                                        </ol>
-                                        <hr width="100%" size="0" align="center" />
-                                        <h2 id="MessagederreurImpossibledejoindreleserveurdauth" data-magellan-target="MessagederreurImpossibledejoindreleserveurdauth">Message d'erreur - Impossible de joindre le <a name="serveur_d'auth" id="serveur_d'auth"></a>serveur d'auth.</h2>
-                                        <p><span style="font-size: 14pt; font-weight: bold; color: #000000;">Contexte</span>
-                                        </p>
-                                        <p>Alors que tous les prérequis d'installation sont respectés et que le WES&#160;a été installé sans problème sur des modèles v.6, le message d'erreur "Impossible de joindre le serveur d'auth." s'affiche sur le périphérique d'impression quand un utilisateur tente de s'identifier.</p>
-                                        <p>&#160;</p>
-                                        <p><b style="font-size: 14pt; color: #000000;">Cause</b>
-                                        </p>
-                                        <p>Le dysfonctionnement provient d'une configuration sur le périphérique d'impression : lors de l'installation du WES, le paramètre "Activer l'Authentification hors-ligne" est activée.<br /></p>
-                                        <p>&#160;</p>
-                                        <p><b style="color: #000000; font-size: 14pt;">Résolution</b>
-                                        </p>
-                                        <p>Après avoir installé le WES,</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>rendez-vous dans l'interface de configuration du périphérique ;</p>
-                                            </li>
-                                            <li style="font-size: 12pt;" value="2">sous l'onglet <b>Réglages système</b>, cliquez sur <b>Réglages d'authentification</b> &gt;&#160;<b>Réglages par défaut</b></li>
-                                            <li style="font-size: 12pt;" value="3">dans la section <strong>Paramètres d'utilisation des Informations d'authentificatio</strong>n, décochez la case <strong>Activer l'authentification Hors-Ligne avec les Informations utilisateur stockées...<br /><br /><img src="ADE_WES_Sharp_Authent.png" style="width: 700px;height: auto;" /></strong></li>
-                                        </ol>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

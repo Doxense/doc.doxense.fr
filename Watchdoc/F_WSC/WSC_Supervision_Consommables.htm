@@ -165,6 +165,98 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="ConsoledeSupervisionWSCSuperviserlesconsommables" data-magellan-target="ConsoledeSupervisionWSCSuperviserlesconsommables"><a name="aanchor164"></a>
+                                                    <MadCap:concept term="WSC" />Console de Supervision (WSC) - Superviser les consommables</h1>
+                                                <h2 id="Principe" data-magellan-target="Principe">Principe</h2>
+                                                <p>La Console de Supervision permet d'obtenir des vues détaillées et affinées des consommables des files d'impression contrôlées par Watchdoc et notamment les consommables ayant atteint un faible niveau (20% par défaut).</p>
+                                                <h2 id="Accéderàlinterfacedesupervision" data-magellan-target="Accéderàlinterfacedesupervision">Accéder à l'interface de supervision</h2>
+                                                <p>Depuis le <strong>Menu principal</strong> de WSC, cliquez sur bouton <strong>Consommables</strong>&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Consommables_Acces.png" style="width: 700px;height: auto;" /></p>
+                                                <p class="Resultat">Vous accédez à l'interface <strong>Consommables</strong>, dans laquelle s'affiche la liste des files dont les niveaux de consommables sont critiques (faible niveau de toner, tambour ou autres en-deça de 20%)&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Consommables_Liste.png" style="height: auto;width: 800px;" /><br /></p>
+                                                <p class="Resultat">Dans cette liste, vous pouvez accéder à différentes vues en cliquant sur les différents onglets et filtrer les résultats en modifiant le seuil  (entre 1 et 100%).</p>
+                                                <h2 id="Consulterlesconsommablesdunefile" data-magellan-target="Consulterlesconsommablesdunefile">Consulter les consommables d'une file</h2>
+                                                <p>Depuis la liste des files d'impression&#160;: </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1">sélectionnez la file dont vous souhaitez consulter le niveau de consommables; </p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1">cliquez sur les informations affichées dans les colonne pour consulter le détail des niveaux relevés&#160;: </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>Toner :</strong> le niveau des toners restants et les couleurs concernées ;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>Tambour : </strong>le niveau des tambours restants et les couleurs concernées ;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>Autres : </strong>les autres niveaux disponibles (kit de fusion, courroie de transfert, etc.)&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Consommables_DetailIncidents.png" style="width: 700px;" /></p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ol>
+                                                <ol data-mc-continue="true">
+                                                    <li value="3">
+                                                        <p class="Liste_num_1">cliquez sur&#160;:</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p class="Liste_puce_2">le nom du <strong>serveur </strong>pour accéder à l'interface d'administration du serveur ;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_2">le nom du <strong>périphérique </strong>pour accéder à l'interface d'administration Watchdoc de ce périphérique ; </p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Resultat">vous accédez à l'interface  d'administration de Watchdoc&#160;: authentifiez-vous comme administrateur pour y consulter le détail des informations relatives à la file.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_2">l'<strong>adresse IP</strong>&#160;du périphérique pour accéder à l'interface d'administration du périphérique lui-même.<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Consommables_AccesPeripherique.png" style="width: 700px;height: auto;" /></p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ol>
+                                                <h2 id="Modifierleseuil" data-magellan-target="Modifierleseuil">Modifier le seuil</h2>
+                                                <p>Si le seuil par défaut qui déclenche l'envoi du rapport  ne vous convient pas, vous pouvez le modifier&#160;:</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>depuis le <strong>Menu Principal</strong> de WSC, cliquez sur <strong>Configuration avancée</strong>, puis <strong>Service</strong>&#160;; </p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>dans l'interface <strong>Configuration Système</strong>, rendez-vous dans la section <strong>Divers</strong>&#160;; </p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>dans le champ  <strong>Seuil</strong>, saisissez le niveau de consommables, en pourcentage, en deça duquel WSC&#160;envoie un rapport par mail : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Consommables_Seuil.png" /></p>
+                                                        <p>
+                                                            <br />
+                                                        </p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>Cliquez sur <strong>Valider </strong>pour enregistrer la configuration.</p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p>Pour activer l'envoi d'un rapport, reportez-vous à la <a href="WSC_Supervision_Mails.htm" target="_blank" title="Lien vers la procédure de configuration des envois de mails d'alertes et de rapports" alt="Lien vers la procédure de configuration des envois de mails d'alertes et de rapports">procédure de configuration</a>.</p>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#ConsoledeSupervisionWSCSuperviserlesconsommables">Console de Supervision (WSC) - Superviser les consommables</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Principe">Principe</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Acc%C3%A9der%C3%A0linterfacedesupervision">Accéder à l'interface de supervision</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Consulterlesconsommablesdunefile">Consulter les consommables d'une file</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Modifierleseuil">Modifier le seuil</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -198,78 +290,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor164"></a>
-                                            <MadCap:concept term="WSC" />Console de Supervision (WSC) - Superviser les consommables</h1>
-                                        <h2>Principe</h2>
-                                        <p>La Console de Supervision permet d'obtenir des vues détaillées et affinées des consommables des files d'impression contrôlées par Watchdoc et notamment les consommables ayant atteint un faible niveau (20% par défaut).</p>
-                                        <h2>Accéder à l'interface de supervision</h2>
-                                        <p>Depuis le <strong>Menu principal</strong> de WSC, cliquez sur bouton <strong>Consommables</strong>&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Consommables_Acces.png" style="width: 700px;height: auto;" /></p>
-                                        <p class="Resultat">Vous accédez à l'interface <strong>Consommables</strong>, dans laquelle s'affiche la liste des files dont les niveaux de consommables sont critiques (faible niveau de toner, tambour ou autres en-deça de 20%)&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Consommables_Liste.png" style="height: auto;width: 800px;" /><br /></p>
-                                        <p class="Resultat">Dans cette liste, vous pouvez accéder à différentes vues en cliquant sur les différents onglets et filtrer les résultats en modifiant le seuil  (entre 1 et 100%).</p>
-                                        <h2>Consulter les consommables d'une file</h2>
-                                        <p>Depuis la liste des files d'impression&#160;: </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">sélectionnez la file dont vous souhaitez consulter le niveau de consommables; </p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1">cliquez sur les informations affichées dans les colonne pour consulter le détail des niveaux relevés&#160;: </p>
-                                                <ul>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>Toner :</strong> le niveau des toners restants et les couleurs concernées ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>Tambour : </strong>le niveau des tambours restants et les couleurs concernées ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>Autres : </strong>les autres niveaux disponibles (kit de fusion, courroie de transfert, etc.)&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Consommables_DetailIncidents.png" style="width: 700px;" /></p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="3">
-                                                <p class="Liste_num_1">cliquez sur&#160;:</p>
-                                                <ul>
-                                                    <li>
-                                                        <p class="Liste_puce_2">le nom du <strong>serveur </strong>pour accéder à l'interface d'administration du serveur ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_2">le nom du <strong>périphérique </strong>pour accéder à l'interface d'administration Watchdoc de ce périphérique ; </p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Resultat">vous accédez à l'interface  d'administration de Watchdoc&#160;: authentifiez-vous comme administrateur pour y consulter le détail des informations relatives à la file.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_2">l'<strong>adresse IP</strong>&#160;du périphérique pour accéder à l'interface d'administration du périphérique lui-même.<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Consommables_AccesPeripherique.png" style="width: 700px;height: auto;" /></p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ol>
-                                        <h2>Modifier le seuil</h2>
-                                        <p>Si le seuil par défaut qui déclenche l'envoi du rapport  ne vous convient pas, vous pouvez le modifier&#160;:</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>depuis le <strong>Menu Principal</strong> de WSC, cliquez sur <strong>Configuration avancée</strong>, puis <strong>Service</strong>&#160;; </p>
-                                            </li>
-                                            <li value="2">
-                                                <p>dans l'interface <strong>Configuration Système</strong>, rendez-vous dans la section <strong>Divers</strong>&#160;; </p>
-                                            </li>
-                                            <li value="3">
-                                                <p>dans le champ  <strong>Seuil</strong>, saisissez le niveau de consommables, en pourcentage, en deça duquel WSC&#160;envoie un rapport par mail : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Consommables_Seuil.png" /></p>
-                                                <p>
-                                                    <br />
-                                                </p>
-                                            </li>
-                                            <li value="4">
-                                                <p>Cliquez sur <strong>Valider </strong>pour enregistrer la configuration.</p>
-                                            </li>
-                                            <li value="5">
-                                                <p>Pour activer l'envoi d'un rapport, reportez-vous à la <a href="WSC_Supervision_Mails.htm" target="_blank" title="Lien vers la procédure de configuration des envois de mails d'alertes et de rapports" alt="Lien vers la procédure de configuration des envois de mails d'alertes et de rapports">procédure de configuration</a>.</p>
-                                            </li>
-                                        </ol>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

@@ -165,6 +165,142 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocPrintClientforWindowsPersonnalisergraphiquement" data-magellan-target="WatchdocPrintClientforWindowsPersonnalisergraphiquement"><a name="aanchor378"></a>
+                                                    <MadCap:concept term="WPC" />Watchdoc Print Client for Windows - Personnaliser graphiquement</h1>
+                                                <h2 id="Principe" data-magellan-target="Principe">Principe</h2>
+                                                <p>Comme pour la plupart des WES et WEScan, l'interface graphique de Watchdoc Print Client for Windows peut être personnalisée à l'aide de couleurs, d'images et logos propres&#160;à votre organisation.</p>
+                                                <h2 id="Procédure" data-magellan-target="Procédure">Procédure</h2>
+                                                <h3>Tester la personnalisation des images</h3>
+                                                <p>Avant de modifier les images par défaut de WPC&#160;for Windows sur le serveur Watchdoc (avec impact sur l'ensemble des postes clients), vous pouvez mener un test de personnalisation depuis un poste client&#160;: </p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="1">
+                                                        <p>accédez en tant qu'administrateur à un poste client sur lequel est installé WPC for Windows&#160;;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>à l'aide de l'explorateur, rendez-vous dans le dossier <strong>images</strong> de WPC&#160;(C:\Programmes\Doxense\Watchdoc Print Client\bin\assets\images\)&#160;; </p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>dans ce dossier, créez un dossier nommé <strong>test_customization</strong>&#160;;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>dans ce dossier, créez les images personnalisées correspondant aux interfaces WPC&#160;for Windows.&#160;Pour cela, respectez les dimensions des images d'origine&#160;:</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>background.png : 211pt x 232 pt</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>filigran.png : 216 pt x 100.5 pt</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>logo.png : 330 pt x 36.75 pt  </p>
+                                                            </li>
+                                                            <li>
+                                                                <p>user_profile.png : 180,5 pt x 164 pt </p>
+                                                            </li>
+                                                        </ul>
+                                                        <p>
+                                                            <br />
+                                                        </p>
+                                                        <p><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/WPC/WD60_Admin_WPC_PersonnalisationTest.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1075" data-mc-height="379" src="../../Z_Resources/Images/02_Captures/WPC/WD60_Admin_WPC_PersonnalisationTest.png" tabindex="" style="width: 500px;max-width: 1000px;" /></a>
+                                                        </p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p>fermez WPC&#160;et redémarrez le service WPC sur le poste client&#160;;</p>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p>lancez WPC for Windows pour vérifier l'affichage des images personnalisées&#160;: </p>
+                                                        <p>
+                                                            <br />
+                                                            <img src="../../Z_Resources/Images/02_Captures/WPC/WD60_Admin_WPC_Personnalisation1.png" style="width: 400px;" />
+                                                            <img src="../../Z_Resources/Images/02_Captures/WPC/WD60_Admin_WPC_Personnalisation2.png" style="width: 400px;" />
+                                                        </p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                </ol>
+                                                <ol data-mc-continue="true">
+                                                    <li value="7">
+                                                        <p>Si nécessaire, retouchez les images pour qu'elles soient parfaitement adaptées à vos besoins.</p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                </ol>
+                                                <p><span style="font-family: 'Wingdings'">è</span>Dès que les images personnalisées sont satisfaisantes, rendez-vous sur le serveur master Watchdoc pour finaliser la personnalisation.&#160;Les images testées devront y être disponibles (par copier/coller ou par enregistrement dans un dossier accessible depuis le master).</p>
+                                                <h3>Personnaliser les images sur le serveur</h3>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Accédez en tant qu'administrateur au serveur master&#160;;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>rendez-vous dans le dossier contenant les images de WPC&#160;(par défaut : C:\Program Files\Doxense\Watchdoc\Images\WindowsClient)&#160;;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>dans ce dossier, créez un dossier dédié aux images personnalisées (par exemple <strong>Custom</strong>)&#160;;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>dans le dossier <strong>Custom</strong>,  enregistrez vos images personnalisées (précédemment testées sur le poste client)&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="WPCW_Personnalisation_Arbo.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="822" data-mc-height="307" src="WPCW_Personnalisation_Arbo.png" tabindex="" style="max-width: 1000px;" /></a><br /></p>
+                                                    </li>
+                                                </ol>
+                                                <p>&#160;</p>
+                                                <h3>Configurer la personnalisation des images<br /></h3>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Accédez en tant qu'administrateur à l'interface d'administration de Watchdoc&#160;;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>depuis le <strong>Menu principal</strong>, section <strong>Configuration</strong>, cliquez sur <strong>Configuration avancée</strong> &gt;&#160;<strong>Configuration clientes</strong>&#160;; </p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>dans la liste, sélectionnez&#160;<strong>Client Windows</strong>&#160;;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>dans la section <strong>Configuration du Windows Client</strong>, indiquez le <strong>chemin </strong>vers le dossier contenant les images personnalisées (dans notre exemple&#160;: C:\Program Files\Doxense\Watchdoc\Images\WindowsClient\Custom)&#160;: <br /><br /><a class="MCPopupThumbnailLink" href="WPCW_Personnalisation_ConfigImages.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="913" data-mc-height="504" src="WPCW_Personnalisation_ConfigImages.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                    </li>
+                                                </ol>
+                                                <h3>&#160;</h3>
+                                                <h3>Configurer la personnalisation de la couleur </h3>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Toujours dans l'interface <strong>Configuration Client Windows</strong>, section <strong>Interface utilisateur</strong>, paramètre <strong>Couleur...</strong>, indiquez la valeur hexadécimale de la <strong>couleur</strong> qui s'applique&#160;: </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>au fil d'Ariane, </p>
+                                                            </li>
+                                                            <li>
+                                                                <p>à l'information de localisation</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>aux boutons de l'interface :<br /><br /><a class="MCPopupThumbnailLink" href="WPCW_Personnalisation_ConfigCouleur.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="913" data-mc-height="504" src="WPCW_Personnalisation_ConfigCouleur.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ol>
+                                                <p>&#160;</p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="2">
+                                                        <p>Cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Valider.png" style="width: 26px;height: 25px;" /> pour valider la personnalisation de WPC for Windows.<br /></p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>Vérifiez dans WPC for Windows que ces images ont bien été prises en compte.&#160;Il est possible d'avoir à fermer, puis relancer l'application pour constater la modification.</p>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocPrintClientforWindowsPersonnalisergraphiquement">Watchdoc Print Client for Windows - Personnaliser graphiquement</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Principe">Principe</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Proc%C3%A9dure">Procédure</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -198,126 +334,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor378"></a>
-                                            <MadCap:concept term="WPC" />Watchdoc Print Client for Windows - Personnaliser graphiquement</h1>
-                                        <h2>Principe</h2>
-                                        <p>Comme pour la plupart des WES et WEScan, l'interface graphique de Watchdoc Print Client for Windows peut être personnalisée à l'aide de couleurs, d'images et logos propres&#160;à votre organisation.</p>
-                                        <h2>Procédure</h2>
-                                        <h3>Tester la personnalisation des images</h3>
-                                        <p>Avant de modifier les images par défaut de WPC&#160;for Windows sur le serveur Watchdoc (avec impact sur l'ensemble des postes clients), vous pouvez mener un test de personnalisation depuis un poste client&#160;: </p>
-                                        <ol data-mc-continue="true">
-                                            <li value="1">
-                                                <p>accédez en tant qu'administrateur à un poste client sur lequel est installé WPC for Windows&#160;;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>à l'aide de l'explorateur, rendez-vous dans le dossier <strong>images</strong> de WPC&#160;(C:\Programmes\Doxense\Watchdoc Print Client\bin\assets\images\)&#160;; </p>
-                                            </li>
-                                            <li value="3">
-                                                <p>dans ce dossier, créez un dossier nommé <strong>test_customization</strong>&#160;;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p>dans ce dossier, créez les images personnalisées correspondant aux interfaces WPC&#160;for Windows.&#160;Pour cela, respectez les dimensions des images d'origine&#160;:</p>
-                                                <ul>
-                                                    <li>
-                                                        <p>background.png : 211pt x 232 pt</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>filigran.png : 216 pt x 100.5 pt</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>logo.png : 330 pt x 36.75 pt  </p>
-                                                    </li>
-                                                    <li>
-                                                        <p>user_profile.png : 180,5 pt x 164 pt </p>
-                                                    </li>
-                                                </ul>
-                                                <p>
-                                                    <br />
-                                                </p>
-                                                <p><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/WPC/WD60_Admin_WPC_PersonnalisationTest.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1075" data-mc-height="379" src="../../Z_Resources/Images/02_Captures/WPC/WD60_Admin_WPC_PersonnalisationTest.png" tabindex="" style="width: 500px;max-width: 1000px;" /></a>
-                                                </p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="5">
-                                                <p>fermez WPC&#160;et redémarrez le service WPC sur le poste client&#160;;</p>
-                                            </li>
-                                            <li value="6">
-                                                <p>lancez WPC for Windows pour vérifier l'affichage des images personnalisées&#160;: </p>
-                                                <p>
-                                                    <br />
-                                                    <img src="../../Z_Resources/Images/02_Captures/WPC/WD60_Admin_WPC_Personnalisation1.png" style="width: 400px;" />
-                                                    <img src="../../Z_Resources/Images/02_Captures/WPC/WD60_Admin_WPC_Personnalisation2.png" style="width: 400px;" />
-                                                </p>
-                                                <p>&#160;</p>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="7">
-                                                <p>Si nécessaire, retouchez les images pour qu'elles soient parfaitement adaptées à vos besoins.</p>
-                                                <p>&#160;</p>
-                                            </li>
-                                        </ol>
-                                        <p><span style="font-family: 'Wingdings'">è</span>Dès que les images personnalisées sont satisfaisantes, rendez-vous sur le serveur master Watchdoc pour finaliser la personnalisation.&#160;Les images testées devront y être disponibles (par copier/coller ou par enregistrement dans un dossier accessible depuis le master).</p>
-                                        <h3>Personnaliser les images sur le serveur</h3>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Accédez en tant qu'administrateur au serveur master&#160;;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>rendez-vous dans le dossier contenant les images de WPC&#160;(par défaut : C:\Program Files\Doxense\Watchdoc\Images\WindowsClient)&#160;;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>dans ce dossier, créez un dossier dédié aux images personnalisées (par exemple <strong>Custom</strong>)&#160;;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p>dans le dossier <strong>Custom</strong>,  enregistrez vos images personnalisées (précédemment testées sur le poste client)&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="WPCW_Personnalisation_Arbo.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="822" data-mc-height="307" src="WPCW_Personnalisation_Arbo.png" tabindex="" style="max-width: 1000px;" /></a><br /></p>
-                                            </li>
-                                        </ol>
-                                        <p>&#160;</p>
-                                        <h3>Configurer la personnalisation des images<br /></h3>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Accédez en tant qu'administrateur à l'interface d'administration de Watchdoc&#160;;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>depuis le <strong>Menu principal</strong>, section <strong>Configuration</strong>, cliquez sur <strong>Configuration avancée</strong> &gt;&#160;<strong>Configuration clientes</strong>&#160;; </p>
-                                            </li>
-                                            <li value="3">
-                                                <p>dans la liste, sélectionnez&#160;<strong>Client Windows</strong>&#160;;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p>dans la section <strong>Configuration du Windows Client</strong>, indiquez le <strong>chemin </strong>vers le dossier contenant les images personnalisées (dans notre exemple&#160;: C:\Program Files\Doxense\Watchdoc\Images\WindowsClient\Custom)&#160;: <br /><br /><a class="MCPopupThumbnailLink" href="WPCW_Personnalisation_ConfigImages.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="913" data-mc-height="504" src="WPCW_Personnalisation_ConfigImages.png" tabindex="" style="max-width: 1000px;" /></a></p>
-                                            </li>
-                                        </ol>
-                                        <h3>&#160;</h3>
-                                        <h3>Configurer la personnalisation de la couleur </h3>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Toujours dans l'interface <strong>Configuration Client Windows</strong>, section <strong>Interface utilisateur</strong>, paramètre <strong>Couleur...</strong>, indiquez la valeur hexadécimale de la <strong>couleur</strong> qui s'applique&#160;: </p>
-                                                <ul>
-                                                    <li>
-                                                        <p>au fil d'Ariane, </p>
-                                                    </li>
-                                                    <li>
-                                                        <p>à l'information de localisation</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>aux boutons de l'interface :<br /><br /><a class="MCPopupThumbnailLink" href="WPCW_Personnalisation_ConfigCouleur.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="913" data-mc-height="504" src="WPCW_Personnalisation_ConfigCouleur.png" tabindex="" style="max-width: 1000px;" /></a></p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ol>
-                                        <p>&#160;</p>
-                                        <ol data-mc-continue="true">
-                                            <li value="2">
-                                                <p>Cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Valider.png" style="width: 26px;height: 25px;" /> pour valider la personnalisation de WPC for Windows.<br /></p>
-                                            </li>
-                                            <li value="3">
-                                                <p>Vérifiez dans WPC for Windows que ces images ont bien été prises en compte.&#160;Il est possible d'avoir à fermer, puis relancer l'application pour constater la modification.</p>
-                                            </li>
-                                        </ol>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

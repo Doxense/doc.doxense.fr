@@ -165,6 +165,153 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocWSCActiverlesWEStraceslogs" data-magellan-target="WatchdocWSCActiverlesWEStraceslogs"><a name="aanchor370"></a>
+                                                    <MadCap:concept term="WES;ADE" />Watchdoc / WSC&#160;- Activer les WES&#160;traces (logs)</h1>
+                                                <h2 id="Principe" data-magellan-target="Principe">Principe</h2>
+                                                <p>Watchdoc est un produit dont l'activité peut être tracée au sein de fichiers appelés journaux d'événements ou logs. <br />Disposer de ces fichiers permet de comprendre l'origine d'un dysfonctionnement et de le faire analyser par le Support Doxense. </p>
+                                                <p>&#160;</p>
+                                                <p>Par défaut, les  traces permettant de suivre le cheminement d'une requête ne sont pas activées dans Watchdoc. Il est donc nécessaire de les activer (cf.&#160;<a href="WD_Traces_Activer_Logs.htm" target="_blank">Activer les fichiers traces (logs)</a>). <br /></p>
+                                                <h2 id="ActiverlestracesduWESWEStraces" data-magellan-target="ActiverlestracesduWESWEStraces"><a name="WES_Traces" id="WES_Traces"></a>Activer les traces du WES (WES traces)</h2>
+                                                <h3>Cas généraux</h3>
+                                                <p>Watchdoc enregistre les communications qu’il reçoit de la part de l’interface embarquée (WES).</p>
+                                                <p>Pour activer les traces d'un WES sur une file&#160;:</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1">depuis le<strong> Menu Principal</strong>&gt; section <strong>Exploitation</strong>&#160;&gt; <strong>Files d'impression</strong>&#160;;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1"> cliquez sur le bouton <strong>Editer les propriétés</strong>&#160;de la file concernée ;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p class="Liste_num_1">dans la section <strong>WES</strong>, cochez <strong>Activer les traces</strong> ;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>réinstallez le WES&#160;sur les files sur lesquelles il est déjà installé pour tenir compte de la modification du profil WES ; </p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p class="Liste_num_1">par défaut, les logs sont enregistrés dans le dossier <strong>\Logs</strong> de Watchdoc. Vous pouvez indiquer le <strong>Chemin</strong> d'un autre dossier d'enregistrement :<br></br></p>
+                                                        <p class="Liste_num_1">&#160;</p>
+                                                        <p class="Liste_num_1">
+                                                            <img src="../Z_Resources/Images/02_Captures/Config_Files_Section_WES_ActiverTraces_V53_FR.png" />
+                                                            <br />
+                                                        </p>
+                                                        <p class="Liste_num_1">
+                                                            <br />
+                                                        </p>
+                                                    </li>
+                                                </ol>
+                                                <h3>Cas particulier des WES&#160;Java<sup>®</sup></h3>
+                                                <p>Avec les  WES Canon<sup>®</sup>, Kyocera<sup>®</sup>, Lexmark<sup>®</sup>, Ricoh SOP et Samsung<sup>®</sup> développés avec Java<sup>®</sup>, il est possible de configurer le WES&#160;de manière à pouvoir télécharger directement les journaux relatifs au WES depuis Watchdoc.</p>
+                                                <p>&#160;</p>
+                                                <p>Pour configurer cette fonction sur le WES&#160;:</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1">depuis le <strong>Menu Principal</strong> &gt; section <strong>Configuration</strong>, cliquez sur <strong>Web &amp; Wes</strong>&#160;;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1">sélectionnez le WES concerné,  section <strong>Divers </strong>&gt; sous-section <strong>Options des logs</strong>, précisez </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p class="Liste_num_1">l'<strong>Emplacement</strong> : endroit où est enregistré le fichier traces :</p>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p class="Liste_num_1"><strong>Fichier&#160;: </strong>pour enregistrer le fichier de trace dans un dossier de Watchdoc ;</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p><strong>Périphérique </strong>: pour enregistrer le fichier de trace dans le périphérique ;</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p><strong>Tous </strong>: pour enregistrer le fichier de trace dans Watchdoc et dans le périphérique.</p>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_num_1">et le <strong>Niveau</strong> de détail des traces (nous vous recommandons d'opter pour le niveau <strong>Info</strong>, intermédiaire) :</p>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p><strong>profile </strong>:  traces du profil WES ;</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p><strong>debug </strong>: traces laissées en cas de dysfonctionnement du WES ;</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p><strong>verbose </strong>: toutes les traces laissées par le WES ;</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p><strong>info </strong>: toutes les traces laissées par le WES ;</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p><strong>warning </strong>: sélectionnez ce choix pour garder toutes les traces laissées par le WES ;</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p><strong>error </strong>: sélectionnez ce choix pour garder les traces laissées lorsqu'une erreur est détectée au niveau du WES ;</p>
+                                                                    </li>
+                                                                </ul>
+                                                                <p class="Liste_num_1">
+                                                                    <br />
+                                                                </p>
+                                                            </li>
+                                                        </ul>
+                                                        <p class="Liste_num_1">
+                                                            <img src="../Z_Resources/Images/02_Captures/Config_WES_Section_Divers_OptionsLogs.png" style="width: 700px;height: auto;">
+                                                            </img>
+                                                        </p>
+                                                    </li>
+                                                </ol>
+                                                <ol data-mc-continue="true">
+                                                    <li value="3">
+                                                        <p class="Liste_num_1"><strong>validez</strong> le paramétrage du profil WES ; </p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>réinstallez le WES&#160;sur les files sur lesquelles il est déjà installé pour tenir compte de la modification du profil WES.</p>
+                                                    </li>
+                                                </ol>
+                                                <p>&#160;</p>
+                                                <p><span style="font-family: 'Wingdings'">è</span> Vous pourrez ainsi télécharger les fichiers WES&#160;traces depuis Watchdoc (cf.&#160;<a href="WD_Traces_Collecter.htm" target="_blank">Exploiter les fichiers traces (logs)</a>).</p>
+                                                <p>&#160;</p>
+                                                <p>Depuis la version 6.1.0.5052, il est également possible d'activer les WES&#160;traces (logs) depuis la file d'impression.</p>
+                                                <ol data-mc-continue="false">
+                                                    <li value="1">
+                                                        <p class="Liste_num_1">Depuis le <strong>Menu Principal</strong> &gt; section <strong>Exploitation</strong>, cliquez sur <strong>Files d'impression</strong>&#160;;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1"> sélectionnez la file concernée, cliquez sur l'onglet <strong>Propriétés </strong>;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p class="Liste_num_1">dans la section <strong>WES</strong>, cliquez sur le bouton <strong>Activer les logs</strong>.</p>
+                                                        <p class="Liste_num_1">La valeur du paramètre <strong>WES&#160;Traces </strong>informe sur le statut des logs : <br /><br /><img src="../Z_Resources/Images/02_Captures/WES/Config_WES_File_Java_TracesActivees.png" style="width: 700px;" /></p>
+                                                        <p class="Liste_num_1">
+                                                            <br />Vous pouvez vérifier dans le profil WES&#160;que les paramètres <strong>Diagnostic </strong>et <strong>Options des logs</strong> ont été cochés : <br /><br /><img src="../Z_Resources/Images/02_Captures/WES/Config_WES_Profil_Java_TracesActivees.png" style="width: 700px;height: auto;" /></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p class="Liste_num_1">dans l'interface <strong>Propriétés</strong>, cliquez de nouveau sur le bouton <strong>Installer </strong> pour réinstaller le WES&#160;après sa modification ;</p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p class="Liste_num_1">cliquez sur le bouton <strong>Télécharger les logs</strong> (cf.&#160;<a href="WD_Traces_Collecter.htm" target="_blank">Exploiter les fichiers traces (logs)</a>.</p>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p>lorsqu'il n'est plus nécessaire de tracer le WES, cliquez sur le bouton <strong>Désactiver les logs</strong>.</p>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocWSCActiverlesWEStraceslogs">Watchdoc / WSC&#160;- Activer les WES&#160;traces (logs)</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Principe">Principe</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#ActiverlestracesduWESWEStraces">Activer les traces du WES (WES traces)</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -198,137 +345,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor370"></a>
-                                            <MadCap:concept term="WES;ADE" />Watchdoc / WSC&#160;- Activer les WES&#160;traces (logs)</h1>
-                                        <h2>Principe</h2>
-                                        <p>Watchdoc est un produit dont l'activité peut être tracée au sein de fichiers appelés journaux d'événements ou logs. <br />Disposer de ces fichiers permet de comprendre l'origine d'un dysfonctionnement et de le faire analyser par le Support Doxense. </p>
-                                        <p>&#160;</p>
-                                        <p>Par défaut, les  traces permettant de suivre le cheminement d'une requête ne sont pas activées dans Watchdoc. Il est donc nécessaire de les activer (cf.&#160;<a href="WD_Traces_Activer_Logs.htm" target="_blank">Activer les fichiers traces (logs)</a>). <br /></p>
-                                        <h2><a name="WES_Traces" id="WES_Traces"></a>Activer les traces du WES (WES traces)</h2>
-                                        <h3>Cas généraux</h3>
-                                        <p>Watchdoc enregistre les communications qu’il reçoit de la part de l’interface embarquée (WES).</p>
-                                        <p>Pour activer les traces d'un WES sur une file&#160;:</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">depuis le<strong> Menu Principal</strong>&gt; section <strong>Exploitation</strong>&#160;&gt; <strong>Files d'impression</strong>&#160;;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1"> cliquez sur le bouton <strong>Editer les propriétés</strong>&#160;de la file concernée ;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1">dans la section <strong>WES</strong>, cochez <strong>Activer les traces</strong> ;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p>réinstallez le WES&#160;sur les files sur lesquelles il est déjà installé pour tenir compte de la modification du profil WES ; </p>
-                                            </li>
-                                            <li value="5">
-                                                <p class="Liste_num_1">par défaut, les logs sont enregistrés dans le dossier <strong>\Logs</strong> de Watchdoc. Vous pouvez indiquer le <strong>Chemin</strong> d'un autre dossier d'enregistrement :<br></br></p>
-                                                <p class="Liste_num_1">&#160;</p>
-                                                <p class="Liste_num_1">
-                                                    <img src="../Z_Resources/Images/02_Captures/Config_Files_Section_WES_ActiverTraces_V53_FR.png" />
-                                                    <br />
-                                                </p>
-                                                <p class="Liste_num_1">
-                                                    <br />
-                                                </p>
-                                            </li>
-                                        </ol>
-                                        <h3>Cas particulier des WES&#160;Java<sup>®</sup></h3>
-                                        <p>Avec les  WES Canon<sup>®</sup>, Kyocera<sup>®</sup>, Lexmark<sup>®</sup>, Ricoh SOP et Samsung<sup>®</sup> développés avec Java<sup>®</sup>, il est possible de configurer le WES&#160;de manière à pouvoir télécharger directement les journaux relatifs au WES depuis Watchdoc.</p>
-                                        <p>&#160;</p>
-                                        <p>Pour configurer cette fonction sur le WES&#160;:</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">depuis le <strong>Menu Principal</strong> &gt; section <strong>Configuration</strong>, cliquez sur <strong>Web &amp; Wes</strong>&#160;;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1">sélectionnez le WES concerné,  section <strong>Divers </strong>&gt; sous-section <strong>Options des logs</strong>, précisez </p>
-                                                <ul>
-                                                    <li>
-                                                        <p class="Liste_num_1">l'<strong>Emplacement</strong> : endroit où est enregistré le fichier traces :</p>
-                                                        <ul>
-                                                            <li>
-                                                                <p class="Liste_num_1"><strong>Fichier&#160;: </strong>pour enregistrer le fichier de trace dans un dossier de Watchdoc ;</p>
-                                                            </li>
-                                                            <li>
-                                                                <p><strong>Périphérique </strong>: pour enregistrer le fichier de trace dans le périphérique ;</p>
-                                                            </li>
-                                                            <li>
-                                                                <p><strong>Tous </strong>: pour enregistrer le fichier de trace dans Watchdoc et dans le périphérique.</p>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_num_1">et le <strong>Niveau</strong> de détail des traces (nous vous recommandons d'opter pour le niveau <strong>Info</strong>, intermédiaire) :</p>
-                                                        <ul>
-                                                            <li>
-                                                                <p><strong>profile </strong>:  traces du profil WES ;</p>
-                                                            </li>
-                                                            <li>
-                                                                <p><strong>debug </strong>: traces laissées en cas de dysfonctionnement du WES ;</p>
-                                                            </li>
-                                                            <li>
-                                                                <p><strong>verbose </strong>: toutes les traces laissées par le WES ;</p>
-                                                            </li>
-                                                            <li>
-                                                                <p><strong>info </strong>: toutes les traces laissées par le WES ;</p>
-                                                            </li>
-                                                            <li>
-                                                                <p><strong>warning </strong>: sélectionnez ce choix pour garder toutes les traces laissées par le WES ;</p>
-                                                            </li>
-                                                            <li>
-                                                                <p><strong>error </strong>: sélectionnez ce choix pour garder les traces laissées lorsqu'une erreur est détectée au niveau du WES ;</p>
-                                                            </li>
-                                                        </ul>
-                                                        <p class="Liste_num_1">
-                                                            <br />
-                                                        </p>
-                                                    </li>
-                                                </ul>
-                                                <p class="Liste_num_1">
-                                                    <img src="../Z_Resources/Images/02_Captures/Config_WES_Section_Divers_OptionsLogs.png" style="width: 700px;height: auto;">
-                                                    </img>
-                                                </p>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="3">
-                                                <p class="Liste_num_1"><strong>validez</strong> le paramétrage du profil WES ; </p>
-                                            </li>
-                                            <li value="4">
-                                                <p>réinstallez le WES&#160;sur les files sur lesquelles il est déjà installé pour tenir compte de la modification du profil WES.</p>
-                                            </li>
-                                        </ol>
-                                        <p>&#160;</p>
-                                        <p><span style="font-family: 'Wingdings'">è</span> Vous pourrez ainsi télécharger les fichiers WES&#160;traces depuis Watchdoc (cf.&#160;<a href="WD_Traces_Collecter.htm" target="_blank">Exploiter les fichiers traces (logs)</a>).</p>
-                                        <p>&#160;</p>
-                                        <p>Depuis la version 6.1.0.5052, il est également possible d'activer les WES&#160;traces (logs) depuis la file d'impression.</p>
-                                        <ol data-mc-continue="false">
-                                            <li value="1">
-                                                <p class="Liste_num_1">Depuis le <strong>Menu Principal</strong> &gt; section <strong>Exploitation</strong>, cliquez sur <strong>Files d'impression</strong>&#160;;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1"> sélectionnez la file concernée, cliquez sur l'onglet <strong>Propriétés </strong>;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1">dans la section <strong>WES</strong>, cliquez sur le bouton <strong>Activer les logs</strong>.</p>
-                                                <p class="Liste_num_1">La valeur du paramètre <strong>WES&#160;Traces </strong>informe sur le statut des logs : <br /><br /><img src="../Z_Resources/Images/02_Captures/WES/Config_WES_File_Java_TracesActivees.png" style="width: 700px;" /></p>
-                                                <p class="Liste_num_1">
-                                                    <br />Vous pouvez vérifier dans le profil WES&#160;que les paramètres <strong>Diagnostic </strong>et <strong>Options des logs</strong> ont été cochés : <br /><br /><img src="../Z_Resources/Images/02_Captures/WES/Config_WES_Profil_Java_TracesActivees.png" style="width: 700px;height: auto;" /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p class="Liste_num_1">dans l'interface <strong>Propriétés</strong>, cliquez de nouveau sur le bouton <strong>Installer </strong> pour réinstaller le WES&#160;après sa modification ;</p>
-                                            </li>
-                                            <li value="5">
-                                                <p class="Liste_num_1">cliquez sur le bouton <strong>Télécharger les logs</strong> (cf.&#160;<a href="WD_Traces_Collecter.htm" target="_blank">Exploiter les fichiers traces (logs)</a>.</p>
-                                            </li>
-                                            <li value="6">
-                                                <p>lorsqu'il n'est plus nécessaire de tracer le WES, cliquez sur le bouton <strong>Désactiver les logs</strong>.</p>
-                                            </li>
-                                        </ol>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

@@ -165,6 +165,102 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocRestaureruneversionantérieuredeWatchdoc" data-magellan-target="WatchdocRestaureruneversionantérieuredeWatchdoc"><a name="aanchor58"></a>
+                                                    <MadCap:concept term="WD" />Watchdoc - Restaurer une version antérieure de Watchdoc</h1>
+                                                <h2 id="Principe" data-magellan-target="Principe">Principe</h2>
+                                                <p>Après mise à jour   de Watchdoc, il peut arriver que l'on souhaite revenir à la version antérieure.&#160;Il est alors nécessaire de restaurer la version précédemment installée.&#160;</p>
+                                                <p>&#160;</p>
+                                                <p>Cette opération est possible car, lorsqu'on lance une mise à jour, l'assistant génère automatiquement des fichiers de sauvegarde de la version précédemment installée. Par défaut, les fichiers de sauvegarde sont générés et enregistrés dans le dossier contenant les fichiers d'installation de la nouvelle version :<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/WD_Admin_Restaurer_BackupsAuto.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1019" data-mc-height="252" src="../Z_Resources/Images/02_Captures/WD_Admin_Restaurer_BackupsAuto.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a><br /><br /></p>
+                                                <p>A partir de la version 6.1.0.5122, vous pouvez aussi lancer la mise à jour en ligne de commande en précisant le dossier dans lequel vous souhaitez enregistrer les fichiers de sauvegarde (cf.&#160;<a href="WD61_MaJ_WD_Procedure_cmd.htm" target="_blank">Mettre à jour en ligne de commande</a>).</p>
+                                                <p>&#160;</p>
+                                                <p>La restauration consiste à copier les fichiers de l'ancienne version pour les coller dans les dossiers de la mise à jour afin de les remplacer.</p>
+                                                <h2 id="Prérequis" data-magellan-target="Prérequis">Prérequis</h2>
+                                                <p>Pour restaurer une version antérieure de Watchdoc, il est impératif d'avoir conservé les deux fichiers de sauvegarde<strong> backup_kernel_[n°version_date].zip</strong> et <strong>backup_web_[n°version_date].zip</strong> automatiquement générés par l'assistant lors de la mise à jour  et d'y avoir accès.</p>
+                                                <h2 id="Procédure" data-magellan-target="Procédure">Procédure </h2>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>En tant qu'administrateur, accédez au serveur sur lequel est hébergé Watchdoc  ;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>accédez au dossier dans lequel sont enregistrés les 2 fichiers de sauvegarde&#160;;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>décompressez l'archive <strong>backup_kernel_[n°version_date].zip</strong> ;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>décompressez ensuite l'archive <strong>backup_web_[n°version_date].zip</strong>&#160;; </p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p>depuis la console des services (ou depuis l'invite de commande), stoppez les services suivants&#160;: </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>Watchdoc.exe </p>
+                                                            </li>
+                                                            <li>
+                                                                <p>WatchdocPrivilegedService.exe</p>
+                                                            </li>
+                                                            <li>
+                                                                <p> Windows Process Activation Service (WAS)</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>World Wide Web Publishing Service (W3SVC) : <br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../Z_Resources/Images/02_Captures/WD_Admin_Restaurer_StopServices.png"><img class="MCPopupThumbnail img" data-mc-width="1246" data-mc-height="506" src="../Z_Resources/Images/02_Captures/WD_Admin_Restaurer_StopServices.png" tabindex="" style="width: 700px;mc-thumbnail: popup;mc-thumbnail-max-width: 1000px;max-width: 1000px;" /></a><br /></p>
+                                                            </li>
+                                                        </ul>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p>rendez-vous dans le dossier décompressé <strong>backup_kernel_[n°version_date]</strong> et copiez tous les fichiers qui y figurent ; </p>
+                                                    </li>
+                                                    <li value="7">
+                                                        <p>collez tous les fichiers dans le dossier <strong>Watchdoc </strong>(installé par défaut dans C:\Program Files\Doxense\Watchdoc)&#160;pour remplacer tous les fichiers de la nouvelle version par ceux de l'ancienne : <br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/WD_Admin_Restaurer_CopieWD.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1372" data-mc-height="662" src="../Z_Resources/Images/02_Captures/WD_Admin_Restaurer_CopieWD.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a><br /><br /></p>
+                                                    </li>
+                                                    <li value="8">
+                                                        <p>rendez-vous dans le dossier décompressé <strong>backup_web_[n°version_date]</strong> et copiez tous les fichiers qui y figurent ; </p>
+                                                    </li>
+                                                    <li value="9">
+                                                        <p>collez tous les fichiers dans le dossier web de Watchdoc (par défaut <strong>C:\inetpub\wwwroot\watchdoc</strong>) pour remplacer tous les fichiers de la nouvelle version par ceux de l'ancienne :<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/WD_Admin_Restaurer_CopieWeb.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1371" data-mc-height="630" src="../Z_Resources/Images/02_Captures/WD_Admin_Restaurer_CopieWeb.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a><br /><br /></p>
+                                                    </li>
+                                                    <li value="10">
+                                                        <p>lorsque tous les fichiers ont été remplacés, retournez dans la console  (ou avec une invite de commande) pour relancer les services suivants : </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>Watchdoc.exe </p>
+                                                            </li>
+                                                            <li>
+                                                                <p>WatchdocPrivilegedService.exe</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Windows Process Activation Service (WAS)</p>
+                                                            </li>
+                                                            <li>
+                                                                <p> World Wide Web Publishing Service (W3SVC) : </p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li value="11">
+                                                        <p>Accédez à l'interface d'administration Watchdoc pour vérifier que le numéro de version est bien celui de l'ancienne qui vient d'être restaurée.&#160;</p>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocRestaureruneversionant%C3%A9rieuredeWatchdoc">Watchdoc - Restaurer une version antérieure de Watchdoc</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Principe">Principe</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Pr%C3%A9requis">Prérequis</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Proc%C3%A9dure">Procédure </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
                                     </script>
                                     <!-- Google Tag Manager (noscript) -->
@@ -199,84 +295,6 @@
                                     <div class="nocontent">
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
-                                    </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor58"></a>
-                                            <MadCap:concept term="WD" />Watchdoc - Restaurer une version antérieure de Watchdoc</h1>
-                                        <h2>Principe</h2>
-                                        <p>Après mise à jour   de Watchdoc, il peut arriver que l'on souhaite revenir à la version antérieure.&#160;Il est alors nécessaire de restaurer la version précédemment installée.&#160;</p>
-                                        <p>&#160;</p>
-                                        <p>Cette opération est possible car, lorsqu'on lance une mise à jour, l'assistant génère automatiquement des fichiers de sauvegarde de la version précédemment installée. Par défaut, les fichiers de sauvegarde sont générés et enregistrés dans le dossier contenant les fichiers d'installation de la nouvelle version :<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/WD_Admin_Restaurer_BackupsAuto.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1019" data-mc-height="252" src="../Z_Resources/Images/02_Captures/WD_Admin_Restaurer_BackupsAuto.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a><br /><br /></p>
-                                        <p>A partir de la version 6.1.0.5122, vous pouvez aussi lancer la mise à jour en ligne de commande en précisant le dossier dans lequel vous souhaitez enregistrer les fichiers de sauvegarde (cf.&#160;<a href="WD61_MaJ_WD_Procedure_cmd.htm" target="_blank">Mettre à jour en ligne de commande</a>).</p>
-                                        <p>&#160;</p>
-                                        <p>La restauration consiste à copier les fichiers de l'ancienne version pour les coller dans les dossiers de la mise à jour afin de les remplacer.</p>
-                                        <h2>Prérequis</h2>
-                                        <p>Pour restaurer une version antérieure de Watchdoc, il est impératif d'avoir conservé les deux fichiers de sauvegarde<strong> backup_kernel_[n°version_date].zip</strong> et <strong>backup_web_[n°version_date].zip</strong> automatiquement générés par l'assistant lors de la mise à jour  et d'y avoir accès.</p>
-                                        <h2>Procédure </h2>
-                                        <ol>
-                                            <li value="1">
-                                                <p>En tant qu'administrateur, accédez au serveur sur lequel est hébergé Watchdoc  ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>accédez au dossier dans lequel sont enregistrés les 2 fichiers de sauvegarde&#160;;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>décompressez l'archive <strong>backup_kernel_[n°version_date].zip</strong> ;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p>décompressez ensuite l'archive <strong>backup_web_[n°version_date].zip</strong>&#160;; </p>
-                                            </li>
-                                            <li value="5">
-                                                <p>depuis la console des services (ou depuis l'invite de commande), stoppez les services suivants&#160;: </p>
-                                                <ul>
-                                                    <li>
-                                                        <p>Watchdoc.exe </p>
-                                                    </li>
-                                                    <li>
-                                                        <p>WatchdocPrivilegedService.exe</p>
-                                                    </li>
-                                                    <li>
-                                                        <p> Windows Process Activation Service (WAS)</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>World Wide Web Publishing Service (W3SVC) : <br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../Z_Resources/Images/02_Captures/WD_Admin_Restaurer_StopServices.png"><img class="MCPopupThumbnail img" data-mc-width="1246" data-mc-height="506" src="../Z_Resources/Images/02_Captures/WD_Admin_Restaurer_StopServices.png" tabindex="" style="width: 700px;mc-thumbnail: popup;mc-thumbnail-max-width: 1000px;max-width: 1000px;" /></a><br /></p>
-                                                    </li>
-                                                </ul>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="6">
-                                                <p>rendez-vous dans le dossier décompressé <strong>backup_kernel_[n°version_date]</strong> et copiez tous les fichiers qui y figurent ; </p>
-                                            </li>
-                                            <li value="7">
-                                                <p>collez tous les fichiers dans le dossier <strong>Watchdoc </strong>(installé par défaut dans C:\Program Files\Doxense\Watchdoc)&#160;pour remplacer tous les fichiers de la nouvelle version par ceux de l'ancienne : <br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/WD_Admin_Restaurer_CopieWD.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1372" data-mc-height="662" src="../Z_Resources/Images/02_Captures/WD_Admin_Restaurer_CopieWD.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a><br /><br /></p>
-                                            </li>
-                                            <li value="8">
-                                                <p>rendez-vous dans le dossier décompressé <strong>backup_web_[n°version_date]</strong> et copiez tous les fichiers qui y figurent ; </p>
-                                            </li>
-                                            <li value="9">
-                                                <p>collez tous les fichiers dans le dossier web de Watchdoc (par défaut <strong>C:\inetpub\wwwroot\watchdoc</strong>) pour remplacer tous les fichiers de la nouvelle version par ceux de l'ancienne :<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/WD_Admin_Restaurer_CopieWeb.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1371" data-mc-height="630" src="../Z_Resources/Images/02_Captures/WD_Admin_Restaurer_CopieWeb.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a><br /><br /></p>
-                                            </li>
-                                            <li value="10">
-                                                <p>lorsque tous les fichiers ont été remplacés, retournez dans la console  (ou avec une invite de commande) pour relancer les services suivants : </p>
-                                                <ul>
-                                                    <li>
-                                                        <p>Watchdoc.exe </p>
-                                                    </li>
-                                                    <li>
-                                                        <p>WatchdocPrivilegedService.exe</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>Windows Process Activation Service (WAS)</p>
-                                                    </li>
-                                                    <li>
-                                                        <p> World Wide Web Publishing Service (W3SVC) : </p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li value="11">
-                                                <p>Accédez à l'interface d'administration Watchdoc pour vérifier que le numéro de version est bien celui de l'ancienne qui vient d'être restaurée.&#160;</p>
-                                            </li>
-                                        </ol>
                                     </div>
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">

@@ -199,57 +199,76 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1>WinDBG - Principe et prérequis</h1>
-                                        <h2>Qu'est-ce que WinDBG ?</h2>
-                                        <p><strong>WinDBG</strong> est un outil débugueur gratuit, distribué et réalisé par Microsoft<sup>®</sup> pour son système d'exploitation Windows<sup>®</sup>. C'est un logiciel muni d'un environnement graphique qui peut être utilisé pour débuguer des applications en mode utilisateur, des pilotes, ou le système d'exploitation lui-même en mode noyau. </p>
-                                        <p>&#160;</p>
-                                        <p><strong>WinDBG </strong>peut être utilisé pour débuguer des dumps (copie brute) mémoire en mode noyau ou utilisateur, après un plantage. Cette technique est connue sous le nom de débugage post-mortem. (source : <i>Wikipedia</i>).</p>
-                                        <h2>Prérequis</h2>
-                                        <p>Pour utiliser WinDBG, il est nécessaire de disposer du dump, de certaines DLL, enregistrées dans un répertoire visible par WinDBG.&#160;</p>
-                                        <h3>Récupérer le dump du processus problématique</h3>
-                                        <p>Le dump peut être réalisé depuis le <strong>Gestionnaire de processus </strong>de Windows<sup>®</sup> ou à l'aide d'autres outils tels que <strong>Procdump </strong>de Sysinternals<sup>®</sup>.</p>
-                                        <blockquote>
-                                            <p>Exemple de <strong>.bat </strong>en tâche planifiée ayant pour but de réaliser jusqu'à 5 dumps de <strong>watchdoc.exe</strong> et sa mémoire quand celui-ci prend un cpu core sur les 4 (25%) pendant plus de 80 secondes:</p><pre style="background-color: #000000;color: #ffffff;">procdump.exe -c 24 -s 80 -ma -n 5 /accepteula watchdoc.exe</pre>
-                                        </blockquote>
-                                        <p>Plus d'information : <a href="https://technet.microsoft.com/en-us/sysinternals/dd996900.aspx" title="Lien vers le site Microsoft Technet " alt="Lien vers le site Microsoft Technet ">https://technet.microsoft.com/en-us/sysinternals/dd996900.aspx</a></p>
-                                        <h3>Récupérer les DLL</h3>
-                                        <p>Pour récupérer les DLL, se placer sur le serveur où le dump a été réalisé et trouver&#160;: </p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1">sos.dll</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">clr.dll</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">mscorwks.dll</p>
-                                            </li>
-                                        </ul>
-                                        <blockquote>
-                                            <p>(Pour un système 64 bits, ces DLL se trouvent dans&#160;: C:\Windows\Microsoft.NET\Framework64\v4.0.30319)</p>
-                                        </blockquote>
-                                        <h3>Sauvegarder les DLLs</h3>
-                                        <p>Pour sauvegarder les DLLs, créer un répertoire C:\global (par exemple) et déclarer ce répertoire dans la variable système PATH du poste où vous exécutez <strong>WinDBG</strong>.</p>
-                                        <h2>Informations</h2>
-                                        <p>Trouvez plus d'informations sur les sites suivants:</p>
-                                        <p>&#160;</p>
-                                        <ul>
-                                            <li>
-                                                <p><a href="http://windbg.info/doc/1-common-cmds.html" title="Commandes courantes WindDBG" alt="Commandes courantes WindDBG" target="_blank">http://windbg.info/doc/1-common-cmds.html</a>
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p><a href="https://blogs.msdn.microsoft.com/alejacma/2009/06/30/sos-cheat-sheet-net-2-03-03-5/" title="Blog MSDN Microsoft SOS" alt="Blog MSDN Microsoft SOS" target="_blank">https://blogs.msdn.microsoft.com/alejacma/2009/06/30/sos-cheat-sheet-net-2-03-03-5/</a>
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p><a href="https://msdn.microsoft.com/en-us/library/windows/hardware/dn745911(v=vs.85).aspx" title="Site MSDN Microsoft Library" alt="Site MSDN Microsoft Library" target="_blank">https://msdn.microsoft.com/en-us/library/windows/hardware/dn745911(v=vs.85).aspx</a>
-                                                </p>
-                                            </li>
-                                        </ul>
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WinDBGPrincipeetprérequis" data-magellan-target="WinDBGPrincipeetprérequis">WinDBG - Principe et prérequis</h1>
+                                                <h2 id="QuestcequeWinDBG" data-magellan-target="QuestcequeWinDBG">Qu'est-ce que WinDBG ?</h2>
+                                                <p><strong>WinDBG</strong> est un outil débugueur gratuit, distribué et réalisé par Microsoft<sup>®</sup> pour son système d'exploitation Windows<sup>®</sup>. C'est un logiciel muni d'un environnement graphique qui peut être utilisé pour débuguer des applications en mode utilisateur, des pilotes, ou le système d'exploitation lui-même en mode noyau. </p>
+                                                <p>&#160;</p>
+                                                <p><strong>WinDBG </strong>peut être utilisé pour débuguer des dumps (copie brute) mémoire en mode noyau ou utilisateur, après un plantage. Cette technique est connue sous le nom de débugage post-mortem. (source : <i>Wikipedia</i>).</p>
+                                                <h2 id="Prérequis" data-magellan-target="Prérequis">Prérequis</h2>
+                                                <p>Pour utiliser WinDBG, il est nécessaire de disposer du dump, de certaines DLL, enregistrées dans un répertoire visible par WinDBG.&#160;</p>
+                                                <h3>Récupérer le dump du processus problématique</h3>
+                                                <p>Le dump peut être réalisé depuis le <strong>Gestionnaire de processus </strong>de Windows<sup>®</sup> ou à l'aide d'autres outils tels que <strong>Procdump </strong>de Sysinternals<sup>®</sup>.</p>
+                                                <blockquote>
+                                                    <p>Exemple de <strong>.bat </strong>en tâche planifiée ayant pour but de réaliser jusqu'à 5 dumps de <strong>watchdoc.exe</strong> et sa mémoire quand celui-ci prend un cpu core sur les 4 (25%) pendant plus de 80 secondes:</p><pre style="background-color: #000000;color: #ffffff;">procdump.exe -c 24 -s 80 -ma -n 5 /accepteula watchdoc.exe</pre>
+                                                </blockquote>
+                                                <p>Plus d'information : <a href="https://technet.microsoft.com/en-us/sysinternals/dd996900.aspx" title="Lien vers le site Microsoft Technet " alt="Lien vers le site Microsoft Technet ">https://technet.microsoft.com/en-us/sysinternals/dd996900.aspx</a></p>
+                                                <h3>Récupérer les DLL</h3>
+                                                <p>Pour récupérer les DLL, se placer sur le serveur où le dump a été réalisé et trouver&#160;: </p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1">sos.dll</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">clr.dll</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">mscorwks.dll</p>
+                                                    </li>
+                                                </ul>
+                                                <blockquote>
+                                                    <p>(Pour un système 64 bits, ces DLL se trouvent dans&#160;: C:\Windows\Microsoft.NET\Framework64\v4.0.30319)</p>
+                                                </blockquote>
+                                                <h3>Sauvegarder les DLLs</h3>
+                                                <p>Pour sauvegarder les DLLs, créer un répertoire C:\global (par exemple) et déclarer ce répertoire dans la variable système PATH du poste où vous exécutez <strong>WinDBG</strong>.</p>
+                                                <h2 id="Informations" data-magellan-target="Informations">Informations</h2>
+                                                <p>Trouvez plus d'informations sur les sites suivants:</p>
+                                                <p>&#160;</p>
+                                                <ul>
+                                                    <li>
+                                                        <p><a href="http://windbg.info/doc/1-common-cmds.html" title="Commandes courantes WindDBG" alt="Commandes courantes WindDBG" target="_blank">http://windbg.info/doc/1-common-cmds.html</a>
+                                                        </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><a href="https://blogs.msdn.microsoft.com/alejacma/2009/06/30/sos-cheat-sheet-net-2-03-03-5/" title="Blog MSDN Microsoft SOS" alt="Blog MSDN Microsoft SOS" target="_blank">https://blogs.msdn.microsoft.com/alejacma/2009/06/30/sos-cheat-sheet-net-2-03-03-5/</a>
+                                                        </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><a href="https://msdn.microsoft.com/en-us/library/windows/hardware/dn745911(v=vs.85).aspx" title="Site MSDN Microsoft Library" alt="Site MSDN Microsoft Library" target="_blank">https://msdn.microsoft.com/en-us/library/windows/hardware/dn745911(v=vs.85).aspx</a>
+                                                        </p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WinDBGPrincipeetpr%C3%A9requis">WinDBG - Principe et prérequis</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#QuestcequeWinDBG">Qu'est-ce que WinDBG ?</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Pr%C3%A9requis">Prérequis</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Informations">Informations</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
                                     </div>
-                                    <p>&#160;</p>
+                                    <!--<MadCap:miniTocProxy />
+        <MadCap:bodyProxy class=".body-container" />-->
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">
                                             <button class="button elearning-button needs-pie previous-topic-button" title="Précédent" disabled="true">

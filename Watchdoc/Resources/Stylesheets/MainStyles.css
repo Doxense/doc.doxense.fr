@@ -218,6 +218,30 @@ div.home-tiles > div:hover	/*When hovering over a home-tile, these properties ap
 	transform: scale(1.1);
 }
 
+/*=Elements for MenuProxy position*/
+/*=Elements for text contained within each home-tile=*/
+
+.topic-layout
+{
+	display: flex;
+	align-items: flex-start;
+	gap: 3rem;
+}
+
+.topic-main
+{
+	flex: 1 1 auto;
+	min-width: 0;
+}
+
+.topic-menu
+{
+	flex: 0 0 260px;
+	position: sticky;
+	top: 50px;
+	align-self: flex-start;
+}
+
 /*=Elements for text contained within each home-tile=*/
 
 p.tile-title
@@ -269,7 +293,7 @@ fieldset
 	background-repeat: no-repeat;
 	border-radius: 10px;
 	border: none;
-	background-image: url('../../Z_Resources/Images/01_Generiques/icon_Info.png');
+	background-image: url('../../../../Docdox_Watchdoc_FR/Content/Z_Resources/Images/01_Generiques/icon_Info.png');
 	text-align: left;
 	padding: 15px 15px 20px 40px;
 	margin: 5px 0;
@@ -287,7 +311,7 @@ fieldset.orange
 	background-repeat: no-repeat;
 	border-radius: 10px;
 	border: none;
-	background-image: url('../../Z_Resources/Images/01_Generiques/icon_Info.png');
+	background-image: url('../../../../Docdox_Watchdoc_FR/Content/Z_Resources/Images/01_Generiques/icon_Info.png');
 	text-align: left;
 	padding: 15px 15px 20px 40px;
 	margin: 5px 0;
@@ -389,8 +413,8 @@ div.GlossaryPageTerm
 MadCap|dropDown
 {
 	font-color: inherit;
-	mc-closed-image: url('../Images/plus.png');
-	mc-open-image: url('../Images/minus.png');
+	mc-closed-image: url('../../../../Docdox_Watchdoc_FR/Content/Resources/Images/plus.png');
+	mc-open-image: url('../../../../Docdox_Watchdoc_FR/Content/Resources/Images/minus.png');
 }
 
 MadCap|miniTocProxy
@@ -436,7 +460,7 @@ MadCap|dropDownBody
 	background-repeat: no-repeat;
 	background-size: 20px 20px;
 	display: inline-block;
-	background-image: url('../Images/Link.svg');
+	background-image: url('../../../../Docdox_Watchdoc_FR/Content/Resources/Images/Link.svg');
 }
 
 .body-container
@@ -454,7 +478,7 @@ button#myBtn
 	font-size: 10px;
 	font-weight: normal;
 	background-repeat: no-repeat;
-	background-image: url('../Images/icon_flechehaut.png');
+	background-image: url('../../../../Docdox_Watchdoc_FR/Content/Resources/Images/icon_flechehaut.png');
 	display: none;
 	background: transparent;
 }
@@ -483,7 +507,7 @@ button#myBtn
 
 	fieldset
 	{
-		background-image: url('../../Z_Resources/Images/01_Generiques/icon_Info.png');
+		background-image: url('../../../../Docdox_Watchdoc_FR/Content/Z_Resources/Images/01_Generiques/icon_Info.png');
 		width: 100%;
 	}
 
@@ -600,8 +624,8 @@ button#myBtn
 
 	MadCap|dropDown
 	{
-		mc-closed-image: url('../../Z_Resources/Images/02_Captures/Boutons/Bouton_Ajouter.png');
-		mc-open-image: url('../../Z_Resources/Images/02_Captures/Boutons/Bouton_Supprimer.png');
+		mc-closed-image: url('../../../../Docdox_Watchdoc_FR/Content/Z_Resources/Images/02_Captures/Boutons/Bouton_Ajouter.png');
+		mc-open-image: url('../../../../Docdox_Watchdoc_FR/Content/Z_Resources/Images/02_Captures/Boutons/Bouton_Supprimer.png');
 		content: inherit;
 		font-size: 12pt;
 		font-style: inherit;
@@ -632,6 +656,23 @@ span.SearchHighlight1
 	
 }
 
+@media only screen and (max-width: 900px)
+{
+	.topic-layout
+	{
+		display: block;
+	}
+
+	.topic-menu
+	{
+		position: static;
+		width: auto;
+		max-height: none;
+		overflow: visible;
+		margin-top: 2rem;
+	}
+}
+
 /********** Back to top button **********/
 
 button#myBtn
@@ -652,7 +693,7 @@ button#myBtn
 	background-size: inherit;
 	background: transparent;
 	background-color: white;
-	background-image: url('../Images/icon_flechehaut.png');
+	background-image: url('../../../../Docdox_Watchdoc_FR/Content/Resources/Images/icon_flechehaut.png');
 	display: none;
 }
 
@@ -828,7 +869,7 @@ p.H2_Print
 		font-size: 10px;
 		font-weight: normal;
 		background-repeat: no-repeat;
-		background-image: url('../Images/icon_flechehaut.png');
+		background-image: url('../../../../Docdox_Watchdoc_FR/Content/Resources/Images/icon_flechehaut.png');
 		display: none;
 		background: transparent;
 	}
@@ -844,7 +885,7 @@ p.H2_Print
 		background-repeat: no-repeat;
 		background-size: 20px 20px;
 		display: inline-block;
-		background-image: url('../Images/Link.svg');
+		background-image: url('../../../../Docdox_Watchdoc_FR/Content/Resources/Images/Link.svg');
 	}
 }
 
@@ -864,7 +905,7 @@ p.H2_Print
 	width: 25px;
 	margin-left: -25px;
 	display: inline-block;
-	background-image: url('../Images/Link.svg');
+	background-image: url('../../../../Docdox_Watchdoc_FR/Content/Resources/Images/Link.svg');
 }
 
 a.heading-link

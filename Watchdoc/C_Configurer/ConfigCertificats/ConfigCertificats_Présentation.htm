@@ -200,91 +200,110 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor125"></a>
-                                            <MadCap:concept term="CFG;WD" />Watchdoc - Certificats - Présentation</h1>
-                                        <p>Nouvelle fonctionnalité de la v.&#160;6.1.0.5011</p>
-                                        <h2>Principe</h2>
-                                        <p>Watchdoc échange des informations avec différents périphériques (imprimantes, MFP, lecteurs de cartes) grâce à des interfaces web telles que WSC, les WES, d'autres API (dont la Print API&#160;pour WPC&#160;et Skyprint) ou la page "Mon compte".<br /><br />Pour sécuriser ces pages accessibles via Internet, Watchdoc utilise le protocole TLS/SSL (via les ports 5744, 5753 et 5754) reposant sur  des certificats auto-signés au format <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term128">.pfx<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Un fichier PKCS#12 ou .pfx est un fichier qui contient à la fois la clé privée et le certificat X.509. Il est prêt à être installé par le client sur des serveurs comme IIS, Tomkat ou Exchange. 
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocCertificatsPrésentation" data-magellan-target="WatchdocCertificatsPrésentation"><a name="aanchor125"></a>
+                                                    <MadCap:concept term="CFG;WD" />Watchdoc - Certificats - Présentation</h1>
+                                                <p>Nouvelle fonctionnalité de la v.&#160;6.1.0.5011</p>
+                                                <h2 id="Principe" data-magellan-target="Principe">Principe</h2>
+                                                <p>Watchdoc échange des informations avec différents périphériques (imprimantes, MFP, lecteurs de cartes) grâce à des interfaces web telles que WSC, les WES, d'autres API (dont la Print API&#160;pour WPC&#160;et Skyprint) ou la page "Mon compte".<br /><br />Pour sécuriser ces pages accessibles via Internet, Watchdoc utilise le protocole TLS/SSL (via les ports 5744, 5753 et 5754) reposant sur  des certificats auto-signés au format <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term128">.pfx<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Un fichier PKCS#12 ou .pfx est un fichier qui contient à la fois la clé privée et le certificat X.509. Il est prêt à être installé par le client sur des serveurs comme IIS, Tomkat ou Exchange. 
 Avec un fichier PKCS#12, le client n’a plus à créer son propre CSR. Une autorité de certification s’en charge pour lui de manière entièrement sécurisée pendant le processus de demande de certificat.
 (Source : https://www.globalsign.com/fr/blog/fichier-pkcs12)</span></a> (pkcs#12).&#160;Cependant, il est égalemnet possible de sécuriser ces pages (via le serveur web dont elles dépendent) à l'aide de certificats signés par l'autorité de certification de chaque organisation.&#160;</p>
-                                        <p>&#160;</p>
-                                        <p>Dans les versions antérieures de Watchdoc, c'était  à l'aide de l'outil en ligne de commande Watchdoc Certificate Manager (WCM) que l'on gérait les certificats. WCM permettait aussi de diagnostiquer les anomalies impliquant les certificats et les protocoles SSL/TLS (cf.&#160;<a href="../../U_WCM/WCM_SignerCertificat_Procedure.htm">Signer un certificat avec  WCM</a>).</p>
-                                        <p>&#160;</p>
-                                        <p>Depuis la v.&#160;6.1.0.5011, Watchdoc dispose d'une interface dédiée, plus simple à utiliser que l'outil WCM (qui reste néanmoins opérationnel).</p>
-                                        <p>&#160;</p>
-                                        <p><a name="Notif_certifs" id="Notif_certifs"></a>De plus, il est désormais possible de configurer une notification pour informer l'administrateur que la date d'expiration d'un certificat approche ou dès que le certificat est expiré.&#160;Pour cela, il convient de configurer une notification à partir des événements  "Le certificat du serveur HTTP va bientôt expirer" et "le certificat du serveur est expiré" (cf. <a href="../ConfigNotifs/ConfigNotifs_Procedure.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Configurer les notifications</a> et <a href="../ConfigNotifs/ConfigNotifs_Evenmts_Procedure.htm" target="_blank">Configurer les événements de la notification</a>). </p>
-                                        <p>Dans une configuration en domaine, cette notification peut être répliquée depuis le serveur master (maître) vers les autres serveurs (esclaves).</p>
-                                        <p>
-                                            <br />
-                                        </p>
-                                        <fieldset>Watchdoc n'a pas besoin de certificat ayant l'attibut "Autorité de certification". Pour des raisons de sécurité, nous ne recommandons pas d'importer de tels certificats dans le gestionnaire.&#160;</fieldset>
-                                        <p>&#160;</p>
-                                        <p>N.B.&#160;: les certificats s'appliquant à l'interface d'administration de Watchdoc, de même que la page "Mon compte" dédiée aux utilisateurs de Watchdoc dépendent de MS IIS<sup>®</sup>.</p>
-                                        <h2>Accéder à l'interface de configuration</h2>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Accédez au <strong>Menu principal</strong> de l'interface d'administration de votre serveur Watchdoc en tant qu'administrateur, </p>
-                                            </li>
-                                            <li value="2">
-                                                <p>dans la section <strong>Configuration</strong>, cliquez sur <strong>Configuration avancée</strong>. </p>
-                                            </li>
-                                            <li value="3">
-                                                <p>dans l'interface <strong>Configuration avancée,</strong>, cliquez sur <strong>Certificats (avant v.&#160;6.1.0.5262)</strong> ou <strong>Serveur web</strong> <strong>(après v.&#160;6.1.0.5262)</strong>&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="../ConfigServeurWeb/WD_Config_Certif_Acces.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1492" data-mc-height="890" src="../ConfigServeurWeb/WD_Config_Certif_Acces.png" tabindex="" style="height: auto;width: 700px;max-width: 1000px;" /></a></p>
-                                            </li>
-                                        </ol>
-                                        <p>&#160;</p>
-                                        <p class="Resultat"><span style="font-family: 'Wingdings'">è</span> Vous accédez à l'interface <strong>Gestion des certificats <strong>(avant v.&#160;6.1.0.5262)</strong> ou <strong>Serveur web</strong> <strong>(après v.&#160;6.1.0.5262).</strong></strong></p>
-                                        <h2>Présentation de l'interface</h2>
-                                        <p>L'interface est composée de 3 sections : </p>
-                                        <ul>
-                                            <li>
-                                                <p>la section <strong>Certificats </strong>affiche une liste les certificats disponibles.&#160;Ces certificats sont utilisés pour sécuriser les points d'entrée du serveur web, indiqués dans la section DSP (cf.&#160;<a href="../ConfigServeurWeb/Config_ServeurWeb_Presentation.htm">Gérer les points d'entrée du serveur web et certificats associés</a>).</p>
-                                                <ul>
-                                                    <li>
-                                                        <p>le bouton-radio permet de sélectionner un certificat pour en afficher les informations en-dessous ;</p>
+                                                <p>&#160;</p>
+                                                <p>Dans les versions antérieures de Watchdoc, c'était  à l'aide de l'outil en ligne de commande Watchdoc Certificate Manager (WCM) que l'on gérait les certificats. WCM permettait aussi de diagnostiquer les anomalies impliquant les certificats et les protocoles SSL/TLS (cf.&#160;<a href="../../U_WCM/WCM_SignerCertificat_Procedure.htm">Signer un certificat avec  WCM</a>).</p>
+                                                <p>&#160;</p>
+                                                <p>Depuis la v.&#160;6.1.0.5011, Watchdoc dispose d'une interface dédiée, plus simple à utiliser que l'outil WCM (qui reste néanmoins opérationnel).</p>
+                                                <p>&#160;</p>
+                                                <p><a name="Notif_certifs" id="Notif_certifs"></a>De plus, il est désormais possible de configurer une notification pour informer l'administrateur que la date d'expiration d'un certificat approche ou dès que le certificat est expiré.&#160;Pour cela, il convient de configurer une notification à partir des événements  "Le certificat du serveur HTTP va bientôt expirer" et "le certificat du serveur est expiré" (cf. <a href="../ConfigNotifs/ConfigNotifs_Procedure.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Configurer les notifications</a> et <a href="../ConfigNotifs/ConfigNotifs_Evenmts_Procedure.htm" target="_blank">Configurer les événements de la notification</a>). </p>
+                                                <p>Dans une configuration en domaine, cette notification peut être répliquée depuis le serveur master (maître) vers les autres serveurs (esclaves).</p>
+                                                <p>
+                                                    <br />
+                                                </p>
+                                                <fieldset>Watchdoc n'a pas besoin de certificat ayant l'attibut "Autorité de certification". Pour des raisons de sécurité, nous ne recommandons pas d'importer de tels certificats dans le gestionnaire.&#160;</fieldset>
+                                                <p>&#160;</p>
+                                                <p>N.B.&#160;: les certificats s'appliquant à l'interface d'administration de Watchdoc, de même que la page "Mon compte" dédiée aux utilisateurs de Watchdoc dépendent de MS IIS<sup>®</sup>.</p>
+                                                <h2 id="Accéderàlinterfacedeconfiguration" data-magellan-target="Accéderàlinterfacedeconfiguration">Accéder à l'interface de configuration</h2>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Accédez au <strong>Menu principal</strong> de l'interface d'administration de votre serveur Watchdoc en tant qu'administrateur, </p>
                                                     </li>
-                                                </ul>
+                                                    <li value="2">
+                                                        <p>dans la section <strong>Configuration</strong>, cliquez sur <strong>Configuration avancée</strong>. </p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>dans l'interface <strong>Configuration avancée,</strong>, cliquez sur <strong>Certificats (avant v.&#160;6.1.0.5262)</strong> ou <strong>Serveur web</strong> <strong>(après v.&#160;6.1.0.5262)</strong>&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="../ConfigServeurWeb/WD_Config_Certif_Acces.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1492" data-mc-height="890" src="../ConfigServeurWeb/WD_Config_Certif_Acces.png" tabindex="" style="height: auto;width: 700px;max-width: 1000px;" /></a></p>
+                                                    </li>
+                                                </ol>
+                                                <p>&#160;</p>
+                                                <p class="Resultat"><span style="font-family: 'Wingdings'">è</span> Vous accédez à l'interface <strong>Gestion des certificats <strong>(avant v.&#160;6.1.0.5262)</strong> ou <strong>Serveur web</strong> <strong>(après v.&#160;6.1.0.5262).</strong></strong></p>
+                                                <h2 id="Présentationdelinterface" data-magellan-target="Présentationdelinterface">Présentation de l'interface</h2>
+                                                <p>L'interface est composée de 3 sections : </p>
                                                 <ul>
                                                     <li>
-                                                        <p>dans la colonne <strong>Est signé</strong> : </p>
+                                                        <p>la section <strong>Certificats </strong>affiche une liste les certificats disponibles.&#160;Ces certificats sont utilisés pour sécuriser les points d'entrée du serveur web, indiqués dans la section DSP (cf.&#160;<a href="../ConfigServeurWeb/Config_ServeurWeb_Presentation.htm">Gérer les points d'entrée du serveur web et certificats associés</a>).</p>
                                                         <ul>
                                                             <li>
-                                                                <p>le logo <img src="WD_Config_Certif_LogoSigne.png" /> indique que le certificat n'est pas signé ;</p>
+                                                                <p>le bouton-radio permet de sélectionner un certificat pour en afficher les informations en-dessous ;</p>
+                                                            </li>
+                                                        </ul>
+                                                        <ul>
+                                                            <li>
+                                                                <p>dans la colonne <strong>Est signé</strong> : </p>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p>le logo <img src="WD_Config_Certif_LogoSigne.png" /> indique que le certificat n'est pas signé ;</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>le logo <img src="WD_Config_Certif_LogoAutoSigne.png" style="width: 22px;height: 24px;" /> indique que le certificat est auto-signé ;</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>le logo <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Certificat_Signe.png" style="width: 20px;height: 20px;" /> indique que le certificat est signé par une autorité de certification ;</p>
+                                                                    </li>
+                                                                </ul>
                                                             </li>
                                                             <li>
-                                                                <p>le logo <img src="WD_Config_Certif_LogoAutoSigne.png" style="width: 22px;height: 24px;" /> indique que le certificat est auto-signé ;</p>
-                                                            </li>
-                                                            <li>
-                                                                <p>le logo <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Certificat_Signe.png" style="width: 20px;height: 20px;" /> indique que le certificat est signé par une autorité de certification ;</p>
+                                                                <p>dans la colonne <strong>Actions</strong> : </p>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p>le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Supprimer.png" style="width: 18px;height: 18px;" /> permet de supprimer un certificat ; </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Enregistrer.png" style="width: 17px;height: 17px;" /> permet de télécharger le certificat ; </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Signer_Certificat.png" style="width: 27px;height: 21px;" /> permet de télécharger le CSR&#160;du certificat pour en demander la signature ;</p>
+                                                                    </li>
+                                                                </ul>
                                                             </li>
                                                         </ul>
                                                     </li>
                                                     <li>
-                                                        <p>dans la colonne <strong>Actions</strong> : </p>
-                                                        <ul>
-                                                            <li>
-                                                                <p>le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Supprimer.png" style="width: 18px;height: 18px;" /> permet de supprimer un certificat ; </p>
-                                                            </li>
-                                                            <li>
-                                                                <p>le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Enregistrer.png" style="width: 17px;height: 17px;" /> permet de télécharger le certificat ; </p>
-                                                            </li>
-                                                            <li>
-                                                                <p>le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Signer_Certificat.png" style="width: 27px;height: 21px;" /> permet de télécharger le CSR&#160;du certificat pour en demander la signature ;</p>
-                                                            </li>
-                                                        </ul>
+                                                        <p>la section <strong>Génération d'un nouveau certificat</strong> permet de générer un nouveau certificat&#160;auto-signé ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>la section<strong> Import d'un certificat</strong> permet d'importer un certificat (généré ou fourni par une autorité de certification) :<br /><br /><a class="MCPopupThumbnailLink" href="../ConfigServeurWeb/WD_Config_Certif_Presentation.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1110" data-mc-height="359" src="../ConfigServeurWeb/WD_Config_Certif_Presentation.png" tabindex="" style="max-width: 1000px;" /></a><br /></p>
                                                     </li>
                                                 </ul>
-                                            </li>
-                                            <li>
-                                                <p>la section <strong>Génération d'un nouveau certificat</strong> permet de générer un nouveau certificat&#160;auto-signé ;</p>
-                                            </li>
-                                            <li>
-                                                <p>la section<strong> Import d'un certificat</strong> permet d'importer un certificat (généré ou fourni par une autorité de certification) :<br /><br /><a class="MCPopupThumbnailLink" href="../ConfigServeurWeb/WD_Config_Certif_Presentation.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1110" data-mc-height="359" src="../ConfigServeurWeb/WD_Config_Certif_Presentation.png" tabindex="" style="max-width: 1000px;" /></a><br /></p>
-                                            </li>
-                                        </ul>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocCertificatsPr%C3%A9sentation">Watchdoc - Certificats - Présentation</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Principe">Principe</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Acc%C3%A9der%C3%A0linterfacedeconfiguration">Accéder à l'interface de configuration</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Pr%C3%A9sentationdelinterface">Présentation de l'interface</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
                                     </div>
-                                    <p>&#160;</p>
+                                    <!--<MadCap:miniTocProxy />
+        <MadCap:bodyProxy class=".body-container" />-->
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">
                                             <button class="button elearning-button needs-pie previous-topic-button" title="Précédent" disabled="true">

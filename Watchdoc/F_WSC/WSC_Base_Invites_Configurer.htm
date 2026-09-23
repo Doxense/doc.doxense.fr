@@ -165,6 +165,94 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WSCBaseInvitésGuestsConfigurerlabasedesinvités" data-magellan-target="WSCBaseInvitésGuestsConfigurerlabasedesinvités">WSC - Base Invités (Guests) - Configurer la base des invités</h1>
+                                                <h2 id="Principe" data-magellan-target="Principe">Principe</h2>
+                                                <p>Dans Watchdoc, la gestion des Invités permet d'administrer une base dans laquelle sont enregistrés les Invités, utilisateurs non-inscrits dans l'annuaire de Watchdoc. Ainsi, ces utilisateurs de passage peuvent imprimer de manière sécurisée sans inscription préalable dans l'annuaire de Watchdoc.</p>
+                                                <h2 id="Accéderàlinterfacedeconfiguration" data-magellan-target="Accéderàlinterfacedeconfiguration">Accéder à l'interface de configuration</h2>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Depuis le <strong>Menu principal</strong> de WSC, cliquez sur l'entrée de menu <strong>Configuration</strong>&#160;:</p>
+                                                    </li>
+                                                </ol>
+                                                <ol data-mc-continue="true">
+                                                    <li value="2">
+                                                        <p>Dans l'interface <strong>Configuration avancée</strong>, cliquez sur le bouton <strong>Base des invités</strong>&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/ManageGuests/WSC_Invites_Configuration.png" style="height: auto;width: 700px;" /><br /><br /><br /><span style="font-family: 'Wingdings'">è</span> Vous accédez à l'interface <strong>Configuration de la base des invités</strong>.<br /></p>
+                                                    </li>
+                                                </ol>
+                                                <h2 id="Configurerlabasedesinvités" data-magellan-target="Configurerlabasedesinvités">Configurer la base des invités<br /></h2>
+                                                <h3>Section Informations de connexion<br /></h3>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Dans cette section, indiquez les informations permettant d'établir la connexion avec la base dans laquelle sont enregistrés les comptes invités : </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p><strong>Type :</strong> sélectionnez dans la liste le type de base de données utilisée pour enregistrer les comptes invités ;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Serveur SQL :</strong> indiquez dans ce champ le serveur sur lequel se trouve la base de données utilisée pour enregistrer les comptes invités. Si vous ne connaissez pas le nom du serveur, cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Parcourir.png" /> pour parcourir la liste des serveurs existants et y sélectionner le serveur utilisé.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Authentification : </strong>sélectionnez le type d'authentification requise pour accéder au serveur SQL (SQL serveur ou Windows SSPI)</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Nom d'utilisateur : </strong>si vous avez opté pour l'authentification SQL, saisissez dans ce champ le nom d'utilisateur autorisé à accéder à la base de données utilisée ; si vous avez opté pour l'authentification SSPI, cette information sera communiquée automatiquemement.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Mot de passe : </strong>si vous avez opté pour l'authentification SQL, saisissez dans ce champ le mot de passe associé à l'utilisateur autorisé à accéder à la base de données&#160;; si vous avez opté pour l'authentification SSPI, cette information sera communiquée automatiquemement.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Base de données :</strong> dans le champ, saisissez le nom de la base de données utilisée pour enregistrer les comptes invités.&#160;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Chemin :</strong> si la base est de type SQLite, indiquez le chemin d'accès à la base de données :<br /><br /><img src="../Z_Resources/Images/02_Captures/ManageGuests/WSC_Invites_Config_Connexion.png" style="width: 700px;height: auto;" /></p>
+                                                                <p>&#160;</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>Une fois les champs complétés, cliquez sur le bouton<strong> Tester la connexion </strong>pour vérifier que les informations fournies permettent d'accéder à la base de données utilisée pour enregistrer les comptes invités.</p>
+                                                    </li>
+                                                </ol>
+                                                <h3><a name="Section_Code_PUK" id="Section_Code_PUK"></a>Section Code PUK généré automatiquement</h3>
+                                                <p>L'invité peut disposer d'un code <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm glossaryTermPopup MCTextPopupHotSpot_ MCTextPopupHotSpot_Popup" glossTerm="Glossary.Term65">PUK<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Puk = Print User Key.
+Dans Watchdoc, il s'agit d'un code associé à un compte utilisateur pour permettre à ce dernier de s'authentifier dans un WES.
+Le code PUK est généré par un algorithme. 
+L'utilisateur peut le consulter dans la page "Mon compte" de Watchdoc. 
+Par souci de sécurité, nous déconseillons l'utilisation du code PUK et recommandons l'utilisation d'un login (compte utilisateur)/code PIN.</span></a> ou d'un code <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term44">PIN <img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Le code PIN (Personal Identification Number) est un code comportant au moins 4 chiffres. Il est, par exemple, utilisé sur un téléphone mobile ou un smartphone équipés d'une carte SIM. Dans Watchhdoc, c'est un code qui, associé au nom d'utilisateur, constitue un moyen d'authentification sur un WES.
+Ce code peut être saisi et consulté depuis la page Mon Compte.
+Il est enregistré soit dans une table SQL, soit dans un fichier Json et peut être stocké tel quel ou sécurisé par hachage.</span></a> pour s'authentifier dans Watchdoc.&#160;Ces codes sont saisis dans l'interface de création du compte invité.&#160;Si ces codes ne sont pas saisis manuellement, il sont générés automatiquement lors de la validation du compte invité.&#160;<br />Lors de la génération, WSC&#160;ajoute le chiffre 9 comme préfixe du code PUK&#160;afin de discriminer les codes PUK de la base Invités d'autres codes PUK existants.</p>
+                                                <p>&#160;</p>
+                                                <p>Dans cette section, vous indiquez le niveau d'algorithme à appliquer lors de la génération automatique du code PUK (quand ce code PUK est saisi manuellement lors de la création du compte invité, sa longueur n'est pas contrôlée) :<br /></p>
+                                                <ul>
+                                                    <li>
+                                                        <p>soit un algorithme de 7&#160;chiffres (sécurité faible) ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p>soit un algorithme de 11&#160;chiffres (sécurité moyenne).<br /><img src="../Z_Resources/Images/02_Captures/ManageGuests/WSC_Invites_Config_CodePuk.png" /><br /></p>
+                                                    </li>
+                                                </ul>
+                                                <p>&#160;</p>
+                                                <p><span style="font-family: 'Wingdings'">è</span>Une fois la base des Invités configurée, vous pouvez y ajouter les comptes invités.</p>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WSCBaseInvit%C3%A9sGuestsConfigurerlabasedesinvit%C3%A9s">WSC - Base Invités (Guests) - Configurer la base des invités</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Principe">Principe</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Acc%C3%A9der%C3%A0linterfacedeconfiguration">Accéder à l'interface de configuration</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Configurerlabasedesinvit%C3%A9s">Configurer la base des invités</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -198,76 +286,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1>WSC - Base Invités (Guests) - Configurer la base des invités</h1>
-                                        <h2>Principe</h2>
-                                        <p>Dans Watchdoc, la gestion des Invités permet d'administrer une base dans laquelle sont enregistrés les Invités, utilisateurs non-inscrits dans l'annuaire de Watchdoc. Ainsi, ces utilisateurs de passage peuvent imprimer de manière sécurisée sans inscription préalable dans l'annuaire de Watchdoc.</p>
-                                        <h2>Accéder à l'interface de configuration</h2>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Depuis le <strong>Menu principal</strong> de WSC, cliquez sur l'entrée de menu <strong>Configuration</strong>&#160;:</p>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="2">
-                                                <p>Dans l'interface <strong>Configuration avancée</strong>, cliquez sur le bouton <strong>Base des invités</strong>&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/ManageGuests/WSC_Invites_Configuration.png" style="height: auto;width: 700px;" /><br /><br /><br /><span style="font-family: 'Wingdings'">è</span> Vous accédez à l'interface <strong>Configuration de la base des invités</strong>.<br /></p>
-                                            </li>
-                                        </ol>
-                                        <h2>Configurer la base des invités<br /></h2>
-                                        <h3>Section Informations de connexion<br /></h3>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Dans cette section, indiquez les informations permettant d'établir la connexion avec la base dans laquelle sont enregistrés les comptes invités : </p>
-                                                <ul>
-                                                    <li>
-                                                        <p><strong>Type :</strong> sélectionnez dans la liste le type de base de données utilisée pour enregistrer les comptes invités ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Serveur SQL :</strong> indiquez dans ce champ le serveur sur lequel se trouve la base de données utilisée pour enregistrer les comptes invités. Si vous ne connaissez pas le nom du serveur, cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Parcourir.png" /> pour parcourir la liste des serveurs existants et y sélectionner le serveur utilisé.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Authentification : </strong>sélectionnez le type d'authentification requise pour accéder au serveur SQL (SQL serveur ou Windows SSPI)</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Nom d'utilisateur : </strong>si vous avez opté pour l'authentification SQL, saisissez dans ce champ le nom d'utilisateur autorisé à accéder à la base de données utilisée ; si vous avez opté pour l'authentification SSPI, cette information sera communiquée automatiquemement.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Mot de passe : </strong>si vous avez opté pour l'authentification SQL, saisissez dans ce champ le mot de passe associé à l'utilisateur autorisé à accéder à la base de données&#160;; si vous avez opté pour l'authentification SSPI, cette information sera communiquée automatiquemement.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Base de données :</strong> dans le champ, saisissez le nom de la base de données utilisée pour enregistrer les comptes invités.&#160;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Chemin :</strong> si la base est de type SQLite, indiquez le chemin d'accès à la base de données :<br /><br /><img src="../Z_Resources/Images/02_Captures/ManageGuests/WSC_Invites_Config_Connexion.png" style="width: 700px;height: auto;" /></p>
-                                                        <p>&#160;</p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li value="2">
-                                                <p>Une fois les champs complétés, cliquez sur le bouton<strong> Tester la connexion </strong>pour vérifier que les informations fournies permettent d'accéder à la base de données utilisée pour enregistrer les comptes invités.</p>
-                                            </li>
-                                        </ol>
-                                        <h3><a name="Section_Code_PUK" id="Section_Code_PUK"></a>Section Code PUK généré automatiquement</h3>
-                                        <p>L'invité peut disposer d'un code <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm glossaryTermPopup MCTextPopupHotSpot_ MCTextPopupHotSpot_Popup" glossTerm="Glossary.Term65">PUK<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Puk = Print User Key.
-Dans Watchdoc, il s'agit d'un code associé à un compte utilisateur pour permettre à ce dernier de s'authentifier dans un WES.
-Le code PUK est généré par un algorithme. 
-L'utilisateur peut le consulter dans la page "Mon compte" de Watchdoc. 
-Par souci de sécurité, nous déconseillons l'utilisation du code PUK et recommandons l'utilisation d'un login (compte utilisateur)/code PIN.</span></a> ou d'un code <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term44">PIN <img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Le code PIN (Personal Identification Number) est un code comportant au moins 4 chiffres. Il est, par exemple, utilisé sur un téléphone mobile ou un smartphone équipés d'une carte SIM. Dans Watchhdoc, c'est un code qui, associé au nom d'utilisateur, constitue un moyen d'authentification sur un WES.
-Ce code peut être saisi et consulté depuis la page Mon Compte.
-Il est enregistré soit dans une table SQL, soit dans un fichier Json et peut être stocké tel quel ou sécurisé par hachage.</span></a> pour s'authentifier dans Watchdoc.&#160;Ces codes sont saisis dans l'interface de création du compte invité.&#160;Si ces codes ne sont pas saisis manuellement, il sont générés automatiquement lors de la validation du compte invité.&#160;<br />Lors de la génération, WSC&#160;ajoute le chiffre 9 comme préfixe du code PUK&#160;afin de discriminer les codes PUK de la base Invités d'autres codes PUK existants.</p>
-                                        <p>&#160;</p>
-                                        <p>Dans cette section, vous indiquez le niveau d'algorithme à appliquer lors de la génération automatique du code PUK (quand ce code PUK est saisi manuellement lors de la création du compte invité, sa longueur n'est pas contrôlée) :<br /></p>
-                                        <ul>
-                                            <li>
-                                                <p>soit un algorithme de 7&#160;chiffres (sécurité faible) ; </p>
-                                            </li>
-                                            <li>
-                                                <p>soit un algorithme de 11&#160;chiffres (sécurité moyenne).<br /><img src="../Z_Resources/Images/02_Captures/ManageGuests/WSC_Invites_Config_CodePuk.png" /><br /></p>
-                                            </li>
-                                        </ul>
-                                        <p>&#160;</p>
-                                        <p><span style="font-family: 'Wingdings'">è</span>Une fois la base des Invités configurée, vous pouvez y ajouter les comptes invités.</p>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

@@ -166,6 +166,84 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocProfildedéblocagewebPageMoncomptev2Prérequis" data-magellan-target="WatchdocProfildedéblocagewebPageMoncomptev2Prérequis"><a name="aanchor92"></a>
+                                                    <MadCap:concept term="WD4" />Watchdoc - Profil de déblocage web - Page Mon compte v. 2 - Prérequis</h1>
+                                                <h2 id="Principe" data-magellan-target="Principe">Principe</h2>
+                                                <p>La page Mon Compte v.&#160;2 est automatiquement installée à partir de Watchdoc v. 6.1.1.5654.</p>
+                                                <p>Pour activer la page Mon Compte v. 2, les prérequis suivants doivent être respectés.</p>
+                                                <h2 id="Fluxetports" data-magellan-target="Fluxetports"><a name="Prérequis" id="Prérequis"></a>Flux et ports</h2>
+                                                <table style="width: 100%;mc-table-style: url('../../Resources/TableSlylesheets/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                    <col class="TableStyle-Standard-Column-Regular" style="width: 152px;" />
+                                                    <col style="width: 179px;" class="TableStyle-Standard-Column-Regular" />
+                                                    <col class="TableStyle-Standard-Column-Regular" style="width: 183px;" />
+                                                    <col class="TableStyle-Standard-Column-Regular" />
+                                                    <tbody>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td colspan="2" style="text-align: center;font-weight: bold;font-size: 12pt;" class="TableStyle-Standard-BodyE-Regular-Row2">Flux entre</td>
+                                                            <td style="text-align: center;font-weight: bold;font-size: 12pt;" class="TableStyle-Standard-BodyE-Regular-Row2">Page de déblocage /<br />&#160;Mon Compte v. 1</td>
+                                                            <td style="text-align: center;font-weight: bold;font-size: 12pt;" class="TableStyle-Standard-BodyD-Regular-Row2">Page Mon Compte v.&#160;2</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">Poste de travail</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">IIS</td>
+                                                            <td style="text-align: center;font-size: 12pt;" class="TableStyle-Standard-BodyE-Regular-Row1">443</td>
+                                                            <td style="text-align: center;font-size: 12pt;" class="TableStyle-Standard-BodyD-Regular-Row1">443</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">IIS</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">Watchdoc Service</td>
+                                                            <td style="text-align: center;font-size: 12pt;" class="TableStyle-Standard-BodyE-Regular-Row2">5744</td>
+                                                            <td style="text-align: center;font-size: 12pt;" class="TableStyle-Standard-BodyD-Regular-Row2">non-concernée</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyB-Regular-Row1" style="font-size: 12pt;">Poste de travail</td>
+                                                            <td class="TableStyle-Standard-BodyB-Regular-Row1" style="font-size: 12pt;">Watchdoc service</td>
+                                                            <td style="text-align: center;font-size: 12pt;" class="TableStyle-Standard-BodyB-Regular-Row1">non-concernée</td>
+                                                            <td style="text-align: left;font-size: 12pt;" class="TableStyle-Standard-BodyA-Regular-Row1">•	5753 en cas d'installation initiale<br />•	ou 5753 en cas de mise à jour, mais avec risque d'avoir à réinstaller les WES dotés d'un certificat ;<br />•	ou port dédié (par exemple 5759) en cas de mise à jour pour éviter d'avoir à réinstaller les WES si c'est trop contraignant.
+</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <h2 id="Certificats" data-magellan-target="Certificats">Certificats</h2>
+                                                <p>Par défaut, le port 5753 est sécurisé par un certificat auto-signé.</p>
+                                                <p>Pour plus de sécurité, nous vous recommandons de faire signer ce certificat par votre autorité de certification.</p>
+                                                <p>Vous pouvez aussi choisir un  port dédié autre que le 5753 (5759, par exemple).&#160;Ce port  aura tout intérêt à être sécurisé par un certificat signé par votre Autorité de Certification (cf. <a href="../ConfigCertificats/ConfigCertificats_Procedure.htm#Faire_signer_Cert" target="_blank">Gérer les certificats - Faire signer un certificat</a> pour Watchdoc).<br /><br /><a class="MCPopupThumbnailLink" href="Admin_Page_MCV2_Schema.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="693" data-mc-height="416" src="Admin_Page_MCV2_Schema.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                <p>&#160;</p>
+                                                <h2 id="Exécutables" data-magellan-target="Exécutables">Exécutables</h2>
+                                                <p>La page Mon compte v. 2 requiert les outils suivants sur le site qui héberge le service IIS : </p>
+                                                <ul style="font-size: 12pt;">
+                                                    <li style="font-size: 12pt;">
+                                                        <p>MS URL Rewrite&#160;(cf. <a href="https://www.iis.net/downloads/microsoft/url-rewrite" target="_blank">Microsoft IIS&#160;downloads</a> page) ;</p>
+                                                    </li>
+                                                    <li style="font-size: 12pt;">
+                                                        <p>pour l'authentification MS&#160;Windows, l'exécutable <a href="https://dotnet.microsoft.com/en-us/download/dotnet/10.0" target="_blank">MS&#160;dotnet-hosting-10.0.9-win.exe.</a></p>
+                                                    </li>
+                                                </ul>
+                                                <p>&#160;</p>
+                                                <p>Lors d'une installation initiale de Watchdoc, ces outils sont installés automatiquement.<br /></p>
+                                                <p>Lors d'une <b>mise à jour</b> de Watchdoc, il est nécessaire d'installer ces outils au préalable. Si ce n'est pas le cas, l'assistant de mise à jour affiche un message d'information.</p>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocProfilded%C3%A9blocagewebPageMoncomptev2Pr%C3%A9requis">Watchdoc - Profil de déblocage web - Page Mon compte v. 2 - Prérequis</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Principe">Principe</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Fluxetports">Flux et ports</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Certificats">Certificats</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Ex%C3%A9cutables">Exécutables</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -199,64 +277,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor92"></a>
-                                            <MadCap:concept term="WD4" />Watchdoc - Profil de déblocage web - Page Mon compte v. 2 - Prérequis</h1>
-                                        <h2>Principe</h2>
-                                        <p>La page Mon Compte v.&#160;2 est automatiquement installée à partir de Watchdoc v. 6.1.1.5654.</p>
-                                        <p>Pour activer la page Mon Compte v. 2, les prérequis suivants doivent être respectés.</p>
-                                        <h2><a name="Prérequis" id="Prérequis"></a>Flux et ports</h2>
-                                        <table style="width: 100%;mc-table-style: url('../../Resources/TableSlylesheets/Standard.css');" class="TableStyle-Standard" cellspacing="0">
-                                            <col class="TableStyle-Standard-Column-Regular" style="width: 152px;" />
-                                            <col style="width: 179px;" class="TableStyle-Standard-Column-Regular" />
-                                            <col class="TableStyle-Standard-Column-Regular" style="width: 183px;" />
-                                            <col class="TableStyle-Standard-Column-Regular" />
-                                            <tbody>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td colspan="2" style="text-align: center;font-weight: bold;font-size: 12pt;" class="TableStyle-Standard-BodyE-Regular-Row2">Flux entre</td>
-                                                    <td style="text-align: center;font-weight: bold;font-size: 12pt;" class="TableStyle-Standard-BodyE-Regular-Row2">Page de déblocage /<br />&#160;Mon Compte v. 1</td>
-                                                    <td style="text-align: center;font-weight: bold;font-size: 12pt;" class="TableStyle-Standard-BodyD-Regular-Row2">Page Mon Compte v.&#160;2</td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">Poste de travail</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">IIS</td>
-                                                    <td style="text-align: center;font-size: 12pt;" class="TableStyle-Standard-BodyE-Regular-Row1">443</td>
-                                                    <td style="text-align: center;font-size: 12pt;" class="TableStyle-Standard-BodyD-Regular-Row1">443</td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">IIS</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">Watchdoc Service</td>
-                                                    <td style="text-align: center;font-size: 12pt;" class="TableStyle-Standard-BodyE-Regular-Row2">5744</td>
-                                                    <td style="text-align: center;font-size: 12pt;" class="TableStyle-Standard-BodyD-Regular-Row2">non-concernée</td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1" style="font-size: 12pt;">Poste de travail</td>
-                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1" style="font-size: 12pt;">Watchdoc service</td>
-                                                    <td style="text-align: center;font-size: 12pt;" class="TableStyle-Standard-BodyB-Regular-Row1">non-concernée</td>
-                                                    <td style="text-align: left;font-size: 12pt;" class="TableStyle-Standard-BodyA-Regular-Row1">•	5753 en cas d'installation initiale<br />•	ou 5753 en cas de mise à jour, mais avec risque d'avoir à réinstaller les WES dotés d'un certificat ;<br />•	ou port dédié (par exemple 5759) en cas de mise à jour pour éviter d'avoir à réinstaller les WES si c'est trop contraignant.
-</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <h2>Certificats</h2>
-                                        <p>Par défaut, le port 5753 est sécurisé par un certificat auto-signé.</p>
-                                        <p>Pour plus de sécurité, nous vous recommandons de faire signer ce certificat par votre autorité de certification.</p>
-                                        <p>Vous pouvez aussi choisir un  port dédié autre que le 5753 (5759, par exemple).&#160;Ce port  aura tout intérêt à être sécurisé par un certificat signé par votre Autorité de Certification (cf. <a href="../ConfigCertificats/ConfigCertificats_Procedure.htm#Faire_signer_Cert" target="_blank">Gérer les certificats - Faire signer un certificat</a> pour Watchdoc).<br /><br /><a class="MCPopupThumbnailLink" href="Admin_Page_MCV2_Schema.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="693" data-mc-height="416" src="Admin_Page_MCV2_Schema.png" tabindex="" style="max-width: 1000px;" /></a></p>
-                                        <p>&#160;</p>
-                                        <h2>Exécutables</h2>
-                                        <p>La page Mon compte v. 2 requiert les outils suivants sur le site qui héberge le service IIS : </p>
-                                        <ul style="font-size: 12pt;">
-                                            <li style="font-size: 12pt;">
-                                                <p>MS URL Rewrite&#160;(cf. <a href="https://www.iis.net/downloads/microsoft/url-rewrite" target="_blank">Microsoft IIS&#160;downloads</a> page) ;</p>
-                                            </li>
-                                            <li style="font-size: 12pt;">
-                                                <p>pour l'authentification MS&#160;Windows, l'exécutable <a href="https://dotnet.microsoft.com/en-us/download/dotnet/10.0" target="_blank">MS&#160;dotnet-hosting-10.0.9-win.exe.</a></p>
-                                            </li>
-                                        </ul>
-                                        <p>&#160;</p>
-                                        <p>Lors d'une installation initiale de Watchdoc, ces outils sont installés automatiquement.<br /></p>
-                                        <p>Lors d'une <b>mise à jour</b> de Watchdoc, il est nécessaire d'installer ces outils au préalable. Si ce n'est pas le cas, l'assistant de mise à jour affiche un message d'information.</p>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

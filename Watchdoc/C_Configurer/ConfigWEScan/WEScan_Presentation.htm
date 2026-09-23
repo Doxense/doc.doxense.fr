@@ -165,6 +165,87 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WEScanPrésentation" data-magellan-target="WEScanPrésentation"><a name="aanchor265"></a>
+                                                    <MadCap:concept term="WEScan;CFG" />WEScan - Présentation</h1>
+                                                <h2 id="Principe" data-magellan-target="Principe">Principe</h2>
+                                                <p>Watchdoc WEScan est une application apparue avec Watchdoc v5.4 qui permet à l'utilisateur de numériser des documents depuis un périphérique.&#160;</p>
+                                                <p>Une fois le scan réalisé, il est envoyé vers le serveur Watchdoc qui se charge de l'envoyer vers la destination définie dans le profil de destination (adresse mail ou dossier de l'environnement de travail de l'utilisateur) :<br /><br /><img src="../../Z_Resources/Images/03_Schemas/WD_Architecture_WESCan.png" style="width: 700px;height: auto;" /><br /><br /></p>
+                                                <p>Il s'agit d'une interface personnalisable, embarquée sur les périphériques d'impression compatibles, depuis laquelle les utilisateurs peuvent choisir un  profil de numérisation (profil de scan) combinant les paramètres de numérisation et d'envoi du document&#160;: <br /><br /><img src="../../Z_Resources/Images/02_Captures/WEScan_Util_Acces_PageAccueil_FR.png" style="height: auto;width: 500px;" /><br /><br /></p>
+                                                <p>WEScan s'appuie sur une fonction fournie par certains constructeurs de périphériques d'impression sous les dénominations suivantes : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p>Scan to me (ou Scan2Me) lorsque le document numérisé est envoyé vers l'e-mail de l'utilisateur authentifié ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Scan to folder (Scan2folder)  lorsque le document numérisé est envoyé vers un dossier réseau connu de l'utilisateur authentifié ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Scan to home (Scan2Home) lorsque le document numérisé est envoyé vers un dossier réseau propre à l'utilisateur authentifié (sur son espace de travail).</p>
+                                                    </li>
+                                                </ul>
+                                                <h2 id="Concepts" data-magellan-target="Concepts">Concepts</h2>
+                                                <p>WEScan repose sur les concepts suivants :</p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1">la <strong>destination</strong> (de scan) :   Une <strong>Destination </strong>est l'endroit où est envoyé le document numérisé.&#160;WEScan propose par défaut les destinations suivantes :<strong>Numériser vers mon E-Mail (ScanToMe) :</strong> numérise et envoie la numérisation à l'adresse mail de l'utilisateur (ce dernier doit disposer d'un compte dans l'annuaire (Active Directory) avec une adresse e-mail valide).<strong>Numériser vers E-Mail (ScanToMail) :</strong> numérise et envoie la numérisation à une adresse e-mail précisée par l'utilisateur ; <strong>Numériser vers Dossier (ScanTofolder) :</strong> numérise et envoie la numérisation dans un dossier prédéfini de l'espace de travail accessible à l'utilisateur ;<br /></p>
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1">le <strong>profil </strong>(de scan) : <strong>profil</strong> (de scan / de numérisation) est une somme de paramètres (format, couleur, orientation, type du document, etc.) définissant la manière dont un document est numérisé. <br />Enregistré dans un fichier JSON, le profil de numérisation peut être modifié à l'aide de l'exécutable <a href="WEScan_Config_Profil_SPC_Presentation.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">ScanProfilesCustomizer</a>.&#160;<strong>N.B.&#160;:</strong> dans un domaine, pour garantir la disponibilité des profils de numérisation sur tous les serveurs qui dépendent du serveur maître en cas de panne de la base de données interserveur, il convient de dupliquer tous les fichiers JSON des profils de numérisation du serveur master sur les serveurs qui en dépendent.<br />Pour cela, copiez le dossier de profils de numérisation personnalisés (dans lequel vous avez enregistré vos profils personnalisés) de votre serveur master sur le(s) serveur(s) qui en dépendent.</p>
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <p><strong>ScanToUrl :</strong> Lorsqu'un fichier joint est trop volumineux, il arrive que le serveur de mail le bloque et ne le délivre pas à son destinataire.&#160;Pour éviter une telle situation, l'outil WEScan s'est doté de la fonction <strong>ScanToUrl</strong>.</p>
+                                                    </li>
+                                                </ul>
+                                                <fieldset>Les paramètres de numérisation étant fortement dépendants des capacités du périphérique, ils ne peuvent pas tous être modifiés librement.<br />Cette dépendance aux capacités des périphériques explique aussi que, en cas de remplacement de périphériques par ceux d'une autre marque, il peut arriver que la fonction de numérisation perde ou gagne en fonctionnalités en raison de la capacité des nouvelles machines à supporter (ou pas) ces fonctionnalités. <br />Par exemple, la compression logicielle peut être moins performante sur de nouveaux périphériques que sur les anciens et le poids des fichiers de numérisation, plus important, peut provoquer des problèmes d'encombrement alors qu'il n'en provoquait pas avec les précédents matériels.</fieldset>
+                                                <h2 id="Etapesdeconfiguration" data-magellan-target="Etapesdeconfiguration"><strong>Etapes de configuration</strong>
+                                                </h2>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Vérifier la <a href="WEScan_Prerequis.htm" class="MCTopic MCTopicPopupHotSpot a">compatibilité</a> de WEScan avec le périphérique.</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>Vérifier les <a href="WEScan_Prerequis.htm" class="MCTopic MCTopicPopupHotSpot a">prérequis.</a></p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>Configurer la destination de numérisation (scan) : <a href="WEScan_Config_Profil_DestScanToMe.htm" class="MCTopic MCTopicPopupHotSpot a">ScanToMe</a>, <a href="WEScan_Config_Profil_DestScanToMail.htm" class="MCTopic MCTopicPopupHotSpot a">ScanToMail</a> ou <a href="WEScan_Config_Profil_DestScanToFolder.htm" class="MCTopic MCTopicPopupHotSpot a">ScanToFolder</a>.</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>Configurer le profil à l'aide de ScanProfilesCustomizer.</p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p>Si nécessaire, configurer ScanToUrl</p>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p>Si nécessaire, personnaliser la <a href="WEScan_Personnaliser_Graphiq.htm" class="MCTopic MCTopicPopupHotSpot a">présentation graphique de WEScan.</a></p>
+                                                    </li>
+                                                    <li value="7">
+                                                        <p><a href="WEScan_Config_ActiverFonction.htm" class="MCTopic MCTopicPopupHotSpot a">Activer WEScan</a> dans le profil WES&#160;installé sur la file.</p>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WEScanPr%C3%A9sentation">WEScan - Présentation</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Principe">Principe</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Concepts">Concepts</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Etapesdeconfiguration">Etapes de configuration</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -198,69 +279,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor265"></a>
-                                            <MadCap:concept term="WEScan;CFG" />WEScan - Présentation</h1>
-                                        <h2>Principe</h2>
-                                        <p>Watchdoc WEScan est une application apparue avec Watchdoc v5.4 qui permet à l'utilisateur de numériser des documents depuis un périphérique.&#160;</p>
-                                        <p>Une fois le scan réalisé, il est envoyé vers le serveur Watchdoc qui se charge de l'envoyer vers la destination définie dans le profil de destination (adresse mail ou dossier de l'environnement de travail de l'utilisateur) :<br /><br /><img src="../../Z_Resources/Images/03_Schemas/WD_Architecture_WESCan.png" style="width: 700px;height: auto;" /><br /><br /></p>
-                                        <p>Il s'agit d'une interface personnalisable, embarquée sur les périphériques d'impression compatibles, depuis laquelle les utilisateurs peuvent choisir un  profil de numérisation (profil de scan) combinant les paramètres de numérisation et d'envoi du document&#160;: <br /><br /><img src="../../Z_Resources/Images/02_Captures/WEScan_Util_Acces_PageAccueil_FR.png" style="height: auto;width: 500px;" /><br /><br /></p>
-                                        <p>WEScan s'appuie sur une fonction fournie par certains constructeurs de périphériques d'impression sous les dénominations suivantes : </p>
-                                        <ul>
-                                            <li>
-                                                <p>Scan to me (ou Scan2Me) lorsque le document numérisé est envoyé vers l'e-mail de l'utilisateur authentifié ;</p>
-                                            </li>
-                                            <li>
-                                                <p>Scan to folder (Scan2folder)  lorsque le document numérisé est envoyé vers un dossier réseau connu de l'utilisateur authentifié ;</p>
-                                            </li>
-                                            <li>
-                                                <p>Scan to home (Scan2Home) lorsque le document numérisé est envoyé vers un dossier réseau propre à l'utilisateur authentifié (sur son espace de travail).</p>
-                                            </li>
-                                        </ul>
-                                        <h2>Concepts</h2>
-                                        <p>WEScan repose sur les concepts suivants :</p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1">la <strong>destination</strong> (de scan) :   Une <strong>Destination </strong>est l'endroit où est envoyé le document numérisé.&#160;WEScan propose par défaut les destinations suivantes :<strong>Numériser vers mon E-Mail (ScanToMe) :</strong> numérise et envoie la numérisation à l'adresse mail de l'utilisateur (ce dernier doit disposer d'un compte dans l'annuaire (Active Directory) avec une adresse e-mail valide).<strong>Numériser vers E-Mail (ScanToMail) :</strong> numérise et envoie la numérisation à une adresse e-mail précisée par l'utilisateur ; <strong>Numériser vers Dossier (ScanTofolder) :</strong> numérise et envoie la numérisation dans un dossier prédéfini de l'espace de travail accessible à l'utilisateur ;<br /></p>
-                                            </li>
-                                        </ul>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1">le <strong>profil </strong>(de scan) : <strong>profil</strong> (de scan / de numérisation) est une somme de paramètres (format, couleur, orientation, type du document, etc.) définissant la manière dont un document est numérisé. <br />Enregistré dans un fichier JSON, le profil de numérisation peut être modifié à l'aide de l'exécutable <a href="WEScan_Config_Profil_SPC_Presentation.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">ScanProfilesCustomizer</a>.&#160;<strong>N.B.&#160;:</strong> dans un domaine, pour garantir la disponibilité des profils de numérisation sur tous les serveurs qui dépendent du serveur maître en cas de panne de la base de données interserveur, il convient de dupliquer tous les fichiers JSON des profils de numérisation du serveur master sur les serveurs qui en dépendent.<br />Pour cela, copiez le dossier de profils de numérisation personnalisés (dans lequel vous avez enregistré vos profils personnalisés) de votre serveur master sur le(s) serveur(s) qui en dépendent.</p>
-                                            </li>
-                                        </ul>
-                                        <ul>
-                                            <li>
-                                                <p><strong>ScanToUrl :</strong> Lorsqu'un fichier joint est trop volumineux, il arrive que le serveur de mail le bloque et ne le délivre pas à son destinataire.&#160;Pour éviter une telle situation, l'outil WEScan s'est doté de la fonction <strong>ScanToUrl</strong>.</p>
-                                            </li>
-                                        </ul>
-                                        <fieldset>Les paramètres de numérisation étant fortement dépendants des capacités du périphérique, ils ne peuvent pas tous être modifiés librement.<br />Cette dépendance aux capacités des périphériques explique aussi que, en cas de remplacement de périphériques par ceux d'une autre marque, il peut arriver que la fonction de numérisation perde ou gagne en fonctionnalités en raison de la capacité des nouvelles machines à supporter (ou pas) ces fonctionnalités. <br />Par exemple, la compression logicielle peut être moins performante sur de nouveaux périphériques que sur les anciens et le poids des fichiers de numérisation, plus important, peut provoquer des problèmes d'encombrement alors qu'il n'en provoquait pas avec les précédents matériels.</fieldset>
-                                        <h2><strong>Etapes de configuration</strong>
-                                        </h2>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Vérifier la <a href="WEScan_Prerequis.htm" class="MCTopic MCTopicPopupHotSpot a">compatibilité</a> de WEScan avec le périphérique.</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>Vérifier les <a href="WEScan_Prerequis.htm" class="MCTopic MCTopicPopupHotSpot a">prérequis.</a></p>
-                                            </li>
-                                            <li value="3">
-                                                <p>Configurer la destination de numérisation (scan) : <a href="WEScan_Config_Profil_DestScanToMe.htm" class="MCTopic MCTopicPopupHotSpot a">ScanToMe</a>, <a href="WEScan_Config_Profil_DestScanToMail.htm" class="MCTopic MCTopicPopupHotSpot a">ScanToMail</a> ou <a href="WEScan_Config_Profil_DestScanToFolder.htm" class="MCTopic MCTopicPopupHotSpot a">ScanToFolder</a>.</p>
-                                            </li>
-                                            <li value="4">
-                                                <p>Configurer le profil à l'aide de ScanProfilesCustomizer.</p>
-                                            </li>
-                                            <li value="5">
-                                                <p>Si nécessaire, configurer ScanToUrl</p>
-                                            </li>
-                                            <li value="6">
-                                                <p>Si nécessaire, personnaliser la <a href="WEScan_Personnaliser_Graphiq.htm" class="MCTopic MCTopicPopupHotSpot a">présentation graphique de WEScan.</a></p>
-                                            </li>
-                                            <li value="7">
-                                                <p><a href="WEScan_Config_ActiverFonction.htm" class="MCTopic MCTopicPopupHotSpot a">Activer WEScan</a> dans le profil WES&#160;installé sur la file.</p>
-                                            </li>
-                                        </ol>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

@@ -164,6 +164,121 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WRSConfigurerlesdroits" data-magellan-target="WRSConfigurerlesdroits"><a name="aanchor354"></a>
+                                                    <MadCap:concept term="WRS" />WRS - Configurer les droits</h1>
+                                                <h2 id="Configurerlesdroits" data-magellan-target="Configurerlesdroits">Configurer les droits</h2>
+                                                <p>Dans le cas où vous n'arrivez pas à accéder à la page des rapports WRS<sup>®</sup> et où le message suivant s'affiche, il peut s'agir d'un problème de configuration de droits : <br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Config_DroitsL.png" /><br /><br /></p>
+                                                <p>Dans ce cas, il convient de vérifier les droits des 3 outils suivants et de ls modifier si nécessaire&#160;:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1">droits du navigateur Internet Explorer<sup>®</sup> ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">droits du Content Manager ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">droits System Administrator. </p>
+                                                    </li>
+                                                </ul>
+                                                <h3>Droits du navigateur</h3>
+                                                <p>Par défaut, MS Reporting Services<sup>®</sup> ne laisse accès qu'au profil administrateur local. Pour ajouter les droits à un utilisateur du domaine&#160;:</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1">accédez au serveur sur lequel est installé Reporting Services en tant qu'administrateur local&#160;;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1">dans ce serveur, exécutez <strong>Internet Explorer</strong>&#160;;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p class="Liste_num_1">dans Internet Explorer, accédez à l'onglet de Sécurité :<strong> Outils &gt; Options Internet &gt; Onglet Sécurité</strong>&#160;; </p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p class="Liste_num_1"> Sélectionnez <strong>Sites de confiance</strong> puis cliquez sur le bouton Sites&#160;;<br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Config_DroitsInternetExplorer.png" style="width: 296px;height: 376px;" /></p>
+                                                    </li>
+                                                </ol>
+                                                <ol data-mc-continue="true">
+                                                    <li value="5">
+                                                        <p class="Liste_num_1">décochez la case <strong>Exiger un serveur sécurisé</strong>&#160;;</p>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p class="Liste_num_1">ajoutez http://localhost à la liste des sites web de la zone ; </p>
+                                                    </li>
+                                                    <li value="7">
+                                                        <p class="Liste_num_1">cliquez sur le bouton <strong>Ajouter </strong>:<br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Config_DroitsInternetExplorer_2.png" style="width: 433px;height: 383px;" /><br /></p>
+                                                    </li>
+                                                </ol>
+                                                <ol data-mc-continue="true">
+                                                    <li value="8">
+                                                        <p class="Liste_num_1">Lorsque l'adresse http://localhost s'affiche dans la zone <strong>Sites web</strong>, cliquez sur le bouton <strong>Fermer.</strong></p>
+                                                    </li>
+                                                </ol>
+                                                <h3>Droits du gestionnaire de rapports (MS SQL Reporting Services)</h3>
+                                                <p>&#160;</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Pour vérifier les droits du gestionnaire de rapports : </p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1">depuis le serveur où est installé MS SQL<sup>®</sup>, lancez le navigateur Internet Explorer<sup>®</sup> en tant qu'administrateur&#160;;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p class="Liste_num_1">avec Internet Explorer exécuté en tant qu'administrateur local, accédez à l'URL de Gestionnaire des rapports : http://localhost/Reports_WATCHDOC ;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p class="Liste_num_1">cliquez sur <strong>Paramètres du dossier</strong>&#160;:<br /><img src="../Z_Resources/Images/02_Captures/WRS_Config_DroitsSQLServerReportingServices_1.png" /></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p class="Liste_num_1">dans la section <strong>Sécurité</strong>, cliquez sur<strong> Nouvelle attribution de Rôle :</strong><br /></p>
+                                                        <p class="Liste_num_1">
+                                                            <img src="../Z_Resources/Images/02_Captures/WRS_Config_DroitsSQLServerReportingServices_2.png" />
+                                                        </p>
+                                                        <p style="text-align: center;">&#160;</p>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p class="Liste_num_1">dans le champ <strong>Nom d'utilisateur</strong>, saisissez le nom (sous la forme domain\login) de l'utilisateur habilité à gérer le contenu&#160;;</p>
+                                                    </li>
+                                                    <li value="7">
+                                                        <p class="Liste_num_1">cochez le rôle <strong>Content Manager</strong> puis validez par le bouton <strong>OK</strong>&#160;;<br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Config_DroitsSQLServerReportingServices_3.png" /></p>
+                                                        <p style="text-align: center;">&#160;</p>
+                                                    </li>
+                                                    <li value="8">
+                                                        <p class="TitreNiveau3">Droits de l'administrateur du système (System Administrator)</p>
+                                                    </li>
+                                                    <li value="9">
+                                                        <p class="Liste_num_1">Toujours depuis le Gestionnaire de rapports, cliquez ensuite sur <strong>Paramètres du site</strong> :<br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Config_DroitsSQLServerReportingServices_4.png" /></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="10">
+                                                        <p class="Liste_num_1">Dans l'onglet <strong>Sécurité</strong>, cliquez sur <strong>Nouvelle attribution de rôle</strong>&#160;;</p>
+                                                    </li>
+                                                    <li value="11">
+                                                        <p class="Liste_num_1">Dans le champ<strong> Nom d'utilisateur</strong><strong>ou de groupe</strong>, saisissez le profil (sous la forme : domain\login) de l'utilisateur habilité à gérer le contenu ;</p>
+                                                    </li>
+                                                    <li value="12">
+                                                        <p class="Liste_num_1"> Cochez le rôle<strong> System Administrator</strong>, puis cliquez sur <strong>OK&#160;</strong>:<br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Config_DroitsSQLServerReportingServices_6.png" /></p>
+                                                        <p style="text-align: center;">&#160;</p>
+                                                    </li>
+                                                    <li value="13">
+                                                        <p class="Liste_num_1">Fermez le navigateur puis <strong>Internet Explorer</strong>, puis relancez-le sans l'exécuter en tant qu'administrateur.</p>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WRSConfigurerlesdroits">WRS - Configurer les droits</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Configurerlesdroits">Configurer les droits</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
                                     </script>
                                     <!-- Google Tag Manager (noscript) -->
@@ -198,107 +313,6 @@
                                     <div class="nocontent">
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
-                                    </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor354"></a>
-                                            <MadCap:concept term="WRS" />WRS - Configurer les droits</h1>
-                                        <h2>Configurer les droits</h2>
-                                        <p>Dans le cas où vous n'arrivez pas à accéder à la page des rapports WRS<sup>®</sup> et où le message suivant s'affiche, il peut s'agir d'un problème de configuration de droits : <br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Config_DroitsL.png" /><br /><br /></p>
-                                        <p>Dans ce cas, il convient de vérifier les droits des 3 outils suivants et de ls modifier si nécessaire&#160;:</p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1">droits du navigateur Internet Explorer<sup>®</sup> ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">droits du Content Manager ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">droits System Administrator. </p>
-                                            </li>
-                                        </ul>
-                                        <h3>Droits du navigateur</h3>
-                                        <p>Par défaut, MS Reporting Services<sup>®</sup> ne laisse accès qu'au profil administrateur local. Pour ajouter les droits à un utilisateur du domaine&#160;:</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">accédez au serveur sur lequel est installé Reporting Services en tant qu'administrateur local&#160;;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1">dans ce serveur, exécutez <strong>Internet Explorer</strong>&#160;;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1">dans Internet Explorer, accédez à l'onglet de Sécurité :<strong> Outils &gt; Options Internet &gt; Onglet Sécurité</strong>&#160;; </p>
-                                            </li>
-                                            <li value="4">
-                                                <p class="Liste_num_1"> Sélectionnez <strong>Sites de confiance</strong> puis cliquez sur le bouton Sites&#160;;<br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Config_DroitsInternetExplorer.png" style="width: 296px;height: 376px;" /></p>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="5">
-                                                <p class="Liste_num_1">décochez la case <strong>Exiger un serveur sécurisé</strong>&#160;;</p>
-                                            </li>
-                                            <li value="6">
-                                                <p class="Liste_num_1">ajoutez http://localhost à la liste des sites web de la zone ; </p>
-                                            </li>
-                                            <li value="7">
-                                                <p class="Liste_num_1">cliquez sur le bouton <strong>Ajouter </strong>:<br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Config_DroitsInternetExplorer_2.png" style="width: 433px;height: 383px;" /><br /></p>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="8">
-                                                <p class="Liste_num_1">Lorsque l'adresse http://localhost s'affiche dans la zone <strong>Sites web</strong>, cliquez sur le bouton <strong>Fermer.</strong></p>
-                                            </li>
-                                        </ol>
-                                        <h3>Droits du gestionnaire de rapports (MS SQL Reporting Services)</h3>
-                                        <p>&#160;</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Pour vérifier les droits du gestionnaire de rapports : </p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1">depuis le serveur où est installé MS SQL<sup>®</sup>, lancez le navigateur Internet Explorer<sup>®</sup> en tant qu'administrateur&#160;;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1">avec Internet Explorer exécuté en tant qu'administrateur local, accédez à l'URL de Gestionnaire des rapports : http://localhost/Reports_WATCHDOC ;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p class="Liste_num_1">cliquez sur <strong>Paramètres du dossier</strong>&#160;:<br /><img src="../Z_Resources/Images/02_Captures/WRS_Config_DroitsSQLServerReportingServices_1.png" /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="5">
-                                                <p class="Liste_num_1">dans la section <strong>Sécurité</strong>, cliquez sur<strong> Nouvelle attribution de Rôle :</strong><br /></p>
-                                                <p class="Liste_num_1">
-                                                    <img src="../Z_Resources/Images/02_Captures/WRS_Config_DroitsSQLServerReportingServices_2.png" />
-                                                </p>
-                                                <p style="text-align: center;">&#160;</p>
-                                            </li>
-                                            <li value="6">
-                                                <p class="Liste_num_1">dans le champ <strong>Nom d'utilisateur</strong>, saisissez le nom (sous la forme domain\login) de l'utilisateur habilité à gérer le contenu&#160;;</p>
-                                            </li>
-                                            <li value="7">
-                                                <p class="Liste_num_1">cochez le rôle <strong>Content Manager</strong> puis validez par le bouton <strong>OK</strong>&#160;;<br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Config_DroitsSQLServerReportingServices_3.png" /></p>
-                                                <p style="text-align: center;">&#160;</p>
-                                            </li>
-                                            <li value="8">
-                                                <p class="TitreNiveau3">Droits de l'administrateur du système (System Administrator)</p>
-                                            </li>
-                                            <li value="9">
-                                                <p class="Liste_num_1">Toujours depuis le Gestionnaire de rapports, cliquez ensuite sur <strong>Paramètres du site</strong> :<br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Config_DroitsSQLServerReportingServices_4.png" /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="10">
-                                                <p class="Liste_num_1">Dans l'onglet <strong>Sécurité</strong>, cliquez sur <strong>Nouvelle attribution de rôle</strong>&#160;;</p>
-                                            </li>
-                                            <li value="11">
-                                                <p class="Liste_num_1">Dans le champ<strong> Nom d'utilisateur</strong><strong>ou de groupe</strong>, saisissez le profil (sous la forme : domain\login) de l'utilisateur habilité à gérer le contenu ;</p>
-                                            </li>
-                                            <li value="12">
-                                                <p class="Liste_num_1"> Cochez le rôle<strong> System Administrator</strong>, puis cliquez sur <strong>OK&#160;</strong>:<br /><br /><img src="../Z_Resources/Images/02_Captures/WRS_Config_DroitsSQLServerReportingServices_6.png" /></p>
-                                                <p style="text-align: center;">&#160;</p>
-                                            </li>
-                                            <li value="13">
-                                                <p class="Liste_num_1">Fermez le navigateur puis <strong>Internet Explorer</strong>, puis relancez-le sans l'exécuter en tant qu'administrateur.</p>
-                                            </li>
-                                        </ol>
                                     </div>
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">

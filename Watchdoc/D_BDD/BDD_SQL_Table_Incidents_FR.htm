@@ -177,452 +177,458 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h3>Table incidents</h3>
-                                        <h4>Description</h4>
-                                        <p class="p_8">Cette table contient toutes les informations collectées par Watchdoc sur les incidents survenus.</p>
-                                        <p class="p_8">&#160;</p>
-                                        <h4><span class="span_3">Schéma</span>
-                                        </h4>
-                                        <table style="mc-table-style: url('../Resources/TableSlylesheets/Standard.css');" class="TableStyle-Standard" cellspacing="0">
-                                            <col class="TableStyle-Standard-Column-Regular" />
-                                            <col class="TableStyle-Standard-Column-Regular" />
-                                            <col style="width: 113px;" class="TableStyle-Standard-Column-Regular" />
-                                            <col class="TableStyle-Standard-Column-Regular" />
-                                            <col class="TableStyle-Standard-Column-Regular" />
-                                            <tbody>
-                                                <tr style="height: 32px;" class="TableStyle-Standard-Body-Row2">
-                                                    <td style="background-color: #ff803b;color: #000000;font-weight: bold;" class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p class="p_10"><span class="Élevé" style="color: #000000;">Field</span>
-                                                        </p>
-                                                    </td>
-                                                    <td style="background-color: #ff803b;color: #000000;font-weight: bold;" class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p class="p_11"><span style="color: #000000;">Type</span>
-                                                        </p>
-                                                    </td>
-                                                    <td style="background-color: #ff803b;color: #000000;font-weight: bold;" class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p class="p_11"><span style="color: #000000;">Requis</span>
-                                                        </p>
-                                                    </td>
-                                                    <td style="background-color: #ff803b;color: #000000;font-weight: bold;" class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p class="p_11" style="color: #000000;">C.P</p>
-                                                    </td>
-                                                    <td style="background-color: #ff803b;color: #000000;font-weight: bold;" class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                        <p class="p_11"><span style="color: #000000;">Description</span>
-                                                        </p>
-                                                    </td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>incID</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>bigint</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>*</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>*</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                        <p>Identifiant unique de l'incident</p>
-                                                    </td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>incCODE</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>tinyint</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>*</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                        <p>Code de l'incident</p>
-                                                    </td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>incDOCUMENTID</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>bigint</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                        <p>Identifiant du document concerné par l'incident</p>
-                                                    </td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>incDATE</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>datetime</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>*</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                        <p>Date de l'incident</p>
-                                                    </td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>incQUEUE</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>varchar(64)</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                        <p>File concernée par l'incident.</p>
-                                                    </td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>incERROR</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>nvarchar(255)</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                        <p>Code d'erreur de l'incident.</p>
-                                                    </td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>incDESCRIPTION</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>text</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                        <p>Description de l'incident.</p>
-                                                    </td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>incREFUND</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>tinyint</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>*</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>incDELETED</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>tinyint</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>*</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>incTYPE</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>tinyint</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>*</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>incUSER</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>nvarchar(128)</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                        <p>Utilisateur à l'origine de l'incident.</p>
-                                                    </td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>incTITLE</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>nvarchar(255)</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                        <p>Titre du travail d'impression à l'origine de l'incident.</p>
-                                                    </td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>incSTATION</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>nvarchar (128)</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>(1208)</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                        <p>Nom DNS du poste de travail à l’origine de l'incident</p>
-                                                    </td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>incCACHEYEAR</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>smallint</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                        <p>clé d'optimisation </p>
-                                                    </td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>incCACHEMONTH</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>tinyint</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                        <p>clé d'optimisation </p>
-                                                    </td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>incCACHEDAY</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>tinyint</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                        <p>clé d'optimisation </p>
-                                                    </td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>incCACHEHOUR</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>tinyint</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                        <p>clé d'optimisation </p>
-                                                    </td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>incCACHEDAYOFWEEK</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>tinyint</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                        <p>clé d'optimisation </p>
-                                                    </td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>incCACHEMINUTE</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>tinyint</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                        <p>clé d'optimisation </p>
-                                                    </td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>incQGROUP</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>varchar (64)</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                        <p>Identifiant du groupe de files sur lequel a eu lieu l'incident.</p>
-                                                    </td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>incQSITE</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>varchar (64)</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                        <p>Identifiant du site (identifiant du serveur Watchdoc) dont dépend la file sur laquelle a eu lieu l'incident.</p>
-                                                    </td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>incDATERESOLVED</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>datetime</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                        <p>Date de résolution de l'incident</p>
-                                                    </td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>incMOVED</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>tinyint</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                        <p>Champ système utilisé dans une architecture master et utilisé sur les serveurs Watchdoc pour préciser si la valeur du champ a été répliquée sur le master et peut donc être supprimée (si NULL ou 0, document "local", si &gt;= 254, document archivé qui peut être supprimé).</p>
-                                                    </td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyB-Regular-Row2">
-                                                        <p class="p_12"><span class="span_5">incSOURCEID</span>
-                                                        </p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyB-Regular-Row2">
-                                                        <p>bigint</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyB-Regular-Row2">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyB-Regular-Row2">
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyA-Regular-Row2">
-                                                        <p>Champ système : identifiant temporaire de l'incident pendant la transaction de réplication.</p>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h3>Table incidents</h3>
+                                                <h4>Description</h4>
+                                                <p class="p_8">Cette table contient toutes les informations collectées par Watchdoc sur les incidents survenus.</p>
+                                                <p class="p_8">&#160;</p>
+                                                <h4><span class="span_3">Schéma</span>
+                                                </h4>
+                                                <table style="mc-table-style: url('../Resources/TableSlylesheets/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                    <col class="TableStyle-Standard-Column-Regular" />
+                                                    <col class="TableStyle-Standard-Column-Regular" />
+                                                    <col style="width: 113px;" class="TableStyle-Standard-Column-Regular" />
+                                                    <col class="TableStyle-Standard-Column-Regular" />
+                                                    <col class="TableStyle-Standard-Column-Regular" />
+                                                    <tbody>
+                                                        <tr style="height: 32px;" class="TableStyle-Standard-Body-Row2">
+                                                            <td style="background-color: #ff803b;color: #000000;font-weight: bold;" class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p class="p_10"><span class="Élevé" style="color: #000000;">Field</span>
+                                                                </p>
+                                                            </td>
+                                                            <td style="background-color: #ff803b;color: #000000;font-weight: bold;" class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p class="p_11"><span style="color: #000000;">Type</span>
+                                                                </p>
+                                                            </td>
+                                                            <td style="background-color: #ff803b;color: #000000;font-weight: bold;" class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p class="p_11"><span style="color: #000000;">Requis</span>
+                                                                </p>
+                                                            </td>
+                                                            <td style="background-color: #ff803b;color: #000000;font-weight: bold;" class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p class="p_11" style="color: #000000;">C.P</p>
+                                                            </td>
+                                                            <td style="background-color: #ff803b;color: #000000;font-weight: bold;" class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                                <p class="p_11"><span style="color: #000000;">Description</span>
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>incID</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>bigint</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>*</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>*</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                                <p>Identifiant unique de l'incident</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>incCODE</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>tinyint</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>*</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                                <p>Code de l'incident</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>incDOCUMENTID</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>bigint</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                                <p>Identifiant du document concerné par l'incident</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>incDATE</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>datetime</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>*</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                                <p>Date de l'incident</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>incQUEUE</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>varchar(64)</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                                <p>File concernée par l'incident.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>incERROR</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>nvarchar(255)</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                                <p>Code d'erreur de l'incident.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>incDESCRIPTION</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>text</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                                <p>Description de l'incident.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>incREFUND</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>tinyint</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>*</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>incDELETED</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>tinyint</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>*</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>incTYPE</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>tinyint</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>*</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>incUSER</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>nvarchar(128)</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                                <p>Utilisateur à l'origine de l'incident.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>incTITLE</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>nvarchar(255)</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                                <p>Titre du travail d'impression à l'origine de l'incident.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>incSTATION</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>nvarchar (128)</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>(1208)</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                                <p>Nom DNS du poste de travail à l’origine de l'incident</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>incCACHEYEAR</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>smallint</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                                <p>clé d'optimisation </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>incCACHEMONTH</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>tinyint</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                                <p>clé d'optimisation </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>incCACHEDAY</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>tinyint</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                                <p>clé d'optimisation </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>incCACHEHOUR</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>tinyint</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                                <p>clé d'optimisation </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>incCACHEDAYOFWEEK</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>tinyint</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                                <p>clé d'optimisation </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>incCACHEMINUTE</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>tinyint</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                                <p>clé d'optimisation </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>incQGROUP</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>varchar (64)</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                                <p>Identifiant du groupe de files sur lequel a eu lieu l'incident.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>incQSITE</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>varchar (64)</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                                <p>Identifiant du site (identifiant du serveur Watchdoc) dont dépend la file sur laquelle a eu lieu l'incident.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>incDATERESOLVED</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>datetime</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                                <p>Date de résolution de l'incident</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>incMOVED</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>tinyint</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                                <p>Champ système utilisé dans une architecture master et utilisé sur les serveurs Watchdoc pour préciser si la valeur du champ a été répliquée sur le master et peut donc être supprimée (si NULL ou 0, document "local", si &gt;= 254, document archivé qui peut être supprimé).</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyB-Regular-Row2">
+                                                                <p class="p_12"><span class="span_5">incSOURCEID</span>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyB-Regular-Row2">
+                                                                <p>bigint</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyB-Regular-Row2">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyB-Regular-Row2">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyA-Regular-Row2">
+                                                                <p>Champ système : identifiant temporaire de l'incident pendant la transaction de réplication.</p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                        </aside>
                                     </div>
                                     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
                                     </script>

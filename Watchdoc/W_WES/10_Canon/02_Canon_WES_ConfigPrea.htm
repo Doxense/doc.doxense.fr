@@ -165,6 +165,194 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 data-mc-conditions="WES.Canon" id="WESCanonPrérequisetconfigurationpréalable" data-magellan-target="WESCanonPrérequisetconfigurationpréalable"><a name="aanchor53"></a>
+                                                    <MadCap:concept term="WES" />
+                                                    <MadCap:conditionalText data-mc-conditions="General.Online">WES Canon - </MadCap:conditionalText>Prérequis et configuration préalable</h1>
+                                                <h2 data-mc-conditions="WES.Canon" id="Configurerlesports" data-magellan-target="Configurerlesports">Configurer les ports</h2>
+                                                <p>Les ports réseau à ouvrir pour permettre le fonctionnement des WES&#160;sont les suivants&#160;:</p>
+                                                <p>&#160;</p>
+                                                <table style="mc-table-style: url('../../Resources/TableSlylesheets/Standard.css');border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-left-style: none;border-left-width: 0px;border-left-color: ;border-right-style: none;border-right-width: 0px;border-right-color: ;border-top-style: none;border-top-width: 0px;border-top-color: ;border-bottom-style: none;border-bottom-width: 0px;border-bottom-color: ;margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                    <col style="width: auto;" class="TableStyle-Standard-Column-Regular" />
+                                                    <col class="TableStyle-Standard-Column-Regular" style="width: auto;" />
+                                                    <col class="TableStyle-Standard-Column-Regular" style="width: auto;" />
+                                                    <col class="TableStyle-Standard-Column-Regular" style="width: auto;" />
+                                                    <thead>
+                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                            <td style="font-weight: bold;text-align: left;color: #ffffff;" class="TableStyle-Standard-HeadE-Regular-Header1">Source</td>
+                                                            <td style="font-weight: bold;text-align: left;color: #ffffff;" class="TableStyle-Standard-HeadE-Regular-Header1">Port</td>
+                                                            <td style="font-weight: bold;text-align: left;color: #ffffff;" class="TableStyle-Standard-HeadE-Regular-Header1">Protocole</td>
+                                                            <td style="font-weight: bold;text-align: left;color: #ffffff;" class="TableStyle-Standard-HeadD-Regular-Header1">Cible</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyB-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc</td>
+                                                            <td class="TableStyle-Standard-BodyB-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">TCP&#160;8000<br />TCP&#160;8443</td>
+                                                            <td class="TableStyle-Standard-BodyB-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">HTTP<br />HTTPS</td>
+                                                            <td class="TableStyle-Standard-BodyA-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Périphérique d'impression</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <h2 data-mc-conditions="WES.Canon" id="Modèlescompatibles" data-magellan-target="Modèlescompatibles">Modèles compatibles</h2>
+                                                <p>Le WES Canon v.3 est compatible avec les périphériques supportant la technologie MEAP (périphériques de type iR-ADV).</p>
+                                                <p>Par ailleurs, afin de gérer les droits d’accès, le périphérique doit aussi être compatible AMS (Access Management System). Si le périphérique ne répond pas à cette condition, la gestion de droits d’accès ne sera pas fonctionnelle.</p>
+                                                <h2 id="Prérequisdelicences" data-magellan-target="Prérequisdelicences">Prérequis de licences</h2>
+                                                <p>La configuration du WES Canon MEAP doit être précédée d'une opération de téléchargement de fichiers de licences pour les applications Authentification et Impression à la demande de Watchdoc.</p>
+                                                <h3 data-mc-conditions="WES.Canon">Procédure</h3>
+                                                <p data-mc-conditions="WES.Canon"><strong>Télécharger le fichier de licence pour l'application WES&#160;Authentification </strong>
+                                                </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p data-mc-conditions="WES.Canon">Rendez-vous sur le site de Canon <a href="https://c-lms.com/license/enduser/portal/LAInput.jsp" target="_blank" alt="Site Canon permettant de télécharger les licences applicatives">https://c-lms.com/license/enduser/portal/LAInput.jsp</a>. </p>
+                                                    </li>
+                                                </ol>
+                                                <ol data-mc-continue="true">
+                                                    <li value="2">
+                                                        <p data-mc-conditions="WES.Canon">Dans l'interface <strong>Licence Management System &gt;&#160;Création de licence</strong>, dans le champ <strong>N° d'accès de licence</strong>, saisissez l'identifiant correspondant à l'application <strong>Auth.</strong> fourni par Doxense (série de 4x4 caractères alphanumériques séparés par un tiret), puis cliquez sur <strong>Suivant </strong>; <br /><br /><img src="Config_WES_Canon_LMS_1.png" style="width: 500px;" /><br /><br /></p>
+                                                    </li>
+                                                    <li value="3" data-mc-conditions="WES.Canon">
+                                                        <p>dans l'interface<strong> Vérification du produit</strong>, cliquez sur le bouton <strong>Demander un nouveau fichier de licence</strong> ;<br /></p>
+                                                        <p>&#160;</p>
+                                                        <p>
+                                                            <img src="Config_WES_Canon_LMS_2.png" style="width: 500px;" />
+                                                        </p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="4" data-mc-conditions="WES.Canon">
+                                                        <p>dans l'interface <strong>Enregistrement du n° de série</strong>, saisissez le ou les numéros des périphériques sur lesquels le WES&#160;sera installé, puis cliquez sur <strong>Suivant</strong>.&#160;<br />Au-delà de 10 périphériques concernés, il convient d'importer les numéros de série enregistrés dans un fichier .csv (cf. modèle proposé à télécharger) ;<br /><br /><img src="Config_WES_Canon_LMS_3.png" style="width: 500px;" /> </p>
+                                                        <p>
+                                                            <br />
+                                                        </p>
+                                                    </li>
+                                                    <li value="5" data-mc-conditions="WES.Canon">
+                                                        <p>Confirmez le(s) numéro(s) de série, puis cliquez sur <strong>Suivant </strong>; </p>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p>Dans l'interface<strong> Vérification des informations</strong>, cliquez sur le bouton <strong>Création du fichier de licence </strong>après avoir validé les informations saisies :<br /><br /></p>
+                                                        <p>
+                                                            <img src="Config_WES_Canon_LMS_4.png" style="width: 500px;" /> </p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="7" data-mc-conditions="WES.Canon">
+                                                        <p>Téléchargez le fichier de licence généré dans votre environnement de travail :<br /><br /><img src="Config_WES_Canon_LMS_5.png" style="width: 500px;" /></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="8" data-mc-conditions="WES.Canon">
+                                                        <p>Vous pouvez le renommer pour l'identifier comme fichier de licence de l'application WES&#160;Authentification.</p>
+                                                    </li>
+                                                    <li value="9" data-mc-conditions="WES.Canon">
+                                                        <p>Cliquez sur <strong>Continuer pour demander un nouveau fichier </strong>(pour la deuxième application PullPrint).</p>
+                                                    </li>
+                                                </ol>
+                                                <p>&#160;</p>
+                                                <p><strong>Télécharger le fichier de licence pour l'application WES&#160;Impression à la demande</strong>
+                                                </p>
+                                                <p>Procédez de la même manière que pour le précédent fichier.</p>
+                                                <ol data-mc-conditions="WES.Canon">
+                                                    <li value="1">
+                                                        <p>Dans l'interface <strong>Licence Management System</strong>,dans le champ <strong>N° d'accès de licence</strong>, saisissez l'identifiant correspondant à l'application <strong>PullPrint</strong> fourni par Doxense  (série de 4x4 caractères alphanumériques séparés par un tiret), puis procédez comme pour le fichier de licence de l'application Authentification (cf. ci-dessus).</p>
+                                                    </li>
+                                                    <li value="2" data-mc-conditions="WES.Canon">
+                                                        <p>Dans l'interface<strong> Création de licence</strong>, cliquez sur le bouton <strong>Demander un nouveau fichier de licence.</strong></p>
+                                                    </li>
+                                                    <li value="3" data-mc-conditions="WES.Canon">
+                                                        <p>Dans l'interface <strong>Enregistrement du n° de série</strong>, saisissez le ou les numéros des périphériques sur lesquels le WES&#160;sera installé, puis cliquez sur <strong>Suivant</strong>.&#160;Au-delà de 10 périphériques concernés, il convient d'importer les numéros de série enregistrés dans un ficheir .csv) .</p>
+                                                    </li>
+                                                    <li value="4" data-mc-conditions="WES.Canon">
+                                                        <p>Dans l'interface<strong> Vérification des informations</strong>, cliquez sur le bouton <strong>Création du fichier de licence </strong>après avoir validé les informations saisies.</p>
+                                                    </li>
+                                                    <li value="5" data-mc-conditions="WES.Canon">
+                                                        <p>Téléchargez le fichier de licence généré dans votre environnement de travail.</p>
+                                                    </li>
+                                                    <li value="6" data-mc-conditions="WES.Canon">
+                                                        <p>Une fois les 2 fichiers de licence téléchargés, pour pouvez quitter le site Canon<sup>®</sup>.</p>
+                                                    </li>
+                                                </ol>
+                                                <h2 id="Configurationpréalabledupériphérique" data-magellan-target="Configurationpréalabledupériphérique">Configuration préalable du périphérique</h2>
+                                                <h3><a name="LecteurBadges_USB" id="LecteurBadges_USB">Activer les paramètres USB pour le lecteur de badges</a>
+                                                </h3>
+                                                <p>Si le périphérique d'impression autorise la connexion de périphériques de stockage ou d'un lecteur de badges USB, il convient de configurer les paramètres USB :</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>accédez à l'interface de configuration du périphérique d'impression en tant qu'administrateur ; </p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>rendez-vous dans le menu<strong> Réglages / Enregistrement</strong> &gt; Préférences &gt; Interface externe.</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>cliquez sur <strong>Réglages USB</strong>.</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>cochez les cases :</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>Utiliser comme périphérique USB </p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Utiliser pilote MEAP pour périphérique d'entrée USB&#160;<br /><br /><img src="Config_WES_Canon_ConfigLecteurUSB.png" style="width: 700px;height: auto;" /></p>
+                                                                <p>&#160;</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p>cliquer sur <strong>OK </strong>pour valider la configuration.</p>
+                                                    </li>
+                                                </ol>
+                                                <h3><a name="AMS" id="AMS"></a>Activer la gestion des droits sur le périphérique</h3>
+                                                <p>Pour configurer la gestion des droits dans le WES (par exemple, pour n'autoriser l'impression couleur qu'aux utilisateurs authentifiés), il convient d'activer préalablement la gestion des droits sur le périphérique (AMS&#160;Access Management System) : </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>accédez à l'interface d'administration du périphérique ;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>rendez-vous dans le menu Paramètres de gestion (Management Settings) ;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>sélectionnez l'entrée Licence/Autres (License/Other)</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>dans l'interface Access Management System Settings, cochez la case "Use Access Management System".</p>
+                                                    </li>
+                                                </ol>
+                                                <fieldset>N.B. : les menus d'accès peuvent varier en fonction du modèle. Reportez-vous à la notice du modèle pour savoir où et comment activer ce paramètre.</fieldset>
+                                                <h3>Fonction ScanToFolder</h3>
+                                                <p>La fonction Canon ScanToFolder nécessite une modification de la fonction suivante sur le périphérique d'impression :</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>activez le paramètre de fonction &gt; Envoyer &gt; Paramètres communs &gt;Méthode de spécification du dossier personnel : </p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>sélectionnez "Utiliser le serveur de connexion" ;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>décochez "Utiliser les informations d'authentification de chaque utilisateur" ;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>validez le paramétrage de la fonction.</p>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WESCanonPr%C3%A9requisetconfigurationpr%C3%A9alable">WES Canon - Prérequis et configuration préalable</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Configurerlesports">Configurer les ports</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Mod%C3%A8lescompatibles">Modèles compatibles</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Pr%C3%A9requisdelicences">Prérequis de licences</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Configurationpr%C3%A9alabledup%C3%A9riph%C3%A9rique">Configuration préalable du périphérique</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -198,174 +386,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1 data-mc-conditions="WES.Canon"><a name="aanchor53"></a>
-                                            <MadCap:concept term="WES" />
-                                            <MadCap:conditionalText data-mc-conditions="General.Online">WES Canon - </MadCap:conditionalText>Prérequis et configuration préalable</h1>
-                                        <h2 data-mc-conditions="WES.Canon">Configurer les ports</h2>
-                                        <p>Les ports réseau à ouvrir pour permettre le fonctionnement des WES&#160;sont les suivants&#160;:</p>
-                                        <p>&#160;</p>
-                                        <table style="mc-table-style: url('../../Resources/TableSlylesheets/Standard.css');border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-left-style: none;border-left-width: 0px;border-left-color: ;border-right-style: none;border-right-width: 0px;border-right-color: ;border-top-style: none;border-top-width: 0px;border-top-color: ;border-bottom-style: none;border-bottom-width: 0px;border-bottom-color: ;margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
-                                            <col style="width: auto;" class="TableStyle-Standard-Column-Regular" />
-                                            <col class="TableStyle-Standard-Column-Regular" style="width: auto;" />
-                                            <col class="TableStyle-Standard-Column-Regular" style="width: auto;" />
-                                            <col class="TableStyle-Standard-Column-Regular" style="width: auto;" />
-                                            <thead>
-                                                <tr class="TableStyle-Standard-Head-Header1">
-                                                    <td style="font-weight: bold;text-align: left;color: #ffffff;" class="TableStyle-Standard-HeadE-Regular-Header1">Source</td>
-                                                    <td style="font-weight: bold;text-align: left;color: #ffffff;" class="TableStyle-Standard-HeadE-Regular-Header1">Port</td>
-                                                    <td style="font-weight: bold;text-align: left;color: #ffffff;" class="TableStyle-Standard-HeadE-Regular-Header1">Protocole</td>
-                                                    <td style="font-weight: bold;text-align: left;color: #ffffff;" class="TableStyle-Standard-HeadD-Regular-Header1">Cible</td>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyB-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc</td>
-                                                    <td class="TableStyle-Standard-BodyB-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">TCP&#160;8000<br />TCP&#160;8443</td>
-                                                    <td class="TableStyle-Standard-BodyB-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">HTTP<br />HTTPS</td>
-                                                    <td class="TableStyle-Standard-BodyA-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Périphérique d'impression</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <h2 data-mc-conditions="WES.Canon">Modèles compatibles</h2>
-                                        <p>Le WES Canon v.3 est compatible avec les périphériques supportant la technologie MEAP (périphériques de type iR-ADV).</p>
-                                        <p>Par ailleurs, afin de gérer les droits d’accès, le périphérique doit aussi être compatible AMS (Access Management System). Si le périphérique ne répond pas à cette condition, la gestion de droits d’accès ne sera pas fonctionnelle.</p>
-                                        <h2>Prérequis de licences</h2>
-                                        <p>La configuration du WES Canon MEAP doit être précédée d'une opération de téléchargement de fichiers de licences pour les applications Authentification et Impression à la demande de Watchdoc.</p>
-                                        <h3 data-mc-conditions="WES.Canon">Procédure</h3>
-                                        <p data-mc-conditions="WES.Canon"><strong>Télécharger le fichier de licence pour l'application WES&#160;Authentification </strong>
-                                        </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p data-mc-conditions="WES.Canon">Rendez-vous sur le site de Canon <a href="https://c-lms.com/license/enduser/portal/LAInput.jsp" target="_blank" alt="Site Canon permettant de télécharger les licences applicatives">https://c-lms.com/license/enduser/portal/LAInput.jsp</a>. </p>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="2">
-                                                <p data-mc-conditions="WES.Canon">Dans l'interface <strong>Licence Management System &gt;&#160;Création de licence</strong>, dans le champ <strong>N° d'accès de licence</strong>, saisissez l'identifiant correspondant à l'application <strong>Auth.</strong> fourni par Doxense (série de 4x4 caractères alphanumériques séparés par un tiret), puis cliquez sur <strong>Suivant </strong>; <br /><br /><img src="Config_WES_Canon_LMS_1.png" style="width: 500px;" /><br /><br /></p>
-                                            </li>
-                                            <li value="3" data-mc-conditions="WES.Canon">
-                                                <p>dans l'interface<strong> Vérification du produit</strong>, cliquez sur le bouton <strong>Demander un nouveau fichier de licence</strong> ;<br /></p>
-                                                <p>&#160;</p>
-                                                <p>
-                                                    <img src="Config_WES_Canon_LMS_2.png" style="width: 500px;" />
-                                                </p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="4" data-mc-conditions="WES.Canon">
-                                                <p>dans l'interface <strong>Enregistrement du n° de série</strong>, saisissez le ou les numéros des périphériques sur lesquels le WES&#160;sera installé, puis cliquez sur <strong>Suivant</strong>.&#160;<br />Au-delà de 10 périphériques concernés, il convient d'importer les numéros de série enregistrés dans un fichier .csv (cf. modèle proposé à télécharger) ;<br /><br /><img src="Config_WES_Canon_LMS_3.png" style="width: 500px;" /> </p>
-                                                <p>
-                                                    <br />
-                                                </p>
-                                            </li>
-                                            <li value="5" data-mc-conditions="WES.Canon">
-                                                <p>Confirmez le(s) numéro(s) de série, puis cliquez sur <strong>Suivant </strong>; </p>
-                                            </li>
-                                            <li value="6">
-                                                <p>Dans l'interface<strong> Vérification des informations</strong>, cliquez sur le bouton <strong>Création du fichier de licence </strong>après avoir validé les informations saisies :<br /><br /></p>
-                                                <p>
-                                                    <img src="Config_WES_Canon_LMS_4.png" style="width: 500px;" /> </p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="7" data-mc-conditions="WES.Canon">
-                                                <p>Téléchargez le fichier de licence généré dans votre environnement de travail :<br /><br /><img src="Config_WES_Canon_LMS_5.png" style="width: 500px;" /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="8" data-mc-conditions="WES.Canon">
-                                                <p>Vous pouvez le renommer pour l'identifier comme fichier de licence de l'application WES&#160;Authentification.</p>
-                                            </li>
-                                            <li value="9" data-mc-conditions="WES.Canon">
-                                                <p>Cliquez sur <strong>Continuer pour demander un nouveau fichier </strong>(pour la deuxième application PullPrint).</p>
-                                            </li>
-                                        </ol>
-                                        <p>&#160;</p>
-                                        <p><strong>Télécharger le fichier de licence pour l'application WES&#160;Impression à la demande</strong>
-                                        </p>
-                                        <p>Procédez de la même manière que pour le précédent fichier.</p>
-                                        <ol data-mc-conditions="WES.Canon">
-                                            <li value="1">
-                                                <p>Dans l'interface <strong>Licence Management System</strong>,dans le champ <strong>N° d'accès de licence</strong>, saisissez l'identifiant correspondant à l'application <strong>PullPrint</strong> fourni par Doxense  (série de 4x4 caractères alphanumériques séparés par un tiret), puis procédez comme pour le fichier de licence de l'application Authentification (cf. ci-dessus).</p>
-                                            </li>
-                                            <li value="2" data-mc-conditions="WES.Canon">
-                                                <p>Dans l'interface<strong> Création de licence</strong>, cliquez sur le bouton <strong>Demander un nouveau fichier de licence.</strong></p>
-                                            </li>
-                                            <li value="3" data-mc-conditions="WES.Canon">
-                                                <p>Dans l'interface <strong>Enregistrement du n° de série</strong>, saisissez le ou les numéros des périphériques sur lesquels le WES&#160;sera installé, puis cliquez sur <strong>Suivant</strong>.&#160;Au-delà de 10 périphériques concernés, il convient d'importer les numéros de série enregistrés dans un ficheir .csv) .</p>
-                                            </li>
-                                            <li value="4" data-mc-conditions="WES.Canon">
-                                                <p>Dans l'interface<strong> Vérification des informations</strong>, cliquez sur le bouton <strong>Création du fichier de licence </strong>après avoir validé les informations saisies.</p>
-                                            </li>
-                                            <li value="5" data-mc-conditions="WES.Canon">
-                                                <p>Téléchargez le fichier de licence généré dans votre environnement de travail.</p>
-                                            </li>
-                                            <li value="6" data-mc-conditions="WES.Canon">
-                                                <p>Une fois les 2 fichiers de licence téléchargés, pour pouvez quitter le site Canon<sup>®</sup>.</p>
-                                            </li>
-                                        </ol>
-                                        <h2>Configuration préalable du périphérique</h2>
-                                        <h3><a name="LecteurBadges_USB" id="LecteurBadges_USB">Activer les paramètres USB pour le lecteur de badges</a>
-                                        </h3>
-                                        <p>Si le périphérique d'impression autorise la connexion de périphériques de stockage ou d'un lecteur de badges USB, il convient de configurer les paramètres USB :</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>accédez à l'interface de configuration du périphérique d'impression en tant qu'administrateur ; </p>
-                                            </li>
-                                            <li value="2">
-                                                <p>rendez-vous dans le menu<strong> Réglages / Enregistrement</strong> &gt; Préférences &gt; Interface externe.</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>cliquez sur <strong>Réglages USB</strong>.</p>
-                                            </li>
-                                            <li value="4">
-                                                <p>cochez les cases :</p>
-                                                <ul>
-                                                    <li>
-                                                        <p>Utiliser comme périphérique USB </p>
-                                                    </li>
-                                                    <li>
-                                                        <p>Utiliser pilote MEAP pour périphérique d'entrée USB&#160;<br /><br /><img src="Config_WES_Canon_ConfigLecteurUSB.png" style="width: 700px;height: auto;" /></p>
-                                                        <p>&#160;</p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li value="5">
-                                                <p>cliquer sur <strong>OK </strong>pour valider la configuration.</p>
-                                            </li>
-                                        </ol>
-                                        <h3><a name="AMS" id="AMS"></a>Activer la gestion des droits sur le périphérique</h3>
-                                        <p>Pour configurer la gestion des droits dans le WES (par exemple, pour n'autoriser l'impression couleur qu'aux utilisateurs authentifiés), il convient d'activer préalablement la gestion des droits sur le périphérique (AMS&#160;Access Management System) : </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>accédez à l'interface d'administration du périphérique ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>rendez-vous dans le menu Paramètres de gestion (Management Settings) ;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>sélectionnez l'entrée Licence/Autres (License/Other)</p>
-                                            </li>
-                                            <li value="4">
-                                                <p>dans l'interface Access Management System Settings, cochez la case "Use Access Management System".</p>
-                                            </li>
-                                        </ol>
-                                        <fieldset>N.B. : les menus d'accès peuvent varier en fonction du modèle. Reportez-vous à la notice du modèle pour savoir où et comment activer ce paramètre.</fieldset>
-                                        <h3>Fonction ScanToFolder</h3>
-                                        <p>La fonction Canon ScanToFolder nécessite une modification de la fonction suivante sur le périphérique d'impression :</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>activez le paramètre de fonction &gt; Envoyer &gt; Paramètres communs &gt;Méthode de spécification du dossier personnel : </p>
-                                            </li>
-                                            <li value="2">
-                                                <p>sélectionnez "Utiliser le serveur de connexion" ;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>décochez "Utiliser les informations d'authentification de chaque utilisateur" ;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p>validez le paramétrage de la fonction.</p>
-                                            </li>
-                                        </ol>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

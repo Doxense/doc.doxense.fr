@@ -164,6 +164,105 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="Watchdoc611SauvegarderlaprécédenteversiondusitewebdeWatchdocnetRemoting" data-magellan-target="Watchdoc611SauvegarderlaprécédenteversiondusitewebdeWatchdocnetRemoting">Watchdoc 6.1.1 - Sauvegarder la précédente version du site web de Watchdoc (.net Remoting)</h1>
+                                                <h4>Principe</h4>
+                                                <p>Cette procédure vise à sauvegarder la précédente version du site web de Watchdoc de manière à ce qu'elle reste opérationnelle durant la mise à jour. Il est possible de continuer à administrer les serveurs qui n'ont pas été  mis à jour par via l'ancien site web.</p>
+                                                <p>&#160;</p>
+                                                <h4>Copier les dossiers Watchdoc</h4>
+                                                <fieldset>N.B.&#160;: cette procédure part du principe que la précédente installation de Watchdoc s'est effectuée avec les chemins par défaut.&#160;Si ce n'est pas le cas, adaptez la procédure suivante à votre situation en changeant les chemins par défaut par les chemins de vos dossiers d'installation.<br /></fieldset>
+                                                <p> </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>En tant qu'administrateur, rendez-vous sur le serveur qui héberge Watchdoc ;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>rendez-vous dans le dossier d'installation de Watchdoc (ex C:\Program Files\Doxense\Watchdoc par défaut) ;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>copiez ce dossier et collez-le dans un autre dossier temporaire ("C:\tmp\Watchdoc61", par exemple).&#160;Ce dossier  doit rester intact durant la mise à jour de l'intégralité des serveurs. Vous pourrez le supprimer une fois la mise à jour validée ;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>dans le dossier temporaire qui vient d'être collé, supprimez tous les sous-dossiers pour ne garder que les fichiers <b>.dll</b> et <b>.bat </b>:<br /><br /><img src="WD_MaJ_Suppr-Sous-doss.png" style="width: 700px;" /></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p>rendez-vous dans le dossier wwwroot de Watchdoc ("C:\inetpub\wwwroot\watchdoc" par défaut) ;</p>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p>copiez/collez le dossier Watchdoc et renommez la copie "<b>Watchdoc61</b>" afin de conserver la version 6.1 du site web durant le temps de la mise à jour :<br /><br /><img src="WD_MaJ_DossWD61.png" /></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="7">
+                                                        <p>lancez l'outil <strong>Internet Information Services (IIS) Manager</strong> pour vérifier que le dossier <strong>Watchdoc61</strong> est bien considéré comme un dossier et non une application : <br /><br /><img src="WD_MaJ_IIS_verif.png" /></p>
+                                                        <p>&#160;</p>
+                                                        <p>Si ce n'est pas le cas, recommencez l'étape 6 pour copier/coller le dossier.</p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="8">
+                                                        <p>Dans <strong>Internet Information Services (IIS) Manager</strong> cliquez-droit sur le dossier <b>Watchdoc61</b>, puis sélectionnez l'action <b>Convert to application</b> : </p>
+                                                    </li>
+                                                    <li value="9">
+                                                        <p>dans l'interface <strong>Add Application</strong>, complétez les paramètres : </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p><b>Application pool:</b> sélectionnez <strong>WatchdocPool </strong>; </p>
+                                                            </li>
+                                                            <li>
+                                                                <p><b>Physical path:</b> saisissez le chemin d'accès au dossier Watchdoc61 : <b>C:\inetpub\wwwroot\watchdoc61</b> par défaut&#160;;<br /></p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li value="10">
+                                                        <p>cliquez sur <b>OK</b>&#160;pour valider l'ajout de l'application :<br /><br /><img src="WD_MaJ_AddApp.png" /></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="11">
+                                                        <p>Dans <b>Internet Information Services (IIS) Manager</b>, cliquez sur l'icone <b>ASP</b> ; </p>
+                                                    </li>
+                                                    <li value="12">
+                                                        <p>dans la section <b>Behavior</b> &gt; pour le paramètre <strong>Enable Parent Path</strong>, saisissez la valeur <b>True</b> :</p>
+                                                    </li>
+                                                    <li value="13">
+                                                        <p>cliquez ensuite sur <strong>Apply </strong>pour valider le paramètre : <br /><br /><img src="WD_MaJ_IIS_ParentPahts.png" style="width: 700px;height: auto;" /></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="14">
+                                                        <p>Quittez <strong>Internet Information Services (IIS) Manager</strong>.</p>
+                                                    </li>
+                                                </ol>
+                                                <p>
+                                                    <br />
+                                                </p>
+                                                <h4>Modifier le chemin de Doxense.Watchdoc.CrystalProxy.dll dans la base de registre</h4>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Revenez dans l'explorateur et ouvrez le dossier  C:\tmp\<b>Watchdoc61</b> ;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>vérifiez que ce dossier contient a minima la dll  <strong>Doxense.Watchdoc.CrystalProxy.dll </strong>et l’utilitaire <strong>regproxy.bat</strong> ;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>ouvrez la dll <strong>Doxense.Watchdoc.CrystalProxy.dll </strong>à l'aide de <strong>regproxy.bat</strong></p>
+                                                        <p>&#160;</p>
+                                                        <p>
+                                                            <img src="WD_MaJ_Deport_RegProxy.png" style="width: 700px;" />
+                                                        </p>
+                                                    </li>
+                                                </ol>
+                                                <p>&#160;</p>
+                                                <p><span style="font-family: 'Wingdings'">è</span> Cette opération modifie la base de registre. Désormais, pour instancier la classe <b>Doxense.Watchdoc.Proxy61</b>, la dll est recherchée dans le dossier temporaire spécifique qui a été créé.&#160;<br /></p>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#Watchdoc611Sauvegarderlapr%C3%A9c%C3%A9denteversiondusitewebdeWatchdocnetRemoting">Watchdoc 6.1.1 - Sauvegarder la précédente version du site web de Watchdoc (.net Remoting)</a>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -197,95 +296,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1>Watchdoc 6.1.1 - Sauvegarder la précédente version du site web de Watchdoc (.net Remoting)</h1>
-                                        <h4>Principe</h4>
-                                        <p>Cette procédure vise à sauvegarder la précédente version du site web de Watchdoc de manière à ce qu'elle reste opérationnelle durant la mise à jour. Il est possible de continuer à administrer les serveurs qui n'ont pas été  mis à jour par via l'ancien site web.</p>
-                                        <p>&#160;</p>
-                                        <h4>Copier les dossiers Watchdoc</h4>
-                                        <fieldset>N.B.&#160;: cette procédure part du principe que la précédente installation de Watchdoc s'est effectuée avec les chemins par défaut.&#160;Si ce n'est pas le cas, adaptez la procédure suivante à votre situation en changeant les chemins par défaut par les chemins de vos dossiers d'installation.<br /></fieldset>
-                                        <p> </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>En tant qu'administrateur, rendez-vous sur le serveur qui héberge Watchdoc ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>rendez-vous dans le dossier d'installation de Watchdoc (ex C:\Program Files\Doxense\Watchdoc par défaut) ;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>copiez ce dossier et collez-le dans un autre dossier temporaire ("C:\tmp\Watchdoc61", par exemple).&#160;Ce dossier  doit rester intact durant la mise à jour de l'intégralité des serveurs. Vous pourrez le supprimer une fois la mise à jour validée ;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p>dans le dossier temporaire qui vient d'être collé, supprimez tous les sous-dossiers pour ne garder que les fichiers <b>.dll</b> et <b>.bat </b>:<br /><br /><img src="WD_MaJ_Suppr-Sous-doss.png" style="width: 700px;" /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="5">
-                                                <p>rendez-vous dans le dossier wwwroot de Watchdoc ("C:\inetpub\wwwroot\watchdoc" par défaut) ;</p>
-                                            </li>
-                                            <li value="6">
-                                                <p>copiez/collez le dossier Watchdoc et renommez la copie "<b>Watchdoc61</b>" afin de conserver la version 6.1 du site web durant le temps de la mise à jour :<br /><br /><img src="WD_MaJ_DossWD61.png" /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="7">
-                                                <p>lancez l'outil <strong>Internet Information Services (IIS) Manager</strong> pour vérifier que le dossier <strong>Watchdoc61</strong> est bien considéré comme un dossier et non une application : <br /><br /><img src="WD_MaJ_IIS_verif.png" /></p>
-                                                <p>&#160;</p>
-                                                <p>Si ce n'est pas le cas, recommencez l'étape 6 pour copier/coller le dossier.</p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="8">
-                                                <p>Dans <strong>Internet Information Services (IIS) Manager</strong> cliquez-droit sur le dossier <b>Watchdoc61</b>, puis sélectionnez l'action <b>Convert to application</b> : </p>
-                                            </li>
-                                            <li value="9">
-                                                <p>dans l'interface <strong>Add Application</strong>, complétez les paramètres : </p>
-                                                <ul>
-                                                    <li>
-                                                        <p><b>Application pool:</b> sélectionnez <strong>WatchdocPool </strong>; </p>
-                                                    </li>
-                                                    <li>
-                                                        <p><b>Physical path:</b> saisissez le chemin d'accès au dossier Watchdoc61 : <b>C:\inetpub\wwwroot\watchdoc61</b> par défaut&#160;;<br /></p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li value="10">
-                                                <p>cliquez sur <b>OK</b>&#160;pour valider l'ajout de l'application :<br /><br /><img src="WD_MaJ_AddApp.png" /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="11">
-                                                <p>Dans <b>Internet Information Services (IIS) Manager</b>, cliquez sur l'icone <b>ASP</b> ; </p>
-                                            </li>
-                                            <li value="12">
-                                                <p>dans la section <b>Behavior</b> &gt; pour le paramètre <strong>Enable Parent Path</strong>, saisissez la valeur <b>True</b> :</p>
-                                            </li>
-                                            <li value="13">
-                                                <p>cliquez ensuite sur <strong>Apply </strong>pour valider le paramètre : <br /><br /><img src="WD_MaJ_IIS_ParentPahts.png" style="width: 700px;height: auto;" /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="14">
-                                                <p>Quittez <strong>Internet Information Services (IIS) Manager</strong>.</p>
-                                            </li>
-                                        </ol>
-                                        <p>
-                                            <br />
-                                        </p>
-                                        <h4>Modifier le chemin de Doxense.Watchdoc.CrystalProxy.dll dans la base de registre</h4>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Revenez dans l'explorateur et ouvrez le dossier  C:\tmp\<b>Watchdoc61</b> ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>vérifiez que ce dossier contient a minima la dll  <strong>Doxense.Watchdoc.CrystalProxy.dll </strong>et l’utilitaire <strong>regproxy.bat</strong> ;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>ouvrez la dll <strong>Doxense.Watchdoc.CrystalProxy.dll </strong>à l'aide de <strong>regproxy.bat</strong></p>
-                                                <p>&#160;</p>
-                                                <p>
-                                                    <img src="WD_MaJ_Deport_RegProxy.png" style="width: 700px;" />
-                                                </p>
-                                            </li>
-                                        </ol>
-                                        <p>&#160;</p>
-                                        <p><span style="font-family: 'Wingdings'">è</span> Cette opération modifie la base de registre. Désormais, pour instancier la classe <b>Doxense.Watchdoc.Proxy61</b>, la dll est recherchée dans le dossier temporaire spécifique qui a été créé.&#160;<br /></p>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

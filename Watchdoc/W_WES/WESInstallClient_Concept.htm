@@ -164,6 +164,103 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WESInstallClientPrésentation" data-magellan-target="WESInstallClientPrésentation"><a name="aanchor303"></a>
+                                                    <MadCap:concept term="WES" />WESInstallClient - Présentation</h1>
+                                                <h2 id="QuestcequunWES" data-magellan-target="QuestcequunWES">Qu'est-ce qu'un WES ?</h2>
+                                                <p>WES (Watchdoc Embedded Solution) désigne l'interface Watchdoc embarquée sur les périphériques d'impression, interface qui permet aux utilisateurs de disposer des fonctionnalités de Watchdoc directement sur le périphérique en plus de l'interface accessible Watchdoc via un navigateur web (Page "Mon compte"). </p>
+                                                <p>&#160;</p>
+                                                <p>Les WES,&#160;développés par Doxense<sup>®</sup>, sont spécifiques à chaque marque et modèle de périphérique des constructeurs avec lesquels  Doxense<sup>®</sup> a établi des partenariats technologiques. </p>
+                                                <h2 id="QuestcequeleWESInstallClient" data-magellan-target="QuestcequeleWESInstallClient">Qu'est-ce que le WESInstallClient ?</h2>
+                                                <p>Le <strong>WES&#160;InstallClient</strong> est un outil conçu par Doxense<sup>®</sup> permettant d'installer des WES sur plusieurs périphériques simultanément, une fois qu'ils ont été configurés sur leur(s) file(s) d'impression.</p>
+                                                <p>&#160;</p>
+                                                <p>Cet utilitaire en ligne de commande envoie des instructions au serveur Watchdoc afin d'installer les WES.</p>
+                                                <p>&#160;</p>
+                                                <p><b>WESInstallClient.exe</b> est disponible par défaut dans le package d'installation de Watchdoc (C:\Program Files\Doxense\Watchdoc\WESInstallClient.exe).</p>
+                                                <p>&#160;</p>
+                                                <p>Cet utilitaire peut être lancé depuis le serveur sur lequel doivent être installés les WES ou depuis un autre serveur s'il peut se connecter en réseau au serveur sur lequel est doivent être instalés les WES.</p>
+                                                <fieldset><span style="color: #a9a9a9;"><span style="color: #808080;">Le WES&#160;InstallClient est compatible avec les périphériques des constructeurs suivants&#160;:
+</span></span><span style="color: #808080;"> </span><![CDATA[       ]]><ul><li><p>Hewlett Packard</p></li><li><p>Konica Minolta</p></li><li><p>Kyocera</p></li><li><p>Lexmark</p></li><li><p>Samsung</p></li><li><p>Sharp</p></li><li><p>Xerox</p></li></ul></fieldset>
+                                                <h2 id="Prérequisorganisationnels" data-magellan-target="Prérequisorganisationnels">Prérequis organisationnels</h2>
+                                                <p>Avant de lancer l'installation à l'aide de WESInstallClient, vérifiez les prérequis suivants&#160;:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1">les périphériques sont allumés mais inutilisés le temps de l'installation&#160;;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">les files d'impression sont déclarées sur le serveur et dans Watchdoc ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">un profil WES est associé à chaque file sur laquelle le WES&#160;doit être installé.</p>
+                                                    </li>
+                                                </ul>
+                                                <h2 id="Listedesarguments" data-magellan-target="Listedesarguments">Liste des arguments</h2>
+                                                <p>Les arguments suivants peuvent être utilisés dans les commandes : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>/server server_name </strong>: permet d'indiquer le nom du serveur sur lequel sont installées les files d'impression ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>/port port_number</strong> : permet d'indiquer le numéro de port par lequel accéder au serveur (faculatif)&#160;; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>/login</strong> : permet d'indiquer un compte habilité à administrer (ou à maintenir) le serveur ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>/password</strong> : permet d'indiquer le mot de passe correspondant au login saisi&#160;;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>/no-ssl</strong> : permet de désactiver la sécurisation des requêtes à l'aide du protocole SSL&#160;; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>/queues queueId1 queueId2 queueId3 </strong>: permet de lister les files d'impression sur lesquelles installer le WES ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2">ou <strong>/file path_to_file</strong>: permet d'indiquer que l'installation du WES&#160;doit être opérée sur toutes les files d'impression figurant dans le fichier spécifié ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>/install</strong> : permet de procéder à l'installation du WES&#160;sur les files ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>/uninstall </strong>: permet de procéder à la désinstallation du WES sur les files;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>/list</strong> : permet de lister les files d'impression installées sur le serveur ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>/out filepath </strong>: permet d'exporter la liste des files dans un fichier ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>/error path_to_error</strong> : permet de lister les erreurs dans un fichier spécifique ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>/log path_to_log_file</strong> : permet de tracer les opérations effectuées sur les files dans un fichier spécifique ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>/help</strong> : affiche la liste des arguments disponibles : <br /><br /><img src="Util_WESInstallClient_Arguments.png" style="width: 700px;height: auto;" /></p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WESInstallClientPr%C3%A9sentation">WESInstallClient - Présentation</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#QuestcequunWES">Qu'est-ce qu'un WES ?</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#QuestcequeleWESInstallClient">Qu'est-ce que le WESInstallClient ?</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Pr%C3%A9requisorganisationnels">Prérequis organisationnels</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Listedesarguments">Liste des arguments</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -197,83 +294,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor303"></a>
-                                            <MadCap:concept term="WES" />WESInstallClient - Présentation</h1>
-                                        <h2>Qu'est-ce qu'un WES ?</h2>
-                                        <p>WES (Watchdoc Embedded Solution) désigne l'interface Watchdoc embarquée sur les périphériques d'impression, interface qui permet aux utilisateurs de disposer des fonctionnalités de Watchdoc directement sur le périphérique en plus de l'interface accessible Watchdoc via un navigateur web (Page "Mon compte"). </p>
-                                        <p>&#160;</p>
-                                        <p>Les WES,&#160;développés par Doxense<sup>®</sup>, sont spécifiques à chaque marque et modèle de périphérique des constructeurs avec lesquels  Doxense<sup>®</sup> a établi des partenariats technologiques. </p>
-                                        <h2>Qu'est-ce que le WESInstallClient ?</h2>
-                                        <p>Le <strong>WES&#160;InstallClient</strong> est un outil conçu par Doxense<sup>®</sup> permettant d'installer des WES sur plusieurs périphériques simultanément, une fois qu'ils ont été configurés sur leur(s) file(s) d'impression.</p>
-                                        <p>&#160;</p>
-                                        <p>Cet utilitaire en ligne de commande envoie des instructions au serveur Watchdoc afin d'installer les WES.</p>
-                                        <p>&#160;</p>
-                                        <p><b>WESInstallClient.exe</b> est disponible par défaut dans le package d'installation de Watchdoc (C:\Program Files\Doxense\Watchdoc\WESInstallClient.exe).</p>
-                                        <p>&#160;</p>
-                                        <p>Cet utilitaire peut être lancé depuis le serveur sur lequel doivent être installés les WES ou depuis un autre serveur s'il peut se connecter en réseau au serveur sur lequel est doivent être instalés les WES.</p>
-                                        <fieldset><span style="color: #a9a9a9;"><span style="color: #808080;">Le WES&#160;InstallClient est compatible avec les périphériques des constructeurs suivants&#160;:
-</span></span><span style="color: #808080;"> </span><![CDATA[       ]]><ul><li><p>Hewlett Packard</p></li><li><p>Konica Minolta</p></li><li><p>Kyocera</p></li><li><p>Lexmark</p></li><li><p>Samsung</p></li><li><p>Sharp</p></li><li><p>Xerox</p></li></ul></fieldset>
-                                        <h2>Prérequis organisationnels</h2>
-                                        <p>Avant de lancer l'installation à l'aide de WESInstallClient, vérifiez les prérequis suivants&#160;:</p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1">les périphériques sont allumés mais inutilisés le temps de l'installation&#160;;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">les files d'impression sont déclarées sur le serveur et dans Watchdoc ; </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">un profil WES est associé à chaque file sur laquelle le WES&#160;doit être installé.</p>
-                                            </li>
-                                        </ul>
-                                        <h2>Liste des arguments</h2>
-                                        <p>Les arguments suivants peuvent être utilisés dans les commandes : </p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>/server server_name </strong>: permet d'indiquer le nom du serveur sur lequel sont installées les files d'impression ; </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>/port port_number</strong> : permet d'indiquer le numéro de port par lequel accéder au serveur (faculatif)&#160;; </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>/login</strong> : permet d'indiquer un compte habilité à administrer (ou à maintenir) le serveur ; </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>/password</strong> : permet d'indiquer le mot de passe correspondant au login saisi&#160;;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>/no-ssl</strong> : permet de désactiver la sécurisation des requêtes à l'aide du protocole SSL&#160;; </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>/queues queueId1 queueId2 queueId3 </strong>: permet de lister les files d'impression sur lesquelles installer le WES ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2">ou <strong>/file path_to_file</strong>: permet d'indiquer que l'installation du WES&#160;doit être opérée sur toutes les files d'impression figurant dans le fichier spécifié ; </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>/install</strong> : permet de procéder à l'installation du WES&#160;sur les files ; </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>/uninstall </strong>: permet de procéder à la désinstallation du WES sur les files;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>/list</strong> : permet de lister les files d'impression installées sur le serveur ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>/out filepath </strong>: permet d'exporter la liste des files dans un fichier ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>/error path_to_error</strong> : permet de lister les erreurs dans un fichier spécifique ; </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>/log path_to_log_file</strong> : permet de tracer les opérations effectuées sur les files dans un fichier spécifique ; </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>/help</strong> : affiche la liste des arguments disponibles : <br /><br /><img src="Util_WESInstallClient_Arguments.png" style="width: 700px;height: auto;" /></p>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

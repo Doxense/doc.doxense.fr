@@ -164,6 +164,106 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocGérerlessitesdistants" data-magellan-target="WatchdocGérerlessitesdistants"><a name="aanchor86"></a>
+                                                    <MadCap:concept term="WPC" />Watchdoc - Gérer les sites distants</h1>
+                                                <h2 id="Principe" data-magellan-target="Principe">Principe</h2>
+                                                <p>En fonction des contraintes techniques existantes et de la facilité que l'on souhaite proposer à l'utilisateur, il est possible de gérer  les sites distants de différentes manières avec Watchdoc. </p>
+                                                <p>&#160;</p>
+                                                <p>Prenons l'exemple d'une entité installée en métropole dont les agences sont dispersées géographiquement dans les <MadCap:glossaryTerm glossTerm="Glossary.Term121">DROM.</MadCap:glossaryTerm> <br />Son architecture technique d'impression inclut :</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>un serveur maître (master) installé en métropole ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>d'autres serveurs (qui dépendent du maître) installés dans les agences situées en DROM.&#160;</p>
+                                                    </li>
+                                                </ul>
+                                                <p>&#160;</p>
+                                                <p>En matière de gestion de l'impression avec Watchdoc, plusieurs configurations sont possibles. </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Le mode <strong>normal</strong> repose sur la configuration de files d'impression prédéfinies et préconfigurées sur le serveur maître Watchdoc et mises à disposition de tous les utilisateurs via les autres serveurs (slaves) Watchdoc&#160;installés dans les DROM.</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>Le mode <strong>mixte</strong> repose sur le mode normal associé à WPC&#160;for Windows. Ce dernier module permet de configurer une file universelle (tagguée “remote”) qui peut ensuite être installée en un clic sur tous les postes utilisateurs. Ce dernier dispose ainsi, en un clic, d'une file d'impression totalement configurée instantanément utilisable.&#160;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>le mode <strong>distant</strong> repose sur le mode normal associé à WPC&#160;for Windows qui permet d’installer une file d'impression prédéfinie et préconfigurée tout en autorisant  l'impression directe. Ainsi, en cas de latence importante de communication entre le serveur installé localement et le serveur maître, l'utilisateur peut opter pour l'impression directe. Dans ce cas, les utilisateurs impriment sans solliciter le serveur Watchdoc. </p>
+                                                        <p>Pour que les données statistiques du périphérique servant à l'impression directe puissent cependant être collectées à des fins statistiques, il est nécessaire de configurer dans Watchdoc la file qui servira à l'impression directe. Comme il s'agit d'un mode dégradé et que Watchdoc n'est pas sollicité, les données statistiques ne sont pas aussi détaillées que celles qui sont habituellement collectées par Watchdoc. Néanmoins, il est possible de collecter a minima des informations fournies par le spouleur MS Windows (printinfo2 : titre du document, nombre de pages, couleur (couleur ou monochrome) et utilisateur).</p>
+                                                    </li>
+                                                </ol>
+                                                <h2 id="Procéduresdeconfiguration" data-magellan-target="Procéduresdeconfiguration">Procédures de configuration</h2>
+                                                <h3>Configuration en mode normal sans WPC&#160;for Windows</h3>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Sur le serveur maître, créez vos files préconfigurées (cf.&#160;<a href="../T_WPC/Windows/WPCW_Configurer_dansWD.htm" target="_blank">Configurer une file d'impression</a>).</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>Déployez Watchdoc sur les autres serveurs (slaves) pour y installer la configuration des files d'impression configurées sur le serveur maître. Les files seront ainsi synchronisées.</p>
+                                                    </li>
+                                                </ol>
+                                                <p>&#160;</p>
+                                                <h3>Configuration en mode mixte avec WPC&#160;for Windows</h3>
+                                                <p>Ce mode permet à l'utilisateur d'installer sur son poste une file d'impression en cliquant sur le bouton "Installer" de WPC&#160;for Windows. Il récupère ainsi facilement sur son poste de travail la configuration de la file fournie par le serveur Watchdoc.</p>
+                                                <p>&#160;</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Sur le serveur maître, créez vos emplacements et configurez-les pour WPC (cf.&#160;<a href="../T_WPC/Windows/WPCW_Configurer_dansWD.htm" target="_blank">WPC for Windows - Configurer l'emplacement</a>) en précisant les paramètres additionnels.</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>Associez les serveurs (maître et autres) à leur emplacement (cf.&#160;<a href="../C_Configurer/ConfigEmplacements/ConfigEmplacements_AssocierServeur.htm" target="_blank">Associer un serveur à un emplacement</a>).</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>Configurez au moins une file universelle destinée à WPC for Windows.&#160;Ainsi depuis WPC&#160;for Windows, l'utilisateur pourra installer la file en cliquant sur le bouton "Installer une file".
+Vous pouvez y ajouter le tag "remote" pour préciser son utilisation.&#160;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p><a href="../T_WPC/Windows/WPCW_Configuration.htm" target="_blank">Configurez WPC for Windows</a> sans autoriser l'impression directe (section Service &gt; Impression directe).</p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p>Installez WPC&#160;for Windows sur tous les postes de travail (cf. <a href="../T_WPC/Windows/WPCW_Installation.htm" target="_blank">Installer WPC for Windows sur le poste utilisateur</a>).</p>
+                                                    </li>
+                                                </ol>
+                                                <p>&#160;</p>
+                                                <h3>Configuration en mode indirect</h3>
+                                                <p>Ce mode permet à l'utilisateur d'installer sur son poste une file d'impression en cliquant sur le bouton "Installer" de WPC&#160;for Windows. Il récupère ainsi facilement sur son poste de travail la configuration de la file fournie par le serveur Watchdoc. <br />Mais si les serveurs sont hors-service ou que les délais de communication entre les serveurs sont trop longs, l'utilisateur peut imprimer directement sur la file universelle.&#160;</p>
+                                                <p>&#160;</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Sur le serveur maître, créez vos emplacements et configurez-les pour WPC (cf.&#160;<a href="../T_WPC/Windows/WPCW_Configurer_dansWD.htm" target="_blank">WPC for Windows - Configurer l'emplacement</a>) en précisant les paramètres additionnels.</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>Associez les serveurs (maître et autres) à leur emplacement (cf.&#160;<a href="../C_Configurer/ConfigEmplacements/ConfigEmplacements_AssocierServeur.htm" target="_blank">Associer un serveur à un emplacement</a>).</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>Configurez au moins une file universelle destinée à WPC for Windows.&#160;Ainsi depuis WPC&#160;for Windows, l'utilisateur pourra installer la file en cliquant sur le bouton "Installer une file".
+Vous pouvez y ajouter le tag "remote tcpip" pour préciser son utilisation.&#160;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p><a href="../T_WPC/Windows/WPCW_Configuration.htm" target="_blank">Configurez WPC for Windows</a> en autorisant l'impression directe (section Service &gt; Impression directe).</p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p>Installez WPC&#160;for Windows sur tous les postes de travail (cf. <a href="../T_WPC/Windows/WPCW_Installation.htm" target="_blank">Installer WPC for Windows sur le poste utilisateur</a>).</p>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocG%C3%A9rerlessitesdistants">Watchdoc - Gérer les sites distants</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Principe">Principe</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Proc%C3%A9duresdeconfiguration">Procédures de configuration</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -197,90 +297,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor86"></a>
-                                            <MadCap:concept term="WPC" />Watchdoc - Gérer les sites distants</h1>
-                                        <h2>Principe</h2>
-                                        <p>En fonction des contraintes techniques existantes et de la facilité que l'on souhaite proposer à l'utilisateur, il est possible de gérer  les sites distants de différentes manières avec Watchdoc. </p>
-                                        <p>&#160;</p>
-                                        <p>Prenons l'exemple d'une entité installée en métropole dont les agences sont dispersées géographiquement dans les <MadCap:glossaryTerm glossTerm="Glossary.Term121">DROM.</MadCap:glossaryTerm> <br />Son architecture technique d'impression inclut :</p>
-                                        <ul>
-                                            <li>
-                                                <p>un serveur maître (master) installé en métropole ;</p>
-                                            </li>
-                                            <li>
-                                                <p>d'autres serveurs (qui dépendent du maître) installés dans les agences situées en DROM.&#160;</p>
-                                            </li>
-                                        </ul>
-                                        <p>&#160;</p>
-                                        <p>En matière de gestion de l'impression avec Watchdoc, plusieurs configurations sont possibles. </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Le mode <strong>normal</strong> repose sur la configuration de files d'impression prédéfinies et préconfigurées sur le serveur maître Watchdoc et mises à disposition de tous les utilisateurs via les autres serveurs (slaves) Watchdoc&#160;installés dans les DROM.</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>Le mode <strong>mixte</strong> repose sur le mode normal associé à WPC&#160;for Windows. Ce dernier module permet de configurer une file universelle (tagguée “remote”) qui peut ensuite être installée en un clic sur tous les postes utilisateurs. Ce dernier dispose ainsi, en un clic, d'une file d'impression totalement configurée instantanément utilisable.&#160;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>le mode <strong>distant</strong> repose sur le mode normal associé à WPC&#160;for Windows qui permet d’installer une file d'impression prédéfinie et préconfigurée tout en autorisant  l'impression directe. Ainsi, en cas de latence importante de communication entre le serveur installé localement et le serveur maître, l'utilisateur peut opter pour l'impression directe. Dans ce cas, les utilisateurs impriment sans solliciter le serveur Watchdoc. </p>
-                                                <p>Pour que les données statistiques du périphérique servant à l'impression directe puissent cependant être collectées à des fins statistiques, il est nécessaire de configurer dans Watchdoc la file qui servira à l'impression directe. Comme il s'agit d'un mode dégradé et que Watchdoc n'est pas sollicité, les données statistiques ne sont pas aussi détaillées que celles qui sont habituellement collectées par Watchdoc. Néanmoins, il est possible de collecter a minima des informations fournies par le spouleur MS Windows (printinfo2 : titre du document, nombre de pages, couleur (couleur ou monochrome) et utilisateur).</p>
-                                            </li>
-                                        </ol>
-                                        <h2>Procédures de configuration</h2>
-                                        <h3>Configuration en mode normal sans WPC&#160;for Windows</h3>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Sur le serveur maître, créez vos files préconfigurées (cf.&#160;<a href="../T_WPC/Windows/WPCW_Configurer_dansWD.htm" target="_blank">Configurer une file d'impression</a>).</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>Déployez Watchdoc sur les autres serveurs (slaves) pour y installer la configuration des files d'impression configurées sur le serveur maître. Les files seront ainsi synchronisées.</p>
-                                            </li>
-                                        </ol>
-                                        <p>&#160;</p>
-                                        <h3>Configuration en mode mixte avec WPC&#160;for Windows</h3>
-                                        <p>Ce mode permet à l'utilisateur d'installer sur son poste une file d'impression en cliquant sur le bouton "Installer" de WPC&#160;for Windows. Il récupère ainsi facilement sur son poste de travail la configuration de la file fournie par le serveur Watchdoc.</p>
-                                        <p>&#160;</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Sur le serveur maître, créez vos emplacements et configurez-les pour WPC (cf.&#160;<a href="../T_WPC/Windows/WPCW_Configurer_dansWD.htm" target="_blank">WPC for Windows - Configurer l'emplacement</a>) en précisant les paramètres additionnels.</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>Associez les serveurs (maître et autres) à leur emplacement (cf.&#160;<a href="../C_Configurer/ConfigEmplacements/ConfigEmplacements_AssocierServeur.htm" target="_blank">Associer un serveur à un emplacement</a>).</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>Configurez au moins une file universelle destinée à WPC for Windows.&#160;Ainsi depuis WPC&#160;for Windows, l'utilisateur pourra installer la file en cliquant sur le bouton "Installer une file".
-Vous pouvez y ajouter le tag "remote" pour préciser son utilisation.&#160;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p><a href="../T_WPC/Windows/WPCW_Configuration.htm" target="_blank">Configurez WPC for Windows</a> sans autoriser l'impression directe (section Service &gt; Impression directe).</p>
-                                            </li>
-                                            <li value="5">
-                                                <p>Installez WPC&#160;for Windows sur tous les postes de travail (cf. <a href="../T_WPC/Windows/WPCW_Installation.htm" target="_blank">Installer WPC for Windows sur le poste utilisateur</a>).</p>
-                                            </li>
-                                        </ol>
-                                        <p>&#160;</p>
-                                        <h3>Configuration en mode indirect</h3>
-                                        <p>Ce mode permet à l'utilisateur d'installer sur son poste une file d'impression en cliquant sur le bouton "Installer" de WPC&#160;for Windows. Il récupère ainsi facilement sur son poste de travail la configuration de la file fournie par le serveur Watchdoc. <br />Mais si les serveurs sont hors-service ou que les délais de communication entre les serveurs sont trop longs, l'utilisateur peut imprimer directement sur la file universelle.&#160;</p>
-                                        <p>&#160;</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Sur le serveur maître, créez vos emplacements et configurez-les pour WPC (cf.&#160;<a href="../T_WPC/Windows/WPCW_Configurer_dansWD.htm" target="_blank">WPC for Windows - Configurer l'emplacement</a>) en précisant les paramètres additionnels.</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>Associez les serveurs (maître et autres) à leur emplacement (cf.&#160;<a href="../C_Configurer/ConfigEmplacements/ConfigEmplacements_AssocierServeur.htm" target="_blank">Associer un serveur à un emplacement</a>).</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>Configurez au moins une file universelle destinée à WPC for Windows.&#160;Ainsi depuis WPC&#160;for Windows, l'utilisateur pourra installer la file en cliquant sur le bouton "Installer une file".
-Vous pouvez y ajouter le tag "remote tcpip" pour préciser son utilisation.&#160;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p><a href="../T_WPC/Windows/WPCW_Configuration.htm" target="_blank">Configurez WPC for Windows</a> en autorisant l'impression directe (section Service &gt; Impression directe).</p>
-                                            </li>
-                                            <li value="5">
-                                                <p>Installez WPC&#160;for Windows sur tous les postes de travail (cf. <a href="../T_WPC/Windows/WPCW_Installation.htm" target="_blank">Installer WPC for Windows sur le poste utilisateur</a>).</p>
-                                            </li>
-                                        </ol>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

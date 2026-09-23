@@ -165,6 +165,96 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocExpressActiverloptiontélémétrie" data-magellan-target="WatchdocExpressActiverloptiontélémétrie"><a name="aanchor107"></a>
+                                                    <MadCap:concept term="WSC;WD" />Watchdoc Express - Activer l'option télémétrie</h1>
+                                                <h2 id="Principe" data-magellan-target="Principe">Principe</h2>
+                                                <p>L'exploitation de la Console de Supervision de Watchdoc (WSC), nécessite l'activation préalable de la fonction <strong>Télémétrie </strong>dans Watchdoc. Cette activation permet l'envoi des données d'exploitation au serveur hébergeant WSC.</p>
+                                                <p>&#160;</p>
+                                                <p>Depuis la version 6.0.0.4800, l'activation de la télémétrie sur le serveur master est automatiquement répliquée sur tous les serveurs slaves d'un domaine Watchdoc.</p>
+                                                <h2 id="Procédure" data-magellan-target="Procédure">Procédure</h2>
+                                                <p>Pour activer la Console de Supervision dans Watchdoc : </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1">accédez à Watchdoc en tant qu'administrateur ; </p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1">depuis le <strong>Menu Principal</strong>, section <strong>Configuration</strong>, cliquez sur <strong>Configuration avancée</strong> ; <br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../Z_Resources/Images/02_Captures/Config_Avancee_AccesInterface.png"><img class="MCPopupThumbnail img" data-mc-width="1898" data-mc-height="924" src="../Z_Resources/Images/02_Captures/Config_Avancee_AccesInterface.png" tabindex="" style="height: 250px;width: auto;mc-thumbnail-max-height: 1000px;mc-thumbnail-max-width: auto;mc-thumbnail: popup;max-height: 1000px;" /></a></p>
+                                                        <p class="Liste_num_1">
+                                                            <br />
+                                                        </p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p class="Liste_num_1">depuis l'interface  <strong>Configuration avancée</strong>, cliquez sur <strong>Configuration système</strong> :<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../Z_Resources/Images/02_Captures/WD_ADMIN_ConfigSysteme_Acces.png"><img class="MCPopupThumbnail img" data-mc-width="1899" data-mc-height="920" src="../Z_Resources/Images/02_Captures/WD_ADMIN_ConfigSysteme_Acces.png" tabindex="" style="height: 250px;width: auto;mc-thumbnail-max-height: 1000px;mc-thumbnail-max-width: auto;mc-thumbnail: popup;max-height: 1000px;" /></a><br /></p>
+                                                    </li>
+                                                </ol>
+                                                <ol data-mc-continue="true">
+                                                    <li value="4">
+                                                        <p class="Liste_num_1">dans l'interface <strong>Configuration système</strong>, accédez à la section <strong>Télémétrie </strong>; </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p class="Liste_puce_1"><strong>Activée </strong>: cochez la case pour activer la fonction permettant l'envoi des données vers WSC ; </p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_1"><strong>Serveur </strong>; configurez le serveur de télémétrie qui héberge la console de supervision WSC en complétant les paramètres suivants ; </p>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p class="Liste_puce_2"><strong>Hôte</strong> : indiquez le FQDNS (ou adresse IP fixe du serveur hébergeant WSC ; </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p class="Liste_puce_2"><strong>Port </strong>: indiquez le port par lequel accéder au serveur hôte (s'il est différent du port par défaut) ; </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p class="Liste_puce_2"><strong>HTTPS </strong>: cochez la case si l'accès au serveur est sécurisé par le protocole :<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../Z_Resources/Images/02_Captures/WD_Admin_Telemetrie_SectionTelemetrie.png"><img class="MCPopupThumbnail img" data-mc-width="865" data-mc-height="150" src="../Z_Resources/Images/02_Captures/WD_Admin_Telemetrie_SectionTelemetrie.png" tabindex="" style="height: 250px;width: auto;mc-thumbnail-max-height: 1000px;mc-thumbnail-max-width: auto;mc-thumbnail: popup;max-height: 1000px;" /></a></p>
+                                                                        <p class="Liste_puce_2">
+                                                                            <br />
+                                                                        </p>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ol>
+                                                <ol data-mc-continue="true">
+                                                    <li value="5">
+                                                        <p class="Liste_num_1">cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Bouton_Valider_WD.png" style="width: 24px;height: 24px;" /> pour valider l'activation de l'option <strong>Télémétrie</strong>&#160;;</p>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p>redémarrez le service Watchdoc pour que l'activation soit effective ;</p>
+                                                    </li>
+                                                </ol>
+                                                <p><span style="font-family: 'Wingdings'">è</span> une fois l'option <strong>Télémétrie </strong>activée dans Watchdoc, vous pouvez configurer la console de supervision Watchdoc (WSC).</p>
+                                                <h2 id="Vérification" data-magellan-target="Vérification">Vérification</h2>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Pour vérifier le bon fonctionnement, connectez-vous en tant qu'administrateur dans la Console de Supervision ;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>depuis le <strong>Menu Principal</strong>, cliquez sur <strong>Serveurs d'impression</strong> ;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>le serveur sur lequel la télémétrie a été activée apparaît dans la liste des serveurs d'impression gérés par WSC&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WD_Express/wd_express_setup_wsc2.png" style="width: 909px;height: 140px;" /></p>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocExpressActiverloptiont%C3%A9l%C3%A9m%C3%A9trie">Watchdoc Express - Activer l'option télémétrie</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Principe">Principe</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Proc%C3%A9dure">Procédure</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#V%C3%A9rification">Vérification</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -198,78 +288,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor107"></a>
-                                            <MadCap:concept term="WSC;WD" />Watchdoc Express - Activer l'option télémétrie</h1>
-                                        <h2>Principe</h2>
-                                        <p>L'exploitation de la Console de Supervision de Watchdoc (WSC), nécessite l'activation préalable de la fonction <strong>Télémétrie </strong>dans Watchdoc. Cette activation permet l'envoi des données d'exploitation au serveur hébergeant WSC.</p>
-                                        <p>&#160;</p>
-                                        <p>Depuis la version 6.0.0.4800, l'activation de la télémétrie sur le serveur master est automatiquement répliquée sur tous les serveurs slaves d'un domaine Watchdoc.</p>
-                                        <h2>Procédure</h2>
-                                        <p>Pour activer la Console de Supervision dans Watchdoc : </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">accédez à Watchdoc en tant qu'administrateur ; </p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1">depuis le <strong>Menu Principal</strong>, section <strong>Configuration</strong>, cliquez sur <strong>Configuration avancée</strong> ; <br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../Z_Resources/Images/02_Captures/Config_Avancee_AccesInterface.png"><img class="MCPopupThumbnail img" data-mc-width="1898" data-mc-height="924" src="../Z_Resources/Images/02_Captures/Config_Avancee_AccesInterface.png" tabindex="" style="height: 250px;width: auto;mc-thumbnail-max-height: 1000px;mc-thumbnail-max-width: auto;mc-thumbnail: popup;max-height: 1000px;" /></a></p>
-                                                <p class="Liste_num_1">
-                                                    <br />
-                                                </p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1">depuis l'interface  <strong>Configuration avancée</strong>, cliquez sur <strong>Configuration système</strong> :<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../Z_Resources/Images/02_Captures/WD_ADMIN_ConfigSysteme_Acces.png"><img class="MCPopupThumbnail img" data-mc-width="1899" data-mc-height="920" src="../Z_Resources/Images/02_Captures/WD_ADMIN_ConfigSysteme_Acces.png" tabindex="" style="height: 250px;width: auto;mc-thumbnail-max-height: 1000px;mc-thumbnail-max-width: auto;mc-thumbnail: popup;max-height: 1000px;" /></a><br /></p>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="4">
-                                                <p class="Liste_num_1">dans l'interface <strong>Configuration système</strong>, accédez à la section <strong>Télémétrie </strong>; </p>
-                                                <ul>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Activée </strong>: cochez la case pour activer la fonction permettant l'envoi des données vers WSC ; </p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Serveur </strong>; configurez le serveur de télémétrie qui héberge la console de supervision WSC en complétant les paramètres suivants ; </p>
-                                                        <ul>
-                                                            <li>
-                                                                <p class="Liste_puce_2"><strong>Hôte</strong> : indiquez le FQDNS (ou adresse IP fixe du serveur hébergeant WSC ; </p>
-                                                            </li>
-                                                            <li>
-                                                                <p class="Liste_puce_2"><strong>Port </strong>: indiquez le port par lequel accéder au serveur hôte (s'il est différent du port par défaut) ; </p>
-                                                            </li>
-                                                            <li>
-                                                                <p class="Liste_puce_2"><strong>HTTPS </strong>: cochez la case si l'accès au serveur est sécurisé par le protocole :<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../Z_Resources/Images/02_Captures/WD_Admin_Telemetrie_SectionTelemetrie.png"><img class="MCPopupThumbnail img" data-mc-width="865" data-mc-height="150" src="../Z_Resources/Images/02_Captures/WD_Admin_Telemetrie_SectionTelemetrie.png" tabindex="" style="height: 250px;width: auto;mc-thumbnail-max-height: 1000px;mc-thumbnail-max-width: auto;mc-thumbnail: popup;max-height: 1000px;" /></a></p>
-                                                                <p class="Liste_puce_2">
-                                                                    <br />
-                                                                </p>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="5">
-                                                <p class="Liste_num_1">cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Bouton_Valider_WD.png" style="width: 24px;height: 24px;" /> pour valider l'activation de l'option <strong>Télémétrie</strong>&#160;;</p>
-                                            </li>
-                                            <li value="6">
-                                                <p>redémarrez le service Watchdoc pour que l'activation soit effective ;</p>
-                                            </li>
-                                        </ol>
-                                        <p><span style="font-family: 'Wingdings'">è</span> une fois l'option <strong>Télémétrie </strong>activée dans Watchdoc, vous pouvez configurer la console de supervision Watchdoc (WSC).</p>
-                                        <h2>Vérification</h2>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Pour vérifier le bon fonctionnement, connectez-vous en tant qu'administrateur dans la Console de Supervision ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>depuis le <strong>Menu Principal</strong>, cliquez sur <strong>Serveurs d'impression</strong> ;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>le serveur sur lequel la télémétrie a été activée apparaît dans la liste des serveurs d'impression gérés par WSC&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WD_Express/wd_express_setup_wsc2.png" style="width: 909px;height: 140px;" /></p>
-                                            </li>
-                                        </ol>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

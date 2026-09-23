@@ -199,55 +199,74 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor344"></a>
-                                            <MadCap:concept term="WCM" />WCM -  Watchdoc Certificate Manager - Présentation </h1>
-                                        <h2>Principle</h2>
-                                        <p>Pour échanger des informations avec différents périphériques (imprimantes, MFP, mobiles) de manière sécurisée, Watchdoc exploite des certificats. </p>
-                                        <p>L'outil en ligne de commande WCM (Watchdoc Certificat Manager) permet d'installer ou de mettre à jour les certificats de Watchdoc ou de la console de supervision WSC.</p>
-                                        <p>WCM permet aussi de diagnostiquer les anomalies impliquant les certificats et les protocoles SSL/TLS.</p>
-                                        <h2>Accès</h2>
-                                        <p>L'outil en ligne de commande est enregistré par défaut sur <span>le serveur d'impression</span>, dans le dossier Watchdoc : <br />C:\Program Files\Doxense\Watchdoc\wcm.exe<br /><br /><img src="FP_WCM_start.png" style="width: 617px;height: 64px;" /><br /></p>
-                                        <h2>Principes d'utilisation</h2>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1"> Les commandes présentées ne sont pas sensibles à la casse.</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">Les modifications effectuées ne sont pas sauvegardées tant que la commande <strong>save</strong> n'a pas été exécutée. </p>
-                                            </li>
-                                        </ul>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1">WCM peut être exécuté avec les paramètres suivants :</p>
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WCMWatchdocCertificateManagerPrésentation" data-magellan-target="WCMWatchdocCertificateManagerPrésentation"><a name="aanchor344"></a>
+                                                    <MadCap:concept term="WCM" />WCM -  Watchdoc Certificate Manager - Présentation </h1>
+                                                <h2 id="Principle" data-magellan-target="Principle">Principle</h2>
+                                                <p>Pour échanger des informations avec différents périphériques (imprimantes, MFP, mobiles) de manière sécurisée, Watchdoc exploite des certificats. </p>
+                                                <p>L'outil en ligne de commande WCM (Watchdoc Certificat Manager) permet d'installer ou de mettre à jour les certificats de Watchdoc ou de la console de supervision WSC.</p>
+                                                <p>WCM permet aussi de diagnostiquer les anomalies impliquant les certificats et les protocoles SSL/TLS.</p>
+                                                <h2 id="Accès" data-magellan-target="Accès">Accès</h2>
+                                                <p>L'outil en ligne de commande est enregistré par défaut sur <span>le serveur d'impression</span>, dans le dossier Watchdoc : <br />C:\Program Files\Doxense\Watchdoc\wcm.exe<br /><br /><img src="FP_WCM_start.png" style="width: 617px;height: 64px;" /><br /></p>
+                                                <h2 id="Principesdutilisation" data-magellan-target="Principesdutilisation">Principes d'utilisation</h2>
                                                 <ul>
                                                     <li>
-                                                        <p class="Liste_puce_1"><strong>/config :</strong> spécifie l'emplacement du fichier de configuration à charger (prend par défaut .\data\config.xml)<br /><br /><img src="FP_WCM_Config.png" /></p>
-                                                        <p>&#160;</p>
+                                                        <p class="Liste_puce_1"> Les commandes présentées ne sont pas sensibles à la casse.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">Les modifications effectuées ne sont pas sauvegardées tant que la commande <strong>save</strong> n'a pas été exécutée. </p>
                                                     </li>
                                                 </ul>
                                                 <ul>
                                                     <li>
-                                                        <p class="Liste_puce_2"><strong>/timeout:</strong> précise, en secondes, le délai d'expiration par défaut des requêtes HTTP ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>/quiet </strong>: permet de réduire la verbosité générale du programme ;<br /><br /><img src="FP_WCM_Quiet.png" /></p>
-                                                        <p>&#160;</p>
+                                                        <p class="Liste_puce_1">WCM peut être exécuté avec les paramètres suivants :</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p class="Liste_puce_1"><strong>/config :</strong> spécifie l'emplacement du fichier de configuration à charger (prend par défaut .\data\config.xml)<br /><br /><img src="FP_WCM_Config.png" /></p>
+                                                                <p>&#160;</p>
+                                                            </li>
+                                                        </ul>
+                                                        <ul>
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>/timeout:</strong> précise, en secondes, le délai d'expiration par défaut des requêtes HTTP ;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>/quiet </strong>: permet de réduire la verbosité générale du programme ;<br /><br /><img src="FP_WCM_Quiet.png" /></p>
+                                                                <p>&#160;</p>
+                                                            </li>
+                                                        </ul>
+                                                        <ul>
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>/help </strong>: affiche les arguments acceptés par WCM :</p>
+                                                                <p class="Liste_puce_2">
+                                                                    <br />
+                                                                    <img src="FP_WCM_Help.png" />
+                                                                </p>
+                                                            </li>
+                                                        </ul>
                                                     </li>
                                                 </ul>
-                                                <ul>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>/help </strong>: affiche les arguments acceptés par WCM :</p>
-                                                        <p class="Liste_puce_2">
-                                                            <br />
-                                                            <img src="FP_WCM_Help.png" />
-                                                        </p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WCMWatchdocCertificateManagerPr%C3%A9sentation">WCM -  Watchdoc Certificate Manager - Présentation </a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Principle">Principle</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Acc%C3%A8s">Accès</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Principesdutilisation">Principes d'utilisation</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
                                     </div>
-                                    <p>&#160;</p>
+                                    <!--<MadCap:miniTocProxy />
+        <MadCap:bodyProxy class=".body-container" />-->
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">
                                             <button class="button elearning-button needs-pie previous-topic-button" title="Précédent" disabled="true">

@@ -165,6 +165,178 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocInstallationinitialeConfigurerlesbasesdedonnées" data-magellan-target="WatchdocInstallationinitialeConfigurerlesbasesdedonnées"><a name="aanchor38"></a>
+                                                    <MadCap:concept term="CFG;INS;WD" />Watchdoc - Installation initiale - Configurer les bases de données</h1>
+                                                <h2 id="Principe" data-magellan-target="Principe">Principe</h2>
+                                                <p>Dans cette interface, vous indiquez les informations relatives à la (aux) base(s) de données nécessaire(s) à Watchdoc et les connecter : <br /></p>
+                                                <ul>
+                                                    <li>
+                                                        <p>base de données statistiques (watchdocstats),&#160;obligatoire ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>base de données dédiée à la fonction Quotas (watchdocpmv), facultative.</p>
+                                                    </li>
+                                                </ul>
+                                                <p>Cette configuration suppose qu'une base de données dédiée ait été créée préalablement (cf.&#160;<a href="../../C_Configurer/ConfigBDD/WD_BaseMSSQL_Creer.htm">Créer une base de données MS&#160;SQL</a>® ou <a href="../../C_Configurer/ConfigBDD/WD_BaseSQLPostGre_Creer.htm">Créer une base de données PostgreSQL</a>®).</p>
+                                                <h2 id="ConfigurerlabaseStatistiques" data-magellan-target="ConfigurerlabaseStatistiques">Configurer la base Statistiques</h2>
+                                                <ul>
+                                                    <li>
+                                                        <p class="TitreNiveau3">Sous-section <strong>Connexion</strong></p>
+                                                        <ul>
+                                                            <li>
+                                                                <p class="Liste_puce_1"><strong>Type </strong>: dans la liste, sélectionnez le type de base de données installée dans votre infrastructure réseau pour collecter les statistiques relatives à l'utilisation du service Watchdoc.</p>
+                                                                <p>Watchdoc supporte les systèmes suivants : </p>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p> Microsoft SQL Server<sup>®</sup> 2012 jusquà v.&#160;2022</p>
+                                                                    </li>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p>	Microsoft SQL Desktop Engine,</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p><span class="mc-variable Versions.PostgreSQL variable">PostgreSQL 17</span>
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>SQLite 3.x</p>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_1"><strong>Serveur SQL</strong> : dans la zone, indiquez le chemin de localisation de la base de données. Si vous ne connaissez pas la localisation de la base de données, cliquez sur le bouton  <img src="../../Z_Resources/Images/02_Captures/Boutons/icon_localisationbdd.png" style="width: 32px;height: 25px;" />. Cette fonction parcourt le réseau et renvoie la liste des serveurs SQL qui y sont installés. Sélectionnez dans cette liste le serveur SQL désigné pour les statistiques Watchdoc.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_1"><strong>Nom d'utilisateur</strong> : indiquez dans cette zone le nom de l'utilisateur habilité à gérer la base de données. Pour plus de sécurité, il est recommandé de créer un compte propre à la base des statistiques ;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_1"><strong>Mot de passe</strong> : indiquez dans cette zone le mot de passe associé au nom de l'utilisateur ;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_1"><strong>Base de données</strong> : indiquez dans cette zone le nom de la base de données utilisée. Par défaut, le nom est <strong>Watchdocstats</strong>.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_1"><strong>Chemin :</strong> ce paramètre n'est activé que dans le cas d'un annuaire de type SQLite. L' information affichée est le chemin du dossier (data) dans lequel est créée la base de données SQLite par défaut.</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                                <p>
+                                                    <br />
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="TitreNiveau3">Sous-section <strong>Opérations :</strong></p>
+                                                        <ul>
+                                                            <li>
+                                                                <p class="Liste_puce_1">Bouton <strong>Créer une nouvelle base de données</strong> : cliquez sur ce bouton dans le cas d'une première installation de Watchdoc  afin de créer la base de données statistique ;<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_CreerBddStats.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="638" data-mc-height="456" src="../../Z_Resources/Images/02_Captures/Config_CreerBddStats.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                                <p class="Liste_puce_1">
+                                                                    <br />
+                                                                </p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Bouton <strong>Vérifier la base de données</strong> : cliquez sur ce bouton dans le cas où vous réinstallez Watchdoc et que la base de données statistiques était déjà installée :<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_VerifierBdd.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="448" data-mc-height="250" src="../../Z_Resources/Images/02_Captures/Config_VerifierBdd.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                                <h2 id="ConfigurerlabaseQuotaWatchdocpmv" data-magellan-target="ConfigurerlabaseQuotaWatchdocpmv">Configurer la <a name="base_Quota" id="base_Quota"></a>base Quota (Watchdocpmv)</h2>
+                                                <p>La section <b>Quotas</b>  regroupe les informations relatives à la base de données collectant les informations des quotas.</p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="TitreNiveau3">Sous section <strong>Activation</strong></p>
+                                                        <ul>
+                                                            <li>
+                                                                <p class="Liste_puce_1"><strong>Activer la gestion des quotas</strong> : cochez cette case si vous souhaitez utiliser les quotas pour le paiement des impressions.</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <p class="TitreNiveau3">Sous-section <strong>Connexion</strong></p>
+                                                        <ul>
+                                                            <li>
+                                                                <p class="Liste_puce_1"><strong>Type </strong>: dans la liste, sélectionnez le type de base de données installée dans votre infrastructure réseau pour collecter les données relatives à l'utilisation du PMV<br />Watchdoc supporte les systèmes suivants : </p>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p>Microsoft SQL Server<sup>®</sup> 2012 jusqu'à v.&#160;2022</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>Microsoft SQL Desktop Engine,</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p><span class="mc-variable Versions.PostgreSQL variable">PostgreSQL 17</span>,</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>SQLite (version embarquée dans le package d'installation Watchdoc).</p>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_1"><strong>Serveur SQL</strong> : saisissez le chemin de localisation de la base de données ou cliquez sur le bouton  <img src="../../Z_Resources/Images/02_Captures/Boutons/icon_localisationbdd.png" style="width: 31px;height: 24px;" /> pour parcourir la liste des serveurs SQL installés sur le réseau. Puis sélectionnez serveur SQL désigné pour les statistiques Watchdoc.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_1"><strong>Nom d'utilisateur</strong> : saisissez le nom de l'utilisateur habilité à gérer la base de données. Pour plus de sécurité, il est recommandé de créer un compte propre à la base des Quotas&#160;;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_1"><strong>Mot de passe</strong> : saisissez le mot de passe de l'utilisateur habilité ;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_1"><strong>Base de données</strong> : saisissez le nom de la base de données utilisée ou cliquez sur le bouton  <img src="../../Z_Resources/Images/02_Captures/Boutons/icon_localisationbdd.png" style="width: 31px;height: 24px;" /> pour parcourir la liste des bases déclarées dans le serveur.&#160;Par défaut, la base servant à gérer les quotas s'appelle <strong>Watchdocpmv</strong> ;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_1"><strong>Chemin :</strong> ce paramètre concerne exclusivement une base de type SQLite. L'information affichée est le chemin du dossier (data) dans lequel est créée la base de données SQLite par défaut.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/MAI_Configurer_BDD_Quotas.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="600" data-mc-height="223" src="../../Z_Resources/Images/02_Captures/MAI_Configurer_BDD_Quotas.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a><br /><br /></p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <p class="TitreNiveau3">Sous-section <strong>Opérations :</strong> dans cette section, cliquez sur l'un des deux boutons&#160;:</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p class="Liste_puce_1"><strong>Créer une nouvelle base de données</strong> dans le cas d'une première installation de Watchdoc  afin de créer la base de données des Quotas.&#160;Complétez ensuite l'interface Création d'une base de données : </p>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p class="Liste_puce_1"><b>Options :</b> cochez cette case si vous ne souhaitez pas créer une base complète, mais pour créer les tables nécessaires à la gestion des Quotas dans une base existante ;</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p class="Liste_puce_1"><b>Identification</b> : si l'accès à la base de données nécessite une authentification autre que le compte par défaut WatchdocUser, cochez la case <b>Utiliser un autre compte</b>, puis saisissez l'<b>identifiant</b> et le <b>mot de passe</b> du compte habilité à accéder à la base ;</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p class="Liste_puce_1"><b>Chemin</b> :  ce paramètre concerne exclusivement une base de type SQLite. L'information affichée est le chemin du dossier (data) dans lequel est créée la base de données SQLite par défaut.<br /><br /><a class="MCPopupThumbnailLink" href="../../C_Configurer/ConfigQuotas/Config_Quota_Base_CreerBddQuotas.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="580" data-mc-height="345" src="../../C_Configurer/ConfigQuotas/Config_Quota_Base_CreerBddQuotas.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                                    </li>
+                                                                </ul>
+                                                                <p>&#160;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Vérifier la base de données</strong>, dans le cas où vous réinstallez Watchdoc et que la base de données Watchdocpmv était déjà installée&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_VerifierBddpmv.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="443" data-mc-height="236" src="../../Z_Resources/Images/02_Captures/Config_VerifierBddpmv.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocInstallationinitialeConfigurerlesbasesdedonn%C3%A9es">Watchdoc - Installation initiale - Configurer les bases de données</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Principe">Principe</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#ConfigurerlabaseStatistiques">Configurer la base Statistiques</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#ConfigurerlabaseQuotaWatchdocpmv">Configurer la base Quota (Watchdocpmv)</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -198,160 +370,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor38"></a>
-                                            <MadCap:concept term="CFG;INS;WD" />Watchdoc - Installation initiale - Configurer les bases de données</h1>
-                                        <h2>Principe</h2>
-                                        <p>Dans cette interface, vous indiquez les informations relatives à la (aux) base(s) de données nécessaire(s) à Watchdoc et les connecter : <br /></p>
-                                        <ul>
-                                            <li>
-                                                <p>base de données statistiques (watchdocstats),&#160;obligatoire ;</p>
-                                            </li>
-                                            <li>
-                                                <p>base de données dédiée à la fonction Quotas (watchdocpmv), facultative.</p>
-                                            </li>
-                                        </ul>
-                                        <p>Cette configuration suppose qu'une base de données dédiée ait été créée préalablement (cf.&#160;<a href="../../C_Configurer/ConfigBDD/WD_BaseMSSQL_Creer.htm">Créer une base de données MS&#160;SQL</a>® ou <a href="../../C_Configurer/ConfigBDD/WD_BaseSQLPostGre_Creer.htm">Créer une base de données PostgreSQL</a>®).</p>
-                                        <h2>Configurer la base Statistiques</h2>
-                                        <ul>
-                                            <li>
-                                                <p class="TitreNiveau3">Sous-section <strong>Connexion</strong></p>
-                                                <ul>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Type </strong>: dans la liste, sélectionnez le type de base de données installée dans votre infrastructure réseau pour collecter les statistiques relatives à l'utilisation du service Watchdoc.</p>
-                                                        <p>Watchdoc supporte les systèmes suivants : </p>
-                                                        <ul>
-                                                            <li>
-                                                                <p> Microsoft SQL Server<sup>®</sup> 2012 jusquà v.&#160;2022</p>
-                                                            </li>
-                                                        </ul>
-                                                        <ul>
-                                                            <li>
-                                                                <p>	Microsoft SQL Desktop Engine,</p>
-                                                            </li>
-                                                            <li>
-                                                                <p><span class="mc-variable Versions.PostgreSQL variable">PostgreSQL 17</span>
-                                                                </p>
-                                                            </li>
-                                                            <li>
-                                                                <p>SQLite 3.x</p>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Serveur SQL</strong> : dans la zone, indiquez le chemin de localisation de la base de données. Si vous ne connaissez pas la localisation de la base de données, cliquez sur le bouton  <img src="../../Z_Resources/Images/02_Captures/Boutons/icon_localisationbdd.png" style="width: 32px;height: 25px;" />. Cette fonction parcourt le réseau et renvoie la liste des serveurs SQL qui y sont installés. Sélectionnez dans cette liste le serveur SQL désigné pour les statistiques Watchdoc.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Nom d'utilisateur</strong> : indiquez dans cette zone le nom de l'utilisateur habilité à gérer la base de données. Pour plus de sécurité, il est recommandé de créer un compte propre à la base des statistiques ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Mot de passe</strong> : indiquez dans cette zone le mot de passe associé au nom de l'utilisateur ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Base de données</strong> : indiquez dans cette zone le nom de la base de données utilisée. Par défaut, le nom est <strong>Watchdocstats</strong>.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Chemin :</strong> ce paramètre n'est activé que dans le cas d'un annuaire de type SQLite. L' information affichée est le chemin du dossier (data) dans lequel est créée la base de données SQLite par défaut.</p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                        <p>
-                                            <br />
-                                        </p>
-                                        <ul>
-                                            <li>
-                                                <p class="TitreNiveau3">Sous-section <strong>Opérations :</strong></p>
-                                                <ul>
-                                                    <li>
-                                                        <p class="Liste_puce_1">Bouton <strong>Créer une nouvelle base de données</strong> : cliquez sur ce bouton dans le cas d'une première installation de Watchdoc  afin de créer la base de données statistique ;<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_CreerBddStats.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="638" data-mc-height="456" src="../../Z_Resources/Images/02_Captures/Config_CreerBddStats.png" tabindex="" style="max-width: 1000px;" /></a></p>
-                                                        <p class="Liste_puce_1">
-                                                            <br />
-                                                        </p>
-                                                    </li>
-                                                    <li>
-                                                        <p>Bouton <strong>Vérifier la base de données</strong> : cliquez sur ce bouton dans le cas où vous réinstallez Watchdoc et que la base de données statistiques était déjà installée :<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_VerifierBdd.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="448" data-mc-height="250" src="../../Z_Resources/Images/02_Captures/Config_VerifierBdd.png" tabindex="" style="max-width: 1000px;" /></a></p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                        <h2>Configurer la <a name="base_Quota" id="base_Quota"></a>base Quota (Watchdocpmv)</h2>
-                                        <p>La section <b>Quotas</b>  regroupe les informations relatives à la base de données collectant les informations des quotas.</p>
-                                        <ul>
-                                            <li>
-                                                <p class="TitreNiveau3">Sous section <strong>Activation</strong></p>
-                                                <ul>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Activer la gestion des quotas</strong> : cochez cette case si vous souhaitez utiliser les quotas pour le paiement des impressions.</p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                        <ul>
-                                            <li>
-                                                <p class="TitreNiveau3">Sous-section <strong>Connexion</strong></p>
-                                                <ul>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Type </strong>: dans la liste, sélectionnez le type de base de données installée dans votre infrastructure réseau pour collecter les données relatives à l'utilisation du PMV<br />Watchdoc supporte les systèmes suivants : </p>
-                                                        <ul>
-                                                            <li>
-                                                                <p>Microsoft SQL Server<sup>®</sup> 2012 jusqu'à v.&#160;2022</p>
-                                                            </li>
-                                                            <li>
-                                                                <p>Microsoft SQL Desktop Engine,</p>
-                                                            </li>
-                                                            <li>
-                                                                <p><span class="mc-variable Versions.PostgreSQL variable">PostgreSQL 17</span>,</p>
-                                                            </li>
-                                                            <li>
-                                                                <p>SQLite (version embarquée dans le package d'installation Watchdoc).</p>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Serveur SQL</strong> : saisissez le chemin de localisation de la base de données ou cliquez sur le bouton  <img src="../../Z_Resources/Images/02_Captures/Boutons/icon_localisationbdd.png" style="width: 31px;height: 24px;" /> pour parcourir la liste des serveurs SQL installés sur le réseau. Puis sélectionnez serveur SQL désigné pour les statistiques Watchdoc.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Nom d'utilisateur</strong> : saisissez le nom de l'utilisateur habilité à gérer la base de données. Pour plus de sécurité, il est recommandé de créer un compte propre à la base des Quotas&#160;;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Mot de passe</strong> : saisissez le mot de passe de l'utilisateur habilité ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Base de données</strong> : saisissez le nom de la base de données utilisée ou cliquez sur le bouton  <img src="../../Z_Resources/Images/02_Captures/Boutons/icon_localisationbdd.png" style="width: 31px;height: 24px;" /> pour parcourir la liste des bases déclarées dans le serveur.&#160;Par défaut, la base servant à gérer les quotas s'appelle <strong>Watchdocpmv</strong> ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Chemin :</strong> ce paramètre concerne exclusivement une base de type SQLite. L'information affichée est le chemin du dossier (data) dans lequel est créée la base de données SQLite par défaut.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/MAI_Configurer_BDD_Quotas.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="600" data-mc-height="223" src="../../Z_Resources/Images/02_Captures/MAI_Configurer_BDD_Quotas.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a><br /><br /></p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                        <ul>
-                                            <li>
-                                                <p class="TitreNiveau3">Sous-section <strong>Opérations :</strong> dans cette section, cliquez sur l'un des deux boutons&#160;:</p>
-                                                <ul>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Créer une nouvelle base de données</strong> dans le cas d'une première installation de Watchdoc  afin de créer la base de données des Quotas.&#160;Complétez ensuite l'interface Création d'une base de données : </p>
-                                                        <ul>
-                                                            <li>
-                                                                <p class="Liste_puce_1"><b>Options :</b> cochez cette case si vous ne souhaitez pas créer une base complète, mais pour créer les tables nécessaires à la gestion des Quotas dans une base existante ;</p>
-                                                            </li>
-                                                            <li>
-                                                                <p class="Liste_puce_1"><b>Identification</b> : si l'accès à la base de données nécessite une authentification autre que le compte par défaut WatchdocUser, cochez la case <b>Utiliser un autre compte</b>, puis saisissez l'<b>identifiant</b> et le <b>mot de passe</b> du compte habilité à accéder à la base ;</p>
-                                                            </li>
-                                                            <li>
-                                                                <p class="Liste_puce_1"><b>Chemin</b> :  ce paramètre concerne exclusivement une base de type SQLite. L'information affichée est le chemin du dossier (data) dans lequel est créée la base de données SQLite par défaut.<br /><br /><a class="MCPopupThumbnailLink" href="../../C_Configurer/ConfigQuotas/Config_Quota_Base_CreerBddQuotas.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="580" data-mc-height="345" src="../../C_Configurer/ConfigQuotas/Config_Quota_Base_CreerBddQuotas.png" tabindex="" style="max-width: 1000px;" /></a></p>
-                                                            </li>
-                                                        </ul>
-                                                        <p>&#160;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Vérifier la base de données</strong>, dans le cas où vous réinstallez Watchdoc et que la base de données Watchdocpmv était déjà installée&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_VerifierBddpmv.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="443" data-mc-height="236" src="../../Z_Resources/Images/02_Captures/Config_VerifierBddpmv.png" tabindex="" style="max-width: 1000px;" /></a></p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

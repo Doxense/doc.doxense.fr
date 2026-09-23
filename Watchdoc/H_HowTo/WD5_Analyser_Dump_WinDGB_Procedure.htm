@@ -164,6 +164,127 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WinDBGProcéduredutilisation" data-magellan-target="WinDBGProcéduredutilisation"><a name="aanchor258"></a>
+                                                    <MadCap:concept term="WndDBG" />WinDBG - Procédure d'utilisation</h1>
+                                                <h2 id="Chargerledumpetrenommermwcorwksdll" data-magellan-target="Chargerledumpetrenommermwcorwksdll">Charger le dump et renommer mwcorwks.dll</h2>
+                                                <p>Pour charger le dump : </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1">exécutez WinDbg 64 bits (pour un dump réalisé sur une plateforme 64 bits)&#160;; </p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1">ouvrez le fichier dump avec CTRL-D (surtout pas en drag&amp;drop)&#160;;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p class="Liste_num_1">déterminez le nom du fichier attendu par WinDbg en exécutant la commande suivante : </p>
+                                                    </li>
+                                                </ol>
+                                                <blockquote>
+                                                    <p><strong>.cordll -ve -u -l</strong>
+                                                    </p>
+                                                    <p><a href="../Z_Resources/Images/02_Captures/Analyser_Dump_WinDBG_Cordll.png"><img src="../Z_Resources/Images/02_Captures/Analyser_Dump_WinDBG_Cordll.png" style="width: 571px;height: 43px;" /></a>
+                                                    </p>
+                                                </blockquote>
+                                                <p class="Resultat">Dans cet exemple, la dll mscordacwks.dll doit être renommée : mscordacwks_AMD64_AMD64_4.6.1055.00.dll</p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="4">
+                                                        <p class="Liste_num_1">renommez le fichier DLL mscordacwks.dll avec le nom identifié à l'étape précédente.</p>
+                                                    </li>
+                                                </ol>
+                                                <h2 id="ChargerSOSetCLR" data-magellan-target="ChargerSOSetCLR">Charger SOS&#160;et CLR</h2>
+                                                <p class="Liste_num_1">Charger les modules SOS et CLR grâce aux commandes suivantes : </p>
+                                                <blockquote>
+                                                    <ul>
+                                                        <li>
+                                                            <p class="MsgSysteme">!load sos</p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="MsgSysteme">!load clr</p>
+                                                        </li>
+                                                    </ul>
+                                                </blockquote>
+                                                <p class="Resultat">si l'opération se déroule correctement,&#160;aucun message n'est affiché.</p>
+                                                <h2 id="Commandesutiles" data-magellan-target="Commandesutiles">Commandes utiles</h2>
+                                                <ul>
+                                                    <li>
+                                                        <p class="TitreNiveau3"><strong>Identifier les processus ayant consommé du CPU</strong> grâce à la commande <strong>!runaway</strong> qui permet de les identifier&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/Analyser_Dump_WinDBG_Runaway.png" style="width: 338px;height: 186px;" /></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <p class="TitreNiveau3"><strong>Sélectionner un thread : </strong>lLa commnade <strong>~&lt;ID du Thread&gt;s</strong> permet de se placer dans le contexte du thread voulu&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/Analyser_Dump_WinDBG_IDThread.png" /></p>
+                                                    </li>
+                                                </ul>
+                                                <p class="TitreNiveau3">&#160;</p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="TitreNiveau3"><strong>Afficher un dump de la stack : </strong>la commande <strong>!dumpstack -EE</strong> permet d'afficher la call stack managée avec les Method Descriptors&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/Analyser_Dump_WinDBG_Dumpstack.png" /></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <p class="TitreNiveau3"><strong>Afficher la stack CLR :</strong> la commande <strong>!clrstack</strong> peut être couplée avec :</p>
+                                                    </li>
+                                                </ul>
+                                                <blockquote>
+                                                    <ul>
+                                                        <li>
+                                                            <p><strong>-p</strong> pour afficher les paramètres, </p>
+                                                        </li>
+                                                        <li>
+                                                            <p><strong>-l</strong> pour afficher les locals, </p>
+                                                        </li>
+                                                        <li>
+                                                            <p><strong>-a</strong> pour afficher les deux.<br /><br /><img src="../Z_Resources/Images/02_Captures/Analyser_Dump_WinDBG_Clrstack.png" style="width: 401px;height: 140px;" /></p>
+                                                            <p>
+                                                                <br />
+                                                            </p>
+                                                        </li>
+                                                    </ul>
+                                                </blockquote>
+                                                <ul>
+                                                    <li>
+                                                        <p class="TitreNiveau3"><strong style="text-decoration: underline; font-style: normal;">Afficher les infos du threadpool</strong> : la commande <strong>!threadpool </strong>affiche des informations notamment le nombre de workers, la charge CPU, etc.<br /><br /><img src="../Z_Resources/Images/02_Captures/Analyser_Dump_WinDBG_Threadpool.png" style="width: 575px;height: 94px;" /></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <p class="TitreNiveau3"><strong style="text-decoration: underline;">Lister les threads et leurs statuts</strong> : la commande ~ permet d'afficher les threads et leurs états:<br /><br /><img src="../Z_Resources/Images/02_Captures/Analyser_Dump_WinDBG_ListThread.png" style="width: 507px;height: 145px;" /><br /></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <p>La commande <strong>!threads</strong> permet d'afficher les threads et d'autres informations comme le lock count&#160;:</p>
+                                                        <p>&#160;</p>
+                                                        <p>
+                                                            <img src="../Z_Resources/Images/02_Captures/Analyser_Dump_WinDBG_Threads.png" />
+                                                        </p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WinDBGProc%C3%A9duredutilisation">WinDBG - Procédure d'utilisation</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Chargerledumpetrenommermwcorwksdll">Charger le dump et renommer mwcorwks.dll</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#ChargerSOSetCLR">Charger SOS&#160;et CLR</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Commandesutiles">Commandes utiles</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
                                     </script>
                                     <!-- Google Tag Manager (noscript) -->
@@ -198,109 +319,6 @@
                                     <div class="nocontent">
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
-                                    </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor258"></a>
-                                            <MadCap:concept term="WndDBG" />WinDBG - Procédure d'utilisation</h1>
-                                        <h2>Charger le dump et renommer mwcorwks.dll</h2>
-                                        <p>Pour charger le dump : </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">exécutez WinDbg 64 bits (pour un dump réalisé sur une plateforme 64 bits)&#160;; </p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1">ouvrez le fichier dump avec CTRL-D (surtout pas en drag&amp;drop)&#160;;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1">déterminez le nom du fichier attendu par WinDbg en exécutant la commande suivante : </p>
-                                            </li>
-                                        </ol>
-                                        <blockquote>
-                                            <p><strong>.cordll -ve -u -l</strong>
-                                            </p>
-                                            <p><a href="../Z_Resources/Images/02_Captures/Analyser_Dump_WinDBG_Cordll.png"><img src="../Z_Resources/Images/02_Captures/Analyser_Dump_WinDBG_Cordll.png" style="width: 571px;height: 43px;" /></a>
-                                            </p>
-                                        </blockquote>
-                                        <p class="Resultat">Dans cet exemple, la dll mscordacwks.dll doit être renommée : mscordacwks_AMD64_AMD64_4.6.1055.00.dll</p>
-                                        <ol data-mc-continue="true">
-                                            <li value="4">
-                                                <p class="Liste_num_1">renommez le fichier DLL mscordacwks.dll avec le nom identifié à l'étape précédente.</p>
-                                            </li>
-                                        </ol>
-                                        <h2>Charger SOS&#160;et CLR</h2>
-                                        <p class="Liste_num_1">Charger les modules SOS et CLR grâce aux commandes suivantes : </p>
-                                        <blockquote>
-                                            <ul>
-                                                <li>
-                                                    <p class="MsgSysteme">!load sos</p>
-                                                </li>
-                                                <li>
-                                                    <p class="MsgSysteme">!load clr</p>
-                                                </li>
-                                            </ul>
-                                        </blockquote>
-                                        <p class="Resultat">si l'opération se déroule correctement,&#160;aucun message n'est affiché.</p>
-                                        <h2>Commandes utiles</h2>
-                                        <ul>
-                                            <li>
-                                                <p class="TitreNiveau3"><strong>Identifier les processus ayant consommé du CPU</strong> grâce à la commande <strong>!runaway</strong> qui permet de les identifier&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/Analyser_Dump_WinDBG_Runaway.png" style="width: 338px;height: 186px;" /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                        </ul>
-                                        <ul>
-                                            <li>
-                                                <p class="TitreNiveau3"><strong>Sélectionner un thread : </strong>lLa commnade <strong>~&lt;ID du Thread&gt;s</strong> permet de se placer dans le contexte du thread voulu&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/Analyser_Dump_WinDBG_IDThread.png" /></p>
-                                            </li>
-                                        </ul>
-                                        <p class="TitreNiveau3">&#160;</p>
-                                        <ul>
-                                            <li>
-                                                <p class="TitreNiveau3"><strong>Afficher un dump de la stack : </strong>la commande <strong>!dumpstack -EE</strong> permet d'afficher la call stack managée avec les Method Descriptors&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/Analyser_Dump_WinDBG_Dumpstack.png" /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                        </ul>
-                                        <ul>
-                                            <li>
-                                                <p class="TitreNiveau3"><strong>Afficher la stack CLR :</strong> la commande <strong>!clrstack</strong> peut être couplée avec :</p>
-                                            </li>
-                                        </ul>
-                                        <blockquote>
-                                            <ul>
-                                                <li>
-                                                    <p><strong>-p</strong> pour afficher les paramètres, </p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>-l</strong> pour afficher les locals, </p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>-a</strong> pour afficher les deux.<br /><br /><img src="../Z_Resources/Images/02_Captures/Analyser_Dump_WinDBG_Clrstack.png" style="width: 401px;height: 140px;" /></p>
-                                                    <p>
-                                                        <br />
-                                                    </p>
-                                                </li>
-                                            </ul>
-                                        </blockquote>
-                                        <ul>
-                                            <li>
-                                                <p class="TitreNiveau3"><strong style="text-decoration: underline; font-style: normal;">Afficher les infos du threadpool</strong> : la commande <strong>!threadpool </strong>affiche des informations notamment le nombre de workers, la charge CPU, etc.<br /><br /><img src="../Z_Resources/Images/02_Captures/Analyser_Dump_WinDBG_Threadpool.png" style="width: 575px;height: 94px;" /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                        </ul>
-                                        <ul>
-                                            <li>
-                                                <p class="TitreNiveau3"><strong style="text-decoration: underline;">Lister les threads et leurs statuts</strong> : la commande ~ permet d'afficher les threads et leurs états:<br /><br /><img src="../Z_Resources/Images/02_Captures/Analyser_Dump_WinDBG_ListThread.png" style="width: 507px;height: 145px;" /><br /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                        </ul>
-                                        <ul>
-                                            <li>
-                                                <p>La commande <strong>!threads</strong> permet d'afficher les threads et d'autres informations comme le lock count&#160;:</p>
-                                                <p>&#160;</p>
-                                                <p>
-                                                    <img src="../Z_Resources/Images/02_Captures/Analyser_Dump_WinDBG_Threads.png" />
-                                                </p>
-                                            </li>
-                                        </ul>
                                     </div>
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">

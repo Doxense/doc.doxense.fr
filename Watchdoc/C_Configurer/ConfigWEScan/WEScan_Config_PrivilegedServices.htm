@@ -165,6 +165,85 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WEScanPrérequisConfigurerlesprérequispourScanToFolderetScanToUrl" data-magellan-target="WEScanPrérequisConfigurerlesprérequispourScanToFolderetScanToUrl"><a name="aanchor25"></a>
+                                                    <MadCap:concept term="WEScan;CFG" />WEScan - Prérequis - Configurer les prérequis pour ScanToFolder et ScanToUrl</h1>
+                                                <h2 id="Principe" data-magellan-target="Principe">Principe</h2>
+                                                <p>Pour utiliser les destinations ScanToFolder et "ScanToUrl (pour lesquelles les documents numérisés sont envoyés dans un dossier partagé du réseau), WEScan nécessite deux prérequis :</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>création d'un compte de service disposant d'un droit en écriture et lecture sur un dossier en partage réseau ;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>activation d'un service Windows spécifique nommé "Watchdoc Privileged service".&#160;Pour faciliter la mise à jour, le service Windows "Watchdoc Privileged service" est installé par défaut, mais avec le statut "Désactivé". Pour l'utiliser, il convient donc de l'activer et le paramétrer.</p>
+                                                    </li>
+                                                </ol>
+                                                <h2 id="Procédure" data-magellan-target="Procédure">Procédure</h2>
+                                                <h3>Créer et paramétrer un dossier en partage réseau </h3>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1" style="text-align: left;">En tant qu'administrateur, accédez au serveur Watchdoc en tant qu'administrateur.&#160;Le dossier en partage réseau peut aussi être créé sur n'importe quel autre serveur de la configuration, à condition d'être accessible depuis le serveur Watchdoc.</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1" style="text-align: left;">Créez un compte de service qui aura le droit d'écriture sur le dossier en partage réseau (pour MS&#160;Windows<sup>®</sup>, cf.&#160;<a href="https://learn.microsoft.com/fr-fr/windows-server/identity/ad-ds/manage/understand-service-accounts" target="_blank">Comptes de service).</a></p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p class="Liste_num_1" style="text-align: left;">Créez un dossier en partage réseau (pour MS&#160;Windows<sup>®</sup> , cf.&#160;<a href="https://support.microsoft.com/fr-fr/windows/partage-de-fichiers-sur-un-réseau-dans-windows-b58704b2-f53a-4b82-7bc1-80f9994725bf" target="_blank">Partage de fichiers sur un réseau dans Windows<sup>®</sup></a>).</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>Sur le dossier en partage réseau, appliquez les droits d'écriture au compte de service spécifiquement créé.</p>
+                                                    </li>
+                                                </ol>
+                                                <h3>Activer et démarrer Watchdoc Privileged Service</h3>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1" style="text-align: left;">Depuis le serveur d'impression, activez "services.msc" et recherchez-y <strong>Watchdoc Privileged service</strong>.</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1" style="text-align: left;">Cliquez-droit sur Watchdoc Privileged service pour accéder aux <strong>Propriétés</strong>.</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>Dans l'onglet <strong>Général</strong>, section <strong>Type de démarrage</strong>, sélectionnez <strong>Automatique</strong>&#160;:<br /><br /><img src="../../Z_Resources/Images/02_Captures/MAJ_WD_Maj_PrivilegedS_Automatic.png" style="height: auto;width: 700px;" /> :</p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>Sous l'onglet <strong>Log On</strong>, indiquez le compte de service et son mot de passe.</p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p>Cliquez sur <strong>Apply/Appliquer</strong> :</p>
+                                                        <p>
+                                                            <br />
+                                                            <img src="../../Z_Resources/Images/02_Captures/MAJ_WD_Maj_PrivilegedS_Compte_54.png" style="width: 500px;height: 0;" />
+                                                        </p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p>De retour dans Services, cliquez-droit sur <strong>Watchdoc Privileged service</strong>,  puis sur <strong>Démarrer (start)</strong>&#160;;</p>
+                                                        <p class="Liste_num_1" style="text-align: left;">
+                                                            <br />
+                                                            <img src="../../Z_Resources/Images/02_Captures/MAJ_WD_Maj_PrivilegedS_Start_54.png" style="width: 700px;height: auto;" />
+                                                            <br />
+                                                            <br />
+                                                        </p>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WEScanPr%C3%A9requisConfigurerlespr%C3%A9requispourScanToFolderetScanToUrl">WEScan - Prérequis - Configurer les prérequis pour ScanToFolder et ScanToUrl</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Principe">Principe</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Proc%C3%A9dure">Procédure</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -198,69 +277,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor25"></a>
-                                            <MadCap:concept term="WEScan;CFG" />WEScan - Prérequis - Configurer les prérequis pour ScanToFolder et ScanToUrl</h1>
-                                        <h2>Principe</h2>
-                                        <p>Pour utiliser les destinations ScanToFolder et "ScanToUrl (pour lesquelles les documents numérisés sont envoyés dans un dossier partagé du réseau), WEScan nécessite deux prérequis :</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>création d'un compte de service disposant d'un droit en écriture et lecture sur un dossier en partage réseau ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>activation d'un service Windows spécifique nommé "Watchdoc Privileged service".&#160;Pour faciliter la mise à jour, le service Windows "Watchdoc Privileged service" est installé par défaut, mais avec le statut "Désactivé". Pour l'utiliser, il convient donc de l'activer et le paramétrer.</p>
-                                            </li>
-                                        </ol>
-                                        <h2>Procédure</h2>
-                                        <h3>Créer et paramétrer un dossier en partage réseau </h3>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1" style="text-align: left;">En tant qu'administrateur, accédez au serveur Watchdoc en tant qu'administrateur.&#160;Le dossier en partage réseau peut aussi être créé sur n'importe quel autre serveur de la configuration, à condition d'être accessible depuis le serveur Watchdoc.</p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1" style="text-align: left;">Créez un compte de service qui aura le droit d'écriture sur le dossier en partage réseau (pour MS&#160;Windows<sup>®</sup>, cf.&#160;<a href="https://learn.microsoft.com/fr-fr/windows-server/identity/ad-ds/manage/understand-service-accounts" target="_blank">Comptes de service).</a></p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1" style="text-align: left;">Créez un dossier en partage réseau (pour MS&#160;Windows<sup>®</sup> , cf.&#160;<a href="https://support.microsoft.com/fr-fr/windows/partage-de-fichiers-sur-un-réseau-dans-windows-b58704b2-f53a-4b82-7bc1-80f9994725bf" target="_blank">Partage de fichiers sur un réseau dans Windows<sup>®</sup></a>).</p>
-                                            </li>
-                                            <li value="4">
-                                                <p>Sur le dossier en partage réseau, appliquez les droits d'écriture au compte de service spécifiquement créé.</p>
-                                            </li>
-                                        </ol>
-                                        <h3>Activer et démarrer Watchdoc Privileged Service</h3>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1" style="text-align: left;">Depuis le serveur d'impression, activez "services.msc" et recherchez-y <strong>Watchdoc Privileged service</strong>.</p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1" style="text-align: left;">Cliquez-droit sur Watchdoc Privileged service pour accéder aux <strong>Propriétés</strong>.</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>Dans l'onglet <strong>Général</strong>, section <strong>Type de démarrage</strong>, sélectionnez <strong>Automatique</strong>&#160;:<br /><br /><img src="../../Z_Resources/Images/02_Captures/MAJ_WD_Maj_PrivilegedS_Automatic.png" style="height: auto;width: 700px;" /> :</p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p>Sous l'onglet <strong>Log On</strong>, indiquez le compte de service et son mot de passe.</p>
-                                            </li>
-                                            <li value="5">
-                                                <p>Cliquez sur <strong>Apply/Appliquer</strong> :</p>
-                                                <p>
-                                                    <br />
-                                                    <img src="../../Z_Resources/Images/02_Captures/MAJ_WD_Maj_PrivilegedS_Compte_54.png" style="width: 500px;height: 0;" />
-                                                </p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="6">
-                                                <p>De retour dans Services, cliquez-droit sur <strong>Watchdoc Privileged service</strong>,  puis sur <strong>Démarrer (start)</strong>&#160;;</p>
-                                                <p class="Liste_num_1" style="text-align: left;">
-                                                    <br />
-                                                    <img src="../../Z_Resources/Images/02_Captures/MAJ_WD_Maj_PrivilegedS_Start_54.png" style="width: 700px;height: auto;" />
-                                                    <br />
-                                                    <br />
-                                                </p>
-                                            </li>
-                                        </ol>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

@@ -165,6 +165,104 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocConfigurerlemodedesynchronisationentremasteretautresserveurs" data-magellan-target="WatchdocConfigurerlemodedesynchronisationentremasteretautresserveurs"><a name="aanchor165"></a>
+                                                    <MadCap:concept term="CFG;WD" />Watchdoc - Configurer le mode de synchronisation entre master et autres serveurs</h1>
+                                                <h2 id="Principe" data-magellan-target="Principe">Principe</h2>
+                                                <p>Dans une architecture comportant un serveur master et d'autres serveurs, l'ensemble des serveurs Watchdoc communiquent entre eux. <br />En particulier, le serveur master communique vers les autres serveurs de Watchdoc pour leur envoyer sa configuration lors des synchronisations.</p>
+                                                <p>Le mode de synchronisation par défaut est <b>bidirectionnel</b>.</p>
+                                                <p>&#160;</p>
+                                                <p>Cependant, un autre mode peut être activé : le <strong>mode MailBox</strong>. </p>
+                                                <p>Dans le cas de sites distants reliés par un réseau Internet ne disposant pas de VPN, la communication du server master vers les autres serveurs de Watchdoc n'est pas possible car elle présente une faille de sécurité.</p>
+                                                <p>Pour gérer ce cas de figure, la synchronisation peut être forcée en mode <b>unidirectionnel</b>&#160;<strong>(mailbox)</strong>.&#160;</p>
+                                                <p>Dans ce mode, un serveur slave Watchdoc appelle le master et ce dernier peut alors répondre dans la session de communication établie par le serveur slave. </p>
+                                                <h2 id="Procédure" data-magellan-target="Procédure">Procédure</h2>
+                                                <h3>Configurer le mode de synchronisation</h3>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Dans l'interface <strong>Gestion du domaine</strong>, section <strong>Informations du domaine</strong>, sélectionnez le <strong>Mode de synchronisation </strong>;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>pour le mode <strong>unidirectionnel </strong>(<strong>Mailbox</strong>), cliquez sur <strong>Afficher les options avancée</strong>s pour compléter le paramétrage :</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p><strong>mode de stockage</strong> : définissez le mode de stockage des ordres de synchronisation&#160;:</p>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p><strong>en mémoire</strong> : permet de stocket temporairement les ordres de synchronisation ;</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p><strong>sur disque</strong> : permet de ne pas perdre les information lors d'un redémarrage du service Watchdoc.</p>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>opérations par minute</strong> : définissez le nombre maximum de configuration et de synchronisation des drivers par minute de manière à éviter la saturation du serveur master ;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Gestion du rafraîchissement : </strong>indiquez les temps d'attente entre les appels des serveur slaves au serveur master :</p>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p><strong>Temps d'attente maximal :</strong> saisissez le temps d'attente maximal qui s'écoule entre 2 requêtes envoyées par un serveur au master ;</p>
+                                                                    </li>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p><strong>Temps d'attente minimal :</strong> saisissez le temps d'attente minimal qui s'écoule entre 2 requêtes envoyées par un serveur au master ; </p>
+                                                                    </li>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p><strong>Augmenter le temps d'attente</strong> : permet de saisir des valeurs qui instaurent un mode aléatoire dans le lancement des requêtes envoyées au master.</p>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ol>
+                                                <fieldset>Pour les versions antérieures à Watchdoc V6, le mode de synchronisation doit être activé sur tous les serveurs Watchdoc (master et autres).&#160;A partir de Watchdoc V6, le mode de synchronisation s'applique à tous les serveurs du domaine.&#160;</fieldset>
+                                                <blockquote>
+                                                    <p><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Z_Resources/Images/02_Captures/Config_Domaine_mailbox2.png"><img class="MCPopupThumbnail img" data-mc-width="1909" data-mc-height="846" src="../../Z_Resources/Images/02_Captures/Config_Domaine_mailbox2.png" tabindex="" style="width: 700px;mc-thumbnail: popup;mc-thumbnail-max-width: 1000px;max-width: 1000px;" /></a>
+                                                    </p>
+                                                </blockquote>
+                                                <h3>Configurer les <a name="délais_de_communication" id="délais_de_communication"></a>délais de communication</h3>
+                                                <p>La gestion en domaine génère un grand nombre de communications entre le serveur master et les autres serveurs.&#160;<br />Il arrive que ce grand nombre de communications simultanées provoque des latences de réponses du serveur entraînant des perturbations dans le traitement des travaux d'impression.&#160;<br />En cas de perturbations de ce genre, modifiez les délais de communications des serveurs avec le serveur master&#160;: </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>cliquez sur le lien "Afficher les options avancées"&#160;:</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>saisissez les délais de communication des serveurs souhaités&#160;:</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p><strong>Au démarrage&#160;:</strong> au démarrage du serveur slave, délai d'attente avant que le serveur ait le droit de le contacter&#160;le serveur master&#160;;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Quand connecté&#160;: </strong>lorsqu'une communication est établie entre le serveur master et le serveur slave, délai entre 2 communications pour se synchroniser ;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Quand déconnecté&#160;:</strong>  lorsque le serveur est déconnecté du serveur master, intervalle durant lequel il peut recontacter le serveur master pour rétablir la connexion et se synchroniser&#160;:<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="ConfigDomaineDelaisCommunication.png"><img class="MCPopupThumbnail img" data-mc-width="1714" data-mc-height="740" src="ConfigDomaineDelaisCommunication.png" tabindex="" style="width: 700px;height: auto;mc-thumbnail: popup;mc-thumbnail-max-width: 1000px;max-width: 1000px;" /></a></p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocConfigurerlemodedesynchronisationentremasteretautresserveurs">Watchdoc - Configurer le mode de synchronisation entre master et autres serveurs</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Principe">Principe</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Proc%C3%A9dure">Procédure</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -198,88 +296,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor165"></a>
-                                            <MadCap:concept term="CFG;WD" />Watchdoc - Configurer le mode de synchronisation entre master et autres serveurs</h1>
-                                        <h2>Principe</h2>
-                                        <p>Dans une architecture comportant un serveur master et d'autres serveurs, l'ensemble des serveurs Watchdoc communiquent entre eux. <br />En particulier, le serveur master communique vers les autres serveurs de Watchdoc pour leur envoyer sa configuration lors des synchronisations.</p>
-                                        <p>Le mode de synchronisation par défaut est <b>bidirectionnel</b>.</p>
-                                        <p>&#160;</p>
-                                        <p>Cependant, un autre mode peut être activé : le <strong>mode MailBox</strong>. </p>
-                                        <p>Dans le cas de sites distants reliés par un réseau Internet ne disposant pas de VPN, la communication du server master vers les autres serveurs de Watchdoc n'est pas possible car elle présente une faille de sécurité.</p>
-                                        <p>Pour gérer ce cas de figure, la synchronisation peut être forcée en mode <b>unidirectionnel</b>&#160;<strong>(mailbox)</strong>.&#160;</p>
-                                        <p>Dans ce mode, un serveur slave Watchdoc appelle le master et ce dernier peut alors répondre dans la session de communication établie par le serveur slave. </p>
-                                        <h2>Procédure</h2>
-                                        <h3>Configurer le mode de synchronisation</h3>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Dans l'interface <strong>Gestion du domaine</strong>, section <strong>Informations du domaine</strong>, sélectionnez le <strong>Mode de synchronisation </strong>;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>pour le mode <strong>unidirectionnel </strong>(<strong>Mailbox</strong>), cliquez sur <strong>Afficher les options avancée</strong>s pour compléter le paramétrage :</p>
-                                                <ul>
-                                                    <li>
-                                                        <p><strong>mode de stockage</strong> : définissez le mode de stockage des ordres de synchronisation&#160;:</p>
-                                                        <ul>
-                                                            <li>
-                                                                <p><strong>en mémoire</strong> : permet de stocket temporairement les ordres de synchronisation ;</p>
-                                                            </li>
-                                                            <li>
-                                                                <p><strong>sur disque</strong> : permet de ne pas perdre les information lors d'un redémarrage du service Watchdoc.</p>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>opérations par minute</strong> : définissez le nombre maximum de configuration et de synchronisation des drivers par minute de manière à éviter la saturation du serveur master ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Gestion du rafraîchissement : </strong>indiquez les temps d'attente entre les appels des serveur slaves au serveur master :</p>
-                                                        <ul>
-                                                            <li>
-                                                                <p><strong>Temps d'attente maximal :</strong> saisissez le temps d'attente maximal qui s'écoule entre 2 requêtes envoyées par un serveur au master ;</p>
-                                                            </li>
-                                                        </ul>
-                                                        <ul>
-                                                            <li>
-                                                                <p><strong>Temps d'attente minimal :</strong> saisissez le temps d'attente minimal qui s'écoule entre 2 requêtes envoyées par un serveur au master ; </p>
-                                                            </li>
-                                                        </ul>
-                                                        <ul>
-                                                            <li>
-                                                                <p><strong>Augmenter le temps d'attente</strong> : permet de saisir des valeurs qui instaurent un mode aléatoire dans le lancement des requêtes envoyées au master.</p>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ol>
-                                        <fieldset>Pour les versions antérieures à Watchdoc V6, le mode de synchronisation doit être activé sur tous les serveurs Watchdoc (master et autres).&#160;A partir de Watchdoc V6, le mode de synchronisation s'applique à tous les serveurs du domaine.&#160;</fieldset>
-                                        <blockquote>
-                                            <p><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Z_Resources/Images/02_Captures/Config_Domaine_mailbox2.png"><img class="MCPopupThumbnail img" data-mc-width="1909" data-mc-height="846" src="../../Z_Resources/Images/02_Captures/Config_Domaine_mailbox2.png" tabindex="" style="width: 700px;mc-thumbnail: popup;mc-thumbnail-max-width: 1000px;max-width: 1000px;" /></a>
-                                            </p>
-                                        </blockquote>
-                                        <h3>Configurer les <a name="délais_de_communication" id="délais_de_communication"></a>délais de communication</h3>
-                                        <p>La gestion en domaine génère un grand nombre de communications entre le serveur master et les autres serveurs.&#160;<br />Il arrive que ce grand nombre de communications simultanées provoque des latences de réponses du serveur entraînant des perturbations dans le traitement des travaux d'impression.&#160;<br />En cas de perturbations de ce genre, modifiez les délais de communications des serveurs avec le serveur master&#160;: </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>cliquez sur le lien "Afficher les options avancées"&#160;:</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>saisissez les délais de communication des serveurs souhaités&#160;:</p>
-                                                <ul>
-                                                    <li>
-                                                        <p><strong>Au démarrage&#160;:</strong> au démarrage du serveur slave, délai d'attente avant que le serveur ait le droit de le contacter&#160;le serveur master&#160;;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Quand connecté&#160;: </strong>lorsqu'une communication est établie entre le serveur master et le serveur slave, délai entre 2 communications pour se synchroniser ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Quand déconnecté&#160;:</strong>  lorsque le serveur est déconnecté du serveur master, intervalle durant lequel il peut recontacter le serveur master pour rétablir la connexion et se synchroniser&#160;:<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="ConfigDomaineDelaisCommunication.png"><img class="MCPopupThumbnail img" data-mc-width="1714" data-mc-height="740" src="ConfigDomaineDelaisCommunication.png" tabindex="" style="width: 700px;height: auto;mc-thumbnail: popup;mc-thumbnail-max-width: 1000px;max-width: 1000px;" /></a></p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ol>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

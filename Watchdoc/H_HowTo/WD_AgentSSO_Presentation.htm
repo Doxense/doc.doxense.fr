@@ -165,6 +165,62 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocWatchdocAgentSSOPrésentation" data-magellan-target="WatchdocWatchdocAgentSSOPrésentation"><a name="aanchor36"></a>
+                                                    <MadCap:concept term="WD" />Watchdoc - Watchdoc Agent SSO - Présentation</h1>
+                                                <h2 id="Principe" data-magellan-target="Principe">Principe</h2>
+                                                <p>Dans certains contextes professionnels, il arrive qu'une session générique soit ouverte sur un poste informatique pour permettre à tout un groupe de l'utiliser. Par exemple, dans un service hospitalier, tout le personnel médical tels que secrétaires, aide-soignants, infirmiers et médecins.</p>
+                                                <p>&#160;</p>
+                                                <p>Dans ce cas, pour permettre à chaque utilisateur de travailler dans un environnement personnalisé, le poste peut être équipé d'un logiciel d'authentification tiers (type SSOx<sup>®</sup> d'Avencis).</p>
+                                                <p>&#160;</p>
+                                                <p>Dans une telle configuration, l'authentification ne reposant sur aucun annuaire, Watchdoc ne peut assurer une impression sécurisée. Il est donc nécessaire d'installer l'outil Watchdoc Agent SSO développé spécifiquement pour ce besoin. Grâce aux données collectées sur le poste client par le logiciel SSO et envoyées à Watchdoc, l'Agent SSO établit une correspondance entre les demandes d'impression issues du poste client et son annuaire utilisateurs (A.D.). Les données contenues dans les spools permettent d'associer les travaux d'impression demandés à leurs utilisateurs (authentifiés dans l'A.D.) et, ainsi, de débloquer les impressions en toute sécurité.</p>
+                                                <h2 id="Prérequis" data-magellan-target="Prérequis">Prérequis</h2>
+                                                <p>Avant d'installer l'Agent SSO de Watchdoc, vérifiez les prérequis suivants :</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>.NET 4.6.1 (min.) ou 4.7.2 (recommandé) est installé sur les postes clients ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Watchdoc V5.1.1 min. ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>capacité du logiciel SSO à envoyer à Watchdoc  le SAM AccountName de l'utilisateur ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>dans le cas d'un environnement multi-domaine, capacité du logiciel SSO à envoyer à Watchdoc le nom de domaine dont dépend l'utilisateur ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>capacité du logiciel SSO à appeler un exécutable avec les arguments suivants :</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>lors de l'authentification de l’utilisateur : “PATH_ TO_EXECUTABLE\WatchdocSSOAgent.exe” /standalone /event LogOn/user “USER_LOGIN”</p>
+                                                            </li>
+                                                        </ul>
+                                                        <ul>
+                                                            <li>
+                                                                <p>Lors de la déconnexion de l’utilisateur : “PATH_ TO_EXECUTABLE\WatchdocSSOAgent.exe” /standalone /event LogOff"<br />Le LogOff est optionnel dans la mesure où l'authentification suivante (LogOn) déconnecte automatiquement l'utilisateur précédemment connecté.</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                                <p>&#160;</p>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocWatchdocAgentSSOPr%C3%A9sentation">Watchdoc - Watchdoc Agent SSO - Présentation</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Principe">Principe</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Pr%C3%A9requis">Prérequis</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -198,46 +254,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor36"></a>
-                                            <MadCap:concept term="WD" />Watchdoc - Watchdoc Agent SSO - Présentation</h1>
-                                        <h2>Principe</h2>
-                                        <p>Dans certains contextes professionnels, il arrive qu'une session générique soit ouverte sur un poste informatique pour permettre à tout un groupe de l'utiliser. Par exemple, dans un service hospitalier, tout le personnel médical tels que secrétaires, aide-soignants, infirmiers et médecins.</p>
-                                        <p>&#160;</p>
-                                        <p>Dans ce cas, pour permettre à chaque utilisateur de travailler dans un environnement personnalisé, le poste peut être équipé d'un logiciel d'authentification tiers (type SSOx<sup>®</sup> d'Avencis).</p>
-                                        <p>&#160;</p>
-                                        <p>Dans une telle configuration, l'authentification ne reposant sur aucun annuaire, Watchdoc ne peut assurer une impression sécurisée. Il est donc nécessaire d'installer l'outil Watchdoc Agent SSO développé spécifiquement pour ce besoin. Grâce aux données collectées sur le poste client par le logiciel SSO et envoyées à Watchdoc, l'Agent SSO établit une correspondance entre les demandes d'impression issues du poste client et son annuaire utilisateurs (A.D.). Les données contenues dans les spools permettent d'associer les travaux d'impression demandés à leurs utilisateurs (authentifiés dans l'A.D.) et, ainsi, de débloquer les impressions en toute sécurité.</p>
-                                        <h2>Prérequis</h2>
-                                        <p>Avant d'installer l'Agent SSO de Watchdoc, vérifiez les prérequis suivants :</p>
-                                        <ul>
-                                            <li>
-                                                <p>.NET 4.6.1 (min.) ou 4.7.2 (recommandé) est installé sur les postes clients ;</p>
-                                            </li>
-                                            <li>
-                                                <p>Watchdoc V5.1.1 min. ;</p>
-                                            </li>
-                                            <li>
-                                                <p>capacité du logiciel SSO à envoyer à Watchdoc  le SAM AccountName de l'utilisateur ;</p>
-                                            </li>
-                                            <li>
-                                                <p>dans le cas d'un environnement multi-domaine, capacité du logiciel SSO à envoyer à Watchdoc le nom de domaine dont dépend l'utilisateur ;</p>
-                                            </li>
-                                            <li>
-                                                <p>capacité du logiciel SSO à appeler un exécutable avec les arguments suivants :</p>
-                                                <ul>
-                                                    <li>
-                                                        <p>lors de l'authentification de l’utilisateur : “PATH_ TO_EXECUTABLE\WatchdocSSOAgent.exe” /standalone /event LogOn/user “USER_LOGIN”</p>
-                                                    </li>
-                                                </ul>
-                                                <ul>
-                                                    <li>
-                                                        <p>Lors de la déconnexion de l’utilisateur : “PATH_ TO_EXECUTABLE\WatchdocSSOAgent.exe” /standalone /event LogOff"<br />Le LogOff est optionnel dans la mesure où l'authentification suivante (LogOn) déconnecte automatiquement l'utilisateur précédemment connecté.</p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                        <p>&#160;</p>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

@@ -176,73 +176,89 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor180"></a>
-                                            <MadCap:concept term="WSC" />WSC - Dépanner</h1>
-                                        <h2>Impossible de mettre à jour&#160;: package non-sécurisé</h2>
-                                        <h2><strong style="font-size: 16pt;">Contexte</strong>
-                                        </h2>
-                                        <p>Lors d'une mise à jour des serveurs d'un domaine, lorsqu'on tente d'ajouter un package avant de le propager ,la mise à jour échoue.&#160;<br />Le message "la mise à jour n'a pas pu être ajoutée" - "Ce package de mise à jour n'est pas sécurisé" s'affiche : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Updater_Erreur.png" style="width: 500px;height: auto;" /></p>
-                                        <p>&#160;</p>
-                                        <p class="H2_Print"><strong>Cause</strong>
-                                        </p>
-                                        <p>Ce comportement survient notamment lorsque le package de mise à jour contient un fichier <strong>update.cat</strong> non valide. <br />Pour vérifier la validité du certificat&#160;: </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>ouvrez le package d'installation téléchargé et décompressé ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>ouvrez le "<strong>Security Catalog</strong>" en cliquant sur le fichier <strong>update.cat</strong> : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Updater_CfUpdate.png" style="width: 700px;height: auto;" /></p>
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WSCDépanner" data-magellan-target="WSCDépanner"><a name="aanchor180"></a>
+                                                    <MadCap:concept term="WSC" />WSC - Dépanner</h1>
+                                                <h2 id="Impossibledemettreàjourpackagenonsécurisé" data-magellan-target="Impossibledemettreàjourpackagenonsécurisé">Impossible de mettre à jour&#160;: package non-sécurisé</h2>
+                                                <h2 id="Contexte" data-magellan-target="Contexte"><strong style="font-size: 16pt;">Contexte</strong>
+                                                </h2>
+                                                <p>Lors d'une mise à jour des serveurs d'un domaine, lorsqu'on tente d'ajouter un package avant de le propager ,la mise à jour échoue.&#160;<br />Le message "la mise à jour n'a pas pu être ajoutée" - "Ce package de mise à jour n'est pas sécurisé" s'affiche : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Updater_Erreur.png" style="width: 500px;height: auto;" /></p>
                                                 <p>&#160;</p>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="3">
-                                                <p>dans l'interface <strong>Security catalog</strong>, vérifiez les informations relatives au catalogue de sécurité&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Updater_SecurCatInfo.png" style="width: 363px;height: 461px;" /><br /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p>dans l'interface <strong>Security catalog</strong>, cliquez sur <strong>View signature</strong>, puis&#160;View <strong>Certificate</strong> pour connaître le nom du certificat : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Updater_CertPath.png" /><br /></p>
+                                                <p class="H2_Print"><strong>Cause</strong>
+                                                </p>
+                                                <p>Ce comportement survient notamment lorsque le package de mise à jour contient un fichier <strong>update.cat</strong> non valide. <br />Pour vérifier la validité du certificat&#160;: </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>ouvrez le package d'installation téléchargé et décompressé ;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>ouvrez le "<strong>Security Catalog</strong>" en cliquant sur le fichier <strong>update.cat</strong> : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Updater_CfUpdate.png" style="width: 700px;height: auto;" /></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                </ol>
+                                                <ol data-mc-continue="true">
+                                                    <li value="3">
+                                                        <p>dans l'interface <strong>Security catalog</strong>, vérifiez les informations relatives au catalogue de sécurité&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Updater_SecurCatInfo.png" style="width: 363px;height: 461px;" /><br /></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>dans l'interface <strong>Security catalog</strong>, cliquez sur <strong>View signature</strong>, puis&#160;View <strong>Certificate</strong> pour connaître le nom du certificat : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Updater_CertPath.png" /><br /></p>
+                                                        <p>
+                                                            <br />
+                                                        </p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p>Lancez le gestionnaire de certificats pour vérifier que le certificat attendu ne figure pas dans la liste : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Updater_VerifCertif.png" style="width: 500px;" /></p>
+                                                    </li>
+                                                </ol>
                                                 <p>
                                                     <br />
                                                 </p>
-                                            </li>
-                                            <li value="5">
-                                                <p>Lancez le gestionnaire de certificats pour vérifier que le certificat attendu ne figure pas dans la liste : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Updater_VerifCertif.png" style="width: 500px;" /></p>
-                                            </li>
-                                        </ol>
-                                        <p>
-                                            <br />
-                                        </p>
-                                        <p class="H2_Print"><strong>Résolution</strong>
-                                        </p>
-                                        <p>Si le certificat ne figure pas dans la liste, il convient d'installer un certificat valide DigiCert sur le serveur.</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>rendez-vous sur le site <a href="https://ccadb.my.salesforce-sites.com/microsoft/IncludedCACertificateReportForMSFT" target="_blank">Microsoft CCADB</a> (https://ccadb.my.salesforce-sites.com/microsoft/IncludedCACertificateReportForMSFT)</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>téléchargez le certificat DigiCert Assured ID Root CA de nov.&#160;2026<br />3E9099B5015E8F486C00BCEA9D111EE721FABA355A89BCF1DF69561E3DC6325C<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Updater_DownLCert.png" /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>une fois le certificat téléchargé, installez-le&#160; :<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Updater_InstallCert.png" style="height: auto;width: 300px;" /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p>Cochez la case <strong>Place all certificates in the following store</strong> ; </p>
-                                            </li>
-                                            <li value="5">
-                                                <p>Enregistrez-le dans le dossier <strong>Trusted Root Certification Authorities</strong> :<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Updater_StoreCertif.png" style="width: 371px;height: 361px;" /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="6">
-                                                <p>Poursuivez l'installation en cliquant sur le bouton <strong>Finish</strong>: <br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Updater_InstallCertFin.png" /><br /><br /></p>
-                                            </li>
-                                            <li value="7">
-                                                <p>Une fois le certificat installé, relancez la mise à jour de Watchdoc via WSC.</p>
-                                            </li>
-                                        </ol>
+                                                <p class="H2_Print"><strong>Résolution</strong>
+                                                </p>
+                                                <p>Si le certificat ne figure pas dans la liste, il convient d'installer un certificat valide DigiCert sur le serveur.</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>rendez-vous sur le site <a href="https://ccadb.my.salesforce-sites.com/microsoft/IncludedCACertificateReportForMSFT" target="_blank">Microsoft CCADB</a> (https://ccadb.my.salesforce-sites.com/microsoft/IncludedCACertificateReportForMSFT)</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>téléchargez le certificat DigiCert Assured ID Root CA de nov.&#160;2026<br />3E9099B5015E8F486C00BCEA9D111EE721FABA355A89BCF1DF69561E3DC6325C<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Updater_DownLCert.png" /></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>une fois le certificat téléchargé, installez-le&#160; :<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Updater_InstallCert.png" style="height: auto;width: 300px;" /></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>Cochez la case <strong>Place all certificates in the following store</strong> ; </p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p>Enregistrez-le dans le dossier <strong>Trusted Root Certification Authorities</strong> :<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Updater_StoreCertif.png" style="width: 371px;height: 361px;" /></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p>Poursuivez l'installation en cliquant sur le bouton <strong>Finish</strong>: <br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Serveurs_Updater_InstallCertFin.png" /><br /><br /></p>
+                                                    </li>
+                                                    <li value="7">
+                                                        <p>Une fois le certificat installé, relancez la mise à jour de Watchdoc via WSC.</p>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WSCD%C3%A9panner">WSC - Dépanner</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Impossibledemettre%C3%A0jourpackagenons%C3%A9curis%C3%A9">Impossible de mettre à jour&#160;: package non-sécurisé</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Contexte">Contexte</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
                                     </div>
                                     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
                                     </script>

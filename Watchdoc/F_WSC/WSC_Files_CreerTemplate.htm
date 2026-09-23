@@ -165,6 +165,113 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocConsoledeSupervisionWSCCréeruntemplatedimprimante" data-magellan-target="WatchdocConsoledeSupervisionWSCCréeruntemplatedimprimante"><a name="aanchor219"></a>
+                                                    <MadCap:concept term="WSC" />Watchdoc - Console de Supervision (WSC) - Créer un template d'imprimante</h1>
+                                                <h2 id="Préalable" data-magellan-target="Préalable">Préalable</h2>
+                                                <p>Un "template d'imprimante" est une configuration de file d'impression que l'on souhaite utiliser comme modèle. Ce modèle peut ensuite être appliqué à plusieurs périphériques de même marque utilisant le même pilote et qui nécessitent la même configuration.</p>
+                                                <p>&#160;</p>
+                                                <p>Notez qu'il faut avoir préalablement <strong>ajouté un pilote</strong> (cf.&#160;<a href="WSC6.1.x_Ajouter_Pilote.htm" target="_blank">WSC&#160;- Ajouter un pilote</a>) et avoir <strong>créé une file</strong> (cf.&#160;<a href="WSC_Files_CreerFile.htm" target="_blank">WSC - Créer une file d'impression</a>) pour créer un template.</p>
+                                                <h2 id="CréerunTemplateModèledepériphériquedimpressionavecsaconfigurationquilestpossibledecréerdansWSCafindelappliquerensuiteàplusieurspériphériquesdemêmemarqueetutilisantlamêmeconfigurationBienquilsagissedunmodèledeconfigurationletermemodèlenapasétéretenupouréviterlaconfusionavecletermemodèledimprimanteoudeMFPdéjàutiliséparlesconstructeursdimprimanteàpartirdunefiledéjàdéclaréedansWSC" data-magellan-target="CréerunTemplateModèledepériphériquedimpressionavecsaconfigurationquilestpossibledecréerdansWSCafindelappliquerensuiteàplusieurspériphériquesdemêmemarqueetutilisantlamêmeconfigurationBienquilsagissedunmodèledeconfigurationletermemodèlenapasétéretenupouréviterlaconfusionavecletermemodèledimprimanteoudeMFPdéjàutiliséparlesconstructeursdimprimanteàpartirdunefiledéjàdéclaréedansWSC">Créer un <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term101">Template<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Modèle de périphérique d'impression (avec sa configuration) qu'il est possible de créer dans WSC afin de l'appliquer ensuite à plusieurs périphériques de même marque et utilisant la même configuration. 
+Bien qu'il s'agisse d'un modèle de configuration, le terme "modèle" n'a pas été retenu pour éviter la confusion avec le terme "modèle d'imprimante ou de MFP" déjà utilisé par les constructeurs.</span></a> d'imprimante à partir d'une file déjà déclarée dans WSC</h2>
+                                                <h3>Accéder au gestionnaire d'impression</h3>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>En tant qu'administrateur, accédez au serveur d'impression&#160;;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>lancez le gestionnaire d'impression Microsoft Windows (Print Management)&#160;;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>depuis le gestionnaire, ajoutez un périphérique d'impression ou sélectionnez l'un des périphériques déjà installés&#160;(la version du périphérique et non pas la version"Shadow" du périphérique)&#160;; </p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>cliquez-droit pour accéder aux propriétés du périphérique d'impression, puis aux paramètres d'impression (options, préférences, paramètres, selon les modèles)&#160;;</p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p>définissez précisément tous les paramètres d'impression de ce périphérique (couleur ou noir et blanc, recto ou recto-verso, format, etc.)&#160;;</p>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p>appliquez puis enregistrez les propriétés du périphérique d'impression.</p>
+                                                    </li>
+                                                </ol>
+                                                <h3>Accéder à l'interface de supervision</h3>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>En tant qu'administrateur, accédez à WSC ;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>Depuis le <strong>Menu principal</strong> de WSC, cliquez sur bouton <strong>Files d'impression</strong>&#160;;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>Dans la liste, repérez la file dont vous venez de définir les paramètres et cliquez sur la roue dentée <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_RoueDentee.png" style="width: 33px;height: 29px;" />permettant d'accéder au menu : </p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>Dans le menu, cliquez sur <strong>Sauvegarder le template</strong> ; <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Files_Template_Sauvegarder.png" style="width: 700px;height: auto;" /></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p>dans l'interface <strong>Sauvegarder la configuration en tant que template</strong>, vérifiez et complétez si nécessaire les paramètres suivants&#160;: </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p><strong>Nom du template : </strong>saisissez le nom du template (affiché dans les interfaces de gestion). Nous recommandons d'utiliser le nom commercial du périphérique pour plus de facilité, mais vous êtes libres de saisir une autre valeur.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Modèle d'imprimante :</strong> indiquez le modèle du périphérique di'mpression (à des fins de gestion).</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Description :</strong>complétez le nom et le modèle d'un commentaire indiquant l'utilisation qui est faite de ce périphérique.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Marque :</strong> dans la liste, sélectionnez la marque constructeur du périphérique d'impression.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Pilote : </strong>dans la liste, sélectionnez le pilote que vous souhaitez associer au périphérique d'impression.&#160;Si le pilote à associer n'apparaît pas dans la liste, procédez à l'ajout du pilote (cf.&#160;<a href="WSC6.1.x_Ajouter_Pilote.htm" alt="Lien vers la procédure Créer un pilote">Créer un pilote dans P&amp;P</a>).</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Version : </strong>la version du pilote sélectionné s'affiche automatiquement.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Pool d'impression :</strong> dans la liste, sélectionnez le <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term68">pool<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Depuis Watchdoc 5.2,  le pool d'impression est un réservoir logique conçu pour lister des travaux en attente d'impression. Le Pool (pool de travauxl) sert notamment lors de la redirection de travaux d'une file d'impression à l'autre en cas de défaillance : ainsi, lorsqu'un périphérique d'impression est indisponible, tous les autres périphériques inclus dans le même pool peuvent être sollicités pour prendre le relais.</span></a> d'impression dans lequel vous souhaitez intégrer le modèle d'imprimante.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Groupe :</strong> dans la liste, sélectionnez le groupe de files dans lequel vous souhaitez intégrer le modèle d'imprimante.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>WES :</strong> dans la liste, sélectionnez le WES&#160;que vous souhaitez appliquer sur le modèle d'imprimante ou conservez la valeur <strong>Désactivé </strong>par défaut pour n'appliquer aucun WES.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>File partagée/publiée : </strong>cochez la case si la file qui dépend du template  doit être partagée et/ou publiée.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Mots clés : </strong>saisissez un ou plusieurs mots clés associés au modèle d'imprimante. Ces mots clés serviront de filtres lors des recherches sur les modèles.<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Files_Template_Config.png" /></p>
+                                                                <p>&#160;</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p>Cliquez sur <strong>Valider </strong>pour enregistrer le template.&#160;<br /></p>
+                                                        <p><span style="font-family: 'Wingdings'">è</span>Une fois le template d'imprimante sauvegardé, vous pouvez créer une ou plusieurs files d'impression à partir de ce modèle. Toutes les files d'impression seront alors configurées de la même manière.</p>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocConsoledeSupervisionWSCCr%C3%A9eruntemplatedimprimante">Watchdoc - Console de Supervision (WSC) - Créer un template d'imprimante</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Pr%C3%A9alable">Préalable</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Cr%C3%A9erunTemplateMod%C3%A8ledep%C3%A9riph%C3%A9riquedimpressionavecsaconfigurationquilestpossibledecr%C3%A9erdansWSCafindelappliquerensuite%C3%A0plusieursp%C3%A9riph%C3%A9riquesdem%C3%AAmemarqueetutilisantlam%C3%AAmeconfigurationBienquilsagissedunmod%C3%A8ledeconfigurationletermemod%C3%A8lenapas%C3%A9t%C3%A9retenupour%C3%A9viterlaconfusionavecletermemod%C3%A8ledimprimanteoudeMFPd%C3%A9j%C3%A0utilis%C3%A9parlesconstructeursdimprimante%C3%A0partirdunefiled%C3%A9j%C3%A0d%C3%A9clar%C3%A9edansWSC">Créer un Template Modèle de périphérique d'impression (avec sa configuration) qu'il est possible de créer dans WSC afin de l'appliquer ensuite à plusieurs périphériques de même marque et utilisant la même configuration. 
+Bien qu'il s'agisse d'un modèle de configuration, le terme "modèle" n'a pas été retenu pour éviter la confusion avec le terme "modèle d'imprimante ou de MFP" déjà utilisé par les constructeurs. d'imprimante à partir d'une file déjà déclarée dans WSC</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -198,96 +305,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor219"></a>
-                                            <MadCap:concept term="WSC" />Watchdoc - Console de Supervision (WSC) - Créer un template d'imprimante</h1>
-                                        <h2>Préalable</h2>
-                                        <p>Un "template d'imprimante" est une configuration de file d'impression que l'on souhaite utiliser comme modèle. Ce modèle peut ensuite être appliqué à plusieurs périphériques de même marque utilisant le même pilote et qui nécessitent la même configuration.</p>
-                                        <p>&#160;</p>
-                                        <p>Notez qu'il faut avoir préalablement <strong>ajouté un pilote</strong> (cf.&#160;<a href="WSC6.1.x_Ajouter_Pilote.htm" target="_blank">WSC&#160;- Ajouter un pilote</a>) et avoir <strong>créé une file</strong> (cf.&#160;<a href="WSC_Files_CreerFile.htm" target="_blank">WSC - Créer une file d'impression</a>) pour créer un template.</p>
-                                        <h2>Créer un <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term101">Template<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Modèle de périphérique d'impression (avec sa configuration) qu'il est possible de créer dans WSC afin de l'appliquer ensuite à plusieurs périphériques de même marque et utilisant la même configuration. 
-Bien qu'il s'agisse d'un modèle de configuration, le terme "modèle" n'a pas été retenu pour éviter la confusion avec le terme "modèle d'imprimante ou de MFP" déjà utilisé par les constructeurs.</span></a> d'imprimante à partir d'une file déjà déclarée dans WSC</h2>
-                                        <h3>Accéder au gestionnaire d'impression</h3>
-                                        <ol>
-                                            <li value="1">
-                                                <p>En tant qu'administrateur, accédez au serveur d'impression&#160;;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>lancez le gestionnaire d'impression Microsoft Windows (Print Management)&#160;;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>depuis le gestionnaire, ajoutez un périphérique d'impression ou sélectionnez l'un des périphériques déjà installés&#160;(la version du périphérique et non pas la version"Shadow" du périphérique)&#160;; </p>
-                                            </li>
-                                            <li value="4">
-                                                <p>cliquez-droit pour accéder aux propriétés du périphérique d'impression, puis aux paramètres d'impression (options, préférences, paramètres, selon les modèles)&#160;;</p>
-                                            </li>
-                                            <li value="5">
-                                                <p>définissez précisément tous les paramètres d'impression de ce périphérique (couleur ou noir et blanc, recto ou recto-verso, format, etc.)&#160;;</p>
-                                            </li>
-                                            <li value="6">
-                                                <p>appliquez puis enregistrez les propriétés du périphérique d'impression.</p>
-                                            </li>
-                                        </ol>
-                                        <h3>Accéder à l'interface de supervision</h3>
-                                        <ol>
-                                            <li value="1">
-                                                <p>En tant qu'administrateur, accédez à WSC ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>Depuis le <strong>Menu principal</strong> de WSC, cliquez sur bouton <strong>Files d'impression</strong>&#160;;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>Dans la liste, repérez la file dont vous venez de définir les paramètres et cliquez sur la roue dentée <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_RoueDentee.png" style="width: 33px;height: 29px;" />permettant d'accéder au menu : </p>
-                                            </li>
-                                            <li value="4">
-                                                <p>Dans le menu, cliquez sur <strong>Sauvegarder le template</strong> ; <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Files_Template_Sauvegarder.png" style="width: 700px;height: auto;" /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="5">
-                                                <p>dans l'interface <strong>Sauvegarder la configuration en tant que template</strong>, vérifiez et complétez si nécessaire les paramètres suivants&#160;: </p>
-                                                <ul>
-                                                    <li>
-                                                        <p><strong>Nom du template : </strong>saisissez le nom du template (affiché dans les interfaces de gestion). Nous recommandons d'utiliser le nom commercial du périphérique pour plus de facilité, mais vous êtes libres de saisir une autre valeur.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Modèle d'imprimante :</strong> indiquez le modèle du périphérique di'mpression (à des fins de gestion).</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Description :</strong>complétez le nom et le modèle d'un commentaire indiquant l'utilisation qui est faite de ce périphérique.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Marque :</strong> dans la liste, sélectionnez la marque constructeur du périphérique d'impression.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Pilote : </strong>dans la liste, sélectionnez le pilote que vous souhaitez associer au périphérique d'impression.&#160;Si le pilote à associer n'apparaît pas dans la liste, procédez à l'ajout du pilote (cf.&#160;<a href="WSC6.1.x_Ajouter_Pilote.htm" alt="Lien vers la procédure Créer un pilote">Créer un pilote dans P&amp;P</a>).</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Version : </strong>la version du pilote sélectionné s'affiche automatiquement.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Pool d'impression :</strong> dans la liste, sélectionnez le <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term68">pool<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Depuis Watchdoc 5.2,  le pool d'impression est un réservoir logique conçu pour lister des travaux en attente d'impression. Le Pool (pool de travauxl) sert notamment lors de la redirection de travaux d'une file d'impression à l'autre en cas de défaillance : ainsi, lorsqu'un périphérique d'impression est indisponible, tous les autres périphériques inclus dans le même pool peuvent être sollicités pour prendre le relais.</span></a> d'impression dans lequel vous souhaitez intégrer le modèle d'imprimante.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Groupe :</strong> dans la liste, sélectionnez le groupe de files dans lequel vous souhaitez intégrer le modèle d'imprimante.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>WES :</strong> dans la liste, sélectionnez le WES&#160;que vous souhaitez appliquer sur le modèle d'imprimante ou conservez la valeur <strong>Désactivé </strong>par défaut pour n'appliquer aucun WES.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>File partagée/publiée : </strong>cochez la case si la file qui dépend du template  doit être partagée et/ou publiée.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Mots clés : </strong>saisissez un ou plusieurs mots clés associés au modèle d'imprimante. Ces mots clés serviront de filtres lors des recherches sur les modèles.<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Files_Template_Config.png" /></p>
-                                                        <p>&#160;</p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li value="6">
-                                                <p>Cliquez sur <strong>Valider </strong>pour enregistrer le template.&#160;<br /></p>
-                                                <p><span style="font-family: 'Wingdings'">è</span>Une fois le template d'imprimante sauvegardé, vous pouvez créer une ou plusieurs files d'impression à partir de ce modèle. Toutes les files d'impression seront alors configurées de la même manière.</p>
-                                            </li>
-                                        </ol>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

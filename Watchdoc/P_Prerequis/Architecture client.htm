@@ -165,6 +165,58 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocArchitectureclient" data-magellan-target="WatchdocArchitectureclient"><a name="aanchor22"></a>
+                                                    <MadCap:concept term="PRT" />
+                                                    <MadCap:conditionalText data-mc-conditions="General.Online"><a name="aanchor23"></a>
+                                                        <MadCap:concept term="WD" />Watchdoc - </MadCap:conditionalText>Architecture client</h1>
+                                                <h2 id="Principegénéral" data-magellan-target="Principegénéral">Principe général</h2>
+                                                <p>Par défaut, Watchdoc ne nécessite aucune installation sur les postes clients.</p>
+                                                <p>&#160;</p>
+                                                <p style="text-align: justify;">L'utilisateur lance ses impressions sur les files d'impression partagées sur le serveur. L'imprimante doit donc être installée comme imprimante réseau, soit manuellement, soit via des outils spécialisés tels que les objets de stratégies de groupe de Microsoft<sup>®</sup> (GPO).</p>
+                                                <h2 id="Systèmesclients" data-magellan-target="Systèmesclients">Systèmes clients </h2>
+                                                <p>Watchdoc fonctionne sur les systèmes clients suivants&#160;:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1">Windows<sup>®</sup> 2000 / XP / Vista / 7 / 8 / 8.1 / 10 / 11</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">Mac OS<sup>®</sup> X / Linux : impression via Samba ou le protocole Line Printer Daemon (LPR). Perte possible de l'identité de l'utilisateur</p>
+                                                    </li>
+                                                </ul>
+                                                <p>
+                                                    <fieldset> Pour l'impression sous Unix<sup>®</sup> via le protocole LPR (Mainframe<sup>®</sup> par exemple), une validation préalable est nécessaire. Cependant, aucune information sur l'identité du propriétaire du travail n'est disponible dans cette configuration..</fieldset>
+                                                </p>
+                                                <h2 id="PilotesDrivers" data-magellan-target="PilotesDrivers">Pilotes / Drivers</h2>
+                                                <p>Watchdoc fonctionne avec des pilotes de type 3.</p>
+                                                <p>Les pilotes de type 4 ne sont pas supportés.</p>
+                                                <h2 id="Applications" data-magellan-target="Applications">Applications</h2>
+                                                <p>Les fonctionnalités d'analyse de Watchdoc sont régulièrement testées avec les applications les plus communes (Suite Office de Microsoft<sup>®</sup>, Adobe Reader<sup>®</sup>, Photoshop<sup>®</sup>, pages web, etc.).</p>
+                                                <p>&#160;</p>
+                                                <p>Pour les applications propriétaires, développées ou provenant d'un environnement UNIX<sup>®</sup>, si elles génèrent elles-mêmes leur fichier d'impression (en Postscript<sup>®</sup> par exemple), il est nécessaire de récupérer des fichiers d'impression pour effectuer des tests de compatibilité. </p>
+                                                <p>&#160;</p>
+                                                <p>Dans le cas de formats "exotiques", il est nécessaire de développer un composant spécifique dédié à l'analyse des impressions venant de l'application spécifique.</p>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocArchitectureclient">Watchdoc - Architecture client</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Principeg%C3%A9n%C3%A9ral">Principe général</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Syst%C3%A8mesclients">Systèmes clients </a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#PilotesDrivers">Pilotes / Drivers</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Applications">Applications</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
                                     </script>
                                     <!-- Google Tag Manager (noscript) -->
@@ -199,38 +251,6 @@
                                     <div class="nocontent">
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
-                                    </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor22"></a>
-                                            <MadCap:concept term="PRT" />
-                                            <MadCap:conditionalText data-mc-conditions="General.Online"><a name="aanchor23"></a>
-                                                <MadCap:concept term="WD" />Watchdoc - </MadCap:conditionalText>Architecture client</h1>
-                                        <h2>Principe général</h2>
-                                        <p>Par défaut, Watchdoc ne nécessite aucune installation sur les postes clients.</p>
-                                        <p>&#160;</p>
-                                        <p style="text-align: justify;">L'utilisateur lance ses impressions sur les files d'impression partagées sur le serveur. L'imprimante doit donc être installée comme imprimante réseau, soit manuellement, soit via des outils spécialisés tels que les objets de stratégies de groupe de Microsoft<sup>®</sup> (GPO).</p>
-                                        <h2>Systèmes clients </h2>
-                                        <p>Watchdoc fonctionne sur les systèmes clients suivants&#160;:</p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1">Windows<sup>®</sup> 2000 / XP / Vista / 7 / 8 / 8.1 / 10 / 11</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">Mac OS<sup>®</sup> X / Linux : impression via Samba ou le protocole Line Printer Daemon (LPR). Perte possible de l'identité de l'utilisateur</p>
-                                            </li>
-                                        </ul>
-                                        <p>
-                                            <fieldset> Pour l'impression sous Unix<sup>®</sup> via le protocole LPR (Mainframe<sup>®</sup> par exemple), une validation préalable est nécessaire. Cependant, aucune information sur l'identité du propriétaire du travail n'est disponible dans cette configuration..</fieldset>
-                                        </p>
-                                        <h2>Pilotes / Drivers</h2>
-                                        <p>Watchdoc fonctionne avec des pilotes de type 3.</p>
-                                        <p>Les pilotes de type 4 ne sont pas supportés.</p>
-                                        <h2>Applications</h2>
-                                        <p>Les fonctionnalités d'analyse de Watchdoc sont régulièrement testées avec les applications les plus communes (Suite Office de Microsoft<sup>®</sup>, Adobe Reader<sup>®</sup>, Photoshop<sup>®</sup>, pages web, etc.).</p>
-                                        <p>&#160;</p>
-                                        <p>Pour les applications propriétaires, développées ou provenant d'un environnement UNIX<sup>®</sup>, si elles génèrent elles-mêmes leur fichier d'impression (en Postscript<sup>®</sup> par exemple), il est nécessaire de récupérer des fichiers d'impression pour effectuer des tests de compatibilité. </p>
-                                        <p>&#160;</p>
-                                        <p>Dans le cas de formats "exotiques", il est nécessaire de développer un composant spécifique dédié à l'analyse des impressions venant de l'application spécifique.</p>
                                     </div>
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">

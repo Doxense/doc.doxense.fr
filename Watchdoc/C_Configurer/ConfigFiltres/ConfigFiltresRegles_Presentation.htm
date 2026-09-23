@@ -200,52 +200,67 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor151"></a>
-                                            <MadCap:concept term="WD" />Watchdoc - Filtres et règles  - Politique d'impression - Présentation</h1>
-                                        <h2>Principe</h2>
-                                        <p>Watchdoc permet la mise en place d'une politique d'impression reposant sur des <strong>règles </strong>qui s'appliquent sur les files d'impression.&#160;<br />La règle exécute une action sur un travail ou des travaux d'impression sélectionnés par un <strong>filtre</strong>.</p>
-                                        <h3>Qu'est-ce qu'une règle ?</h3>
-                                        <p>Une règle est une instruction donnée à Watchdoc de traiter les demandes d'impressions en fonction de conditions.&#160;Ces conditions sont gérées par des filtres.<br />La règle exploite les filtres et parfois les rôles. </p>
-                                        <h3>Qu'est-ce qu'un filtre ?</h3>
-                                        <p>Dans Watchdoc, le filtre est une condition ou un ensemble de conditions qui doivent être vérifiées pour discriminer un travail d'impression parmi d'autres.&#160;Le filtre est un outil qui sert à implémenter une règle sur une file d'impression.</p>
-                                        <p>&#160;</p>
-                                        <p>Les filtres s'appuient sur une série de conditions prédéfinies qui s'appliquent à des utilisateurs, à des types de documents, à des dates et heures, à des postes et/ou à des files d'impression.<br />Par exemple, "le document est un e-mail", "le document est en couleur", "l'utilisateur est anonyme", "le document est supérieur à 10 pages" sont des filtres.</p>
-                                        <p>&#160;</p>
-                                        <p>Dans Watchdoc, il existe des filtres prédéfinis (cf. <a href="ConfigFiltres_Anx.htm" target="_blank" title="Lien vers la liste des filtres prédéfinis" alt="Lien vers la liste des filtres prédéfinis">liste</a>), mais il est aussi possible de concevoir des filtres spécifiques.</p>
-                                        <p>
-                                            <br>
-                                            </br>
-                                        </p>
-                                        <p>Lorsqu'un filtre porte sur un utilisateur ou un groupe d'utilisateurs, il est souvent nécessaire d'avoir <a href="../ConfigRoles/ConfigRoles_Procedure.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">configuré un ou des rôles</a> au préalable.</p>
-                                        <p>&#160;</p>
-                                        <p>Les questions qui orientent la conception d'un filtre sont les suivantes&#160;:</p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1">quel type de document est concerné ?</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">quel type d'utilisateur est concerné ?</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">quel périphérique est concerné ?</p>
-                                            </li>
-                                        </ul>
-                                        <h3>Exemple</h3>
-                                        <p>Vous pouvez utiliser les filtres pour : </p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1">discriminer des documents de types mails&#160;en couleur : les deux règles suivantes sont vérifiées : "le document est de type e-mail" et "le document est en couleur"&#160;; </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">discriminer les travaux d'impression en couleur demandés par un groupe d'utilisateurs précis.&#160;Les deux règles suivantes sont vérifiées : "le document est en couleur'"et "l'utilisateur est membre du groupe..." ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">discriminer les travaux d'impression volumineux  .&#160;La règle suivante est vérifiée : "le nombre de pages est supérieur à...".</p>
-                                            </li>
-                                        </ul>
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocFiltresetrèglesPolitiquedimpressionPrésentation" data-magellan-target="WatchdocFiltresetrèglesPolitiquedimpressionPrésentation"><a name="aanchor151"></a>
+                                                    <MadCap:concept term="WD" />Watchdoc - Filtres et règles  - Politique d'impression - Présentation</h1>
+                                                <h2 id="Principe" data-magellan-target="Principe">Principe</h2>
+                                                <p>Watchdoc permet la mise en place d'une politique d'impression reposant sur des <strong>règles </strong>qui s'appliquent sur les files d'impression.&#160;<br />La règle exécute une action sur un travail ou des travaux d'impression sélectionnés par un <strong>filtre</strong>.</p>
+                                                <h3>Qu'est-ce qu'une règle ?</h3>
+                                                <p>Une règle est une instruction donnée à Watchdoc de traiter les demandes d'impressions en fonction de conditions.&#160;Ces conditions sont gérées par des filtres.<br />La règle exploite les filtres et parfois les rôles. </p>
+                                                <h3>Qu'est-ce qu'un filtre ?</h3>
+                                                <p>Dans Watchdoc, le filtre est une condition ou un ensemble de conditions qui doivent être vérifiées pour discriminer un travail d'impression parmi d'autres.&#160;Le filtre est un outil qui sert à implémenter une règle sur une file d'impression.</p>
+                                                <p>&#160;</p>
+                                                <p>Les filtres s'appuient sur une série de conditions prédéfinies qui s'appliquent à des utilisateurs, à des types de documents, à des dates et heures, à des postes et/ou à des files d'impression.<br />Par exemple, "le document est un e-mail", "le document est en couleur", "l'utilisateur est anonyme", "le document est supérieur à 10 pages" sont des filtres.</p>
+                                                <p>&#160;</p>
+                                                <p>Dans Watchdoc, il existe des filtres prédéfinis (cf. <a href="ConfigFiltres_Anx.htm" target="_blank" title="Lien vers la liste des filtres prédéfinis" alt="Lien vers la liste des filtres prédéfinis">liste</a>), mais il est aussi possible de concevoir des filtres spécifiques.</p>
+                                                <p>
+                                                    <br>
+                                                    </br>
+                                                </p>
+                                                <p>Lorsqu'un filtre porte sur un utilisateur ou un groupe d'utilisateurs, il est souvent nécessaire d'avoir <a href="../ConfigRoles/ConfigRoles_Procedure.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">configuré un ou des rôles</a> au préalable.</p>
+                                                <p>&#160;</p>
+                                                <p>Les questions qui orientent la conception d'un filtre sont les suivantes&#160;:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1">quel type de document est concerné ?</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">quel type d'utilisateur est concerné ?</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">quel périphérique est concerné ?</p>
+                                                    </li>
+                                                </ul>
+                                                <h3>Exemple</h3>
+                                                <p>Vous pouvez utiliser les filtres pour : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1">discriminer des documents de types mails&#160;en couleur : les deux règles suivantes sont vérifiées : "le document est de type e-mail" et "le document est en couleur"&#160;; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">discriminer les travaux d'impression en couleur demandés par un groupe d'utilisateurs précis.&#160;Les deux règles suivantes sont vérifiées : "le document est en couleur'"et "l'utilisateur est membre du groupe..." ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">discriminer les travaux d'impression volumineux  .&#160;La règle suivante est vérifiée : "le nombre de pages est supérieur à...".</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocFiltresetr%C3%A8glesPolitiquedimpressionPr%C3%A9sentation">Watchdoc - Filtres et règles  - Politique d'impression - Présentation</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Principe">Principe</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
                                     </div>
-                                    <p>&#160;</p>
+                                    <!--<MadCap:miniTocProxy />
+        <MadCap:bodyProxy class=".body-container" />-->
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">
                                             <button class="button elearning-button needs-pie previous-topic-button" title="Précédent" disabled="true">

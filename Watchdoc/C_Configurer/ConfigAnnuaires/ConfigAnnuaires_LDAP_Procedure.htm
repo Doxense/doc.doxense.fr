@@ -165,6 +165,212 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocAnnuairesDéclareretconfigurerunannuaireActiveDirectoryLDAP" data-magellan-target="WatchdocAnnuairesDéclareretconfigurerunannuaireActiveDirectoryLDAP"><a name="aanchor131"></a>
+                                                    <MadCap:concept term="CFG;WD" />Watchdoc - Annuaires - Déclarer et configurer un annuaire Active Directory / LDAP</h1>
+                                                <h2 id="Préambule" data-magellan-target="Préambule">Préambule</h2>
+                                                <p>Cette configuration s'applique aux types d'annuaires </p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1">Microsoft Active Directory</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">Open LDAP</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">LDAP&#160;V3 générique</p>
+                                                    </li>
+                                                </ul>
+                                                <h2 id="Paramètres" data-magellan-target="Paramètres">Paramètres</h2>
+                                                <p> Les informations saisies ici permettent d'établir la communication entre Watchdoc et l'annuaire :</p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>DN : </strong>indiquez le "Default Naming Context" de l'annuaire. </p>
+                                                        <p class="Liste_puce_1">Par exemple, pour le domaine "acme.fr", le DN sera probablement "DC=acme,DC=fr" avec Active Directory.</p>
+                                                        <p>Tous les utilisateurs présents dans "CN=Users,DC=acme,DC=fr" feront partie de cet annuaire.</p>
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Serveur :</strong> indiquez le nom DNS ou l'adresse IP du serveur hébergeant l'annuaire.<br />Préciser un nom de serveur rend le système intolérant aux pannes du DC principal. Il est donc conseillé de laisser ce champ vide, hormis en cas de problèmes de performances.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Port :</strong> indiquez le port de connexion au serveur LDAP (par défaut 389).</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>TLS/SSL :</strong> cochez la case si vous souhaitez établir une connexion sécurisée entre Watchdoc et l'annuaire.&#160;</p>
+                                                        <p class="Liste_puce_1">Vous ne pouvez activer la connexion sécurisée que si vous avez au préalable mis en place  un serveur de certificats.</p>
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Auth.&#160;sécurisée :</strong> cochez la case si vous souhaitez établir une connexion sécurisée entre le client et le serveur en utilisant la technique SASL dans le cas où le serveur requiert cette authentification. <br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Annuaires_LDAP_Parametres.png" alt="" title="" /><br /></p>
+                                                    </li>
+                                                </ul>
+                                                <h2 id="Identification" data-magellan-target="Identification">Identification</h2>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Watchdoc utilisera ce compte pour se connecter :</strong> cochez cette case si l'annuaire nécessite une authentification et complétez les paramètres suivants&#160;:</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Identifiant : </strong>identifiant (login) du compte habilité à se connecter à l'annuaire</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Mot de passe :</strong> mot de passe du compte habilité à se connecter à l'annuaire.<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Annuaires_LDAP_Identification.png" alt="" title="" style="width: 635px;height: 62px;" /></p>
+                                                    </li>
+                                                </ul>
+                                                <fieldset>Si le compte spécifié n'est pas situé sous "CN=Users,DC=...,DC=..." et que la forme "DOMAIN\login" ne fonctionne pas, il est impératif de préciser le DN complet (ex: "CN=compte_readonly,OU=test,DC=...,DC=...")</fieldset>
+                                                <fieldset>Le compte habilité à se connecter n'a besoin que des droits de lecture et de recherche sur l'annuaire. Le droit d'écriture n'est pas nécessaire.</fieldset>
+                                                <h2 id="CodePUK" data-magellan-target="CodePUK"><a name="Code_PUK" id="Code_PUK">Code PUK</a>
+                                                </h2>
+                                                <fieldset><a name="Code_PUK" id="Code_PUK"><span style="font-size: 12pt;">Par souci de sécurité, nous déconseillons l'authentification par code PUK et recommandons l'utilisation du compte utilisateur (login)/code PIN.</span><br style="font-size: 12pt;" /><span style="font-size: 12pt;">En conséquence, depuis la v. 6.1.0.5276, ce mode d'authentification est <strong>désactivé </strong>par défaut alors qu'il était activé dans les versions précédentes.&#160;<br />En cas de mise à jour, ce changement n'a aucune incidence sur la configuration de l'annuaire qui reste telle qu'elle était définie auparavant, donc avec le Code PUK si tel était le mode d'authentification choisi.</span></a>
+                                                </fieldset>
+                                                <p>Configurez ici la manière dont le code PUK est généré :</p>
+                                                <p class="Liste_puce_1"><strong>Mode :</strong> sélectionnez dans la liste le mode de génération du code PUK : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Désactivé (par défaut) :</strong> optez pour ce statut si le code PUK&#160;n'est pas utilisé ;</p>
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Automatique : </strong>optez pour ce statut si le code PUK est généré automatiquement. Dans ce cas, complétez ensuite les champs :</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p><strong>Algorithme : </strong> sélectionnez dans la liste le type d'algorithme sur lequel est fondé le code (cette information relève de l'administration de l'annuaire) ;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Variabilité :</strong> sélectionnez dans la liste la fréquence selon laquelle l'algorithme de chiffrement du code PUK est renouvelé.&#160;<br />Attention : lorsque vous modifiez ce paramètre, le changement est opéré immédiatement. Ainsi, si, un lundi à 18h, vous optez pour l'option "Change tous les jours (à minuit)", les codes seront différents dès le mardi à 00h01.<br /></p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Préfixe : </strong> saisissez dans ce champ le préfixe (chiffre entre 2 et 8) qui précède le code PUK.<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Ldap_CodePUK.png" /></p>
+                                                                <p>
+                                                                    <br />
+                                                                </p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Attribut :</strong> optez pour ce statut si le code PUK est enregistré dans un attribut de l'annuaire LDAP. Dans ce cas, indiquez  l'attribut de l'annuaire LDAP&#160;dans lequel est enregistré le code PUK ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Déporté :</strong> optez pour ce statut si vous souhaitez que le code PUK sot enregistré dans une base de données SQL. Dans ce cas, sélectionnez dans la liste le nom de l'annuaire dans lequel doivent être enregistrés les codes PUK (PUK par défaut). <br /><br /><img src="Config_Annuaire_PUKSql.png" style="height: auto;width: 700px;" /></p>
+                                                    </li>
+                                                </ul>
+                                                <h2 id="CodePIN" data-magellan-target="CodePIN"><a name="Code_PIN" id="Code_PIN">Code PIN</a>
+                                                </h2>
+                                                <p>Code PIN (Personal Identification Number) est un code comportant au moins 4 chiffres. Il est par exemple utilisé sur un téléphone mobile ou un smartphone équipés d'une carte SIM.  Le terme de code PIN n'est pas exclusif à la téléphonie mobile, on parle également de code PIN pour le code bancaire ou tout autre numéro d'identification personnel composé de 4 chiffres ou plus.</p>
+                                                <p>Dans Watchdoc, il est utilisé en complément d'un autre identifiant pour se connecter au WES.<br />Il peut être généré de différentes manières.</p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Mode :</strong> sélectionnez dans la liste le mode de génération du code <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term44">PIN Code<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Le code PIN (Personal Identification Number) est un code comportant au moins 4 chiffres. Il est, par exemple, utilisé sur un téléphone mobile ou un smartphone équipés d'une carte SIM. Dans Watchhdoc, c'est un code qui, associé au nom d'utilisateur, constitue un moyen d'authentification sur un WES.
+Ce code peut être saisi et consulté depuis la page Mon Compte.
+Il est enregistré soit dans une table SQL, soit dans un fichier Json et peut être stocké tel quel ou sécurisé par hachage.</span></a> : </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>Désactivé (par défaut) :</strong> optez pour ce statut si le code PIN&#160;n'est pas utilisé ;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>Automatique : </strong>optez pour ce statut si le code PIN est généré automatiquement. Dans ce cas, complétez ensuite les champs <strong>Algorithme</strong>, <strong>Chiffres</strong> et <strong>Variabilité</strong> ;</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Attribut :</strong> optez pour ce statut si le code PIN est enregistré dans un attribut de l'annuaire LDAP. Dans ce cas, complétez le champ Attibut ;</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p class="Liste_puce_1"><strong>Attribut :</strong> indiquez dans ce champ l'attribut de l'annuaire LDAP&#160;dans lequel est enregistré le code PIN ; </p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Algorithme : </strong>si le mode est <strong>Automatique</strong>, sélectionnez dans la liste le type d'algorithme sur lequel est fondé le code (cette information relève de l'administration de l'annuaire).&#160;:</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Chiffres : </strong>si le mode est Automatique, sélectionnez dans la liste le nombre de chiffre composant le code PIN&#160;(cette information relève de l'administration de l'annuaire) ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Variabilité :</strong>si le mode est Automatique, sélectionnez dans la liste la fréquence selon laquelle l'algorithme de chiffrement du code PIN est renouvelé :<br />Attention : lorsque vous modifiez ce paramètre, le changement est opéré immédiatement. Ainsi, si, un lundi à 18h, vous optez pour l'option "Change tous les jours (à minuit)", les codes seront différents dès le mardi à 00h01.</p>
+                                                    </li>
+                                                    <li style="font-size: 12pt;"><b>Stocké dans les paramètres utilisateurs (en clair) :</b> le code PIN&#160;est enregistré en clair dans l'annuaire. L'utilisateur peut l'afficher  dans sa page "Mon compte" et peut également en générer un nouveau&#160;;</li>
+                                                    <li style="font-size: 12pt;"><b>Stocké dans les paramètres utilisateurs (hashé) :</b> le code PIN est enregistré de manière sécurisée dans la base Json.db.&#160;L'utilisateur ne peut pas l'afficher dans la page "Mon compte", mais il peut en générer un nouveau :<br /><br /><p class="Liste_puce_1"><img src="Config_Annuaires_LDAP_CodePIN.png" /><br /></p></li>
+                                                </ul>
+                                                <h2 id="Codedimpression" data-magellan-target="Codedimpression">Code <a name="Code_Impr" id="Code_Impr"></a>d'impression</h2>
+                                                <p>Le code d'impression est un code  qui permet à l'utilisateur de s'authentifier, en complément de son login, sur certains WES&#160;(Epson, Hewlett Packard, Konica Minolta, Sharp, Toshiba, Xerox). <br />Ce code alpha-numérique est saisi par l'utilisateur dans sa page "Mon compte &gt;&#160;Codes et badges". Il doit contenir entre 4 et 16 caractères et ne doit pas contenir plus de 2 chiffres.<br />Pour être configuré dans le WES comme moyen d'authentifcation, il doit être configuré dans l'annuaire au préalable : </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Sélectionnez l'activation du code en précisant :</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>s'il est enregistré en clair ;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>s'il est sécurisé par l'algorithme AES (hashé, à condition que le hashage soit configuré dans l'annuaire LDAP) :<br /><br /><img src="Config_Annuaire_LDAP_CodeImpression.png" /></p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ol>
+                                                <p>&#160;</p>
+                                                <p>N.B. : si l'annuaire LDAP&#160;entre dans la composition de l'annuaire META,  le code d'impression doit aussi être configuré sur l'annuaire META.<br /></p>
+                                                <h2 id="Badges" data-magellan-target="Badges">Badges</h2>
+                                                <p>L'utilisateur peut s'authentifier sur le périphérique d'impression à l'aide d'un badge. Si c'est ce moyen d'authentification qui est retenu, sélectionnez dans la liste l'annuaire dans lequel sont enregistrés les badges des utilisateurs : ces derniers recevront ainsi un mail comportant leur code (PUK ou PIN) et les invitant à <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term35">enrôler<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Action au cours de laquelle un compte utilisateur est associé au numéro de badge qui lui appartient. L'enrôlement est réalisé lors de la première utilisation d'un badge. L'enrôlement peut être réalisé par le responsable informatique lorsqu'il délivre le badge à un utilisateur ou par l'utilisateur lui-même qui saisit son identifiant (code PIN, code PUK ou identifiant et mot de passe) qui est alors associé à son numéro de badge. Une fois l'enrôlement réalisé, le numéro de badge est associé définitivement à son propriétaire.</span></a> leur badge.<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Annuaires_LDAP_Badges_FR.png" /></p>
+                                                <fieldset>Par défaut, les badges sont enregistrés dans la base CARDS gérée depuis la Console de Supervision Watchdoc (WSC).</fieldset>
+                                                <h2 id="Avancé" data-magellan-target="Avancé">Avancé</h2>
+                                                <p>Les champs de cette section répondent à des besoins de diagnostics en cas de dysfonctionnement des échanges entre l'annuaire LDAP et Watchdoc. Les paramètres par défaut ne sont donc à modifier qu'à la demande de l'équipe Support de Doxense<sup>®</sup><br /><br /><img src="Config_Annuaire_LDAP_Avance.png" /><br /></p>
+                                                <h2 id="Timeout" data-magellan-target="Timeout">Timeout</h2>
+                                                <p>Par défaut, Watchdoc comporte des valeurs définissant la durée de vie du cache relatif à l'annuaire. Ce cache permet de limiter les requêtes entre l'annuaire et Watchdoc afin de ne pas saturer la bande passante.</p>
+                                                <p>&#160;</p>
+                                                <p>En règle générale, les valeurs saisies par défaut conviennent à la majorité des utilisations.&#160;Néanmoins, dans des cas très spécifiques, il peut être nécessaire de régler précisément la durée de vie du cache pour ne pas interrompre l'activité d'impression. C'est notamment utile dans le cas où le code PUK est modifié à fréquence régulière : il est alors nécessaire de supprimer le cache entre la génération des nouveaux codes PUK et le début de l'activité d'impression.&#160;</p>
+                                                <p>&#160;</p>
+                                                <p>Pour chaque paramètre, indiquez dans le champ sa durée de vie. Au-delà de la durée définie, le cache sera vidé, obligeant ainsi Watchdoc à réinterroger l'annuaire pour y retrouver les informations (à jour) de l'utilisateur.<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Timeout.png" alt="" title="" /></p><![CDATA[   ]]><h2 id="Cache" data-magellan-target="Cache"><a name="Cache" id="Cache"></a>Cache</h2><p>Watchdoc peut conserver en cache les requêtes sur l'annuaire  afin d'en accélérer l'exécution.<br />Par défaut, la durée de vie (<a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term123">TTL<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>La durée de vie (TTL - Time To Live) est la durée pendant laquelle un objet est stocké dans un système de mise en cache avant d’être supprimé ou actualisé.</span></a>) des données d'annuaire mise en cache est de 72 heures.</p><p> Cochez les cases des caches que vous souhaitez activer : </p><ul><li><p class="Liste_puce_1"><strong>Infos user :</strong> cochez cette case pour activer le cache relatif aux informations utilisateurs. </p></li><li><p class="Liste_puce_1"><strong>Non trouvés :</strong> cochez cette case pour activer le cache relatif aux utilisateurs dont le compte n'a pas été trouvé.</p></li><li><p class="Liste_puce_1"><strong>Cache à froid :</strong> cochez cette case pour conserver un cache des données "froides", c'est-à-dire des données déjà vérifiées mais expirées.</p></li><li><p class="Liste_puce_1"><strong>Persistance :</strong> cochez cette case pour permettre de conserver le cache sur le disque afin de le retrouver en cas de redémarrage du service Watchdoc.</p></li><li><p class="Liste_puce_1"><strong>Compression :</strong> cochez cette case pour activer la compression du cache sur le disque. Il est fortement recommandé d'activer ce paramètre afin de réduire la taille du fichier quand la persistance est activée.</p></li><li><p class="Liste_puce_1"><strong>Chiffrement	: </strong>cochez cette case pour chiffrer le fichier de cache sur le disque afin d'en sécuriser le contenu.<br /><br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Annuaires_Cache.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbord" data-mc-width="1119" data-mc-height="313" src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Cache.png" alt="" title="" tabindex="" style="width: 655px;height: 183px;max-width: 1000px;" /></a></p></li></ul><h2 id="Email" data-magellan-target="Email">E-mail</h2><p>Lorsque la notification par e-mail est activée, Watchdoc doit disposer de l'adresse mail des utilisateurs pour communiquer avec eux. Ce paramètre indique à Watchdoc où trouver l'adresse mail des utilisateurs :</p><ul><li><p class="Liste_puce_1"><strong>stockée dans l'annuaire :</strong> sélectionnez cette option si l'adresse mail est enregistrée dans un attribut de l'annuaire*&#160;; </p></li><li><p class="Liste_puce_1"><strong>le compte utilisateur sert également d'adresse e-mail :</strong> sélectionnez cette option pour que Watchdoc crée l'adresse mail en concaténant le nom du compte de l'utilisateur avec un nom de domaine DNS. Dans ce cas, précisez le <strong>nom de domaine DNS</strong>&#160;à ajouter au nom de l'utilisateur lors de la concaténation&#160;;</p></li><li><p class="Liste_puce_2"><strong>rechercher l'adresse dans un annuaire alias :</strong> optez pour ce choix si l'adresse e-mail est enregistrée dans un annuaire Alias. Dans ce cas,  sélectionnez l'annuaire dans lequel sont enregistrées les e-mails. (Pour configurer un annuaire de codes PUK, cf.&#160;<a href="ConfigAnnuaires_SQLPUK_Procedure.htm">Configurer un annuaire SQL de codes PUK</a>) :<br /><br /><a class="MCPopupThumbnailLink" href="Config_Annuaires_Emails.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbord" data-mc-width="995" data-mc-height="247" src="Config_Annuaires_Emails.png" alt="" title="" tabindex="" style="width: 500px;max-width: 1000px;" /></a></p></li></ul><p>&#160;</p><p>* par défaut, c'est l'adresse e-mail enregistrée dans le premier champ <b>Autres e-mail</b> d'Entra_ID qui est prise en compte par Watchdoc.&#160;<br />Si vous souhaitez modifier cette configuration : </p><ol><li value="1"><p style="font-weight: bold;"><span style="font-weight: normal;">ouvrez le fichier</span> Config.xml ;</p></li><li value="2"><p>repérez la balise &lt;authority&gt;AZUREADAUTH&lt;/authority&gt;</p></li><li value="3"><p>dans la balise &lt;preferred-email-attribute&gt;&lt;/preferred-email-attribute&gt;, saisissez l'une des valeurs suivantes : </p><ul><li><p>AUTO (par défaut) : prend en compte l'e-mail saisi dans le premier champ "Autres e-mails" du formulaire Entra ID ; </p></li><li><p>MAIN : prend en compte l'e-mail saisi dans le champ Adresse e-mail du formulaire Entra ID ; </p></li><li><p>LAST : prend en compte le dernier e-mail saisi dans les  champs "Autres e-mails" du formulaire Entra ID ; </p></li><li><p>[Nom-Attribut] : prend en compte l'e-mail saisi dans un champ spécifique du formulaire (peut être utile dans des cas très spécifiques).</p></li></ul></li></ol><h2 id="Fusible" data-magellan-target="Fusible">Fusible</h2><p>Les annuaires utilisateurs sont généralement hébergés sur un contrôleur de domaine ou serveur distant, accessible via le réseau local. En cas de panne réseau ou de ralentissement important, cela peut provoquer, par effet de cascade, un blocage ou ralentissement du serveur d'impression. </p><p>&#160;</p><p>Il peut alors être utile d'activer un "fusible logique", qui se déclenche en cas de ralentissement majeur du système, afin de stopper les requêtes envoyées au serveur défaillant pour éviter une surcharge de travail.</p><fieldset style="text-align: left;">Attention: il est important de bien considérer l'impact de l'activation d'un fusible sur le bon fonctionnement du service !
+<br />Afin de protéger efficacement le serveur de tout dysfonctionnement de l'annuaire distant, il est important de calibrer correctement le fusible. <br />Il est recommandé de tester le paramétrage du fusible avant de le configurer en environnement de production.<br /></fieldset><p>Dans les champs, saisissez les valeurs au-delà desquelles Watchdoc cesse d'envoyer des requêtes au serveur d'annuaire : </p><ul><li><p class="Liste_puce_1"><strong>Erreurs max. :</strong> il s'agit du nombre d'erreurs "graves" successives tolérées. Une erreur "grave" est, par exemple, un problème de communication réseau, un timeout, un dysfonctionnement du serveur distant. Ces erreurs sont généralement rares et peuvent parfois se régler naturellement (fin d'une période de pointe, redémarrage du serveur distant). Les erreurs "logiques" (comme un échec d'identification, de syntaxe ou de configuration de l'annuaire) sont ignorées.</p></li><li><p class="Liste_puce_1"><strong>Durée max. :</strong> il s'agit de la durée moyenne maximale tolérée pour l'exécution des 10 dernières requêtes. En cas de fort ralentissement du serveur distant (période de pointe, timeout réseau,...), cette durée est rallongée.
+</p></li><li><p class="Liste_puce_1"><strong>Requêtes max. :</strong> il s'agit du nombre maximum de requêtes en parallèle autorisées. En cas de forte charge de travail, le serveur distant peut ne pas être capable de répondre à un grand nombre de requêtes simultanées.
+</p></li><li><p class="Liste_puce_1"><strong>Délai attente :</strong> après déclenchement du fusible, délai d'attente avant réactivation.&#160;Au terme de ce délai, Watchdoc relance les requêtes afin de "sonder" l'état du serveur. Si les requêtes aboutissent, le fusible est réactivé, sinon il attend à nouveau l'expiration du délai.
+A tout moment, l'administrateur peut manuellement désactiver le fusible. Le fusible reste alors coupé jusqu'à ce qu'il soit réactivé manuellement. Pensez à utiliser cette fonctionnalité afin de tester l'impact d'une panne sur le serveur d'impression.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Annuaires_Fusible.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="647" data-mc-height="139" src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Fusible.png" tabindex="" style="max-width: 1000px;" /></a><br /><br /></p></li></ul><p>Les valeurs généralement saisies pour l'activation du fusible dans un environnement multi serveur (Master) sont les suivantes :</p><ul><li><p class="Liste_puce_1">erreurs max : 5</p></li><li><p class="Liste_puce_1">requêtes max : 5</p></li><li><p class="Liste_puce_1">durée max : 30 secondes</p></li><li><p class="Liste_puce_1">délai attente : 120 secondes</p></li></ul><h2 id="Printclients" data-magellan-target="Printclients">Print clients</h2><ul><li><p><strong>Ne pas utiliser cet annuaire :</strong> cochez cette case pour que Watchdoc Print Client n'utilise pas  cet annuaire<br /><img src="Config_Annuaire_PrintClients.png" /></p></li></ul><h2 id="Validationdelaconfiguration" data-magellan-target="Validationdelaconfiguration">Validation de la configuration </h2><p class="Liste_num_1">Cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/icon_Declarer.png" style="width: 26px;height: 24px;" /> <strong>Créer </strong>pour valider la configuration de votre annuaire.</p><h2 id="Etaprès" data-magellan-target="Etaprès">Et après ?&#160;</h2><p>Une fois l'annuaire LDAP déclaré, vous pouvez l'intégrer comme sous-annuaire de l'annuaire META (cf.&#160;<a href="ConfigAnnuaires_META_Procedure.htm">Déclarer et configurer un annuaire META</a>).&#160;</p></div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocAnnuairesD%C3%A9clareretconfigurerunannuaireActiveDirectoryLDAP">Watchdoc - Annuaires - Déclarer et configurer un annuaire Active Directory / LDAP</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Pr%C3%A9ambule">Préambule</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Param%C3%A8tres">Paramètres</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Identification">Identification</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#CodePUK">Code PUK</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#CodePIN">Code PIN</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Codedimpression">Code d'impression</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Badges">Badges</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Avanc%C3%A9">Avancé</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Timeout">Timeout</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Cache">Cache</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Email">E-mail</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Fusible">Fusible</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Printclients">Print clients</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Validationdelaconfiguration">Validation de la configuration </a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Etapr%C3%A8s">Et après ?&#160;</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -198,170 +404,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor131"></a>
-                                            <MadCap:concept term="CFG;WD" />Watchdoc - Annuaires - Déclarer et configurer un annuaire Active Directory / LDAP</h1>
-                                        <h2>Préambule</h2>
-                                        <p>Cette configuration s'applique aux types d'annuaires </p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1">Microsoft Active Directory</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">Open LDAP</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">LDAP&#160;V3 générique</p>
-                                            </li>
-                                        </ul>
-                                        <h2>Paramètres</h2>
-                                        <p> Les informations saisies ici permettent d'établir la communication entre Watchdoc et l'annuaire :</p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>DN : </strong>indiquez le "Default Naming Context" de l'annuaire. </p>
-                                                <p class="Liste_puce_1">Par exemple, pour le domaine "acme.fr", le DN sera probablement "DC=acme,DC=fr" avec Active Directory.</p>
-                                                <p>Tous les utilisateurs présents dans "CN=Users,DC=acme,DC=fr" feront partie de cet annuaire.</p>
-                                            </li>
-                                        </ul>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Serveur :</strong> indiquez le nom DNS ou l'adresse IP du serveur hébergeant l'annuaire.<br />Préciser un nom de serveur rend le système intolérant aux pannes du DC principal. Il est donc conseillé de laisser ce champ vide, hormis en cas de problèmes de performances.</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Port :</strong> indiquez le port de connexion au serveur LDAP (par défaut 389).</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>TLS/SSL :</strong> cochez la case si vous souhaitez établir une connexion sécurisée entre Watchdoc et l'annuaire.&#160;</p>
-                                                <p class="Liste_puce_1">Vous ne pouvez activer la connexion sécurisée que si vous avez au préalable mis en place  un serveur de certificats.</p>
-                                            </li>
-                                        </ul>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Auth.&#160;sécurisée :</strong> cochez la case si vous souhaitez établir une connexion sécurisée entre le client et le serveur en utilisant la technique SASL dans le cas où le serveur requiert cette authentification. <br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Annuaires_LDAP_Parametres.png" alt="" title="" /><br /></p>
-                                            </li>
-                                        </ul>
-                                        <h2>Identification</h2>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Watchdoc utilisera ce compte pour se connecter :</strong> cochez cette case si l'annuaire nécessite une authentification et complétez les paramètres suivants&#160;:</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Identifiant : </strong>identifiant (login) du compte habilité à se connecter à l'annuaire</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Mot de passe :</strong> mot de passe du compte habilité à se connecter à l'annuaire.<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Annuaires_LDAP_Identification.png" alt="" title="" style="width: 635px;height: 62px;" /></p>
-                                            </li>
-                                        </ul>
-                                        <fieldset>Si le compte spécifié n'est pas situé sous "CN=Users,DC=...,DC=..." et que la forme "DOMAIN\login" ne fonctionne pas, il est impératif de préciser le DN complet (ex: "CN=compte_readonly,OU=test,DC=...,DC=...")</fieldset>
-                                        <fieldset>Le compte habilité à se connecter n'a besoin que des droits de lecture et de recherche sur l'annuaire. Le droit d'écriture n'est pas nécessaire.</fieldset>
-                                        <h2><a name="Code_PUK" id="Code_PUK">Code PUK</a>
-                                        </h2>
-                                        <fieldset><a name="Code_PUK" id="Code_PUK"><span style="font-size: 12pt;">Par souci de sécurité, nous déconseillons l'authentification par code PUK et recommandons l'utilisation du compte utilisateur (login)/code PIN.</span><br style="font-size: 12pt;" /><span style="font-size: 12pt;">En conséquence, depuis la v. 6.1.0.5276, ce mode d'authentification est <strong>désactivé </strong>par défaut alors qu'il était activé dans les versions précédentes.&#160;<br />En cas de mise à jour, ce changement n'a aucune incidence sur la configuration de l'annuaire qui reste telle qu'elle était définie auparavant, donc avec le Code PUK si tel était le mode d'authentification choisi.</span></a>
-                                        </fieldset>
-                                        <p>Configurez ici la manière dont le code PUK est généré :</p>
-                                        <p class="Liste_puce_1"><strong>Mode :</strong> sélectionnez dans la liste le mode de génération du code PUK : </p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Désactivé (par défaut) :</strong> optez pour ce statut si le code PUK&#160;n'est pas utilisé ;</p>
-                                            </li>
-                                        </ul>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Automatique : </strong>optez pour ce statut si le code PUK est généré automatiquement. Dans ce cas, complétez ensuite les champs :</p>
-                                                <ul>
-                                                    <li>
-                                                        <p><strong>Algorithme : </strong> sélectionnez dans la liste le type d'algorithme sur lequel est fondé le code (cette information relève de l'administration de l'annuaire) ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Variabilité :</strong> sélectionnez dans la liste la fréquence selon laquelle l'algorithme de chiffrement du code PUK est renouvelé.&#160;<br />Attention : lorsque vous modifiez ce paramètre, le changement est opéré immédiatement. Ainsi, si, un lundi à 18h, vous optez pour l'option "Change tous les jours (à minuit)", les codes seront différents dès le mardi à 00h01.<br /></p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Préfixe : </strong> saisissez dans ce champ le préfixe (chiffre entre 2 et 8) qui précède le code PUK.<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Ldap_CodePUK.png" /></p>
-                                                        <p>
-                                                            <br />
-                                                        </p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Attribut :</strong> optez pour ce statut si le code PUK est enregistré dans un attribut de l'annuaire LDAP. Dans ce cas, indiquez  l'attribut de l'annuaire LDAP&#160;dans lequel est enregistré le code PUK ; </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Déporté :</strong> optez pour ce statut si vous souhaitez que le code PUK sot enregistré dans une base de données SQL. Dans ce cas, sélectionnez dans la liste le nom de l'annuaire dans lequel doivent être enregistrés les codes PUK (PUK par défaut). <br /><br /><img src="Config_Annuaire_PUKSql.png" style="height: auto;width: 700px;" /></p>
-                                            </li>
-                                        </ul>
-                                        <h2><a name="Code_PIN" id="Code_PIN">Code PIN</a>
-                                        </h2>
-                                        <p>Code PIN (Personal Identification Number) est un code comportant au moins 4 chiffres. Il est par exemple utilisé sur un téléphone mobile ou un smartphone équipés d'une carte SIM.  Le terme de code PIN n'est pas exclusif à la téléphonie mobile, on parle également de code PIN pour le code bancaire ou tout autre numéro d'identification personnel composé de 4 chiffres ou plus.</p>
-                                        <p>Dans Watchdoc, il est utilisé en complément d'un autre identifiant pour se connecter au WES.<br />Il peut être généré de différentes manières.</p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Mode :</strong> sélectionnez dans la liste le mode de génération du code <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term44">PIN Code<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Le code PIN (Personal Identification Number) est un code comportant au moins 4 chiffres. Il est, par exemple, utilisé sur un téléphone mobile ou un smartphone équipés d'une carte SIM. Dans Watchhdoc, c'est un code qui, associé au nom d'utilisateur, constitue un moyen d'authentification sur un WES.
-Ce code peut être saisi et consulté depuis la page Mon Compte.
-Il est enregistré soit dans une table SQL, soit dans un fichier Json et peut être stocké tel quel ou sécurisé par hachage.</span></a> : </p>
-                                                <ul>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>Désactivé (par défaut) :</strong> optez pour ce statut si le code PIN&#160;n'est pas utilisé ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>Automatique : </strong>optez pour ce statut si le code PIN est généré automatiquement. Dans ce cas, complétez ensuite les champs <strong>Algorithme</strong>, <strong>Chiffres</strong> et <strong>Variabilité</strong> ;</p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Attribut :</strong> optez pour ce statut si le code PIN est enregistré dans un attribut de l'annuaire LDAP. Dans ce cas, complétez le champ Attibut ;</p>
-                                                <ul>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Attribut :</strong> indiquez dans ce champ l'attribut de l'annuaire LDAP&#160;dans lequel est enregistré le code PIN ; </p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Algorithme : </strong>si le mode est <strong>Automatique</strong>, sélectionnez dans la liste le type d'algorithme sur lequel est fondé le code (cette information relève de l'administration de l'annuaire).&#160;:</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Chiffres : </strong>si le mode est Automatique, sélectionnez dans la liste le nombre de chiffre composant le code PIN&#160;(cette information relève de l'administration de l'annuaire) ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Variabilité :</strong>si le mode est Automatique, sélectionnez dans la liste la fréquence selon laquelle l'algorithme de chiffrement du code PIN est renouvelé :<br />Attention : lorsque vous modifiez ce paramètre, le changement est opéré immédiatement. Ainsi, si, un lundi à 18h, vous optez pour l'option "Change tous les jours (à minuit)", les codes seront différents dès le mardi à 00h01.</p>
-                                            </li>
-                                            <li style="font-size: 12pt;"><b>Stocké dans les paramètres utilisateurs (en clair) :</b> le code PIN&#160;est enregistré en clair dans l'annuaire. L'utilisateur peut l'afficher  dans sa page "Mon compte" et peut également en générer un nouveau&#160;;</li>
-                                            <li style="font-size: 12pt;"><b>Stocké dans les paramètres utilisateurs (hashé) :</b> le code PIN est enregistré de manière sécurisée dans la base Json.db.&#160;L'utilisateur ne peut pas l'afficher dans la page "Mon compte", mais il peut en générer un nouveau :<br /><br /><p class="Liste_puce_1"><img src="Config_Annuaires_LDAP_CodePIN.png" /><br /></p></li>
-                                        </ul>
-                                        <h2>Code <a name="Code_Impr" id="Code_Impr"></a>d'impression</h2>
-                                        <p>Le code d'impression est un code  qui permet à l'utilisateur de s'authentifier, en complément de son login, sur certains WES&#160;(Epson, Hewlett Packard, Konica Minolta, Sharp, Toshiba, Xerox). <br />Ce code alpha-numérique est saisi par l'utilisateur dans sa page "Mon compte &gt;&#160;Codes et badges". Il doit contenir entre 4 et 16 caractères et ne doit pas contenir plus de 2 chiffres.<br />Pour être configuré dans le WES comme moyen d'authentifcation, il doit être configuré dans l'annuaire au préalable : </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Sélectionnez l'activation du code en précisant :</p>
-                                                <ul>
-                                                    <li>
-                                                        <p>s'il est enregistré en clair ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>s'il est sécurisé par l'algorithme AES (hashé, à condition que le hashage soit configuré dans l'annuaire LDAP) :<br /><br /><img src="Config_Annuaire_LDAP_CodeImpression.png" /></p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ol>
-                                        <p>&#160;</p>
-                                        <p>N.B. : si l'annuaire LDAP&#160;entre dans la composition de l'annuaire META,  le code d'impression doit aussi être configuré sur l'annuaire META.<br /></p>
-                                        <h2>Badges</h2>
-                                        <p>L'utilisateur peut s'authentifier sur le périphérique d'impression à l'aide d'un badge. Si c'est ce moyen d'authentification qui est retenu, sélectionnez dans la liste l'annuaire dans lequel sont enregistrés les badges des utilisateurs : ces derniers recevront ainsi un mail comportant leur code (PUK ou PIN) et les invitant à <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term35">enrôler<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Action au cours de laquelle un compte utilisateur est associé au numéro de badge qui lui appartient. L'enrôlement est réalisé lors de la première utilisation d'un badge. L'enrôlement peut être réalisé par le responsable informatique lorsqu'il délivre le badge à un utilisateur ou par l'utilisateur lui-même qui saisit son identifiant (code PIN, code PUK ou identifiant et mot de passe) qui est alors associé à son numéro de badge. Une fois l'enrôlement réalisé, le numéro de badge est associé définitivement à son propriétaire.</span></a> leur badge.<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Annuaires_LDAP_Badges_FR.png" /></p>
-                                        <fieldset>Par défaut, les badges sont enregistrés dans la base CARDS gérée depuis la Console de Supervision Watchdoc (WSC).</fieldset>
-                                        <h2>Avancé</h2>
-                                        <p>Les champs de cette section répondent à des besoins de diagnostics en cas de dysfonctionnement des échanges entre l'annuaire LDAP et Watchdoc. Les paramètres par défaut ne sont donc à modifier qu'à la demande de l'équipe Support de Doxense<sup>®</sup><br /><br /><img src="Config_Annuaire_LDAP_Avance.png" /><br /></p>
-                                        <h2>Timeout</h2>
-                                        <p>Par défaut, Watchdoc comporte des valeurs définissant la durée de vie du cache relatif à l'annuaire. Ce cache permet de limiter les requêtes entre l'annuaire et Watchdoc afin de ne pas saturer la bande passante.</p>
-                                        <p>&#160;</p>
-                                        <p>En règle générale, les valeurs saisies par défaut conviennent à la majorité des utilisations.&#160;Néanmoins, dans des cas très spécifiques, il peut être nécessaire de régler précisément la durée de vie du cache pour ne pas interrompre l'activité d'impression. C'est notamment utile dans le cas où le code PUK est modifié à fréquence régulière : il est alors nécessaire de supprimer le cache entre la génération des nouveaux codes PUK et le début de l'activité d'impression.&#160;</p>
-                                        <p>&#160;</p>
-                                        <p>Pour chaque paramètre, indiquez dans le champ sa durée de vie. Au-delà de la durée définie, le cache sera vidé, obligeant ainsi Watchdoc à réinterroger l'annuaire pour y retrouver les informations (à jour) de l'utilisateur.<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Timeout.png" alt="" title="" /></p><![CDATA[   ]]><h2><a name="Cache" id="Cache"></a>Cache</h2><p>Watchdoc peut conserver en cache les requêtes sur l'annuaire  afin d'en accélérer l'exécution.<br />Par défaut, la durée de vie (<a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term123">TTL<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>La durée de vie (TTL - Time To Live) est la durée pendant laquelle un objet est stocké dans un système de mise en cache avant d’être supprimé ou actualisé.</span></a>) des données d'annuaire mise en cache est de 72 heures.</p><p> Cochez les cases des caches que vous souhaitez activer : </p><ul><li><p class="Liste_puce_1"><strong>Infos user :</strong> cochez cette case pour activer le cache relatif aux informations utilisateurs. </p></li><li><p class="Liste_puce_1"><strong>Non trouvés :</strong> cochez cette case pour activer le cache relatif aux utilisateurs dont le compte n'a pas été trouvé.</p></li><li><p class="Liste_puce_1"><strong>Cache à froid :</strong> cochez cette case pour conserver un cache des données "froides", c'est-à-dire des données déjà vérifiées mais expirées.</p></li><li><p class="Liste_puce_1"><strong>Persistance :</strong> cochez cette case pour permettre de conserver le cache sur le disque afin de le retrouver en cas de redémarrage du service Watchdoc.</p></li><li><p class="Liste_puce_1"><strong>Compression :</strong> cochez cette case pour activer la compression du cache sur le disque. Il est fortement recommandé d'activer ce paramètre afin de réduire la taille du fichier quand la persistance est activée.</p></li><li><p class="Liste_puce_1"><strong>Chiffrement	: </strong>cochez cette case pour chiffrer le fichier de cache sur le disque afin d'en sécuriser le contenu.<br /><br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Annuaires_Cache.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbord" data-mc-width="1119" data-mc-height="313" src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Cache.png" alt="" title="" tabindex="" style="width: 655px;height: 183px;max-width: 1000px;" /></a></p></li></ul><h2>E-mail</h2><p>Lorsque la notification par e-mail est activée, Watchdoc doit disposer de l'adresse mail des utilisateurs pour communiquer avec eux. Ce paramètre indique à Watchdoc où trouver l'adresse mail des utilisateurs :</p><ul><li><p class="Liste_puce_1"><strong>stockée dans l'annuaire :</strong> sélectionnez cette option si l'adresse mail est enregistrée dans un attribut de l'annuaire*&#160;; </p></li><li><p class="Liste_puce_1"><strong>le compte utilisateur sert également d'adresse e-mail :</strong> sélectionnez cette option pour que Watchdoc crée l'adresse mail en concaténant le nom du compte de l'utilisateur avec un nom de domaine DNS. Dans ce cas, précisez le <strong>nom de domaine DNS</strong>&#160;à ajouter au nom de l'utilisateur lors de la concaténation&#160;;</p></li><li><p class="Liste_puce_2"><strong>rechercher l'adresse dans un annuaire alias :</strong> optez pour ce choix si l'adresse e-mail est enregistrée dans un annuaire Alias. Dans ce cas,  sélectionnez l'annuaire dans lequel sont enregistrées les e-mails. (Pour configurer un annuaire de codes PUK, cf.&#160;<a href="ConfigAnnuaires_SQLPUK_Procedure.htm">Configurer un annuaire SQL de codes PUK</a>) :<br /><br /><a class="MCPopupThumbnailLink" href="Config_Annuaires_Emails.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbord" data-mc-width="995" data-mc-height="247" src="Config_Annuaires_Emails.png" alt="" title="" tabindex="" style="width: 500px;max-width: 1000px;" /></a></p></li></ul><p>&#160;</p><p>* par défaut, c'est l'adresse e-mail enregistrée dans le premier champ <b>Autres e-mail</b> d'Entra_ID qui est prise en compte par Watchdoc.&#160;<br />Si vous souhaitez modifier cette configuration : </p><ol><li value="1"><p style="font-weight: bold;"><span style="font-weight: normal;">ouvrez le fichier</span> Config.xml ;</p></li><li value="2"><p>repérez la balise &lt;authority&gt;AZUREADAUTH&lt;/authority&gt;</p></li><li value="3"><p>dans la balise &lt;preferred-email-attribute&gt;&lt;/preferred-email-attribute&gt;, saisissez l'une des valeurs suivantes : </p><ul><li><p>AUTO (par défaut) : prend en compte l'e-mail saisi dans le premier champ "Autres e-mails" du formulaire Entra ID ; </p></li><li><p>MAIN : prend en compte l'e-mail saisi dans le champ Adresse e-mail du formulaire Entra ID ; </p></li><li><p>LAST : prend en compte le dernier e-mail saisi dans les  champs "Autres e-mails" du formulaire Entra ID ; </p></li><li><p>[Nom-Attribut] : prend en compte l'e-mail saisi dans un champ spécifique du formulaire (peut être utile dans des cas très spécifiques).</p></li></ul></li></ol><h2>Fusible</h2><p>Les annuaires utilisateurs sont généralement hébergés sur un contrôleur de domaine ou serveur distant, accessible via le réseau local. En cas de panne réseau ou de ralentissement important, cela peut provoquer, par effet de cascade, un blocage ou ralentissement du serveur d'impression. </p><p>&#160;</p><p>Il peut alors être utile d'activer un "fusible logique", qui se déclenche en cas de ralentissement majeur du système, afin de stopper les requêtes envoyées au serveur défaillant pour éviter une surcharge de travail.</p><fieldset style="text-align: left;">Attention: il est important de bien considérer l'impact de l'activation d'un fusible sur le bon fonctionnement du service !
-<br />Afin de protéger efficacement le serveur de tout dysfonctionnement de l'annuaire distant, il est important de calibrer correctement le fusible. <br />Il est recommandé de tester le paramétrage du fusible avant de le configurer en environnement de production.<br /></fieldset><p>Dans les champs, saisissez les valeurs au-delà desquelles Watchdoc cesse d'envoyer des requêtes au serveur d'annuaire : </p><ul><li><p class="Liste_puce_1"><strong>Erreurs max. :</strong> il s'agit du nombre d'erreurs "graves" successives tolérées. Une erreur "grave" est, par exemple, un problème de communication réseau, un timeout, un dysfonctionnement du serveur distant. Ces erreurs sont généralement rares et peuvent parfois se régler naturellement (fin d'une période de pointe, redémarrage du serveur distant). Les erreurs "logiques" (comme un échec d'identification, de syntaxe ou de configuration de l'annuaire) sont ignorées.</p></li><li><p class="Liste_puce_1"><strong>Durée max. :</strong> il s'agit de la durée moyenne maximale tolérée pour l'exécution des 10 dernières requêtes. En cas de fort ralentissement du serveur distant (période de pointe, timeout réseau,...), cette durée est rallongée.
-</p></li><li><p class="Liste_puce_1"><strong>Requêtes max. :</strong> il s'agit du nombre maximum de requêtes en parallèle autorisées. En cas de forte charge de travail, le serveur distant peut ne pas être capable de répondre à un grand nombre de requêtes simultanées.
-</p></li><li><p class="Liste_puce_1"><strong>Délai attente :</strong> après déclenchement du fusible, délai d'attente avant réactivation.&#160;Au terme de ce délai, Watchdoc relance les requêtes afin de "sonder" l'état du serveur. Si les requêtes aboutissent, le fusible est réactivé, sinon il attend à nouveau l'expiration du délai.
-A tout moment, l'administrateur peut manuellement désactiver le fusible. Le fusible reste alors coupé jusqu'à ce qu'il soit réactivé manuellement. Pensez à utiliser cette fonctionnalité afin de tester l'impact d'une panne sur le serveur d'impression.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Annuaires_Fusible.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="647" data-mc-height="139" src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Fusible.png" tabindex="" style="max-width: 1000px;" /></a><br /><br /></p></li></ul><p>Les valeurs généralement saisies pour l'activation du fusible dans un environnement multi serveur (Master) sont les suivantes :</p><ul><li><p class="Liste_puce_1">erreurs max : 5</p></li><li><p class="Liste_puce_1">requêtes max : 5</p></li><li><p class="Liste_puce_1">durée max : 30 secondes</p></li><li><p class="Liste_puce_1">délai attente : 120 secondes</p></li></ul><h2>Print clients</h2><ul><li><p><strong>Ne pas utiliser cet annuaire :</strong> cochez cette case pour que Watchdoc Print Client n'utilise pas  cet annuaire<br /><img src="Config_Annuaire_PrintClients.png" /></p></li></ul><h2>Validation de la configuration </h2><p class="Liste_num_1">Cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/icon_Declarer.png" style="width: 26px;height: 24px;" /> <strong>Créer </strong>pour valider la configuration de votre annuaire.</p><h2>Et après ?&#160;</h2><p>Une fois l'annuaire LDAP déclaré, vous pouvez l'intégrer comme sous-annuaire de l'annuaire META (cf.&#160;<a href="ConfigAnnuaires_META_Procedure.htm">Déclarer et configurer un annuaire META</a>).&#160;</p></div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

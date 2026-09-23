@@ -200,91 +200,108 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor363"></a>
-                                            <MadCap:concept term="WD" />Watchdoc - Règles de gestion - Présentation</h1>
-                                        <h2>Principe </h2>
-                                        <h3>Qu'est-ce qu'une règle de gestion ?</h3>
-                                        <p>Dans Watchdoc, une règle de gestion est un ensemble de conditions et d'actions appliquées sur un quota. Elle permet de définir les modalités d'utilisation du quota d'un utilisateur, telles que son mode d'utilisation (compteur/débit), sa valeur initiale, sa fréquence de réinitialisation, sa limitation, ou non, par un plafond.</p>
-                                        <h3>Où et comment est utilisée une règle de gestion ?</h3>
-                                        <p>Une règle de gestion est utilisée dans les modèles de quotas. Elle peut être définie avant le paramétrage d'un modèle de quota ou au cours du paramétrage de ce modèle.</p>
-                                        <h2>Accéder à l'interface de configuration</h2>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Depuis le <strong>Menu principal</strong> de l'interface d'administration, dans la section <strong>Gestion</strong>, cliquez sur <strong>Modèles de Quotas :</strong><br /><br /><img src="../../W_WES/10_Ricoh/Config_Quotas_AccesInterface.png" style="width: 700px;height: auto;" /></p>
-                                                <p>
-                                                    <br />
-                                                </p>
-                                            </li>
-                                        </ol>
-                                        <p class="Resultat"><span style="font-family: 'Wingdings'">è</span> Vous accédez à l'interface d'administration des <strong>Modèles de quotas et règles de gestion</strong>.</p>
-                                        <h3>Description des outils de la liste</h3>
-                                        <p>La liste affiche l'ensemble des modèles de quotas et règles de gestion déclarés dans l'application Watchdoc.<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Quotas_ListeModelesQuotas_V53.png" style="width: 603px;height: 124px;" /></p>
-                                        <p>Chaque ligne présentant un quota ou une règle de gestion comporte les outils suivants : </p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1">le bouton <strong>Editer</strong> <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Modifier.png" style="width: 16px;height: 17px;" /> permet d'ouvrir le quota ou la règle de gestion dans une interface spécifique afin d'en étudier la configuration et de la modifier ;</p>
-                                            </li>
-                                        </ul>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1">le bouton <strong>Dupliquer</strong> <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Dupliquer.png" style="width: 22px;height: 17px;" /> permet de prendre un quota ou la règle de gestion comme modèle pour en créer un nouveau plutôt que de le reconfigurer ex-nihilo&#160;;<br />Avant d'utiliser l'outil de duplication, vérifiez qu'il n'y aura pas plus de paramètres à modifier qu'à conserver.</p>
-                                            </li>
-                                        </ul>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1">le bouton <strong>Supprimer</strong> <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Supprimer.png" style="width: 22px;height: 23px;" /> permet de supprimer un quota ou la règle de gestion qui n'est plus utilisé.&#160;La suppression n'est effective qu'après confirmation.</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">le bouton  <strong>Créer</strong> <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Ajouter.png" style="width: 18px;height: 18px;" /> situé sous chaque liste ouvre l'interface de création d'un quota ou de la règle de gestion.</p>
-                                            </li>
-                                        </ul>
-                                        <h3>Informations de la liste Quotas</h3>
-                                        <p>Chaque ligne affiche les informations constituant le quota : </p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1">le <strong>Nom</strong> et la description du quota ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">la <strong>Portée</strong> : précise s'il s'agit d'un quota propre à un utilisateur (<strong>Personnel</strong>) ou partagée par un groupe d'utilisateurs (<strong>Groupe</strong>) ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Nombre :</strong> affiche le nombre de comptes utilisateurs auxquels le quota est associé ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Total : </strong> affiche le nombre total d'unités crédités sur ce quota ;  </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Conso :</strong> affiche le nombre total d'unités consommées ; </p>
-                                            </li>
-                                        </ul>
-                                        <h3>Informations de la liste Règles de gestion</h3>
-                                        <p>Chaque ligne affiche les informations constituant la règle de gestion : </p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1">le <strong>Nom</strong> et la description de  la règle de gestion&#160;;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">le <strong>Mode</strong> : précise si&#160;le mode selon lequel est gérére la règle ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Valeur init.</strong> : lorsque la règle est en mode <strong>Débit</strong>, indique la valeur initiale créditée sur les comptes utilisateurs auxquels sont associés la règle de gestion&#160;;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Plafond </strong>: indique si la règle comporte un plafond permettant de limiter le montant de versement (en mode <strong>débit</strong>) ou un montant maximal de débit (en mode <strong>compteur</strong>)&#160;; </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Tolérance :</strong>  indique si la règle autorise un dépassement&#160;;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Périodicité :</strong> indique à quel moment les crédits sont rechargés&#160;;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Reinit.&#160;:</strong> indique à quelle date la dernière réinitialisation a eu lieu.</p>
-                                            </li>
-                                        </ul>
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocRèglesdegestionPrésentation" data-magellan-target="WatchdocRèglesdegestionPrésentation"><a name="aanchor363"></a>
+                                                    <MadCap:concept term="WD" />Watchdoc - Règles de gestion - Présentation</h1>
+                                                <h2 id="Principe" data-magellan-target="Principe">Principe </h2>
+                                                <h3>Qu'est-ce qu'une règle de gestion ?</h3>
+                                                <p>Dans Watchdoc, une règle de gestion est un ensemble de conditions et d'actions appliquées sur un quota. Elle permet de définir les modalités d'utilisation du quota d'un utilisateur, telles que son mode d'utilisation (compteur/débit), sa valeur initiale, sa fréquence de réinitialisation, sa limitation, ou non, par un plafond.</p>
+                                                <h3>Où et comment est utilisée une règle de gestion ?</h3>
+                                                <p>Une règle de gestion est utilisée dans les modèles de quotas. Elle peut être définie avant le paramétrage d'un modèle de quota ou au cours du paramétrage de ce modèle.</p>
+                                                <h2 id="Accéderàlinterfacedeconfiguration" data-magellan-target="Accéderàlinterfacedeconfiguration">Accéder à l'interface de configuration</h2>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Depuis le <strong>Menu principal</strong> de l'interface d'administration, dans la section <strong>Gestion</strong>, cliquez sur <strong>Modèles de Quotas :</strong><br /><br /><img src="../../W_WES/10_Ricoh/Config_Quotas_AccesInterface.png" style="width: 700px;height: auto;" /></p>
+                                                        <p>
+                                                            <br />
+                                                        </p>
+                                                    </li>
+                                                </ol>
+                                                <p class="Resultat"><span style="font-family: 'Wingdings'">è</span> Vous accédez à l'interface d'administration des <strong>Modèles de quotas et règles de gestion</strong>.</p>
+                                                <h3>Description des outils de la liste</h3>
+                                                <p>La liste affiche l'ensemble des modèles de quotas et règles de gestion déclarés dans l'application Watchdoc.<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Quotas_ListeModelesQuotas_V53.png" style="width: 603px;height: 124px;" /></p>
+                                                <p>Chaque ligne présentant un quota ou une règle de gestion comporte les outils suivants : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1">le bouton <strong>Editer</strong> <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Modifier.png" style="width: 16px;height: 17px;" /> permet d'ouvrir le quota ou la règle de gestion dans une interface spécifique afin d'en étudier la configuration et de la modifier ;</p>
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1">le bouton <strong>Dupliquer</strong> <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Dupliquer.png" style="width: 22px;height: 17px;" /> permet de prendre un quota ou la règle de gestion comme modèle pour en créer un nouveau plutôt que de le reconfigurer ex-nihilo&#160;;<br />Avant d'utiliser l'outil de duplication, vérifiez qu'il n'y aura pas plus de paramètres à modifier qu'à conserver.</p>
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1">le bouton <strong>Supprimer</strong> <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Supprimer.png" style="width: 22px;height: 23px;" /> permet de supprimer un quota ou la règle de gestion qui n'est plus utilisé.&#160;La suppression n'est effective qu'après confirmation.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">le bouton  <strong>Créer</strong> <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Ajouter.png" style="width: 18px;height: 18px;" /> situé sous chaque liste ouvre l'interface de création d'un quota ou de la règle de gestion.</p>
+                                                    </li>
+                                                </ul>
+                                                <h3>Informations de la liste Quotas</h3>
+                                                <p>Chaque ligne affiche les informations constituant le quota : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1">le <strong>Nom</strong> et la description du quota ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">la <strong>Portée</strong> : précise s'il s'agit d'un quota propre à un utilisateur (<strong>Personnel</strong>) ou partagée par un groupe d'utilisateurs (<strong>Groupe</strong>) ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Nombre :</strong> affiche le nombre de comptes utilisateurs auxquels le quota est associé ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Total : </strong> affiche le nombre total d'unités crédités sur ce quota ;  </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Conso :</strong> affiche le nombre total d'unités consommées ; </p>
+                                                    </li>
+                                                </ul>
+                                                <h3>Informations de la liste Règles de gestion</h3>
+                                                <p>Chaque ligne affiche les informations constituant la règle de gestion : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1">le <strong>Nom</strong> et la description de  la règle de gestion&#160;;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">le <strong>Mode</strong> : précise si&#160;le mode selon lequel est gérére la règle ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Valeur init.</strong> : lorsque la règle est en mode <strong>Débit</strong>, indique la valeur initiale créditée sur les comptes utilisateurs auxquels sont associés la règle de gestion&#160;;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Plafond </strong>: indique si la règle comporte un plafond permettant de limiter le montant de versement (en mode <strong>débit</strong>) ou un montant maximal de débit (en mode <strong>compteur</strong>)&#160;; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Tolérance :</strong>  indique si la règle autorise un dépassement&#160;;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Périodicité :</strong> indique à quel moment les crédits sont rechargés&#160;;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Reinit.&#160;:</strong> indique à quelle date la dernière réinitialisation a eu lieu.</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocR%C3%A8glesdegestionPr%C3%A9sentation">Watchdoc - Règles de gestion - Présentation</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Principe">Principe </a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Acc%C3%A9der%C3%A0linterfacedeconfiguration">Accéder à l'interface de configuration</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
                                     </div>
-                                    <p>&#160;</p>
+                                    <!--<MadCap:miniTocProxy />
+        <MadCap:bodyProxy class=".body-container" />-->
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">
                                             <button class="button elearning-button needs-pie previous-topic-button" title="Précédent" disabled="true">

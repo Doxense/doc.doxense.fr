@@ -200,37 +200,56 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor400"></a>
-                                            <MadCap:concept term="WD" />Watchdoc - Chiffrement des spools - Présentation</h1>
-                                        <h2>Principe</h2>
-                                        <p style="font-weight: normal;">Dans Watchdoc, les flux de données échangés entre les WES&#160;et Watchdoc sont déjà sécurisés grâce au protocole <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term5">SSL<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Secure Sockets Layer. Protocole de sécurisation des échanges sur Internet, devenu Transport Layer Security (TLS) en 2001.</span></a>.&#160;En revanche, les données des travaux d'impression et de numérisations stockées sur le serveur d'impression ne l'étaient pas.&#160;</p>
-                                        <p style="font-weight: normal;">&#160;</p>
-                                        <p style="font-weight: normal;">Le chiffrement est une fonction  apparue avec la version 5.4.1 de Watchdoc. Elle permet de sécuriser les données d'impression et de numérisation au moment où elles sont stockées sur le serveur d'impression Watchdoc. </p>
-                                        <p style="font-weight: normal;">&#160;</p>
-                                        <p style="font-weight: normal;">La fonction repose sur l'API Microsoft<sup>®</sup> DPAPI-NG ou CNG-DPAPI et l'algorithme de chiffrement AES.</p>
-                                        <p style="font-weight: normal;">&#160;</p>
-                                        <p style="font-weight: normal;">La fonction de chiffrement est activée directement et manuellement dans le fichier de configuration de Watchdoc lors de son installation ou de sa mise à jour. Elle exploite un spouleur spécifique appelé "doxense spooler"(ou "custom spooler", spouleur personnalisé) et le compte local par défaut MS&#160;Windows<sup>®</sup>.</p>
-                                        <h2>Schéma</h2>
-                                        <p><a class="MCPopupThumbnailLink" href="../W_WES/WD541_SCH_Chiffrement.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="448" data-mc-height="307" src="../W_WES/WD541_SCH_Chiffrement.png" tabindex="" style="max-width: 1000px;" /></a>
-                                        </p>
-                                        <h2>Prérequis</h2>
-                                        <ul>
-                                            <li>
-                                                <p>Le chiffrement nécessite au minimum la version v. 5.4.1 de Watchdoc.</p>
-                                            </li>
-                                            <li>
-                                                <p>Un arrêt du service Watchdoc étant nécessaire, vérifiez que les files d'impression ne contiennent plus aucun document en attente avant de procéder à cet arrêt.</p>
-                                            </li>
-                                            <li>
-                                                <p>La fonction de chiffrement exploite le compte de service Watchdoc (Système local) par défaut.&#160;Si ce compte est modifié, les documents en cours d'impression exploitant la fonction de chiffrement ne pourront plus être déchiffrés.</p>
-                                            </li>
-                                            <li>
-                                                <p>La fonction de chiffrement est incompatible avec la fonction d'archivage.&#160;Si le chiffrement est activé, dans l'interface de configuration de l'archivage, un message informe donc qu'il est impossible de l'activer.</p>
-                                            </li>
-                                        </ul>
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocChiffrementdesspoolsPrésentation" data-magellan-target="WatchdocChiffrementdesspoolsPrésentation"><a name="aanchor400"></a>
+                                                    <MadCap:concept term="WD" />Watchdoc - Chiffrement des spools - Présentation</h1>
+                                                <h2 id="Principe" data-magellan-target="Principe">Principe</h2>
+                                                <p style="font-weight: normal;">Dans Watchdoc, les flux de données échangés entre les WES&#160;et Watchdoc sont déjà sécurisés grâce au protocole <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term5">SSL<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Secure Sockets Layer. Protocole de sécurisation des échanges sur Internet, devenu Transport Layer Security (TLS) en 2001.</span></a>.&#160;En revanche, les données des travaux d'impression et de numérisations stockées sur le serveur d'impression ne l'étaient pas.&#160;</p>
+                                                <p style="font-weight: normal;">&#160;</p>
+                                                <p style="font-weight: normal;">Le chiffrement est une fonction  apparue avec la version 5.4.1 de Watchdoc. Elle permet de sécuriser les données d'impression et de numérisation au moment où elles sont stockées sur le serveur d'impression Watchdoc. </p>
+                                                <p style="font-weight: normal;">&#160;</p>
+                                                <p style="font-weight: normal;">La fonction repose sur l'API Microsoft<sup>®</sup> DPAPI-NG ou CNG-DPAPI et l'algorithme de chiffrement AES.</p>
+                                                <p style="font-weight: normal;">&#160;</p>
+                                                <p style="font-weight: normal;">La fonction de chiffrement est activée directement et manuellement dans le fichier de configuration de Watchdoc lors de son installation ou de sa mise à jour. Elle exploite un spouleur spécifique appelé "doxense spooler"(ou "custom spooler", spouleur personnalisé) et le compte local par défaut MS&#160;Windows<sup>®</sup>.</p>
+                                                <h2 id="Schéma" data-magellan-target="Schéma">Schéma</h2>
+                                                <p><a class="MCPopupThumbnailLink" href="../W_WES/WD541_SCH_Chiffrement.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="448" data-mc-height="307" src="../W_WES/WD541_SCH_Chiffrement.png" tabindex="" style="max-width: 1000px;" /></a>
+                                                </p>
+                                                <h2 id="Prérequis" data-magellan-target="Prérequis">Prérequis</h2>
+                                                <ul>
+                                                    <li>
+                                                        <p>Le chiffrement nécessite au minimum la version v. 5.4.1 de Watchdoc.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Un arrêt du service Watchdoc étant nécessaire, vérifiez que les files d'impression ne contiennent plus aucun document en attente avant de procéder à cet arrêt.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>La fonction de chiffrement exploite le compte de service Watchdoc (Système local) par défaut.&#160;Si ce compte est modifié, les documents en cours d'impression exploitant la fonction de chiffrement ne pourront plus être déchiffrés.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>La fonction de chiffrement est incompatible avec la fonction d'archivage.&#160;Si le chiffrement est activé, dans l'interface de configuration de l'archivage, un message informe donc qu'il est impossible de l'activer.</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocChiffrementdesspoolsPr%C3%A9sentation">Watchdoc - Chiffrement des spools - Présentation</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Principe">Principe</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Sch%C3%A9ma">Schéma</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Pr%C3%A9requis">Prérequis</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
                                     </div>
-                                    <p>&#160;</p>
+                                    <!--<MadCap:miniTocProxy />
+        <MadCap:bodyProxy class=".body-container" />-->
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">
                                             <button class="button elearning-button needs-pie previous-topic-button" title="Précédent" disabled="true">

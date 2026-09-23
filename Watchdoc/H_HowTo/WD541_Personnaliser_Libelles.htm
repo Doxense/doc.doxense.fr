@@ -166,6 +166,98 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocLibellésPersonnaliserleslibellésdeWatchdocCustomiserlesfichiersdelangueswml" data-magellan-target="WatchdocLibellésPersonnaliserleslibellésdeWatchdocCustomiserlesfichiersdelangueswml"><a name="aanchor222"></a>
+                                                    <MadCap:concept term="WD" />Watchdoc - Libellés - Personnaliser les libellés de Watchdoc - Customiser les fichiers de langues wml</h1>
+                                                <h2 id="Principe" data-magellan-target="Principe">Principe</h2>
+                                                <p>Vous pouvez personnaliser (customiser) les libellés des interfaces de Watchdoc. Ces libellés sont enregistrés sous formes de "clés" dans des fichiers de langues au format WML propres à chaque langue (FR pour Français, GB pour Anglais britannique, IT pour Italien, etc.).</p>
+                                                <p>&#160;</p>
+                                                <p>Par exemple, dans le fichier "lang_webclient.fr-FR.wml", la clé ACCOUNTSCREEN/ALLJOBS correspond au libellé "Voir la liste complète…" et correspond au libellé "See the all list" dans le fichier lang_webclient.en-EN.wml.</p>
+                                                <p>&#160;</p>
+                                                <p>Les fichiers WML sont de 3 types :</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>Service : libellés utilisés par le service Watchdoc et la Print API&#160;;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Webclient : libellés des interfaces d'administration Watchdoc ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>WES et WES V3 : libellés utilisés dans les WES ;</p>
+                                                    </li>
+                                                </ul>
+                                                <p>&#160;</p>
+                                                <p>La mise à jour de ces fichiers nécessitait auparavant un redémarrage de Watchdoc. Désormais, la mise à jour peut être réalisée par "superposition" (overlay) du fichier le plus récent. Dès que le fichier est modifié, il est rechargé automatiquement, ce qui offre un gain de temps.</p>
+                                                <p>&#160;</p>
+                                                <p>Par ailleurs, en cas de mise à jour de Watchdoc, le fichier de langue personnalisé est conservé si son nom comporte la mention "override".</p>
+                                                <h2 id="Procédure" data-magellan-target="Procédure">Procédure</h2>
+                                                <h3>Modifier le fichier de langue</h3>
+                                                <fieldset>Cette procédure doit être appliquée sur tous les serveurs d'un domaine (configuration master/slave). <br />Il est donc recommandé de modifier le fichier de langue sur le serveur master, puis de le copier/coller sur tous les serveurs  slaves qui en dépendent.</fieldset>
+                                                <p>&#160;</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>en tant qu'administrateur, accédez au serveur master sur lequel est hébergé Watchdoc ;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>rendez-vous dans le dossier de stockage des fichiers de libellés de Watchdoc (<strong>C:\Program Files\Doxense\Watchdoc\Data </strong>par défaut) ;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>dans ce dossier, sélectionnez le fichier "<strong>lang_[...].wml</strong>" que vous souhaitez modifier ;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>copiez-le, puis renommez ce fichier "<strong>lang_[...].override.[code langue].wml</strong>" (par exemple lang_webclient.override.fr-FR.wml) ;</p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p>dans ce fichier, attribuez de nouvelles valeurs aux libellés que vous souhaitez changer (par exemple "Statut" au lieu de "Etat") ;</p>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p>enregistrez la version "override" du fichier.</p>
+                                                    </li>
+                                                </ol>
+                                                <p>&#160;</p>
+                                                <p>Ce fichier de langue peut être modifié à tout moment si vous souhaitez personnaliser de nouveaux libellés ultérieurement.&#160;</p>
+                                                <h3>Appliquer les modifications</h3>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>pour appliquer les modifications de ce fichier "override", vous pouvez procéder de 3 manières :</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>soit en redémarrant Watchdoc ;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>soit à l'aide de la commande WCLI "REFRESHWMLS"</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>soit à partir de l'interface d'administration de Watchdoc :</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ol>
+                                                <ol data-mc-continue="true">
+                                                    <li value="2">
+                                                        <p>allez dans <strong>Menu Principal</strong> &gt; <strong>Configuration Avancée</strong> (dans la section <strong>Configuration</strong>) &gt; <strong>Configuration Système</strong>) : </p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>dans la section <strong>Configuration Générale</strong>, sous le paramètre <strong>Options régionales</strong>, cliquez sur le bouton "<strong>Recharger les traductions</strong>" :<br /><br /><a class="MCPopupThumbnailLink" href="FPR_Personnaliser_Libelles_Recharger.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1144" data-mc-height="401" src="FPR_Personnaliser_Libelles_Recharger.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a></p>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocLibell%C3%A9sPersonnaliserleslibell%C3%A9sdeWatchdocCustomiserlesfichiersdelangueswml">Watchdoc - Libellés - Personnaliser les libellés de Watchdoc - Customiser les fichiers de langues wml</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Principe">Principe</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Proc%C3%A9dure">Procédure</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -199,82 +291,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor222"></a>
-                                            <MadCap:concept term="WD" />Watchdoc - Libellés - Personnaliser les libellés de Watchdoc - Customiser les fichiers de langues wml</h1>
-                                        <h2>Principe</h2>
-                                        <p>Vous pouvez personnaliser (customiser) les libellés des interfaces de Watchdoc. Ces libellés sont enregistrés sous formes de "clés" dans des fichiers de langues au format WML propres à chaque langue (FR pour Français, GB pour Anglais britannique, IT pour Italien, etc.).</p>
-                                        <p>&#160;</p>
-                                        <p>Par exemple, dans le fichier "lang_webclient.fr-FR.wml", la clé ACCOUNTSCREEN/ALLJOBS correspond au libellé "Voir la liste complète…" et correspond au libellé "See the all list" dans le fichier lang_webclient.en-EN.wml.</p>
-                                        <p>&#160;</p>
-                                        <p>Les fichiers WML sont de 3 types :</p>
-                                        <ul>
-                                            <li>
-                                                <p>Service : libellés utilisés par le service Watchdoc et la Print API&#160;;</p>
-                                            </li>
-                                            <li>
-                                                <p>Webclient : libellés des interfaces d'administration Watchdoc ;</p>
-                                            </li>
-                                            <li>
-                                                <p>WES et WES V3 : libellés utilisés dans les WES ;</p>
-                                            </li>
-                                        </ul>
-                                        <p>&#160;</p>
-                                        <p>La mise à jour de ces fichiers nécessitait auparavant un redémarrage de Watchdoc. Désormais, la mise à jour peut être réalisée par "superposition" (overlay) du fichier le plus récent. Dès que le fichier est modifié, il est rechargé automatiquement, ce qui offre un gain de temps.</p>
-                                        <p>&#160;</p>
-                                        <p>Par ailleurs, en cas de mise à jour de Watchdoc, le fichier de langue personnalisé est conservé si son nom comporte la mention "override".</p>
-                                        <h2>Procédure</h2>
-                                        <h3>Modifier le fichier de langue</h3>
-                                        <fieldset>Cette procédure doit être appliquée sur tous les serveurs d'un domaine (configuration master/slave). <br />Il est donc recommandé de modifier le fichier de langue sur le serveur master, puis de le copier/coller sur tous les serveurs  slaves qui en dépendent.</fieldset>
-                                        <p>&#160;</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>en tant qu'administrateur, accédez au serveur master sur lequel est hébergé Watchdoc ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>rendez-vous dans le dossier de stockage des fichiers de libellés de Watchdoc (<strong>C:\Program Files\Doxense\Watchdoc\Data </strong>par défaut) ;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>dans ce dossier, sélectionnez le fichier "<strong>lang_[...].wml</strong>" que vous souhaitez modifier ;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p>copiez-le, puis renommez ce fichier "<strong>lang_[...].override.[code langue].wml</strong>" (par exemple lang_webclient.override.fr-FR.wml) ;</p>
-                                            </li>
-                                            <li value="5">
-                                                <p>dans ce fichier, attribuez de nouvelles valeurs aux libellés que vous souhaitez changer (par exemple "Statut" au lieu de "Etat") ;</p>
-                                            </li>
-                                            <li value="6">
-                                                <p>enregistrez la version "override" du fichier.</p>
-                                            </li>
-                                        </ol>
-                                        <p>&#160;</p>
-                                        <p>Ce fichier de langue peut être modifié à tout moment si vous souhaitez personnaliser de nouveaux libellés ultérieurement.&#160;</p>
-                                        <h3>Appliquer les modifications</h3>
-                                        <ol>
-                                            <li value="1">
-                                                <p>pour appliquer les modifications de ce fichier "override", vous pouvez procéder de 3 manières :</p>
-                                                <ul>
-                                                    <li>
-                                                        <p>soit en redémarrant Watchdoc ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>soit à l'aide de la commande WCLI "REFRESHWMLS"</p>
-                                                    </li>
-                                                    <li>
-                                                        <p>soit à partir de l'interface d'administration de Watchdoc :</p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="2">
-                                                <p>allez dans <strong>Menu Principal</strong> &gt; <strong>Configuration Avancée</strong> (dans la section <strong>Configuration</strong>) &gt; <strong>Configuration Système</strong>) : </p>
-                                            </li>
-                                            <li value="3">
-                                                <p>dans la section <strong>Configuration Générale</strong>, sous le paramètre <strong>Options régionales</strong>, cliquez sur le bouton "<strong>Recharger les traductions</strong>" :<br /><br /><a class="MCPopupThumbnailLink" href="FPR_Personnaliser_Libelles_Recharger.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1144" data-mc-height="401" src="FPR_Personnaliser_Libelles_Recharger.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a></p>
-                                            </li>
-                                        </ol>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

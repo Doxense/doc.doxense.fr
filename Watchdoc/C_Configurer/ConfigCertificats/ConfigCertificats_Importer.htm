@@ -164,6 +164,87 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocCertificatsImporteruncertificatsignédansWatchdoc" data-magellan-target="WatchdocCertificatsImporteruncertificatsignédansWatchdoc"><a name="aanchor283"></a>
+                                                    <MadCap:concept term="CFG;WD" />Watchdoc - Certificats - Importer un certificat signé dans Watchdoc</h1>
+                                                <p>Nouvelle fonctionnalité de la v.&#160;6.1.0.5011</p>
+                                                <p>&#160;</p>
+                                                <p>Il arrive que la D.S.I.&#160;souhaite vous fournir un certificat signé par son autorité de certification. </p>
+                                                <h2 id="Fournirlesinformationsducertificat" data-magellan-target="Fournirlesinformationsducertificat">Fournir les informations du certificat</h2>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Dans l'interface de configuration Certificats, section <strong>Génération d'un nouveau certificat,</strong> saisissez un <strong>ID&#160;</strong>identifiant (unique et définitif)&#160;;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>communiquez à votre service informatique les informations (ID, nom d'hôte principal et Alt-Names) relatives au certificat attendu&#160;;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>récupérez dans votre espace de travail le fichier p12 fourni par votre D.S.I.</p>
+                                                    </li>
+                                                </ol>
+                                                <h2 id="Importeruncertificat" data-magellan-target="Importeruncertificat">Importer un certificat</h2>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>lorsque votre référent informatique vous fournit en retour le fichier p.12 (.pfx ou .pem) et le mot de passe correspondant, complétez les champs suivants&#160;de la section <strong>Importer</strong>&#160;:</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p><strong>Mot de passe</strong> : saisissez le mot de passe du fichier&#160;;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>ID&#160;du certificat </strong>: reportez l'identifiant du certificat&#160;;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Fichier p12 </strong>: cliquez sur le bouton <strong>Choisir un fichier</strong> pour sélectionner le fichier fourni par votre référent (.pem ou .pfx).</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>Cliquez sur le bouton <strong>Importer un certificat</strong>&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="WD_Config_Certif_Importer.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1169" data-mc-height="495" src="WD_Config_Certif_Importer.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>Vérifiez dans la liste des certificats que le logo <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Certificat_Signe.png" /> "Certificat signé" s'affiche dans la colonne <strong>Est signé</strong> à droite du certificat. </p>
+                                                    </li>
+                                                </ol>
+                                                <p><span style="font-family: 'Wingdings'">è</span>Vous pouvez alors l'associer à un point d'entrée du serveur web</p>
+                                                <h2 id="Associeruncertificatàunpointdentréeduserveurweb" data-magellan-target="Associeruncertificatàunpointdentréeduserveurweb"><a name="Associer_Cert" id="Associer_Cert"></a>Associer un certificat à un point d'entrée du serveur web</h2>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Dans l'interface <strong>Serveur Web</strong>,  section <strong>DSP</strong>, dans la liste des points d'entrée du serveur web, ajoutez un point d'entrée ou cliquez sur le bouton<img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Editer.png" style="width: 24px;height: 24px;"></img> pour modifier&#160;un point d'entrée existant :</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>Dans l'interface <strong>Point d'entrée</strong>, complétez les champs (cf.&#160;<a href="../ConfigServeurWeb/Config_ServeurWeb_Presentation.htm">Créer un point d'entrée</a>) puis, dans la liste <strong>Certificats</strong>, sélectionnez le certificat nouvellement ajouté.</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>Complétez les autres paramètres, puis cliquez sur pour valider l'association du certificat et du point d'entrée&#160;:&#160;<br /><br /><img src="WD_Config_Certif_Editer.png" style="width: 700px;height: auto;" /></p>
+                                                    </li>
+                                                </ol>
+                                                <h2 id="Supprimeruncertificat" data-magellan-target="Supprimeruncertificat">Supprimer un certificat</h2>
+                                                <p>Pour supprimer un certificat de la liste, cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Supprimer.png" style="width: 18px;height: 19px;" /> situé à droite du certificat.&#160;</p>
+                                                <p>Attention&#160;! La suppression est immédiate : aucune confirmation n'est demandée.&#160;</p>
+                                                <p>&#160;</p>
+                                                <fieldset>Il convient de ne pas désactiver ou supprimer les trois points d'entrée installés par défaut car ils sécurisent le serveur web de Watchdoc. <br />Cependant, il est possible d'en modifier les paramètres pour leur attribuer d'autres ports et d'autres certificats.<br /></fieldset>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocCertificatsImporteruncertificatsign%C3%A9dansWatchdoc">Watchdoc - Certificats - Importer un certificat signé dans Watchdoc</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Fournirlesinformationsducertificat">Fournir les informations du certificat</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Importeruncertificat">Importer un certificat</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Associeruncertificat%C3%A0unpointdentr%C3%A9eduserveurweb">Associer un certificat à un point d'entrée du serveur web</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Supprimeruncertificat">Supprimer un certificat</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -197,67 +278,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor283"></a>
-                                            <MadCap:concept term="CFG;WD" />Watchdoc - Certificats - Importer un certificat signé dans Watchdoc</h1>
-                                        <p>Nouvelle fonctionnalité de la v.&#160;6.1.0.5011</p>
-                                        <p>&#160;</p>
-                                        <p>Il arrive que la D.S.I.&#160;souhaite vous fournir un certificat signé par son autorité de certification. </p>
-                                        <h2>Fournir les informations du certificat</h2>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Dans l'interface de configuration Certificats, section <strong>Génération d'un nouveau certificat,</strong> saisissez un <strong>ID&#160;</strong>identifiant (unique et définitif)&#160;;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>communiquez à votre service informatique les informations (ID, nom d'hôte principal et Alt-Names) relatives au certificat attendu&#160;;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>récupérez dans votre espace de travail le fichier p12 fourni par votre D.S.I.</p>
-                                            </li>
-                                        </ol>
-                                        <h2>Importer un certificat</h2>
-                                        <ol>
-                                            <li value="1">
-                                                <p>lorsque votre référent informatique vous fournit en retour le fichier p.12 (.pfx ou .pem) et le mot de passe correspondant, complétez les champs suivants&#160;de la section <strong>Importer</strong>&#160;:</p>
-                                                <ul>
-                                                    <li>
-                                                        <p><strong>Mot de passe</strong> : saisissez le mot de passe du fichier&#160;;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>ID&#160;du certificat </strong>: reportez l'identifiant du certificat&#160;;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Fichier p12 </strong>: cliquez sur le bouton <strong>Choisir un fichier</strong> pour sélectionner le fichier fourni par votre référent (.pem ou .pfx).</p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li value="2">
-                                                <p>Cliquez sur le bouton <strong>Importer un certificat</strong>&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="WD_Config_Certif_Importer.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1169" data-mc-height="495" src="WD_Config_Certif_Importer.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>Vérifiez dans la liste des certificats que le logo <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Certificat_Signe.png" /> "Certificat signé" s'affiche dans la colonne <strong>Est signé</strong> à droite du certificat. </p>
-                                            </li>
-                                        </ol>
-                                        <p><span style="font-family: 'Wingdings'">è</span>Vous pouvez alors l'associer à un point d'entrée du serveur web</p>
-                                        <h2><a name="Associer_Cert" id="Associer_Cert"></a>Associer un certificat à un point d'entrée du serveur web</h2>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Dans l'interface <strong>Serveur Web</strong>,  section <strong>DSP</strong>, dans la liste des points d'entrée du serveur web, ajoutez un point d'entrée ou cliquez sur le bouton<img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Editer.png" style="width: 24px;height: 24px;"></img> pour modifier&#160;un point d'entrée existant :</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>Dans l'interface <strong>Point d'entrée</strong>, complétez les champs (cf.&#160;<a href="../ConfigServeurWeb/Config_ServeurWeb_Presentation.htm">Créer un point d'entrée</a>) puis, dans la liste <strong>Certificats</strong>, sélectionnez le certificat nouvellement ajouté.</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>Complétez les autres paramètres, puis cliquez sur pour valider l'association du certificat et du point d'entrée&#160;:&#160;<br /><br /><img src="WD_Config_Certif_Editer.png" style="width: 700px;height: auto;" /></p>
-                                            </li>
-                                        </ol>
-                                        <h2>Supprimer un certificat</h2>
-                                        <p>Pour supprimer un certificat de la liste, cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Supprimer.png" style="width: 18px;height: 19px;" /> situé à droite du certificat.&#160;</p>
-                                        <p>Attention&#160;! La suppression est immédiate : aucune confirmation n'est demandée.&#160;</p>
-                                        <p>&#160;</p>
-                                        <fieldset>Il convient de ne pas désactiver ou supprimer les trois points d'entrée installés par défaut car ils sécurisent le serveur web de Watchdoc. <br />Cependant, il est possible d'en modifier les paramètres pour leur attribuer d'autres ports et d'autres certificats.<br /></fieldset>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

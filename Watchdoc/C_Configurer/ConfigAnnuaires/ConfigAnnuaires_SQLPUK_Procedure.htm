@@ -177,186 +177,218 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor230"></a>
-                                            <MadCap:concept term="CFG;WD" />Watchdoc - Annuaires - Créer et configurer une base de codes PUK de type SQL (SQL / PostgreSQL&#160;/ SQLite)</h1>
-                                        <h2>Principe</h2>
-                                        <p>Lorsque les utilisateurs de Watchdoc sont enregistrés dans un annuaire Entra ID (Microsoft Azure), s'ils s'authentifient à l'aide d'un code PUK, ces  codes sont enregistrés dans une base SQL.</p>
-                                        <p>&#160;</p>
-                                        <fieldset>Par souci de sécurité, nous déconseillons l'authentification par code PUK et recommandons l'utilisation du compte utilisateur (login)/code PIN.</fieldset>
-                                        <h2>Prérequis</h2>
-                                        <p>Avant de déclarer la base des codes PUK, il convient de connaître : </p>
-                                        <ul>
-                                            <li>
-                                                <p>le nom de la base SQL&#160;où se trouve la table "Cards/Badges" dans laquelle seront également enregistrés les codes PUK&#160;;</p>
-                                            </li>
-                                            <li>
-                                                <p>le compte d'accès à cette base (nom d'utilisateur et mot de passe).</p>
-                                            </li>
-                                        </ul>
-                                        <h2>Procédure</h2>
-                                        <h3>Déclarer une base de codes PUK</h3>
-                                        <p>Depuis le <strong>Menu principal</strong> de l'interface d'administration, </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">dans la section <strong>Configuration</strong>, cliquez sur <strong>Annuaires utilisateurs</strong> :</p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1">Dans la liste des annuaires qui s'affiche, cliquez sur le bouton <strong>Déclarer un nouvel annuaire <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_DeclarerAnnuaire.png" style="width: 22px;height: 23px;" /> :</strong><br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Annuaires_DeclarerNvlAnnuaire_61.png" style="width: 700px;height: auto;" /><br /><br /></p>
-                                            </li>
-                                        </ol>
-                                        <p class="Resultat"><span style="font-family: 'Wingdings'">è</span> Vous accédez à l'interface <strong>Déclarer un nouvel annuaire utilisateur</strong> constituée de plusieurs sections.<br />Le nombre et la nature des paramètres figurant dans cette interface varient en fonction du type d'annuaire à configurer.</p>
-                                        <p>&#160;</p>
-                                        <h3>Configurer la base de  codes PUK (SQL)</h3>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Dans la section <strong>Propriétés</strong>, sélectionnez le <strong>Type</strong> <strong>Base de Codes PUK (SQL)</strong>:<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Admin_Annuaire_SQLCodesPUK.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1140" data-mc-height="523" src="../../Z_Resources/Images/02_Captures/Admin_Annuaire_SQLCodesPUK.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a></p>
-                                                <p>
-                                                    <br />
-                                                </p>
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocAnnuairesCréeretconfigurerunebasedecodesPUKdetypeSQLSQLPostgreSQLSQLite" data-magellan-target="WatchdocAnnuairesCréeretconfigurerunebasedecodesPUKdetypeSQLSQLPostgreSQLSQLite"><a name="aanchor230"></a>
+                                                    <MadCap:concept term="CFG;WD" />Watchdoc - Annuaires - Créer et configurer une base de codes PUK de type SQL (SQL / PostgreSQL&#160;/ SQLite)</h1>
+                                                <h2 id="Principe" data-magellan-target="Principe">Principe</h2>
+                                                <p>Lorsque les utilisateurs de Watchdoc sont enregistrés dans un annuaire Entra ID (Microsoft Azure), s'ils s'authentifient à l'aide d'un code PUK, ces  codes sont enregistrés dans une base SQL.</p>
+                                                <p>&#160;</p>
+                                                <fieldset>Par souci de sécurité, nous déconseillons l'authentification par code PUK et recommandons l'utilisation du compte utilisateur (login)/code PIN.</fieldset>
+                                                <h2 id="Prérequis" data-magellan-target="Prérequis">Prérequis</h2>
+                                                <p>Avant de déclarer la base des codes PUK, il convient de connaître : </p>
                                                 <ul>
                                                     <li>
-                                                        <p><strong>Global: </strong>cochez cette case si vous configurez la base sur un serveur master et que vous souhaitez la répliquer sur les serveurs esclaves (si le mode de synchronisation est bidirectionnel). </p>
+                                                        <p>le nom de la base SQL&#160;où se trouve la table "Cards/Badges" dans laquelle seront également enregistrés les codes PUK&#160;;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>le compte d'accès à cette base (nom d'utilisateur et mot de passe).</p>
+                                                    </li>
+                                                </ul>
+                                                <h2 id="Procédure" data-magellan-target="Procédure">Procédure</h2>
+                                                <h3>Déclarer une base de codes PUK</h3>
+                                                <p>Depuis le <strong>Menu principal</strong> de l'interface d'administration, </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1">dans la section <strong>Configuration</strong>, cliquez sur <strong>Annuaires utilisateurs</strong> :</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1">Dans la liste des annuaires qui s'affiche, cliquez sur le bouton <strong>Déclarer un nouvel annuaire <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_DeclarerAnnuaire.png" style="width: 22px;height: 23px;" /> :</strong><br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Annuaires_DeclarerNvlAnnuaire_61.png" style="width: 700px;height: auto;" /><br /><br /></p>
+                                                    </li>
+                                                </ol>
+                                                <p class="Resultat"><span style="font-family: 'Wingdings'">è</span> Vous accédez à l'interface <strong>Déclarer un nouvel annuaire utilisateur</strong> constituée de plusieurs sections.<br />Le nombre et la nature des paramètres figurant dans cette interface varient en fonction du type d'annuaire à configurer.</p>
+                                                <p>&#160;</p>
+                                                <h3>Configurer la base de  codes PUK (SQL)</h3>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Dans la section <strong>Propriétés</strong>, sélectionnez le <strong>Type</strong> <strong>Base de Codes PUK (SQL)</strong>:<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Admin_Annuaire_SQLCodesPUK.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1140" data-mc-height="523" src="../../Z_Resources/Images/02_Captures/Admin_Annuaire_SQLCodesPUK.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a></p>
+                                                        <p>
+                                                            <br />
+                                                        </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p><strong>Global: </strong>cochez cette case si vous configurez la base sur un serveur master et que vous souhaitez la répliquer sur les serveurs esclaves (si le mode de synchronisation est bidirectionnel). </p>
+                                                            </li>
+                                                        </ul>
+                                                        <p>
+                                                            <br />
+                                                        </p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>Saisissez les informations obligatoires permettant d'établir la communication entre Watchdoc et la base de données&#160;:</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p><strong>Identifiant : </strong>saisissez l'identifiant de l'annuaire ;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Utiliser la configuration de la base de statistiques : </strong>cochez cette case si vous souhaitez utiliser la même base que la base de statistiques, afin de ne pas avoir à remplir tous les champs suivants.<br />Cette case permet notamment de gagner du temps pour la configuration des serveurs slaves en mode Mailbox qui ne partagent pas une base de données commune. Les codes PUK&#160;sont enregistrés dans la base associée à chaque serveur slave.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Admin_Annuaire_SQLCodesPUK_BddStats.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1149" data-mc-height="425" src="../../Z_Resources/Images/02_Captures/Admin_Annuaire_SQLCodesPUK_BddStats.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a></p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ol>
+                                                <blockquote>
+                                                    <p>Si vous n'utilisez pas la configuration de la base de statistiques, complétez les champs de la section <strong>Connexion </strong>suivants : <br /></p>
+                                                    <ul>
+                                                        <li>
+                                                            <p><strong>Serveur SQL :</strong> indiquez le serveur où est localisée la base SQL qui héberge l'annuaire.&#160;Cliquez sur le bouton <strong>Parcourir </strong>pour parcourir votre espace de travail afin d'y sélectionner le serveur parmi les serveurs SQL&#160;détectés sur votre réseau ;</p>
+                                                        </li>
+                                                        <li>
+                                                            <p><strong>Mot de passe : </strong> saisissez dans la zone le mot de passe du compte utilisateur habilité à gérer la base SQL&#160;;</p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="Liste_puce_1"><strong>Base de données :</strong> indiquez le nom de la base de données dans laquelle doivent être enregistrées les codes PUK associés aux utilisateurs inscrits dans l'annuaire Entra ID (<strong style="font-weight: normal;">watchdocstats, la plupart du temps).</strong>Cliquez sur le bouton <strong>Parcourir </strong>pour parcourir le serveur SQL&#160;déclaré précédemment afin d'y sélectionner les tables statistiques qui y sont déclarées. Par défaut, les codes PUK sont enregistrés dans la base des badges (cards). </p>
+                                                        </li>
+                                                        <li>
+                                                            <p><strong>Chemin :</strong> pour une base de données de type SQLite, indiquez le chemin du fichier spécifique à la base de données utilisateurs :<br /><br /><img src="../../Z_Resources/Images/02_Captures/Admin_Annuaire_SQLCodesPUK_Bdd.png" style="width: 700px;height: auto;" /></p>
+                                                        </li>
+                                                    </ul>
+                                                </blockquote>
+                                                <h2 id="Options" data-magellan-target="Options">Options</h2>
+                                                <p>Les informations saisies permettent de préciser le paramétrage de génération des codes PUK associés aux utilisateurs d'un annuaire Entra ID : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Seed : </strong>saisissez un nombre servant de "<a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term93">Graine aléatoire<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Une graine aléatoire (aussi appelée germe aléatoire) est un nombre utilisé pour l'initialisation d'un générateur de nombres pseudo-aléatoires.
+(source : Wikipédia)</span></a>" permettant d'initialiser le générateur des codes PUK des utilisateurs.&#160;Ce chiffre est un entier de 32 bits compris entre 1 et 2.147.000.000 ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong><a name="Algorithme_PUK" id="Algorithme_PUK"></a>Algorithme : </strong>dans la liste, sélectionnez le niveau d'algorithme permettant de générer les codes PUK de vos utilisateurs (6 ou 10 chiffres) ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Variabilité : </strong>dans la liste, sélectionnez (si nécessaire) la fréquence à laquelle l'annuaire de codes PUK sera regénéré. Par défaut, l'annuaire ne change pas.&#160;Regénérer les codes PUK permet d'augmenter la sécurité de ce mode d'authentification.</p>
+                                                    </li>
+                                                </ul>
+                                                <h2 id="Avancé" data-magellan-target="Avancé">Avancé</h2>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Journalisation - Enregistrer les requêtes SQL&#160;dans le journal de l'application : </strong>cochez la case si vous souhaitez garder une trace des requêtes SQL&#160;dans un fichier dédié.</p>
+                                                    </li>
+                                                </ul>
+                                                <h2 id="Duréedevieducache" data-magellan-target="Duréedevieducache">Durée de vie du cache</h2>
+                                                <p>Watchdoc peut conserver un cache des informations propres aux utilisateurs afin d'accélérer le temps de traitement. Les informations saisies permettent de définir la durée de conservation des caches.</p>
+                                                <p>&#160;</p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>TTL&#160;Infos : </strong>saisissez le temps (en secondes, minutes, heures ou jours), de la durée de conservation des informations utilisateurs.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>TTL NotFound :</strong> saisissez le temps (en secondes, minutes, heures ou jours), de la durée de conservation des informations relatives aux utilisateurs qui se sont authentifiés dans l'application Watchdoc que cette dernière n'a pas trouvés dans l'annuaire.<img src="../../Z_Resources/Images/02_Captures/Config_Annuaires_SQL_Timeout.png" /></p>
                                                     </li>
                                                 </ul>
                                                 <p>
                                                     <br />
                                                 </p>
-                                            </li>
-                                            <li value="2">
-                                                <p>Saisissez les informations obligatoires permettant d'établir la communication entre Watchdoc et la base de données&#160;:</p>
+                                                <p>Durant le délai indiqué, Watchdoc ne sollicite pas l'annuaire mais son cache. Il n'est donc pas recommandé de définir une durée de conservation trop longue, notamment pour les utilisateurs non trouvés.</p>
+                                                <h2 id="Cache" data-magellan-target="Cache">Cache</h2>
+                                                <p>Watchdoc peut conserver en cache les requêtes sur l'annuaire  afin d'en accélérer l'exécution.<br />Par défaut, la durée de vie (<a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term123">TTL<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>La durée de vie (TTL - Time To Live) est la durée pendant laquelle un objet est stocké dans un système de mise en cache avant d’être supprimé ou actualisé.</span></a>) des données d'annuaire mise en cache est de 72 heures.</p>
+                                                <p> Cochez les cases des caches que vous souhaitez activer : </p>
                                                 <ul>
                                                     <li>
-                                                        <p><strong>Identifiant : </strong>saisissez l'identifiant de l'annuaire ;</p>
+                                                        <p class="Liste_puce_1"><strong>Infos user :</strong> cochez cette case pour activer le cache relatif aux informations utilisateurs. </p>
                                                     </li>
                                                     <li>
-                                                        <p><strong>Utiliser la configuration de la base de statistiques : </strong>cochez cette case si vous souhaitez utiliser la même base que la base de statistiques, afin de ne pas avoir à remplir tous les champs suivants.<br />Cette case permet notamment de gagner du temps pour la configuration des serveurs slaves en mode Mailbox qui ne partagent pas une base de données commune. Les codes PUK&#160;sont enregistrés dans la base associée à chaque serveur slave.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Admin_Annuaire_SQLCodesPUK_BddStats.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1149" data-mc-height="425" src="../../Z_Resources/Images/02_Captures/Admin_Annuaire_SQLCodesPUK_BddStats.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a></p>
+                                                        <p class="Liste_puce_1"><strong>Non trouvés :</strong> cochez cette case pour activer le cache relatif aux utilisateurs dont le compte n'a pas été trouvé.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Cache à froid :</strong> cochez cette case pour conserver un cache des données "froides", c'est-à-dire des données déjà vérifiées mais expirées.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Persistance :</strong> cochez cette case pour permettre de conserver le cache sur le disque afin de le retrouver en cas de redémarrage du service Watchdoc.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Compression :</strong> cochez cette case pour activer la compression du cache sur le disque. Il est fortement recommandé d'activer ce paramètre afin de réduire la taille du fichier quand la persistance est activée.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Chiffrement	: </strong>cochez cette case pour chiffrer le fichier de cache sur le disque afin d'en sécuriser le contenu.<br /><br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Annuaires_Cache.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbord" data-mc-width="1119" data-mc-height="313" src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Cache.png" alt="" title="" tabindex="" style="width: 655px;height: 183px;max-width: 1000px;" /></a></p>
                                                     </li>
                                                 </ul>
-                                            </li>
-                                        </ol>
-                                        <blockquote>
-                                            <p>Si vous n'utilisez pas la configuration de la base de statistiques, complétez les champs de la section <strong>Connexion </strong>suivants : <br /></p>
-                                            <ul>
-                                                <li>
-                                                    <p><strong>Serveur SQL :</strong> indiquez le serveur où est localisée la base SQL qui héberge l'annuaire.&#160;Cliquez sur le bouton <strong>Parcourir </strong>pour parcourir votre espace de travail afin d'y sélectionner le serveur parmi les serveurs SQL&#160;détectés sur votre réseau ;</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>Mot de passe : </strong> saisissez dans la zone le mot de passe du compte utilisateur habilité à gérer la base SQL&#160;;</p>
-                                                </li>
-                                                <li>
-                                                    <p class="Liste_puce_1"><strong>Base de données :</strong> indiquez le nom de la base de données dans laquelle doivent être enregistrées les codes PUK associés aux utilisateurs inscrits dans l'annuaire Entra ID (<strong style="font-weight: normal;">watchdocstats, la plupart du temps).</strong>Cliquez sur le bouton <strong>Parcourir </strong>pour parcourir le serveur SQL&#160;déclaré précédemment afin d'y sélectionner les tables statistiques qui y sont déclarées. Par défaut, les codes PUK sont enregistrés dans la base des badges (cards). </p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>Chemin :</strong> pour une base de données de type SQLite, indiquez le chemin du fichier spécifique à la base de données utilisateurs :<br /><br /><img src="../../Z_Resources/Images/02_Captures/Admin_Annuaire_SQLCodesPUK_Bdd.png" style="width: 700px;height: auto;" /></p>
+                                                <h2 id="Fusibles" data-magellan-target="Fusibles">Fusibles</h2>
+                                                <p>Les annuaires utilisateurs sont généralement hébergés sur un contrôleur de domaine ou serveur distant, accessible via le réseau local. En cas de panne réseau ou de ralentissement important, cela peut provoquer, par effet de cascade, un blocage ou ralentissement du serveur d'impression. </p>
+                                                <p>&#160;</p>
+                                                <p>Il peut alors être utile d'activer un "fusible logique", qui se déclenche en cas de ralentissement majeur du système, afin de stopper les requêtes envoyées au serveur défaillant pour éviter une surcharge de travail.</p>
+                                                <fieldset style="text-align: left;">Attention: il est important de bien considérer l'impact de l'activation d'un fusible sur le bon fonctionnement du service !
+<br />Afin de protéger efficacement le serveur de tout dysfonctionnement de l'annuaire distant, il est important de calibrer correctement le fusible. <br />Il est recommandé de tester le paramétrage du fusible avant de le configurer en environnement de production.<br /></fieldset>
+                                                <p>Dans les champs, saisissez les valeurs au-delà desquelles Watchdoc cesse d'envoyer des requêtes au serveur d'annuaire : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Erreurs max. :</strong> il s'agit du nombre d'erreurs "graves" successives tolérées. Une erreur "grave" est, par exemple, un problème de communication réseau, un timeout, un dysfonctionnement du serveur distant. Ces erreurs sont généralement rares et peuvent parfois se régler naturellement (fin d'une période de pointe, redémarrage du serveur distant). Les erreurs "logiques" (comme un échec d'identification, de syntaxe ou de configuration de l'annuaire) sont ignorées.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Durée max. :</strong> il s'agit de la durée moyenne maximale tolérée pour l'exécution des 10 dernières requêtes. En cas de fort ralentissement du serveur distant (période de pointe, timeout réseau,...), cette durée est rallongée.
+</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Requêtes max. :</strong> il s'agit du nombre maximum de requêtes en parallèle autorisées. En cas de forte charge de travail, le serveur distant peut ne pas être capable de répondre à un grand nombre de requêtes simultanées.
+</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Délai attente :</strong> après déclenchement du fusible, délai d'attente avant réactivation.&#160;Au terme de ce délai, Watchdoc relance les requêtes afin de "sonder" l'état du serveur. Si les requêtes aboutissent, le fusible est réactivé, sinon il attend à nouveau l'expiration du délai.
+A tout moment, l'administrateur peut manuellement désactiver le fusible. Le fusible reste alors coupé jusqu'à ce qu'il soit réactivé manuellement. Pensez à utiliser cette fonctionnalité afin de tester l'impact d'une panne sur le serveur d'impression.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Annuaires_Fusible.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="647" data-mc-height="139" src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Fusible.png" tabindex="" style="max-width: 1000px;" /></a><br /><br /></p>
+                                                    </li>
+                                                </ul>
+                                                <p>Les valeurs généralement saisies pour l'activation du fusible dans un environnement multi serveur (Master) sont les suivantes :</p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1">erreurs max : 5</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">requêtes max : 5</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">durée max : 30 secondes</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">délai attente : 120 secondes</p>
+                                                    </li>
+                                                </ul>
+                                                <h2 id="Printclients" data-magellan-target="Printclients">Print clients</h2>
+                                                <ul>
+                                                    <li>
+                                                        <p><strong>Ne pas utiliser cet annuaire pour l'authentification dans le Print Client :</strong>&#160;cochez cette case si vous ne souhaitez pas utiliser cet annuaire pour permettre à l'utilisateur de s'authentifier dans Watchdoc Print Client.</p>
+                                                    </li>
+                                                </ul>
+                                                <h2 id="Validationdelaconfiguration" data-magellan-target="Validationdelaconfiguration">Validation de la configuration </h2>
+                                                <p class="Liste_num_1">Cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/icon_Declarer.png" style="width: 26px;height: 24px;" /> <strong>Créer </strong>pour valider la configuration de votre annuaire.</p>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocAnnuairesCr%C3%A9eretconfigurerunebasedecodesPUKdetypeSQLSQLPostgreSQLSQLite">Watchdoc - Annuaires - Créer et configurer une base de codes PUK de type SQL (SQL / PostgreSQL&#160;/ SQLite)</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Principe">Principe</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Pr%C3%A9requis">Prérequis</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Proc%C3%A9dure">Procédure</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Options">Options</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Avanc%C3%A9">Avancé</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Dur%C3%A9edevieducache">Durée de vie du cache</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Cache">Cache</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Fusibles">Fusibles</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Printclients">Print clients</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Validationdelaconfiguration">Validation de la configuration </a>
+                                                        </li>
+                                                    </ul>
                                                 </li>
                                             </ul>
-                                        </blockquote>
-                                        <h2>Options</h2>
-                                        <p>Les informations saisies permettent de préciser le paramétrage de génération des codes PUK associés aux utilisateurs d'un annuaire Entra ID : </p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Seed : </strong>saisissez un nombre servant de "<a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term93">Graine aléatoire<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Une graine aléatoire (aussi appelée germe aléatoire) est un nombre utilisé pour l'initialisation d'un générateur de nombres pseudo-aléatoires.
-(source : Wikipédia)</span></a>" permettant d'initialiser le générateur des codes PUK des utilisateurs.&#160;Ce chiffre est un entier de 32 bits compris entre 1 et 2.147.000.000 ; </p>
-                                            </li>
-                                            <li>
-                                                <p><strong><a name="Algorithme_PUK" id="Algorithme_PUK"></a>Algorithme : </strong>dans la liste, sélectionnez le niveau d'algorithme permettant de générer les codes PUK de vos utilisateurs (6 ou 10 chiffres) ; </p>
-                                            </li>
-                                            <li>
-                                                <p><strong>Variabilité : </strong>dans la liste, sélectionnez (si nécessaire) la fréquence à laquelle l'annuaire de codes PUK sera regénéré. Par défaut, l'annuaire ne change pas.&#160;Regénérer les codes PUK permet d'augmenter la sécurité de ce mode d'authentification.</p>
-                                            </li>
-                                        </ul>
-                                        <h2>Avancé</h2>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Journalisation - Enregistrer les requêtes SQL&#160;dans le journal de l'application : </strong>cochez la case si vous souhaitez garder une trace des requêtes SQL&#160;dans un fichier dédié.</p>
-                                            </li>
-                                        </ul>
-                                        <h2>Durée de vie du cache</h2>
-                                        <p>Watchdoc peut conserver un cache des informations propres aux utilisateurs afin d'accélérer le temps de traitement. Les informations saisies permettent de définir la durée de conservation des caches.</p>
-                                        <p>&#160;</p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>TTL&#160;Infos : </strong>saisissez le temps (en secondes, minutes, heures ou jours), de la durée de conservation des informations utilisateurs.</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>TTL NotFound :</strong> saisissez le temps (en secondes, minutes, heures ou jours), de la durée de conservation des informations relatives aux utilisateurs qui se sont authentifiés dans l'application Watchdoc que cette dernière n'a pas trouvés dans l'annuaire.<img src="../../Z_Resources/Images/02_Captures/Config_Annuaires_SQL_Timeout.png" /></p>
-                                            </li>
-                                        </ul>
-                                        <p>
-                                            <br />
-                                        </p>
-                                        <p>Durant le délai indiqué, Watchdoc ne sollicite pas l'annuaire mais son cache. Il n'est donc pas recommandé de définir une durée de conservation trop longue, notamment pour les utilisateurs non trouvés.</p>
-                                        <h2>Cache</h2>
-                                        <p>Watchdoc peut conserver en cache les requêtes sur l'annuaire  afin d'en accélérer l'exécution.<br />Par défaut, la durée de vie (<a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term123">TTL<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>La durée de vie (TTL - Time To Live) est la durée pendant laquelle un objet est stocké dans un système de mise en cache avant d’être supprimé ou actualisé.</span></a>) des données d'annuaire mise en cache est de 72 heures.</p>
-                                        <p> Cochez les cases des caches que vous souhaitez activer : </p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Infos user :</strong> cochez cette case pour activer le cache relatif aux informations utilisateurs. </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Non trouvés :</strong> cochez cette case pour activer le cache relatif aux utilisateurs dont le compte n'a pas été trouvé.</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Cache à froid :</strong> cochez cette case pour conserver un cache des données "froides", c'est-à-dire des données déjà vérifiées mais expirées.</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Persistance :</strong> cochez cette case pour permettre de conserver le cache sur le disque afin de le retrouver en cas de redémarrage du service Watchdoc.</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Compression :</strong> cochez cette case pour activer la compression du cache sur le disque. Il est fortement recommandé d'activer ce paramètre afin de réduire la taille du fichier quand la persistance est activée.</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Chiffrement	: </strong>cochez cette case pour chiffrer le fichier de cache sur le disque afin d'en sécuriser le contenu.<br /><br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Annuaires_Cache.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbord" data-mc-width="1119" data-mc-height="313" src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Cache.png" alt="" title="" tabindex="" style="width: 655px;height: 183px;max-width: 1000px;" /></a></p>
-                                            </li>
-                                        </ul>
-                                        <h2>Fusibles</h2>
-                                        <p>Les annuaires utilisateurs sont généralement hébergés sur un contrôleur de domaine ou serveur distant, accessible via le réseau local. En cas de panne réseau ou de ralentissement important, cela peut provoquer, par effet de cascade, un blocage ou ralentissement du serveur d'impression. </p>
-                                        <p>&#160;</p>
-                                        <p>Il peut alors être utile d'activer un "fusible logique", qui se déclenche en cas de ralentissement majeur du système, afin de stopper les requêtes envoyées au serveur défaillant pour éviter une surcharge de travail.</p>
-                                        <fieldset style="text-align: left;">Attention: il est important de bien considérer l'impact de l'activation d'un fusible sur le bon fonctionnement du service !
-<br />Afin de protéger efficacement le serveur de tout dysfonctionnement de l'annuaire distant, il est important de calibrer correctement le fusible. <br />Il est recommandé de tester le paramétrage du fusible avant de le configurer en environnement de production.<br /></fieldset>
-                                        <p>Dans les champs, saisissez les valeurs au-delà desquelles Watchdoc cesse d'envoyer des requêtes au serveur d'annuaire : </p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Erreurs max. :</strong> il s'agit du nombre d'erreurs "graves" successives tolérées. Une erreur "grave" est, par exemple, un problème de communication réseau, un timeout, un dysfonctionnement du serveur distant. Ces erreurs sont généralement rares et peuvent parfois se régler naturellement (fin d'une période de pointe, redémarrage du serveur distant). Les erreurs "logiques" (comme un échec d'identification, de syntaxe ou de configuration de l'annuaire) sont ignorées.</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Durée max. :</strong> il s'agit de la durée moyenne maximale tolérée pour l'exécution des 10 dernières requêtes. En cas de fort ralentissement du serveur distant (période de pointe, timeout réseau,...), cette durée est rallongée.
-</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Requêtes max. :</strong> il s'agit du nombre maximum de requêtes en parallèle autorisées. En cas de forte charge de travail, le serveur distant peut ne pas être capable de répondre à un grand nombre de requêtes simultanées.
-</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Délai attente :</strong> après déclenchement du fusible, délai d'attente avant réactivation.&#160;Au terme de ce délai, Watchdoc relance les requêtes afin de "sonder" l'état du serveur. Si les requêtes aboutissent, le fusible est réactivé, sinon il attend à nouveau l'expiration du délai.
-A tout moment, l'administrateur peut manuellement désactiver le fusible. Le fusible reste alors coupé jusqu'à ce qu'il soit réactivé manuellement. Pensez à utiliser cette fonctionnalité afin de tester l'impact d'une panne sur le serveur d'impression.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Annuaires_Fusible.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="647" data-mc-height="139" src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Fusible.png" tabindex="" style="max-width: 1000px;" /></a><br /><br /></p>
-                                            </li>
-                                        </ul>
-                                        <p>Les valeurs généralement saisies pour l'activation du fusible dans un environnement multi serveur (Master) sont les suivantes :</p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1">erreurs max : 5</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">requêtes max : 5</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">durée max : 30 secondes</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">délai attente : 120 secondes</p>
-                                            </li>
-                                        </ul>
-                                        <h2>Print clients</h2>
-                                        <ul>
-                                            <li>
-                                                <p><strong>Ne pas utiliser cet annuaire pour l'authentification dans le Print Client :</strong>&#160;cochez cette case si vous ne souhaitez pas utiliser cet annuaire pour permettre à l'utilisateur de s'authentifier dans Watchdoc Print Client.</p>
-                                            </li>
-                                        </ul>
-                                        <h2>Validation de la configuration </h2>
-                                        <p class="Liste_num_1">Cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/icon_Declarer.png" style="width: 26px;height: 24px;" /> <strong>Créer </strong>pour valider la configuration de votre annuaire.</p>
+                                        </aside>
                                     </div>
                                     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
                                     </script>

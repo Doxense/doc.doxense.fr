@@ -165,6 +165,171 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WESToshibaPrérequisetconfigurationpréalable" data-magellan-target="WESToshibaPrérequisetconfigurationpréalable"><a name="aanchor94"></a>
+                                                    <MadCap:concept term="WES" />
+                                                    <MadCap:conditionalText data-mc-conditions="General.Online">WES&#160;Toshiba - </MadCap:conditionalText>Prérequis  et configuration préalable<br /></h1>
+                                                <h2 id="Configurerlesports" data-magellan-target="Configurerlesports">Configurer les ports</h2>
+                                                <p>Les ports réseau à ouvrir pour permettre le fonctionnement des WES&#160;sont les suivants&#160;:</p>
+                                                <p>&#160;</p>
+                                                <table style="mc-table-style: url('../../Resources/TableSlylesheets/Standard.css');border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-left-style: none;border-left-width: 0px;border-left-color: ;border-right-style: none;border-right-width: 0px;border-right-color: ;border-top-style: none;border-top-width: 0px;border-top-color: ;border-bottom-style: none;border-bottom-width: 0px;border-bottom-color: ;margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                    <col style="width: auto;" class="TableStyle-Standard-Column-Regular" />
+                                                    <col class="TableStyle-Standard-Column-Regular" style="width: auto;" />
+                                                    <col class="TableStyle-Standard-Column-Regular" style="width: auto;" />
+                                                    <col class="TableStyle-Standard-Column-Regular" style="width: auto;" />
+                                                    <thead>
+                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                            <td style="font-weight: bold;text-align: left;color: #ffffff;" class="TableStyle-Standard-HeadE-Regular-Header1">Source</td>
+                                                            <td style="font-weight: bold;text-align: left;color: #ffffff;" class="TableStyle-Standard-HeadE-Regular-Header1">Port</td>
+                                                            <td style="font-weight: bold;text-align: left;color: #ffffff;" class="TableStyle-Standard-HeadE-Regular-Header1">Protocole</td>
+                                                            <td style="font-weight: bold;text-align: left;color: #ffffff;" class="TableStyle-Standard-HeadD-Regular-Header1">Cible</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyB-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc</td>
+                                                            <td class="TableStyle-Standard-BodyB-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">TCP&#160;49629<br />TCP&#160;49630</td>
+                                                            <td class="TableStyle-Standard-BodyB-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">HTTP<br />HTTPS                        <br /></td>
+                                                            <td class="TableStyle-Standard-BodyA-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Périphérique d'impression</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <h2 id="Configurerlespériphériques" data-magellan-target="Configurerlespériphériques">Configurer les périphériques</h2>
+                                                <p style="text-align: justify;">La configuration du WES Toshiba doit être précédée d'une configuration sur le périphérique depuis l'interface web d'administration de ce dernier.</p>
+                                                <h3>Cloner les fichiers</h3>
+                                                <p style="text-align: justify;">Nous vous recommandons de cloner la configuration courante du périphérique en vue de rétablir la configuration initiale du périphérique en cas de besoin. </p>
+                                                <p style="text-align: left;">Pour cloner les fichiers, rendez-vous dans l'interface d'administration du périphérique suivante : <strong>Administration &gt; Maintenance &gt;&#160;Créer un fichier cloné</strong> et cliquez sur le bouton <strong>Créer</strong>&#160;:<br /><br /><img src="Config_WES_Toshiba_Prq_CreerFichierClone.png" style="width: 700px;height: auto;" /></p>
+                                                <h3>Activer la fonction ODCA</h3>
+                                                <p>Nous vous recommandons d'activer la fonction ODCA du périphérique Toshiba.</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Rendez vous dans l'interface <strong>Administration </strong>&gt; <strong>Configuration</strong>&gt; <strong>ODCA </strong>&gt;Section <strong>Réseau</strong>&#160;;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>dans la section Network, choisissez <strong>Activer port</strong> (Enable Port)&#160;:<br /><br /></p>
+                                                    </li>
+                                                </ol>
+                                                <h3><a name="Mode_Service" id="Mode_Service"></a>Activer le mode Service</h3>
+                                                <p>Ce paramétrage est obligatoire avant l'installation du WES.&#160;Seuls les techniciens Toshiba sont habilités à gérer ces paramètres : Doxense<sup>®</sup> ne fournit pas de documentation propre au périphérique Toshiba. </p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Mise à jour du lecteur de badges</strong> : si ce paramètre n'est pas activé, le lecteur de badge ne peut fonctionner.&#160;Les valeurs suivantes doivent être utilisées avec les lecteurs de badges fournis ou validés par Doxense<sup>®</sup>. Pour les autres lecteurs de badges, merci de contacter directement le Support Toshiba pour connaître les valeurs recommandées.</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p class="Liste_puce_2">08-3500</p>
+                                                                <ul>
+                                                                    <li>Valeur 60001: lecteur Elatec TWN3 ou TWN4 avec firmware standard ;</li>
+                                                                    <li>	Valeur 90001: lecteur Elatec avec firmware Toshiba.</li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Authentification avant impressions</strong> : ces paramètres doivent être définis pour permettre le mode <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term15">Comptabilisation<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Dynamic Link Library (bibliothèque de liens dynamiques) est une bibliothèque logicielle dont les fonctions sont chargées en mémoire par un programme lors de son exécution, par opposition aux bibliothèques logicielles statiques ou partagées dont les fonctions sont chargées en mémoire avant le début de l'exécution du programme.
+(Source : Wikipédia).</span></a> :</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p class="Liste_puce_2">08-3642-0</p>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p>Valeur 0 : active l'authentification avant l'impression.</p>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                <p>08-3642-2</p>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p>Valeur 1:  active l'authentification avant l'impression  pour le DPWS Scan. A activer obligatoirement pour les périphériques de numérisation fonctionnant avec le mode MDS (Managed Document Service)</p>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Paramètres quota</strong> : ces paramètres doivent être définis pour activer les Quotas sur Watchdoc, mais peuvent être ignorés si vous n'utilisez pas les quotas.</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p class="Liste_puce_2">08-9787</p>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p class="Liste_puce_2">Valeur 0 : l'exécution des impressiond est automatiquement arrêtée quand le quota est atteint (paramétrage recommandé)&#160;;</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p class="Liste_puce_2">Valeur 1: l'exécution des impressions se poursuit même lorsque le quota est atteint et génère alors un quota négatif. </p>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                        <ul>
+                                                            <li>08-6084<ul><li>Valeur 1: quota sur les impressions. Seul mode supporté par Watchdoc.</li></ul></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                                <h3><a name="Legacy_mode" id="Legacy_mode"></a>Paramétrer le mode LDAP en Legacy mode</h3>
+                                                <p>Dans le cas où votre périphérique Toshiba ne supporte pas le mode d'authentification MDS, vous pouvez utiliser le mode d'authentification LDAP traditionnel.<br />Le mode d'authentification LDAP&#160;n'est pas compatible avec la fonction <strong><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term87">Quotas<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Crédit d'unités de valeurs dédié à l'impression et attribué à un utilisateur ou à un groupe d'utilisateurs.</span></a></strong> de Watchdoc.</p>
+                                                <p>Pour installer le mode LDAP, vous devez intervenir dans l'interface d'administration du périphérique ainsi que dans le profil WES.</p>
+                                                <p>&#160;</p>
+                                                <p class="Bold"><strong>Paramétrer le mode LDAP&#160;dans EWB</strong>
+                                                </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1"><strong>Service Mode &gt; EWB&#160;Priority</strong> : dans le menu 8-9132, saisissez la valeur 99.<br />Il s'agit d'un paramétrage avancé nécessitant une bonne connaissance de EWB (Embedded Web Browser). Dans le cas où vous n'êtes pas habilité à modifier ce paramètre, contactez votre référent Toshiba<sup>®</sup>.</p>
+                                                    </li>
+                                                </ol>
+                                                <p>&#160;</p>
+                                                <p><strong>Paramétrer le mode LDAP dans le profil WES</strong>
+                                                </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Dans l'interface web d'administration de Watchdoc , accédez au profil WES Toshiba (depuis le <strong>Menu principal </strong>&gt; <strong>Section Configuration</strong> &gt; <strong>Web&amp;Wes </strong>&gt; <strong>Editer le WES Toshiba</strong>) ;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>Dans la section <strong>Périphérique </strong>, paramètre <strong>Type d'authentification</strong>, sélectionnez le mode <strong>LDAP</strong>.<br /><br /><img src="Config_WES_TypeAuthent_LDAP.png" style="width: 700px;height: auto;" /></p>
+                                                    </li>
+                                                </ol>
+                                                <h3>Configurer les paramètres de <a name="Param_Confidentialite" id="Param_Confidentialite"></a>confidentialité</h3>
+                                                <p>Pour obtenir des informations précises relatives aux utilisateurs dans l'historique des impressions de Watchdoc, il est nécessaire de configurer les paramètres de confidentialité sur le périphérique d'impression.<br />Autrement, dans l'historique des impressions et des numérisations, les informations relatives aux utilisateurs risquent d'êtres masquées, remplacées par des étoiles (<b>?\META\**********</b>) ou la valeur <b>Anonymous</b>&#160;: <br /><br /><img src="Depanner_WES_ToshibaPrivacySettingsPb.png" style="width: 700px;height: auto;" /></p>
+                                                <p>&#160;</p>
+                                                <p>Pour configurer le paramètre de confidentialité, appliquez les étapes suivantes. <br /></p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Accédez à l'interface de configuration du périphérique en tant qu'administrateur.</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>Cliquez sur l'entrée de menu <strong>Administration </strong>&gt; <strong>Général</strong>.</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>Dans la section <strong>Paramètre de confidentialité</strong>, pour le paramètre <strong>Réglage de confidentialité des données de journalisation</strong>, sélectionnez "<strong>Stocker</strong>"&#160;: <br /><img src="Config_WES_Toshiba_ParamConfident.png" style="width: 700px;height: auto;" /></p>
+                                                        <p>
+                                                            <br />
+                                                        </p>
+                                                    </li>
+                                                </ol>
+                                                <ol data-mc-continue="true">
+                                                    <li value="4">
+                                                        <p>Cliquez sur <strong>Enregistrer </strong>pour valider ce paramétrage.</p>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WESToshibaPr%C3%A9requisetconfigurationpr%C3%A9alable">WES&#160;Toshiba - Prérequis  et configuration préalable</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Configurerlesports">Configurer les ports</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Configurerlesp%C3%A9riph%C3%A9riques">Configurer les périphériques</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -198,155 +363,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor94"></a>
-                                            <MadCap:concept term="WES" />
-                                            <MadCap:conditionalText data-mc-conditions="General.Online">WES&#160;Toshiba - </MadCap:conditionalText>Prérequis  et configuration préalable<br /></h1>
-                                        <h2>Configurer les ports</h2>
-                                        <p>Les ports réseau à ouvrir pour permettre le fonctionnement des WES&#160;sont les suivants&#160;:</p>
-                                        <p>&#160;</p>
-                                        <table style="mc-table-style: url('../../Resources/TableSlylesheets/Standard.css');border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-left-style: none;border-left-width: 0px;border-left-color: ;border-right-style: none;border-right-width: 0px;border-right-color: ;border-top-style: none;border-top-width: 0px;border-top-color: ;border-bottom-style: none;border-bottom-width: 0px;border-bottom-color: ;margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
-                                            <col style="width: auto;" class="TableStyle-Standard-Column-Regular" />
-                                            <col class="TableStyle-Standard-Column-Regular" style="width: auto;" />
-                                            <col class="TableStyle-Standard-Column-Regular" style="width: auto;" />
-                                            <col class="TableStyle-Standard-Column-Regular" style="width: auto;" />
-                                            <thead>
-                                                <tr class="TableStyle-Standard-Head-Header1">
-                                                    <td style="font-weight: bold;text-align: left;color: #ffffff;" class="TableStyle-Standard-HeadE-Regular-Header1">Source</td>
-                                                    <td style="font-weight: bold;text-align: left;color: #ffffff;" class="TableStyle-Standard-HeadE-Regular-Header1">Port</td>
-                                                    <td style="font-weight: bold;text-align: left;color: #ffffff;" class="TableStyle-Standard-HeadE-Regular-Header1">Protocole</td>
-                                                    <td style="font-weight: bold;text-align: left;color: #ffffff;" class="TableStyle-Standard-HeadD-Regular-Header1">Cible</td>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyB-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc</td>
-                                                    <td class="TableStyle-Standard-BodyB-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">TCP&#160;49629<br />TCP&#160;49630</td>
-                                                    <td class="TableStyle-Standard-BodyB-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">HTTP<br />HTTPS                        <br /></td>
-                                                    <td class="TableStyle-Standard-BodyA-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Périphérique d'impression</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <h2>Configurer les périphériques</h2>
-                                        <p style="text-align: justify;">La configuration du WES Toshiba doit être précédée d'une configuration sur le périphérique depuis l'interface web d'administration de ce dernier.</p>
-                                        <h3>Cloner les fichiers</h3>
-                                        <p style="text-align: justify;">Nous vous recommandons de cloner la configuration courante du périphérique en vue de rétablir la configuration initiale du périphérique en cas de besoin. </p>
-                                        <p style="text-align: left;">Pour cloner les fichiers, rendez-vous dans l'interface d'administration du périphérique suivante : <strong>Administration &gt; Maintenance &gt;&#160;Créer un fichier cloné</strong> et cliquez sur le bouton <strong>Créer</strong>&#160;:<br /><br /><img src="Config_WES_Toshiba_Prq_CreerFichierClone.png" style="width: 700px;height: auto;" /></p>
-                                        <h3>Activer la fonction ODCA</h3>
-                                        <p>Nous vous recommandons d'activer la fonction ODCA du périphérique Toshiba.</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Rendez vous dans l'interface <strong>Administration </strong>&gt; <strong>Configuration</strong>&gt; <strong>ODCA </strong>&gt;Section <strong>Réseau</strong>&#160;;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>dans la section Network, choisissez <strong>Activer port</strong> (Enable Port)&#160;:<br /><br /></p>
-                                            </li>
-                                        </ol>
-                                        <h3><a name="Mode_Service" id="Mode_Service"></a>Activer le mode Service</h3>
-                                        <p>Ce paramétrage est obligatoire avant l'installation du WES.&#160;Seuls les techniciens Toshiba sont habilités à gérer ces paramètres : Doxense<sup>®</sup> ne fournit pas de documentation propre au périphérique Toshiba. </p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Mise à jour du lecteur de badges</strong> : si ce paramètre n'est pas activé, le lecteur de badge ne peut fonctionner.&#160;Les valeurs suivantes doivent être utilisées avec les lecteurs de badges fournis ou validés par Doxense<sup>®</sup>. Pour les autres lecteurs de badges, merci de contacter directement le Support Toshiba pour connaître les valeurs recommandées.</p>
-                                                <ul>
-                                                    <li>
-                                                        <p class="Liste_puce_2">08-3500</p>
-                                                        <ul>
-                                                            <li>Valeur 60001: lecteur Elatec TWN3 ou TWN4 avec firmware standard ;</li>
-                                                            <li>	Valeur 90001: lecteur Elatec avec firmware Toshiba.</li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Authentification avant impressions</strong> : ces paramètres doivent être définis pour permettre le mode <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term15">Comptabilisation<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Dynamic Link Library (bibliothèque de liens dynamiques) est une bibliothèque logicielle dont les fonctions sont chargées en mémoire par un programme lors de son exécution, par opposition aux bibliothèques logicielles statiques ou partagées dont les fonctions sont chargées en mémoire avant le début de l'exécution du programme.
-(Source : Wikipédia).</span></a> :</p>
-                                                <ul>
-                                                    <li>
-                                                        <p class="Liste_puce_2">08-3642-0</p>
-                                                        <ul>
-                                                            <li>
-                                                                <p>Valeur 0 : active l'authentification avant l'impression.</p>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <p>08-3642-2</p>
-                                                        <ul>
-                                                            <li>
-                                                                <p>Valeur 1:  active l'authentification avant l'impression  pour le DPWS Scan. A activer obligatoirement pour les périphériques de numérisation fonctionnant avec le mode MDS (Managed Document Service)</p>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Paramètres quota</strong> : ces paramètres doivent être définis pour activer les Quotas sur Watchdoc, mais peuvent être ignorés si vous n'utilisez pas les quotas.</p>
-                                                <ul>
-                                                    <li>
-                                                        <p class="Liste_puce_2">08-9787</p>
-                                                        <ul>
-                                                            <li>
-                                                                <p class="Liste_puce_2">Valeur 0 : l'exécution des impressiond est automatiquement arrêtée quand le quota est atteint (paramétrage recommandé)&#160;;</p>
-                                                            </li>
-                                                            <li>
-                                                                <p class="Liste_puce_2">Valeur 1: l'exécution des impressions se poursuit même lorsque le quota est atteint et génère alors un quota négatif. </p>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                                <ul>
-                                                    <li>08-6084<ul><li>Valeur 1: quota sur les impressions. Seul mode supporté par Watchdoc.</li></ul></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                        <h3><a name="Legacy_mode" id="Legacy_mode"></a>Paramétrer le mode LDAP en Legacy mode</h3>
-                                        <p>Dans le cas où votre périphérique Toshiba ne supporte pas le mode d'authentification MDS, vous pouvez utiliser le mode d'authentification LDAP traditionnel.<br />Le mode d'authentification LDAP&#160;n'est pas compatible avec la fonction <strong><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term87">Quotas<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Crédit d'unités de valeurs dédié à l'impression et attribué à un utilisateur ou à un groupe d'utilisateurs.</span></a></strong> de Watchdoc.</p>
-                                        <p>Pour installer le mode LDAP, vous devez intervenir dans l'interface d'administration du périphérique ainsi que dans le profil WES.</p>
-                                        <p>&#160;</p>
-                                        <p class="Bold"><strong>Paramétrer le mode LDAP&#160;dans EWB</strong>
-                                        </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1"><strong>Service Mode &gt; EWB&#160;Priority</strong> : dans le menu 8-9132, saisissez la valeur 99.<br />Il s'agit d'un paramétrage avancé nécessitant une bonne connaissance de EWB (Embedded Web Browser). Dans le cas où vous n'êtes pas habilité à modifier ce paramètre, contactez votre référent Toshiba<sup>®</sup>.</p>
-                                            </li>
-                                        </ol>
-                                        <p>&#160;</p>
-                                        <p><strong>Paramétrer le mode LDAP dans le profil WES</strong>
-                                        </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Dans l'interface web d'administration de Watchdoc , accédez au profil WES Toshiba (depuis le <strong>Menu principal </strong>&gt; <strong>Section Configuration</strong> &gt; <strong>Web&amp;Wes </strong>&gt; <strong>Editer le WES Toshiba</strong>) ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>Dans la section <strong>Périphérique </strong>, paramètre <strong>Type d'authentification</strong>, sélectionnez le mode <strong>LDAP</strong>.<br /><br /><img src="Config_WES_TypeAuthent_LDAP.png" style="width: 700px;height: auto;" /></p>
-                                            </li>
-                                        </ol>
-                                        <h3>Configurer les paramètres de <a name="Param_Confidentialite" id="Param_Confidentialite"></a>confidentialité</h3>
-                                        <p>Pour obtenir des informations précises relatives aux utilisateurs dans l'historique des impressions de Watchdoc, il est nécessaire de configurer les paramètres de confidentialité sur le périphérique d'impression.<br />Autrement, dans l'historique des impressions et des numérisations, les informations relatives aux utilisateurs risquent d'êtres masquées, remplacées par des étoiles (<b>?\META\**********</b>) ou la valeur <b>Anonymous</b>&#160;: <br /><br /><img src="Depanner_WES_ToshibaPrivacySettingsPb.png" style="width: 700px;height: auto;" /></p>
-                                        <p>&#160;</p>
-                                        <p>Pour configurer le paramètre de confidentialité, appliquez les étapes suivantes. <br /></p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Accédez à l'interface de configuration du périphérique en tant qu'administrateur.</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>Cliquez sur l'entrée de menu <strong>Administration </strong>&gt; <strong>Général</strong>.</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>Dans la section <strong>Paramètre de confidentialité</strong>, pour le paramètre <strong>Réglage de confidentialité des données de journalisation</strong>, sélectionnez "<strong>Stocker</strong>"&#160;: <br /><img src="Config_WES_Toshiba_ParamConfident.png" style="width: 700px;height: auto;" /></p>
-                                                <p>
-                                                    <br />
-                                                </p>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="4">
-                                                <p>Cliquez sur <strong>Enregistrer </strong>pour valider ce paramétrage.</p>
-                                            </li>
-                                        </ol>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

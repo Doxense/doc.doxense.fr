@@ -165,6 +165,125 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocRègledegestionCréerunerègledegestion" data-magellan-target="WatchdocRègledegestionCréerunerègledegestion"><a name="aanchor146"></a>
+                                                    <MadCap:concept term="WD" />Watchdoc - Règle de gestion - Créer une règle de gestion</h1>
+                                                <h2 id="CréeruneRègledegestion" data-magellan-target="CréeruneRègledegestion">Créer une Règle de gestion</h2>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Depuis le <strong>Menu principal</strong> de l'interface d'administration de Watchdoc, dans la section <strong>Gestion</strong>, cliquez sur <strong>Modèles de quotas</strong>. </p>
+                                                        <p class="Resultat">→ Vous accédez à la liste des Modèles de quotas et des Règles de gestion déclarés dans Watchdoc. </p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1">Dans la liste <strong>Règles de gestion</strong>, cliquez sur l'un des boutons <strong>Créer une nouvelle règle</strong>&#160;:<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_RegleGestion_CreationRegle.png" style="width: 700px;" /></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                </ol>
+                                                <p class="Resultat">→ vous accédez à l'interface <strong>Création d'une règle de gestion</strong> constituée de plusieurs sections.</p>
+                                                <h2 id="ConfigurerlaRègledegestion" data-magellan-target="ConfigurerlaRègledegestion">Configurer la Règle de gestion</h2>
+                                                <h3>Configurer la section Règle</h3>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Indiquez dans cette section les informations générales concernant la règle&#160;:</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p class="Liste_puce_1"><strong>Nom : </strong>attribuez un nom explicite à la règle . Obligatoire, ce nom est celui qui s'affiche dans l'interface d'administration .</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_1"><strong>Description</strong>: si nécessaire, complétez le nom d'un commentaire permettant de préciser l'usage de la règle&#160;;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_1"><strong>Mode :</strong> dans la liste déroulante, sélectionnez l'un des modes : </p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>Compteur </strong>: ce mode met à disposition de l'utilisateur un compteur (partant de 0 qui s'incrémente à chaque opération d'impression. Lorsque le compte dépasse un plafond éventuellement fixé, l'utilisateur ne peut plus imprimer.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>Débit </strong>: ce mode met à disposition de l'utilisateur un crédit d'unités débité à chaque opération d'impression. Lorsque le compte arrive à zéro, l'utilisateur ne peut plus imprimer.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_1"><strong>Valeur initiale </strong>: valeur dont le compte est crédité lors de sa création s'il est en mode <strong>Débit</strong>.<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_RegleGestion_SectionRegle.png" /></p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ol>
+                                                <h3>Configurer la section Quotas d'utilisation</h3>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Dans cette section, fixez les limitations propres à chaque mode : </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p class="Liste_puce_1"><strong>Plafond :</strong> cochez la case pour mettre en place un plafond et définissez, en unités, la valeur de ce plafond. En fonction du mode choisi, le plafond est utilisé différemment: </p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_2">avec le mode <strong>Compteur</strong>, le plafond est la valeur maximale que le compteur peut atteindre. Une fois le plafond atteint, le compteur est bloqué et doit être réinitialisé (automatiquement ou manuellement,) pour permettre à l'utilisateur d'imprimer de nouveau ;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_2">avec le mode <strong>Débit</strong>, le plafond est le montant maximal autorisé lors du rechargement.&#160;Ce paramètre permet ainsi de plafonner la somme d'argent "virtuelle" contenue dans l'ensemble des PMV des utilisateurs.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_1"><strong>Découvert autorisé :</strong> cochez la case pour autoriser un découvert et définissez, en unités, la valeur de ce découvert qui permet un dépassement du plafond, quel que soit le mode.<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_RegleGestion_SectionQuotas.png" /></p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ol>
+                                                <p><a name="Rechargement" id="Rechargement"></a>
+                                                </p>
+                                                <h3>Configurer la section Réinitialisation </h3>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Dans cette section, indiquez les paramètres liés à la réinitialisation (rechargement) des comptes&#160;: </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p class="Liste_puce_1"><strong>Périodicité :</strong>dans la liste, choisissez la fréquence à laquelle les comptes doivent être réinitialisés. La valeur par défaut est <strong>Manuelle</strong>. </p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_1"><strong>Echéance :</strong> si vous choisissez d'automatiser la réinitialisation en choisissant une périodicité, indiquez l'échéance précise (date, mois, jour ou heure).&#160;Si l'<strong>échéance </strong>est périodique, précisez, en heures, le délai entre deux réinitialisations.&#160;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_1"><strong>Méthode </strong>: dans la liste, choisissez la manière de recharger le compte de l'utilisateur : </p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>Fixer la valeur</strong> : permet de réinitialiser le compte à l'aide de la valeur définie,&#160;quel que soit le crédit existant ;<br /></p>
+                                                                <p>Lorsque vous optez pour cette méthode, les unités non consommées avant réinitialisation sont perdues.<br />Ainsi, si un compte est réinitialisé tous les mois d'une valeur de 500 unités et qu'un utilisateur n'a utilisé que 250 unités le premier mois, lorsque son compte est réinitialisé, il dispose de nouveau de 500 unités, le deuxième mois et pas de 750 unités.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>Incrémenter&#160;</strong>: en mode <strong>Débit</strong>, permet de créditer le compte à l'aide de la valeur précisée, en l'ajoutant à un éventuel crédit existant ; </p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>Décrémenter&#160;</strong>: en mode <strong>Compteur</strong>, permet de créditer le compte à l'aide de la valeur précisée, en l'ajoutant à un éventuel <br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_RegleGestion_SectionReinitialisation.png" /></p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ol>
+                                                <h2 id="ValidationetapplicationdelaRègledegestion" data-magellan-target="ValidationetapplicationdelaRègledegestion">Validation et application de la Règle de gestion</h2>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1">Cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Valider.png" style="width: 27px;height: 26px;" /> pour <strong>Valider</strong> la configuration de votre Règle de gestion.</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1">Appliquez ensuite votre Règle de gestion sur un quota, par exemple, pour en vérifier le fonctionnement.</p>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocR%C3%A8gledegestionCr%C3%A9eruner%C3%A8gledegestion">Watchdoc - Règle de gestion - Créer une règle de gestion</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Cr%C3%A9eruneR%C3%A8gledegestion">Créer une Règle de gestion</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#ConfigurerlaR%C3%A8gledegestion">Configurer la Règle de gestion</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#ValidationetapplicationdelaR%C3%A8gledegestion">Validation et application de la Règle de gestion</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
                                     </script>
                                     <!-- Google Tag Manager (noscript) -->
@@ -199,107 +318,6 @@
                                     <div class="nocontent">
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
-                                    </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor146"></a>
-                                            <MadCap:concept term="WD" />Watchdoc - Règle de gestion - Créer une règle de gestion</h1>
-                                        <h2>Créer une Règle de gestion</h2>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Depuis le <strong>Menu principal</strong> de l'interface d'administration de Watchdoc, dans la section <strong>Gestion</strong>, cliquez sur <strong>Modèles de quotas</strong>. </p>
-                                                <p class="Resultat">→ Vous accédez à la liste des Modèles de quotas et des Règles de gestion déclarés dans Watchdoc. </p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1">Dans la liste <strong>Règles de gestion</strong>, cliquez sur l'un des boutons <strong>Créer une nouvelle règle</strong>&#160;:<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_RegleGestion_CreationRegle.png" style="width: 700px;" /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                        </ol>
-                                        <p class="Resultat">→ vous accédez à l'interface <strong>Création d'une règle de gestion</strong> constituée de plusieurs sections.</p>
-                                        <h2>Configurer la Règle de gestion</h2>
-                                        <h3>Configurer la section Règle</h3>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Indiquez dans cette section les informations générales concernant la règle&#160;:</p>
-                                                <ul>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Nom : </strong>attribuez un nom explicite à la règle . Obligatoire, ce nom est celui qui s'affiche dans l'interface d'administration .</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Description</strong>: si nécessaire, complétez le nom d'un commentaire permettant de préciser l'usage de la règle&#160;;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Mode :</strong> dans la liste déroulante, sélectionnez l'un des modes : </p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>Compteur </strong>: ce mode met à disposition de l'utilisateur un compteur (partant de 0 qui s'incrémente à chaque opération d'impression. Lorsque le compte dépasse un plafond éventuellement fixé, l'utilisateur ne peut plus imprimer.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>Débit </strong>: ce mode met à disposition de l'utilisateur un crédit d'unités débité à chaque opération d'impression. Lorsque le compte arrive à zéro, l'utilisateur ne peut plus imprimer.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Valeur initiale </strong>: valeur dont le compte est crédité lors de sa création s'il est en mode <strong>Débit</strong>.<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_RegleGestion_SectionRegle.png" /></p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ol>
-                                        <h3>Configurer la section Quotas d'utilisation</h3>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Dans cette section, fixez les limitations propres à chaque mode : </p>
-                                                <ul>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Plafond :</strong> cochez la case pour mettre en place un plafond et définissez, en unités, la valeur de ce plafond. En fonction du mode choisi, le plafond est utilisé différemment: </p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_2">avec le mode <strong>Compteur</strong>, le plafond est la valeur maximale que le compteur peut atteindre. Une fois le plafond atteint, le compteur est bloqué et doit être réinitialisé (automatiquement ou manuellement,) pour permettre à l'utilisateur d'imprimer de nouveau ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_2">avec le mode <strong>Débit</strong>, le plafond est le montant maximal autorisé lors du rechargement.&#160;Ce paramètre permet ainsi de plafonner la somme d'argent "virtuelle" contenue dans l'ensemble des PMV des utilisateurs.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Découvert autorisé :</strong> cochez la case pour autoriser un découvert et définissez, en unités, la valeur de ce découvert qui permet un dépassement du plafond, quel que soit le mode.<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_RegleGestion_SectionQuotas.png" /></p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ol>
-                                        <p><a name="Rechargement" id="Rechargement"></a>
-                                        </p>
-                                        <h3>Configurer la section Réinitialisation </h3>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Dans cette section, indiquez les paramètres liés à la réinitialisation (rechargement) des comptes&#160;: </p>
-                                                <ul>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Périodicité :</strong>dans la liste, choisissez la fréquence à laquelle les comptes doivent être réinitialisés. La valeur par défaut est <strong>Manuelle</strong>. </p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Echéance :</strong> si vous choisissez d'automatiser la réinitialisation en choisissant une périodicité, indiquez l'échéance précise (date, mois, jour ou heure).&#160;Si l'<strong>échéance </strong>est périodique, précisez, en heures, le délai entre deux réinitialisations.&#160;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Méthode </strong>: dans la liste, choisissez la manière de recharger le compte de l'utilisateur : </p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>Fixer la valeur</strong> : permet de réinitialiser le compte à l'aide de la valeur définie,&#160;quel que soit le crédit existant ;<br /></p>
-                                                        <p>Lorsque vous optez pour cette méthode, les unités non consommées avant réinitialisation sont perdues.<br />Ainsi, si un compte est réinitialisé tous les mois d'une valeur de 500 unités et qu'un utilisateur n'a utilisé que 250 unités le premier mois, lorsque son compte est réinitialisé, il dispose de nouveau de 500 unités, le deuxième mois et pas de 750 unités.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>Incrémenter&#160;</strong>: en mode <strong>Débit</strong>, permet de créditer le compte à l'aide de la valeur précisée, en l'ajoutant à un éventuel crédit existant ; </p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>Décrémenter&#160;</strong>: en mode <strong>Compteur</strong>, permet de créditer le compte à l'aide de la valeur précisée, en l'ajoutant à un éventuel <br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_RegleGestion_SectionReinitialisation.png" /></p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ol>
-                                        <h2>Validation et application de la Règle de gestion</h2>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">Cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Valider.png" style="width: 27px;height: 26px;" /> pour <strong>Valider</strong> la configuration de votre Règle de gestion.</p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1">Appliquez ensuite votre Règle de gestion sur un quota, par exemple, pour en vérifier le fonctionnement.</p>
-                                            </li>
-                                        </ol>
                                     </div>
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">

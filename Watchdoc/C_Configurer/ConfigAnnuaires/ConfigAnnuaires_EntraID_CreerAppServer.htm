@@ -164,6 +164,242 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocAnnuairesMicrosoftEntraIDInscriptiondelapplicationWatchdocdansMicrosoftEntraID" data-magellan-target="WatchdocAnnuairesMicrosoftEntraIDInscriptiondelapplicationWatchdocdansMicrosoftEntraID"><a name="aanchor29"></a>
+                                                    <MadCap:concept term="CFG;WD" />Watchdoc - Annuaires -  Microsoft Entra ID - Inscription de l'application Watchdoc dans Microsoft Entra ID</h1>
+                                                <p style="font-style: italic;">* Cliquez sur les images pour les agrandir</p>
+                                                <h2 id="Inscrirelapplication" data-magellan-target="Inscrirelapplication">Inscrire l'application</h2>
+                                                <p>Pour inscrire les applications Watchdoc Server dans Entra ID :</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>accédez au <strong>Centre d'administration Microsoft Entra </strong>en tant qu'administrateur ;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>dans le menu de gauche, cliquez sur <strong>Applications &gt;&#160;Inscription d'applications</strong>:</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>dans le menu de cette interface, cliquez sur le bouton <b>Nouvelle inscription</b> :</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>dans l'interface <strong>Inscrire une application</strong> :</p>
+                                                        <ol style="list-style-type: lower-roman;">
+                                                            <li value="1">
+                                                                <p>saisissez le <b>Nom de l'application</b> (par exemple, Watchdoc) ;</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>cochez <b>Comptes dans cet annuaire d'organisation uniquement.</b></p>
+                                                            </li>
+                                                        </ol>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p>Cliquez sur<strong> S'inscrire</strong> :<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Z_Resources/Images/02_Captures/Config_Annuaire_Azure_InscriptionApp.png"><img class="MCPopupThumbnail img" data-mc-width="1998" data-mc-height="1270" src="../../Z_Resources/Images/02_Captures/Config_Annuaire_Azure_InscriptionApp.png" tabindex="" style="height: auto;mc-thumbnail-max-width: 1200px;width: 700px;mc-thumbnail: popup;max-width: 1200px;" /></a></p>
+                                                    </li>
+                                                </ol>
+                                                <h2 id="Accorderdesautorisations" data-magellan-target="Accorderdesautorisations">Accorder des autorisations</h2>
+                                                <p>Une fois l’application inscrite, depuis l'interface [Nom_de_l'application], configurez-la : </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>dans le menu de gauche, section <strong>Gérer </strong>, cliquez sur <b>API autorisées</b> ;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>cliquez sur <b>Ajouter une autorisation</b> ;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>dans l'interface <strong>Demander des autorisations d'API</strong>, sélectionnez <b>Microsoft Graph</b> ;<br /></p>
+                                                    </li>
+                                                </ol>
+                                                <ol data-mc-continue="true">
+                                                    <li value="4">
+                                                        <p>choisissez le type <b>Autorisations d’application</b> qui permet à Watchdoc d’effectuer des opérations en son nom sans contexte utilisateur spécifique :<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Z_Resources/Images/02_Captures/Config_Annuaire_Azure_ConfigApp.png"><img class="MCPopupThumbnail img" data-mc-width="2008" data-mc-height="740" src="../../Z_Resources/Images/02_Captures/Config_Annuaire_Azure_ConfigApp.png" tabindex="" style="height: auto;mc-thumbnail-max-width: 1200px;width: 700px;mc-thumbnail: popup;max-width: 1200px;" /></a><br /><br /></p>
+                                                    </li>
+                                                </ol>
+                                                <p>&#160;</p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="5">
+                                                        <p>Recherchez puis cochez les autorisations suivantes : </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p><strong>Group </strong>&gt;&#160;<strong>Group.Read.All</strong> : read all groups</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><b>User : User.Read.All</b> :Read all users' full profiles.</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p>Une fois ces autorisations précisées, cliquez sur <strong>Ajouter des autorisations</strong>.</p>
+                                                    </li>
+                                                    <li value="7">
+                                                        <p>Revenu sur l'interface <strong>[Nom_Application] | API autorisées</strong>, cliquez de nouveau dans le menu de gauche sur <strong>Gérer &gt; API&#160;autorisées</strong>&#160;;</p>
+                                                    </li>
+                                                    <li value="8">
+                                                        <p>Cliquez ensuite sur <strong>Ajouter une autorisation</strong> ;</p>
+                                                    </li>
+                                                    <li value="9">
+                                                        <p> Dans le panneau <strong> Demander des autorisations API</strong>, cliquez sur <strong>Microsoft Graph</strong> &gt; <strong>Autorisations déléguées</strong>&#160;qui permet au client Windows d'utiliser l'API et d'agir au nom de l'utilisateur qui se connecte.</p>
+                                                    </li>
+                                                    <li value="10">
+                                                        <p>Recherchez puis configurez les autorisations <strong>OpenId </strong>suivantes : </p>
+                                                        <ul>
+                                                            <li style="font-size: 12pt;"><strong>e-mail</strong> : afficher l'adresse e-mail des utilisateurs </li>
+                                                            <li>
+                                                                <p><strong>offline_access</strong> : conserver l'accès aux données auxquelles vous avez donné accès aux utilisateurs</p>
+                                                            </li>
+                                                            <li style="font-size: 12pt;"><strong style="font-size: 12pt;">openid </strong>: connecter les utilisateurs</li>
+                                                            <li style="font-size: 12pt;"><strong>profile</strong> : afficher le profil de base des utilisateurs.</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li style="font-size: 12pt;" value="11">Recherchez puis cochez l'autorisation <strong>User.read :</strong><span style="font-size: 12pt;">activer la connexion et lire le profil utilisateur</span> ;</li>
+                                                    <li value="12">
+                                                        <p>Cliquez sur <strong>Ajouter les autorisations</strong>.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Annuaires_Azure_AutorisDeleguees.png"><img class="MCPopupThumbnail img" data-mc-width="882" data-mc-height="927" src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Azure_AutorisDeleguees.png" tabindex="" style="height: auto;width: 700px;mc-thumbnail: link;mc-thumbnail-max-width: 1200px;max-width: 1200px;" /></a></p>
+                                                    </li>
+                                                </ol>
+                                                <h2 id="Accorderunconsentementdadministrateur" data-magellan-target="Accorderunconsentementdadministrateur">Accorder un consentement d'administrateur</h2>
+                                                <p>Une fois les autorisations ajoutées, elles apparaissent dans la liste <strong>Autorisations configurées</strong>, avec le statut <strong>Pas accordé...</strong> <br /></p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Cliquez sur <b>Accorder un consentement d’administrateur pour [ORGANISATION]</b></p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p><strong>Confirmez </strong>l'accord de consentement : <br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Annuaires_Azure_Consentement.png"><img class="MCPopupThumbnail img" data-mc-width="1966" data-mc-height="906" src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Azure_Consentement.png" tabindex="" style="width: 700px;height: auto;mc-thumbnail: link;mc-thumbnail-max-width: 1200px;max-width: 1200px;" /></a><br /></p>
+                                                    </li>
+                                                </ol>
+                                                <h2 id="Configurerlesauthentifications" data-magellan-target="Configurerlesauthentifications">Configurer les authentifications</h2>
+                                                <p>Une fois les consentements accordés, il est nécessaire de configurer 3 authentifications : </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>pour le client Windows </p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>pour l'interface web Watchdoc</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>pour l'interface web WSC</p>
+                                                    </li>
+                                                </ol>
+                                                <p>&#160;</p>
+                                                <h3>Client Windows</h3>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>dans l'interface de gestion de l'application autorisée, dans le menu de gauche, cliquez sur <strong>Authentification</strong> :</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>dans l'interface <strong>Authentification &gt;&#160;Configurations de plateforme</strong>, cliquez sur <strong>Ajouter une plateforme</strong> ;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>sélectionnez <strong>Applications de bureau et mobiles</strong>:</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>dans l'interface<strong> URI de redirection</strong>, cochez la case <code>https://login.microsoftonline.com/common/oauth2/nativeclient</code></p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p>cliquez sur <strong>Configurer</strong> :<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Annuaires_Azure_AuthentAppMobile.png"><img class="MCPopupThumbnail img" data-mc-width="1993" data-mc-height="1248" src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Azure_AuthentAppMobile.png" tabindex="" style="height: auto;mc-thumbnail: link;mc-thumbnail-max-width: 1200px;width: 700px;max-width: 1200px;" /></a></p>
+                                                    </li>
+                                                </ol>
+                                                <p>&#160;</p>
+                                                <h3>Pour l'interface web Watchdoc </h3>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Revenu dans l'interface Configurations de plateforme, cliquez de nouveau sur <strong>Ajouter une plateforme</strong> ;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>Sélectionnez <strong>Web</strong> ;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>Dans l'interface <strong>Configurer web</strong>, saisissez l'URI de redirection suivante :<code><br />https://[nom_serveur_impression]/watchdoc/receiveauthorizationcode.asp</code>.</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>Cliquez sur <strong>Configurer</strong> : </p>
+                                                        <p>
+                                                            <br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Annuaires_Azure_AuthentWeb.png"><img class="MCPopupThumbnail img" data-mc-width="1998" data-mc-height="1516" src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Azure_AuthentWeb.png" tabindex="" style="height: auto;mc-thumbnail: link;mc-thumbnail-max-width: 1200px;width: 700px;max-width: 1200px;" /></a>
+                                                        </p>
+                                                    </li>
+                                                </ol>
+                                                <p>&#160;</p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="5">
+                                                        <p> L'URI&#160;s'affiche dans la section <strong>Web / URI&#160;de redirection</strong>. </p>
+                                                    </li>
+                                                </ol>
+                                                <h3>Pour l'interface web WSC (Watchdoc Supervision Console)</h3>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>En restant dans cette section<strong> Web /&#160;URI&#160;de redirection</strong>,  cliquez sur <strong>Ajouter un URI</strong> et saisissez l'uri suivant : <br /><code>https://[serveur_wsc:port_wsc]/Account/ReceiveAuthorizationCode</code></p>
+                                                    </li>
+                                                </ol>
+                                                <ol data-mc-continue="true">
+                                                    <li value="2">
+                                                        <p>Cliquez sur <strong>Enregistrer </strong>:<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Annuaires_Azure_AuthentURI.png"><img class="MCPopupThumbnail img" data-mc-width="1998" data-mc-height="1285" src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Azure_AuthentURI.png" tabindex="" style="height: auto;mc-thumbnail: link;mc-thumbnail-max-width: 1200px;width: 700px;max-width: 1200px;" /></a></p>
+                                                    </li>
+                                                </ol>
+                                                <h2 id="Configurerunsecret" data-magellan-target="Configurerunsecret">Configurer un secret</h2>
+                                                <p>Il est nécessaire d'ajouter un secret (mot de passe) à votre application pour sécuriser les échanges entre elle et l'annuaire.</p>
+                                                <p>Pour ajouter un secret&#160;:</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>depuis le menu de gauche, section <strong>Gérer</strong>, cliquez sur <b>Certificats &amp; secrets</b> ;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>dans l'onglet <b>Secrets client</b>, cliquez sur <strong>Nouveau secret client</strong> :</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>dans l'interface <strong>Ajouter un secret client</strong>, saisissez : </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>une description à votre secret </p>
+                                                            </li>
+                                                            <li>
+                                                                <p> une date d’expiration (le délai est limité à 24 mois) : <br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Annuaires_Azure6.png"><img class="MCPopupThumbnail img" data-mc-width="1906" data-mc-height="480" src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Azure6.png" tabindex="" style="height: auto;mc-thumbnail: link;mc-thumbnail-max-width: 1200px;width: 700px;max-width: 1200px;" /></a></p>
+                                                            </li>
+                                                        </ul>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li style="font-size: 12pt;" value="4">
+                                                        <p>Cliquez sur <strong>Ajouter</strong>.</p>
+                                                    </li>
+                                                </ol>
+                                                <p>&#160;</p>
+                                                <p><span style="font-family: 'Wingdings'">è</span> Après validation, la valeur du secret est affichée :  <b>veillez à copier la valeur du secret</b> car elle ne vous est présentée qu'une seule fois :<br /><br /></p>
+                                                <p><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Annuaires_Azure_Secret.png"><img class="MCPopupThumbnail img" data-mc-width="1997" data-mc-height="728" src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Azure_Secret.png" tabindex="" style="height: auto;mc-thumbnail: link;mc-thumbnail-max-width: 1200px;width: 700px;max-width: 1200px;" /></a>
+                                                </p>
+                                                <h2 id="Consulterlesinformationsdapplications" data-magellan-target="Consulterlesinformationsdapplications">Consulter les informations d'applications</h2>
+                                                <p>Dans le menu <strong>Vue d'ensemble</strong> sont affichées les informations nécessaires à la configuration des applications dans Watchdoc&#160;:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p style="font-weight: bold;">ID d'application (client)</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>ID&#160;de l'annuaire (locataire) </strong>: Tenant ID: </p>
+                                                    </li>
+                                                </ul>
+                                                <p>Vous pouvez copier ces valeurs nécessaires à la suite de la procédure de configuration (cf.&#160;<a href="ConfigAnnuaires_EntraID_Procedure.htm" target="_blank">Configurer un annuaire Entra ID dans Watchdoc</a>).<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Annuaires_Azure_ConsultID.png"><img class="MCPopupThumbnail img" data-mc-width="1992" data-mc-height="729" src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Azure_ConsultID.png" tabindex="" style="height: auto;mc-thumbnail: link;mc-thumbnail-max-width: 1200px;width: 700px;max-width: 1200px;" /></a><br /><br /></p>
+                                                <p>&#160;</p>
+                                                <p><span style="font-family: 'Wingdings'">è</span> Une fois l'application Watchdoc inscrite dans Entra, <a href="ConfigAnnuaires_EntraID_Procedure.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">configurez l'annuaire Entra dans Watchdoc</a>.&#160;</p>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocAnnuairesMicrosoftEntraIDInscriptiondelapplicationWatchdocdansMicrosoftEntraID">Watchdoc - Annuaires -  Microsoft Entra ID - Inscription de l'application Watchdoc dans Microsoft Entra ID</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Inscrirelapplication">Inscrire l'application</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Accorderdesautorisations">Accorder des autorisations</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Accorderunconsentementdadministrateur">Accorder un consentement d'administrateur</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Configurerlesauthentifications">Configurer les authentifications</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Configurerunsecret">Configurer un secret</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Consulterlesinformationsdapplications">Consulter les informations d'applications</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -197,218 +433,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor29"></a>
-                                            <MadCap:concept term="CFG;WD" />Watchdoc - Annuaires -  Microsoft Entra ID - Inscription de l'application Watchdoc dans Microsoft Entra ID</h1>
-                                        <p style="font-style: italic;">* Cliquez sur les images pour les agrandir</p>
-                                        <h2>Inscrire l'application</h2>
-                                        <p>Pour inscrire les applications Watchdoc Server dans Entra ID :</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>accédez au <strong>Centre d'administration Microsoft Entra </strong>en tant qu'administrateur ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>dans le menu de gauche, cliquez sur <strong>Applications &gt;&#160;Inscription d'applications</strong>:</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>dans le menu de cette interface, cliquez sur le bouton <b>Nouvelle inscription</b> :</p>
-                                            </li>
-                                            <li value="4">
-                                                <p>dans l'interface <strong>Inscrire une application</strong> :</p>
-                                                <ol style="list-style-type: lower-roman;">
-                                                    <li value="1">
-                                                        <p>saisissez le <b>Nom de l'application</b> (par exemple, Watchdoc) ;</p>
-                                                    </li>
-                                                    <li value="2">
-                                                        <p>cochez <b>Comptes dans cet annuaire d'organisation uniquement.</b></p>
-                                                    </li>
-                                                </ol>
-                                            </li>
-                                            <li value="5">
-                                                <p>Cliquez sur<strong> S'inscrire</strong> :<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Z_Resources/Images/02_Captures/Config_Annuaire_Azure_InscriptionApp.png"><img class="MCPopupThumbnail img" data-mc-width="1998" data-mc-height="1270" src="../../Z_Resources/Images/02_Captures/Config_Annuaire_Azure_InscriptionApp.png" tabindex="" style="height: auto;mc-thumbnail-max-width: 1200px;width: 700px;mc-thumbnail: popup;max-width: 1200px;" /></a></p>
-                                            </li>
-                                        </ol>
-                                        <h2>Accorder des autorisations</h2>
-                                        <p>Une fois l’application inscrite, depuis l'interface [Nom_de_l'application], configurez-la : </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>dans le menu de gauche, section <strong>Gérer </strong>, cliquez sur <b>API autorisées</b> ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>cliquez sur <b>Ajouter une autorisation</b> ;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>dans l'interface <strong>Demander des autorisations d'API</strong>, sélectionnez <b>Microsoft Graph</b> ;<br /></p>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="4">
-                                                <p>choisissez le type <b>Autorisations d’application</b> qui permet à Watchdoc d’effectuer des opérations en son nom sans contexte utilisateur spécifique :<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Z_Resources/Images/02_Captures/Config_Annuaire_Azure_ConfigApp.png"><img class="MCPopupThumbnail img" data-mc-width="2008" data-mc-height="740" src="../../Z_Resources/Images/02_Captures/Config_Annuaire_Azure_ConfigApp.png" tabindex="" style="height: auto;mc-thumbnail-max-width: 1200px;width: 700px;mc-thumbnail: popup;max-width: 1200px;" /></a><br /><br /></p>
-                                            </li>
-                                        </ol>
-                                        <p>&#160;</p>
-                                        <ol data-mc-continue="true">
-                                            <li value="5">
-                                                <p>Recherchez puis cochez les autorisations suivantes : </p>
-                                                <ul>
-                                                    <li>
-                                                        <p><strong>Group </strong>&gt;&#160;<strong>Group.Read.All</strong> : read all groups</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><b>User : User.Read.All</b> :Read all users' full profiles.</p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li value="6">
-                                                <p>Une fois ces autorisations précisées, cliquez sur <strong>Ajouter des autorisations</strong>.</p>
-                                            </li>
-                                            <li value="7">
-                                                <p>Revenu sur l'interface <strong>[Nom_Application] | API autorisées</strong>, cliquez de nouveau dans le menu de gauche sur <strong>Gérer &gt; API&#160;autorisées</strong>&#160;;</p>
-                                            </li>
-                                            <li value="8">
-                                                <p>Cliquez ensuite sur <strong>Ajouter une autorisation</strong> ;</p>
-                                            </li>
-                                            <li value="9">
-                                                <p> Dans le panneau <strong> Demander des autorisations API</strong>, cliquez sur <strong>Microsoft Graph</strong> &gt; <strong>Autorisations déléguées</strong>&#160;qui permet au client Windows d'utiliser l'API et d'agir au nom de l'utilisateur qui se connecte.</p>
-                                            </li>
-                                            <li value="10">
-                                                <p>Recherchez puis configurez les autorisations <strong>OpenId </strong>suivantes : </p>
-                                                <ul>
-                                                    <li style="font-size: 12pt;"><strong>e-mail</strong> : afficher l'adresse e-mail des utilisateurs </li>
-                                                    <li>
-                                                        <p><strong>offline_access</strong> : conserver l'accès aux données auxquelles vous avez donné accès aux utilisateurs</p>
-                                                    </li>
-                                                    <li style="font-size: 12pt;"><strong style="font-size: 12pt;">openid </strong>: connecter les utilisateurs</li>
-                                                    <li style="font-size: 12pt;"><strong>profile</strong> : afficher le profil de base des utilisateurs.</li>
-                                                </ul>
-                                            </li>
-                                            <li style="font-size: 12pt;" value="11">Recherchez puis cochez l'autorisation <strong>User.read :</strong><span style="font-size: 12pt;">activer la connexion et lire le profil utilisateur</span> ;</li>
-                                            <li value="12">
-                                                <p>Cliquez sur <strong>Ajouter les autorisations</strong>.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Annuaires_Azure_AutorisDeleguees.png"><img class="MCPopupThumbnail img" data-mc-width="882" data-mc-height="927" src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Azure_AutorisDeleguees.png" tabindex="" style="height: auto;width: 700px;mc-thumbnail: link;mc-thumbnail-max-width: 1200px;max-width: 1200px;" /></a></p>
-                                            </li>
-                                        </ol>
-                                        <h2>Accorder un consentement d'administrateur</h2>
-                                        <p>Une fois les autorisations ajoutées, elles apparaissent dans la liste <strong>Autorisations configurées</strong>, avec le statut <strong>Pas accordé...</strong> <br /></p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Cliquez sur <b>Accorder un consentement d’administrateur pour [ORGANISATION]</b></p>
-                                            </li>
-                                            <li value="2">
-                                                <p><strong>Confirmez </strong>l'accord de consentement : <br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Annuaires_Azure_Consentement.png"><img class="MCPopupThumbnail img" data-mc-width="1966" data-mc-height="906" src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Azure_Consentement.png" tabindex="" style="width: 700px;height: auto;mc-thumbnail: link;mc-thumbnail-max-width: 1200px;max-width: 1200px;" /></a><br /></p>
-                                            </li>
-                                        </ol>
-                                        <h2>Configurer les authentifications</h2>
-                                        <p>Une fois les consentements accordés, il est nécessaire de configurer 3 authentifications : </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>pour le client Windows </p>
-                                            </li>
-                                            <li value="2">
-                                                <p>pour l'interface web Watchdoc</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>pour l'interface web WSC</p>
-                                            </li>
-                                        </ol>
-                                        <p>&#160;</p>
-                                        <h3>Client Windows</h3>
-                                        <ol>
-                                            <li value="1">
-                                                <p>dans l'interface de gestion de l'application autorisée, dans le menu de gauche, cliquez sur <strong>Authentification</strong> :</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>dans l'interface <strong>Authentification &gt;&#160;Configurations de plateforme</strong>, cliquez sur <strong>Ajouter une plateforme</strong> ;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>sélectionnez <strong>Applications de bureau et mobiles</strong>:</p>
-                                            </li>
-                                            <li value="4">
-                                                <p>dans l'interface<strong> URI de redirection</strong>, cochez la case <code>https://login.microsoftonline.com/common/oauth2/nativeclient</code></p>
-                                            </li>
-                                            <li value="5">
-                                                <p>cliquez sur <strong>Configurer</strong> :<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Annuaires_Azure_AuthentAppMobile.png"><img class="MCPopupThumbnail img" data-mc-width="1993" data-mc-height="1248" src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Azure_AuthentAppMobile.png" tabindex="" style="height: auto;mc-thumbnail: link;mc-thumbnail-max-width: 1200px;width: 700px;max-width: 1200px;" /></a></p>
-                                            </li>
-                                        </ol>
-                                        <p>&#160;</p>
-                                        <h3>Pour l'interface web Watchdoc </h3>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Revenu dans l'interface Configurations de plateforme, cliquez de nouveau sur <strong>Ajouter une plateforme</strong> ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>Sélectionnez <strong>Web</strong> ;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>Dans l'interface <strong>Configurer web</strong>, saisissez l'URI de redirection suivante :<code><br />https://[nom_serveur_impression]/watchdoc/receiveauthorizationcode.asp</code>.</p>
-                                            </li>
-                                            <li value="4">
-                                                <p>Cliquez sur <strong>Configurer</strong> : </p>
-                                                <p>
-                                                    <br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Annuaires_Azure_AuthentWeb.png"><img class="MCPopupThumbnail img" data-mc-width="1998" data-mc-height="1516" src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Azure_AuthentWeb.png" tabindex="" style="height: auto;mc-thumbnail: link;mc-thumbnail-max-width: 1200px;width: 700px;max-width: 1200px;" /></a>
-                                                </p>
-                                            </li>
-                                        </ol>
-                                        <p>&#160;</p>
-                                        <ol data-mc-continue="true">
-                                            <li value="5">
-                                                <p> L'URI&#160;s'affiche dans la section <strong>Web / URI&#160;de redirection</strong>. </p>
-                                            </li>
-                                        </ol>
-                                        <h3>Pour l'interface web WSC (Watchdoc Supervision Console)</h3>
-                                        <ol>
-                                            <li value="1">
-                                                <p>En restant dans cette section<strong> Web /&#160;URI&#160;de redirection</strong>,  cliquez sur <strong>Ajouter un URI</strong> et saisissez l'uri suivant : <br /><code>https://[serveur_wsc:port_wsc]/Account/ReceiveAuthorizationCode</code></p>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="2">
-                                                <p>Cliquez sur <strong>Enregistrer </strong>:<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Annuaires_Azure_AuthentURI.png"><img class="MCPopupThumbnail img" data-mc-width="1998" data-mc-height="1285" src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Azure_AuthentURI.png" tabindex="" style="height: auto;mc-thumbnail: link;mc-thumbnail-max-width: 1200px;width: 700px;max-width: 1200px;" /></a></p>
-                                            </li>
-                                        </ol>
-                                        <h2>Configurer un secret</h2>
-                                        <p>Il est nécessaire d'ajouter un secret (mot de passe) à votre application pour sécuriser les échanges entre elle et l'annuaire.</p>
-                                        <p>Pour ajouter un secret&#160;:</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>depuis le menu de gauche, section <strong>Gérer</strong>, cliquez sur <b>Certificats &amp; secrets</b> ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>dans l'onglet <b>Secrets client</b>, cliquez sur <strong>Nouveau secret client</strong> :</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>dans l'interface <strong>Ajouter un secret client</strong>, saisissez : </p>
-                                                <ul>
-                                                    <li>
-                                                        <p>une description à votre secret </p>
-                                                    </li>
-                                                    <li>
-                                                        <p> une date d’expiration (le délai est limité à 24 mois) : <br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Annuaires_Azure6.png"><img class="MCPopupThumbnail img" data-mc-width="1906" data-mc-height="480" src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Azure6.png" tabindex="" style="height: auto;mc-thumbnail: link;mc-thumbnail-max-width: 1200px;width: 700px;max-width: 1200px;" /></a></p>
-                                                    </li>
-                                                </ul>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li style="font-size: 12pt;" value="4">
-                                                <p>Cliquez sur <strong>Ajouter</strong>.</p>
-                                            </li>
-                                        </ol>
-                                        <p>&#160;</p>
-                                        <p><span style="font-family: 'Wingdings'">è</span> Après validation, la valeur du secret est affichée :  <b>veillez à copier la valeur du secret</b> car elle ne vous est présentée qu'une seule fois :<br /><br /></p>
-                                        <p><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Annuaires_Azure_Secret.png"><img class="MCPopupThumbnail img" data-mc-width="1997" data-mc-height="728" src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Azure_Secret.png" tabindex="" style="height: auto;mc-thumbnail: link;mc-thumbnail-max-width: 1200px;width: 700px;max-width: 1200px;" /></a>
-                                        </p>
-                                        <h2>Consulter les informations d'applications</h2>
-                                        <p>Dans le menu <strong>Vue d'ensemble</strong> sont affichées les informations nécessaires à la configuration des applications dans Watchdoc&#160;:</p>
-                                        <ul>
-                                            <li>
-                                                <p style="font-weight: bold;">ID d'application (client)</p>
-                                            </li>
-                                            <li>
-                                                <p><strong>ID&#160;de l'annuaire (locataire) </strong>: Tenant ID: </p>
-                                            </li>
-                                        </ul>
-                                        <p>Vous pouvez copier ces valeurs nécessaires à la suite de la procédure de configuration (cf.&#160;<a href="ConfigAnnuaires_EntraID_Procedure.htm" target="_blank">Configurer un annuaire Entra ID dans Watchdoc</a>).<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Annuaires_Azure_ConsultID.png"><img class="MCPopupThumbnail img" data-mc-width="1992" data-mc-height="729" src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Azure_ConsultID.png" tabindex="" style="height: auto;mc-thumbnail: link;mc-thumbnail-max-width: 1200px;width: 700px;max-width: 1200px;" /></a><br /><br /></p>
-                                        <p>&#160;</p>
-                                        <p><span style="font-family: 'Wingdings'">è</span> Une fois l'application Watchdoc inscrite dans Entra, <a href="ConfigAnnuaires_EntraID_Procedure.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">configurez l'annuaire Entra dans Watchdoc</a>.&#160;</p>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

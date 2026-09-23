@@ -165,6 +165,79 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocDimensionnement" data-magellan-target="WatchdocDimensionnement"><a name="aanchor5"></a>
+                                                    <MadCap:concept term="PRT" />
+                                                    <MadCap:conditionalText data-mc-conditions="General.Online"><a name="aanchor6"></a>
+                                                        <MadCap:concept term="WD" />Watchdoc - </MadCap:conditionalText>Dimensionnement</h1>
+                                                <h2 id="CPUetMémoire" data-magellan-target="CPUetMémoire">CPU et Mémoire</h2>
+                                                <p>Les performances de Watchdoc dépendent directement des ressources disponibles du serveur d'impression. Afin de pouvoir dimensionner un serveur d'impression, veuillez vous référer à la documentation Microsoft<sup>®</sup> Print Server Scalability and Capacity Planning.</p>
+                                                <p>&#160;</p>
+                                                <p>Nos recommandations relatives aux ressources à réserver pour Watchdoc sont les suivantes :</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>moins de 200 files d'impression : 2 cœurs CPU minimum avec 2 Go de mémoire disponible ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>entre 200 et 1000 files d'impression : 4 cœurs CPU minimum avec 4 Go de mémoire disponible&#160;;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Master (avec 25 slaves max.) : 2 cœurs CPU minimum avec 2 Go de mémoire disponible&#160;;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Master (avec plus de  25 slaves) : 4 cœurs CPU minimum avec 4 Go de mémoire disponible.</p>
+                                                    </li>
+                                                </ul>
+                                                <h2 id="VolumétrieréseaudumonitoringSNMP" data-magellan-target="VolumétrieréseaudumonitoringSNMP">Volumétrie réseau du monitoring SNMP</h2>
+                                                <p>Quelques exemples de mesures :</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>Xerox WorkCentre 24 (Auditron interne activé avec 80 comptes) : 30 Mo / jour</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Kyocera Mita KM-4035 : 18,5 Mo / jour</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>DELL 5100cn : 10,8 Mo / jour</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Lexmark T420 : 10,4 Mo / jour</p>
+                                                    </li>
+                                                </ul>
+                                                <h2 id="Volumétriedelabasededonnées" data-magellan-target="Volumétriedelabasededonnées">Volumétrie de la base de données</h2>
+                                                <p>Dans la base de données, chaque document imprimé occupe entre 1,5 et 2,5 Ko.</p>
+                                                <p>Par ailleurs, pour les imprimantes et périphériques multifonctions (MFP) en réseau, il faut estimer :</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>1 Ko par incident sur les machines connectées (si le SNMP est actif) ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p>600 octets/machine/heure soit 5,2 Mo/machine/an pour l'information relative aux consommables et données des compteurs ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Serveur (RAM, CPU...) : 200 bytes/serveur/heure ou 1,8 MB/serveur/an.</p>
+                                                    </li>
+                                                </ul>
+                                                <fieldset style="text-align: left;">Notez que Microsoft<sup>®</sup> ne doit pas être installé sur un poste de travail (avec un OS&#160;de poste de travail) faisant office de serveur de production.</fieldset>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocDimensionnement">Watchdoc - Dimensionnement</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#CPUetM%C3%A9moire">CPU et Mémoire</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Volum%C3%A9trier%C3%A9seaudumonitoringSNMP">Volumétrie réseau du monitoring SNMP</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Volum%C3%A9triedelabasededonn%C3%A9es">Volumétrie de la base de données</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -198,61 +271,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor5"></a>
-                                            <MadCap:concept term="PRT" />
-                                            <MadCap:conditionalText data-mc-conditions="General.Online"><a name="aanchor6"></a>
-                                                <MadCap:concept term="WD" />Watchdoc - </MadCap:conditionalText>Dimensionnement</h1>
-                                        <h2>CPU et Mémoire</h2>
-                                        <p>Les performances de Watchdoc dépendent directement des ressources disponibles du serveur d'impression. Afin de pouvoir dimensionner un serveur d'impression, veuillez vous référer à la documentation Microsoft<sup>®</sup> Print Server Scalability and Capacity Planning.</p>
-                                        <p>&#160;</p>
-                                        <p>Nos recommandations relatives aux ressources à réserver pour Watchdoc sont les suivantes :</p>
-                                        <ul>
-                                            <li>
-                                                <p>moins de 200 files d'impression : 2 cœurs CPU minimum avec 2 Go de mémoire disponible ;</p>
-                                            </li>
-                                            <li>
-                                                <p>entre 200 et 1000 files d'impression : 4 cœurs CPU minimum avec 4 Go de mémoire disponible&#160;;</p>
-                                            </li>
-                                            <li>
-                                                <p>Master (avec 25 slaves max.) : 2 cœurs CPU minimum avec 2 Go de mémoire disponible&#160;;</p>
-                                            </li>
-                                            <li>
-                                                <p>Master (avec plus de  25 slaves) : 4 cœurs CPU minimum avec 4 Go de mémoire disponible.</p>
-                                            </li>
-                                        </ul>
-                                        <h2>Volumétrie réseau du monitoring SNMP</h2>
-                                        <p>Quelques exemples de mesures :</p>
-                                        <ul>
-                                            <li>
-                                                <p>Xerox WorkCentre 24 (Auditron interne activé avec 80 comptes) : 30 Mo / jour</p>
-                                            </li>
-                                            <li>
-                                                <p>Kyocera Mita KM-4035 : 18,5 Mo / jour</p>
-                                            </li>
-                                            <li>
-                                                <p>DELL 5100cn : 10,8 Mo / jour</p>
-                                            </li>
-                                            <li>
-                                                <p>Lexmark T420 : 10,4 Mo / jour</p>
-                                            </li>
-                                        </ul>
-                                        <h2>Volumétrie de la base de données</h2>
-                                        <p>Dans la base de données, chaque document imprimé occupe entre 1,5 et 2,5 Ko.</p>
-                                        <p>Par ailleurs, pour les imprimantes et périphériques multifonctions (MFP) en réseau, il faut estimer :</p>
-                                        <ul>
-                                            <li>
-                                                <p>1 Ko par incident sur les machines connectées (si le SNMP est actif) ; </p>
-                                            </li>
-                                            <li>
-                                                <p>600 octets/machine/heure soit 5,2 Mo/machine/an pour l'information relative aux consommables et données des compteurs ;</p>
-                                            </li>
-                                            <li>
-                                                <p>Serveur (RAM, CPU...) : 200 bytes/serveur/heure ou 1,8 MB/serveur/an.</p>
-                                            </li>
-                                        </ul>
-                                        <fieldset style="text-align: left;">Notez que Microsoft<sup>®</sup> ne doit pas être installé sur un poste de travail (avec un OS&#160;de poste de travail) faisant office de serveur de production.</fieldset>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

@@ -165,6 +165,165 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocServeurwebConfigurerlespointsdentréeduserveurwebetcertificatsassociés" data-magellan-target="WatchdocServeurwebConfigurerlespointsdentréeduserveurwebetcertificatsassociés"><a name="aanchor87"></a>
+                                                    <MadCap:concept term="CFG" />Watchdoc - Serveur web - Configurer les points d'entrée du serveur web et  certificats associés</h1>
+                                                <h2 id="Principe" data-magellan-target="Principe">Principe</h2>
+                                                <p>Cette interface de configuration (apparue en v. 6.1.0.5262), rassemble les paramètres relatifs au serveur Web (DSP) de Watchdoc et aux certificats qui en sécurisent l'accès. Le serveur web implique l'interface d'administration de Watchdoc, la page "Mon compte" ainsi que les WES. </p>
+                                                <p>&#160;</p>
+                                                <p>Lors de l'installation de Watchdoc, les 3&#160;points d'entrée suivants sont créés par défaut : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p><strong> _crystal</strong> (port 5744 HTTPS avec le certificat crystal) : il s'agit du point d'entrée par défaut permettant de sécuriser le serveur web à l'aide d'un certificat auto-signé fourni par Doxense.&#160;Ce point d'entrée peut être sécurisé par un autre certificat signé par une autorité de certification mais ne doit en aucun cas être désactivé, sous peine de rendre Watchdoc inopérant ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>_default Secure</strong> (port 5753,  HTTPS, avec le certificat httpServer) : ce point d'entrée assure l'accès de WSC, de WES sécurisés, de la Print API&#160;et Skyprint ainsi que  d'autres API&#160;provenant d'acteurs tiers tels que certains lecteurs de badges, par exemple ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>_defaultIUnsecure</strong> (port 5754, non-sécurisé par un certificat) : permet l'accès de certains WES non-sécurisés.&#160;</p>
+                                                    </li>
+                                                </ul>
+                                                <p>&#160;</p>
+                                                <p>Ces points d'entrée suffisent au fonctionnement standard de Watchdoc, mais vous pouvez ajouter d'autres points d'entrée, notamment pour tenir compte de périphériques d'impression qui auraient des configurations spécifiques avec différentes versions de TLS, par exemple.</p>
+                                                <p>
+                                                    <br />Vous pouvez aussi appliquer d'autres certificats (signés par une autorité de certification) aux points d'entrée existants ou nouvellement créés (cf.&#160;<a href="../ConfigCertificats/ConfigCertificats_Procedure.htm">Gérer les certificats dans Watchdoc</a>).</p>
+                                                <p>&#160;</p>
+                                                <fieldset class="orange">Le point d'entrée <b>_crystal</b> est indispensable au bon fonctionnement de Watchdoc.&#160;Sa mise en pause ou sa suppression provoquent l'indisponibilité du site web. En conséquence, il ne doit pas être désactivé.&#160;<br />Par ailleurs, la modification d'éléments dans cette page peut provoquer l'indisponibilité de quelques secondes de cette interface d'administration. Il est donc nécessaire de confirmer les actions de pause ou de suppression :<br /><br /><img src="WD_Config_PointEntree_Alerte.png" style="width: 308px;height: 237px;" /><br /><br />En cas d'erreur,  rechargez la page.<br /></fieldset>
+                                                <h2 id="Accéderàlinterfacedeconfiguration" data-magellan-target="Accéderàlinterfacedeconfiguration">Accéder à l'interface de configuration</h2>
+                                                <p>Dans les versions précédentes, la section DSP se situe dans l'interface Configuration Système (<strong>Menu principal</strong> &gt; section Configuration, <strong>Configuration avancée</strong> &gt;&#160;<strong>Configuration Système</strong> &gt; section <strong>DSP</strong>).</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Depuis le <strong>Menu principal</strong> de l'interface d'administration, section <strong>Configuration</strong>, cliquez sur <strong>Configuration avancée</strong>&#160;;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1">dans l'interface <strong>[Nom_du_serveur] &gt; Configuration avancée</strong>, cliquez sur <strong>Serveur Web</strong>&#160;:<br />N.B : <strong>Menu principal</strong> &gt; section Configuration, <strong>Configuration avancée</strong> &gt;&#160;<strong>Configuration Système</strong> &gt; section <strong>DSP</strong> dans les versions antérieures à v. 6.1.0.5262) :<br /><br /><a class="MCPopupThumbnailLink" href="WD_Config_Certif_Acces.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1492" data-mc-height="890" src="WD_Config_Certif_Acces.png" tabindex="" style="height: auto;width: 700px;max-width: 1000px;" /></a><br /></p>
+                                                    </li>
+                                                </ol>
+                                                <p>&#160;</p>
+                                                <p class="Resultat"><span style="font-family: 'Wingdings'">è</span> vous accédez à l'interface de gestion du <strong>Serveur Web </strong>de Watchdoc. </p>
+                                                <h2 id="ConfigurerlasectionDSP" data-magellan-target="ConfigurerlasectionDSP">Configurer la  section <a name="DSP" id="DSP"></a>DSP<br /></h2>
+                                                <ol data-mc-continue="true">
+                                                    <li value="3">
+                                                        <p>Pour modifier un point d'entrée existant, cliquez sur le bouton <strong>Editer </strong><img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Editer.png" style="width: 29px;height: 29px;" />du point d'entrée&#160;;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>pour ajouter un point d'entrée, cliquez sur <strong>Créer un nouveau point d'entrée</strong>. Cela peut notamment être nécessaire pour assigner à un WES un port SSL&#160;différent du port par défaut et l'associer à un certificat spécifique.</p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p>complétez les champs de l'interface <strong>Point d'entrée du serveur web</strong> :</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p><strong>Identifiant : </strong>l'identifiant est généré par défaut. Renommez-le si nécessaire.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Port d'écoute : </strong>indiquez le numéro du port chargé d'établir la communication entre le serveur web et une API tierce.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Port public : </strong>indiquez le numéro du port public s'il est différent du port d'écoute. Ce paramètre est nécessaire si un proxy sécurise l'accès au serveur Watchdoc. Attention, cette information est uniquement déclarative : si le port public est différent du port d'écoute, la correspondance est configurée dans le proxy.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>HTTPS : </strong>cochez la case si le point d'entrée est sécurisé à l'aide de ce protocole (depuis la v.&#160;6.1.1.5360, le point d'entrée _crystal 5744 est en HTTPS et ne doit pas être décoché dans une configuration par défaut).</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Certificat :</strong> sélectionnez dans la liste le certificat associé au point d'entrée. <br />Si vous souhaitez appliquer un certificat spécifique sur l'un des points d'entrée, vous pouvez avoir à le générer et à le faire signer ou à l'importer  (cf.&#160;<a href="../ConfigCertificats/ConfigCertificats_Procedure.htm" target="_blank">Générer les certificats</a>).</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Protocoles de sécurisation :</strong> dans la liste, sélectionnez le protocole de sécurisation associé au point d'entrée :</p>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p class="TitreNiveau3"><strong>Utiliser les protocoles autorisés par le Système d'administration : </strong>choisissez cette option pour permettre au système d'exploitation d'utiliser ses propres paramètres.</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p><strong>Utiliser les paramètres suivants : </strong>choisissez cette option pour utiliser les paramètres  coché en-dessous (SSL ou TLS v. 1.0, v1.1, v1.2) : </p>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p>Cliquez sur le bouton <strong>Valider /</strong> <strong>Créer </strong>pour valider la modification ou créer le nouveau point d'entrée :<br /><br /><a class="MCPopupThumbnailLink" href="WD_Config_Certif_Creer.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1114" data-mc-height="531" src="WD_Config_Certif_Creer.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a><br /><br /></p>
+                                                    </li>
+                                                    <li value="7">
+                                                        <p>Précisez en ensuite les paramètres suivants :</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p class="TitreNiveau3"><strong>Journaux</strong>. </p>
+                                                                <ul style="list-style-type: circle;">
+                                                                    <li>
+                                                                        <p class="Liste_puce_1"><strong>Historiser les requêtes entrantes (dans le journal du serveur web) :</strong> cochez la case si vous souhaitez enregistrer l'activité réseau ( chaque packet request et response) sur le serveur DSP. Par défaut, chaque requête web traitée par le serveur (syntaxe compatible W3C Log) est enregistrée dans un fichier log sur le disque. </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p class="Liste_puce_1"><strong>Enregistrer toute l'activité réseau sur le disque (un fichier par requête ou réponse) :</strong>
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p class="Liste_puce_1"><strong>Chemin :</strong> précisez dans ce champ le chemin d'accès au dossier dans lequel doivent être enregistrés les fichiers de logs.</p>
+                                                                    </li>
+                                                                </ul>
+                                                                <p>N.B. : les fichiers trace nécessitant de l'espace sur le serveur, nous vous recommandons d'activer l'historisation temporairement, afin d'établir un diagnostic relatif à l'activité réseau sur le serveur DSP puis de désactiver cette fonction  une fois les traces collectées.</p>
+                                                                <p>&#160;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_1"><strong>Paramètres avancés</strong>
+                                                                </p>
+                                                            </li>
+                                                        </ul>
+                                                        <ul style="list-style-type: circle;">
+                                                            <ul style="list-style-type: circle;">
+                                                                <li>
+                                                                    <p class="Liste_puce_1"><strong>Nombre de clients maximum :</strong> indiquez dans ce champ le nombre maximum de clients autorisés à se connecter au serveur.</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p class="Liste_puce_1"><strong>Optimiser le serveur pour un usage principalement depuis le Réseau Local (Ethernet)</strong> : cochez la case pour activer l'optimisation lorsque le site web est sollicité en LAN</p>
+                                                                </li>
+                                                            </ul>
+                                                            <ul style="list-style-type: circle;">
+                                                                <li>
+                                                                    <p class="Liste_puce_1"><strong>Optimiser le serveur pour un grand nombre de clients connectés : </strong>cochez la case pour optimiser le serveur en cas de forte affluence.</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p class="Liste_puce_1"><strong>Taille requête POST maximum :</strong> indiquez, en Gb  la taille des requêtes POST acceptées par le serveur </p>
+                                                                </li>
+                                                                <li>
+                                                                    <p class="Liste_puce_1"><strong>Autoriser les connexions Keep-Alive (nécessaire pour certaines fonctionnalités)&#160;:</strong> cochez cette case pour autoriser les connexions persistantes entre les navigateurs et le serveur Web ( keep-alive).</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p class="Liste_puce_1"><strong>Activer la compression automatique des réponses (consomme des ressources CPU) </strong>: cochez cette case pour compresser les réponses fournies par le serveur aux requêtes qui lui sont envoyées par les applications tierces.</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p>&#160;</p>
+                                                                </li>
+                                                            </ul>
+                                                        </ul>
+                                                        <ul>
+                                                            <li style="font-size: 12pt;"><strong><a name="Proxy_inverse" id="Proxy_inverse"></a>Proxy inverse :</strong> cochez cette case si le réseau est doté d'un reverse proxy et indiquez l'IP de ce proxy. </li>
+                                                        </ul>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="8">
+                                                        <p>Cliquez sur <strong>Valider </strong>pour enregistrer les paramètres de la section DSP.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Configurer_GestAvancee_DSP.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1185" data-mc-height="625" src="../../Z_Resources/Images/02_Captures/Configurer_GestAvancee_DSP.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a></p>
+                                                    </li>
+                                                </ol>
+                                                <p>&#160;</p>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocServeurwebConfigurerlespointsdentr%C3%A9eduserveurwebetcertificatsassoci%C3%A9s">Watchdoc - Serveur web - Configurer les points d'entrée du serveur web et  certificats associés</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Principe">Principe</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Acc%C3%A9der%C3%A0linterfacedeconfiguration">Accéder à l'interface de configuration</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#ConfigurerlasectionDSP">Configurer la  section DSP</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -198,147 +357,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor87"></a>
-                                            <MadCap:concept term="CFG" />Watchdoc - Serveur web - Configurer les points d'entrée du serveur web et  certificats associés</h1>
-                                        <h2>Principe</h2>
-                                        <p>Cette interface de configuration (apparue en v. 6.1.0.5262), rassemble les paramètres relatifs au serveur Web (DSP) de Watchdoc et aux certificats qui en sécurisent l'accès. Le serveur web implique l'interface d'administration de Watchdoc, la page "Mon compte" ainsi que les WES. </p>
-                                        <p>&#160;</p>
-                                        <p>Lors de l'installation de Watchdoc, les 3&#160;points d'entrée suivants sont créés par défaut : </p>
-                                        <ul>
-                                            <li>
-                                                <p><strong> _crystal</strong> (port 5744 HTTPS avec le certificat crystal) : il s'agit du point d'entrée par défaut permettant de sécuriser le serveur web à l'aide d'un certificat auto-signé fourni par Doxense.&#160;Ce point d'entrée peut être sécurisé par un autre certificat signé par une autorité de certification mais ne doit en aucun cas être désactivé, sous peine de rendre Watchdoc inopérant ;</p>
-                                            </li>
-                                            <li>
-                                                <p><strong>_default Secure</strong> (port 5753,  HTTPS, avec le certificat httpServer) : ce point d'entrée assure l'accès de WSC, de WES sécurisés, de la Print API&#160;et Skyprint ainsi que  d'autres API&#160;provenant d'acteurs tiers tels que certains lecteurs de badges, par exemple ; </p>
-                                            </li>
-                                            <li>
-                                                <p><strong>_defaultIUnsecure</strong> (port 5754, non-sécurisé par un certificat) : permet l'accès de certains WES non-sécurisés.&#160;</p>
-                                            </li>
-                                        </ul>
-                                        <p>&#160;</p>
-                                        <p>Ces points d'entrée suffisent au fonctionnement standard de Watchdoc, mais vous pouvez ajouter d'autres points d'entrée, notamment pour tenir compte de périphériques d'impression qui auraient des configurations spécifiques avec différentes versions de TLS, par exemple.</p>
-                                        <p>
-                                            <br />Vous pouvez aussi appliquer d'autres certificats (signés par une autorité de certification) aux points d'entrée existants ou nouvellement créés (cf.&#160;<a href="../ConfigCertificats/ConfigCertificats_Procedure.htm">Gérer les certificats dans Watchdoc</a>).</p>
-                                        <p>&#160;</p>
-                                        <fieldset class="orange">Le point d'entrée <b>_crystal</b> est indispensable au bon fonctionnement de Watchdoc.&#160;Sa mise en pause ou sa suppression provoquent l'indisponibilité du site web. En conséquence, il ne doit pas être désactivé.&#160;<br />Par ailleurs, la modification d'éléments dans cette page peut provoquer l'indisponibilité de quelques secondes de cette interface d'administration. Il est donc nécessaire de confirmer les actions de pause ou de suppression :<br /><br /><img src="WD_Config_PointEntree_Alerte.png" style="width: 308px;height: 237px;" /><br /><br />En cas d'erreur,  rechargez la page.<br /></fieldset>
-                                        <h2>Accéder à l'interface de configuration</h2>
-                                        <p>Dans les versions précédentes, la section DSP se situe dans l'interface Configuration Système (<strong>Menu principal</strong> &gt; section Configuration, <strong>Configuration avancée</strong> &gt;&#160;<strong>Configuration Système</strong> &gt; section <strong>DSP</strong>).</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Depuis le <strong>Menu principal</strong> de l'interface d'administration, section <strong>Configuration</strong>, cliquez sur <strong>Configuration avancée</strong>&#160;;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1">dans l'interface <strong>[Nom_du_serveur] &gt; Configuration avancée</strong>, cliquez sur <strong>Serveur Web</strong>&#160;:<br />N.B : <strong>Menu principal</strong> &gt; section Configuration, <strong>Configuration avancée</strong> &gt;&#160;<strong>Configuration Système</strong> &gt; section <strong>DSP</strong> dans les versions antérieures à v. 6.1.0.5262) :<br /><br /><a class="MCPopupThumbnailLink" href="WD_Config_Certif_Acces.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1492" data-mc-height="890" src="WD_Config_Certif_Acces.png" tabindex="" style="height: auto;width: 700px;max-width: 1000px;" /></a><br /></p>
-                                            </li>
-                                        </ol>
-                                        <p>&#160;</p>
-                                        <p class="Resultat"><span style="font-family: 'Wingdings'">è</span> vous accédez à l'interface de gestion du <strong>Serveur Web </strong>de Watchdoc. </p>
-                                        <h2>Configurer la  section <a name="DSP" id="DSP"></a>DSP<br /></h2>
-                                        <ol data-mc-continue="true">
-                                            <li value="3">
-                                                <p>Pour modifier un point d'entrée existant, cliquez sur le bouton <strong>Editer </strong><img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Editer.png" style="width: 29px;height: 29px;" />du point d'entrée&#160;;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p>pour ajouter un point d'entrée, cliquez sur <strong>Créer un nouveau point d'entrée</strong>. Cela peut notamment être nécessaire pour assigner à un WES un port SSL&#160;différent du port par défaut et l'associer à un certificat spécifique.</p>
-                                            </li>
-                                            <li value="5">
-                                                <p>complétez les champs de l'interface <strong>Point d'entrée du serveur web</strong> :</p>
-                                                <ul>
-                                                    <li>
-                                                        <p><strong>Identifiant : </strong>l'identifiant est généré par défaut. Renommez-le si nécessaire.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Port d'écoute : </strong>indiquez le numéro du port chargé d'établir la communication entre le serveur web et une API tierce.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Port public : </strong>indiquez le numéro du port public s'il est différent du port d'écoute. Ce paramètre est nécessaire si un proxy sécurise l'accès au serveur Watchdoc. Attention, cette information est uniquement déclarative : si le port public est différent du port d'écoute, la correspondance est configurée dans le proxy.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>HTTPS : </strong>cochez la case si le point d'entrée est sécurisé à l'aide de ce protocole (depuis la v.&#160;6.1.1.5360, le point d'entrée _crystal 5744 est en HTTPS et ne doit pas être décoché dans une configuration par défaut).</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Certificat :</strong> sélectionnez dans la liste le certificat associé au point d'entrée. <br />Si vous souhaitez appliquer un certificat spécifique sur l'un des points d'entrée, vous pouvez avoir à le générer et à le faire signer ou à l'importer  (cf.&#160;<a href="../ConfigCertificats/ConfigCertificats_Procedure.htm" target="_blank">Générer les certificats</a>).</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Protocoles de sécurisation :</strong> dans la liste, sélectionnez le protocole de sécurisation associé au point d'entrée :</p>
-                                                        <ul>
-                                                            <li>
-                                                                <p class="TitreNiveau3"><strong>Utiliser les protocoles autorisés par le Système d'administration : </strong>choisissez cette option pour permettre au système d'exploitation d'utiliser ses propres paramètres.</p>
-                                                            </li>
-                                                            <li>
-                                                                <p><strong>Utiliser les paramètres suivants : </strong>choisissez cette option pour utiliser les paramètres  coché en-dessous (SSL ou TLS v. 1.0, v1.1, v1.2) : </p>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li value="6">
-                                                <p>Cliquez sur le bouton <strong>Valider /</strong> <strong>Créer </strong>pour valider la modification ou créer le nouveau point d'entrée :<br /><br /><a class="MCPopupThumbnailLink" href="WD_Config_Certif_Creer.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1114" data-mc-height="531" src="WD_Config_Certif_Creer.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a><br /><br /></p>
-                                            </li>
-                                            <li value="7">
-                                                <p>Précisez en ensuite les paramètres suivants :</p>
-                                                <ul>
-                                                    <li>
-                                                        <p class="TitreNiveau3"><strong>Journaux</strong>. </p>
-                                                        <ul style="list-style-type: circle;">
-                                                            <li>
-                                                                <p class="Liste_puce_1"><strong>Historiser les requêtes entrantes (dans le journal du serveur web) :</strong> cochez la case si vous souhaitez enregistrer l'activité réseau ( chaque packet request et response) sur le serveur DSP. Par défaut, chaque requête web traitée par le serveur (syntaxe compatible W3C Log) est enregistrée dans un fichier log sur le disque. </p>
-                                                            </li>
-                                                            <li>
-                                                                <p class="Liste_puce_1"><strong>Enregistrer toute l'activité réseau sur le disque (un fichier par requête ou réponse) :</strong>
-                                                                </p>
-                                                            </li>
-                                                            <li>
-                                                                <p class="Liste_puce_1"><strong>Chemin :</strong> précisez dans ce champ le chemin d'accès au dossier dans lequel doivent être enregistrés les fichiers de logs.</p>
-                                                            </li>
-                                                        </ul>
-                                                        <p>N.B. : les fichiers trace nécessitant de l'espace sur le serveur, nous vous recommandons d'activer l'historisation temporairement, afin d'établir un diagnostic relatif à l'activité réseau sur le serveur DSP puis de désactiver cette fonction  une fois les traces collectées.</p>
-                                                        <p>&#160;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Paramètres avancés</strong>
-                                                        </p>
-                                                    </li>
-                                                </ul>
-                                                <ul style="list-style-type: circle;">
-                                                    <ul style="list-style-type: circle;">
-                                                        <li>
-                                                            <p class="Liste_puce_1"><strong>Nombre de clients maximum :</strong> indiquez dans ce champ le nombre maximum de clients autorisés à se connecter au serveur.</p>
-                                                        </li>
-                                                        <li>
-                                                            <p class="Liste_puce_1"><strong>Optimiser le serveur pour un usage principalement depuis le Réseau Local (Ethernet)</strong> : cochez la case pour activer l'optimisation lorsque le site web est sollicité en LAN</p>
-                                                        </li>
-                                                    </ul>
-                                                    <ul style="list-style-type: circle;">
-                                                        <li>
-                                                            <p class="Liste_puce_1"><strong>Optimiser le serveur pour un grand nombre de clients connectés : </strong>cochez la case pour optimiser le serveur en cas de forte affluence.</p>
-                                                        </li>
-                                                        <li>
-                                                            <p class="Liste_puce_1"><strong>Taille requête POST maximum :</strong> indiquez, en Gb  la taille des requêtes POST acceptées par le serveur </p>
-                                                        </li>
-                                                        <li>
-                                                            <p class="Liste_puce_1"><strong>Autoriser les connexions Keep-Alive (nécessaire pour certaines fonctionnalités)&#160;:</strong> cochez cette case pour autoriser les connexions persistantes entre les navigateurs et le serveur Web ( keep-alive).</p>
-                                                        </li>
-                                                        <li>
-                                                            <p class="Liste_puce_1"><strong>Activer la compression automatique des réponses (consomme des ressources CPU) </strong>: cochez cette case pour compresser les réponses fournies par le serveur aux requêtes qui lui sont envoyées par les applications tierces.</p>
-                                                        </li>
-                                                        <li>
-                                                            <p>&#160;</p>
-                                                        </li>
-                                                    </ul>
-                                                </ul>
-                                                <ul>
-                                                    <li style="font-size: 12pt;"><strong><a name="Proxy_inverse" id="Proxy_inverse"></a>Proxy inverse :</strong> cochez cette case si le réseau est doté d'un reverse proxy et indiquez l'IP de ce proxy. </li>
-                                                </ul>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="8">
-                                                <p>Cliquez sur <strong>Valider </strong>pour enregistrer les paramètres de la section DSP.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Configurer_GestAvancee_DSP.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1185" data-mc-height="625" src="../../Z_Resources/Images/02_Captures/Configurer_GestAvancee_DSP.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a></p>
-                                            </li>
-                                        </ol>
-                                        <p>&#160;</p>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

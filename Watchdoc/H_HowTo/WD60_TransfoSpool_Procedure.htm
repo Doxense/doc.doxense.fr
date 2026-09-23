@@ -165,6 +165,170 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WESActiveretconfigurerlatransformationdespools" data-magellan-target="WESActiveretconfigurerlatransformationdespools"><a name="aanchor427"></a>
+                                                    <MadCap:concept term="WES" />WES - Activer et configurer la transformation de spools</h1>
+                                                <h2 id="Procédure" data-magellan-target="Procédure">Procédure</h2>
+                                                <h3>Configurer une règle sur la file d'impression</h3>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1">accédez à l'interface d'administration de Watchdoc en tant qu'administrateur ;<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/Config_Files_AccesInterface_V61.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1686" data-mc-height="746" src="../Z_Resources/Images/02_Captures/Config_Files_AccesInterface_V61.png" tabindex="" style="height: auto;width: 700px;max-width: 1000px;" /></a></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1">depuis le <strong>Menu principal</strong>, section <strong>Exploitation</strong>, cliquez sur <strong>Files d'impression, groupes de files et pools</strong> :</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p class="Liste_num_1">dans la liste des files, sélectionnez la file sur laquelle vous souhaitez activer la transformation de spools en cliquant sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Loupe.png" style="width: 16px;height: 17px;" /><br /></p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p class="Liste_num_1">depuis l'interface de paramétrage de la file, cliquez sur le bouton <strong>Règles</strong>&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/WD_Admin_Regles_Acces_V60.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1677" data-mc-height="628" src="../Z_Resources/Images/02_Captures/WD_Admin_Regles_Acces_V60.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a></p>
+                                                        <p class="Liste_num_1">
+                                                            <br />
+                                                        </p>
+                                                    </li>
+                                                </ol>
+                                                <ol data-mc-continue="true">
+                                                    <li value="5">
+                                                        <p class="Liste_num_1">dans la liste <strong>Evènements</strong>, cliquez sur le bouton <strong>Editer </strong>pour accéder à l'interface de gestion des évènements de la file&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/Config_Files_Regles_AccesInterface.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1768" data-mc-height="636" src="../Z_Resources/Images/02_Captures/Config_Files_Regles_AccesInterface.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                </ol>
+                                                <ol data-mc-continue="true">
+                                                    <li value="6">
+                                                        <p class="Liste_num_1">Dans l'interface de configuration, ajoutez un événement  permettant de proposer les choix de transformation des spools en fonction d'un filtre&#160;:</p>
+                                                        <ol style="list-style-type: lower-alpha;">
+                                                            <li value="1">
+                                                                <p class="Liste_num_2">dans la liste <strong>Filtre</strong>, section <strong>Filtres prédéfinis</strong>, sélectionnez le filtre permettant de discriminer les documents ou les utilisateurs concernés par la transformation&#160;(par exemple, "document couleur" ou "document recto-verso")&#160;;</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p class="Liste_num_2">dans la liste <strong>Action</strong>, sélectionnez la transformation souhaitée&#160;: </p>
+                                                            </li>
+                                                        </ol>
+                                                    </li>
+                                                    <ul>
+                                                        <li>
+                                                            <p class="Liste_puce_2"><strong>forcer la conversion en noir et blanc&#160;:</strong> quand un utilisateur lance une impression en couleur, Watchdoc la convertit automatiquement en noir et blanc ;</p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="Liste_puce_2"><strong>suggérer la conversion en noir et blanc :</strong> quand un utilisateur lance une impression en couleur, Watchdoc lui suggère de la convertir en noir et blanc. L'utilisateur peut alors accepter la suggestion ou la refuser pour conserver la couleur ; </p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="Liste_puce_2"><strong>convertir en noir et blanc :</strong> quand un utilisateur lance une impression en couleur, Watchdoc la convertit automatiquement en noir et blanc.&#160;Au moment de libérer son impression, si l'utilisateur valide sans modifier, le document est imprimé en noir et blanc.&#160;Mais l'utilisateur garde la possibilité d'opter pour l'impression en couleur ;</p>
+                                                            <p class="Liste_puce_2"> </p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="Liste_puce_2"><strong>forcer la conversion en recto-verso : </strong>quand un utilisateur lance une impression en recto simple, Watchdoc la convertit automatiquement en recto-verso ; </p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="Liste_puce_2"><strong>suggérer la conversion en recto-verso : </strong>quand un utilisateur lance une impression en  recto simple, Watchdoc lui suggère de la convertir en recto-verso. L'utilisateur peut alors accepter la suggestion ou la refuser pour conserver le recto simple ; </p>
+                                                        </li>
+                                                        <li>
+                                                            <p><strong>convertir en recto-verso : </strong>quand un utilisateur lance une impression en recto simple, Watchdoc la convertit automatiquement en recto-verso.<br />Au moment de libérer son impression, si l'utilisateur valide sans modifier, le document est imprimé en recto-verso.&#160;Mais l'utilisateur garde la possibilité d'opter pour l'impression en recto simple .</p>
+                                                            <p>&#160;</p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="Liste_puce_2"><strong>forcer la conversion en recto simple : </strong>quand un utilisateur lance une impression en recto-verso, Watchdoc la convertit automatiquement en recto simple ; </p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="Liste_puce_2"><strong>suggérer la conversion en recto simple : </strong>quand un utilisateur lance une impression en  recto-verso, Watchdoc lui suggère de la convertir en recto simple. L'utilisateur peut alors accepter la suggestion ou la refuser pour conserver le recto-verso ; </p>
+                                                        </li>
+                                                        <li>
+                                                            <p><strong>convertir en recto simple  : </strong>quand un utilisateur lance une impression en recto-verso, Watchdoc la convertit automatiquement en recto simple.<br />Au moment de libérer son impression, si l'utilisateur valide sans modifier, le document est imprimé en recto simple.&#160;Mais l'utilisateur garde la possibilité d'opter pour l'impression en recto-verso.<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/Config_Files_Regles_TransfoSpool.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1087" data-mc-height="517" src="../Z_Resources/Images/02_Captures/Config_Files_Regles_TransfoSpool.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a><br /> </p>
+                                                        </li>
+                                                    </ul>
+                                                    <p>&#160;</p>
+                                                </ol>
+                                                <ol data-mc-continue="true">
+                                                    <li value="7">
+                                                        <p class="Liste_num_1">cliquez sur <strong>Valider </strong>pour enregistrer l'événement ;</p>
+                                                    </li>
+                                                    <li value="8">
+                                                        <p>réitérez l'opération autant de fois que nécessaire pour configurer toutes les transformations souhaitées sur la file ;</p>
+                                                    </li>
+                                                    <li value="9">
+                                                        <p>Désactivez-la file en cliquant sur le bouton <strong>Mettre en pause</strong><img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Arret.png" style="width: 19px;height: 19px;" /> ;</p>
+                                                    </li>
+                                                    <li value="10">
+                                                        <p>Lorsque le statut <strong>En pause </strong>s'affiche, redémarrez la file en cliquant sur le bouton <strong>Réactiver la file</strong> <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Demarrer.png" style="width: 22px;height: 22px;" />  :<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/WD_Admin_Transfo_Redemarrer.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1040" data-mc-height="428" src="../Z_Resources/Images/02_Captures/WD_Admin_Transfo_Redemarrer.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a><br /><br /></p>
+                                                    </li>
+                                                </ol>
+                                                <h3>Activer le mode CSR&#160;sur la file</h3>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1">Depuis  l'interface de présentation de la file, cliquez sur <strong>Editer les propriétés</strong>&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/Config_Files_EditerProprietes.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1669" data-mc-height="457" src="../Z_Resources/Images/02_Captures/Config_Files_EditerProprietes.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a><br /></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>Dans l'interface<strong> Propriétés de la file d'impression,</strong> cliquez sur le libellé <strong>Périphériques</strong> ;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>Dans la section <strong>CSR</strong>, optez pour le paramètre <strong>Préférer le mode Client Side Rendering (CSR activé)</strong> :<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/WD_Admin_Transfo_CSR.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1675" data-mc-height="1016" src="../Z_Resources/Images/02_Captures/WD_Admin_Transfo_CSR.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a><br /></p>
+                                                    </li>
+                                                </ol>
+                                                <h3>Activer la transformation de spool sur la file</h3>
+                                                <ol data-mc-continue="false">
+                                                    <li value="1">
+                                                        <p class="Resultat">Dans l'interface<strong> Propriétés de la file d'impression,</strong> cliquez sur le libellé <strong>WES</strong>. <br />La section <strong>Transformation des spools </strong>se trouve juste en-dessous :<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/Config_Files_TransfoSpools_V60.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1683" data-mc-height="926" src="../Z_Resources/Images/02_Captures/Config_Files_TransfoSpools_V60.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a><br /></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                </ol>
+                                                <ol data-mc-continue="true">
+                                                    <li value="2">
+                                                        <p>Configurez la fonction de transformation de spools :<br /><br /></p>
+                                                        <ul>
+                                                            <li>
+                                                                <p><strong>Mode de transformation</strong> : </p>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p><strong>Utiliser la valeur du groupe</strong> : permet d'appliquer sur la file le paramétrage de transformation défini pour le groupe de files.</p>
+                                                                    </li>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p><strong>Désactivé</strong> : permet de désactiver la fonction sur cette file, quel que soit le paramétrage appliqué aux niveaux supérieurs (groupe ou serveur) ;</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p><strong>Activé </strong>: permet d'activer la fonction uniquement sur cette file quel que soit le paramétrage appliqué aux niveaux supérieurs (groupe ou serveur) ;</p>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Diagnostic</strong> : activer le traçage des spools : cochez la case si vous souhaitez que les spools soient conservés et définissez les conditions de traçage&#160;:</p>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p><strong>Niveau de traces : </strong>dans la liste, sélectionnez le niveau des traces que vous souhaitez conserver (aucune, erreurs, spools édités et tous) ;</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p><strong>Activer pendant  :</strong>dans la liste, sélectionnez la durée pendant laquelle vous souhaitez activer le traçage des spools (une heure, un jour, une semaine ou un mois) :<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/WES/Config_WES_File_TransfoSpools.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="785" data-mc-height="143" src="../Z_Resources/Images/02_Captures/WES/Config_WES_File_TransfoSpools.png" tabindex="" style="max-width: 1000px;" /></a><br /></p>
+                                                                        <p>&#160;</p>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                        <fieldset>L'activation de la fonction de transformation de spools enclenche automatiquement l'activation du mode Client Site Rendering (<a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term9">Demande CSR<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>(Certificat Signing Request). Dans une infrastructure PKI (Public Key Infrastructure / Infrastructure à Clés Publiques), une demande de signature de certificat (en anglais CSR pour Certificate Signing Request) est un message envoyé à partir d'un demandeur à une autorité de certification afin de demander un certificat d'identité numérique. Le format le plus commun pour les CSR est la spécification PKCS#10.</span></a>) dans la section <strong>Périphériques</strong>.</fieldset>
+                                                    </li>
+                                                </ol>
+                                                <ol data-mc-continue="true">
+                                                    <li value="3">
+                                                        <p class="Liste_num_1">cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Valider.png" style="width: 28px;height: 27px;" /> pour valider le paramétrage de la file. </p>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WESActiveretconfigurerlatransformationdespools">WES - Activer et configurer la transformation de spools</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Proc%C3%A9dure">Procédure</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -198,156 +362,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor427"></a>
-                                            <MadCap:concept term="WES" />WES - Activer et configurer la transformation de spools</h1>
-                                        <h2>Procédure</h2>
-                                        <h3>Configurer une règle sur la file d'impression</h3>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">accédez à l'interface d'administration de Watchdoc en tant qu'administrateur ;<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/Config_Files_AccesInterface_V61.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1686" data-mc-height="746" src="../Z_Resources/Images/02_Captures/Config_Files_AccesInterface_V61.png" tabindex="" style="height: auto;width: 700px;max-width: 1000px;" /></a></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1">depuis le <strong>Menu principal</strong>, section <strong>Exploitation</strong>, cliquez sur <strong>Files d'impression, groupes de files et pools</strong> :</p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1">dans la liste des files, sélectionnez la file sur laquelle vous souhaitez activer la transformation de spools en cliquant sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Loupe.png" style="width: 16px;height: 17px;" /><br /></p>
-                                            </li>
-                                            <li value="4">
-                                                <p class="Liste_num_1">depuis l'interface de paramétrage de la file, cliquez sur le bouton <strong>Règles</strong>&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/WD_Admin_Regles_Acces_V60.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1677" data-mc-height="628" src="../Z_Resources/Images/02_Captures/WD_Admin_Regles_Acces_V60.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a></p>
-                                                <p class="Liste_num_1">
-                                                    <br />
-                                                </p>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="5">
-                                                <p class="Liste_num_1">dans la liste <strong>Evènements</strong>, cliquez sur le bouton <strong>Editer </strong>pour accéder à l'interface de gestion des évènements de la file&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/Config_Files_Regles_AccesInterface.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1768" data-mc-height="636" src="../Z_Resources/Images/02_Captures/Config_Files_Regles_AccesInterface.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="6">
-                                                <p class="Liste_num_1">Dans l'interface de configuration, ajoutez un événement  permettant de proposer les choix de transformation des spools en fonction d'un filtre&#160;:</p>
-                                                <ol style="list-style-type: lower-alpha;">
-                                                    <li value="1">
-                                                        <p class="Liste_num_2">dans la liste <strong>Filtre</strong>, section <strong>Filtres prédéfinis</strong>, sélectionnez le filtre permettant de discriminer les documents ou les utilisateurs concernés par la transformation&#160;(par exemple, "document couleur" ou "document recto-verso")&#160;;</p>
-                                                    </li>
-                                                    <li value="2">
-                                                        <p class="Liste_num_2">dans la liste <strong>Action</strong>, sélectionnez la transformation souhaitée&#160;: </p>
-                                                    </li>
-                                                </ol>
-                                            </li>
-                                            <ul>
-                                                <li>
-                                                    <p class="Liste_puce_2"><strong>forcer la conversion en noir et blanc&#160;:</strong> quand un utilisateur lance une impression en couleur, Watchdoc la convertit automatiquement en noir et blanc ;</p>
-                                                </li>
-                                                <li>
-                                                    <p class="Liste_puce_2"><strong>suggérer la conversion en noir et blanc :</strong> quand un utilisateur lance une impression en couleur, Watchdoc lui suggère de la convertir en noir et blanc. L'utilisateur peut alors accepter la suggestion ou la refuser pour conserver la couleur ; </p>
-                                                </li>
-                                                <li>
-                                                    <p class="Liste_puce_2"><strong>convertir en noir et blanc :</strong> quand un utilisateur lance une impression en couleur, Watchdoc la convertit automatiquement en noir et blanc.&#160;Au moment de libérer son impression, si l'utilisateur valide sans modifier, le document est imprimé en noir et blanc.&#160;Mais l'utilisateur garde la possibilité d'opter pour l'impression en couleur ;</p>
-                                                    <p class="Liste_puce_2"> </p>
-                                                </li>
-                                                <li>
-                                                    <p class="Liste_puce_2"><strong>forcer la conversion en recto-verso : </strong>quand un utilisateur lance une impression en recto simple, Watchdoc la convertit automatiquement en recto-verso ; </p>
-                                                </li>
-                                                <li>
-                                                    <p class="Liste_puce_2"><strong>suggérer la conversion en recto-verso : </strong>quand un utilisateur lance une impression en  recto simple, Watchdoc lui suggère de la convertir en recto-verso. L'utilisateur peut alors accepter la suggestion ou la refuser pour conserver le recto simple ; </p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>convertir en recto-verso : </strong>quand un utilisateur lance une impression en recto simple, Watchdoc la convertit automatiquement en recto-verso.<br />Au moment de libérer son impression, si l'utilisateur valide sans modifier, le document est imprimé en recto-verso.&#160;Mais l'utilisateur garde la possibilité d'opter pour l'impression en recto simple .</p>
-                                                    <p>&#160;</p>
-                                                </li>
-                                                <li>
-                                                    <p class="Liste_puce_2"><strong>forcer la conversion en recto simple : </strong>quand un utilisateur lance une impression en recto-verso, Watchdoc la convertit automatiquement en recto simple ; </p>
-                                                </li>
-                                                <li>
-                                                    <p class="Liste_puce_2"><strong>suggérer la conversion en recto simple : </strong>quand un utilisateur lance une impression en  recto-verso, Watchdoc lui suggère de la convertir en recto simple. L'utilisateur peut alors accepter la suggestion ou la refuser pour conserver le recto-verso ; </p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>convertir en recto simple  : </strong>quand un utilisateur lance une impression en recto-verso, Watchdoc la convertit automatiquement en recto simple.<br />Au moment de libérer son impression, si l'utilisateur valide sans modifier, le document est imprimé en recto simple.&#160;Mais l'utilisateur garde la possibilité d'opter pour l'impression en recto-verso.<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/Config_Files_Regles_TransfoSpool.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1087" data-mc-height="517" src="../Z_Resources/Images/02_Captures/Config_Files_Regles_TransfoSpool.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a><br /> </p>
-                                                </li>
-                                            </ul>
-                                            <p>&#160;</p>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="7">
-                                                <p class="Liste_num_1">cliquez sur <strong>Valider </strong>pour enregistrer l'événement ;</p>
-                                            </li>
-                                            <li value="8">
-                                                <p>réitérez l'opération autant de fois que nécessaire pour configurer toutes les transformations souhaitées sur la file ;</p>
-                                            </li>
-                                            <li value="9">
-                                                <p>Désactivez-la file en cliquant sur le bouton <strong>Mettre en pause</strong><img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Arret.png" style="width: 19px;height: 19px;" /> ;</p>
-                                            </li>
-                                            <li value="10">
-                                                <p>Lorsque le statut <strong>En pause </strong>s'affiche, redémarrez la file en cliquant sur le bouton <strong>Réactiver la file</strong> <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Demarrer.png" style="width: 22px;height: 22px;" />  :<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/WD_Admin_Transfo_Redemarrer.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1040" data-mc-height="428" src="../Z_Resources/Images/02_Captures/WD_Admin_Transfo_Redemarrer.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a><br /><br /></p>
-                                            </li>
-                                        </ol>
-                                        <h3>Activer le mode CSR&#160;sur la file</h3>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">Depuis  l'interface de présentation de la file, cliquez sur <strong>Editer les propriétés</strong>&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/Config_Files_EditerProprietes.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1669" data-mc-height="457" src="../Z_Resources/Images/02_Captures/Config_Files_EditerProprietes.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a><br /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>Dans l'interface<strong> Propriétés de la file d'impression,</strong> cliquez sur le libellé <strong>Périphériques</strong> ;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>Dans la section <strong>CSR</strong>, optez pour le paramètre <strong>Préférer le mode Client Side Rendering (CSR activé)</strong> :<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/WD_Admin_Transfo_CSR.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1675" data-mc-height="1016" src="../Z_Resources/Images/02_Captures/WD_Admin_Transfo_CSR.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a><br /></p>
-                                            </li>
-                                        </ol>
-                                        <h3>Activer la transformation de spool sur la file</h3>
-                                        <ol data-mc-continue="false">
-                                            <li value="1">
-                                                <p class="Resultat">Dans l'interface<strong> Propriétés de la file d'impression,</strong> cliquez sur le libellé <strong>WES</strong>. <br />La section <strong>Transformation des spools </strong>se trouve juste en-dessous :<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/Config_Files_TransfoSpools_V60.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1683" data-mc-height="926" src="../Z_Resources/Images/02_Captures/Config_Files_TransfoSpools_V60.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a><br /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="2">
-                                                <p>Configurez la fonction de transformation de spools :<br /><br /></p>
-                                                <ul>
-                                                    <li>
-                                                        <p><strong>Mode de transformation</strong> : </p>
-                                                        <ul>
-                                                            <li>
-                                                                <p><strong>Utiliser la valeur du groupe</strong> : permet d'appliquer sur la file le paramétrage de transformation défini pour le groupe de files.</p>
-                                                            </li>
-                                                        </ul>
-                                                        <ul>
-                                                            <li>
-                                                                <p><strong>Désactivé</strong> : permet de désactiver la fonction sur cette file, quel que soit le paramétrage appliqué aux niveaux supérieurs (groupe ou serveur) ;</p>
-                                                            </li>
-                                                            <li>
-                                                                <p><strong>Activé </strong>: permet d'activer la fonction uniquement sur cette file quel que soit le paramétrage appliqué aux niveaux supérieurs (groupe ou serveur) ;</p>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Diagnostic</strong> : activer le traçage des spools : cochez la case si vous souhaitez que les spools soient conservés et définissez les conditions de traçage&#160;:</p>
-                                                        <ul>
-                                                            <li>
-                                                                <p><strong>Niveau de traces : </strong>dans la liste, sélectionnez le niveau des traces que vous souhaitez conserver (aucune, erreurs, spools édités et tous) ;</p>
-                                                            </li>
-                                                            <li>
-                                                                <p><strong>Activer pendant  :</strong>dans la liste, sélectionnez la durée pendant laquelle vous souhaitez activer le traçage des spools (une heure, un jour, une semaine ou un mois) :<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/WES/Config_WES_File_TransfoSpools.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="785" data-mc-height="143" src="../Z_Resources/Images/02_Captures/WES/Config_WES_File_TransfoSpools.png" tabindex="" style="max-width: 1000px;" /></a><br /></p>
-                                                                <p>&#160;</p>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                                <fieldset>L'activation de la fonction de transformation de spools enclenche automatiquement l'activation du mode Client Site Rendering (<a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term9">Demande CSR<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>(Certificat Signing Request). Dans une infrastructure PKI (Public Key Infrastructure / Infrastructure à Clés Publiques), une demande de signature de certificat (en anglais CSR pour Certificate Signing Request) est un message envoyé à partir d'un demandeur à une autorité de certification afin de demander un certificat d'identité numérique. Le format le plus commun pour les CSR est la spécification PKCS#10.</span></a>) dans la section <strong>Périphériques</strong>.</fieldset>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="3">
-                                                <p class="Liste_num_1">cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Valider.png" style="width: 28px;height: 27px;" /> pour valider le paramétrage de la file. </p>
-                                            </li>
-                                        </ol>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

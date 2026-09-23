@@ -177,604 +177,610 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h3>&#160;Table pnp_queue</h3>
-                                        <h4><span class="span_1">Description</span>
-                                        </h4>
-                                        <p>Lorsqu’une file d’impression est créée via PnP, on va stocker les datas de cette file dans cette table.</p>
-                                        <p>On pourra s’appuyer sur cette table pour consulter les détails, modifier la file, lancer une recréation...</p>
-                                        <p>&#160;</p>
-                                        <h4><span class="span_1">Schéma</span>
-                                        </h4>
-                                        <table style="mc-table-style: url('../Resources/TableSlylesheets/Standard.css');" class="TableStyle-Standard" cellspacing="0">
-                                            <col class="TableStyle-Standard-Column-Regular" />
-                                            <col class="TableStyle-Standard-Column-Regular" />
-                                            <col class="TableStyle-Standard-Column-Regular" />
-                                            <col class="TableStyle-Standard-Column-Regular" />
-                                            <col class="TableStyle-Standard-Column-Regular" />
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2" style="background-color: #ff803b;">
-                                                    <p class="p_1"><strong style="color: #000000;">Field</strong>
-                                                    </p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2" style="background-color: #ff803b;">
-                                                    <p class="p_1"><strong style="color: #000000;">Type</strong>
-                                                    </p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2" style="background-color: #ff803b;">
-                                                    <p><strong style="color: #000000;">Requis</strong>
-                                                    </p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2" style="background-color: #ff803b;">
-                                                    <p class="p_3"><strong style="color: #000000;">CP</strong>
-                                                    </p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2" style="background-color: #ff803b;">
-                                                    <p class="p_1"><strong style="color: #000000;">Description</strong>
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>queID</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>uniqueidentifier</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>Identifiant Guid</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>queMODELID</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>int</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>Référence vers pnp_queue_model</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>queDRIVERID</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>int</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>Référence vers pnp_driver</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>queVENDORID</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>nvarchar(max)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>Pas exploité, toujours NULL</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>queWDQUEUEID</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>nvarchar(max)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>Identifiant de la file dans Watchdoc si déclarée dans Watchdoc, NULL sinon</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>queWESID</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>nvarchar(max)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>WesId dans Watchdoc, -1 si pas de Wes.</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>queSTATUSID</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>int</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>Status de la file&#160;suite à la dernière opération subie&#160;:</p>
-                                                    <p>1 = En cours de création</p>
-                                                    <p>2 = OK</p>
-                                                    <p>3 = Création failed</p>
-                                                    <p>4 = En cours de modification</p>
-                                                    <p>5 = Modification failed</p>
-                                                    <p>6 = En cours de suppression</p>
-                                                    <p>7 = Supprimée</p>
-                                                    <p>8 = Suppression failed</p>
-                                                    <p>9 = En cours de transfert</p>
-                                                    <p>10 = Transférée</p>
-                                                    <p>11 = Transfert failed</p>
-                                                    <p class="p_2">12 = En cours de restauration</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>queSERVERID</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>nvarchar(max)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>Identifiant du serveur sur lequel la file est installée</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>queSERVERFQDN</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>nvarchar(max)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>FQDN du serveur sur lequel la file est installée</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>queNAME</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>nvarchar(max)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>Nom de la file</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p class="p_2">queFQDN</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>nvarchar(max)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>FQDN de la file</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>queIPADDRESS</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>nvarchar(64)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>Pas exploité, toujours NULL</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>queLOCATION</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>nvarchar(max)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>Location de la file</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>queCOMMENT</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>nvarchar(max)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>Commentaire</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>quePORTNAME</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>nvarchar(max)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>Pas exploité, toujours NULL</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>queQUEUENAME</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>nvarchar(max)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>Pas exploité, toujours NULL</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>quePRINTINGMODE</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>nvarchar(max)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>Mode d’impression&#160;: RAW ou EMF</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>queQUALITY</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>nvarchar(max)</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>Qualité d’impression</p>
-                                                    <p>(Ex&#160;: 300, 600)</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>queISCOLOR</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>bit</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>Impresion couleur possible</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>queISDUPLEX</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>bit</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>Impression duplex possible</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>queSECURITYMODE</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>int</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>Mode de sécurité</p>
-                                                    <p>0 = Aucun</p>
-                                                    <p>1 = Driver (Driver sécurisé)</p>
-                                                    <p class="p_2">2 = Watchdoc (Sécurisé via Wes)</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_2">queISSYNC</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>bit</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>Toujours false, non exploité</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>queCREATIONDATE</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>datetime</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>*</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>Date de création de la file</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>queCREATIONOPE</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>uniqueidentifier</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>OperationId (Guid) de l’opération de création</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>queMODIFICATIONDATE</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>datetime</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>Date de modification ou NULL</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>queMODIFICATIONOPE</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>uniqueidentifier</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>OperationId(Guid) de l’opération de la dernière opération de modification ou NULL</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>queMOVEDATE</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>datetime</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>Date de transfert (d’un serveur à l’autre) ou NULL</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>queMOVEOPE</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>uniqueidentifier</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>OperationId(Guid) de l’opération de la dernière opération de transfert ou NULL</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p class="p_2">queSYNCHRONISATIONDATE</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>datetime</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>Pas exploité&#160;: Toujours null</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p class="p_2">queSYNCHRONISATIONOPE</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>uniqueidentifier</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>Pas exploité&#160;: Toujours null</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row1">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>queDELETIONDATE</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>datetime</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row1">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                    <p>Date de suppression de la file si supprimée, ou null</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="TableStyle-Standard-Body-Row2">
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>queDELETIONOPE</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>uniqueidentifier</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyE-Regular-Row2">
-                                                    <p>&#160;</p>
-                                                </td>
-                                                <td class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                    <p>OperationId (Guid) de la dernière opération de suppression</p>
-                                                </td>
-                                            </tr>
-                                        </table>
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h3>&#160;Table pnp_queue</h3>
+                                                <h4><span class="span_1">Description</span>
+                                                </h4>
+                                                <p>Lorsqu’une file d’impression est créée via PnP, on va stocker les datas de cette file dans cette table.</p>
+                                                <p>On pourra s’appuyer sur cette table pour consulter les détails, modifier la file, lancer une recréation...</p>
+                                                <p>&#160;</p>
+                                                <h4><span class="span_1">Schéma</span>
+                                                </h4>
+                                                <table style="mc-table-style: url('../Resources/TableSlylesheets/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                    <col class="TableStyle-Standard-Column-Regular" />
+                                                    <col class="TableStyle-Standard-Column-Regular" />
+                                                    <col class="TableStyle-Standard-Column-Regular" />
+                                                    <col class="TableStyle-Standard-Column-Regular" />
+                                                    <col class="TableStyle-Standard-Column-Regular" />
+                                                    <tr class="TableStyle-Standard-Body-Row2">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2" style="background-color: #ff803b;">
+                                                            <p class="p_1"><strong style="color: #000000;">Field</strong>
+                                                            </p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2" style="background-color: #ff803b;">
+                                                            <p class="p_1"><strong style="color: #000000;">Type</strong>
+                                                            </p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2" style="background-color: #ff803b;">
+                                                            <p><strong style="color: #000000;">Requis</strong>
+                                                            </p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2" style="background-color: #ff803b;">
+                                                            <p class="p_3"><strong style="color: #000000;">CP</strong>
+                                                            </p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row2" style="background-color: #ff803b;">
+                                                            <p class="p_1"><strong style="color: #000000;">Description</strong>
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row1">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>queID</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>uniqueidentifier</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>*</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>*</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                            <p>Identifiant Guid</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row2">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>queMODELID</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>int</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                            <p>Référence vers pnp_queue_model</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row1">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>queDRIVERID</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>int</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                            <p>Référence vers pnp_driver</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row2">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>queVENDORID</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>nvarchar(max)</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                            <p>Pas exploité, toujours NULL</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row1">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>queWDQUEUEID</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>nvarchar(max)</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                            <p>Identifiant de la file dans Watchdoc si déclarée dans Watchdoc, NULL sinon</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row2">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>queWESID</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>nvarchar(max)</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                            <p>WesId dans Watchdoc, -1 si pas de Wes.</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row1">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>queSTATUSID</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>int</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                            <p>Status de la file&#160;suite à la dernière opération subie&#160;:</p>
+                                                            <p>1 = En cours de création</p>
+                                                            <p>2 = OK</p>
+                                                            <p>3 = Création failed</p>
+                                                            <p>4 = En cours de modification</p>
+                                                            <p>5 = Modification failed</p>
+                                                            <p>6 = En cours de suppression</p>
+                                                            <p>7 = Supprimée</p>
+                                                            <p>8 = Suppression failed</p>
+                                                            <p>9 = En cours de transfert</p>
+                                                            <p>10 = Transférée</p>
+                                                            <p>11 = Transfert failed</p>
+                                                            <p class="p_2">12 = En cours de restauration</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row2">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>queSERVERID</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>nvarchar(max)</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                            <p>Identifiant du serveur sur lequel la file est installée</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row1">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>queSERVERFQDN</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>nvarchar(max)</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                            <p>FQDN du serveur sur lequel la file est installée</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row2">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>queNAME</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>nvarchar(max)</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                            <p>Nom de la file</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row1">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p class="p_2">queFQDN</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>nvarchar(max)</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                            <p>FQDN de la file</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row2">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>queIPADDRESS</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>nvarchar(64)</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                            <p>Pas exploité, toujours NULL</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row1">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>queLOCATION</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>nvarchar(max)</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                            <p>Location de la file</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row2">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>queCOMMENT</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>nvarchar(max)</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                            <p>Commentaire</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row1">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>quePORTNAME</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>nvarchar(max)</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                            <p>Pas exploité, toujours NULL</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row2">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>queQUEUENAME</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>nvarchar(max)</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                            <p>Pas exploité, toujours NULL</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row1">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>quePRINTINGMODE</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>nvarchar(max)</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                            <p>Mode d’impression&#160;: RAW ou EMF</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row2">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>queQUALITY</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>nvarchar(max)</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                            <p>Qualité d’impression</p>
+                                                            <p>(Ex&#160;: 300, 600)</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row1">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>queISCOLOR</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>bit</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>*</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                            <p>Impresion couleur possible</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row2">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>queISDUPLEX</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>bit</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>*</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                            <p>Impression duplex possible</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row1">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>queSECURITYMODE</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>int</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>*</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                            <p>Mode de sécurité</p>
+                                                            <p>0 = Aucun</p>
+                                                            <p>1 = Driver (Driver sécurisé)</p>
+                                                            <p class="p_2">2 = Watchdoc (Sécurisé via Wes)</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row2">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p class="p_2">queISSYNC</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>bit</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                            <p>Toujours false, non exploité</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row1">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>queCREATIONDATE</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>datetime</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>*</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                            <p>Date de création de la file</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row2">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>queCREATIONOPE</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>uniqueidentifier</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                            <p>OperationId (Guid) de l’opération de création</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row1">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>queMODIFICATIONDATE</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>datetime</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                            <p>Date de modification ou NULL</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row2">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>queMODIFICATIONOPE</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>uniqueidentifier</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                            <p>OperationId(Guid) de l’opération de la dernière opération de modification ou NULL</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row1">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>queMOVEDATE</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>datetime</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                            <p>Date de transfert (d’un serveur à l’autre) ou NULL</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row2">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>queMOVEOPE</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>uniqueidentifier</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                            <p>OperationId(Guid) de l’opération de la dernière opération de transfert ou NULL</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row1">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p class="p_2">queSYNCHRONISATIONDATE</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>datetime</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                            <p>Pas exploité&#160;: Toujours null</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row2">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p class="p_2">queSYNCHRONISATIONOPE</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>uniqueidentifier</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                            <p>Pas exploité&#160;: Toujours null</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row1">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>queDELETIONDATE</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>datetime</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row1">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row1">
+                                                            <p>Date de suppression de la file si supprimée, ou null</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="TableStyle-Standard-Body-Row2">
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>queDELETIONOPE</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>uniqueidentifier</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                            <p>&#160;</p>
+                                                        </td>
+                                                        <td class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                            <p>OperationId (Guid) de la dernière opération de suppression</p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                        </aside>
                                     </div>
                                     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
                                     </script>

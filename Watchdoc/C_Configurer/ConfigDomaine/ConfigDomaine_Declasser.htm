@@ -167,6 +167,72 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocDomaineSupprimerdéclasserunserveurmaster" data-magellan-target="WatchdocDomaineSupprimerdéclasserunserveurmaster"><a name="aanchor73"></a>
+                                                    <MadCap:concept term="CFG" />Watchdoc - Domaine - Supprimer (déclasser) un serveur master </h1>
+                                                <h2 id="SupprimerdéclasserunserveurMaster" data-magellan-target="SupprimerdéclasserunserveurMaster"><a name="kanchor1"></a><a name="Supprimer" id="Supprimer"></a>Supprimer (déclasser) un serveur Master</h2>
+                                                <p>Ponctuellement, il peut être nécessaire de déclasser un serveur master, c'est-à-dire lui enlever son rôle de master. </p>
+                                                <fieldset>Déclasser un serveur master est une opération dont les conséquences sont importantes, notamment pour les autres serveurs qui en dépendent.&#160;</fieldset>
+                                                <p>Cette opération doit être réalisée à l'aide de WCLI.<br /></p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1">à l'aide de l'outil de commande, placez-vous dans le répertoire d'installation de Watchdoc : <code>cd "\Program Files\Doxense\Watchdoc"</code> ;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1">lancez la commande permettant d'arrêter le serveur :<code style="font-family: 'Courier New';"> &gt;<b style="font-family: 'Courier New';">net stop watchdoc</b></code></p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p class="Liste_num_1">lorsque le service est arrêté, lancez la commande permettant de déclasser le serveur : &gt;<strong style="font-family: 'Courier New';">wcli SINGLEIFY /force</strong></p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p class="Liste_num_1">confirmez votre demande de déclassement par "<strong style="font-family: 'Courier New';">y</strong>" ;</p>
+                                                    </li>
+                                                </ol>
+                                                <p class="Liste_num_1"><span style="font-family: 'Wingdings'">è</span> l'outil procède au déclassement du master : il vous informe que le serveur est devenu "single master" et vous rend la main.<br />Par ailleurs, depuis la version&#160;6.1.0.5276, Watchdoc génère automatiquement une sauvegarde du fichier de configuration permettant une restauration en cas d'erreur lors de l'opération.&#160;Ce fichier de sauvegarde est enregistré par défaut dans C:Program Files\Doxense\Watchdoc\Data\ et porte la date de sa création.</p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="5">
+                                                        <p class="Liste_num_1">lancez la commande permettant de redémarrer le serveur : &gt; <code style="font-family: 'Courier New';"><b style="font-family: 'Courier New';">net start watchdoc</b></code>:<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Domaine_DeclasserMasterWCLI.png" style="width: 700px;" /></p>
+                                                        <p class="Liste_num_1">
+                                                            <br />
+                                                        </p>
+                                                    </li>
+                                                </ol>
+                                                <p class="Liste_num_1"><span style="font-family: 'Wingdings'">è</span> une fois Watchdoc redémarré, vérifiez dans <strong>Gestion du domaine</strong> que le serveur n'a plus le rôle de master.&#160;</p>
+                                                <h2 id="Sortirunserveurslavedudomaine" data-magellan-target="Sortirunserveurslavedudomaine"><a name="kanchor2"></a>Sortir un serveur slave du domaine</h2>
+                                                <p>Ponctuellement, il peut être nécessaire de supprimer un serveur esclave (slave), ce qui oblige à casser le lien qui le relie au serveur master (maître).</p>
+                                                <p>Cette opération doit être réalisée à l'aide de WCLI&#160;:<br></br></p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1">à l'aide de l'outil de commande, lancez WCLI&#160;: <code>cd "\Program Files\Doxense\Watchdoc\wcli.exe"</code> ;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>lancez la commande permettant de sortir le serveur du domaine :                <code>removeslave /slave=DNS_SLAVE /domain=DOMAIN_ID</code><br /><br /><img src="../../Z_Resources/Images/02_Captures/WCLI_WatchdocCommandLine/WCLI_Removeslave.png" /><![CDATA[
+]]></p>
+                                                        <p><![CDATA[                ]]></p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p class="Liste_num_1">une fois le serveur esclave devenu simple (single) serveur, vous pouvez le supprimer.</p>
+                                                    </li>
+                                                </ol>
+                                                <p class="Liste_num_1"><span style="font-family: 'Wingdings'">è</span> vérifiez dans <strong>Gestion du domaine</strong> que le serveur ne figure plus dans la liste des serveurs slaves du domaine.&#160;</p>
+                                                <p class="Liste_num_1">&#160;</p>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocDomaineSupprimerd%C3%A9classerunserveurmaster">Watchdoc - Domaine - Supprimer (déclasser) un serveur master </a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Supprimerd%C3%A9classerunserveurMaster">Supprimer (déclasser) un serveur Master</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Sortirunserveurslavedudomaine">Sortir un serveur slave du domaine</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -200,56 +266,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor73"></a>
-                                            <MadCap:concept term="CFG" />Watchdoc - Domaine - Supprimer (déclasser) un serveur master </h1>
-                                        <h2><a name="kanchor1"></a><a name="Supprimer" id="Supprimer"></a>Supprimer (déclasser) un serveur Master</h2>
-                                        <p>Ponctuellement, il peut être nécessaire de déclasser un serveur master, c'est-à-dire lui enlever son rôle de master. </p>
-                                        <fieldset>Déclasser un serveur master est une opération dont les conséquences sont importantes, notamment pour les autres serveurs qui en dépendent.&#160;</fieldset>
-                                        <p>Cette opération doit être réalisée à l'aide de WCLI.<br /></p>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">à l'aide de l'outil de commande, placez-vous dans le répertoire d'installation de Watchdoc : <code>cd "\Program Files\Doxense\Watchdoc"</code> ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1">lancez la commande permettant d'arrêter le serveur :<code style="font-family: 'Courier New';"> &gt;<b style="font-family: 'Courier New';">net stop watchdoc</b></code></p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1">lorsque le service est arrêté, lancez la commande permettant de déclasser le serveur : &gt;<strong style="font-family: 'Courier New';">wcli SINGLEIFY /force</strong></p>
-                                            </li>
-                                            <li value="4">
-                                                <p class="Liste_num_1">confirmez votre demande de déclassement par "<strong style="font-family: 'Courier New';">y</strong>" ;</p>
-                                            </li>
-                                        </ol>
-                                        <p class="Liste_num_1"><span style="font-family: 'Wingdings'">è</span> l'outil procède au déclassement du master : il vous informe que le serveur est devenu "single master" et vous rend la main.<br />Par ailleurs, depuis la version&#160;6.1.0.5276, Watchdoc génère automatiquement une sauvegarde du fichier de configuration permettant une restauration en cas d'erreur lors de l'opération.&#160;Ce fichier de sauvegarde est enregistré par défaut dans C:Program Files\Doxense\Watchdoc\Data\ et porte la date de sa création.</p>
-                                        <ol data-mc-continue="true">
-                                            <li value="5">
-                                                <p class="Liste_num_1">lancez la commande permettant de redémarrer le serveur : &gt; <code style="font-family: 'Courier New';"><b style="font-family: 'Courier New';">net start watchdoc</b></code>:<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Domaine_DeclasserMasterWCLI.png" style="width: 700px;" /></p>
-                                                <p class="Liste_num_1">
-                                                    <br />
-                                                </p>
-                                            </li>
-                                        </ol>
-                                        <p class="Liste_num_1"><span style="font-family: 'Wingdings'">è</span> une fois Watchdoc redémarré, vérifiez dans <strong>Gestion du domaine</strong> que le serveur n'a plus le rôle de master.&#160;</p>
-                                        <h2><a name="kanchor2"></a>Sortir un serveur slave du domaine</h2>
-                                        <p>Ponctuellement, il peut être nécessaire de supprimer un serveur esclave (slave), ce qui oblige à casser le lien qui le relie au serveur master (maître).</p>
-                                        <p>Cette opération doit être réalisée à l'aide de WCLI&#160;:<br></br></p>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">à l'aide de l'outil de commande, lancez WCLI&#160;: <code>cd "\Program Files\Doxense\Watchdoc\wcli.exe"</code> ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>lancez la commande permettant de sortir le serveur du domaine :                <code>removeslave /slave=DNS_SLAVE /domain=DOMAIN_ID</code><br /><br /><img src="../../Z_Resources/Images/02_Captures/WCLI_WatchdocCommandLine/WCLI_Removeslave.png" /><![CDATA[
-]]></p>
-                                                <p><![CDATA[                ]]></p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1">une fois le serveur esclave devenu simple (single) serveur, vous pouvez le supprimer.</p>
-                                            </li>
-                                        </ol>
-                                        <p class="Liste_num_1"><span style="font-family: 'Wingdings'">è</span> vérifiez dans <strong>Gestion du domaine</strong> que le serveur ne figure plus dans la liste des serveurs slaves du domaine.&#160;</p>
-                                        <p class="Liste_num_1">&#160;</p>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

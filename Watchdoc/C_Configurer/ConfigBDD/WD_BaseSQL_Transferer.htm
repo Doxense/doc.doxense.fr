@@ -177,147 +177,163 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1>Watchdoc - <a name="aanchor148"></a><MadCap:concept term="WD" />Base de données statistiques Watchdocstats - Transférer</h1>
-                                        <h2>Principe</h2>
-                                        <p>Dans Watchdoc, les données statistiques sont enregistrées dans une base de données dédiée (Watchdocstats) et localisée sur un serveur spécifique. <br />Il peut être nécessaire de transférer ces données statistiques d'un serveur à l'autre.<br />Par exemple, dans le cas d'une configuration en domaine (master/slaves), il est utile de  regrouper dans une seule base (master) les données issues de différents serveurs (slaves) afin de disposer de statistiques globales (du domaine complet). Cela facilite ainsi l'analyse de l'activité d'impression du domaine complet.</p>
-                                        <p>&#160;</p>
-                                        <p>La fonction de transfert permet l'envoi périodique des données statistiques d'un serveur vers l'autre, soit par une action manuelle, soit automatiquement, à l'aide d'une tâche planifiée. <br />Les données transférées peuvent ensuite être conservées ou supprimées de leur base d'origine.</p>
-                                        <h2>Procédure</h2>
-                                        <h3>Activation automatique</h3>
-                                        <p class="Liste_num_1">Accédez à l'interface d'administration de Watchdoc en tant qu'administrateur ; </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">depuis le <strong>Menu principal</strong>, section <strong>Configuration</strong> cliquez sur <strong>Configuration avancée </strong>;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1">dans l'interface <strong>Configuration avancée</strong>, cliquez sur <strong>Base de statistiques</strong> ;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1">dans l'interface <strong>Base de statistiques</strong>, cliquez sur le bouton<img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_EditerConfiguration.png" style="width: 122px;height: 14px;" />&#160;;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p class="Resultat">vous accédez à l'interface <strong>Paramètres de connexion à la base de données</strong>, section <strong>Statistiques</strong>,</p>
-                                            </li>
-                                            <li value="5">
-                                                <p class="Liste_num_1">dans la section <strong>Transfert de données </strong>: </p>
-                                                <ul>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Activé </strong>: cochez la case pour activer le transfert des données de la base concernée vers une autre base ; </p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Planification </strong>: dans la liste déroulante, sélectionnez le mode et la périodicité du transfert de données :</p>
-                                                        <ul>
-                                                            <li>
-                                                                <p class="Liste_puce_2"><strong>Sur demande (manuellement)</strong> : pour effectuer le transfert de manière aléatoire et manuel (cf. procédure ci-après) ;</p>
-                                                            </li>
-                                                            <li>
-                                                                <p class="Liste_puce_2"><strong>Tous les</strong>... : choisissez la fréquence à laquelle la base doit être transférée.</p>
-                                                            </li>
-                                                            <li>
-                                                                <p class="Liste_puce_2"><strong>Décaler le démarrage de manière aléatoire </strong>: cochez la case pour faire en sorte que le transfert ait lieu à la fréquence programmée, mais que son lancement ne soit pas démarré à la même heure. Ce paramètre permet d'éviter une surcharge de la bandes-passantes ou des capacités des serveurs lorsque le transfert est activé sur un grand nombre de serveurs ;</p>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Connexion </strong>: indiquez dans cette section tous les paramètres permettant d'accéder au serveur SQL&#160;distant avec lequel doit être établi le transfert : </p>
-                                                        <ul>
-                                                            <li>
-                                                                <p class="Liste_puce_2"><strong>Type :</strong> dans la liste, sélectionnez le type du serveur de données ; </p>
-                                                            </li>
-                                                            <li>
-                                                                <p class="Liste_puce_2"><strong>Serveur SQL :</strong> précisez le nom du serveur SQL (sauf pour un serveur SQLite). Si vous ne connaissez pas le nom du serveur, cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Parcourir.png" style="width: 24px;height: 19px;" /> pour parcourir le réseau afin d'y sélectionner le serveur SQL ;</p>
-                                                            </li>
-                                                            <li>
-                                                                <p>Authentification : précisez le type d'authentification souhaité ; </p>
-                                                            </li>
-                                                            <li>
-                                                                <p class="Liste_puce_2"><strong>Nom d'utilisateur :</strong> saisissez le nom du compte d'administration habilité à accéder au serveur ; </p>
-                                                            </li>
-                                                            <li>
-                                                                <p class="Liste_puce_2"><strong>Mot de passe :</strong> saisissez le mot de passe du compte d'administration autorisé à accéder au serveur ;</p>
-                                                            </li>
-                                                            <li>
-                                                                <p class="Liste_puce_2"><strong>Base de données :</strong> indiquez le nom de la base de données statistiques (si elle ne porte pas le nom par défaut) ). Si vous ne connaissez pas le nom de la base de données, cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Parcourir.png" style="width: 24px;height: 19px;" /> pour parcourir le réseau afin d'y sélectionner la base ;</p>
-                                                            </li>
-                                                            <li>
-                                                                <p class="Liste_puce_2"><strong>Chemin</strong> : pour une base de type <strong>SQLite</strong>, indiquez le chemin permettant d'accéder au fichier de données ;</p>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_1"><strong>Opérations :</strong> cliquez sur le bouton <strong>Vérifier la base de données</strong> pour tester la connexion avec la base de données dont les paramètres ont été saisis dans la section <strong>Connexion</strong>.</p>
-                                                        <li>
-                                                            <p class="Liste_puce_1"><strong>Paramètres </strong>: précisez :</p>
-                                                        </li>
-                                                        <ul>
-                                                            <li>
-                                                                <p class="Liste_puce_2"><strong>Direction mode Push :</strong> sélectionnez ce mode pour envoyer les données du serveur local vers le serveur distant ou le mode <strong>Pull </strong>pour transférer les données d'un serveur distant vers le serveur local. Le scénario privilégié est de se placer sur chaque serveur Watchdoc et d'opter pour le transfert en mode <strong>Push</strong> vers le serveur maître (master). </p>
-                                                            </li>
-                                                            <li>
-                                                                <p class="Liste_puce_2"><strong>Direction mode Pull :</strong> permet notamment d'optimiser le transfert lorsque la base statistiques est agrégée*, mais ce mode doit être manipulé avec précaution&#160;: n'hésitez pas à solliciter l'équipe Support Doxense pour toute interrogation à ce sujet.<br />Dans une configuration en domaine (maître/esclaves - master/slaves) où les serveurs sont nombreux, les statistiques d'utilisation de Watchdoc peuvent devenir encombrantes pour le serveur maître.<br />Il peut alors être utile de déléguer le travail d'agrégation et d'affichage des données statistiques à un serveur dédié.&#160;<br />Dans ce cas, le transfert peut être programmé entre le serveur d'agrégation et le serveur maître selon le mode "pull" :<br /><br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/03_Schemas/WD_SCH_AgregationStats.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="2936" data-mc-height="2322" src="../../Z_Resources/Images/03_Schemas/WD_SCH_AgregationStats.png" tabindex="" style="width: 500px;height: auto;max-width: 1000px;" /></a></p>
-                                                                <p>&#160;</p>
-                                                            </li>
-                                                            <li>
-                                                                <p><strong>Cible :</strong> la cible à laquelle vous vous connectez est le serveur SQL distant (notez qu'en fonction de la Direction choisie, ce serveur peut être une "cible" ou une "source") : </p>
-                                                            </li>
-                                                            <li>
-                                                                <p class="Liste_puce_2"><strong>Format BdD :</strong> sélectionnez, dans la liste, la version de Watchdoc dont la base de données cible dépend&#160;;</p>
-                                                            </li>
-                                                            <li>
-                                                                <p class="Liste_puce_2"><strong>Inclure les données des autres serveurs :</strong> cochez la case dans le cas où la base de données statistiques du serveur concerné contient également les données d'autres serveurs, afin qu'elles soient également transférées ; </p>
-                                                            </li>
-                                                        </ul>
-                                                        <ul>
-                                                            <li>
-                                                                <p class="Liste_puce_1"><strong>Requête exécutée AVANT/APRES les opérations de réplication :</strong> dans ces champs, saisissez une ou plusieurs requêtes SQL soumises à la base de données avant ou après la réplication.&#160;Ces requêtes permettent, par exemple, d'appliquer des changements sur les données faisant l'objet de la réplication (noms des utilisateurs, par exemple) ;</p>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ol>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Timeouts :</strong> indiquez les délais permettant de limiter le temps de connexion et d'exécution des requêtes ;</p>
-                                            </li>
-                                        </ul>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Nettoyage :</strong> précisez, dans cette section, les conditions de rétention, sur le serveur d'origine, des données&#160;:</p>
-                                                <ul>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>supprimer automatiquement les données répliquées :</strong> définissez le délai de rétention, sur le serveur d'origine, des données transférées vers une autre base : au-delà de ce délai, les données sont supprimées ; </p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>supprimer toutes les autres données : </strong>définissez le délai de péremption au-delà duquel toutes les données (qu'elles aient été transférées ou non), sont supprimées.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_BddStats_Transferer_SectionTransfert.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="685" data-mc-height="649" src="../../Z_Resources/Images/02_Captures/Config_BddStats_Transferer_SectionTransfert.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a></p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                        <p class="Liste_puce_2">
-                                            <br />
-                                        </p>
-                                        <ol data-mc-continue="true">
-                                            <li value="6">
-                                                <p class="Liste_num_1">Une fois les données saisies, cliquez sur le bouton<strong> Vérifier la base de données </strong><img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Verifier_Bdd.png" style="width: 175px;height: 20px;" />.</p>
-                                                <p class="Liste_num_1"><span style="font-family: 'Wingdings'">è</span> un message vous indique le résultat de la vérification.&#160;En cas d'échec, corrigez les données saisies avant de tenter une nouvelle vérification.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_BddStats_Transferer_Verification.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="556" data-mc-height="308" src="../../Z_Resources/Images/02_Captures/Config_BddStats_Transferer_Verification.png" tabindex="" style="width: 361px;height: 199px;max-width: 1000px;" /></a></p>
-                                            </li>
-                                        </ol>
-                                        <h3>Activation manuelle</h3>
-                                        <p>Si vous avez opté pour le transfert en mode <strong>Manuel</strong>, procédez comme suit&#160;: </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">dans l'interface <strong>Configuration avancée</strong>, cliquez sur <strong>Base de statistiques</strong> ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1">dans l'interface <strong>Base de statistiques</strong>, section <strong>Réplication </strong>de données, cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_DemarrerReplication.png" style="width: 170px;height: 14px;" />&#160;;<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_BddStats_Transferer_ManuelDemarrer.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="847" data-mc-height="351" src="../../Z_Resources/Images/02_Captures/Config_BddStats_Transferer_ManuelDemarrer.png" tabindex="" style="width: 503px;height: 202px;max-width: 1000px;" /></a></p>
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocBasededonnéesstatistiquesWatchdocstatsTransférer" data-magellan-target="WatchdocBasededonnéesstatistiquesWatchdocstatsTransférer">Watchdoc - <a name="aanchor148"></a><MadCap:concept term="WD" />Base de données statistiques Watchdocstats - Transférer</h1>
+                                                <h2 id="Principe" data-magellan-target="Principe">Principe</h2>
+                                                <p>Dans Watchdoc, les données statistiques sont enregistrées dans une base de données dédiée (Watchdocstats) et localisée sur un serveur spécifique. <br />Il peut être nécessaire de transférer ces données statistiques d'un serveur à l'autre.<br />Par exemple, dans le cas d'une configuration en domaine (master/slaves), il est utile de  regrouper dans une seule base (master) les données issues de différents serveurs (slaves) afin de disposer de statistiques globales (du domaine complet). Cela facilite ainsi l'analyse de l'activité d'impression du domaine complet.</p>
                                                 <p>&#160;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Resultat">un message vous informe que le transfert est en cours :<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_BddStats_Transferer_ManuelEnCours.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="695" data-mc-height="311" src="../../Z_Resources/Images/02_Captures/Config_BddStats_Transferer_ManuelEnCours.png" tabindex="" style="width: 485px;height: 216px;max-width: 1000px;" /></a></p>
-                                            </li>
-                                        </ol>
+                                                <p>La fonction de transfert permet l'envoi périodique des données statistiques d'un serveur vers l'autre, soit par une action manuelle, soit automatiquement, à l'aide d'une tâche planifiée. <br />Les données transférées peuvent ensuite être conservées ou supprimées de leur base d'origine.</p>
+                                                <h2 id="Procédure" data-magellan-target="Procédure">Procédure</h2>
+                                                <h3>Activation automatique</h3>
+                                                <p class="Liste_num_1">Accédez à l'interface d'administration de Watchdoc en tant qu'administrateur ; </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1">depuis le <strong>Menu principal</strong>, section <strong>Configuration</strong> cliquez sur <strong>Configuration avancée </strong>;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1">dans l'interface <strong>Configuration avancée</strong>, cliquez sur <strong>Base de statistiques</strong> ;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p class="Liste_num_1">dans l'interface <strong>Base de statistiques</strong>, cliquez sur le bouton<img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_EditerConfiguration.png" style="width: 122px;height: 14px;" />&#160;;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p class="Resultat">vous accédez à l'interface <strong>Paramètres de connexion à la base de données</strong>, section <strong>Statistiques</strong>,</p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p class="Liste_num_1">dans la section <strong>Transfert de données </strong>: </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p class="Liste_puce_1"><strong>Activé </strong>: cochez la case pour activer le transfert des données de la base concernée vers une autre base ; </p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_1"><strong>Planification </strong>: dans la liste déroulante, sélectionnez le mode et la périodicité du transfert de données :</p>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p class="Liste_puce_2"><strong>Sur demande (manuellement)</strong> : pour effectuer le transfert de manière aléatoire et manuel (cf. procédure ci-après) ;</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p class="Liste_puce_2"><strong>Tous les</strong>... : choisissez la fréquence à laquelle la base doit être transférée.</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p class="Liste_puce_2"><strong>Décaler le démarrage de manière aléatoire </strong>: cochez la case pour faire en sorte que le transfert ait lieu à la fréquence programmée, mais que son lancement ne soit pas démarré à la même heure. Ce paramètre permet d'éviter une surcharge de la bandes-passantes ou des capacités des serveurs lorsque le transfert est activé sur un grand nombre de serveurs ;</p>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Connexion </strong>: indiquez dans cette section tous les paramètres permettant d'accéder au serveur SQL&#160;distant avec lequel doit être établi le transfert : </p>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p class="Liste_puce_2"><strong>Type :</strong> dans la liste, sélectionnez le type du serveur de données ; </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p class="Liste_puce_2"><strong>Serveur SQL :</strong> précisez le nom du serveur SQL (sauf pour un serveur SQLite). Si vous ne connaissez pas le nom du serveur, cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Parcourir.png" style="width: 24px;height: 19px;" /> pour parcourir le réseau afin d'y sélectionner le serveur SQL ;</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>Authentification : précisez le type d'authentification souhaité ; </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p class="Liste_puce_2"><strong>Nom d'utilisateur :</strong> saisissez le nom du compte d'administration habilité à accéder au serveur ; </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p class="Liste_puce_2"><strong>Mot de passe :</strong> saisissez le mot de passe du compte d'administration autorisé à accéder au serveur ;</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p class="Liste_puce_2"><strong>Base de données :</strong> indiquez le nom de la base de données statistiques (si elle ne porte pas le nom par défaut) ). Si vous ne connaissez pas le nom de la base de données, cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Parcourir.png" style="width: 24px;height: 19px;" /> pour parcourir le réseau afin d'y sélectionner la base ;</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p class="Liste_puce_2"><strong>Chemin</strong> : pour une base de type <strong>SQLite</strong>, indiquez le chemin permettant d'accéder au fichier de données ;</p>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_1"><strong>Opérations :</strong> cliquez sur le bouton <strong>Vérifier la base de données</strong> pour tester la connexion avec la base de données dont les paramètres ont été saisis dans la section <strong>Connexion</strong>.</p>
+                                                                <li>
+                                                                    <p class="Liste_puce_1"><strong>Paramètres </strong>: précisez :</p>
+                                                                </li>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p class="Liste_puce_2"><strong>Direction mode Push :</strong> sélectionnez ce mode pour envoyer les données du serveur local vers le serveur distant ou le mode <strong>Pull </strong>pour transférer les données d'un serveur distant vers le serveur local. Le scénario privilégié est de se placer sur chaque serveur Watchdoc et d'opter pour le transfert en mode <strong>Push</strong> vers le serveur maître (master). </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p class="Liste_puce_2"><strong>Direction mode Pull :</strong> permet notamment d'optimiser le transfert lorsque la base statistiques est agrégée*, mais ce mode doit être manipulé avec précaution&#160;: n'hésitez pas à solliciter l'équipe Support Doxense pour toute interrogation à ce sujet.<br />Dans une configuration en domaine (maître/esclaves - master/slaves) où les serveurs sont nombreux, les statistiques d'utilisation de Watchdoc peuvent devenir encombrantes pour le serveur maître.<br />Il peut alors être utile de déléguer le travail d'agrégation et d'affichage des données statistiques à un serveur dédié.&#160;<br />Dans ce cas, le transfert peut être programmé entre le serveur d'agrégation et le serveur maître selon le mode "pull" :<br /><br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/03_Schemas/WD_SCH_AgregationStats.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="2936" data-mc-height="2322" src="../../Z_Resources/Images/03_Schemas/WD_SCH_AgregationStats.png" tabindex="" style="width: 500px;height: auto;max-width: 1000px;" /></a></p>
+                                                                        <p>&#160;</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p><strong>Cible :</strong> la cible à laquelle vous vous connectez est le serveur SQL distant (notez qu'en fonction de la Direction choisie, ce serveur peut être une "cible" ou une "source") : </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p class="Liste_puce_2"><strong>Format BdD :</strong> sélectionnez, dans la liste, la version de Watchdoc dont la base de données cible dépend&#160;;</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p class="Liste_puce_2"><strong>Inclure les données des autres serveurs :</strong> cochez la case dans le cas où la base de données statistiques du serveur concerné contient également les données d'autres serveurs, afin qu'elles soient également transférées ; </p>
+                                                                    </li>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p class="Liste_puce_1"><strong>Requête exécutée AVANT/APRES les opérations de réplication :</strong> dans ces champs, saisissez une ou plusieurs requêtes SQL soumises à la base de données avant ou après la réplication.&#160;Ces requêtes permettent, par exemple, d'appliquer des changements sur les données faisant l'objet de la réplication (noms des utilisateurs, par exemple) ;</p>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ol>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Timeouts :</strong> indiquez les délais permettant de limiter le temps de connexion et d'exécution des requêtes ;</p>
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Nettoyage :</strong> précisez, dans cette section, les conditions de rétention, sur le serveur d'origine, des données&#160;:</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>supprimer automatiquement les données répliquées :</strong> définissez le délai de rétention, sur le serveur d'origine, des données transférées vers une autre base : au-delà de ce délai, les données sont supprimées ; </p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>supprimer toutes les autres données : </strong>définissez le délai de péremption au-delà duquel toutes les données (qu'elles aient été transférées ou non), sont supprimées.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_BddStats_Transferer_SectionTransfert.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="685" data-mc-height="649" src="../../Z_Resources/Images/02_Captures/Config_BddStats_Transferer_SectionTransfert.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a></p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                                <p class="Liste_puce_2">
+                                                    <br />
+                                                </p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="6">
+                                                        <p class="Liste_num_1">Une fois les données saisies, cliquez sur le bouton<strong> Vérifier la base de données </strong><img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Verifier_Bdd.png" style="width: 175px;height: 20px;" />.</p>
+                                                        <p class="Liste_num_1"><span style="font-family: 'Wingdings'">è</span> un message vous indique le résultat de la vérification.&#160;En cas d'échec, corrigez les données saisies avant de tenter une nouvelle vérification.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_BddStats_Transferer_Verification.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="556" data-mc-height="308" src="../../Z_Resources/Images/02_Captures/Config_BddStats_Transferer_Verification.png" tabindex="" style="width: 361px;height: 199px;max-width: 1000px;" /></a></p>
+                                                    </li>
+                                                </ol>
+                                                <h3>Activation manuelle</h3>
+                                                <p>Si vous avez opté pour le transfert en mode <strong>Manuel</strong>, procédez comme suit&#160;: </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1">dans l'interface <strong>Configuration avancée</strong>, cliquez sur <strong>Base de statistiques</strong> ;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1">dans l'interface <strong>Base de statistiques</strong>, section <strong>Réplication </strong>de données, cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_DemarrerReplication.png" style="width: 170px;height: 14px;" />&#160;;<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_BddStats_Transferer_ManuelDemarrer.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="847" data-mc-height="351" src="../../Z_Resources/Images/02_Captures/Config_BddStats_Transferer_ManuelDemarrer.png" tabindex="" style="width: 503px;height: 202px;max-width: 1000px;" /></a></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p class="Resultat">un message vous informe que le transfert est en cours :<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_BddStats_Transferer_ManuelEnCours.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="695" data-mc-height="311" src="../../Z_Resources/Images/02_Captures/Config_BddStats_Transferer_ManuelEnCours.png" tabindex="" style="width: 485px;height: 216px;max-width: 1000px;" /></a></p>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocBasededonn%C3%A9esstatistiquesWatchdocstatsTransf%C3%A9rer">Watchdoc - Base de données statistiques Watchdocstats - Transférer</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Principe">Principe</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Proc%C3%A9dure">Procédure</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
                                     </div>
                                     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
                                     </script>

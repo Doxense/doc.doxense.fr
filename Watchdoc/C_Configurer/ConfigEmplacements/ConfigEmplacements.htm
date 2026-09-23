@@ -200,71 +200,90 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor178"></a>
-                                            <MadCap:concept term="WD" />Watchdoc - Emplacements - Présentation</h1>
-                                        <h2>Principe</h2>
-                                        <p>Dans Watchdoc, un emplacement est un libellé appartenant à une liste structurée de sites géographiques. Il permet de localiser physiquement des éléments d'un parc d'impression (périphériques d'impression, serveurs, files, utilisateurs, etc.). <br /><br />Il existe différents types d'emplacements correspondant à différents niveaux hiérarchiques (de Monde à Site). </p>
-                                        <p>&#160;</p>
-                                        <p>Par ailleurs, les emplacements permettent de détecter les serveurs et files d'impression disponibles pour un utilisateur de WPC&#160;en fonction des adresses IP du Watchdoc Print Client utilisé et des éléments du parc d'impression.&#160;</p>
-                                        <p>&#160;</p>
-                                        <p>Les emplacements sont administrables depuis l'interface d'administration de Watchdoc. </p>
-                                        <p>Dans un domaine (master/slaves), les  emplacements sont  gérés depuis le serveur <b>master</b> et non depuis les slaves. Dans les serveurs slaves, l'administrateur peut consulter la liste des emplacements.</p>
-                                        <p>&#160;</p>
-                                        <p>L'emplacement <strong>Monde</strong> est la localisation par défaut dont dépendent tous les autres emplacements. Les emplacements doivent être créés sous celui-ci.</p>
-                                        <p>&#160;</p>
-                                        <h2>Prérequis</h2>
-                                        <ul>
-                                            <li>
-                                                <p>Lors de la configuration initiale, il est possible de ne pas préciser d'emplacements si vous utilisez Watchdoc seul.</p>
-                                            </li>
-                                            <li>
-                                                <p>En revanche, il est obligatoire de configurer les emplacements pour utiliser un ou les Watchdoc Print Clients suivants&#160;: </p>
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocEmplacementsPrésentation" data-magellan-target="WatchdocEmplacementsPrésentation"><a name="aanchor178"></a>
+                                                    <MadCap:concept term="WD" />Watchdoc - Emplacements - Présentation</h1>
+                                                <h2 id="Principe" data-magellan-target="Principe">Principe</h2>
+                                                <p>Dans Watchdoc, un emplacement est un libellé appartenant à une liste structurée de sites géographiques. Il permet de localiser physiquement des éléments d'un parc d'impression (périphériques d'impression, serveurs, files, utilisateurs, etc.). <br /><br />Il existe différents types d'emplacements correspondant à différents niveaux hiérarchiques (de Monde à Site). </p>
+                                                <p>&#160;</p>
+                                                <p>Par ailleurs, les emplacements permettent de détecter les serveurs et files d'impression disponibles pour un utilisateur de WPC&#160;en fonction des adresses IP du Watchdoc Print Client utilisé et des éléments du parc d'impression.&#160;</p>
+                                                <p>&#160;</p>
+                                                <p>Les emplacements sont administrables depuis l'interface d'administration de Watchdoc. </p>
+                                                <p>Dans un domaine (master/slaves), les  emplacements sont  gérés depuis le serveur <b>master</b> et non depuis les slaves. Dans les serveurs slaves, l'administrateur peut consulter la liste des emplacements.</p>
+                                                <p>&#160;</p>
+                                                <p>L'emplacement <strong>Monde</strong> est la localisation par défaut dont dépendent tous les autres emplacements. Les emplacements doivent être créés sous celui-ci.</p>
+                                                <p>&#160;</p>
+                                                <h2 id="Prérequis" data-magellan-target="Prérequis">Prérequis</h2>
                                                 <ul>
                                                     <li>
-                                                        <p>WPC&#160;for Android</p>
+                                                        <p>Lors de la configuration initiale, il est possible de ne pas préciser d'emplacements si vous utilisez Watchdoc seul.</p>
                                                     </li>
                                                     <li>
-                                                        <p>WPC&#160;for Chrome</p>
+                                                        <p>En revanche, il est obligatoire de configurer les emplacements pour utiliser un ou les Watchdoc Print Clients suivants&#160;: </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>WPC&#160;for Android</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>WPC&#160;for Chrome</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>WPC for iOS</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>WPC&#160;for Windows</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Skyprint</p>
+                                                            </li>
+                                                        </ul>
                                                     </li>
                                                     <li>
-                                                        <p>WPC for iOS</p>
+                                                        <p>Il est nécessaire de connaître l'infrastructure réseau, notamment des plages d'adresses IP, pour configurer les emplacements et surtout le niveau "site".</p>
                                                     </li>
                                                     <li>
-                                                        <p>WPC&#160;for Windows</p>
+                                                        <p>Le serveur doit être associé à un emplacement pour être en mesure de router les travaux d'impression vers les périphériques d'impression à l'aide des Print Clients.&#160;Si un serveur figure dans l'emplacement <b>Indéterminé</b>, il n'est pas en mesure de traiter les demandes d'impression adressées par les Print Clients.<br /></p>
                                                     </li>
                                                     <li>
-                                                        <p>Skyprint</p>
+                                                        <p>Le <strong>site</strong>, dernier emplacement de la hiérarchie, est associé  à une liste d'adresse IP de sous-réseaux afin de détecter automatiquement les périphériques d'impression connectés à un serveur. De même, grâce à l'adresse IP&#160;de connexion des postes, Watchdoc  peut localiser automatiquement les utilisateurs qui utilisent Watchdoc Print Client.</p>
                                                     </li>
                                                 </ul>
-                                            </li>
-                                            <li>
-                                                <p>Il est nécessaire de connaître l'infrastructure réseau, notamment des plages d'adresses IP, pour configurer les emplacements et surtout le niveau "site".</p>
-                                            </li>
-                                            <li>
-                                                <p>Le serveur doit être associé à un emplacement pour être en mesure de router les travaux d'impression vers les périphériques d'impression à l'aide des Print Clients.&#160;Si un serveur figure dans l'emplacement <b>Indéterminé</b>, il n'est pas en mesure de traiter les demandes d'impression adressées par les Print Clients.<br /></p>
-                                            </li>
-                                            <li>
-                                                <p>Le <strong>site</strong>, dernier emplacement de la hiérarchie, est associé  à une liste d'adresse IP de sous-réseaux afin de détecter automatiquement les périphériques d'impression connectés à un serveur. De même, grâce à l'adresse IP&#160;de connexion des postes, Watchdoc  peut localiser automatiquement les utilisateurs qui utilisent Watchdoc Print Client.</p>
-                                            </li>
-                                        </ul>
-                                        <h2>Principes de routage</h2>
-                                        <ul>
-                                            <li>
-                                                <p>Quand un utilisateur choisit un emplacement, il obtient la liste des emplacements de type "Sites" auxquels sont associés les périphériques d'impression.</p>
-                                            </li>
-                                            <li>
-                                                <p>Si un serveur est associé à ce Site (ou si ce Site dépend d'un parent associé à un serveur), ce serveur traite la demande d'impression.</p>
-                                            </li>
-                                            <li>
-                                                <p>En revanche, si le site n'est associé à aucun serveur (ou s'il dépend d'un parent qui n'est associé à aucun serveur), aucun serveur ne traite la demande d'impression. Dans ce cas, il est donc possible que l'utilisateur voie des périphériques d'impression associés au site mais qu'il ne puisse pas imprimer. D'où l'importance d'associer un serveur d'impression à chaque emplacement de type "site" (ou parent du site).</p>
-                                            </li>
-                                            <li>
-                                                <p>De plus, un routage peut être envisagé entre plusieurs serveurs. Dans ce cas, la route doit partir du serveur master pour aller vers un serveur slave. Dans le sens inverse, le routage ne fonctionne pas.</p>
-                                            </li>
-                                        </ul>
+                                                <h2 id="Principesderoutage" data-magellan-target="Principesderoutage">Principes de routage</h2>
+                                                <ul>
+                                                    <li>
+                                                        <p>Quand un utilisateur choisit un emplacement, il obtient la liste des emplacements de type "Sites" auxquels sont associés les périphériques d'impression.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Si un serveur est associé à ce Site (ou si ce Site dépend d'un parent associé à un serveur), ce serveur traite la demande d'impression.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>En revanche, si le site n'est associé à aucun serveur (ou s'il dépend d'un parent qui n'est associé à aucun serveur), aucun serveur ne traite la demande d'impression. Dans ce cas, il est donc possible que l'utilisateur voie des périphériques d'impression associés au site mais qu'il ne puisse pas imprimer. D'où l'importance d'associer un serveur d'impression à chaque emplacement de type "site" (ou parent du site).</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>De plus, un routage peut être envisagé entre plusieurs serveurs. Dans ce cas, la route doit partir du serveur master pour aller vers un serveur slave. Dans le sens inverse, le routage ne fonctionne pas.</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocEmplacementsPr%C3%A9sentation">Watchdoc - Emplacements - Présentation</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Principe">Principe</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Pr%C3%A9requis">Prérequis</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Principesderoutage">Principes de routage</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
                                     </div>
-                                    <p>&#160;</p>
+                                    <!--<MadCap:miniTocProxy />
+        <MadCap:bodyProxy class=".body-container" />-->
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">
                                             <button class="button elearning-button needs-pie previous-topic-button" title="Précédent" disabled="true">

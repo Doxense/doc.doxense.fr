@@ -165,6 +165,86 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocActiverlaconfigurationcentraliséeréplication" data-magellan-target="WatchdocActiverlaconfigurationcentraliséeréplication"><a name="aanchor290"></a>
+                                                    <MadCap:concept term="CFG;WD" />Watchdoc - Activer la configuration centralisée / réplication</h1>
+                                                <h2 id="Principe" data-magellan-target="Principe">Principe</h2>
+                                                <p>Watchdoc permet de synchroniser différents éléments de configuration entre le serveur master et les autres serveurs qui en dépendent.&#160;<br /></p>
+                                                <p>Cette réplication est activable pour les éléments de configuration suivants&#160;:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1">Files d'impression</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">Tarifs</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">Annuaires</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">Filtres</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Notifications</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Profils de sécurité</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Profils de déblocage</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Télémétrie (communication des données à WSC - Console de Supervision)</p>
+                                                    </li>
+                                                </ul>
+                                                <p>&#160;</p>
+                                                <fieldset> Une fois activée, la configuration centralisée ne peut pas être désactivée.&#160;<br /></fieldset>
+                                                <h2 id="Activerlaréplication" data-magellan-target="Activerlaréplication">Activer la réplication</h2>
+                                                <p>Pour activer la réplication d'un élément de configuration depuis le serveur master&#160;: </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1">dans l'interface d'administration Watchdoc du serveur master, sélectionnez l'élément de configuration à répliquer ; </p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1">cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Modifier.png" style="width: 17px;height: 17px;"></img><strong>Editer les propriétés</strong> de l'élément de configuration à répliquer (groupe de files et annuaires dans l'exemple) ;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p class="Liste_num_1">dans la section <strong>Informations générales</strong>, cochez la case <strong>Global</strong> ;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p class="Liste_num_1">cliquez sur <strong>Valider </strong>pour enregistrer la configuration : <br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Groupe_SectionInfoGen_GlobalMaster.png" /></p>
+                                                        <p class="Liste_num_1"><cite>Exemple de centralisation d'une groupe de file</cite>
+                                                        </p>
+                                                        <p class="Liste_num_1" style="text-align: left;">
+                                                            <br />
+                                                            <img src="../../Z_Resources/Images/02_Captures/Config_Annuaire_AnnuaireUtil_Global.png" style="width: 759px;height: 218px;" />
+                                                        </p>
+                                                        <p class="Liste_num_1" style="text-align: left;"><cite>Exemple de centralisation d'une groupe de file</cite>
+                                                        </p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                </ol>
+                                                <p><span style="font-family: 'Wingdings'">è</span> Une fois le paramètre déclaré comme <strong>Global</strong>, il est répliqué sur tous les serveurs Watchdoc et toute modification effectuée sur le serveur master est automatiquement répliquée sur tous les autres serveurs (le délai de réplication dépend du mode de synchronisation appliqué dans le domaine, cf.&#160;<a href="ConfigDomaine_ModeSynchro_Config.htm" title="Lien vers le chapitre de gestion du mode de synchronisation">Configurer le mode de synchronisation</a>).</p>
+                                                <p>Une fois cochée, la case <b>Global</b> ne peut pas être décochée.</p>
+                                                <p>Sur le serveur master, le logo <img src="../../Z_Resources/Images/02_Captures/Boutons/icon_GlobalReplique.png" style="width: 23px;height: 20px;"></img> signale les éléments de configuration répliqués sur les autres serveurs.</p>
+                                                <p>Sur les serveurs du domaine, le logo <img src="../../Z_Resources/Images/02_Captures/Boutons/icon_slave.png" style="width: 23px;height: 22px;"></img> précise que la configuration provient du serveur master.</p>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocActiverlaconfigurationcentralis%C3%A9er%C3%A9plication">Watchdoc - Activer la configuration centralisée / réplication</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Principe">Principe</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Activerlar%C3%A9plication">Activer la réplication</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -198,70 +278,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor290"></a>
-                                            <MadCap:concept term="CFG;WD" />Watchdoc - Activer la configuration centralisée / réplication</h1>
-                                        <h2>Principe</h2>
-                                        <p>Watchdoc permet de synchroniser différents éléments de configuration entre le serveur master et les autres serveurs qui en dépendent.&#160;<br /></p>
-                                        <p>Cette réplication est activable pour les éléments de configuration suivants&#160;:</p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1">Files d'impression</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">Tarifs</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">Annuaires</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">Filtres</p>
-                                            </li>
-                                            <li>
-                                                <p>Notifications</p>
-                                            </li>
-                                            <li>
-                                                <p>Profils de sécurité</p>
-                                            </li>
-                                            <li>
-                                                <p>Profils de déblocage</p>
-                                            </li>
-                                            <li>
-                                                <p>Télémétrie (communication des données à WSC - Console de Supervision)</p>
-                                            </li>
-                                        </ul>
-                                        <p>&#160;</p>
-                                        <fieldset> Une fois activée, la configuration centralisée ne peut pas être désactivée.&#160;<br /></fieldset>
-                                        <h2>Activer la réplication</h2>
-                                        <p>Pour activer la réplication d'un élément de configuration depuis le serveur master&#160;: </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">dans l'interface d'administration Watchdoc du serveur master, sélectionnez l'élément de configuration à répliquer ; </p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1">cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Modifier.png" style="width: 17px;height: 17px;"></img><strong>Editer les propriétés</strong> de l'élément de configuration à répliquer (groupe de files et annuaires dans l'exemple) ;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1">dans la section <strong>Informations générales</strong>, cochez la case <strong>Global</strong> ;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p class="Liste_num_1">cliquez sur <strong>Valider </strong>pour enregistrer la configuration : <br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Groupe_SectionInfoGen_GlobalMaster.png" /></p>
-                                                <p class="Liste_num_1"><cite>Exemple de centralisation d'une groupe de file</cite>
-                                                </p>
-                                                <p class="Liste_num_1" style="text-align: left;">
-                                                    <br />
-                                                    <img src="../../Z_Resources/Images/02_Captures/Config_Annuaire_AnnuaireUtil_Global.png" style="width: 759px;height: 218px;" />
-                                                </p>
-                                                <p class="Liste_num_1" style="text-align: left;"><cite>Exemple de centralisation d'une groupe de file</cite>
-                                                </p>
-                                                <p>&#160;</p>
-                                            </li>
-                                        </ol>
-                                        <p><span style="font-family: 'Wingdings'">è</span> Une fois le paramètre déclaré comme <strong>Global</strong>, il est répliqué sur tous les serveurs Watchdoc et toute modification effectuée sur le serveur master est automatiquement répliquée sur tous les autres serveurs (le délai de réplication dépend du mode de synchronisation appliqué dans le domaine, cf.&#160;<a href="ConfigDomaine_ModeSynchro_Config.htm" title="Lien vers le chapitre de gestion du mode de synchronisation">Configurer le mode de synchronisation</a>).</p>
-                                        <p>Une fois cochée, la case <b>Global</b> ne peut pas être décochée.</p>
-                                        <p>Sur le serveur master, le logo <img src="../../Z_Resources/Images/02_Captures/Boutons/icon_GlobalReplique.png" style="width: 23px;height: 20px;"></img> signale les éléments de configuration répliqués sur les autres serveurs.</p>
-                                        <p>Sur les serveurs du domaine, le logo <img src="../../Z_Resources/Images/02_Captures/Boutons/icon_slave.png" style="width: 23px;height: 22px;"></img> précise que la configuration provient du serveur master.</p>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

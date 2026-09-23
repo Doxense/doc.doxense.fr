@@ -201,396 +201,419 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1 style="text-align: left;"><a name="aanchor420"></a>
-                                            <MadCap:concept term="PRT" />
-                                            <MadCap:conditionalText data-mc-conditions="General.Online"><a name="aanchor421"></a>
-                                                <MadCap:concept term="WD" />Watchdoc - </MadCap:conditionalText>Architecture réseau</h1>
-                                        <h2>Schéma des flux et ports réseaux Watchdoc v. 6.1.1</h2>
-                                        <p><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/03_Schemas/WD611_SCH_FluxReseaux.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="639" data-mc-height="465" src="../Z_Resources/Images/03_Schemas/WD611_SCH_FluxReseaux.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a>
-                                        </p>
-                                        <h2>Schéma des flux et ports réseaux Watchdoc versions antérieures à 6.1.1<br /></h2>
-                                        <p><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/03_Schemas/WD60_SCH_FluxReseaux.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="607" data-mc-height="474" src="../Z_Resources/Images/03_Schemas/WD60_SCH_FluxReseaux.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a>
-                                        </p>
-                                        <h2>Matrice des flux réseaux</h2>
-                                        <p>Les ports réseau à ouvrir pour permettre le fonctionnement sont les suivants&#160;:</p>
-                                        <p>&#160;</p>
-                                        <table style="mc-table-style: url('../Resources/TableSlylesheets/Standard.css');border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-left-style: none;border-left-width: 0px;border-left-color: ;border-right-style: none;border-right-width: 0px;border-right-color: ;border-top-style: none;border-top-width: 0px;border-top-color: ;border-bottom-style: none;border-bottom-width: 0px;border-bottom-color: ;margin-left: 0;margin-right: auto;width: 908px;" class="TableStyle-Standard" cellspacing="0">
-                                            <col style="width: auto;" class="TableStyle-Standard-Column-Regular" />
-                                            <col style="width: 240px;" class="TableStyle-Standard-Column-Regular" />
-                                            <col style="width: auto;" class="TableStyle-Standard-Column-Regular" />
-                                            <col style="width: 317px;" class="TableStyle-Standard-Column-Regular" />
-                                            <thead>
-                                                <tr class="TableStyle-Standard-Head-Header1">
-                                                    <td style="text-align: center;font-weight: bold;color: #ffffff;" class="TableStyle-Standard-HeadE-Regular-Header1"><span style="color: #ffffff;">Source</span>
-                                                    </td>
-                                                    <td style="text-align: center;font-weight: bold;color: #ffffff;" class="TableStyle-Standard-HeadE-Regular-Header1">Port</td>
-                                                    <td style="text-align: center;font-weight: bold;color: #ffffff;" class="TableStyle-Standard-HeadE-Regular-Header1">Protocole</td>
-                                                    <td style="text-align: center;font-weight: bold;color: #ffffff;" class="TableStyle-Standard-HeadD-Regular-Header1">Cible</td>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Périphérique d'impression</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">TCP&#160;5754<br />TCP&#160;5753</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">HTTP<br />HTTPS</td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc (kernel)</td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">
-                                                        <p>Site web Watchdoc (IIS) <br /></p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">
-                                                        <p><i>TCP 5744</i><strong style="font-weight: bold; vertical-align: super;">1</strong>
-                                                        </p>
-                                                        <p data-mc-conditions="General.v611">v.&#160;antérieures à la v. 6.1.1</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;"><i>protocole MS&#160;.NET Remoting</i>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc (kernel)</td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row2" data-mc-conditions="General.v611">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">
-                                                        <p>Site web Watchdoc (IIS) <br /></p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">
-                                                        <p data-mc-conditions="General.v611">TCP&#160;5744<br /></p>
-                                                        <p data-mc-conditions="General.v611">à partir de v. 6.1.1.x</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">HTTPS</td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc (kernel)</td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Navigateur : interfaces web</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">TCP 80<br />ou TCP 443</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">HTTP <br />HTTPS</td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Site web Watchdoc (IIS)</td>
-                                                </tr>
-                                                <tr style="height: 50px;" class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">TCP 1433</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">SQL</td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Serveur SGBD Microsoft SQL<sup>®</sup></td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">TCP&#160;5432</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">SQL</td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">PostgreSQL</td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">&#160;</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">ICMP</td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">périphérique d'impression</td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">UDP 161 <br />UDP&#160;162<sup style="font-weight: bold;">2</sup> </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">SNMP</td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">périphérique d'impression</td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">
-                                                        <p style="text-align: left;">TCP&#160;9100</p>
-                                                        <p style="text-align: left;">TCP&#160;515</p>
-                                                        <p style="text-align: left;">TCP&#160;631 ou 443</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">RAW<br />LPD<br />IPPS</td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">périphérique d'impression</td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">TCP 389 
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 style="text-align: left;" id="WatchdocArchitectureréseau" data-magellan-target="WatchdocArchitectureréseau"><a name="aanchor420"></a>
+                                                    <MadCap:concept term="PRT" />
+                                                    <MadCap:conditionalText data-mc-conditions="General.Online"><a name="aanchor421"></a>
+                                                        <MadCap:concept term="WD" />Watchdoc - </MadCap:conditionalText>Architecture réseau</h1>
+                                                <h2 id="SchémadesfluxetportsréseauxWatchdocv611" data-magellan-target="SchémadesfluxetportsréseauxWatchdocv611">Schéma des flux et ports réseaux Watchdoc v. 6.1.1</h2>
+                                                <p><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/03_Schemas/WD611_SCH_FluxReseaux.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="639" data-mc-height="465" src="../Z_Resources/Images/03_Schemas/WD611_SCH_FluxReseaux.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a>
+                                                </p>
+                                                <h2 id="SchémadesfluxetportsréseauxWatchdocversionsantérieuresà611" data-magellan-target="SchémadesfluxetportsréseauxWatchdocversionsantérieuresà611">Schéma des flux et ports réseaux Watchdoc versions antérieures à 6.1.1<br /></h2>
+                                                <p><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/03_Schemas/WD60_SCH_FluxReseaux.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="607" data-mc-height="474" src="../Z_Resources/Images/03_Schemas/WD60_SCH_FluxReseaux.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a>
+                                                </p>
+                                                <h2 id="Matricedesfluxréseaux" data-magellan-target="Matricedesfluxréseaux">Matrice des flux réseaux</h2>
+                                                <p>Les ports réseau à ouvrir pour permettre le fonctionnement sont les suivants&#160;:</p>
+                                                <p>&#160;</p>
+                                                <table style="mc-table-style: url('../Resources/TableSlylesheets/Standard.css');border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-left-style: none;border-left-width: 0px;border-left-color: ;border-right-style: none;border-right-width: 0px;border-right-color: ;border-top-style: none;border-top-width: 0px;border-top-color: ;border-bottom-style: none;border-bottom-width: 0px;border-bottom-color: ;margin-left: 0;margin-right: auto;width: 908px;" class="TableStyle-Standard" cellspacing="0">
+                                                    <col style="width: auto;" class="TableStyle-Standard-Column-Regular" />
+                                                    <col style="width: 240px;" class="TableStyle-Standard-Column-Regular" />
+                                                    <col style="width: auto;" class="TableStyle-Standard-Column-Regular" />
+                                                    <col style="width: 317px;" class="TableStyle-Standard-Column-Regular" />
+                                                    <thead>
+                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                            <td style="text-align: center;font-weight: bold;color: #ffffff;" class="TableStyle-Standard-HeadE-Regular-Header1"><span style="color: #ffffff;">Source</span>
+                                                            </td>
+                                                            <td style="text-align: center;font-weight: bold;color: #ffffff;" class="TableStyle-Standard-HeadE-Regular-Header1">Port</td>
+                                                            <td style="text-align: center;font-weight: bold;color: #ffffff;" class="TableStyle-Standard-HeadE-Regular-Header1">Protocole</td>
+                                                            <td style="text-align: center;font-weight: bold;color: #ffffff;" class="TableStyle-Standard-HeadD-Regular-Header1">Cible</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Périphérique d'impression</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">TCP&#160;5754<br />TCP&#160;5753</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">HTTP<br />HTTPS</td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc (kernel)</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">
+                                                                <p>Site web Watchdoc (IIS) <br /></p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">
+                                                                <p><i>TCP 5744</i><strong style="font-weight: bold; vertical-align: super;">1</strong>
+                                                                </p>
+                                                                <p data-mc-conditions="General.v611">v.&#160;antérieures à la v. 6.1.1</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;"><i>protocole MS&#160;.NET Remoting</i>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc (kernel)</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2" data-mc-conditions="General.v611">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">
+                                                                <p>Site web Watchdoc (IIS) <br /></p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">
+                                                                <p data-mc-conditions="General.v611">TCP&#160;5744<br /></p>
+                                                                <p data-mc-conditions="General.v611">à partir de v. 6.1.1.x</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">HTTPS</td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc (kernel)</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Navigateur : interfaces web</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">TCP 80<br />ou TCP 443</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">HTTP <br />HTTPS</td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Site web Watchdoc (IIS)</td>
+                                                        </tr>
+                                                        <tr style="height: 50px;" class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">TCP 1433</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">SQL</td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Serveur SGBD Microsoft SQL<sup>®</sup></td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">TCP&#160;5432</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">SQL</td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">PostgreSQL</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">&#160;</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">ICMP</td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">périphérique d'impression</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">UDP 161 <br />UDP&#160;162<sup style="font-weight: bold;">2</sup> </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">SNMP</td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">périphérique d'impression</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">
+                                                                <p style="text-align: left;">TCP&#160;9100</p>
+                                                                <p style="text-align: left;">TCP&#160;515</p>
+                                                                <p style="text-align: left;">TCP&#160;631 ou 443</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">RAW<br />LPD<br />IPPS</td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">périphérique d'impression</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">TCP 389 
  <br />TCP 636
 </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Protocole LDAP SSL</td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Serveur annuaire utilisateurs</td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc<p>ou poste de travail </p></td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">TCP&#160;5756 (SSL)</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">
-                                                        <p>HTTPS</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Watchdoc Supervision Console (WSC)</td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">  Watchdoc Notification Serveur<sup>® </sup></td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">TCP 445 </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">SMB</td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Poste utilisateur</td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Watchdoc</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">TCP 5751</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">&#160;</td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Watchdoc Notification</td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Watchdoc Client for...</td>
-                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">TCP&#160;5753</td>
-                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">HTTPS</td>
-                                                    <td class="TableStyle-Standard-BodyA-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Serveur d'impression &amp; serveur maître Watchdoc</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <p>&#160;</p>
-                                        <p><b style="vertical-align: super; font-size: 10pt;">1</b> Par souci de sécurité, Doxense<strong> déconseille la configuration en mode déporté nécessitant l'ouverture du port 5744</strong> avec les protocole .NET Remoting (versions antérieures à la v.&#160;6.1.1).&#160;<br />En conséquence, ce port est automatiquement bloqué dans le pare-feul lors de l'installation de Watchdoc à partir de la v. 6.1.0.5221.&#160;<br />Pour les versions comprises entre la v. 6.1.0.5221 et 6.1.0.5318, si le serveur web IIS&#160;est déporté, il est donc nécessaire de modifier les règles du pare-feu pour permettre au serveur IIS&#160;distant d'accéder à Watchdoc (cf.&#160;<a href="../I_ResolutionDePannes/ADE_Gestion_Port5744.htm" target="_blank">Configurer le port 5744</a>). <br /><b style="vertical-align: super; font-size: 10pt;">2</b> Watchdoc ne gère pas les traps SNMP.</p>
-                                        <p>&#160;</p>
-                                        <fieldset>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Protocole LDAP SSL</td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Serveur annuaire utilisateurs</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc<p>ou poste de travail </p></td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">TCP&#160;5756 (SSL)</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">
+                                                                <p>HTTPS</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Watchdoc Supervision Console (WSC)</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">  Watchdoc Notification Serveur<sup>® </sup></td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">TCP 445 </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">SMB</td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Poste utilisateur</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Watchdoc</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">TCP 5751</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">&#160;</td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Watchdoc Notification</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyB-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Watchdoc Client for...</td>
+                                                            <td class="TableStyle-Standard-BodyB-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">TCP&#160;5753</td>
+                                                            <td class="TableStyle-Standard-BodyB-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">HTTPS</td>
+                                                            <td class="TableStyle-Standard-BodyA-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Serveur d'impression &amp; serveur maître Watchdoc</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p>&#160;</p>
+                                                <p><b style="vertical-align: super; font-size: 10pt;">1</b> Par souci de sécurité, Doxense<strong> déconseille la configuration en mode déporté nécessitant l'ouverture du port 5744</strong> avec les protocole .NET Remoting (versions antérieures à la v.&#160;6.1.1).&#160;<br />En conséquence, ce port est automatiquement bloqué dans le pare-feul lors de l'installation de Watchdoc à partir de la v. 6.1.0.5221.&#160;<br />Pour les versions comprises entre la v. 6.1.0.5221 et 6.1.0.5318, si le serveur web IIS&#160;est déporté, il est donc nécessaire de modifier les règles du pare-feu pour permettre au serveur IIS&#160;distant d'accéder à Watchdoc (cf.&#160;<a href="../I_ResolutionDePannes/ADE_Gestion_Port5744.htm" target="_blank">Configurer le port 5744</a>). <br /><b style="vertical-align: super; font-size: 10pt;">2</b> Watchdoc ne gère pas les traps SNMP.</p>
+                                                <p>&#160;</p>
+                                                <fieldset>
 		Si l'architecture réseau inclut un pare-feu, il est nécessaire que ce pare-feu autorise ces accès sur le serveur hébergeant Watchdoc. <br />La technologie WSD (Web Services for Devices) n’est pas supportée par Watchdoc.
 			</fieldset>
-                                        <h2>Matrice des flux WES</h2>
-                                        <p>Les ports réseau à ouvrir pour permettre le fonctionnement des WES&#160;sont les suivants&#160;:</p>
-                                        <p>&#160;</p>
-                                        <table style="mc-table-style: url('../Resources/TableSlylesheets/Standard.css');border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-left-style: none;border-left-width: 0px;border-left-color: ;border-right-style: none;border-right-width: 0px;border-right-color: ;border-top-style: none;border-top-width: 0px;border-top-color: ;border-bottom-style: none;border-bottom-width: 0px;border-bottom-color: ;margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
-                                            <col class="TableStyle-Standard-Column-Regular" style="width: auto;" />
-                                            <col style="width: auto;" class="TableStyle-Standard-Column-Regular" />
-                                            <col class="TableStyle-Standard-Column-Regular" style="width: auto;" />
-                                            <col class="TableStyle-Standard-Column-Regular" style="width: auto;" />
-                                            <col class="TableStyle-Standard-Column-Regular" style="width: auto;" />
-                                            <thead>
-                                                <tr class="TableStyle-Standard-Head-Header1">
-                                                    <td style="font-weight: bold;text-align: left;color: #ffffff;" class="TableStyle-Standard-HeadE-Regular-Header1">Marque</td>
-                                                    <td style="font-weight: bold;text-align: left;color: #ffffff;" class="TableStyle-Standard-HeadE-Regular-Header1">Source</td>
-                                                    <td style="font-weight: bold;text-align: left;color: #ffffff;" class="TableStyle-Standard-HeadE-Regular-Header1">Port</td>
-                                                    <td style="font-weight: bold;text-align: left;color: #ffffff;" class="TableStyle-Standard-HeadE-Regular-Header1">Protocole</td>
-                                                    <td style="font-weight: bold;text-align: left;color: #ffffff;" class="TableStyle-Standard-HeadD-Regular-Header1">Cible</td>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Canon</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">TCP&#160;8000<br />TCP&#160;8443</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">HTTP<br />HTTPS</td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Périphérique d'impression</td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Epson</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc
+                                                <h2 id="MatricedesfluxWES" data-magellan-target="MatricedesfluxWES">Matrice des flux WES</h2>
+                                                <p>Les ports réseau à ouvrir pour permettre le fonctionnement des WES&#160;sont les suivants&#160;:</p>
+                                                <p>&#160;</p>
+                                                <table style="mc-table-style: url('../Resources/TableSlylesheets/Standard.css');border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-left-style: none;border-left-width: 0px;border-left-color: ;border-right-style: none;border-right-width: 0px;border-right-color: ;border-top-style: none;border-top-width: 0px;border-top-color: ;border-bottom-style: none;border-bottom-width: 0px;border-bottom-color: ;margin-left: 0;margin-right: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                    <col class="TableStyle-Standard-Column-Regular" style="width: auto;" />
+                                                    <col style="width: auto;" class="TableStyle-Standard-Column-Regular" />
+                                                    <col class="TableStyle-Standard-Column-Regular" style="width: auto;" />
+                                                    <col class="TableStyle-Standard-Column-Regular" style="width: auto;" />
+                                                    <col class="TableStyle-Standard-Column-Regular" style="width: auto;" />
+                                                    <thead>
+                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                            <td style="font-weight: bold;text-align: left;color: #ffffff;" class="TableStyle-Standard-HeadE-Regular-Header1">Marque</td>
+                                                            <td style="font-weight: bold;text-align: left;color: #ffffff;" class="TableStyle-Standard-HeadE-Regular-Header1">Source</td>
+                                                            <td style="font-weight: bold;text-align: left;color: #ffffff;" class="TableStyle-Standard-HeadE-Regular-Header1">Port</td>
+                                                            <td style="font-weight: bold;text-align: left;color: #ffffff;" class="TableStyle-Standard-HeadE-Regular-Header1">Protocole</td>
+                                                            <td style="font-weight: bold;text-align: left;color: #ffffff;" class="TableStyle-Standard-HeadD-Regular-Header1">Cible</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Canon</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">TCP&#160;8000<br />TCP&#160;8443</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">HTTP<br />HTTPS</td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Périphérique d'impression</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Epson</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc
 <br />pour l'authentification, port sécurisé obligatoire </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">
-                                                        <p>TCP&#160;80<br />TCP&#160;443</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">
-                                                        <p>HTTP<br />HTTPS                 </p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Périphérique d'impression</td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Hewlett-Packard</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc<br /></td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">
-                                                        <p>TCP&#160;57627</p>
-                                                        <p>TCP&#160;7627 </p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">HTTP<br />HTTPS
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">
+                                                                <p>TCP&#160;80<br />TCP&#160;443</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">
+                                                                <p>HTTP<br />HTTPS                 </p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Périphérique d'impression</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Hewlett-Packard</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc<br /></td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">
+                                                                <p>TCP&#160;57627</p>
+                                                                <p>TCP&#160;7627 </p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">HTTP<br />HTTPS
                         <br /></td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Périphérique d'impression (secure obligatoire pour authentification)</td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Kyocera</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">
-                                                        <p>TCP&#160;8080<br />TCP&#160;443<br /></p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">HTTP<br />HTTPS</td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Périphérique d'impression</td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Lexmark</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">TCP&#160;80<br />TCP&#160;443</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">HTTP<br />HTTPS</td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Périphérique d'impression</td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Toshiba Open Platform</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">TCP&#160;49629<br />TCP&#160;49630</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">HTTP<br />HTTPS                        <br /></td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Périphérique d'impression</td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Toshiba<br />OEM Lexmark</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">TCP&#160;49629<br />TCP&#160;49630</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">HTTP<br />HTTPS                        <br /></td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Périphérique d'impression</td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Ricoh</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">TCP&#160;80<br />TCP&#160;443</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">HTTP<br />HTTPS                        <br /></td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Périphérique d'impression</td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Sharp OEM Lexmark</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">TCP&#160;80<br />TCP&#160;443</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">HTTP<br />HTTPS                        <br /></td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Périphérique d'impression</td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1" style="border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Xerox<br />SNMP requis pour l'installation</td>
-                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1" style="border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc<br />comptabilisation (jba)<br />pour l'authentification, port sécurisée obligatoire<br /></td>
-                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">
-                                                        <p>TCP&#160;80<br />TCP 80<br />TCP 443<br /></p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">
-                                                        <p>HTTP
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Périphérique d'impression (secure obligatoire pour authentification)</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Kyocera</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">
+                                                                <p>TCP&#160;8080<br />TCP&#160;443<br /></p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">HTTP<br />HTTPS</td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Périphérique d'impression</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Lexmark</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">TCP&#160;80<br />TCP&#160;443</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">HTTP<br />HTTPS</td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Périphérique d'impression</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Toshiba Open Platform</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">TCP&#160;49629<br />TCP&#160;49630</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">HTTP<br />HTTPS                        <br /></td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Périphérique d'impression</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Toshiba<br />OEM Lexmark</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">TCP&#160;49629<br />TCP&#160;49630</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">HTTP<br />HTTPS                        <br /></td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Périphérique d'impression</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Ricoh</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">TCP&#160;80<br />TCP&#160;443</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">HTTP<br />HTTPS                        <br /></td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Périphérique d'impression</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Sharp OEM Lexmark</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">TCP&#160;80<br />TCP&#160;443</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">HTTP<br />HTTPS                        <br /></td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Périphérique d'impression</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyB-Regular-Row1" style="border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Xerox<br />SNMP requis pour l'installation</td>
+                                                            <td class="TableStyle-Standard-BodyB-Regular-Row1" style="border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Service Watchdoc<br />comptabilisation (jba)<br />pour l'authentification, port sécurisée obligatoire<br /></td>
+                                                            <td class="TableStyle-Standard-BodyB-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">
+                                                                <p>TCP&#160;80<br />TCP 80<br />TCP 443<br /></p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyB-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">
+                                                                <p>HTTP
                         <br />HTTP
                         <br />HTTPS
                     </p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyA-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Périphérique d'impression</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <p>&#160;</p>
-                                        <p>Les ports réseau à ouvrir pour permettre le fonctionnement du WES&#160;Konica Minolta sont les suivants&#160;:</p>
-                                        <p>&#160;</p>
-                                        <table style="mc-table-style: url('../Resources/TableSlylesheets/Standard.css');border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-left-style: none;border-left-width: 0px;border-left-color: ;border-right-style: none;border-right-width: 0px;border-right-color: ;border-top-style: none;border-top-width: 0px;border-top-color: ;border-bottom-style: none;border-bottom-width: 0px;border-bottom-color: ;margin-left: 0;margin-right: auto;width: auto;" class="TableStyle-Standard" cellspacing="0">
-                                            <col class="TableStyle-Standard-Column-Regular" style="width: auto;" data-mc-conditions="" />
-                                            <col class="TableStyle-Standard-Column-Regular" style="width: auto;" />
-                                            <col class="TableStyle-Standard-Column-Regular" style="width: auto;" />
-                                            <col class="TableStyle-Standard-Column-Regular" style="width: auto;" />
-                                            <col class="TableStyle-Standard-Column-Regular" />
-                                            <thead>
-                                                <tr class="TableStyle-Standard-Head-Header1">
-                                                    <th class="TableStyle-Standard-HeadE-Regular-Header1" style="font-size: 12pt;">Marque</th>
-                                                    <td class="TableStyle-Standard-HeadE-Regular-Header1" style="font-size: 12pt;"><strong>Source</strong>
-                                                    </td>
-                                                    <th class="TableStyle-Standard-HeadE-Regular-Header1" style="font-size: 12pt;"><strong>Port</strong>
-                                                    </th>
-                                                    <th class="TableStyle-Standard-HeadE-Regular-Header1" style="font-size: 12pt;"><strong>Protocole</strong>
-                                                    </th>
-                                                    <td class="TableStyle-Standard-HeadD-Regular-Header1" style="font-size: 12pt;">
-                                                        <MadCap:conditionalText style="font-weight: bold;" data-mc-conditions="Langues.FR">Cible</MadCap:conditionalText>
-                                                    </td>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">Konica Minolta</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">Watchdoc</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">80 </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">Non-SSL <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary_EN.Term38">WebDAV<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Protocole de transfert permettant de mettre à dispositin des fichiers ou des répertoires complets via Internet et de les transmettre à divers périphériques (dont les périphériques d'impression).
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyA-Regular-Row1" style="text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;font-size: 12pt;">Périphérique d'impression</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p>&#160;</p>
+                                                <p>Les ports réseau à ouvrir pour permettre le fonctionnement du WES&#160;Konica Minolta sont les suivants&#160;:</p>
+                                                <p>&#160;</p>
+                                                <table style="mc-table-style: url('../Resources/TableSlylesheets/Standard.css');border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-left-style: none;border-left-width: 0px;border-left-color: ;border-right-style: none;border-right-width: 0px;border-right-color: ;border-top-style: none;border-top-width: 0px;border-top-color: ;border-bottom-style: none;border-bottom-width: 0px;border-bottom-color: ;margin-left: 0;margin-right: auto;width: auto;" class="TableStyle-Standard" cellspacing="0">
+                                                    <col class="TableStyle-Standard-Column-Regular" style="width: auto;" data-mc-conditions="" />
+                                                    <col class="TableStyle-Standard-Column-Regular" style="width: auto;" />
+                                                    <col class="TableStyle-Standard-Column-Regular" style="width: auto;" />
+                                                    <col class="TableStyle-Standard-Column-Regular" style="width: auto;" />
+                                                    <col class="TableStyle-Standard-Column-Regular" />
+                                                    <thead>
+                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                            <th class="TableStyle-Standard-HeadE-Regular-Header1" style="font-size: 12pt;">Marque</th>
+                                                            <td class="TableStyle-Standard-HeadE-Regular-Header1" style="font-size: 12pt;"><strong>Source</strong>
+                                                            </td>
+                                                            <th class="TableStyle-Standard-HeadE-Regular-Header1" style="font-size: 12pt;"><strong>Port</strong>
+                                                            </th>
+                                                            <th class="TableStyle-Standard-HeadE-Regular-Header1" style="font-size: 12pt;"><strong>Protocole</strong>
+                                                            </th>
+                                                            <td class="TableStyle-Standard-HeadD-Regular-Header1" style="font-size: 12pt;">
+                                                                <MadCap:conditionalText style="font-weight: bold;" data-mc-conditions="Langues.FR">Cible</MadCap:conditionalText>
+                                                            </td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">Konica Minolta</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">Watchdoc</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">80 </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">Non-SSL <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary_EN.Term38">WebDAV<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Protocole de transfert permettant de mettre à dispositin des fichiers ou des répertoires complets via Internet et de les transmettre à divers périphériques (dont les périphériques d'impression).
 (Source : Ionos.fr)</span></a>*</td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-size: 12pt;">
-                                                        <p>
-                                                            <MadCap:conditionalText data-mc-conditions="Langues.FR">périphérique d'impression </MadCap:conditionalText>KM</p>
-                                                    </td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">&#160;</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">Watchdoc</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">50003</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">https</td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1" style="font-size: 12pt;">
-                                                        <MadCap:conditionalText data-mc-conditions="Langues.FR">périphérique d'impression </MadCap:conditionalText>KM</td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">&#160;</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">Watchdoc</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">50001</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">http</td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-size: 12pt;">
-                                                        <MadCap:conditionalText data-mc-conditions="Langues.FR">périphérique d'impression </MadCap:conditionalText>KM</td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">&#160;</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">Watchdoc</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">59158</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">OpenAPI</td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1" style="font-size: 12pt;">
-                                                        <MadCap:conditionalText data-mc-conditions="Langues.FR">périphérique d'impression </MadCap:conditionalText>KM</td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">&#160;</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">Watchdoc</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">59159</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">OpenAPI</td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-size: 12pt;">
-                                                        <MadCap:conditionalText data-mc-conditions="Langues.FR">périphérique d'impression </MadCap:conditionalText>KM</td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">&#160;</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">Watchdoc</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">59160</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">OpenAPI</td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1" style="font-size: 12pt;">
-                                                        <MadCap:conditionalText data-mc-conditions="Langues.FR">périphérique d'impression </MadCap:conditionalText>KM</td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">&#160;</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
-                                                        <MadCap:conditionalText data-mc-conditions="Langues.FR">périphérique d'impression </MadCap:conditionalText>KM</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">5753</td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">https</td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-size: 12pt;">Watchdoc</td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1" style="font-size: 12pt;">&#160;</td>
-                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1" style="font-size: 12pt;">
-                                                        <MadCap:conditionalText data-mc-conditions="Langues.FR">périphérique d'impression </MadCap:conditionalText>KM</td>
-                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1" style="font-size: 12pt;">5754</td>
-                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1" style="font-size: 12pt;">http</td>
-                                                    <td class="TableStyle-Standard-BodyA-Regular-Row1" style="font-size: 12pt;">Watchdoc</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <p>&#160;</p>
-                                        <h2>Matrice des flux interserveur</h2>
-                                        <p>Les ports réseau à ouvrir pour activer l'impression interserveur sont les suivants&#160;:<br /><br /></p>
-                                        <table style="mc-table-style: url('../Resources/TableSlylesheets/Standard.css');" class="TableStyle-Standard" cellspacing="0">
-                                            <col style="width: 269px;" class="TableStyle-Standard-Column-Regular" />
-                                            <col class="TableStyle-Standard-Column-Regular" style="width: 109px;" />
-                                            <col class="TableStyle-Standard-Column-Regular" style="width: 158px;" />
-                                            <col class="TableStyle-Standard-Column-Regular" style="width: 258px;" />
-                                            <thead>
-                                                <tr class="TableStyle-Standard-Head-Header1">
-                                                    <td style="font-weight: bold;text-align: left;color: #ffffff;font-size: 12pt;" class="TableStyle-Standard-HeadE-Regular-Header1">Source</td>
-                                                    <td style="font-weight: bold;text-align: left;color: #ffffff;font-size: 12pt;" class="TableStyle-Standard-HeadE-Regular-Header1">Port</td>
-                                                    <td style="font-weight: bold;text-align: left;color: #ffffff;font-size: 12pt;" class="TableStyle-Standard-HeadE-Regular-Header1">Protocole</td>
-                                                    <td style="font-weight: bold;text-align: left;color: #ffffff;font-size: 12pt;" class="TableStyle-Standard-HeadD-Regular-Header1">Cible</td>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="TableStyle-Standard-Body-Row2">
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
-                                                        <p>Serveur du domaine (slave)</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
-                                                        <p>TCP&#160;5753</p>
-                                                        <p>&#160;</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">HTTPS <br />SSL</td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-size: 12pt;">Serveur du domaine (slave)</td>
-                                                </tr>
-                                                <tr class="TableStyle-Standard-Body-Row1">
-                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1" style="font-size: 12pt;">
-                                                        <p>Service Watchdoc</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1" style="font-size: 12pt;">
-                                                        <p>9100</p>
-                                                        <p>631 ou 80</p>
-                                                        <p>443</p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyB-Regular-Row1" style="font-size: 12pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;">
-                                                        <p>RAW<br />IPP</p>
-                                                        <p>IPPS<br /></p>
-                                                    </td>
-                                                    <td class="TableStyle-Standard-BodyA-Regular-Row1" style="font-size: 12pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;">Périphériques d'impression</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-size: 12pt;">
+                                                                <p>
+                                                                    <MadCap:conditionalText data-mc-conditions="Langues.FR">périphérique d'impression </MadCap:conditionalText>KM</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">&#160;</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">Watchdoc</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">50003</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">https</td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1" style="font-size: 12pt;">
+                                                                <MadCap:conditionalText data-mc-conditions="Langues.FR">périphérique d'impression </MadCap:conditionalText>KM</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">&#160;</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">Watchdoc</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">50001</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">http</td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-size: 12pt;">
+                                                                <MadCap:conditionalText data-mc-conditions="Langues.FR">périphérique d'impression </MadCap:conditionalText>KM</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">&#160;</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">Watchdoc</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">59158</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">OpenAPI</td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1" style="font-size: 12pt;">
+                                                                <MadCap:conditionalText data-mc-conditions="Langues.FR">périphérique d'impression </MadCap:conditionalText>KM</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">&#160;</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">Watchdoc</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">59159</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">OpenAPI</td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-size: 12pt;">
+                                                                <MadCap:conditionalText data-mc-conditions="Langues.FR">périphérique d'impression </MadCap:conditionalText>KM</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">&#160;</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">Watchdoc</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">59160</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">OpenAPI</td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1" style="font-size: 12pt;">
+                                                                <MadCap:conditionalText data-mc-conditions="Langues.FR">périphérique d'impression </MadCap:conditionalText>KM</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">&#160;</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <MadCap:conditionalText data-mc-conditions="Langues.FR">périphérique d'impression </MadCap:conditionalText>KM</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">5753</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">https</td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-size: 12pt;">Watchdoc</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyB-Regular-Row1" style="font-size: 12pt;">&#160;</td>
+                                                            <td class="TableStyle-Standard-BodyB-Regular-Row1" style="font-size: 12pt;">
+                                                                <MadCap:conditionalText data-mc-conditions="Langues.FR">périphérique d'impression </MadCap:conditionalText>KM</td>
+                                                            <td class="TableStyle-Standard-BodyB-Regular-Row1" style="font-size: 12pt;">5754</td>
+                                                            <td class="TableStyle-Standard-BodyB-Regular-Row1" style="font-size: 12pt;">http</td>
+                                                            <td class="TableStyle-Standard-BodyA-Regular-Row1" style="font-size: 12pt;">Watchdoc</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p>&#160;</p>
+                                                <h2 id="Matricedesfluxinterserveur" data-magellan-target="Matricedesfluxinterserveur">Matrice des flux interserveur</h2>
+                                                <p>Les ports réseau à ouvrir pour activer l'impression interserveur sont les suivants&#160;:<br /><br /></p>
+                                                <table style="mc-table-style: url('../Resources/TableSlylesheets/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                    <col style="width: 269px;" class="TableStyle-Standard-Column-Regular" />
+                                                    <col class="TableStyle-Standard-Column-Regular" style="width: 109px;" />
+                                                    <col class="TableStyle-Standard-Column-Regular" style="width: 158px;" />
+                                                    <col class="TableStyle-Standard-Column-Regular" style="width: 258px;" />
+                                                    <thead>
+                                                        <tr class="TableStyle-Standard-Head-Header1">
+                                                            <td style="font-weight: bold;text-align: left;color: #ffffff;font-size: 12pt;" class="TableStyle-Standard-HeadE-Regular-Header1">Source</td>
+                                                            <td style="font-weight: bold;text-align: left;color: #ffffff;font-size: 12pt;" class="TableStyle-Standard-HeadE-Regular-Header1">Port</td>
+                                                            <td style="font-weight: bold;text-align: left;color: #ffffff;font-size: 12pt;" class="TableStyle-Standard-HeadE-Regular-Header1">Protocole</td>
+                                                            <td style="font-weight: bold;text-align: left;color: #ffffff;font-size: 12pt;" class="TableStyle-Standard-HeadD-Regular-Header1">Cible</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p>Serveur du domaine (slave)</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p>TCP&#160;5753</p>
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">HTTPS <br />SSL</td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-size: 12pt;">Serveur du domaine (slave)</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyB-Regular-Row1" style="font-size: 12pt;">
+                                                                <p>Service Watchdoc</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyB-Regular-Row1" style="font-size: 12pt;">
+                                                                <p>9100</p>
+                                                                <p>631 ou 80</p>
+                                                                <p>443</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyB-Regular-Row1" style="font-size: 12pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;">
+                                                                <p>RAW<br />IPP</p>
+                                                                <p>IPPS<br /></p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyA-Regular-Row1" style="font-size: 12pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;">Périphériques d'impression</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocArchitecturer%C3%A9seau">Watchdoc - Architecture réseau</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Sch%C3%A9madesfluxetportsr%C3%A9seauxWatchdocv611">Schéma des flux et ports réseaux Watchdoc v. 6.1.1</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Sch%C3%A9madesfluxetportsr%C3%A9seauxWatchdocversionsant%C3%A9rieures%C3%A0611">Schéma des flux et ports réseaux Watchdoc versions antérieures à 6.1.1</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Matricedesfluxr%C3%A9seaux">Matrice des flux réseaux</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#MatricedesfluxWES">Matrice des flux WES</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Matricedesfluxinterserveur">Matrice des flux interserveur</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
                                     </div>
-                                    <p>&#160;</p>
+                                    <!--<MadCap:miniTocProxy />
+        <MadCap:bodyProxy class=".body-container" />-->
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">
                                             <button class="button elearning-button needs-pie previous-topic-button" title="Précédent" disabled="true">

@@ -200,177 +200,202 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor239"></a>
-                                            <MadCap:concept term="WSC" />WSC Console de supervision - Présentation</h1>
-                                        <h2>Principe</h2>
-                                        <p>Watchdoc Supervision Console (WSC) est un outil permettant, à partir d'une seule interface, de superviser l'activité de tous les composants du parc d'impression pilotés par Watchdoc (serveurs, files, WES et consommables).&#160;Cet outil facilite ainsi la gestion du parc d'impression, notamment dans le cas où ce parc est important.</p>
-                                        <p> </p>
-                                        <p>Depuis la version 6, WSC n'est plus soumis à licence spécifique : la licence Watchdoc suffit.&#160;Si vous disposiez d'une licence WSC pour une version WSC&#160;antérieure à la v6, pensez à réinitialiser la licence WSC. </p>
-                                        <p>&#160;</p>
-                                        <p>Depuis la version 6.1, WSC&#160;est sécurisée contre les <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term109">Attaques par force-brute<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Une attaque par force brute (bruteforce attack) consiste à tester, l’une après l’autre, chaque combinaison possible d’un mot de passe ou d’une clé pour un identifiant donné afin se connecter au service ciblé. Il s’agit d’une méthode ancienne et répandue chez les pirates. Le temps nécessaire à celle-ci dépend du nombre de possibilités, de la vitesse que met l’attaquant pour tester chaque combinaison et des défenses qui lui sont opposées. Ce type d’attaque étant relativement simple, un organisme peut disposer de systèmes permettant de se protéger de ce type de comportement. La première ligne du système de défense est le blocage de comptes après un nombre limité d’échecs d’authentification pour un même identifiant. Le fonctionnement de l’attaque par force brute est proche de l’attaque par credential stuffing, mais est moins élaborée. (Source : https://www.cnil.fr/)</span></a> : un délai d'attente incrémental est imposé après chaque tentative d'authentification infructueuse.</p>
-                                        <p>&#160;</p>
-                                        <p>Depuis la version 6.1, WSC&#160;n'accepte que les pilotes certifiés.&#160;Il est donc nécessaire de réinstaller les pilotes existants (cf.&#160;<a href="WSC6.1.x_Ajouter_Pilote.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">WSC&#160;- Créer les pilotes d'impression</a>).&#160;</p>
-                                        <p>&#160;</p>
-                                        <fieldset>Les actions de supervision des serveurs, des files d'impression et des consommables envoient vers l'interface d'administration de Watchdoc dans laquelle vous devrez vous authentifier en tant qu'administrateur pour accéder aux informations détaillées.</fieldset>
-                                        <h2>Accéder à WSC</h2>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Pour accéder à la console de supervision, ouvrez votre navigateur à l'adresse de votre serveur d'impression et ajoutez le numéro de port 5756 (https://server_name:5756) ou cliquez sur le raccourci ajouté automatiquement sur le bureau en phase d'installation (si vous avez accepté cette option).<br /></p>
-                                            </li>
-                                            <li value="2">
-                                                <p>Authentifiez-vous, soit depuis :</p>
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WSCConsoledesupervisionPrésentation" data-magellan-target="WSCConsoledesupervisionPrésentation"><a name="aanchor239"></a>
+                                                    <MadCap:concept term="WSC" />WSC Console de supervision - Présentation</h1>
+                                                <h2 id="Principe" data-magellan-target="Principe">Principe</h2>
+                                                <p>Watchdoc Supervision Console (WSC) est un outil permettant, à partir d'une seule interface, de superviser l'activité de tous les composants du parc d'impression pilotés par Watchdoc (serveurs, files, WES et consommables).&#160;Cet outil facilite ainsi la gestion du parc d'impression, notamment dans le cas où ce parc est important.</p>
+                                                <p> </p>
+                                                <p>Depuis la version 6, WSC n'est plus soumis à licence spécifique : la licence Watchdoc suffit.&#160;Si vous disposiez d'une licence WSC pour une version WSC&#160;antérieure à la v6, pensez à réinitialiser la licence WSC. </p>
+                                                <p>&#160;</p>
+                                                <p>Depuis la version 6.1, WSC&#160;est sécurisée contre les <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term109">Attaques par force-brute<img class="MCHelpControl_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Une attaque par force brute (bruteforce attack) consiste à tester, l’une après l’autre, chaque combinaison possible d’un mot de passe ou d’une clé pour un identifiant donné afin se connecter au service ciblé. Il s’agit d’une méthode ancienne et répandue chez les pirates. Le temps nécessaire à celle-ci dépend du nombre de possibilités, de la vitesse que met l’attaquant pour tester chaque combinaison et des défenses qui lui sont opposées. Ce type d’attaque étant relativement simple, un organisme peut disposer de systèmes permettant de se protéger de ce type de comportement. La première ligne du système de défense est le blocage de comptes après un nombre limité d’échecs d’authentification pour un même identifiant. Le fonctionnement de l’attaque par force brute est proche de l’attaque par credential stuffing, mais est moins élaborée. (Source : https://www.cnil.fr/)</span></a> : un délai d'attente incrémental est imposé après chaque tentative d'authentification infructueuse.</p>
+                                                <p>&#160;</p>
+                                                <p>Depuis la version 6.1, WSC&#160;n'accepte que les pilotes certifiés.&#160;Il est donc nécessaire de réinstaller les pilotes existants (cf.&#160;<a href="WSC6.1.x_Ajouter_Pilote.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">WSC&#160;- Créer les pilotes d'impression</a>).&#160;</p>
+                                                <p>&#160;</p>
+                                                <fieldset>Les actions de supervision des serveurs, des files d'impression et des consommables envoient vers l'interface d'administration de Watchdoc dans laquelle vous devrez vous authentifier en tant qu'administrateur pour accéder aux informations détaillées.</fieldset>
+                                                <h2 id="AccéderàWSC" data-magellan-target="AccéderàWSC">Accéder à WSC</h2>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Pour accéder à la console de supervision, ouvrez votre navigateur à l'adresse de votre serveur d'impression et ajoutez le numéro de port 5756 (https://server_name:5756) ou cliquez sur le raccourci ajouté automatiquement sur le bureau en phase d'installation (si vous avez accepté cette option).<br /></p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>Authentifiez-vous, soit depuis :</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>l'accès <strong>opérateur </strong>vous permet de vous connecter avec vos identifiants Windows. C'est la méthode préférée.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>l'accès <strong>maintenance</strong>, qui ne nécessite qu'un mot de passe, est réservé aux opérations de maintenance ou lorsque vous ne pouvez pas vous connecter avec la première méthode.</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>cliquez sur <strong>Se connecter</strong> pour accéder au <strong>Menu Principal</strong>.</p>
+                                                        <p>&#160;</p>
+                                                        <p>Depuis la version 6.0.4770, il est possible de modifier la langue d'affichage de WSC&#160;depuis la page d'authentification :<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/WSC_Admin_Authent_Langue.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="615" data-mc-height="370" src="../Z_Resources/Images/02_Captures/WSC_Admin_Authent_Langue.png" tabindex="" style="max-width: 1000px;" /></a><br /></p>
+                                                    </li>
+                                                </ol>
+                                                <h2 id="Présentationdesmodules" data-magellan-target="Présentationdesmodules">Présentation des modules</h2>
+                                                <p>Les modules de supervision disponibles dans la Console de Supervision de Watchdoc sont les suivants : </p>
+                                                <blockquote>
+                                                    <p style="text-align: left;"><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/WSC_Admin_MenuPrincipal_V6.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1667" data-mc-height="749" src="../Z_Resources/Images/02_Captures/WSC_Admin_MenuPrincipal_V6.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a>
+                                                    </p>
+                                                </blockquote>
                                                 <ul>
                                                     <li>
-                                                        <p>l'accès <strong>opérateur </strong>vous permet de vous connecter avec vos identifiants Windows. C'est la méthode préférée.</p>
+                                                        <p class="Liste_puce_2"><strong>Serveurs d'impression : </strong>permet d'accéder à la supervision de tous les serveurs contrôlés par Watchdoc ;</p>
                                                     </li>
                                                     <li>
-                                                        <p>l'accès <strong>maintenance</strong>, qui ne nécessite qu'un mot de passe, est réservé aux opérations de maintenance ou lorsque vous ne pouvez pas vous connecter avec la première méthode.</p>
+                                                        <p class="Liste_puce_2"><strong>Files d'impression : </strong>permet d'accéder à la supervision de toutes les files contrôlées par Watchdoc ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Opérations Plug and Print :</strong> permet d'accéder à l'outil de création des files contrôlées par Watchdoc ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Templates d'imprimantes : </strong>permet d'accéder à l'outil d'association entre template d'imprimante et pilote ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Consommables : </strong>permet d'accéder à la supervision des consommables de toutes les files contrôlées par Watchdoc ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Gestion des spouleurs Watchdoc : </strong>permet d'accéder à la supervision des files et travaux en attente sur le spouleur Watchdoc ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Gestion des badges : </strong>permet d'accéder à la gestion des badges permettant aux utilisateurs de s'authentifier dans Watchdoc&#160;; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Gestion des invités : </strong>permet d'accéder à la gestion de l'annuaire des invités autorisés à s'authentifier dans Watchdoc&#160;;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><b>Configuration avancée :</b> permet d'accéder à d'autres modules de gestion destinés à l'administration avancée de WSC ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Gestion des codes analytiques : </strong>permet de gérer les codes analytiques utilisés par la fonction "Codes de refacturation".</p>
                                                     </li>
                                                 </ul>
-                                            </li>
-                                            <li value="3">
-                                                <p>cliquez sur <strong>Se connecter</strong> pour accéder au <strong>Menu Principal</strong>.</p>
                                                 <p>&#160;</p>
-                                                <p>Depuis la version 6.0.4770, il est possible de modifier la langue d'affichage de WSC&#160;depuis la page d'authentification :<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/WSC_Admin_Authent_Langue.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="615" data-mc-height="370" src="../Z_Resources/Images/02_Captures/WSC_Admin_Authent_Langue.png" tabindex="" style="max-width: 1000px;" /></a><br /></p>
-                                            </li>
-                                        </ol>
-                                        <h2>Présentation des modules</h2>
-                                        <p>Les modules de supervision disponibles dans la Console de Supervision de Watchdoc sont les suivants : </p>
-                                        <blockquote>
-                                            <p style="text-align: left;"><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/WSC_Admin_MenuPrincipal_V6.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1667" data-mc-height="749" src="../Z_Resources/Images/02_Captures/WSC_Admin_MenuPrincipal_V6.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a>
-                                            </p>
-                                        </blockquote>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Serveurs d'impression : </strong>permet d'accéder à la supervision de tous les serveurs contrôlés par Watchdoc ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Files d'impression : </strong>permet d'accéder à la supervision de toutes les files contrôlées par Watchdoc ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Opérations Plug and Print :</strong> permet d'accéder à l'outil de création des files contrôlées par Watchdoc ;</p>
-                                            </li>
-                                            <li>
-                                                <p><strong>Templates d'imprimantes : </strong>permet d'accéder à l'outil d'association entre template d'imprimante et pilote ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Consommables : </strong>permet d'accéder à la supervision des consommables de toutes les files contrôlées par Watchdoc ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Gestion des spouleurs Watchdoc : </strong>permet d'accéder à la supervision des files et travaux en attente sur le spouleur Watchdoc ; </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Gestion des badges : </strong>permet d'accéder à la gestion des badges permettant aux utilisateurs de s'authentifier dans Watchdoc&#160;; </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Gestion des invités : </strong>permet d'accéder à la gestion de l'annuaire des invités autorisés à s'authentifier dans Watchdoc&#160;;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><b>Configuration avancée :</b> permet d'accéder à d'autres modules de gestion destinés à l'administration avancée de WSC ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Gestion des codes analytiques : </strong>permet de gérer les codes analytiques utilisés par la fonction "Codes de refacturation".</p>
-                                            </li>
-                                        </ul>
-                                        <p>&#160;</p>
-                                        <p>La <strong>Configuration Avancée</strong> contient les modules d'administration suivants : </p>
-                                        <blockquote>
-                                            <p style="text-align: left;"><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/WSC_Admin_MenuGestionAvancee_V6.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1645" data-mc-height="621" src="../Z_Resources/Images/02_Captures/WSC_Admin_MenuGestionAvancee_V6.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a>
-                                                <br />
-                                            </p>
-                                        </blockquote>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Service :</strong> permet d'accéder aux outils de configuration générale de la Console de Supervision ;</p>
-                                            </li>
-                                            <li>
-                                                <p><strong>Configuration PnP :</strong> permet d'accéder au module Plug And Print permettant la détection automatique des nouvelles files d'impression ; </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Base de badges :</strong> permet d'accéder à la configuration de la base de données dans laquelle sont enregistrés les badges ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Annuaires utilisateurs :</strong> permet d'accéder à la liste de tous les annuaires, de les synchroniser, mais aussi de déclarer de nouveaux annuaires&#160;;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><b>Gestion de la licence&#160;:</b> permet d'accéder aux informations relatives à la licence WSC&#160;et à son interface de gestion (ce module ne concerne que les versions WSC installées avec les versions Watchdoc antérieures V5.5).</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Maintenance des serveurs :</strong> permet d'accéder à l'interface d'activation et de définition de la fréquence des opérations de maintenance ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Envois de mails :</strong> permet d'accéder à l'interface de configuration&#160;des notifications par mails&#160;; </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Base des invités : </strong>permet d'accéder aux informations de gestion de la base de données dans laquelle sont enregistrés les invités&#160;; </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Profils de sécurité : </strong>permet d'accéder aux droits d'accès et profils d'administration&#160;;</p>
-                                            </li>
-                                        </ul>
-                                        <h2>Modifier l'apparence d'un tableau de résultats <a name="Creer_vues" id="Creer_vues"></a>(créer des vues)</h2>
-                                        <p>Vous pouvez personnaliser l'apparence d'un tableau de résultats dans WSC (quel que soit l'objet de la liste) en créant de nouvelles vues.<br />Pour ajouter des vues&#160;:</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">depuis le tableau de résultats, dans l'encart des actions (en haut à droite), cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Bouton_Modifier_Tableau.png" style="width: 149px;height: 20px;" />&#160;;</p>
-                                                <p class="Liste_num_1">Si le bouton n'est pas dans la liste, cliquez d'abord sur la roue dentée <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_RoueDentee.png" style="width: 35px;height: 31px;" /> pour faire apparaître tous les boutons d'action.<br /></p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1">dans l'interface <strong>Modification du tableau,</strong> cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Ajouter_Vue.png" style="width: 114px;height: 19px;" /> :</p>
-                                                <p class="Liste_num_1">&#160;</p>
-                                                <p class="Liste_num_1"><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/ManageGuests/WD_FPR_WSC_Modifier_Tableau.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1876" data-mc-height="784" src="../Z_Resources/Images/02_Captures/ManageGuests/WD_FPR_WSC_Modifier_Tableau.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a>
-                                                    <br />
-                                                </p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1">Saisissez ensuite un nom dans le champ <b>Nom de la nouvelle vue.</b><br />Un contrôle s'applique sur le champ pour empêcher la saisie de caractères interdits (tels que \";alert('xss');//, par exemple).</p>
-                                            </li>
-                                            <li value="4">
-                                                <p class="Liste_num_1">glissez-déposez les colonnes à l'endroit où vous souhaitez les voir s'afficher&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/ManageGuests/WSC_Modifier_Tableau_Badges_Deplacer.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1867" data-mc-height="517" src="../Z_Resources/Images/02_Captures/ManageGuests/WSC_Modifier_Tableau_Badges_Deplacer.png" tabindex="" style="height: auto;width: 700px;max-width: 1000px;" /></a><br /><br /></p>
-                                            </li>
-                                            <li value="5">
-                                                <p class="Liste_num_1">pour ne plus afficher une colonne dans le tableau, cliquez sur son en-tête : ce dernier est alors grisé&#160;;</p>
-                                            </li>
-                                            <li value="6">
-                                                <p class="Liste_num_1">dès que le tableau correspond à celui que vous souhaitez, cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Valider_WSC.png" />.</p>
-                                                <p class="Liste_num_1"><span style="font-family: 'Wingdings'">è</span>La vue créée est alors celle qui s'affiche par défaut.<br /></p>
-                                            </li>
-                                        </ol>
-                                        <h2>Modifier la vue affichée</h2>
-                                        <p class="Liste_num_1">La vue "Default" s'affiche par défaut.&#160;<br />S'il existe plusieurs vues, c'est la dernière vue créée qui s'affiche par défaut.</p>
-                                        <p class="Liste_num_1">Pour modifier cette vue, </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Bouton_Modifier_Tableau.png" style="width: 165px;height: 23px;" />, </p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1">dans l'interface <strong>Modification du tableau</strong>, sélectionnez la <strong>Vue actuelle</strong> dans la liste des vues disponibles&#160;;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1">cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Valider_WSC.png" />.<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/ManageGuests/WD_FPR_WSC_SelectionnerVue.png"><img class="MCPopupThumbnail img" data-mc-width="1869" data-mc-height="522" src="../Z_Resources/Images/02_Captures/ManageGuests/WD_FPR_WSC_SelectionnerVue.png" tabindex="" style="width: 700px;height: auto;mc-thumbnail: link;mc-thumbnail-max-width: 1000px;max-width: 1000px;" /></a></p>
-                                            </li>
-                                        </ol>
-                                        <h2>Exporter un tableau</h2>
-                                        <p>Pour exporter le contenu d'un tableau, quel qu'en soit l'objet&#160;:</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">dans le tableau, rendez-vous sur l'encart de droite affichant les actions ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1">si elle est affichée, cliquez sur la roue dentée <img src="../Z_Resources/Images/02_Captures/Icone_Actions.png" style="width: 26px;height: 22px;" /> pour afficher la totalité des boutons d'action&#160;;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1">cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Bouton_Exporter.png" style="width: 122px;height: 19px;" />&#160;;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p class="Liste_num_1">cliquez sur le fichier  <b>export.csv</b> téléchargé par le navigateur ou enregistrez-le dans votre espace de travail&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_FilesImpression_Exporter.png" style="width: 543px;height: 285px;" /></p>
-                                            </li>
-                                        </ol>
-                                        <fieldset class="astuce">Vous pouvez aussi n'exporter qu'une sélection de serveurs (après les avoir sélectionnés dans la liste) et de files ou de consommables après les avoir sélectionnés à l'aide des filtres.</fieldset>
+                                                <p>La <strong>Configuration Avancée</strong> contient les modules d'administration suivants : </p>
+                                                <blockquote>
+                                                    <p style="text-align: left;"><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/WSC_Admin_MenuGestionAvancee_V6.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1645" data-mc-height="621" src="../Z_Resources/Images/02_Captures/WSC_Admin_MenuGestionAvancee_V6.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a>
+                                                        <br />
+                                                    </p>
+                                                </blockquote>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Service :</strong> permet d'accéder aux outils de configuration générale de la Console de Supervision ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Configuration PnP :</strong> permet d'accéder au module Plug And Print permettant la détection automatique des nouvelles files d'impression ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Base de badges :</strong> permet d'accéder à la configuration de la base de données dans laquelle sont enregistrés les badges ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Annuaires utilisateurs :</strong> permet d'accéder à la liste de tous les annuaires, de les synchroniser, mais aussi de déclarer de nouveaux annuaires&#160;;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><b>Gestion de la licence&#160;:</b> permet d'accéder aux informations relatives à la licence WSC&#160;et à son interface de gestion (ce module ne concerne que les versions WSC installées avec les versions Watchdoc antérieures V5.5).</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Maintenance des serveurs :</strong> permet d'accéder à l'interface d'activation et de définition de la fréquence des opérations de maintenance ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Envois de mails :</strong> permet d'accéder à l'interface de configuration&#160;des notifications par mails&#160;; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Base des invités : </strong>permet d'accéder aux informations de gestion de la base de données dans laquelle sont enregistrés les invités&#160;; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Profils de sécurité : </strong>permet d'accéder aux droits d'accès et profils d'administration&#160;;</p>
+                                                    </li>
+                                                </ul>
+                                                <h2 id="Modifierlapparenceduntableauderésultatscréerdesvues" data-magellan-target="Modifierlapparenceduntableauderésultatscréerdesvues">Modifier l'apparence d'un tableau de résultats <a name="Creer_vues" id="Creer_vues"></a>(créer des vues)</h2>
+                                                <p>Vous pouvez personnaliser l'apparence d'un tableau de résultats dans WSC (quel que soit l'objet de la liste) en créant de nouvelles vues.<br />Pour ajouter des vues&#160;:</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1">depuis le tableau de résultats, dans l'encart des actions (en haut à droite), cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Bouton_Modifier_Tableau.png" style="width: 149px;height: 20px;" />&#160;;</p>
+                                                        <p class="Liste_num_1">Si le bouton n'est pas dans la liste, cliquez d'abord sur la roue dentée <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_RoueDentee.png" style="width: 35px;height: 31px;" /> pour faire apparaître tous les boutons d'action.<br /></p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1">dans l'interface <strong>Modification du tableau,</strong> cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Ajouter_Vue.png" style="width: 114px;height: 19px;" /> :</p>
+                                                        <p class="Liste_num_1">&#160;</p>
+                                                        <p class="Liste_num_1"><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/ManageGuests/WD_FPR_WSC_Modifier_Tableau.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1876" data-mc-height="784" src="../Z_Resources/Images/02_Captures/ManageGuests/WD_FPR_WSC_Modifier_Tableau.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a>
+                                                            <br />
+                                                        </p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p class="Liste_num_1">Saisissez ensuite un nom dans le champ <b>Nom de la nouvelle vue.</b><br />Un contrôle s'applique sur le champ pour empêcher la saisie de caractères interdits (tels que \";alert('xss');//, par exemple).</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p class="Liste_num_1">glissez-déposez les colonnes à l'endroit où vous souhaitez les voir s'afficher&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/ManageGuests/WSC_Modifier_Tableau_Badges_Deplacer.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1867" data-mc-height="517" src="../Z_Resources/Images/02_Captures/ManageGuests/WSC_Modifier_Tableau_Badges_Deplacer.png" tabindex="" style="height: auto;width: 700px;max-width: 1000px;" /></a><br /><br /></p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p class="Liste_num_1">pour ne plus afficher une colonne dans le tableau, cliquez sur son en-tête : ce dernier est alors grisé&#160;;</p>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p class="Liste_num_1">dès que le tableau correspond à celui que vous souhaitez, cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Valider_WSC.png" />.</p>
+                                                        <p class="Liste_num_1"><span style="font-family: 'Wingdings'">è</span>La vue créée est alors celle qui s'affiche par défaut.<br /></p>
+                                                    </li>
+                                                </ol>
+                                                <h2 id="Modifierlavueaffichée" data-magellan-target="Modifierlavueaffichée">Modifier la vue affichée</h2>
+                                                <p class="Liste_num_1">La vue "Default" s'affiche par défaut.&#160;<br />S'il existe plusieurs vues, c'est la dernière vue créée qui s'affiche par défaut.</p>
+                                                <p class="Liste_num_1">Pour modifier cette vue, </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1">cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Bouton_Modifier_Tableau.png" style="width: 165px;height: 23px;" />, </p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1">dans l'interface <strong>Modification du tableau</strong>, sélectionnez la <strong>Vue actuelle</strong> dans la liste des vues disponibles&#160;;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p class="Liste_num_1">cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Valider_WSC.png" />.<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/ManageGuests/WD_FPR_WSC_SelectionnerVue.png"><img class="MCPopupThumbnail img" data-mc-width="1869" data-mc-height="522" src="../Z_Resources/Images/02_Captures/ManageGuests/WD_FPR_WSC_SelectionnerVue.png" tabindex="" style="width: 700px;height: auto;mc-thumbnail: link;mc-thumbnail-max-width: 1000px;max-width: 1000px;" /></a></p>
+                                                    </li>
+                                                </ol>
+                                                <h2 id="Exporteruntableau" data-magellan-target="Exporteruntableau">Exporter un tableau</h2>
+                                                <p>Pour exporter le contenu d'un tableau, quel qu'en soit l'objet&#160;:</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1">dans le tableau, rendez-vous sur l'encart de droite affichant les actions ;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1">si elle est affichée, cliquez sur la roue dentée <img src="../Z_Resources/Images/02_Captures/Icone_Actions.png" style="width: 26px;height: 22px;" /> pour afficher la totalité des boutons d'action&#160;;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p class="Liste_num_1">cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Bouton_Exporter.png" style="width: 122px;height: 19px;" />&#160;;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p class="Liste_num_1">cliquez sur le fichier  <b>export.csv</b> téléchargé par le navigateur ou enregistrez-le dans votre espace de travail&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_FilesImpression_Exporter.png" style="width: 543px;height: 285px;" /></p>
+                                                    </li>
+                                                </ol>
+                                                <fieldset class="astuce">Vous pouvez aussi n'exporter qu'une sélection de serveurs (après les avoir sélectionnés dans la liste) et de files ou de consommables après les avoir sélectionnés à l'aide des filtres.</fieldset>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WSCConsoledesupervisionPr%C3%A9sentation">WSC Console de supervision - Présentation</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Principe">Principe</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Acc%C3%A9der%C3%A0WSC">Accéder à WSC</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Pr%C3%A9sentationdesmodules">Présentation des modules</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Modifierlapparenceduntableauder%C3%A9sultatscr%C3%A9erdesvues">Modifier l'apparence d'un tableau de résultats (créer des vues)</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Modifierlavueaffich%C3%A9e">Modifier la vue affichée</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Exporteruntableau">Exporter un tableau</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
                                     </div>
-                                    <p>&#160;</p>
+                                    <!--<MadCap:miniTocProxy />
+        <MadCap:bodyProxy class=".body-container" />-->
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">
                                             <button class="button elearning-button needs-pie previous-topic-button" title="Précédent" disabled="true">

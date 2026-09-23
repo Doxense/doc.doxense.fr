@@ -165,6 +165,142 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 style="text-align: left;font-family: HelveticaNeue;" id="WatchdocProcédurededésinstallation" data-magellan-target="WatchdocProcédurededésinstallation"><a name="aanchor246"></a>
+                                                    <MadCap:concept term="CFG;WD" />Watchdoc - Procédure de désinstallation</h1>
+                                                <h2 style="text-align: left;font-family: HelveticaNeue;" id="Etapes" data-magellan-target="Etapes">Etapes</h2>
+                                                <p style="text-align: left;font-family: HelveticaNeue;">La désinstallation de Watchdoc comporte les étapes suivantes&#160;:</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">désinstallation de Watchdoc ;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">suppression des files "shadow" ;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">suppression de la configuration centrale.<br /><br /></p>
+                                                    </li>
+                                                </ol>
+                                                <fieldset class="astuce" style="text-align: left;font-family: HelveticaNeue;">Si vous souhaitez désinstaller Watchdoc du serveur, suivez les étapes 1 et 2.<br />Si vous souhaitez juste sortir un serveur Watchdoc d'un domaine pou revenir à une configuration stand-alone, suivez l'étape 3.<br /></fieldset>
+                                                <h2 style="text-align: left;font-family: HelveticaNeue;" id="DésinstallationdeWatchdoc" data-magellan-target="DésinstallationdeWatchdoc">Désinstallation de Watchdoc</h2>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">Accédez au serveur que vous souhaitez désinstaller en tant qu'administrateur ;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">rendez-vous dans le dossier C:\Program Files\Doxense\Watchdoc\Tools ;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">exécutez WatchdocSystemResume.exe ;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">dans la boîte de dialogue, cochez les cases :</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p class="Liste_puce_1" style="text-align: left;font-family: HelveticaNeue;">Local Print Server (indiquez le nom du serveur concerné)</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_1" style="text-align: left;font-family: HelveticaNeue;">Options : Stop Watchdoc service</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_1" style="text-align: left;font-family: HelveticaNeue;">Options : Resume all paused jobs</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_1" style="text-align: left;font-family: HelveticaNeue;">"Click this checkbox to confirm"</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ol>
+                                                <ol data-mc-continue="true">
+                                                    <li value="5">
+                                                        <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">appuyez sur le bouton RESUME ALL&#160;PRINTERS&#160;: <br /><br /><img src="../../Z_Resources/Images/02_Captures/Desinstall_01_WD_WSTool.png" style="width: 224px;height: 288px;" /></p>
+                                                        <p style="font-family: HelveticaNeue;">&#160;</p>
+                                                        <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;"><span style="font-family: 'Wingdings'">è</span> Cette opération désactive le service Watchdoc et place tous les périphériques d'impression à l'état "Prêt" ;</p>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">Rendez-vous ensuite dans le gestionnaire "Ajouter / Supprimer des programmes", sélectionnez Watchdoc puis cliquez sur <strong>Désinstaller</strong>&#160;;<br /><br /><img src="../../Z_Resources/Images/02_Captures/Desinstall_02_Desinstaller.png" /></p>
+                                                    </li>
+                                                </ol>
+                                                <h2 style="text-align: left;font-family: HelveticaNeue;" id="Suppressiondesfilesshadow" data-magellan-target="Suppressiondesfilesshadow">Suppression des files "shadow"</h2>
+                                                <p style="text-align: left;font-family: HelveticaNeue;">Avant ou après désinstallation de Watchdoc, les files d'impression "shadow" sont discrètes.&#160;Pour supprimer toutes les files "shadow", nous recommandons d'utiliser le tri de l'outil <strong>Printmanagement.msc</strong>.</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">activez le gestionnaire d'impression (<strong>Printmanagement.msc</strong>) en tant qu'administrateur ;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">rendez-vous dans <strong>Serveur d'impression</strong> &gt;&#160;[<strong>Serveur concerné</strong>] &gt; <strong>Imprimantes </strong>; </p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">dans la liste des imprimantes, consultez la colonne et triez par <strong>Commentaires</strong> ;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">sélectionnez tous les périphériques comportant le commentaire <strong>output device do not remove</strong>*;</p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">cliquez sur le bouton <strong>Supprimer </strong>:<br /><br /><img src="../../Z_Resources/Images/02_Captures/Desinstall_03_DeleteShadow.png" style="width: 700px;" /></p>
+                                                        <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">
+                                                            <br />
+                                                        </p>
+                                                    </li>
+                                                </ol>
+                                                <fieldset style="font-family: HelveticaNeue;text-align: left;">Le commentaire "<strong>Output device do not remove</strong>" ne s'applique que si Watchdoc est en production. Une fois Watchdoc désinstallé, l'instruction peut être outrepassée.</fieldset>
+                                                <h2 style="text-align: left;font-family: HelveticaNeue;" id="Suppressiondelaconfigurationcentrale" data-magellan-target="Suppressiondelaconfigurationcentrale">Suppression de la configuration centrale</h2>
+                                                <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">Sur le serveur Maître, rendez-vous dans <strong>C:\Program Files\Doxense\Watchdoc\Tools</strong>&#160;;</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">exécutez <strong>WebSiteConfig.exe</strong> ; </p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">dans l'interface <strong>Web Site Configurator</strong>, recherchez l'identifiant (généralement le nom NETBIOS (nom court)) du serveur récemment désinstallé et sélectionnez-le&#160;;&#160;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">cliquez sur le bouton <strong>Delete</strong>&#160;;<br /><br /><img src="../../Z_Resources/Images/02_Captures/Desinstall_05_SiteWeb.png" style="width: 465px;height: 307px;" /></p>
+                                                    </li>
+                                                </ol>
+                                                <p style="font-family: HelveticaNeue;">&#160;</p>
+                                                <ol data-mc-continue="true">
+                                                    <li value="4">
+                                                        <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">enregistrez et fermez  <strong>WebSiteConfig.exe</strong>&#160;;</p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">sur le serveur Master, stoppez le service Watchdoc&#160;;</p>
+                                                    </li>
+                                                </ol>
+                                                <ol style="font-family: HelveticaNeue;" data-mc-continue="true">
+                                                    <li value="6">
+                                                        <p class="Liste_num_1" style="text-align: left;">pour supprimer un serveur d'un domaine, rendez-vous sur C:\Program Files\Doxense\Watchdoc\Data\</p>
+                                                    </li>
+                                                    <li value="7">
+                                                        <p class="Liste_num_1" style="text-align: left;">en tant qu'administrateur réalisez une sauvegarde du fichier config.xml, puis ouvrez-le à l'aide d'un éditeur de texte&#160;;</p>
+                                                    </li>
+                                                    <li value="8">
+                                                        <p class="Liste_num_1" style="text-align: left;">dans la balise &lt;domains&gt;&lt;slaves&gt;, localisez l'enregistrement de votre serveur et supprimez les balises situées entre &lt;slave id="server à suprimer"....&gt; et &lt;/slave&gt; :<br /><br /><img src="../../Z_Resources/Images/02_Captures/Desinstall_04.png" /><br /><br /></p>
+                                                    </li>
+                                                    <li value="9">
+                                                        <p style="text-align: left;">Enregistrez le fichier <strong>config.xml</strong> et redémarrez le service Watchdoc du serveur Master.</p>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocProc%C3%A9dureded%C3%A9sinstallation">Watchdoc - Procédure de désinstallation</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Etapes">Etapes</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#D%C3%A9sinstallationdeWatchdoc">Désinstallation de Watchdoc</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Suppressiondesfilesshadow">Suppression des files "shadow"</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Suppressiondelaconfigurationcentrale">Suppression de la configuration centrale</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -198,122 +334,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1 style="text-align: left;font-family: HelveticaNeue;"><a name="aanchor246"></a>
-                                            <MadCap:concept term="CFG;WD" />Watchdoc - Procédure de désinstallation</h1>
-                                        <h2 style="text-align: left;font-family: HelveticaNeue;">Etapes</h2>
-                                        <p style="text-align: left;font-family: HelveticaNeue;">La désinstallation de Watchdoc comporte les étapes suivantes&#160;:</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">désinstallation de Watchdoc ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">suppression des files "shadow" ;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">suppression de la configuration centrale.<br /><br /></p>
-                                            </li>
-                                        </ol>
-                                        <fieldset class="astuce" style="text-align: left;font-family: HelveticaNeue;">Si vous souhaitez désinstaller Watchdoc du serveur, suivez les étapes 1 et 2.<br />Si vous souhaitez juste sortir un serveur Watchdoc d'un domaine pou revenir à une configuration stand-alone, suivez l'étape 3.<br /></fieldset>
-                                        <h2 style="text-align: left;font-family: HelveticaNeue;">Désinstallation de Watchdoc</h2>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">Accédez au serveur que vous souhaitez désinstaller en tant qu'administrateur ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">rendez-vous dans le dossier C:\Program Files\Doxense\Watchdoc\Tools ;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">exécutez WatchdocSystemResume.exe ;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">dans la boîte de dialogue, cochez les cases :</p>
-                                                <ul>
-                                                    <li>
-                                                        <p class="Liste_puce_1" style="text-align: left;font-family: HelveticaNeue;">Local Print Server (indiquez le nom du serveur concerné)</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_1" style="text-align: left;font-family: HelveticaNeue;">Options : Stop Watchdoc service</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_1" style="text-align: left;font-family: HelveticaNeue;">Options : Resume all paused jobs</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_1" style="text-align: left;font-family: HelveticaNeue;">"Click this checkbox to confirm"</p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="5">
-                                                <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">appuyez sur le bouton RESUME ALL&#160;PRINTERS&#160;: <br /><br /><img src="../../Z_Resources/Images/02_Captures/Desinstall_01_WD_WSTool.png" style="width: 224px;height: 288px;" /></p>
-                                                <p style="font-family: HelveticaNeue;">&#160;</p>
-                                                <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;"><span style="font-family: 'Wingdings'">è</span> Cette opération désactive le service Watchdoc et place tous les périphériques d'impression à l'état "Prêt" ;</p>
-                                            </li>
-                                            <li value="6">
-                                                <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">Rendez-vous ensuite dans le gestionnaire "Ajouter / Supprimer des programmes", sélectionnez Watchdoc puis cliquez sur <strong>Désinstaller</strong>&#160;;<br /><br /><img src="../../Z_Resources/Images/02_Captures/Desinstall_02_Desinstaller.png" /></p>
-                                            </li>
-                                        </ol>
-                                        <h2 style="text-align: left;font-family: HelveticaNeue;">Suppression des files "shadow"</h2>
-                                        <p style="text-align: left;font-family: HelveticaNeue;">Avant ou après désinstallation de Watchdoc, les files d'impression "shadow" sont discrètes.&#160;Pour supprimer toutes les files "shadow", nous recommandons d'utiliser le tri de l'outil <strong>Printmanagement.msc</strong>.</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">activez le gestionnaire d'impression (<strong>Printmanagement.msc</strong>) en tant qu'administrateur ;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">rendez-vous dans <strong>Serveur d'impression</strong> &gt;&#160;[<strong>Serveur concerné</strong>] &gt; <strong>Imprimantes </strong>; </p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">dans la liste des imprimantes, consultez la colonne et triez par <strong>Commentaires</strong> ;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">sélectionnez tous les périphériques comportant le commentaire <strong>output device do not remove</strong>*;</p>
-                                            </li>
-                                            <li value="5">
-                                                <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">cliquez sur le bouton <strong>Supprimer </strong>:<br /><br /><img src="../../Z_Resources/Images/02_Captures/Desinstall_03_DeleteShadow.png" style="width: 700px;" /></p>
-                                                <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">
-                                                    <br />
-                                                </p>
-                                            </li>
-                                        </ol>
-                                        <fieldset style="font-family: HelveticaNeue;text-align: left;">Le commentaire "<strong>Output device do not remove</strong>" ne s'applique que si Watchdoc est en production. Une fois Watchdoc désinstallé, l'instruction peut être outrepassée.</fieldset>
-                                        <h2 style="text-align: left;font-family: HelveticaNeue;">Suppression de la configuration centrale</h2>
-                                        <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">Sur le serveur Maître, rendez-vous dans <strong>C:\Program Files\Doxense\Watchdoc\Tools</strong>&#160;;</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">exécutez <strong>WebSiteConfig.exe</strong> ; </p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">dans l'interface <strong>Web Site Configurator</strong>, recherchez l'identifiant (généralement le nom NETBIOS (nom court)) du serveur récemment désinstallé et sélectionnez-le&#160;;&#160;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">cliquez sur le bouton <strong>Delete</strong>&#160;;<br /><br /><img src="../../Z_Resources/Images/02_Captures/Desinstall_05_SiteWeb.png" style="width: 465px;height: 307px;" /></p>
-                                            </li>
-                                        </ol>
-                                        <p style="font-family: HelveticaNeue;">&#160;</p>
-                                        <ol data-mc-continue="true">
-                                            <li value="4">
-                                                <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">enregistrez et fermez  <strong>WebSiteConfig.exe</strong>&#160;;</p>
-                                            </li>
-                                            <li value="5">
-                                                <p class="Liste_num_1" style="text-align: left;font-family: HelveticaNeue;">sur le serveur Master, stoppez le service Watchdoc&#160;;</p>
-                                            </li>
-                                        </ol>
-                                        <ol style="font-family: HelveticaNeue;" data-mc-continue="true">
-                                            <li value="6">
-                                                <p class="Liste_num_1" style="text-align: left;">pour supprimer un serveur d'un domaine, rendez-vous sur C:\Program Files\Doxense\Watchdoc\Data\</p>
-                                            </li>
-                                            <li value="7">
-                                                <p class="Liste_num_1" style="text-align: left;">en tant qu'administrateur réalisez une sauvegarde du fichier config.xml, puis ouvrez-le à l'aide d'un éditeur de texte&#160;;</p>
-                                            </li>
-                                            <li value="8">
-                                                <p class="Liste_num_1" style="text-align: left;">dans la balise &lt;domains&gt;&lt;slaves&gt;, localisez l'enregistrement de votre serveur et supprimez les balises situées entre &lt;slave id="server à suprimer"....&gt; et &lt;/slave&gt; :<br /><br /><img src="../../Z_Resources/Images/02_Captures/Desinstall_04.png" /><br /><br /></p>
-                                            </li>
-                                            <li value="9">
-                                                <p style="text-align: left;">Enregistrez le fichier <strong>config.xml</strong> et redémarrez le service Watchdoc du serveur Master.</p>
-                                            </li>
-                                        </ol>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

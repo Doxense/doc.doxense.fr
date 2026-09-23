@@ -165,6 +165,169 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="ConsoledeSupervisionWSCSuperviserlesFilesdimpression" data-magellan-target="ConsoledeSupervisionWSCSuperviserlesFilesdimpression"><a name="aanchor84"></a>
+                                                    <MadCap:concept term="WSC" />Console de Supervision (WSC) - Superviser les Files d'impression</h1>
+                                                <h2 id="Principe" data-magellan-target="Principe">Principe</h2>
+                                                <p>La Console de Supervision permet d'obtenir des vues détaillées et affinées des files d'impression contrôlées par Watchdoc et notamment les files présentant des dysfonctionnements.</p>
+                                                <p>Elle permet aussi d'en créer de nouvelles à partir de modèles, unitairement ou en masse.</p>
+                                                <h2 id="Accéderàlinterfacedesupervision" data-magellan-target="Accéderàlinterfacedesupervision">Accéder à l'interface de supervision</h2>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Depuis le <strong>Menu principal</strong> de WSC, cliquez sur bouton <strong>Files d'impression</strong> ;<br /></p>
+                                                        <p>&#160;</p>
+                                                        <p>
+                                                            <img src="../Z_Resources/Images/02_Captures/WSC_V6_Admin_FilesImpression_Access.png" style="width: 709px;height: 318px;" />
+                                                            <br />
+                                                        </p>
+                                                    </li>
+                                                </ol>
+                                                <p class="Resultat"><span style="font-family: 'Wingdings'">è</span>Vous accédez à l'interface <strong>Files d'impression</strong>, dans laquelle s'affiche la liste des files présentant un dysfonctionnement&#160;(indisponible, communication impossible, désactivée, en erreur) :<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_FilesImpression_Liste.png" style="width: 748px;height: 389px;" /><br /></p>
+                                                <p>&#160;</p>
+                                                <p style="text-align: left;">N.B.&#160;: pour accéder à la liste exhaustive des files, cliquez sur le bouton <strong>Toutes les files</strong>.</p>
+                                                <h2 id="Consulterlesincidentsdunefile" data-magellan-target="Consulterlesincidentsdunefile">Consulter les incidents d'une file</h2>
+                                                <h3>Description de la liste</h3>
+                                                <p>Dans cette liste, différentes informations relatives aux files d'information sont affichées dans les colonnes suivantes&#160;(chaque en-tête de colonne, cliquable, constitue un critère de tri) :</p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1">colonne <strong>Icones</strong> : des icones précisent la marque et la configuration de la file : </p>
+                                                        <p>
+                                                            <ul style="list-style-type: circle;">
+                                                                <li>
+                                                                    <p class="Liste_puce_2">
+                                                                        <img src="../Z_Resources/Images/02_Captures/Icone_ModeValidation.png" style="width: 26px;height: 17px;" /> file en mode validation ; </p>
+                                                                </li>
+                                                                <li>
+                                                                    <p class="Liste_puce_2">
+                                                                        <img src="../Z_Resources/Images/02_Captures/Icone_ModeComptabilisation.png" style="width: 18px;height: 16px;" /> file en mode comptabilisation ;</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p class="Liste_puce_2">logo de la marque constructeur ;</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p class="Liste_puce_2">
+                                                                        <img src="../Z_Resources/Images/02_Captures/Icone_Noir&amp;Blanc.png" style="width: 17px;height: 14px;" /> file noir et blanc ;</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p class="Liste_puce_2">
+                                                                        <img src="../Z_Resources/Images/02_Captures/Icone_Couleur.png" style="width: 20px;height: 16px;" /> file couleur.</p>
+                                                                </li>
+                                                            </ul>
+                                                        </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Serveur</strong> : affiche le nom du serveur dont dépend la file ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Imprimante</strong> : affiche le nom du&#160;périphérique ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Adresse IP </strong>: adresse IP de l’imprimante.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>N° Série</strong> : indique le n° de série du périphérique ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Message </strong>: affiche le message d'erreur relatif à la file, tel que renvoyé par le périphérique à Watchdoc&#160;: </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Communication impossible : </strong>l’alias DNS existe mais l’imprimante de répond pas ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Indisponible :</strong> l’alias DNS n’existe pas ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2"><strong>Bourrage papier… Plus de papier… Plus d’encre…</strong> : l'un des consommables empêche le bon fonctionnement du périphérique.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Depuis :</strong> indique, en jours et en heure, le temps écoulé depuis le début du dysfonctionnement ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Travaux</strong> : indique le nombre de travaux d'impression concernés par la panne du périphérique et bloqués en attendant le dépannage ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Alertes :</strong> nombre d'alertes automatiques envoyées par mail ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Commentaire : </strong>information complémentaire relative à la file en panne ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Emplacement :</strong> emplacement physique du périphérique&#160;;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Wes :</strong> identifiant du WES&#160;associé à la file.</p>
+                                                    </li>
+                                                </ul>
+                                                <p class="Liste_puce_1">&#160;</p>
+                                                <p class="Liste_puce_1">Des <strong>outils </strong>permettent de mettre la file en pause :</p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_2">
+                                                            <img src="../Z_Resources/Images/02_Captures/Bouton_DesactiverFile.png" style="width: 17px;height: 17px;" /> <strong>désactivation :</strong> la file ne fonctionne plus et tous les travaux qui lui sont envoyés sont bloqués ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_2">
+                                                            <img src="../Z_Resources/Images/02_Captures/Bouton_ResactiverFile.png" style="width: 19px;height: 19px;" /> <strong>réactivation :</strong> la file est remise en fonctionnement.</p>
+                                                    </li>
+                                                </ul>
+                                                <h3>Outils de recherche</h3>
+                                                <p>Vous disposez de différents outils permettant d'affiner la consultation&#160;:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1">un <strong>moteur </strong>offrant une recherche par <strong>nom </strong>de file (contenant la chaîne de caractères saisie) ou par <strong>adresse IP</strong> (depuis WSC&#160;6.0.4470) ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">différents <strong>filtres</strong> permettant de sélectionner les files en fonction de leurs caractéristiques et/ou de leur statut et/ou de leur emplacement : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Files_Recherche.png" style="width: 700px;height: auto;" /></p>
+                                                    </li>
+                                                </ul>
+                                                <h3>Procédure de consultation</h3>
+                                                <p>Depuis la liste des files d'impression&#160;: </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1">à l'aide du moteur de recherche et/ou filtres, sélectionnez la file dont vous souhaitez consulter l'activité ; </p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1">dans la liste des files en erreur affichée, cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Icone_Actions.png" style="width: 22px;height: 19px;" /> pour accéder au menu des actions : toutes ces actions de supervision des files envoient vers l'interface d'administration de Watchdoc&#160;:</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p class="Liste_num_1">cliquez sur l'un des boutons d'action :<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Files_MenusIncidents.png" style="width: 700px;height: auto;" /><br /><br /></p>
+                                                    </li>
+                                                </ol>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1">bouton <strong>Incidents récents</strong> renvoie à la liste des incidents au cours du mois précédant la date courante&#160;;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">bouton<strong> Tous les incidents</strong> renvoie à la liste de tous les incidents, sans restriction de date&#160;;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">bouton <strong>Historique d'impression</strong>  envoie à l'historique des travaux imprimés sur la file (avec ou sans incident)&#160;; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">bouton <strong>Voir les statistiques</strong> renvoie aux statistiques des travaux d'impressions réalisés sur la file.</p>
+                                                    </li>
+                                                </ul>
+                                                <p class="Resultat">&#160;</p>
+                                                <p class="Resultat"><span style="font-family: 'Wingdings'">è</span>vous accédez à l'interface  d'administration de Watchdoc : authentifiez-vous comme administrateur pour y consulter le détail des informations relatives à la file&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_FilesImpression_ListeIncidentsWD.png" style="width: 768px;height: 507px;" /><br /><br /></p>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#ConsoledeSupervisionWSCSuperviserlesFilesdimpression">Console de Supervision (WSC) - Superviser les Files d'impression</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Principe">Principe</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Acc%C3%A9der%C3%A0linterfacedesupervision">Accéder à l'interface de supervision</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Consulterlesincidentsdunefile">Consulter les incidents d'une file</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -198,151 +361,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor84"></a>
-                                            <MadCap:concept term="WSC" />Console de Supervision (WSC) - Superviser les Files d'impression</h1>
-                                        <h2>Principe</h2>
-                                        <p>La Console de Supervision permet d'obtenir des vues détaillées et affinées des files d'impression contrôlées par Watchdoc et notamment les files présentant des dysfonctionnements.</p>
-                                        <p>Elle permet aussi d'en créer de nouvelles à partir de modèles, unitairement ou en masse.</p>
-                                        <h2>Accéder à l'interface de supervision</h2>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Depuis le <strong>Menu principal</strong> de WSC, cliquez sur bouton <strong>Files d'impression</strong> ;<br /></p>
-                                                <p>&#160;</p>
-                                                <p>
-                                                    <img src="../Z_Resources/Images/02_Captures/WSC_V6_Admin_FilesImpression_Access.png" style="width: 709px;height: 318px;" />
-                                                    <br />
-                                                </p>
-                                            </li>
-                                        </ol>
-                                        <p class="Resultat"><span style="font-family: 'Wingdings'">è</span>Vous accédez à l'interface <strong>Files d'impression</strong>, dans laquelle s'affiche la liste des files présentant un dysfonctionnement&#160;(indisponible, communication impossible, désactivée, en erreur) :<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_FilesImpression_Liste.png" style="width: 748px;height: 389px;" /><br /></p>
-                                        <p>&#160;</p>
-                                        <p style="text-align: left;">N.B.&#160;: pour accéder à la liste exhaustive des files, cliquez sur le bouton <strong>Toutes les files</strong>.</p>
-                                        <h2>Consulter les incidents d'une file</h2>
-                                        <h3>Description de la liste</h3>
-                                        <p>Dans cette liste, différentes informations relatives aux files d'information sont affichées dans les colonnes suivantes&#160;(chaque en-tête de colonne, cliquable, constitue un critère de tri) :</p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1">colonne <strong>Icones</strong> : des icones précisent la marque et la configuration de la file : </p>
-                                                <p>
-                                                    <ul style="list-style-type: circle;">
-                                                        <li>
-                                                            <p class="Liste_puce_2">
-                                                                <img src="../Z_Resources/Images/02_Captures/Icone_ModeValidation.png" style="width: 26px;height: 17px;" /> file en mode validation ; </p>
-                                                        </li>
-                                                        <li>
-                                                            <p class="Liste_puce_2">
-                                                                <img src="../Z_Resources/Images/02_Captures/Icone_ModeComptabilisation.png" style="width: 18px;height: 16px;" /> file en mode comptabilisation ;</p>
-                                                        </li>
-                                                        <li>
-                                                            <p class="Liste_puce_2">logo de la marque constructeur ;</p>
-                                                        </li>
-                                                        <li>
-                                                            <p class="Liste_puce_2">
-                                                                <img src="../Z_Resources/Images/02_Captures/Icone_Noir&amp;Blanc.png" style="width: 17px;height: 14px;" /> file noir et blanc ;</p>
-                                                        </li>
-                                                        <li>
-                                                            <p class="Liste_puce_2">
-                                                                <img src="../Z_Resources/Images/02_Captures/Icone_Couleur.png" style="width: 20px;height: 16px;" /> file couleur.</p>
-                                                        </li>
-                                                    </ul>
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Serveur</strong> : affiche le nom du serveur dont dépend la file ; </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Imprimante</strong> : affiche le nom du&#160;périphérique ; </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Adresse IP </strong>: adresse IP de l’imprimante.</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>N° Série</strong> : indique le n° de série du périphérique ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Message </strong>: affiche le message d'erreur relatif à la file, tel que renvoyé par le périphérique à Watchdoc&#160;: </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Communication impossible : </strong>l’alias DNS existe mais l’imprimante de répond pas ; </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Indisponible :</strong> l’alias DNS n’existe pas ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2"><strong>Bourrage papier… Plus de papier… Plus d’encre…</strong> : l'un des consommables empêche le bon fonctionnement du périphérique.</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Depuis :</strong> indique, en jours et en heure, le temps écoulé depuis le début du dysfonctionnement ; </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Travaux</strong> : indique le nombre de travaux d'impression concernés par la panne du périphérique et bloqués en attendant le dépannage ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Alertes :</strong> nombre d'alertes automatiques envoyées par mail ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Commentaire : </strong>information complémentaire relative à la file en panne ; </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Emplacement :</strong> emplacement physique du périphérique&#160;;</p>
-                                            </li>
-                                            <li>
-                                                <p><strong>Wes :</strong> identifiant du WES&#160;associé à la file.</p>
-                                            </li>
-                                        </ul>
-                                        <p class="Liste_puce_1">&#160;</p>
-                                        <p class="Liste_puce_1">Des <strong>outils </strong>permettent de mettre la file en pause :</p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_2">
-                                                    <img src="../Z_Resources/Images/02_Captures/Bouton_DesactiverFile.png" style="width: 17px;height: 17px;" /> <strong>désactivation :</strong> la file ne fonctionne plus et tous les travaux qui lui sont envoyés sont bloqués ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_2">
-                                                    <img src="../Z_Resources/Images/02_Captures/Bouton_ResactiverFile.png" style="width: 19px;height: 19px;" /> <strong>réactivation :</strong> la file est remise en fonctionnement.</p>
-                                            </li>
-                                        </ul>
-                                        <h3>Outils de recherche</h3>
-                                        <p>Vous disposez de différents outils permettant d'affiner la consultation&#160;:</p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1">un <strong>moteur </strong>offrant une recherche par <strong>nom </strong>de file (contenant la chaîne de caractères saisie) ou par <strong>adresse IP</strong> (depuis WSC&#160;6.0.4470) ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">différents <strong>filtres</strong> permettant de sélectionner les files en fonction de leurs caractéristiques et/ou de leur statut et/ou de leur emplacement : <br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Files_Recherche.png" style="width: 700px;height: auto;" /></p>
-                                            </li>
-                                        </ul>
-                                        <h3>Procédure de consultation</h3>
-                                        <p>Depuis la liste des files d'impression&#160;: </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">à l'aide du moteur de recherche et/ou filtres, sélectionnez la file dont vous souhaitez consulter l'activité ; </p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1">dans la liste des files en erreur affichée, cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Icone_Actions.png" style="width: 22px;height: 19px;" /> pour accéder au menu des actions : toutes ces actions de supervision des files envoient vers l'interface d'administration de Watchdoc&#160;:</p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1">cliquez sur l'un des boutons d'action :<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_Files_MenusIncidents.png" style="width: 700px;height: auto;" /><br /><br /></p>
-                                            </li>
-                                        </ol>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1">bouton <strong>Incidents récents</strong> renvoie à la liste des incidents au cours du mois précédant la date courante&#160;;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">bouton<strong> Tous les incidents</strong> renvoie à la liste de tous les incidents, sans restriction de date&#160;;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">bouton <strong>Historique d'impression</strong>  envoie à l'historique des travaux imprimés sur la file (avec ou sans incident)&#160;; </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">bouton <strong>Voir les statistiques</strong> renvoie aux statistiques des travaux d'impressions réalisés sur la file.</p>
-                                            </li>
-                                        </ul>
-                                        <p class="Resultat">&#160;</p>
-                                        <p class="Resultat"><span style="font-family: 'Wingdings'">è</span>vous accédez à l'interface  d'administration de Watchdoc : authentifiez-vous comme administrateur pour y consulter le détail des informations relatives à la file&#160;:<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_Admin_FilesImpression_ListeIncidentsWD.png" style="width: 768px;height: 507px;" /><br /><br /></p>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

@@ -164,6 +164,91 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocRôleCréerunrôle" data-magellan-target="WatchdocRôleCréerunrôle"><a name="aanchor71"></a>
+                                                    <MadCap:concept term="WD" />Watchdoc - Rôle - Créer un rôle</h1>
+                                                <h2 id="CréerunRôle" data-magellan-target="CréerunRôle">Créer un Rôle</h2>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Depuis le <strong>Menu principal</strong> de l'interface d'administration de Watchdoc, dans la section <strong>Configuration</strong>, cliquez sur <strong>Rôles et Services</strong>. </p>
+                                                        <p><span style="font-family: 'Wingdings'">è</span>Vous accédez à la liste des rôles déclarés dans Watchdoc.</p>
+                                                    </li>
+                                                </ol>
+                                                <ol data-mc-continue="true">
+                                                    <li value="2">
+                                                        <p>Pour créer un rôle, dans la liste des rôles, cliquez sur le bouton <strong>Créer un nouveau rôle</strong> :<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Roles_Liste.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="963" data-mc-height="291" src="../../Z_Resources/Images/02_Captures/Config_Roles_Liste.png" tabindex="" style="max-width: 1000px;" /></a><br /></p>
+                                                        <p>&#160;</p>
+                                                        <p><span style="font-family: 'Wingdings'">è</span> Vous accédez à l'interface <strong>Création d'un rôle</strong> composée des sections <strong>Rôle</strong> et <strong>Membres</strong>.</p>
+                                                    </li>
+                                                </ol>
+                                                <h2 id="ConfigurerleRôle" data-magellan-target="ConfigurerleRôle">Configurer le Rôle</h2>
+                                                <h3>Section Rôle</h3>
+                                                <p>Complétez les zones suivantes : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Nom :</strong> attribuez un nom au rôle créé.&#160;Ce nom s'affiche uniquement dans les interfaces d'administration et servat principalement des fins statistiques, il doit décrire le plus précisément possible la catégorie d'utilisateurs qu'il contient.&#160;Par exemple : "Etudiants extérieurs, Service Commercial International, Service Commercial France, inscrits intra-muros, inscrits extra-muros, etc." ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Tag :</strong> attribuez un tag à votre rôle si ce dernier appartient à un groupe spécifique. Le tag constitue alors le groupe au sein duquel sont rassemblés plusieurs rôles.&#160;Par exemple, vous pouvez créer le tag "Service Commercial" au sein duquel seront groupés les rôles "Ingénieurs commerciaux France", "Ingénieurs commerciaux International", "Secrétaires commerciales", etc.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Description </strong>: si nécessaire, saisissez dans ce champ des informations relatives au rôle déclaré, notamment pour en connaître les particularités en termes d'impression ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>E-mail :</strong> si elle existe, saisissez dans ce champ l'adresse mail générique correspondant au rôle qui servira à envoyer à tous les membres du rôle des informations relatives à l'impression (comme la notification sur les quotas du rôle, par exemple) ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Statistiques</strong>: cochez cette case dans le cas où vous ne souhaitez pas que le rôle soit pris en compte dans l'analyse statistique des impressions. Lorsque la case est cochée, cela suppose que le rôle est créé pour permettre la composition de filtres ou de droits d'accès.</p>
+                                                    </li>
+                                                </ul>
+                                                <h3>Section Membres</h3>
+                                                <p>Définissez dans cette section la composition du rôle : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Mode : </strong>le rôle peut être constitué selon le mode inclusif ou exclusif. Optez pour l'un des deux modes proposés&#160;;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Groupes :</strong> dans la liste déroulante, choisissez un annuaire puis, en cliquant sur le bouton <strong>Parcourir</strong><img src="../../Z_Resources/Images/02_Captures/Boutons/icon_Parcourir.png" style="width: 25px;height: 19px;" />, choisissez le groupe à associer au rôle.&#160;Vous pouvez réitérer l'opération pour associer plusieurs groupes au rôle ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Utilisateur :</strong> dans la liste déroulante, choisissez un annuaire puis saisissez le compte (login) de l'utilisateur à inclure dans le rôle.&#160;<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Roles_SectionMembres.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="638" data-mc-height="221" src="../../Z_Resources/Images/02_Captures/Config_Roles_SectionMembres.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                        <p class="Liste_puce_1">
+                                                            <br />
+                                                        </p>
+                                                    </li>
+                                                </ul>
+                                                <fieldset>Si l'annuaire est de type LDAP où les utilisateurs sont répartis en Unités d'Organisations ("OU"), vous pouvez utiliser la syntaxe <br /><code>*,ou=service,dc=domaine,dc=fr</code> pour inclure tous les utilisateurs appartenant à cette sous-branche.</fieldset>
+                                                <fieldset class="astuce" style="text-align: left;font-size: 12pt;">Pour désigner un ou des utilisateur(s) n'appartenant pas à un groupe, vous pouvez faire précéder ce groupe des signes de ponctuation suivants&#160;:
+		<ul style="font-size: 12pt;"><li style="font-size: 12pt;"> soit le point d'exclamation <strong>!</strong></li><li style="font-size: 12pt;"> soit le trait d'union <strong>-</strong>.</li></ul><br />Attention, donc, dans le cas où ces caractères préfixent vos groupes de sécurité, car ils peuvent alors compromettre la configuration des rôles Watchdoc.<br /><br /><img src="../../Z_Resources/Images/02_Captures/ConfigRoles_SelectGroupe.png" style="width: 700px;height: auto;" /></fieldset>
+                                                <p>&#160;</p>
+                                                <p>Une fois ce rôle créé, vous pouvez l'exploiter&#160;:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>pour configurer un filtre (cf. <a href="../ConfigFiltres/ConfigFiltres_Procedure.htm">Configurer un filtre</a>) ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>pour configurer une règle sur une file d'impression (cf.&#160;<a href="../ConfigFiltres/ConfigFiltres_Procedure.htm">Filtres et règles</a>) dans le cadre d'une politique d'impression</p>
+                                                    </li>
+                                                </ul>
+                                                <p>&#160;</p>
+                                                <p>&#160;</p>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocR%C3%B4leCr%C3%A9erunr%C3%B4le">Watchdoc - Rôle - Créer un rôle</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Cr%C3%A9erunR%C3%B4le">Créer un Rôle</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#ConfigurerleR%C3%B4le">Configurer le Rôle</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
                                     </script>
                                     <!-- Google Tag Manager (noscript) -->
@@ -198,75 +283,6 @@
                                     <div class="nocontent">
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
-                                    </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor71"></a>
-                                            <MadCap:concept term="WD" />Watchdoc - Rôle - Créer un rôle</h1>
-                                        <h2>Créer un Rôle</h2>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Depuis le <strong>Menu principal</strong> de l'interface d'administration de Watchdoc, dans la section <strong>Configuration</strong>, cliquez sur <strong>Rôles et Services</strong>. </p>
-                                                <p><span style="font-family: 'Wingdings'">è</span>Vous accédez à la liste des rôles déclarés dans Watchdoc.</p>
-                                            </li>
-                                        </ol>
-                                        <ol data-mc-continue="true">
-                                            <li value="2">
-                                                <p>Pour créer un rôle, dans la liste des rôles, cliquez sur le bouton <strong>Créer un nouveau rôle</strong> :<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Roles_Liste.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="963" data-mc-height="291" src="../../Z_Resources/Images/02_Captures/Config_Roles_Liste.png" tabindex="" style="max-width: 1000px;" /></a><br /></p>
-                                                <p>&#160;</p>
-                                                <p><span style="font-family: 'Wingdings'">è</span> Vous accédez à l'interface <strong>Création d'un rôle</strong> composée des sections <strong>Rôle</strong> et <strong>Membres</strong>.</p>
-                                            </li>
-                                        </ol>
-                                        <h2>Configurer le Rôle</h2>
-                                        <h3>Section Rôle</h3>
-                                        <p>Complétez les zones suivantes : </p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Nom :</strong> attribuez un nom au rôle créé.&#160;Ce nom s'affiche uniquement dans les interfaces d'administration et servat principalement des fins statistiques, il doit décrire le plus précisément possible la catégorie d'utilisateurs qu'il contient.&#160;Par exemple : "Etudiants extérieurs, Service Commercial International, Service Commercial France, inscrits intra-muros, inscrits extra-muros, etc." ; </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Tag :</strong> attribuez un tag à votre rôle si ce dernier appartient à un groupe spécifique. Le tag constitue alors le groupe au sein duquel sont rassemblés plusieurs rôles.&#160;Par exemple, vous pouvez créer le tag "Service Commercial" au sein duquel seront groupés les rôles "Ingénieurs commerciaux France", "Ingénieurs commerciaux International", "Secrétaires commerciales", etc.</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Description </strong>: si nécessaire, saisissez dans ce champ des informations relatives au rôle déclaré, notamment pour en connaître les particularités en termes d'impression ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>E-mail :</strong> si elle existe, saisissez dans ce champ l'adresse mail générique correspondant au rôle qui servira à envoyer à tous les membres du rôle des informations relatives à l'impression (comme la notification sur les quotas du rôle, par exemple) ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Statistiques</strong>: cochez cette case dans le cas où vous ne souhaitez pas que le rôle soit pris en compte dans l'analyse statistique des impressions. Lorsque la case est cochée, cela suppose que le rôle est créé pour permettre la composition de filtres ou de droits d'accès.</p>
-                                            </li>
-                                        </ul>
-                                        <h3>Section Membres</h3>
-                                        <p>Définissez dans cette section la composition du rôle : </p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Mode : </strong>le rôle peut être constitué selon le mode inclusif ou exclusif. Optez pour l'un des deux modes proposés&#160;;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Groupes :</strong> dans la liste déroulante, choisissez un annuaire puis, en cliquant sur le bouton <strong>Parcourir</strong><img src="../../Z_Resources/Images/02_Captures/Boutons/icon_Parcourir.png" style="width: 25px;height: 19px;" />, choisissez le groupe à associer au rôle.&#160;Vous pouvez réitérer l'opération pour associer plusieurs groupes au rôle ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Utilisateur :</strong> dans la liste déroulante, choisissez un annuaire puis saisissez le compte (login) de l'utilisateur à inclure dans le rôle.&#160;<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Roles_SectionMembres.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="638" data-mc-height="221" src="../../Z_Resources/Images/02_Captures/Config_Roles_SectionMembres.png" tabindex="" style="max-width: 1000px;" /></a></p>
-                                                <p class="Liste_puce_1">
-                                                    <br />
-                                                </p>
-                                            </li>
-                                        </ul>
-                                        <fieldset>Si l'annuaire est de type LDAP où les utilisateurs sont répartis en Unités d'Organisations ("OU"), vous pouvez utiliser la syntaxe <br /><code>*,ou=service,dc=domaine,dc=fr</code> pour inclure tous les utilisateurs appartenant à cette sous-branche.</fieldset>
-                                        <fieldset class="astuce" style="text-align: left;font-size: 12pt;">Pour désigner un ou des utilisateur(s) n'appartenant pas à un groupe, vous pouvez faire précéder ce groupe des signes de ponctuation suivants&#160;:
-		<ul style="font-size: 12pt;"><li style="font-size: 12pt;"> soit le point d'exclamation <strong>!</strong></li><li style="font-size: 12pt;"> soit le trait d'union <strong>-</strong>.</li></ul><br />Attention, donc, dans le cas où ces caractères préfixent vos groupes de sécurité, car ils peuvent alors compromettre la configuration des rôles Watchdoc.<br /><br /><img src="../../Z_Resources/Images/02_Captures/ConfigRoles_SelectGroupe.png" style="width: 700px;height: auto;" /></fieldset>
-                                        <p>&#160;</p>
-                                        <p>Une fois ce rôle créé, vous pouvez l'exploiter&#160;:</p>
-                                        <ul>
-                                            <li>
-                                                <p>pour configurer un filtre (cf. <a href="../ConfigFiltres/ConfigFiltres_Procedure.htm">Configurer un filtre</a>) ;</p>
-                                            </li>
-                                            <li>
-                                                <p>pour configurer une règle sur une file d'impression (cf.&#160;<a href="../ConfigFiltres/ConfigFiltres_Procedure.htm">Filtres et règles</a>) dans le cadre d'une politique d'impression</p>
-                                            </li>
-                                        </ul>
-                                        <p>&#160;</p>
-                                        <p>&#160;</p>
                                     </div>
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">

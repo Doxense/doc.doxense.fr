@@ -165,6 +165,99 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocMettreàjourlapageMonComptev2dansundomaine" data-magellan-target="WatchdocMettreàjourlapageMonComptev2dansundomaine"><a name="aanchor376"></a>
+                                                    <MadCap:concept term="INS" />Watchdoc - Mettre à jour la page Mon Compte v.2 dans un domaine</h1>
+                                                <h2 id="Principe" data-magellan-target="Principe">Principe</h2>
+                                                <p>La page Mon compte v.&#160;2&#160;est hébergée sur le serveur IIS&#160;de votre configuration&#160;Watchdoc.<br />Dans une configuration en domaine (serveurs master/slaves), il est nécessaire de fournir au serveur IIS&#160;une liste de tous les serveurs du domaine autorisés à consulter la page Mon compte v. 2. <br />Cette liste, intitulée <strong>servers.xml</strong> est constituée après la configuration de la page MonCompte v. 2 et au terme de l'opération de configuration du domaine. Ensuite, elle doit être enregistrée sur le serveur IIS.&#160;</p>
+                                                <p>Lorsque le domaine est modifié (ajout, suppression de serveurs), la liste <b>servers.xml</b> doit donc être regénérée puis réenregistrée sur le serveur IIS.</p>
+                                                <p>Une fois les serveurs du domaine référencés et la page Mon compte v. 2 sécurisée, son adresse url peut être communiquée aux utilisateurs.&#160;</p>
+                                                <p>&#160;</p>
+                                                <p>N.B.&#160;: une fois les éléments de la page Mon compte v. 2&#160;mis à disposition sur le poste client par le serveur IIS, ce dernier interroge directement le serveur qui gère ses données via le port 5753.&#160;Par défaut, le port 5753 est sécurisé par un certificat auto-signé.</p>
+                                                <p>Pour plus de sécurité, nous vous recommandons de faire signer ce certificat par votre autorité de certification. Idem si vous choisissez de configurer un port dédié autre que le 5753.</p>
+                                                <p>&#160;</p>
+                                                <p><a class="MCPopupThumbnailLink" href="../C_Configurer/ConfigProfilWeb/Admin_MCv2_Schema.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="693" data-mc-height="416" src="../C_Configurer/ConfigProfilWeb/Admin_MCv2_Schema.png" tabindex="" style="max-width: 1000px;" /></a>
+                                                </p>
+                                                <h2 id="Miseàjour" data-magellan-target="Miseàjour">Mise à jour</h2>
+                                                <p>Dans le cas d'une <strong>mise à jour</strong> en v.&#160;<span style="background-color: #ffff00;">6.1.1.56</span>, il est nécessaire d'installer l'utilitaire MS URL&#160;Rewrite<sup>®</sup> sur le(s) serveur(s) IIS de Watchdoc. <br />Cette opération est à réaliser avant de lancer la mise à jour de Watchdoc : </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>depuis le serveur IIS, connectez-vous au site de téléchargement <a href="https://www.iis.net/downloads/microsoft/url-rewrite" target="_blank">Microsoft URL Rewrite</a>&#160;;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>téléchargez le fichier MS&#160;URL&#160;rewrite_x64-fr-FR.msi&#160;;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>installez le .msi sur le serveur IIS ;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>réitérez l'opération sur d'autres serveurs IIS&#160;si votre configuration en comporte plusieurs ; </p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p>installez le site web Watchdoc sur le serveur IIS (cf.&#160;<a href="Installer_Site_web.htm">Installer le Site web Watchdoc</a>) ;</p>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p>poursuivez la mise à jour de votre domaine Watchdoc en mode classique ou autonome (cf. <a href="../E_MettreAJour/WD611_MaJ_WD_Proc_Dom_de_61.htm" target="_blank">Mettre à jour un domaine</a>) ou en mode déporté (cf. <a href="../E_MettreAJour/WD611_MaJ_WD_Proc_DomDept_de_61.htm" target="_blank">Mettre à jour un domaine</a>).</p>
+                                                    </li>
+                                                </ol>
+                                                <h2 id="Configuration" data-magellan-target="Configuration">Configuration </h2>
+                                                <p>Après installation, il est nécessaire d'appliquer les étapes de configuration suivantes.&#160;</p>
+                                                <h3>Gestion du certificat de la page Mon compte v. 2</h3>
+                                                <p>Par défaut, la page Mon Compte v. 2 est sécurisée à l'aide d'un certificat autosigné. Si vous conservez ce certificat par défaut, les utilisateurs devront accorder leur confiance à la page Mon Compte v. 2 via une pop-up préalable&#160;: <br /><br /></p>
+                                                <p><a class="MCPopupThumbnailLink" href="Util_PageMCv2_PopUpBeCareful.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1256" data-mc-height="662" src="Util_PageMCv2_PopUpBeCareful.png" tabindex="" style="max-width: 1000px;" /></a>
+                                                </p>
+                                                <address style="text-align: center;">Exemple de message d'alerte du navigateur Firefox<sup>®</sup></address>
+                                                <p>&#160;</p>
+                                                <p>Si vous souhaitez appliquer un certificat signé par votre autorité de certification, vous pouvez&#160;: </p>
+                                                <ul>
+                                                    <li>
+                                                        <p>soit faire signer le certificat du port 5753 installé par défaut et auto-signé (cf.&#160;<a href="../C_Configurer/ConfigCertificats/ConfigCertificats_Procedure.htm#Faire_signer_Cert" target="_blank">Faire signer un certificat</a>) ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p>soit faire signer un autre certificat généré spécifiquement (cf. <a href="../C_Configurer/ConfigCertificats/ConfigCertificats_Procedure.htm" target="_blank">Générer et faire signer un certificat</a>). 
+Dans ce cas, il est nécessaire de connaître la disponibilité des ports du serveur IIS.</p>
+                                                    </li>
+                                                </ul>
+                                                <h3>Configuration de la page Mon compte v. 2</h3>
+                                                <p>Une fois que vous avez configuré le certificat dédié à la page Mon compte v. 2, créez et configurez la page web "Mon compte v. 2" (cf.&#160;<a href="../C_Configurer/ConfigProfilWeb/ConfigProfilWeb_v2_Procedure.htm">Configurer une page Mon compte v. 2</a>).&#160;</p>
+                                                <p>&#160;</p>
+                                                <p>N.B.&#160;Vous pouvez créer plusieurs pages configurées différemment que vous destinez à des utilisateurs différents. Vous communiquez ensuite l'adresse url de chaque page "Mon Compte v. 2" à chaque groupe d'utilisateurs. <br />Par exemple, vous configurez une page web dédiée à vos salariés à laquelle ils accèdent en SSO&#160;grâce à leur compte AD.&#160;Toutes les fonctions sont activées dans cette page.&#160;<br />Parallèlement, vous configurez une page web dédiée aux "Invités". Ainsi, les visiteurs inscrits dans l'annuaire "Invités / Guests" de WSC peuvent s'authentifier à l'aide d'un login/mot de passe.&#160;Dans Mon Compte v. 2, ils accèdent uniquement à leurs statistiques d'impression.</p>
+                                                <h3>Configuration du domaine</h3>
+                                                <p>Lorsque la page Mon compte v. 2 est configurée, configurez votre domaine Watchdoc (cf. <a href="../C_Configurer/ConfigDomaine/ConfigDomaine_Procedure.htm">Configurer un domaine</a>).</p>
+                                                <h3>Export et enregistrement du fichier servers.xml</h3>
+                                                <p>Une fois la page Mon comtpe v.2 et le domaine configurés, </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>depuis l'interface de gestion du domaine, cliquez sur le bouton Exporter le fichier servers.xml&#160;;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>sur le serveur IIS,&#160;rendez-vous dans le dossier&#160;c://inetpub/wwwroot/watchdoc/includes ; </p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>collez le fichier servers.xml dans ce dossier (et remplacez-le s'il existait déjà).</p>
+                                                    </li>
+                                                </ol>
+                                                <h3>Vérification</h3>
+                                                <p>Vérifiez l'accès à la page Mon Compte v. 2 depuis le navigateur d'un poste client.&#160;</p>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocMettre%C3%A0jourlapageMonComptev2dansundomaine">Watchdoc - Mettre à jour la page Mon Compte v.2 dans un domaine</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Principe">Principe</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Mise%C3%A0jour">Mise à jour</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Configuration">Configuration </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -198,81 +291,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor376"></a>
-                                            <MadCap:concept term="INS" />Watchdoc - Mettre à jour la page Mon Compte v.2 dans un domaine</h1>
-                                        <h2>Principe</h2>
-                                        <p>La page Mon compte v.&#160;2&#160;est hébergée sur le serveur IIS&#160;de votre configuration&#160;Watchdoc.<br />Dans une configuration en domaine (serveurs master/slaves), il est nécessaire de fournir au serveur IIS&#160;une liste de tous les serveurs du domaine autorisés à consulter la page Mon compte v. 2. <br />Cette liste, intitulée <strong>servers.xml</strong> est constituée après la configuration de la page MonCompte v. 2 et au terme de l'opération de configuration du domaine. Ensuite, elle doit être enregistrée sur le serveur IIS.&#160;</p>
-                                        <p>Lorsque le domaine est modifié (ajout, suppression de serveurs), la liste <b>servers.xml</b> doit donc être regénérée puis réenregistrée sur le serveur IIS.</p>
-                                        <p>Une fois les serveurs du domaine référencés et la page Mon compte v. 2 sécurisée, son adresse url peut être communiquée aux utilisateurs.&#160;</p>
-                                        <p>&#160;</p>
-                                        <p>N.B.&#160;: une fois les éléments de la page Mon compte v. 2&#160;mis à disposition sur le poste client par le serveur IIS, ce dernier interroge directement le serveur qui gère ses données via le port 5753.&#160;Par défaut, le port 5753 est sécurisé par un certificat auto-signé.</p>
-                                        <p>Pour plus de sécurité, nous vous recommandons de faire signer ce certificat par votre autorité de certification. Idem si vous choisissez de configurer un port dédié autre que le 5753.</p>
-                                        <p>&#160;</p>
-                                        <p><a class="MCPopupThumbnailLink" href="../C_Configurer/ConfigProfilWeb/Admin_MCv2_Schema.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="693" data-mc-height="416" src="../C_Configurer/ConfigProfilWeb/Admin_MCv2_Schema.png" tabindex="" style="max-width: 1000px;" /></a>
-                                        </p>
-                                        <h2>Mise à jour</h2>
-                                        <p>Dans le cas d'une <strong>mise à jour</strong> en v.&#160;<span style="background-color: #ffff00;">6.1.1.56</span>, il est nécessaire d'installer l'utilitaire MS URL&#160;Rewrite<sup>®</sup> sur le(s) serveur(s) IIS de Watchdoc. <br />Cette opération est à réaliser avant de lancer la mise à jour de Watchdoc : </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>depuis le serveur IIS, connectez-vous au site de téléchargement <a href="https://www.iis.net/downloads/microsoft/url-rewrite" target="_blank">Microsoft URL Rewrite</a>&#160;;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>téléchargez le fichier MS&#160;URL&#160;rewrite_x64-fr-FR.msi&#160;;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>installez le .msi sur le serveur IIS ;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p>réitérez l'opération sur d'autres serveurs IIS&#160;si votre configuration en comporte plusieurs ; </p>
-                                            </li>
-                                            <li value="5">
-                                                <p>installez le site web Watchdoc sur le serveur IIS (cf.&#160;<a href="Installer_Site_web.htm">Installer le Site web Watchdoc</a>) ;</p>
-                                            </li>
-                                            <li value="6">
-                                                <p>poursuivez la mise à jour de votre domaine Watchdoc en mode classique ou autonome (cf. <a href="../E_MettreAJour/WD611_MaJ_WD_Proc_Dom_de_61.htm" target="_blank">Mettre à jour un domaine</a>) ou en mode déporté (cf. <a href="../E_MettreAJour/WD611_MaJ_WD_Proc_DomDept_de_61.htm" target="_blank">Mettre à jour un domaine</a>).</p>
-                                            </li>
-                                        </ol>
-                                        <h2>Configuration </h2>
-                                        <p>Après installation, il est nécessaire d'appliquer les étapes de configuration suivantes.&#160;</p>
-                                        <h3>Gestion du certificat de la page Mon compte v. 2</h3>
-                                        <p>Par défaut, la page Mon Compte v. 2 est sécurisée à l'aide d'un certificat autosigné. Si vous conservez ce certificat par défaut, les utilisateurs devront accorder leur confiance à la page Mon Compte v. 2 via une pop-up préalable&#160;: <br /><br /></p>
-                                        <p><a class="MCPopupThumbnailLink" href="Util_PageMCv2_PopUpBeCareful.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1256" data-mc-height="662" src="Util_PageMCv2_PopUpBeCareful.png" tabindex="" style="max-width: 1000px;" /></a>
-                                        </p>
-                                        <address style="text-align: center;">Exemple de message d'alerte du navigateur Firefox<sup>®</sup></address>
-                                        <p>&#160;</p>
-                                        <p>Si vous souhaitez appliquer un certificat signé par votre autorité de certification, vous pouvez&#160;: </p>
-                                        <ul>
-                                            <li>
-                                                <p>soit faire signer le certificat du port 5753 installé par défaut et auto-signé (cf.&#160;<a href="../C_Configurer/ConfigCertificats/ConfigCertificats_Procedure.htm#Faire_signer_Cert" target="_blank">Faire signer un certificat</a>) ; </p>
-                                            </li>
-                                            <li>
-                                                <p>soit faire signer un autre certificat généré spécifiquement (cf. <a href="../C_Configurer/ConfigCertificats/ConfigCertificats_Procedure.htm" target="_blank">Générer et faire signer un certificat</a>). 
-Dans ce cas, il est nécessaire de connaître la disponibilité des ports du serveur IIS.</p>
-                                            </li>
-                                        </ul>
-                                        <h3>Configuration de la page Mon compte v. 2</h3>
-                                        <p>Une fois que vous avez configuré le certificat dédié à la page Mon compte v. 2, créez et configurez la page web "Mon compte v. 2" (cf.&#160;<a href="../C_Configurer/ConfigProfilWeb/ConfigProfilWeb_v2_Procedure.htm">Configurer une page Mon compte v. 2</a>).&#160;</p>
-                                        <p>&#160;</p>
-                                        <p>N.B.&#160;Vous pouvez créer plusieurs pages configurées différemment que vous destinez à des utilisateurs différents. Vous communiquez ensuite l'adresse url de chaque page "Mon Compte v. 2" à chaque groupe d'utilisateurs. <br />Par exemple, vous configurez une page web dédiée à vos salariés à laquelle ils accèdent en SSO&#160;grâce à leur compte AD.&#160;Toutes les fonctions sont activées dans cette page.&#160;<br />Parallèlement, vous configurez une page web dédiée aux "Invités". Ainsi, les visiteurs inscrits dans l'annuaire "Invités / Guests" de WSC peuvent s'authentifier à l'aide d'un login/mot de passe.&#160;Dans Mon Compte v. 2, ils accèdent uniquement à leurs statistiques d'impression.</p>
-                                        <h3>Configuration du domaine</h3>
-                                        <p>Lorsque la page Mon compte v. 2 est configurée, configurez votre domaine Watchdoc (cf. <a href="../C_Configurer/ConfigDomaine/ConfigDomaine_Procedure.htm">Configurer un domaine</a>).</p>
-                                        <h3>Export et enregistrement du fichier servers.xml</h3>
-                                        <p>Une fois la page Mon comtpe v.2 et le domaine configurés, </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>depuis l'interface de gestion du domaine, cliquez sur le bouton Exporter le fichier servers.xml&#160;;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>sur le serveur IIS,&#160;rendez-vous dans le dossier&#160;c://inetpub/wwwroot/watchdoc/includes ; </p>
-                                            </li>
-                                            <li value="3">
-                                                <p>collez le fichier servers.xml dans ce dossier (et remplacez-le s'il existait déjà).</p>
-                                            </li>
-                                        </ol>
-                                        <h3>Vérification</h3>
-                                        <p>Vérifiez l'accès à la page Mon Compte v. 2 depuis le navigateur d'un poste client.&#160;</p>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

@@ -165,6 +165,157 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 data-mc-conditions="General.Online" id="WEScanConfigurerunedestinationScanToMail" data-magellan-target="WEScanConfigurerunedestinationScanToMail"><a name="aanchor207"></a>
+                                                    <MadCap:concept term="WEScan;CFG" />
+                                                    <MadCap:conditionalText data-mc-conditions="General.Online">WEScan - Configurer une destination Scan To Mail</MadCap:conditionalText>
+                                                </h1>
+                                                <h2 id="Prérequis" data-magellan-target="Prérequis">Prérequis</h2>
+                                                <p class="Liste_puce_1">Pour envoyer aux utilisateurs le document numérisé, la notification par e-mail doit être autorisée et les informations relatives au serveur SMTP doivent être paramétrées&#160;dans Watchdoc (cf.&#160;<a href="../ConfigNotifs/ConfigNotifs_Procedure.htm" target="_blank">Configurer les notifications</a>).</p>
+                                                <h2 id="Accéderàlinterface" data-magellan-target="Accéderàlinterface">Accéder à l'interface</h2>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1">Accédez à l'interface d'administration de Watchdoc en tant qu'administrateur ; </p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>depuis le <strong>Menu Principal</strong> &gt; section <strong>Configuration</strong>, cliquez sur <strong>Web, WES &amp; Destination de numérisation</strong>&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Admin_MenuPrincipal_AccesWES.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1875" data-mc-height="887" src="../../Z_Resources/Images/02_Captures/Admin_MenuPrincipal_AccesWES.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p class="Liste_num_1">dans l'interface <strong>Web, WES &amp; Destinations de numérisation</strong>, dans la section <strong>Destinations de numérisations</strong> figurent les destinations créées. Pour chaque destination, vous disposez de plusieurs outils : </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p class="Liste_puce_2">le bouton <img src="../../Z_Resources/Images/02_Captures/Bouton_Editer.png" style="width: 16px;height: 15px;" /><strong>Editer</strong> permet d'accéder à l'interface de configuration afin d'en modifier la configuration ;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_2">le bouton <img src="../../Z_Resources/Images/02_Captures/Bouton_Dupliquer.png" style="width: 17px;height: 15px;" /><strong>Dupliquer</strong> permet de créer une autre destination de scan à partir d'une destination existante&#160;;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_2">le bouton <img src="../../Z_Resources/Images/02_Captures/Bouton_Supprimer.png" style="width: 16px;height: 14px;" /> permet de <strong>Supprimer</strong> une destination de scan (après confirmation).</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p class="Liste_puce_2">Pour créer une nouvelle destination, cliquez sur <strong>Créer une nouvelle destination de scan</strong>&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_WEScan_Config_DestinationScan.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1536" data-mc-height="588" src="../../Z_Resources/Images/02_Captures/Config_WEScan_Config_DestinationScan.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a></p>
+                                                    </li>
+                                                </ol>
+                                                <h2 id="ConfigurerladestinationScanversEmail" data-magellan-target="ConfigurerladestinationScanversEmail"><a name="aanchor208"></a>
+                                                    <MadCap:concept term="WEScan" />Configurer la destination Scan vers E-mail</h2>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_num_1">Dans la section <strong>Destinations de numérisation</strong>, cliquez sur <img src="../../Z_Resources/Images/02_Captures/Bouton_ScanToMail.png" style="width: 137px;height: 19px;"></img>;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1">Dans l'interface <strong>Création d'une nouvelle destination de scan</strong>, remplissez les paramètres suivants :</p>
+                                                    </li>
+                                                </ol>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Section Propriétés</strong>
+                                                        </p>
+                                                        <ul style="list-style-type: circle;">
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>Label :</strong> indiquez dans ce champ le libellé de la destination ;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>Type de destination :</strong> la destination configurée est sélectionnée par défaut.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><strong>Global :</strong> cochez la case dans le cas où le serveur appartient à un domaine et que la destination, configurée sur le serveur Maître, doit être répliquée sur les serveurs esclaves.&#160;</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Section E-Mail :</strong>
+                                                        </p>
+                                                        <ul style="list-style-type: circle;">
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>Nom du fichier :</strong> indiquez dans ce champ le nom attribué au document scanné (devenu fichier) joint au mail.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>Peut être modifié(e) par l'utilisateur</strong> (cette case accompagne d'autres paramètres) : cochez cette case pour autoriser l'utilisateur à modifier le paramètre auquel elle est associée (nom du fichier, e-mail de l'utilisateur, copie à l'utilisateur) depuis l'interface du périphérique.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>Taille max/ des fichiers (en Mo) : </strong> indiquez la taille que les des documents numérisés ne peuvent pas dépasser <span>(au-delà de cette taille, un mail informe l'utilisateur que le document dépasse la taille autorisée et ne peut donc pas être envoyé).</span>.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>Destinataires : </strong>indiquez l'adresse mail de destination affichée par défaut.&#160;Cliquez sur <img src="../../Z_Resources/Images/02_Captures/Bouton_AjouterAdresse.png" style="width: 128px;height: 14px;"></img>, puis complétez l'adresse (ou les adresses) mail pour ajouter des destinataires.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>Supprimable : </strong>cochez la case pour permettre à l'utilisateur de supprimer l'adresse mail de destination depuis l'interface du périphérique (WES).</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>L'utilisateur peut ajouter des adresses e-mails : </strong>cochez la case pour autoriser l'utilisateur à ajouter des destinataires en copie ;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>Adresses en copie :</strong> si vous souhaitez envoyer le mail en copie, cliquez sur <img src="../../Z_Resources/Images/02_Captures/Bouton_AjouterAdresse.png" style="width: 128px;height: 14px;"></img>, puis complétez l'adresse (ou les adresses) mail dans le(s) champ(s) suivant(s).</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>Supprimable : </strong>cochez la case pour permettre à l'utilisateur de supprimer la copie de l'e-mail vers une autre adresse mail.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>L'utilisateur peut ajouter des adresses e-mails : </strong>cochez la case pour autoriser l'utilisateur à ajouter des destinataires en copie ;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>Objet de l'E-mail :</strong> saisissez l'objet de l'e-mail accompagnant le document numérisé.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>Corps du message :</strong> saisissez le message de l'e-mail accompagnant le document numérisé.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>Expéditeur.- Envoyé depuis l'e-mail de l'utilisateur ; </strong>cochez cette case pour que l'adresse e-mail de l'utilisateur apparaisse comme adresse d'expédition du mail.</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>Ajouter l'utilisateur en copie : </strong>cochez cette case pour que l'utilisateur reçoive l'e-mail en copie.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Admin_WEScan_Config_DestinationScan_Email.png"><img class="MCPopupThumbnail img" data-mc-width="1146" data-mc-height="813" src="../../Z_Resources/Images/02_Captures/Admin_WEScan_Config_DestinationScan_Email.png" tabindex="" style="width: 700px;height: auto;mc-thumbnail: link;mc-thumbnail-max-width: 1000px;mc-thumbnail-max-height: 1000px;max-width: 1000px;max-height: 1000px;" /></a></p>
+                                                                <p class="Liste_puce_2">
+                                                                    <br />
+                                                                </p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Section Restreindre cette destination :</strong> cochez cette case pour que la destination puisse n'être utilisée que par certains utilisateurs ou groupes d'utilisateurs : </p>
+                                                        <ul style="list-style-type: circle;">
+                                                            <li>
+                                                                <p><strong>Mode :</strong> choisissez si la destination peut être utilisée par tous les utilisateurs (par défaut) ou cochez  <strong>Tous les utilisateurs définis ci-après ne pourront pas utiliser cette destination</strong> pour appliquer une restriction.&#160;<br />Puis précisez :</p>
+                                                                <ul style="list-style-type: circle;">
+                                                                    <li>
+                                                                        <p>un ou des <strong>Groupes d'utilisateurs</strong> dans la liste&#160;: ces groupes d'utilisateurs ne pourront pas utiliser cette destination ; </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>un ou des <strong>Utilisateurs</strong> dans la liste : ces utilisateurs ne pourront pas utiliser cette destination.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/WEScan_Config_DestinationScan_SectionRestreindre.png"><img class="MCPopupThumbnail img" data-mc-width="801" data-mc-height="260" src="../../Z_Resources/Images/02_Captures/WEScan_Config_DestinationScan_SectionRestreindre.png" tabindex="" style="width: 700px;height: auto;mc-thumbnail: link;mc-thumbnail-max-width: 1000px;mc-thumbnail-max-height: 1000px;max-width: 1000px;max-height: 1000px;" /></a><br /><br /></p>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                                <ol data-mc-continue="true">
+                                                    <li value="3">
+                                                        <p class="Liste_num_1">Cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Creer.png" style="width: 26px;height: 23px;" /> pour créer la destination.</p>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WEScanConfigurerunedestinationScanToMail">WEScan - Configurer une destination Scan To Mail</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Pr%C3%A9requis">Prérequis</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Acc%C3%A9der%C3%A0linterface">Accéder à l'interface</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#ConfigurerladestinationScanversEmail">Configurer la destination Scan vers E-mail</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -198,139 +349,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1 data-mc-conditions="General.Online"><a name="aanchor207"></a>
-                                            <MadCap:concept term="WEScan;CFG" />
-                                            <MadCap:conditionalText data-mc-conditions="General.Online">WEScan - Configurer une destination Scan To Mail</MadCap:conditionalText>
-                                        </h1>
-                                        <h2>Prérequis</h2>
-                                        <p class="Liste_puce_1">Pour envoyer aux utilisateurs le document numérisé, la notification par e-mail doit être autorisée et les informations relatives au serveur SMTP doivent être paramétrées&#160;dans Watchdoc (cf.&#160;<a href="../ConfigNotifs/ConfigNotifs_Procedure.htm" target="_blank">Configurer les notifications</a>).</p>
-                                        <h2>Accéder à l'interface</h2>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">Accédez à l'interface d'administration de Watchdoc en tant qu'administrateur ; </p>
-                                            </li>
-                                            <li value="2">
-                                                <p>depuis le <strong>Menu Principal</strong> &gt; section <strong>Configuration</strong>, cliquez sur <strong>Web, WES &amp; Destination de numérisation</strong>&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Admin_MenuPrincipal_AccesWES.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1875" data-mc-height="887" src="../../Z_Resources/Images/02_Captures/Admin_MenuPrincipal_AccesWES.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1">dans l'interface <strong>Web, WES &amp; Destinations de numérisation</strong>, dans la section <strong>Destinations de numérisations</strong> figurent les destinations créées. Pour chaque destination, vous disposez de plusieurs outils : </p>
-                                                <ul>
-                                                    <li>
-                                                        <p class="Liste_puce_2">le bouton <img src="../../Z_Resources/Images/02_Captures/Bouton_Editer.png" style="width: 16px;height: 15px;" /><strong>Editer</strong> permet d'accéder à l'interface de configuration afin d'en modifier la configuration ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_2">le bouton <img src="../../Z_Resources/Images/02_Captures/Bouton_Dupliquer.png" style="width: 17px;height: 15px;" /><strong>Dupliquer</strong> permet de créer une autre destination de scan à partir d'une destination existante&#160;;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_2">le bouton <img src="../../Z_Resources/Images/02_Captures/Bouton_Supprimer.png" style="width: 16px;height: 14px;" /> permet de <strong>Supprimer</strong> une destination de scan (après confirmation).</p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li value="4">
-                                                <p class="Liste_puce_2">Pour créer une nouvelle destination, cliquez sur <strong>Créer une nouvelle destination de scan</strong>&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_WEScan_Config_DestinationScan.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1536" data-mc-height="588" src="../../Z_Resources/Images/02_Captures/Config_WEScan_Config_DestinationScan.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a></p>
-                                            </li>
-                                        </ol>
-                                        <h2><a name="aanchor208"></a>
-                                            <MadCap:concept term="WEScan" />Configurer la destination Scan vers E-mail</h2>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_num_1">Dans la section <strong>Destinations de numérisation</strong>, cliquez sur <img src="../../Z_Resources/Images/02_Captures/Bouton_ScanToMail.png" style="width: 137px;height: 19px;"></img>;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1">Dans l'interface <strong>Création d'une nouvelle destination de scan</strong>, remplissez les paramètres suivants :</p>
-                                            </li>
-                                        </ol>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Section Propriétés</strong>
-                                                </p>
-                                                <ul style="list-style-type: circle;">
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>Label :</strong> indiquez dans ce champ le libellé de la destination ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>Type de destination :</strong> la destination configurée est sélectionnée par défaut.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p><strong>Global :</strong> cochez la case dans le cas où le serveur appartient à un domaine et que la destination, configurée sur le serveur Maître, doit être répliquée sur les serveurs esclaves.&#160;</p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Section E-Mail :</strong>
-                                                </p>
-                                                <ul style="list-style-type: circle;">
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>Nom du fichier :</strong> indiquez dans ce champ le nom attribué au document scanné (devenu fichier) joint au mail.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>Peut être modifié(e) par l'utilisateur</strong> (cette case accompagne d'autres paramètres) : cochez cette case pour autoriser l'utilisateur à modifier le paramètre auquel elle est associée (nom du fichier, e-mail de l'utilisateur, copie à l'utilisateur) depuis l'interface du périphérique.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>Taille max/ des fichiers (en Mo) : </strong> indiquez la taille que les des documents numérisés ne peuvent pas dépasser <span>(au-delà de cette taille, un mail informe l'utilisateur que le document dépasse la taille autorisée et ne peut donc pas être envoyé).</span>.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>Destinataires : </strong>indiquez l'adresse mail de destination affichée par défaut.&#160;Cliquez sur <img src="../../Z_Resources/Images/02_Captures/Bouton_AjouterAdresse.png" style="width: 128px;height: 14px;"></img>, puis complétez l'adresse (ou les adresses) mail pour ajouter des destinataires.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>Supprimable : </strong>cochez la case pour permettre à l'utilisateur de supprimer l'adresse mail de destination depuis l'interface du périphérique (WES).</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>L'utilisateur peut ajouter des adresses e-mails : </strong>cochez la case pour autoriser l'utilisateur à ajouter des destinataires en copie ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>Adresses en copie :</strong> si vous souhaitez envoyer le mail en copie, cliquez sur <img src="../../Z_Resources/Images/02_Captures/Bouton_AjouterAdresse.png" style="width: 128px;height: 14px;"></img>, puis complétez l'adresse (ou les adresses) mail dans le(s) champ(s) suivant(s).</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>Supprimable : </strong>cochez la case pour permettre à l'utilisateur de supprimer la copie de l'e-mail vers une autre adresse mail.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>L'utilisateur peut ajouter des adresses e-mails : </strong>cochez la case pour autoriser l'utilisateur à ajouter des destinataires en copie ;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>Objet de l'E-mail :</strong> saisissez l'objet de l'e-mail accompagnant le document numérisé.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>Corps du message :</strong> saisissez le message de l'e-mail accompagnant le document numérisé.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>Expéditeur.- Envoyé depuis l'e-mail de l'utilisateur ; </strong>cochez cette case pour que l'adresse e-mail de l'utilisateur apparaisse comme adresse d'expédition du mail.</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>Ajouter l'utilisateur en copie : </strong>cochez cette case pour que l'utilisateur reçoive l'e-mail en copie.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Admin_WEScan_Config_DestinationScan_Email.png"><img class="MCPopupThumbnail img" data-mc-width="1146" data-mc-height="813" src="../../Z_Resources/Images/02_Captures/Admin_WEScan_Config_DestinationScan_Email.png" tabindex="" style="width: 700px;height: auto;mc-thumbnail: link;mc-thumbnail-max-width: 1000px;mc-thumbnail-max-height: 1000px;max-width: 1000px;max-height: 1000px;" /></a></p>
-                                                        <p class="Liste_puce_2">
-                                                            <br />
-                                                        </p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <p><strong>Section Restreindre cette destination :</strong> cochez cette case pour que la destination puisse n'être utilisée que par certains utilisateurs ou groupes d'utilisateurs : </p>
-                                                <ul style="list-style-type: circle;">
-                                                    <li>
-                                                        <p><strong>Mode :</strong> choisissez si la destination peut être utilisée par tous les utilisateurs (par défaut) ou cochez  <strong>Tous les utilisateurs définis ci-après ne pourront pas utiliser cette destination</strong> pour appliquer une restriction.&#160;<br />Puis précisez :</p>
-                                                        <ul style="list-style-type: circle;">
-                                                            <li>
-                                                                <p>un ou des <strong>Groupes d'utilisateurs</strong> dans la liste&#160;: ces groupes d'utilisateurs ne pourront pas utiliser cette destination ; </p>
-                                                            </li>
-                                                            <li>
-                                                                <p>un ou des <strong>Utilisateurs</strong> dans la liste : ces utilisateurs ne pourront pas utiliser cette destination.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/WEScan_Config_DestinationScan_SectionRestreindre.png"><img class="MCPopupThumbnail img" data-mc-width="801" data-mc-height="260" src="../../Z_Resources/Images/02_Captures/WEScan_Config_DestinationScan_SectionRestreindre.png" tabindex="" style="width: 700px;height: auto;mc-thumbnail: link;mc-thumbnail-max-width: 1000px;mc-thumbnail-max-height: 1000px;max-width: 1000px;max-height: 1000px;" /></a><br /><br /></p>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                        <ol data-mc-continue="true">
-                                            <li value="3">
-                                                <p class="Liste_num_1">Cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Creer.png" style="width: 26px;height: 23px;" /> pour créer la destination.</p>
-                                            </li>
-                                        </ol>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

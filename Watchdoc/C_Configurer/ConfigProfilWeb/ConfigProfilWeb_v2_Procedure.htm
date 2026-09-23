@@ -165,6 +165,109 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocProfilwebdedéblocagePageMoncomptev2Configurer" data-magellan-target="WatchdocProfilwebdedéblocagePageMoncomptev2Configurer"><a name="aanchor313"></a>
+                                                    <MadCap:concept term="WD4" />Watchdoc - Profil web de déblocage - Page Mon compte v.2 - Configurer</h1>
+                                                <h2 id="ConfigurerlasectionPropriétés" data-magellan-target="ConfigurerlasectionPropriétés">Configurer la section Propriétés </h2>
+                                                <p>Dans cette section, vous indiquez les propriétés principales du profil Web&#160;: </p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Identifiant :</strong> saisissez l'identifiant du profil web. Il peut être composé de lettres, de chiffres et du caractère '_' pour un maximum de 64 caractères. Cet identifiant n'est affiché que dans les interfaces d'administration.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Nom :</strong> saisissez le nom du profil Web.&#160;Ce nom, explicite, n'est affiché que dans les interfaces d'administration.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Type de profil</strong> : sélectionnez le type "Mon compte v2"&#160;;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Titre :</strong> saisissez le titre du profil Web qui doit s'afficher dans l'interface dédiée à l'utilisateur&#160;;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Message :</strong> si nécessaire, saisissez un message, affiché dans la page d'identification. Ce message peut -être destiné à aider l'utilisateur.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Identification :</strong> définissez le mode selon lequel l'utilisateur s'identifie dans l'interface&#160;:</p>
+                                                        <ul style="list-style-type: circle;">
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>Formulaire (Login + MdP) :</strong> ce mode permet d'afficher dans le site web un formulaire dans lequel les utilisateurs s'authentifient à l'aide de l'identifiant (login) et mot de passe de leur compte.</p>
+                                                                <p class="Liste_puce_2">Ce mode peut être utile pour résoudre des problèmes de compatibilités SSO&#160;depuis certains navigateurs (cf. Problème d'authentification à Watchdoc depuis Safari ou Firefox).</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>Intégrée Windows :</strong> ce mode permet d'identifier les utilisateurs dans Watchdoc par transfert automatique de leur identifiant MS Windows ; </p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>Externe :</strong> ce mode permet d'identifier les utilisateurs qui se connectent à Watchdoc à l'aide d'un annuaire externe (tel que Entra ID, par exemple) ; </p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Annuaire de badges :</strong> sélectionnez l'annuaire dans lequel sont référencés les badges des utilisateurs qui se connectent par badge&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="Admin_Page_MCv2_Prop.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1116" data-mc-height="297" src="Admin_Page_MCv2_Prop.png" tabindex="" style="max-width: 1000px;" /></a><br /><br /></p>
+                                                    </li>
+                                                </ul>
+                                                <h2 id="ConfigurerlasectionConfigurationréseauMoncomptev2" data-magellan-target="ConfigurerlasectionConfigurationréseauMoncomptev2">Configurer la section Configuration réseau (Mon compte v. 2)</h2>
+                                                <p>Dans cette section, sélectionnez le point d'entrée sécurisé (par un certificat de confiance) validé par les navigateurs des postes utilisateurs pour accéder à la page Mon compte v. 2.</p>
+                                                <p>&#160;</p>
+                                                <p>Par défaut, Watchdoc est sécurisé à l'aide d'un certificat autosigné.</p>
+                                                <p>Les points d'entrée sécurisés qui figurent dans cette liste sont configurés dans l'interface <strong>Serveur Web</strong> :<br /><br /><a class="MCPopupThumbnailLink" href="Admin_MCv2.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="687" data-mc-height="124" src="Admin_MCv2.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                <p>
+                                                    <br />Si vous souhaitez sécuriser la page Mon Compte v. 2 à l'aide d'un autre certificat et que vous n'avez pas encore configuré les points d'entrée, cliquez sur le lien <strong>Configurer les points d'entrée </strong>pour accéder à l'interface dédiée (cf.&#160;<a href="../ConfigServeurWeb/Config_ServeurWeb_Presentation.htm">Configurer le serveur web et les certificats</a>).&#160;</p>
+                                                <h2 id="Autoriserlesaccèsauxinformationsducompte" data-magellan-target="Autoriserlesaccèsauxinformationsducompte">Autoriser les accès aux informations du compte</h2>
+                                                <p>La page <strong>Mon Compte</strong> permet à l'utilisateur d'accéder à ses informations personnelles.&#160;Elle peut comporter plus ou moins d'onglets en fonction de sa configuration. </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_puce_1">Autoriser l'accès à la page <strong>Mon Compte</strong> : cochez la case pour mettre la page à disposition des utilisateurs, puis cochez les cases correspondant aux pages à y afficher&#160;: <br /></p>
+                                                        <ul>
+                                                            <li>
+                                                                <p class="Liste_puce_2"><a name="Onglet_Stats" id="Onglet_Stats"></a>Onglet <strong>Mes statistiques : </strong>permet à l'utilisateur d'accéder à une synthèse de son utilisation ainsi qu'à l'impact environnemental de son activité d'impression d'une période choisie. </p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_2">Onglet <strong>Les statistiques d'équipes : </strong>permet à l'utilisateur d'accéder à une synthèse de l'utilisation ainsi qu'à l'impact environnemental de l'activité d'impression de son équipe durant une période choisie. <br />Précisez ensuite dans la section <b>Statistiques</b> :<br /></p>
+                                                            </li>
+                                                        </ul>
+                                                        <blockquote>
+                                                            <ul>
+                                                                <li>
+                                                                    <p style="font-size: 12pt;">la période pour laquelle vous souhaitez afficher les statistiques ;</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p style="font-size: 12pt;">si vous souhaitez afficher le coût à la page aux utilisateurs ;</p>
+                                                                </li>
+                                                                <li>
+                                                                    <p style="font-size: 12pt;">si vous souhaitez afficher la section <strong>Vous et les autres</strong> permettant de comparer l'activité d'impression de l'utilisateur à celle de tous les autres utilisateurs de Watchdoc</p>
+                                                                </li>
+                                                            </ul>
+                                                        </blockquote>
+                                                    </li>
+                                                </ol>
+                                                <blockquote>
+                                                    <ul>
+                                                        <li>
+                                                            <p class="Liste_puce_2">Onglet <strong>Mes impressions - Historique de vos derniers documents :</strong> permet à l'utilisateur d'accéder à l'historique de ses 50 derniers travaux (impression, numérisations, photocopies et fax).<br style="font-weight: bold;" /><br /><a class="MCPopupThumbnailLink" href="Admin_MCv2_MonCompte.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="778" data-mc-height="227" src="Admin_MCv2_MonCompte.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                        </li>
+                                                    </ul>
+                                                </blockquote>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocProfilwebded%C3%A9blocagePageMoncomptev2Configurer">Watchdoc - Profil web de déblocage - Page Mon compte v.2 - Configurer</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#ConfigurerlasectionPropri%C3%A9t%C3%A9s">Configurer la section Propriétés </a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#ConfigurerlasectionConfigurationr%C3%A9seauMoncomptev2">Configurer la section Configuration réseau (Mon compte v. 2)</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Autoriserlesacc%C3%A8sauxinformationsducompte">Autoriser les accès aux informations du compte</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -198,91 +301,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor313"></a>
-                                            <MadCap:concept term="WD4" />Watchdoc - Profil web de déblocage - Page Mon compte v.2 - Configurer</h1>
-                                        <h2>Configurer la section Propriétés </h2>
-                                        <p>Dans cette section, vous indiquez les propriétés principales du profil Web&#160;: </p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Identifiant :</strong> saisissez l'identifiant du profil web. Il peut être composé de lettres, de chiffres et du caractère '_' pour un maximum de 64 caractères. Cet identifiant n'est affiché que dans les interfaces d'administration.</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Nom :</strong> saisissez le nom du profil Web.&#160;Ce nom, explicite, n'est affiché que dans les interfaces d'administration.</p>
-                                            </li>
-                                            <li>
-                                                <p><strong>Type de profil</strong> : sélectionnez le type "Mon compte v2"&#160;;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Titre :</strong> saisissez le titre du profil Web qui doit s'afficher dans l'interface dédiée à l'utilisateur&#160;;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Message :</strong> si nécessaire, saisissez un message, affiché dans la page d'identification. Ce message peut -être destiné à aider l'utilisateur.</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Identification :</strong> définissez le mode selon lequel l'utilisateur s'identifie dans l'interface&#160;:</p>
-                                                <ul style="list-style-type: circle;">
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>Formulaire (Login + MdP) :</strong> ce mode permet d'afficher dans le site web un formulaire dans lequel les utilisateurs s'authentifient à l'aide de l'identifiant (login) et mot de passe de leur compte.</p>
-                                                        <p class="Liste_puce_2">Ce mode peut être utile pour résoudre des problèmes de compatibilités SSO&#160;depuis certains navigateurs (cf. Problème d'authentification à Watchdoc depuis Safari ou Firefox).</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>Intégrée Windows :</strong> ce mode permet d'identifier les utilisateurs dans Watchdoc par transfert automatique de leur identifiant MS Windows ; </p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>Externe :</strong> ce mode permet d'identifier les utilisateurs qui se connectent à Watchdoc à l'aide d'un annuaire externe (tel que Entra ID, par exemple) ; </p>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Annuaire de badges :</strong> sélectionnez l'annuaire dans lequel sont référencés les badges des utilisateurs qui se connectent par badge&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="Admin_Page_MCv2_Prop.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1116" data-mc-height="297" src="Admin_Page_MCv2_Prop.png" tabindex="" style="max-width: 1000px;" /></a><br /><br /></p>
-                                            </li>
-                                        </ul>
-                                        <h2>Configurer la section Configuration réseau (Mon compte v. 2)</h2>
-                                        <p>Dans cette section, sélectionnez le point d'entrée sécurisé (par un certificat de confiance) validé par les navigateurs des postes utilisateurs pour accéder à la page Mon compte v. 2.</p>
-                                        <p>&#160;</p>
-                                        <p>Par défaut, Watchdoc est sécurisé à l'aide d'un certificat autosigné.</p>
-                                        <p>Les points d'entrée sécurisés qui figurent dans cette liste sont configurés dans l'interface <strong>Serveur Web</strong> :<br /><br /><a class="MCPopupThumbnailLink" href="Admin_MCv2.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="687" data-mc-height="124" src="Admin_MCv2.png" tabindex="" style="max-width: 1000px;" /></a></p>
-                                        <p>
-                                            <br />Si vous souhaitez sécuriser la page Mon Compte v. 2 à l'aide d'un autre certificat et que vous n'avez pas encore configuré les points d'entrée, cliquez sur le lien <strong>Configurer les points d'entrée </strong>pour accéder à l'interface dédiée (cf.&#160;<a href="../ConfigServeurWeb/Config_ServeurWeb_Presentation.htm">Configurer le serveur web et les certificats</a>).&#160;</p>
-                                        <h2>Autoriser les accès aux informations du compte</h2>
-                                        <p>La page <strong>Mon Compte</strong> permet à l'utilisateur d'accéder à ses informations personnelles.&#160;Elle peut comporter plus ou moins d'onglets en fonction de sa configuration. </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_puce_1">Autoriser l'accès à la page <strong>Mon Compte</strong> : cochez la case pour mettre la page à disposition des utilisateurs, puis cochez les cases correspondant aux pages à y afficher&#160;: <br /></p>
-                                                <ul>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><a name="Onglet_Stats" id="Onglet_Stats"></a>Onglet <strong>Mes statistiques : </strong>permet à l'utilisateur d'accéder à une synthèse de son utilisation ainsi qu'à l'impact environnemental de son activité d'impression d'une période choisie. </p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_2">Onglet <strong>Les statistiques d'équipes : </strong>permet à l'utilisateur d'accéder à une synthèse de l'utilisation ainsi qu'à l'impact environnemental de l'activité d'impression de son équipe durant une période choisie. <br />Précisez ensuite dans la section <b>Statistiques</b> :<br /></p>
-                                                    </li>
-                                                </ul>
-                                                <blockquote>
-                                                    <ul>
-                                                        <li>
-                                                            <p style="font-size: 12pt;">la période pour laquelle vous souhaitez afficher les statistiques ;</p>
-                                                        </li>
-                                                        <li>
-                                                            <p style="font-size: 12pt;">si vous souhaitez afficher le coût à la page aux utilisateurs ;</p>
-                                                        </li>
-                                                        <li>
-                                                            <p style="font-size: 12pt;">si vous souhaitez afficher la section <strong>Vous et les autres</strong> permettant de comparer l'activité d'impression de l'utilisateur à celle de tous les autres utilisateurs de Watchdoc</p>
-                                                        </li>
-                                                    </ul>
-                                                </blockquote>
-                                            </li>
-                                        </ol>
-                                        <blockquote>
-                                            <ul>
-                                                <li>
-                                                    <p class="Liste_puce_2">Onglet <strong>Mes impressions - Historique de vos derniers documents :</strong> permet à l'utilisateur d'accéder à l'historique de ses 50 derniers travaux (impression, numérisations, photocopies et fax).<br style="font-weight: bold;" /><br /><a class="MCPopupThumbnailLink" href="Admin_MCv2_MonCompte.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="778" data-mc-height="227" src="Admin_MCv2_MonCompte.png" tabindex="" style="max-width: 1000px;" /></a></p>
-                                                </li>
-                                            </ul>
-                                        </blockquote>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

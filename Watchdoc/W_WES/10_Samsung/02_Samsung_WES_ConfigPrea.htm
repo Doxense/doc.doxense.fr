@@ -164,6 +164,76 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WESSamsungPrérequisetconfigurationpréalable" data-magellan-target="WESSamsungPrérequisetconfigurationpréalable"><a name="aanchor342"></a>
+                                                    <MadCap:concept term="WES" />
+                                                    <MadCap:conditionalText data-mc-conditions="General.Online">WES&#160;Samsung- </MadCap:conditionalText>Prérequis  et configuration préalable<br /></h1>
+                                                <h2 id="Prérequistechnique" data-magellan-target="Prérequistechnique">Prérequis technique</h2>
+                                                <p>XOA-E (eXtensible Open Architecture Embedded) est le nom de la technologie développée par Samsung pour permettre aux applications embarquées d'être installées sur sa gamme de périphériques d'impression. </p>
+                                                <p>&#160;</p>
+                                                <p>Pour installer le WES v2, les périphériques doivent être compatibles avec la version XOA-E 1.16 (min.).</p>
+                                                <p>&#160;</p>
+                                                <h2 id="Configurationpréalablesurlespériphériquesdimpression" data-magellan-target="Configurationpréalablesurlespériphériquesdimpression">Configuration préalable sur les périphériques d'impression</h2>
+                                                <p>La configuration du WES Samsung doit être précédée d'une configuration sur le périphérique depuis l'interface web d'administration de ce dernier.</p>
+                                                <p>Avant de vous connecter, vérifiez que la valeur correspondant à Domain est LOCAL.</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Accédez à l’interface web de configuration du périphérique Samsung.</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>Connectez-vous en cliquant sur le bouton <strong>Login</strong>.</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>Dans le menu <strong>Maintenance</strong>, cliquez sur <strong>Application Management</strong> puis <strong>Application</strong>.</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>Dans la section <strong>Application</strong>, cliquez sur le bouton <strong>Add </strong>(Ajouter).</p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p>Dans le dossier C:\Program Files\Doxense\Watchdoc\redist\, sélectionnez le fichier de l’application <strong>WesSamsung.par</strong>.</p>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p>Cliquez sur <strong>OK </strong>pour valider le choix du fichier.</p>
+                                                    </li>
+                                                    <li value="7">
+                                                        <p>Cliquez de nouveau sur les boutons <strong>OK </strong> successifs pour lancer l'installation. Un message d'alerte indique que l'application n'est pas vérifiée par le programme Samsung Testing.</p>
+                                                    </li>
+                                                    <li value="8">
+                                                        <p>Vérifiez que la valeur correspondant au paramètre WesSamsung est <strong>Enabled</strong>.</p>
+                                                    </li>
+                                                    <li value="9">
+                                                        <p>Cliquez sur l'entrée de menu <strong>Security </strong>puis <strong>User Access Control</strong>.</p>
+                                                    </li>
+                                                    <li value="10">
+                                                        <p>Vérifiez que la valeur WatchdocAAProvider est sélectionnée en tant que AAMethod.<br />N.B.&#160;: Il est possible que cette ligne du tableau n’apparaisse pas tout de suite. Si vous ne la voyez pas, attendez quelques minutes puis actualisez la page. Si l’option apparaît mais n’est pas cochée, cochez-la puis cliquez sur <strong>Apply</strong>.</p>
+                                                    </li>
+                                                    <li value="11">
+                                                        <p>Cliquez sur <strong>Login Page</strong>, vérifiez que <strong>Watchdoc-LUI</strong> est bien sélectionnée comme LUI Login Page puis cliquez sur <strong>Apply</strong>.</p>
+                                                    </li>
+                                                    <li value="12">
+                                                        <p>Dans l'interface web, cliquez sur l'onglet <strong>Security </strong>puis <strong>System log</strong> ;</p>
+                                                    </li>
+                                                    <li value="13">
+                                                        <p>Dans l'interface <strong>Log Configuration</strong>, vérifiez que toutes les fonctionnalités sont activées (case <strong>Enable </strong>cochée), puis cliquez sur le bouton <strong>Apply</strong>.</p>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WESSamsungPr%C3%A9requisetconfigurationpr%C3%A9alable">WES&#160;Samsung- Prérequis  et configuration préalable</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Pr%C3%A9requistechnique">Prérequis technique</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Configurationpr%C3%A9alablesurlesp%C3%A9riph%C3%A9riquesdimpression">Configuration préalable sur les périphériques d'impression</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -197,60 +267,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor342"></a>
-                                            <MadCap:concept term="WES" />
-                                            <MadCap:conditionalText data-mc-conditions="General.Online">WES&#160;Samsung- </MadCap:conditionalText>Prérequis  et configuration préalable<br /></h1>
-                                        <h2>Prérequis technique</h2>
-                                        <p>XOA-E (eXtensible Open Architecture Embedded) est le nom de la technologie développée par Samsung pour permettre aux applications embarquées d'être installées sur sa gamme de périphériques d'impression. </p>
-                                        <p>&#160;</p>
-                                        <p>Pour installer le WES v2, les périphériques doivent être compatibles avec la version XOA-E 1.16 (min.).</p>
-                                        <p>&#160;</p>
-                                        <h2>Configuration préalable sur les périphériques d'impression</h2>
-                                        <p>La configuration du WES Samsung doit être précédée d'une configuration sur le périphérique depuis l'interface web d'administration de ce dernier.</p>
-                                        <p>Avant de vous connecter, vérifiez que la valeur correspondant à Domain est LOCAL.</p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Accédez à l’interface web de configuration du périphérique Samsung.</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>Connectez-vous en cliquant sur le bouton <strong>Login</strong>.</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>Dans le menu <strong>Maintenance</strong>, cliquez sur <strong>Application Management</strong> puis <strong>Application</strong>.</p>
-                                            </li>
-                                            <li value="4">
-                                                <p>Dans la section <strong>Application</strong>, cliquez sur le bouton <strong>Add </strong>(Ajouter).</p>
-                                            </li>
-                                            <li value="5">
-                                                <p>Dans le dossier C:\Program Files\Doxense\Watchdoc\redist\, sélectionnez le fichier de l’application <strong>WesSamsung.par</strong>.</p>
-                                            </li>
-                                            <li value="6">
-                                                <p>Cliquez sur <strong>OK </strong>pour valider le choix du fichier.</p>
-                                            </li>
-                                            <li value="7">
-                                                <p>Cliquez de nouveau sur les boutons <strong>OK </strong> successifs pour lancer l'installation. Un message d'alerte indique que l'application n'est pas vérifiée par le programme Samsung Testing.</p>
-                                            </li>
-                                            <li value="8">
-                                                <p>Vérifiez que la valeur correspondant au paramètre WesSamsung est <strong>Enabled</strong>.</p>
-                                            </li>
-                                            <li value="9">
-                                                <p>Cliquez sur l'entrée de menu <strong>Security </strong>puis <strong>User Access Control</strong>.</p>
-                                            </li>
-                                            <li value="10">
-                                                <p>Vérifiez que la valeur WatchdocAAProvider est sélectionnée en tant que AAMethod.<br />N.B.&#160;: Il est possible que cette ligne du tableau n’apparaisse pas tout de suite. Si vous ne la voyez pas, attendez quelques minutes puis actualisez la page. Si l’option apparaît mais n’est pas cochée, cochez-la puis cliquez sur <strong>Apply</strong>.</p>
-                                            </li>
-                                            <li value="11">
-                                                <p>Cliquez sur <strong>Login Page</strong>, vérifiez que <strong>Watchdoc-LUI</strong> est bien sélectionnée comme LUI Login Page puis cliquez sur <strong>Apply</strong>.</p>
-                                            </li>
-                                            <li value="12">
-                                                <p>Dans l'interface web, cliquez sur l'onglet <strong>Security </strong>puis <strong>System log</strong> ;</p>
-                                            </li>
-                                            <li value="13">
-                                                <p>Dans l'interface <strong>Log Configuration</strong>, vérifiez que toutes les fonctionnalités sont activées (case <strong>Enable </strong>cochée), puis cliquez sur le bouton <strong>Apply</strong>.</p>
-                                            </li>
-                                        </ol>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

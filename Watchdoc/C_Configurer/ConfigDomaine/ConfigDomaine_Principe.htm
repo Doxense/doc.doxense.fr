@@ -165,6 +165,59 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocPrésentationdundomaine" data-magellan-target="WatchdocPrésentationdundomaine"><a name="aanchor322"></a>
+                                                    <MadCap:concept term="CFG;WD" />Watchdoc - Présentation d'un domaine</h1>
+                                                <h2 id="PrincipedelaconfigurationdesserveursWatchdocendomainemaîtreesclaveoumasterslave" data-magellan-target="PrincipedelaconfigurationdesserveursWatchdocendomainemaîtreesclaveoumasterslave">Principe de la configuration des serveurs Watchdoc en domaine (maître /esclave ou master/slave).</h2>
+                                                <p>Afin de répondre aux architectures d'entreprises qui possèdent une flotte importante de périphériques d'impression, il est possible de déployer plusieurs serveurs Watchdoc. Tous les serveurs Watchdoc sont ensuite inclus dans un <strong>Domaine</strong>.</p>
+                                                <p>&#160;</p>
+                                                <p>Dans ce domaine, on donne le rôle de <strong>master</strong> à l'un des serveurs Watchdoc.&#160;Les autres serveurs sont des <strong>slaves</strong>.</p>
+                                                <p>Certaines configurations effectuées sur le master peuvent être répliquées sur les serveurs slaves, soit depuis Watchdoc, soit depuis la Console de Supervision (WSC).</p>
+                                                <p>Ainsi, la configuration n'est réalisée qu'une fois et s'applique à l'ensemble des serveurs.&#160;</p>
+                                                <p>&#160;</p>
+                                                <p>Cette configuration permet aussi de consolider sur le master l'ensemble des statistiques d'impression réalisées sur les différent serveurs.</p>
+                                                <p>&#160;</p>
+                                                <p>Le dialogue entre le master et les serveurs slaves de Watchdoc s'effectue via protocole sécurisé en HTTPS.</p>
+                                                <p>Ceci est assuré par le module DSP de Watchdoc, dont le port par défaut est TCP 5753.</p>
+                                                <p>
+                                                    <img src="../../Z_Resources/Images/01_Generiques/icon_pdf.png" />&#160;&#160; Télécharger la fiche pratique <a href="CreerConfigurerDomaineWD.pdf" target="_blank" title="Lien vers la Fiche pratique (format .pdf)" alt="Lien vers la Fiche pratique (format .pdf)">Créer et configurer un domaine Watchdoc.pdf</a></p>
+                                                <h2 id="Casdusage" data-magellan-target="Casdusage">Cas d'usage</h2>
+                                                <p>Ainsi, si votre parc comporte 3&#160;serveurs d'impression, dans une architecture classique, Watchdoc doit être configuré sur chaque serveur&#160;:<br /><img src="../../Z_Resources/Images/03_Schemas/WD_WD5_SCH_MasterSlave_sans.png" style="width: 411px;height: 209px;" /><br /><br /></p>
+                                                <p>
+                                                    <br />En choisissant la gestion en domaine,   la configuration est effectuée sur le serveur Watchdoc maître, puis répliquée sur les 2 autres. Toute modification de configuration apportée au maître est ensuite répliquée sur les autres serveurs du domaine.<br /><br /><img src="../../Z_Resources/Images/03_Schemas/WD_WD5_SCH_MasterSlave_avec_FR.png" style="width: 351px;height: 390px;" /></p>
+                                                <h2 id="Prérequis" data-magellan-target="Prérequis">Prérequis </h2>
+                                                <p>Pour organiser les serveurs en domaine, vérifiez les prérequis suivants&#160;: </p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1">tous les serveurs Watchdoc sont dans la même version ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">tous les serveurs Watchdoc ont le même mot de passe de maintenance ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">le port de communication du module DSP (par défaut TCP 5753) doit être ouvert et accessible entre tous les serveurs. (Pour vérifier ce paramètre depuis le Menu principal, cliquez sur <strong>Configuration avancée</strong> &gt;&#160;<strong>Configuration Système</strong> &gt; section <strong>DSP</strong>).</p>
+                                                    </li>
+                                                </ul>
+                                                <fieldset>Les échanges s'effectuent par défaut en HTTPS. <br />Bien que nous ne le recommandions pas, il est possible de basculer les échanges en HTTP. </fieldset>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocPr%C3%A9sentationdundomaine">Watchdoc - Présentation d'un domaine</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#PrincipedelaconfigurationdesserveursWatchdocendomainema%C3%AEtreesclaveoumasterslave">Principe de la configuration des serveurs Watchdoc en domaine (maître /esclave ou master/slave).</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Casdusage">Cas d'usage</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Pr%C3%A9requis">Prérequis </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -198,41 +251,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor322"></a>
-                                            <MadCap:concept term="CFG;WD" />Watchdoc - Présentation d'un domaine</h1>
-                                        <h2>Principe de la configuration des serveurs Watchdoc en domaine (maître /esclave ou master/slave).</h2>
-                                        <p>Afin de répondre aux architectures d'entreprises qui possèdent une flotte importante de périphériques d'impression, il est possible de déployer plusieurs serveurs Watchdoc. Tous les serveurs Watchdoc sont ensuite inclus dans un <strong>Domaine</strong>.</p>
-                                        <p>&#160;</p>
-                                        <p>Dans ce domaine, on donne le rôle de <strong>master</strong> à l'un des serveurs Watchdoc.&#160;Les autres serveurs sont des <strong>slaves</strong>.</p>
-                                        <p>Certaines configurations effectuées sur le master peuvent être répliquées sur les serveurs slaves, soit depuis Watchdoc, soit depuis la Console de Supervision (WSC).</p>
-                                        <p>Ainsi, la configuration n'est réalisée qu'une fois et s'applique à l'ensemble des serveurs.&#160;</p>
-                                        <p>&#160;</p>
-                                        <p>Cette configuration permet aussi de consolider sur le master l'ensemble des statistiques d'impression réalisées sur les différent serveurs.</p>
-                                        <p>&#160;</p>
-                                        <p>Le dialogue entre le master et les serveurs slaves de Watchdoc s'effectue via protocole sécurisé en HTTPS.</p>
-                                        <p>Ceci est assuré par le module DSP de Watchdoc, dont le port par défaut est TCP 5753.</p>
-                                        <p>
-                                            <img src="../../Z_Resources/Images/01_Generiques/icon_pdf.png" />&#160;&#160; Télécharger la fiche pratique <a href="CreerConfigurerDomaineWD.pdf" target="_blank" title="Lien vers la Fiche pratique (format .pdf)" alt="Lien vers la Fiche pratique (format .pdf)">Créer et configurer un domaine Watchdoc.pdf</a></p>
-                                        <h2>Cas d'usage</h2>
-                                        <p>Ainsi, si votre parc comporte 3&#160;serveurs d'impression, dans une architecture classique, Watchdoc doit être configuré sur chaque serveur&#160;:<br /><img src="../../Z_Resources/Images/03_Schemas/WD_WD5_SCH_MasterSlave_sans.png" style="width: 411px;height: 209px;" /><br /><br /></p>
-                                        <p>
-                                            <br />En choisissant la gestion en domaine,   la configuration est effectuée sur le serveur Watchdoc maître, puis répliquée sur les 2 autres. Toute modification de configuration apportée au maître est ensuite répliquée sur les autres serveurs du domaine.<br /><br /><img src="../../Z_Resources/Images/03_Schemas/WD_WD5_SCH_MasterSlave_avec_FR.png" style="width: 351px;height: 390px;" /></p>
-                                        <h2>Prérequis </h2>
-                                        <p>Pour organiser les serveurs en domaine, vérifiez les prérequis suivants&#160;: </p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1">tous les serveurs Watchdoc sont dans la même version ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">tous les serveurs Watchdoc ont le même mot de passe de maintenance ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">le port de communication du module DSP (par défaut TCP 5753) doit être ouvert et accessible entre tous les serveurs. (Pour vérifier ce paramètre depuis le Menu principal, cliquez sur <strong>Configuration avancée</strong> &gt;&#160;<strong>Configuration Système</strong> &gt; section <strong>DSP</strong>).</p>
-                                            </li>
-                                        </ul>
-                                        <fieldset>Les échanges s'effectuent par défaut en HTTPS. <br />Bien que nous ne le recommandions pas, il est possible de basculer les échanges en HTTP. </fieldset>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

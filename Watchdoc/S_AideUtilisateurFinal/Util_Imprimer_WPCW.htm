@@ -164,6 +164,99 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocPrintClientforWindowsImprimer" data-magellan-target="WatchdocPrintClientforWindowsImprimer"><a name="aanchor68"></a>
+                                                    <MadCap:concept term="UTIL;WPC" />Watchdoc Print Client for Windows - Imprimer </h1>
+                                                <fieldset>N.B. : les informations ci-dessous ne concernent pas WCP&#160;for Windows lorsqu'il est installé en mode silence (Silent mode). En mode silence, l'utilisateur lance son impression depuis son poste de travail puis la valide sur l'imprimante désignée par le référent Watchdoc sans autre intervention.</fieldset>
+                                                <h2 id="Premièreutilisation" data-magellan-target="Premièreutilisation">Première utilisation</h2>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Depuis votre application de travail (traitement de texte, tableur, éditeur d'image, etc.), cliquez sur CTRL + IMPR ou cliquez sur l'icone Imprimer pour lancer l'impression.&#160;</p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>Cliquez sur l'icône Watchdoc Print Client <img src="../Z_Resources/Images/02_Captures/WPC/WPC_Windows_icone.png" /> en bas à droite, dans la zone de notification Windows&#160;;</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p>si l'icône n'apparaît pas, cliquez sur le chevron pour afficher les icônes cachées, puis cliquezsur l'îcône <img src="../Z_Resources/Images/02_Captures/WPC/WPC_Windows_icone.png" style="width: 36px;height: 36px;" /> WPC&#160;:<br /><img src="../T_WPC/Windows/WPCW_icon.png" /></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p>Si vous lancez votre impression depuis un autre emplacement que votre emplacement habituel, WPC vous propose de préciser cet emplacement.</p>
+                                                        <p>Ainsi, WPC for Windows localise physiquement votre poste et vous propose un périphérique d'impression proche de l'endroit où vous travaillez.</p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p>WPC lance l'impression sur l'une des imprimantes indiquées dans l'interface.</p>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p>Rendez-vous sur l'une de ces imprimantes et authentifiez-vous pour libérer les impressions (cf.&#160;<a href="Util_Imprimer_WD.htm" target="_blank">Imprimer avec Watchdoc</a>).</p>
+                                                    </li>
+                                                </ol>
+                                                <h2 id="Imprimerencasdepanneutiliserlimpressiondirectehautedisponibilité" data-magellan-target="Imprimerencasdepanneutiliserlimpressiondirectehautedisponibilité">Imprimer en cas de panne : utiliser l'impression directe haute-disponibilité</h2>
+                                                <p>Dans l'interface WPC&#160;for Windows, à droite de l'emplacement, une pastille de couleur précise l'état de connectivité entre l'application et le(s) serveur(s) d'impression : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p><strong style="color: #a9a9a9;">grise </strong>: WPC&#160;est en cours d'installation, la connexion n'a jamais été initiée ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong style="color: #000000;">noire </strong>: WPC ne trouve aucun serveur configuré pour cet emplacement.&#160;Il peut s'agir d'un problème de choix d'emplacement (utilisateur) ou de configuration (administrateur) ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong style="color: #ff4500;">rouge </strong>:  tous les serveurs configurés sont hors-service ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong style="color: #ff8c00;">orange </strong>: au moins 1 des serveurs configurés est hors-service ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong style="color: #3cb371;">vert </strong>: tous les serveurs configurés sont opérationnels.</p>
+                                                    </li>
+                                                </ul>
+                                                <p>Dans le cas où le serveur d'impression est défaillant, WPC&#160;propose deux solutions : attendre ou imprimer en direct.</p>
+                                                <p>
+                                                    <p>
+                                                        <p>Après avoir lancé le travail d'impression depuis votre poste de travail, une notification Windows<sup>®</sup> indique une indisponibilité de la file universelle&#160;en raison d'une panne du serveur.</p>
+                                                        <ol>
+                                                            <li value="1">
+                                                                <p>cliquez sur la notification Windows<sup>®</sup> qui s'affiche en bas, à droite de l'écran de votre poste de travail :<br /><img src="../Z_Resources/Images/02_Captures/WPC/WPC_Windows_NotifImprDirecte.png" style="height: auto;width: 300px;" /></p>
+                                                                <p>&#160;</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p>choisissez ensuite : </p>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p>soit d'attendre que le serveur soit de nouveau disponible pour imprimer :<br /><img src="../Z_Resources/Images/02_Captures/WPC/WPC_Windows_Util_HA_Msg.png" style="width: 500px;height: auto;" /><br /><br /></p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>soit d'imprimer en direct sur l'un des périphériques disponibles (à choisir dans une liste de périphériques sur lesquels vous vous êtes déjà authentifiés).<br></br></p>
+                                                                        <p>N.B.&#160;: <span style="font-size: 12pt;">dans ce cas, le travail demandé est imprimé sans authentification ni validation.&#160;</span><br style="font-size: 12pt;" /><span style="font-size: 12pt;">Il est donc préférable de se trouver à proximité du périphérique d'impression, notamment si le document est confidentiel.</span><br /><img src="../Z_Resources/Images/02_Captures/WPC/WPC_Windows_ErreurChoisir.png" style="width: 500px;height: auto;" /></p>
+                                                                        <p>&#160;</p>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ol>
+                                                        <ol data-mc-continue="true">
+                                                            <li value="3">
+                                                                <p>Rendez-vous sur l'imprimante sélectionnée pour récupérer votre impression.</p>
+                                                            </li>
+                                                        </ol>
+                                                    </p>
+                                                </p>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocPrintClientforWindowsImprimer">Watchdoc Print Client for Windows - Imprimer </a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Premi%C3%A8reutilisation">Première utilisation</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Imprimerencasdepanneutiliserlimpressiondirectehautedisponibilit%C3%A9">Imprimer en cas de panne : utiliser l'impression directe haute-disponibilité</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -197,83 +290,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor68"></a>
-                                            <MadCap:concept term="UTIL;WPC" />Watchdoc Print Client for Windows - Imprimer </h1>
-                                        <fieldset>N.B. : les informations ci-dessous ne concernent pas WCP&#160;for Windows lorsqu'il est installé en mode silence (Silent mode). En mode silence, l'utilisateur lance son impression depuis son poste de travail puis la valide sur l'imprimante désignée par le référent Watchdoc sans autre intervention.</fieldset>
-                                        <h2>Première utilisation</h2>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Depuis votre application de travail (traitement de texte, tableur, éditeur d'image, etc.), cliquez sur CTRL + IMPR ou cliquez sur l'icone Imprimer pour lancer l'impression.&#160;</p>
-                                            </li>
-                                            <li value="2">
-                                                <p>Cliquez sur l'icône Watchdoc Print Client <img src="../Z_Resources/Images/02_Captures/WPC/WPC_Windows_icone.png" /> en bas à droite, dans la zone de notification Windows&#160;;</p>
-                                            </li>
-                                            <li value="3">
-                                                <p>si l'icône n'apparaît pas, cliquez sur le chevron pour afficher les icônes cachées, puis cliquezsur l'îcône <img src="../Z_Resources/Images/02_Captures/WPC/WPC_Windows_icone.png" style="width: 36px;height: 36px;" /> WPC&#160;:<br /><img src="../T_WPC/Windows/WPCW_icon.png" /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                            <li value="4">
-                                                <p>Si vous lancez votre impression depuis un autre emplacement que votre emplacement habituel, WPC vous propose de préciser cet emplacement.</p>
-                                                <p>Ainsi, WPC for Windows localise physiquement votre poste et vous propose un périphérique d'impression proche de l'endroit où vous travaillez.</p>
-                                            </li>
-                                            <li value="5">
-                                                <p>WPC lance l'impression sur l'une des imprimantes indiquées dans l'interface.</p>
-                                            </li>
-                                            <li value="6">
-                                                <p>Rendez-vous sur l'une de ces imprimantes et authentifiez-vous pour libérer les impressions (cf.&#160;<a href="Util_Imprimer_WD.htm" target="_blank">Imprimer avec Watchdoc</a>).</p>
-                                            </li>
-                                        </ol>
-                                        <h2>Imprimer en cas de panne : utiliser l'impression directe haute-disponibilité</h2>
-                                        <p>Dans l'interface WPC&#160;for Windows, à droite de l'emplacement, une pastille de couleur précise l'état de connectivité entre l'application et le(s) serveur(s) d'impression : </p>
-                                        <ul>
-                                            <li>
-                                                <p><strong style="color: #a9a9a9;">grise </strong>: WPC&#160;est en cours d'installation, la connexion n'a jamais été initiée ;</p>
-                                            </li>
-                                            <li>
-                                                <p><strong style="color: #000000;">noire </strong>: WPC ne trouve aucun serveur configuré pour cet emplacement.&#160;Il peut s'agir d'un problème de choix d'emplacement (utilisateur) ou de configuration (administrateur) ;</p>
-                                            </li>
-                                            <li>
-                                                <p><strong style="color: #ff4500;">rouge </strong>:  tous les serveurs configurés sont hors-service ;</p>
-                                            </li>
-                                            <li>
-                                                <p><strong style="color: #ff8c00;">orange </strong>: au moins 1 des serveurs configurés est hors-service ;</p>
-                                            </li>
-                                            <li>
-                                                <p><strong style="color: #3cb371;">vert </strong>: tous les serveurs configurés sont opérationnels.</p>
-                                            </li>
-                                        </ul>
-                                        <p>Dans le cas où le serveur d'impression est défaillant, WPC&#160;propose deux solutions : attendre ou imprimer en direct.</p>
-                                        <p>
-                                            <p>
-                                                <p>Après avoir lancé le travail d'impression depuis votre poste de travail, une notification Windows<sup>®</sup> indique une indisponibilité de la file universelle&#160;en raison d'une panne du serveur.</p>
-                                                <ol>
-                                                    <li value="1">
-                                                        <p>cliquez sur la notification Windows<sup>®</sup> qui s'affiche en bas, à droite de l'écran de votre poste de travail :<br /><img src="../Z_Resources/Images/02_Captures/WPC/WPC_Windows_NotifImprDirecte.png" style="height: auto;width: 300px;" /></p>
-                                                        <p>&#160;</p>
-                                                    </li>
-                                                    <li value="2">
-                                                        <p>choisissez ensuite : </p>
-                                                        <ul>
-                                                            <li>
-                                                                <p>soit d'attendre que le serveur soit de nouveau disponible pour imprimer :<br /><img src="../Z_Resources/Images/02_Captures/WPC/WPC_Windows_Util_HA_Msg.png" style="width: 500px;height: auto;" /><br /><br /></p>
-                                                            </li>
-                                                            <li>
-                                                                <p>soit d'imprimer en direct sur l'un des périphériques disponibles (à choisir dans une liste de périphériques sur lesquels vous vous êtes déjà authentifiés).<br></br></p>
-                                                                <p>N.B.&#160;: <span style="font-size: 12pt;">dans ce cas, le travail demandé est imprimé sans authentification ni validation.&#160;</span><br style="font-size: 12pt;" /><span style="font-size: 12pt;">Il est donc préférable de se trouver à proximité du périphérique d'impression, notamment si le document est confidentiel.</span><br /><img src="../Z_Resources/Images/02_Captures/WPC/WPC_Windows_ErreurChoisir.png" style="width: 500px;height: auto;" /></p>
-                                                                <p>&#160;</p>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ol>
-                                                <ol data-mc-continue="true">
-                                                    <li value="3">
-                                                        <p>Rendez-vous sur l'imprimante sélectionnée pour récupérer votre impression.</p>
-                                                    </li>
-                                                </ol>
-                                            </p>
-                                        </p>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

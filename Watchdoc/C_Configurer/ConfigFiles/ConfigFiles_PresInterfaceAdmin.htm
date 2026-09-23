@@ -165,6 +165,156 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocFilesdimpressionPrésentation" data-magellan-target="WatchdocFilesdimpressionPrésentation"><a name="aanchor435"></a>
+                                                    <MadCap:concept term="WD" />Watchdoc - Files d'impression - Présentation</h1>
+                                                <h2 id="Présentationdelinterfacedadministrationdesfilesdimpression" data-magellan-target="Présentationdelinterfacedadministrationdesfilesdimpression">Présentation de l'interface d'administration des files d'impression </h2>
+                                                <h3>Accéder à l'interface d'administration</h3>
+                                                <p>Depuis le <strong>Menu principal</strong> de l'interface d'administration, dans la section <strong>Exploitation</strong>, cliquez sur <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_FilesImpression.png" /><strong>Files d'impression, groupes de files &amp; pools</strong> pour accéder à l'interface de configuration des files :<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Files_AccesInterface_V61.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1686" data-mc-height="746" src="../../Z_Resources/Images/02_Captures/Config_Files_AccesInterface_V61.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a><br /></p>
+                                                <h3>Typologie des files</h3>
+                                                <p>L'interface <strong>Files d'impression</strong> comporte 3&#160;onglets permettant d'accéder à l'administration&#160;: </p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1">des files d'impression ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">des groupes de files ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">des pools de travaux.</p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                </ul>
+                                                <p>Par défaut, l'interface d'administration des Files d'impression affiche la liste des files contrôlées&#160;par Watchdoc (hors files proxy).&#160;<br />Vous pouvez filtrer cette liste en fonction du type de files que vous souhaitez afficher&#160;:</p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Contrôlées </strong>: files d'impression<span> réseau </span>actives et contrôlées par Watchdoc ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Désactivées </strong>: files volontairement retirées du contrôle de Watchdoc&#160;;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Physiques</strong>: files d'impression physiquement associées à un périphérique d'impression ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Virtuelle</strong> : files utilisées dans le cadre de l'impression à la demande.&#160;Ces files n'existent pas physiquement mais servent à recueillir temporairement les travaux d'impression en attendant que l'utilisateur choisisse son périphérique d'impression.&#160;Dès que l'utilisateur débloque ses impressions sur un périphérique précis, la file virtuelle transfère les travaux vers la file physique&#160;;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Locales </strong>: files d'impression <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term10">locales<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>File d'impression locale : file d'impression d'un périphérique non connecté au réseau. Un agent Watchdoc installé localement sur le périphérique collecte et renvoie les données d'impression à Watchdoc.</span></a> contrôlées par Watchdoc. Ces files sont également désignées sous l'appellation <strong>Files personnelles</strong> ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Actives </strong>: files (contrôlées) en cours de fonctionnement lors de la consultation de l'interface ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><b>Files proxy</b> (proxy queues)&#160;: files contrôlées par d'autres serveurs appartenant au  même domaine (en configuration master/slave). Une file proxy sert de file de secours en cas de panne des files attachées au serveur&#160;; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>En panne </strong>: files (contrôlées) présentant un dysfonctionnement lors de la consultation de l'interface ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Consommables</strong> : alertes relatives aux <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term11">consommables<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Dans le contexte de l'impression, le consommable désigne les fournitures autres que le périphérique lui-même nécessaire à son fonctionnement, telles que cartouches d'encre, papier ou cartouches d'agrafes, par exemple.</span></a> des périphériques contrôlés par Watchdoc ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>VIP&#160;</strong>: périphériques auxquels on a attribué un statut spécifique afin de les distinguer des autres périphériques.</p>
+                                                    </li>
+                                                </ul>
+                                                <fieldset style="text-align: left;">La désactivation manuelle peut être utile lors d'une intervention en maintenance sur un périphérique, notamment pour ne  pas fausser les statistiques si des tests d'impression sont réalisés par le technicien de maintenance lors de son intervention.&#160;<br />Par ailleurs, la désactivation automatique peut être déclenchée par Watchdoc dans le cas où le nombre de files déclarées excède le nombre de licences acquises. <br />Dans ce cas, les  dernières files déclarées à partir du moment où Watchdoc ne trouve plus de licence correspondante sont automatiquement désactivées.</fieldset>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1"><strong>Toutes </strong>: total des files contrôlées, gérées par Watchdoc, quel que soit leur état.<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Files_Filtre_Types_611.png" style="width: 700px;height: auto;" /></p>
+                                                    </li>
+                                                </ul>
+                                                <h3>Outils d'affichage des listes</h3>
+                                                <p>Vous disposez de plusieurs outils pour rechercher et afficher les files&#160;: </p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1">le champ <strong>Rechercher </strong>permet de saisir un ou plusieurs critères permettant de retrouver une file dans la liste <img src="../../Z_Resources/Images/02_Captures/Config_Files_Affichage_OutilRechercher.png" style="width: 212px;height: 21px;" /> ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">l'outil <strong>Groupe </strong>permet de restreindre la liste aux files incluses dans un groupe de files spécifique ;<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Files_Affichage_OutilGroupe.png" style="width: 180px;height: 132px;" /></p>
+                                                    </li>
+                                                </ul>
+                                                <p class="Liste_puce_1">&#160;</p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1">l'outil <strong>Filtrer </strong>permet de filtrer les files en fonction de leur statut ; <br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Files_Affichage_OutilFiltrer.png" style="width: 167px;height: 226px;" /></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1">l'outil <strong>Regrouper </strong>permet de regrouper les files en fonction de critères prédéfinis (modèle, pilote, site, etc.)&#160;;<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Files_Affichage_OutilRegrouper.png" style="width: 183px;height: 196px;" /></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1">l'outil <strong>Afficher </strong>permet de définir la nature des informations à afficher dans la liste&#160;;<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Files_Affichage_OutilAfficher.png" style="width: 183px;height: 130px;" /></p>
+                                                        <p>&#160;</p>
+                                                    </li>
+                                                </ul>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1">le bouton <img src="../../Z_Resources/Images/02_Captures/Config_Files_Affichage_OutilEnpanne.png" style="width: 32px;height: 22px;" /> permet d'afficher les imprimantes en panne ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">le bouton <img src="../../Z_Resources/Images/02_Captures/Config_Files_Affichage_OutilConsommables.png" style="width: 41px;height: 26px;" /> permet d'afficher les imprimantes dont le niveau de consommables est critique :<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Files_Affichage_Outils.png" style="width: 700px;height: auto;" /></p>
+                                                    </li>
+                                                </ul>
+                                                <h3><a name="Outils_de_gestion_des_files" id="Outils_de_gestion_des_files"></a>Outils de gestion des files</h3>
+                                                <p>Quel que soit le mode d'affichage, les files affichées dans ces listes sont  dotées des outils suivants : <br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Files_Outils_53.png" style="width: 700px;height: auto;" /></p>
+                                                <p>&#160;</p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1">le bouton <strong>Pause </strong><img src="../../Z_Resources/Images/02_Captures/Boutons/icon_pause.png" style="width: 17px;height: 17px;" /> : permet de mettre la file en pause. Dès qu'une file est en pause, le bouton <strong>Pause </strong>est désactivé et le bouton <strong>Redémarrer </strong>s'affiche ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">le bouton <strong>Redémarrer </strong><img src="../../Z_Resources/Images/02_Captures/Boutons/icon_Redemarrer.png" style="width: 22px;height: 22px;" /> permet de redémarrer une file après sa mise en pause ;</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">le bouton <strong>Arrêter </strong><img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Arret.png" style="width: 20px;height: 20px;" /> permet d'arrêter le contrôle exercé par Watchdoc sur une file. Dès lors,  la file arrêtée disparaît de la liste <strong>Contrôlées </strong>et passe dans la liste <strong>Désactivées</strong> ; </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">le bouton <strong>Configurer </strong><img src="../../Z_Resources/Images/02_Captures/Boutons/icon_Config.png" style="width: 25px;height: 25px;" /> permet d'accéder à l'interface de configuration de la file.</p>
+                                                    </li>
+                                                </ul>
+                                                <h3>Informations relatives aux files</h3>
+                                                <p>Quel que soit le mode d'affichage, les files affichées dans ces listes sont accompagnées des informations suivantes : </p>
+                                                <ul>
+                                                    <li>
+                                                        <p class="Liste_puce_1">l'icone <img src="../../Z_Resources/Images/02_Captures/Boutons/icon_Fleche.png" style="width: 28px;height: 18px;" /> signale une file en mode validation</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">l'icone <img src="../../Z_Resources/Images/02_Captures/Boutons/icon_Clef.png" style="width: 24px;height: 22px;" /> signale une file virtuelle</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="Liste_puce_1">l'icone <img src="../../Z_Resources/Images/02_Captures/Boutons/icon_Stats.png" style="width: 24px;height: 22px;" /> signale une file en mode comptabilisation</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>l'icone <img src="../../Z_Resources/Images/02_Captures/Boutons/icon_Coche_verte.png" style="width: 24px;height: 22px;" /> signale une file associée par défaut à un emplacement</p>
+                                                    </li>
+                                                </ul>
+                                                <p class="Liste_puce_1">
+                                                    <br />
+                                                </p>
+                                                <p>D'autres informations s'affichent sous forme d'icones sur la ligne correspondant à chaque file déclarée ou au survol de la souris (file noir et blanc ou couleur, simplex ou duplex, type de format supporté, <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term21">WES<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>WES (Watchdoc Embedded Solution - Solution Embarquée Watchdoc)
+WES&#160;est le nom donné à l'interface Watchdoc embarquée sur les périphériques d'impression. Il existe des interfaces spécifiques à chaque périphérique tiers et donc autant de WES que de constructeurs de périphériques. Ces interfaces servent à gérer l'impression depuis le périphérique lui-même.</span></a>&#160;associé, taux de remplissage des cartouches d'encre ou des <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term30">toners<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Le toner (ou encre en poudre) est l'encre utilisée dans les appareils d'impression photo-électrique, comme les imprimantes laser et les photocopieurs, constituée en majeure partie de fines particules de matière plastique et de résine. 
+Grâce à une charge électrique statique, l'encre est polarisée pour être transférée d'un média à un autre, à savoir de la cartouche vers un rouleau magnétique pour former une image sur le cylindre photo-sensible avant d'être déposée sur la feuille de papier. L'encre est ensuite fixée de façon permanente sur la feuille par chauffage, à environ 180 degrés Celsius, dans l'unité de fusion.</span></a>, éléments de description fournis lors de la déclaration).<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Files_Infos_Modele_611.png" style="width: 700px;height: auto;" /></p>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocFilesdimpressionPr%C3%A9sentation">Watchdoc - Files d'impression - Présentation</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Pr%C3%A9sentationdelinterfacedadministrationdesfilesdimpression">Présentation de l'interface d'administration des files d'impression </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -198,142 +348,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor435"></a>
-                                            <MadCap:concept term="WD" />Watchdoc - Files d'impression - Présentation</h1>
-                                        <h2>Présentation de l'interface d'administration des files d'impression </h2>
-                                        <h3>Accéder à l'interface d'administration</h3>
-                                        <p>Depuis le <strong>Menu principal</strong> de l'interface d'administration, dans la section <strong>Exploitation</strong>, cliquez sur <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_FilesImpression.png" /><strong>Files d'impression, groupes de files &amp; pools</strong> pour accéder à l'interface de configuration des files :<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Files_AccesInterface_V61.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1686" data-mc-height="746" src="../../Z_Resources/Images/02_Captures/Config_Files_AccesInterface_V61.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a><br /></p>
-                                        <h3>Typologie des files</h3>
-                                        <p>L'interface <strong>Files d'impression</strong> comporte 3&#160;onglets permettant d'accéder à l'administration&#160;: </p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1">des files d'impression ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">des groupes de files ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">des pools de travaux.</p>
-                                                <p>&#160;</p>
-                                            </li>
-                                        </ul>
-                                        <p>Par défaut, l'interface d'administration des Files d'impression affiche la liste des files contrôlées&#160;par Watchdoc (hors files proxy).&#160;<br />Vous pouvez filtrer cette liste en fonction du type de files que vous souhaitez afficher&#160;:</p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Contrôlées </strong>: files d'impression<span> réseau </span>actives et contrôlées par Watchdoc ; </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Désactivées </strong>: files volontairement retirées du contrôle de Watchdoc&#160;;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Physiques</strong>: files d'impression physiquement associées à un périphérique d'impression ; </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Virtuelle</strong> : files utilisées dans le cadre de l'impression à la demande.&#160;Ces files n'existent pas physiquement mais servent à recueillir temporairement les travaux d'impression en attendant que l'utilisateur choisisse son périphérique d'impression.&#160;Dès que l'utilisateur débloque ses impressions sur un périphérique précis, la file virtuelle transfère les travaux vers la file physique&#160;;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Locales </strong>: files d'impression <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term10">locales<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>File d'impression locale : file d'impression d'un périphérique non connecté au réseau. Un agent Watchdoc installé localement sur le périphérique collecte et renvoie les données d'impression à Watchdoc.</span></a> contrôlées par Watchdoc. Ces files sont également désignées sous l'appellation <strong>Files personnelles</strong> ; </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Actives </strong>: files (contrôlées) en cours de fonctionnement lors de la consultation de l'interface ; </p>
-                                            </li>
-                                            <li>
-                                                <p><b>Files proxy</b> (proxy queues)&#160;: files contrôlées par d'autres serveurs appartenant au  même domaine (en configuration master/slave). Une file proxy sert de file de secours en cas de panne des files attachées au serveur&#160;; </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>En panne </strong>: files (contrôlées) présentant un dysfonctionnement lors de la consultation de l'interface ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Consommables</strong> : alertes relatives aux <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term11">consommables<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Dans le contexte de l'impression, le consommable désigne les fournitures autres que le périphérique lui-même nécessaire à son fonctionnement, telles que cartouches d'encre, papier ou cartouches d'agrafes, par exemple.</span></a> des périphériques contrôlés par Watchdoc ; </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>VIP&#160;</strong>: périphériques auxquels on a attribué un statut spécifique afin de les distinguer des autres périphériques.</p>
-                                            </li>
-                                        </ul>
-                                        <fieldset style="text-align: left;">La désactivation manuelle peut être utile lors d'une intervention en maintenance sur un périphérique, notamment pour ne  pas fausser les statistiques si des tests d'impression sont réalisés par le technicien de maintenance lors de son intervention.&#160;<br />Par ailleurs, la désactivation automatique peut être déclenchée par Watchdoc dans le cas où le nombre de files déclarées excède le nombre de licences acquises. <br />Dans ce cas, les  dernières files déclarées à partir du moment où Watchdoc ne trouve plus de licence correspondante sont automatiquement désactivées.</fieldset>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1"><strong>Toutes </strong>: total des files contrôlées, gérées par Watchdoc, quel que soit leur état.<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Files_Filtre_Types_611.png" style="width: 700px;height: auto;" /></p>
-                                            </li>
-                                        </ul>
-                                        <h3>Outils d'affichage des listes</h3>
-                                        <p>Vous disposez de plusieurs outils pour rechercher et afficher les files&#160;: </p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1">le champ <strong>Rechercher </strong>permet de saisir un ou plusieurs critères permettant de retrouver une file dans la liste <img src="../../Z_Resources/Images/02_Captures/Config_Files_Affichage_OutilRechercher.png" style="width: 212px;height: 21px;" /> ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">l'outil <strong>Groupe </strong>permet de restreindre la liste aux files incluses dans un groupe de files spécifique ;<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Files_Affichage_OutilGroupe.png" style="width: 180px;height: 132px;" /></p>
-                                            </li>
-                                        </ul>
-                                        <p class="Liste_puce_1">&#160;</p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1">l'outil <strong>Filtrer </strong>permet de filtrer les files en fonction de leur statut ; <br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Files_Affichage_OutilFiltrer.png" style="width: 167px;height: 226px;" /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                        </ul>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1">l'outil <strong>Regrouper </strong>permet de regrouper les files en fonction de critères prédéfinis (modèle, pilote, site, etc.)&#160;;<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Files_Affichage_OutilRegrouper.png" style="width: 183px;height: 196px;" /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                        </ul>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1">l'outil <strong>Afficher </strong>permet de définir la nature des informations à afficher dans la liste&#160;;<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Files_Affichage_OutilAfficher.png" style="width: 183px;height: 130px;" /></p>
-                                                <p>&#160;</p>
-                                            </li>
-                                        </ul>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1">le bouton <img src="../../Z_Resources/Images/02_Captures/Config_Files_Affichage_OutilEnpanne.png" style="width: 32px;height: 22px;" /> permet d'afficher les imprimantes en panne ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">le bouton <img src="../../Z_Resources/Images/02_Captures/Config_Files_Affichage_OutilConsommables.png" style="width: 41px;height: 26px;" /> permet d'afficher les imprimantes dont le niveau de consommables est critique :<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Files_Affichage_Outils.png" style="width: 700px;height: auto;" /></p>
-                                            </li>
-                                        </ul>
-                                        <h3><a name="Outils_de_gestion_des_files" id="Outils_de_gestion_des_files"></a>Outils de gestion des files</h3>
-                                        <p>Quel que soit le mode d'affichage, les files affichées dans ces listes sont  dotées des outils suivants : <br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Files_Outils_53.png" style="width: 700px;height: auto;" /></p>
-                                        <p>&#160;</p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1">le bouton <strong>Pause </strong><img src="../../Z_Resources/Images/02_Captures/Boutons/icon_pause.png" style="width: 17px;height: 17px;" /> : permet de mettre la file en pause. Dès qu'une file est en pause, le bouton <strong>Pause </strong>est désactivé et le bouton <strong>Redémarrer </strong>s'affiche ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">le bouton <strong>Redémarrer </strong><img src="../../Z_Resources/Images/02_Captures/Boutons/icon_Redemarrer.png" style="width: 22px;height: 22px;" /> permet de redémarrer une file après sa mise en pause ;</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">le bouton <strong>Arrêter </strong><img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Arret.png" style="width: 20px;height: 20px;" /> permet d'arrêter le contrôle exercé par Watchdoc sur une file. Dès lors,  la file arrêtée disparaît de la liste <strong>Contrôlées </strong>et passe dans la liste <strong>Désactivées</strong> ; </p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">le bouton <strong>Configurer </strong><img src="../../Z_Resources/Images/02_Captures/Boutons/icon_Config.png" style="width: 25px;height: 25px;" /> permet d'accéder à l'interface de configuration de la file.</p>
-                                            </li>
-                                        </ul>
-                                        <h3>Informations relatives aux files</h3>
-                                        <p>Quel que soit le mode d'affichage, les files affichées dans ces listes sont accompagnées des informations suivantes : </p>
-                                        <ul>
-                                            <li>
-                                                <p class="Liste_puce_1">l'icone <img src="../../Z_Resources/Images/02_Captures/Boutons/icon_Fleche.png" style="width: 28px;height: 18px;" /> signale une file en mode validation</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">l'icone <img src="../../Z_Resources/Images/02_Captures/Boutons/icon_Clef.png" style="width: 24px;height: 22px;" /> signale une file virtuelle</p>
-                                            </li>
-                                            <li>
-                                                <p class="Liste_puce_1">l'icone <img src="../../Z_Resources/Images/02_Captures/Boutons/icon_Stats.png" style="width: 24px;height: 22px;" /> signale une file en mode comptabilisation</p>
-                                            </li>
-                                            <li>
-                                                <p>l'icone <img src="../../Z_Resources/Images/02_Captures/Boutons/icon_Coche_verte.png" style="width: 24px;height: 22px;" /> signale une file associée par défaut à un emplacement</p>
-                                            </li>
-                                        </ul>
-                                        <p class="Liste_puce_1">
-                                            <br />
-                                        </p>
-                                        <p>D'autres informations s'affichent sous forme d'icones sur la ligne correspondant à chaque file déclarée ou au survol de la souris (file noir et blanc ou couleur, simplex ou duplex, type de format supporté, <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term21">WES<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>WES (Watchdoc Embedded Solution - Solution Embarquée Watchdoc)
-WES&#160;est le nom donné à l'interface Watchdoc embarquée sur les périphériques d'impression. Il existe des interfaces spécifiques à chaque périphérique tiers et donc autant de WES que de constructeurs de périphériques. Ces interfaces servent à gérer l'impression depuis le périphérique lui-même.</span></a>&#160;associé, taux de remplissage des cartouches d'encre ou des <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term30">toners<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Le toner (ou encre en poudre) est l'encre utilisée dans les appareils d'impression photo-électrique, comme les imprimantes laser et les photocopieurs, constituée en majeure partie de fines particules de matière plastique et de résine. 
-Grâce à une charge électrique statique, l'encre est polarisée pour être transférée d'un média à un autre, à savoir de la cartouche vers un rouleau magnétique pour former une image sur le cylindre photo-sensible avant d'être déposée sur la feuille de papier. L'encre est ensuite fixée de façon permanente sur la feuille par chauffage, à environ 180 degrés Celsius, dans l'unité de fusion.</span></a>, éléments de description fournis lors de la déclaration).<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Files_Infos_Modele_611.png" style="width: 700px;height: auto;" /></p>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

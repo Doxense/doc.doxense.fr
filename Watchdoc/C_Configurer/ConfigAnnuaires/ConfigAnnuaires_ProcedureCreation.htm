@@ -164,6 +164,124 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="topic-layout">
+                                        <main class="topic-main">
+                                            <div role="main" id="mc-main-content">
+                                                <h1 id="WatchdocAnnuairesDéclareretconfigurerunannuaire" data-magellan-target="WatchdocAnnuairesDéclareretconfigurerunannuaire"><a name="aanchor434"></a>
+                                                    <MadCap:concept term="WD;CFG" />Watchdoc - Annuaires - Déclarer et configurer un annuaire</h1>
+                                                <h2 id="Accéderàlinterfacededéclaration" data-magellan-target="Accéderàlinterfacededéclaration">Accéder à l'interface de déclaration</h2>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Depuis le <strong>Menu principal</strong> de l'interface d'administration, </p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_num_1">dans la section <strong>Configuration</strong>, cliquez sur <strong>Annuaires utilisateurs</strong> :</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p class="Liste_num_1">Dans la liste des annuaires qui s'affiche, cliquez sur le bouton <strong>Déclarer un nouvel annuaire </strong>&#160;:<br /><br /><p><img src="../../Z_Resources/Images/02_Captures/Config_Annuaires_DeclarerNvlAnnuaire_61.png" style="width: 700px;height: auto;" /></p><p><br /></p></p>
+                                                    </li>
+                                                </ol>
+                                                <p class="Resultat"><span style="font-family: 'Wingdings'">è</span> Vous accédez à l'interface <strong>Déclarer un nouvel annuaire utilisateur</strong> constituée de plusieurs sections.</p>
+                                                <fieldset>Le nombre et la nature des paramètres figurant dans cette interface varient en fonction du type d'annuaire à configurer. </fieldset>
+                                                <h2 id="Définirunannuairepardéfaut" data-magellan-target="Définirunannuairepardéfaut">Définir un annuaire par défaut</h2>
+                                                <p>Comme Watchdoc gère plusieurs annuaires, l'annuaire par défaut est l'annuaire utilisé en priorité par Watchdoc, notamment dans le cas où un annuaire sollicité ne répond pas. </p>
+                                                <p>Pour désigner l'annuaire par défaut : </p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>dans la liste des annuaires existant, repérez l'annuaire que vous souhaitez désigner par défaut ; </p>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p>cliquez sur le bouton <strong>Définir comme annuaire par défaut</strong> <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_ParDefaut.png" style="width: 17px;height: 17px;" /> .  </p>
+                                                    </li>
+                                                </ol>
+                                                <p><span style="font-family: 'Wingdings'">è</span> Dans la liste, l'annuaire par défaut est alors précédé de l'icone <img src="../../Z_Resources/Images/02_Captures/Boutons/icon_Valider.png" style="width: 18px;height: 18px;" />. </p>
+                                                <h2 id="Configurerlespropriétésdunannuaire" data-magellan-target="Configurerlespropriétésdunannuaire">Configurer les propriétés d'un annuaire</h2>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p class="Liste_puce_1"><strong>Type : </strong>sélectionnez le type de l'annuaire dans la liste déroulante. Indiquer le type de l'annuaire permet à Watchdoc d'utiliser le module approprié pour requêter l'annuaire lors de l'authentification.</p>
+                                                        <p>&#160;</p>
+                                                        <ul>
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>Utilisateurs&#160;:</strong> cette catégorie regroupe tous les annuaires gérant des utilisateurs :</p>
+                                                                <ul style="list-style-type: circle;font-size: 12pt;">
+                                                                    <li style="text-align: justify;">
+                                                                        <p><strong>Microsoft Entra ID</strong> : annuaire du client géré dans Windows Microsoft Entra ID (cf. <a href="ConfigAnnuaires_EntraID_Procedure.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Configuration</a>)</p>
+                                                                    </li>
+                                                                    <li style="text-align: justify;">
+                                                                        <p><strong>Microsoft Active Directory</strong> : annuaire&#160;MS Windows du client  (cf. cf. <a href="ConfigAnnuaires_EntraID_Procedure.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Confguration</a>)</p>
+                                                                    </li>
+                                                                    <li style="text-align: justify;font-size: 12pt;"><strong>Open LDAP</strong> ce type d'annuaire est conservé pour compatibilité ascendante. Cependant, il faut lui préférer le type LDAPv3 générique.</li>
+                                                                    <li style="text-align: justify;font-size: 12pt;"><strong>Virtuel </strong>: l'annuaire virtuel sert d'annuaire de vérification dans le cas où un annuaire Alias/Proxy est déclaré.</li>
+                                                                    <li>
+                                                                        <p><strong>Base de données utilisateur (SQL)</strong> : il s'agit d'un annuaire, créé par le client et disposant de son propre schéma, qui se fonde sur une base SQL. Pour ce type d'annuaire, il est nécessaire de  spécifier les requêtes SQL qui permettent de récupérer les informations.</p>
+                                                                    </li>
+                                                                    <li style="text-align: justify;font-size: 12pt;"><strong>Base de données invités GUESTS (SQL)</strong> : il s'agit d'un annuaire, créé automatiquement et disposant d'un schéma spécifique, qui se fonde sur une base SQL. Il est créé lors de l'installation de Watchdoc pour gérer des "Invités", c'est-à-dire des utilisateurs n'e figurerant pas dans l'annuaire de l'organisation.&#160;Il peut aussi servir d'annuaire principal des utilisateurs dans le cas où l'organisation ne dispose pas d'annuaire. (cf. Confguration)</li>
+                                                                    <li style="text-align: justify;font-size: 12pt;"><strong>XML</strong> : ce type d'annuaire enregistre les informations relatives aux utilisateurs et aux groupes  dans un fichier XML sur le disque du serveur. Ce type d'annuaire permet de simuler des domaines distants ou de s'interfacer avec des annuaires propriétaires (via des utilitaires d'export ou de synchronisation). Un modèle d'annuaire xml est fourni dans le dossier d'installation de Watchdoc (C:\Program Files\Doxense\Watchdoc\Data\directory_sample.xml) </li>
+                                                                    <li>
+                                                                        <p style="text-align: justify;"><strong>Microsoft Windows NT Domain (SAM)</strong> : cet annuaire nécessitant d'attribuer des droits importants aux utilisateurs du domaine, il est recommandé de ne l'utiliser qu'en cas de nécessité (comptes locaux), ou si le contrôleur de domaine est un Windows NT4 Server.</p>
+                                                                    </li>
+                                                                </ul>
+                                                                <p>&#160;</p>
+                                                            </li>
+                                                            <li>
+                                                                <p class="Liste_puce_2"><strong>Alias (mapping):</strong> cette catégorie regroupe tous les annuaires établissant des correspondances (mapping) entre des utilisateurs et d'autres données (par exemple : identifiant utilisateur / numéro de badge ou identifiant utilisateur /&#160;identifiant poste de travail, etc.).</p>
+                                                                <ul style="list-style-type: circle;">
+                                                                    <li>
+                                                                        <p><strong>Meta-annuaire</strong> : permet de cumuler plusieurs annuaires interrogés l'un après l'autre jusqu'à ce que l'un identifie l'utilisateur ;</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p><strong>Fichier Alias/Proxy (CSV) :</strong> fichier .csv dans lequel sont référencés les alias des utilisateurs. Complétez le paramétrage en indiquant le chemin permettant d’accéder au fichier .csv dans le champ Paramètres &gt; Fichier ;</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p><strong>Base de badges/cartes (SQL) :</strong> base de données SQL dans laquelle se trouvent les badges/cartes attribués aux utilisateurs. Les utilisateurs sont donc identifiés à l’aide de leur badge/carte. Complétez le paramétrage (Domaine, type, mot de passe administrateur, serveur et base SQL) pour permettre l’identification et la localisation de la base SQL utilisée.</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p><strong>Base de données Alias/Proxy (SQL) :</strong> base de données SQL dans laquelle se trouvent les alias des utilisateurs. Complétez le paramétrage  (Domaine, type, mot de passe administrateur, serveur et base SQL) pour permettre l’identification et la localisation de la base SQL utilisée.</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p><b>Codes d'impression (Code PUK)</b> : cet annuaire permet de générer des codes d'impression PUK à l'attention des utilisateurs inscrits dans l'annuaire Entra ID (Microsoft Azure).&#160;</p>
+                                                                        <p>N.B.&#160;: par souci de sécurité, nous déconseillons l'authentification par code PUK.</p>
+                                                                        <p>
+                                                                            <br />
+                                                                        </p>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li value="2">
+                                                        <p class="Liste_puce_1"><strong>Identifiant :</strong> l'identifiant correspond au nom du domaine qui s'affiche dans une boîte d'authentification sous forme "DOMAIN\LOGIN".</p>
+                                                    </li>
+                                                    <li value="3">
+                                                        <p class="Liste_puce_1"><strong>Description :</strong> si nécessaire, complétez les informations précédentes d'une description qui n'est visible que des administrateurs.</p>
+                                                    </li>
+                                                    <li value="4">
+                                                        <p class="Liste_puce_1"><strong>Alias :</strong> si nécessaire, ajoutez un alias à l'annuaire paramétré afin de le retrouver plus facilement qu'à l'aide de son identifiant.</p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p class="Liste_puce_1"><strong>Global :</strong> dans une configuration en <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term102">Domaine<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Depuis Watchdoc v6, un Domaine est un regroupement de serveurs fonctionnant en configuration maître / esclaves (master /slaves). Un domaine dispose d'une interface spécifique appelée Gestion du domaine. L'administration du serveur maître et des serveurs esclaves qui en dépendent en est facilitée.</span></a>, indiquez si vous souhaitez que la configuration de l'annuaire, (effectuée sur le serveur maître) soit répliquée sur tous les serveurs esclaves (slaves) qui en dépendent. Si l'annuaire est désigné comme annuaire par défaut sur le serveur maître, il garde cette propriété sur les serveurs esclaves.&#160;</p>
+                                                    </li>
+                                                    <li value="6">
+                                                        <p class="Liste_puce_1">Les autres paramètres sont spécifiques à chaque type d'annuaire.</p>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </main>
+                                        <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocAnnuairesD%C3%A9clareretconfigurerunannuaire">Watchdoc - Annuaires - Déclarer et configurer un annuaire</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Acc%C3%A9der%C3%A0linterfaceded%C3%A9claration">Accéder à l'interface de déclaration</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#D%C3%A9finirunannuairepard%C3%A9faut">Définir un annuaire par défaut</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Configurerlespropri%C3%A9t%C3%A9sdunannuaire">Configurer les propriétés d'un annuaire</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </aside>
+                                    </div>
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
@@ -197,106 +315,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
-                                    <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor434"></a>
-                                            <MadCap:concept term="WD;CFG" />Watchdoc - Annuaires - Déclarer et configurer un annuaire</h1>
-                                        <h2>Accéder à l'interface de déclaration</h2>
-                                        <ol>
-                                            <li value="1">
-                                                <p>Depuis le <strong>Menu principal</strong> de l'interface d'administration, </p>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_num_1">dans la section <strong>Configuration</strong>, cliquez sur <strong>Annuaires utilisateurs</strong> :</p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_num_1">Dans la liste des annuaires qui s'affiche, cliquez sur le bouton <strong>Déclarer un nouvel annuaire </strong>&#160;:<br /><br /><p><img src="../../Z_Resources/Images/02_Captures/Config_Annuaires_DeclarerNvlAnnuaire_61.png" style="width: 700px;height: auto;" /></p><p><br /></p></p>
-                                            </li>
-                                        </ol>
-                                        <p class="Resultat"><span style="font-family: 'Wingdings'">è</span> Vous accédez à l'interface <strong>Déclarer un nouvel annuaire utilisateur</strong> constituée de plusieurs sections.</p>
-                                        <fieldset>Le nombre et la nature des paramètres figurant dans cette interface varient en fonction du type d'annuaire à configurer. </fieldset>
-                                        <h2>Définir un annuaire par défaut</h2>
-                                        <p>Comme Watchdoc gère plusieurs annuaires, l'annuaire par défaut est l'annuaire utilisé en priorité par Watchdoc, notamment dans le cas où un annuaire sollicité ne répond pas. </p>
-                                        <p>Pour désigner l'annuaire par défaut : </p>
-                                        <ol>
-                                            <li value="1">
-                                                <p>dans la liste des annuaires existant, repérez l'annuaire que vous souhaitez désigner par défaut ; </p>
-                                            </li>
-                                            <li value="2">
-                                                <p>cliquez sur le bouton <strong>Définir comme annuaire par défaut</strong> <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_ParDefaut.png" style="width: 17px;height: 17px;" /> .  </p>
-                                            </li>
-                                        </ol>
-                                        <p><span style="font-family: 'Wingdings'">è</span> Dans la liste, l'annuaire par défaut est alors précédé de l'icone <img src="../../Z_Resources/Images/02_Captures/Boutons/icon_Valider.png" style="width: 18px;height: 18px;" />. </p>
-                                        <h2>Configurer les propriétés d'un annuaire</h2>
-                                        <ol>
-                                            <li value="1">
-                                                <p class="Liste_puce_1"><strong>Type : </strong>sélectionnez le type de l'annuaire dans la liste déroulante. Indiquer le type de l'annuaire permet à Watchdoc d'utiliser le module approprié pour requêter l'annuaire lors de l'authentification.</p>
-                                                <p>&#160;</p>
-                                                <ul>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>Utilisateurs&#160;:</strong> cette catégorie regroupe tous les annuaires gérant des utilisateurs :</p>
-                                                        <ul style="list-style-type: circle;font-size: 12pt;">
-                                                            <li style="text-align: justify;">
-                                                                <p><strong>Microsoft Entra ID</strong> : annuaire du client géré dans Windows Microsoft Entra ID (cf. <a href="ConfigAnnuaires_EntraID_Procedure.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Configuration</a>)</p>
-                                                            </li>
-                                                            <li style="text-align: justify;">
-                                                                <p><strong>Microsoft Active Directory</strong> : annuaire&#160;MS Windows du client  (cf. cf. <a href="ConfigAnnuaires_EntraID_Procedure.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">Confguration</a>)</p>
-                                                            </li>
-                                                            <li style="text-align: justify;font-size: 12pt;"><strong>Open LDAP</strong> ce type d'annuaire est conservé pour compatibilité ascendante. Cependant, il faut lui préférer le type LDAPv3 générique.</li>
-                                                            <li style="text-align: justify;font-size: 12pt;"><strong>Virtuel </strong>: l'annuaire virtuel sert d'annuaire de vérification dans le cas où un annuaire Alias/Proxy est déclaré.</li>
-                                                            <li>
-                                                                <p><strong>Base de données utilisateur (SQL)</strong> : il s'agit d'un annuaire, créé par le client et disposant de son propre schéma, qui se fonde sur une base SQL. Pour ce type d'annuaire, il est nécessaire de  spécifier les requêtes SQL qui permettent de récupérer les informations.</p>
-                                                            </li>
-                                                            <li style="text-align: justify;font-size: 12pt;"><strong>Base de données invités GUESTS (SQL)</strong> : il s'agit d'un annuaire, créé automatiquement et disposant d'un schéma spécifique, qui se fonde sur une base SQL. Il est créé lors de l'installation de Watchdoc pour gérer des "Invités", c'est-à-dire des utilisateurs n'e figurerant pas dans l'annuaire de l'organisation.&#160;Il peut aussi servir d'annuaire principal des utilisateurs dans le cas où l'organisation ne dispose pas d'annuaire. (cf. Confguration)</li>
-                                                            <li style="text-align: justify;font-size: 12pt;"><strong>XML</strong> : ce type d'annuaire enregistre les informations relatives aux utilisateurs et aux groupes  dans un fichier XML sur le disque du serveur. Ce type d'annuaire permet de simuler des domaines distants ou de s'interfacer avec des annuaires propriétaires (via des utilitaires d'export ou de synchronisation). Un modèle d'annuaire xml est fourni dans le dossier d'installation de Watchdoc (C:\Program Files\Doxense\Watchdoc\Data\directory_sample.xml) </li>
-                                                            <li>
-                                                                <p style="text-align: justify;"><strong>Microsoft Windows NT Domain (SAM)</strong> : cet annuaire nécessitant d'attribuer des droits importants aux utilisateurs du domaine, il est recommandé de ne l'utiliser qu'en cas de nécessité (comptes locaux), ou si le contrôleur de domaine est un Windows NT4 Server.</p>
-                                                            </li>
-                                                        </ul>
-                                                        <p>&#160;</p>
-                                                    </li>
-                                                    <li>
-                                                        <p class="Liste_puce_2"><strong>Alias (mapping):</strong> cette catégorie regroupe tous les annuaires établissant des correspondances (mapping) entre des utilisateurs et d'autres données (par exemple : identifiant utilisateur / numéro de badge ou identifiant utilisateur /&#160;identifiant poste de travail, etc.).</p>
-                                                        <ul style="list-style-type: circle;">
-                                                            <li>
-                                                                <p><strong>Meta-annuaire</strong> : permet de cumuler plusieurs annuaires interrogés l'un après l'autre jusqu'à ce que l'un identifie l'utilisateur ;</p>
-                                                            </li>
-                                                            <li>
-                                                                <p><strong>Fichier Alias/Proxy (CSV) :</strong> fichier .csv dans lequel sont référencés les alias des utilisateurs. Complétez le paramétrage en indiquant le chemin permettant d’accéder au fichier .csv dans le champ Paramètres &gt; Fichier ;</p>
-                                                            </li>
-                                                            <li>
-                                                                <p><strong>Base de badges/cartes (SQL) :</strong> base de données SQL dans laquelle se trouvent les badges/cartes attribués aux utilisateurs. Les utilisateurs sont donc identifiés à l’aide de leur badge/carte. Complétez le paramétrage (Domaine, type, mot de passe administrateur, serveur et base SQL) pour permettre l’identification et la localisation de la base SQL utilisée.</p>
-                                                            </li>
-                                                            <li>
-                                                                <p><strong>Base de données Alias/Proxy (SQL) :</strong> base de données SQL dans laquelle se trouvent les alias des utilisateurs. Complétez le paramétrage  (Domaine, type, mot de passe administrateur, serveur et base SQL) pour permettre l’identification et la localisation de la base SQL utilisée.</p>
-                                                            </li>
-                                                            <li>
-                                                                <p><b>Codes d'impression (Code PUK)</b> : cet annuaire permet de générer des codes d'impression PUK à l'attention des utilisateurs inscrits dans l'annuaire Entra ID (Microsoft Azure).&#160;</p>
-                                                                <p>N.B.&#160;: par souci de sécurité, nous déconseillons l'authentification par code PUK.</p>
-                                                                <p>
-                                                                    <br />
-                                                                </p>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li value="2">
-                                                <p class="Liste_puce_1"><strong>Identifiant :</strong> l'identifiant correspond au nom du domaine qui s'affiche dans une boîte d'authentification sous forme "DOMAIN\LOGIN".</p>
-                                            </li>
-                                            <li value="3">
-                                                <p class="Liste_puce_1"><strong>Description :</strong> si nécessaire, complétez les informations précédentes d'une description qui n'est visible que des administrateurs.</p>
-                                            </li>
-                                            <li value="4">
-                                                <p class="Liste_puce_1"><strong>Alias :</strong> si nécessaire, ajoutez un alias à l'annuaire paramétré afin de le retrouver plus facilement qu'à l'aide de son identifiant.</p>
-                                            </li>
-                                            <li value="5">
-                                                <p class="Liste_puce_1"><strong>Global :</strong> dans une configuration en <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term102">Domaine<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Depuis Watchdoc v6, un Domaine est un regroupement de serveurs fonctionnant en configuration maître / esclaves (master /slaves). Un domaine dispose d'une interface spécifique appelée Gestion du domaine. L'administration du serveur maître et des serveurs esclaves qui en dépendent en est facilitée.</span></a>, indiquez si vous souhaitez que la configuration de l'annuaire, (effectuée sur le serveur maître) soit répliquée sur tous les serveurs esclaves (slaves) qui en dépendent. Si l'annuaire est désigné comme annuaire par défaut sur le serveur maître, il garde cette propriété sur les serveurs esclaves.&#160;</p>
-                                            </li>
-                                            <li value="6">
-                                                <p class="Liste_puce_1">Les autres paramètres sont spécifiques à chaque type d'annuaire.</p>
-                                            </li>
-                                        </ol>
-                                    </div>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">
