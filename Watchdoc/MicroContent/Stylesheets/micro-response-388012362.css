@@ -238,7 +238,7 @@
 {
 	flex: 0 0 260px;
 	position: sticky;
-	top: 50px;
+	top: 20px;
 	align-self: flex-start;
 }
 
@@ -548,13 +548,22 @@
 
 	.micro-response-388012362 img
 	{
-		margin: 20px auto;
+		/*You can set height and width on each image to prevent an image from getting too large. Intent here is to scale down as browser size shrinks.*/
+		border: none;
+		max-width: 90%;
+		mc-thumbnail-max-height: auto;
+		mc-thumbnail: none;
 	}
 
-	.micro-response-388012362 img-bords
+	.micro-response-388012362 img.bord
 	{
-		border: solid;
-		margin: 20px auto;
+		border-radius: 5px;
+		max-width: 700px;
+		mc-thumbnail-max-height: 1000px;
+		mc-thumbnail-max-width: auto;
+		mc-thumbnail: Popup;
+		border: solid 1px;
+		border-color: #000000;
 	}
 
 	.micro-response-388012362 .btn_connect__block
