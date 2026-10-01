@@ -199,29 +199,10 @@
                                         </div>
                                     </div>
                                     <p>&#160;</p>
-                                    <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
-                                        <div class="button-group-container-left">
-                                            <button class="button elearning-button needs-pie previous-topic-button" title="Précédent" disabled="true">
-                                                <div>
-                                                    <div role="img" class="button-icon-wrapper" aria-label="Précédent">
-                                                        <div class="button-icon"> </div>
-                                                    </div><span class="button-text">Précédent</span>
-                                                </div>
-                                            </button>
-                                            <button class="button elearning-button needs-pie next-topic-button" title="Suivant" disabled="true">
-                                                <div>
-                                                    <div role="img" class="button-icon-wrapper" aria-label="Suivant">
-                                                        <div class="button-icon"> </div>
-                                                    </div><span class="button-text">Suivant</span>
-                                                </div>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <p>&#160;</p>
                                     <div class="topic-layout">
                                         <main class="topic-main">
                                             <div role="main" id="mc-main-content">
-                                                <h1 id="WatchdocMettreàjourlapageMonComptev2dansundomaine" data-magellan-target="WatchdocMettreàjourlapageMonComptev2dansundomaine"><a name="aanchor376"></a>
+                                                <h1 id="WatchdocMettreàjourlapageMonComptev2dansundomaine" data-magellan-target="WatchdocMettreàjourlapageMonComptev2dansundomaine"><a name="aanchor104"></a>
                                                     <MadCap:concept term="INS" />Watchdoc - Mettre à jour la page Mon Compte v.2 dans un domaine</h1>
                                                 <h2 id="Principe" data-magellan-target="Principe">Principe</h2>
                                                 <p>La page Mon compte v.&#160;2&#160;est hébergée sur le serveur IIS&#160;de votre configuration&#160;Watchdoc.<br />Dans une configuration en domaine (serveurs master/slaves), il est nécessaire de fournir au serveur IIS&#160;une liste de tous les serveurs du domaine autorisés à consulter la page Mon compte v. 2. <br />Cette liste, intitulée <strong>servers.xml</strong> est constituée après la configuration de la page MonCompte v. 2 et au terme de l'opération de configuration du domaine. Ensuite, elle doit être enregistrée sur le serveur IIS.&#160;</p>
@@ -249,7 +230,7 @@
                                                         <p>réitérez l'opération sur d'autres serveurs IIS&#160;si votre configuration en comporte plusieurs ; </p>
                                                     </li>
                                                     <li value="5">
-                                                        <p>installez le site web Watchdoc sur le serveur IIS (cf.&#160;<a href="Installer_Site_web.htm">Installer le Site web Watchdoc</a>) ;</p>
+                                                        <p>installez le site web Watchdoc sur le serveur IIS (cf.&#160;Installer le Site web Watchdoc) ;</p>
                                                     </li>
                                                     <li value="6">
                                                         <p>poursuivez la mise à jour de votre domaine Watchdoc en mode classique ou autonome (cf. <a href="../E_MettreAJour/WD611_MaJ_WD_Proc_Dom_de_61.htm" target="_blank">Mettre à jour un domaine</a>) ou en mode déporté (cf. <a href="../E_MettreAJour/WD611_MaJ_WD_Proc_DomDept_de_61.htm" target="_blank">Mettre à jour un domaine</a>).</p>
@@ -266,19 +247,19 @@
                                                 <p>Si vous souhaitez appliquer un certificat signé par votre autorité de certification, vous pouvez&#160;: </p>
                                                 <ul>
                                                     <li>
-                                                        <p>soit faire signer le certificat du port 5753 installé par défaut et auto-signé (cf.&#160;<a href="../C_Configurer/ConfigCertificats/ConfigCertificats_Procedure.htm#Faire_signer_Cert" target="_blank">Faire signer un certificat</a>) ; </p>
+                                                        <p>soit faire signer le certificat du port 5753 installé par défaut et auto-signé (cf.&#160;Faire signer un certificat) ; </p>
                                                     </li>
                                                     <li>
-                                                        <p>soit faire signer un autre certificat généré spécifiquement (cf. <a href="../C_Configurer/ConfigCertificats/ConfigCertificats_Procedure.htm" target="_blank">Générer et faire signer un certificat</a>). 
+                                                        <p>soit faire signer un autre certificat généré spécifiquement (cf. Générer et faire signer un certificat). 
 Dans ce cas, il est nécessaire de connaître la disponibilité des ports du serveur IIS.</p>
                                                     </li>
                                                 </ul>
                                                 <h3>Configuration de la page Mon compte v. 2</h3>
-                                                <p>Une fois que vous avez configuré le certificat dédié à la page Mon compte v. 2, créez et configurez la page web "Mon compte v. 2" (cf.&#160;<a href="../C_Configurer/ConfigProfilWeb/ConfigProfilWeb_v2_Procedure.htm">Configurer une page Mon compte v. 2</a>).&#160;</p>
+                                                <p>Une fois que vous avez configuré le certificat dédié à la page Mon compte v. 2, créez et configurez la page web "Mon compte v. 2" (cf.&#160;Configurer une page Mon compte v. 2).&#160;</p>
                                                 <p>&#160;</p>
                                                 <p>N.B.&#160;Vous pouvez créer plusieurs pages configurées différemment que vous destinez à des utilisateurs différents. Vous communiquez ensuite l'adresse url de chaque page "Mon Compte v. 2" à chaque groupe d'utilisateurs. <br />Par exemple, vous configurez une page web dédiée à vos salariés à laquelle ils accèdent en SSO&#160;grâce à leur compte AD.&#160;Toutes les fonctions sont activées dans cette page.&#160;<br />Parallèlement, vous configurez une page web dédiée aux "Invités". Ainsi, les visiteurs inscrits dans l'annuaire "Invités / Guests" de WSC peuvent s'authentifier à l'aide d'un login/mot de passe.&#160;Dans Mon Compte v. 2, ils accèdent uniquement à leurs statistiques d'impression.</p>
                                                 <h3>Configuration du domaine</h3>
-                                                <p>Lorsque la page Mon compte v. 2 est configurée, configurez votre domaine Watchdoc (cf. <a href="../C_Configurer/ConfigDomaine/ConfigDomaine_Procedure.htm">Configurer un domaine</a>).</p>
+                                                <p>Lorsque la page Mon compte v. 2 est configurée, configurez votre domaine Watchdoc (cf. Configurer un domaine).</p>
                                                 <h3>Export et enregistrement du fichier servers.xml</h3>
                                                 <p>Une fois la page Mon comtpe v.2 et le domaine configurés, </p>
                                                 <ol>
@@ -311,6 +292,25 @@ Dans ce cas, il est nécessaire de connaître la disponibilité des ports du ser
                                             </ul>
                                         </aside>
                                     </div>
+                                    <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
+                                        <div class="button-group-container-left">
+                                            <button class="button elearning-button needs-pie previous-topic-button" title="Précédent" disabled="true">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Précédent">
+                                                        <div class="button-icon"> </div>
+                                                    </div><span class="button-text">Précédent</span>
+                                                </div>
+                                            </button>
+                                            <button class="button elearning-button needs-pie next-topic-button" title="Suivant" disabled="true">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Suivant">
+                                                        <div class="button-icon"> </div>
+                                                    </div><span class="button-text">Suivant</span>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <p>&#160;</p>
                                     <p><span style="font-size: 10pt;">Une suggestion ? Une demande de correction ? <a href="mailto:documentations@doxense.com?subject=Doxdoc.fr" target="_blank" title="Envoyer un email à documentations@doxense.com" alt="Envoyer un email à documentations@doxense.com">Exprimez-vous !</a></span>
                                     </p>
                                     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">

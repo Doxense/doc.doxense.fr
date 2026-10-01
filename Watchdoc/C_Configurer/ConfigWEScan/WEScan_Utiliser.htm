@@ -8,8 +8,6 @@
             Utiliser</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
-        <!-- Tableau triable
-        <link rel="stylesheet" type="text/css" href="../DataTables/DataTables-1.10.20/css/jquery.dataTables.css" /> -->
         <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
@@ -166,10 +164,39 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Toolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Imprimer">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Imprimer">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie remove-highlight-button" title="Supprimer les surlignages">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Réduire tout" title="Développer tout" data-state1-title="Développer tout">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Développer tout">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="nocontent">
+                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
+                                        </div>
+                                    </div>
                                     <div class="topic-layout">
                                         <main class="topic-main">
                                             <div role="main" id="mc-main-content">
-                                                <h1 id="WESCanUtiliser" data-magellan-target="WESCanUtiliser"><a name="aanchor221"></a>
+                                                <h1 id="WESCanUtiliser" data-magellan-target="WESCanUtiliser"><a name="aanchor60"></a>
                                                     <MadCap:concept term="WEScan" />
                                                     <MadCap:conditionalText data-mc-conditions="General.Online">WESCan - </MadCap:conditionalText>
             Utiliser</h1>
@@ -197,7 +224,7 @@
                                                         <p class="Liste_puce_1">l'encart d'authentification affichant l'identifiant ainsi que l'e-mail&#160;de l'utilisateur ; </p>
                                                     </li>
                                                     <li>
-                                                        <p class="Liste_puce_1">la liste (abrégée ou détaillée) des profils de numérisation disponibles (<strong>profil</strong> (de scan / de numérisation) est une somme de paramètres (format, couleur, orientation, type du document, etc.) définissant la manière dont un document est numérisé. <br />Enregistré dans un fichier JSON, le profil de numérisation peut être modifié à l'aide de l'exécutable <a href="WEScan_Config_Profil_SPC_Presentation.htm" target="_blank" title="Lien vers l'article de procédure" alt="Lien vers l'article de procédure">ScanProfilesCustomizer</a>.&#160;<strong>N.B.&#160;:</strong> dans un domaine, pour garantir la disponibilité des profils de numérisation sur tous les serveurs qui dépendent du serveur maître en cas de panne de la base de données interserveur, il convient de dupliquer tous les fichiers JSON des profils de numérisation du serveur master sur les serveurs qui en dépendent.<br />Pour cela, copiez le dossier de profils de numérisation personnalisés (dans lequel vous avez enregistré vos profils personnalisés) de votre serveur master sur le(s) serveur(s) qui en dépendent.) ;</p>
+                                                        <p class="Liste_puce_1">la liste (abrégée ou détaillée) des profils de numérisation disponibles (<strong>profil</strong> (de scan / de numérisation) est une somme de paramètres (format, couleur, orientation, type du document, etc.) définissant la manière dont un document est numérisé. <br />Enregistré dans un fichier JSON, le profil de numérisation peut être modifié à l'aide de l'exécutable ScanProfilesCustomizer.&#160;<strong>N.B.&#160;:</strong> dans un domaine, pour garantir la disponibilité des profils de numérisation sur tous les serveurs qui dépendent du serveur maître en cas de panne de la base de données interserveur, il convient de dupliquer tous les fichiers JSON des profils de numérisation du serveur master sur les serveurs qui en dépendent.<br />Pour cela, copiez le dossier de profils de numérisation personnalisés (dans lequel vous avez enregistré vos profils personnalisés) de votre serveur master sur le(s) serveur(s) qui en dépendent.) ;</p>
                                                     </li>
                                                     <li>
                                                         <p class="Liste_puce_1">la <strong>destination </strong>par défaut : une <strong>Destination </strong>est l'endroit où est envoyé le document numérisé.&#160;WEScan propose par défaut les destinations suivantes :</p>
@@ -306,7 +333,7 @@
                                                                 <p><strong>Destinataire :</strong> saisissez l'e-mail du destinataire. Pour ajouter un destinataire, cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Ajouter_WEScan.png" /> puis complétez le champ ;</p>
                                                             </li>
                                                             <li>
-                                                                <p><strong>Me définir comme expéditeur :</strong> cochez la case pour inscrire l'e-mail associée à votre compte utilisateur comme e-mail d'expédition. Lorsque cette case n'est pas cochée, l'<strong>Adresse Service</strong> et le <strong>Préfixe Sujet</strong> définis lors de la configuration de la notification (section E-mails) qui s'affichent (cf. <a href="../ConfigNotifs/ConfigNotifs_Procedure.htm#section_E-mails" target="_blank">Configurer les notifications</a>)&#160;;</p>
+                                                                <p><strong>Me définir comme expéditeur :</strong> cochez la case pour inscrire l'e-mail associée à votre compte utilisateur comme e-mail d'expédition. Lorsque cette case n'est pas cochée, l'<strong>Adresse Service</strong> et le <strong>Préfixe Sujet</strong> définis lors de la configuration de la notification (section E-mails) qui s'affichent (cf. Configurer les notifications)&#160;;</p>
                                                             </li>
                                                             <li>
                                                                 <p><strong>E-mails en copie : </strong>saisissez dans ce champ l'adresse mail de destinataires en copie si nécessaire ;</p>
@@ -355,36 +382,6 @@
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
                                     <!-- End Google Tag Manager (noscript) -->
-                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Toolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
-                                        <div class="button-group-container-left">
-                                            <button class="button needs-pie print-button" title="Imprimer">
-                                                <div>
-                                                    <div role="img" class="button-icon-wrapper" aria-label="Imprimer">
-                                                        <div class="button-icon"> </div>
-                                                    </div>
-                                                </div>
-                                            </button>
-                                            <button class="button needs-pie remove-highlight-button" title="Supprimer les surlignages">
-                                                <div>
-                                                    <div role="img" class="button-icon-wrapper">
-                                                        <div class="button-icon"> </div>
-                                                    </div>
-                                                </div>
-                                            </button>
-                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Réduire tout" title="Développer tout" data-state1-title="Développer tout">
-                                                <div>
-                                                    <div role="img" class="button-icon-wrapper" aria-label="Développer tout">
-                                                        <div class="button-icon"> </div>
-                                                    </div>
-                                                </div>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="nocontent">
-                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
-                                        </div>
-                                    </div>
-                                    <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">
                                             <button class="button elearning-button needs-pie previous-topic-button" title="Précédent" disabled="true">
