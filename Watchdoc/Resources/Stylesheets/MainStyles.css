@@ -238,9 +238,8 @@ div.home-tiles > div:hover	/*When hovering over a home-tile, these properties ap
 {
 	flex: 0 0 260px;
 	position: sticky;
-	top: 20px;
+	top: 50px;
 	align-self: flex-start;
-	height: 1000px;
 }
 
 /*=Elements for text contained within each home-tile=*/
@@ -549,22 +548,13 @@ button#myBtn
 
 	img
 	{
-		/*You can set height and width on each image to prevent an image from getting too large. Intent here is to scale down as browser size shrinks.*/
-		border: none;
-		max-width: 90%;
-		mc-thumbnail-max-height: auto;
-		mc-thumbnail: none;
+		margin: 20px auto;
 	}
 
-	img.bord
+	img-bords
 	{
-		border-radius: 5px;
-		max-width: 700px;
-		mc-thumbnail-max-height: 1000px;
-		mc-thumbnail-max-width: auto;
-		mc-thumbnail: Popup;
-		border: solid 1px;
-		border-color: #000000;
+		border: solid;
+		margin: 20px auto;
 	}
 
 	.btn_connect__block
@@ -689,7 +679,7 @@ button#myBtn
 {
 	position: fixed;
 	bottom: 20px;
-	right: 50px;
+	right: 30px;
 	z-index: 99;
 	font-size: 12px;
 	font-weight: bold;
@@ -703,13 +693,13 @@ button#myBtn
 	background-size: inherit;
 	background: transparent;
 	background-color: white;
-	background-image: url('../Images/icon_flechehaut.png');
+	background-image: url('../../../../Docdox_Watchdoc_FR/Content/Resources/Images/icon_flechehaut.png');
 	display: none;
 }
 
 button#myBtn:hover
 {
-	background-color: # #FF803B;
+	background-color: white;
 }
 
 div.toolbar-container

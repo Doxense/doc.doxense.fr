@@ -69,7 +69,7 @@
         </ul>
         <ul>
             <li>
-                <p>Les données sont affichées dans l'interface d'administration de Watchdoc mais peuvent aussi être exploitées et exportées par WDIS.</p>
+                <p>Les données sont affichées dans l'interface d'administration de Watchdoc mais peuvent aussi être exploitées et exportées par <a href="../../../../C_Configurer/ConfigWDIS/ConfigWDIS_Procedure.htm">WDIS</a>.</p>
             </li>
             <li>
                 <p>Les données sont aussi consultables par les utilisateurs dans leur page "Mon compte'.</p>
@@ -83,7 +83,7 @@
                         <p class="Liste_puce_1"><strong>Annuaire utilisateurs&#160;:</strong> dans de rares cas où l'organisation ne dispose pas d'un annuaire LDAP, elle peut utiliser une table SQL en guise d'annuaire utilisateurs  (cf.&#160;<a href="../../../../C_Configurer/ConfigAnnuaires/ConfigAnnuaires_SQLUtil_Procedure.htm" target="_blank">Créer et configurer une base de données Utilisateurs</a>).</p>
                     </li>
                     <li>
-                        <p><strong>Annuaire invités :</strong> WSC&#160;offre par défaut une base <strong>Invités </strong>(<strong>Guest</strong>) qui repose sur une table SQL. Cet annuaire permet de référencer les utilisateurs non présents dans l'annuaire de l'organisation mais qui doivent être reconnus par Watchdoc pour imprimer (par exemple, un  partenaire de passage, un stagiaire, un prestataire missionné pour une durée déterminée, etc. (cf.&#160;Gérer la base Invités).</p>
+                        <p><strong>Annuaire invités :</strong> WSC&#160;offre par défaut une base <strong>Invités </strong>(<strong>Guest</strong>) qui repose sur une table SQL. Cet annuaire permet de référencer les utilisateurs non présents dans l'annuaire de l'organisation mais qui doivent être reconnus par Watchdoc pour imprimer (par exemple, un  partenaire de passage, un stagiaire, un prestataire missionné pour une durée déterminée, etc. (cf.&#160;<a href="../../../../F_WSC/WSC_Base_Invites_Gerer.htm" target="_blank">Gérer la base Invités</a>).</p>
                     </li>
                     <li>
                         <p><b>Codes d'impression (Code PUK)</b> : cet annuaire permet de générer des codes d'impression PUK à l'attention des utilisateurs inscrits dans l'annuaire Entra ID (Microsoft Azure).&#160;(cf.&#160;<a href="../../../../C_Configurer/ConfigAnnuaires/ConfigAnnuaires_SQLPUK_Procedure.htm" target="_blank">Créer et configurer une base de codes PUK</a>)</p>
@@ -118,20 +118,23 @@
                 <p>les Prérequis d'installation et packages MS SQL®</p>
             </li>
             <li>
-                <p>Créer la base MS&#160;SQL®</p>
+                <p><a href="../../../../C_Configurer/ConfigBDD/WD_BaseMSSQL_Creer.htm">Créer la base MS&#160;SQL®</a>
+                </p>
             </li>
             <li>
-                <p>Créer la base Postgre SQL®</p>
+                <p><a href="../../../../C_Configurer/ConfigBDD/WD_BaseSQLPostGre_Creer.htm">Créer la base Postgre SQL®</a>
+                </p>
             </li>
             <li>
-                <p>Connecter et créer la base SQL® lors de l'installation initiale</p>
+                <p><a href="../../../../B_Installer/ConfigInit/ConfigInit_BDD.htm">Connecter et créer la base SQL® lors de l'installation initiale</a>
+                </p>
             </li>
         </ul>
         <p>&#160;</p>
-        <p>Par ailleurs, comme les données de la base varient,  le traitement des requêtes peut être ralenti en raison d'une fragmentation des index au fil du temps. Nous vous recommandons de nettoyer régulièrement votre base en suivant le plan de maintenance fourni.</p>
+        <p>Par ailleurs, comme les données de la base varient,  le traitement des requêtes peut être ralenti en raison d'une fragmentation des index au fil du temps. Nous vous recommandons de nettoyer régulièrement votre base en suivant le <a href="../../../../C_Configurer/ConfigBDD/WD_BaseSQL_Maintenir.htm">plan de maintenance fourni</a>.</p>
         <p>&#160;</p>
-        <p>Il est parfois utile de sauvegarder la base de données afin de la restaurer.</p>
+        <p>Il est parfois utile de <a href="../../../../C_Configurer/ConfigBDD/WD_BaseSQL_Restaurer.htm" target="_blank">sauvegarder la base de données afin de la restaurer</a>.</p>
         <p>&#160;</p>
-        <p>Enfin, vous pouvez aussi avoir à transférer la base de données.</p>
+        <p>Enfin, vous pouvez aussi avoir à <a href="../../../../C_Configurer/ConfigBDD/WD_BaseSQL_Transferer.htm" target="_blank">transférer la base de données.</a></p>
     </body>
 </html>
