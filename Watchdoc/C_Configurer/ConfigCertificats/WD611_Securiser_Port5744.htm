@@ -6,8 +6,6 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Watchdoc - Sécuriser le port 5744 à l'aide d'un certificat signé - Août 2025 </title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
-        <!-- Tableau triable
-        <link rel="stylesheet" type="text/css" href="../DataTables/DataTables-1.10.20/css/jquery.dataTables.css" /> -->
         <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
@@ -164,13 +162,42 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Toolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Imprimer">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Imprimer">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie remove-highlight-button" title="Supprimer les surlignages">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Réduire tout" title="Développer tout" data-state1-title="Développer tout">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Développer tout">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="nocontent">
+                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
+                                        </div>
+                                    </div>
                                     <div class="topic-layout">
                                         <main class="topic-main">
                                             <div role="main" id="mc-main-content">
                                                 <h1 id="WatchdocSécuriserleport5744àlaideduncertificatsignéAoût2025" data-magellan-target="WatchdocSécuriserleport5744àlaideduncertificatsignéAoût2025">Watchdoc - Sécuriser le port 5744 à l'aide d'un certificat signé - Août 2025 </h1>
                                                 <h2 id="Principe" data-magellan-target="Principe">Principe</h2>
                                                 <p>En version 6.1.1, par défaut, les échanges entre le serveur web IIS (qu'il soit local ou déporté) et le kernel Watchdoc transitent par le port 5744 en exploitant le protocole HTTPS (TLS 1.3).<br /><br /></p>
-                                                <p>Le protocole TLS requérant un certificat pour authentifier le serveur et établir un canal de communication sécurisé, v. 6.1.1 installe par défaut un certificat Watchdoc auto-signé nommé "crystal" :<br /><br /><a class="MCPopupThumbnailLink" href="WD_Config_Port5744_defaut611.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1679" data-mc-height="751" src="WD_Config_Port5744_defaut611.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a></p>
+                                                <p>Le protocole TLS requérant un certificat pour authentifier le serveur et établir un canal de communication sécurisé, v. 6.1.1 installe par défaut un certificat Watchdoc auto-signé nommé "crystal" :<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="WD_Config_Port5744_defaut611.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1679" data-mc-height="751" src="WD_Config_Port5744_defaut611.png" tabindex="" style="width: 700px;height: auto;max-height: 1000px;" /></a></p>
                                                 <p>&#160;</p>
                                                 <p>Si vous souhaitez augmenter le niveau de sécurité de votre serveur  Watchdoc à l'aide d'un certificat signé par votre autorité de certification, vous pouvez appliquer la procédure suivante. </p>
                                                 <p>&#160;</p>
@@ -227,20 +254,16 @@
                                             </div>
                                         </main>
                                         <aside class="topic-menu"><b>Dans cette page :</b>
-                                            <div data-sticky-container="" id="mX1b79M6p0S2ckNH-0P6Mg">
-                                                <div class="sticky sticky-menu" style="width:100%" data-sticky="" data-top-anchor="mX1b79M6p0S2ckNH-0P6Mg:top" data-bottom-anchor="contentBody:bottom" data-scroll-container=".body-container" data-sticky-on="small" data-scroll-container-on="only screen and (min-width: 1280px)">
-                                                    <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
-                                                        <li class="tree-node"><a href="#WatchdocS%C3%A9curiserleport5744%C3%A0laideduncertificatsign%C3%A9Ao%C3%BBt2025">Watchdoc - Sécuriser le port 5744 à l'aide d'un certificat signé - Août 2025 </a>
-                                                            <ul>
-                                                                <li class="tree-node"><a href="#Principe">Principe</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#Proc%C3%A9dure">Procédure</a>
-                                                                </li>
-                                                            </ul>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocS%C3%A9curiserleport5744%C3%A0laideduncertificatsign%C3%A9Ao%C3%BBt2025">Watchdoc - Sécuriser le port 5744 à l'aide d'un certificat signé - Août 2025 </a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Principe">Principe</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Proc%C3%A9dure">Procédure</a>
                                                         </li>
                                                     </ul>
-                                                </div>
-                                            </div>
+                                                </li>
+                                            </ul>
                                         </aside>
                                     </div>
                                     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
@@ -249,35 +272,6 @@
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
                                     <!-- End Google Tag Manager (noscript) -->
-                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Toolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
-                                        <div class="button-group-container-left">
-                                            <button class="button needs-pie print-button" title="Imprimer">
-                                                <div>
-                                                    <div role="img" class="button-icon-wrapper" aria-label="Imprimer">
-                                                        <div class="button-icon"> </div>
-                                                    </div>
-                                                </div>
-                                            </button>
-                                            <button class="button needs-pie remove-highlight-button" title="Supprimer les surlignages">
-                                                <div>
-                                                    <div role="img" class="button-icon-wrapper">
-                                                        <div class="button-icon"> </div>
-                                                    </div>
-                                                </div>
-                                            </button>
-                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Réduire tout" title="Développer tout" data-state1-title="Développer tout">
-                                                <div>
-                                                    <div role="img" class="button-icon-wrapper" aria-label="Développer tout">
-                                                        <div class="button-icon"> </div>
-                                                    </div>
-                                                </div>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="nocontent">
-                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
-                                        </div>
-                                    </div>
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

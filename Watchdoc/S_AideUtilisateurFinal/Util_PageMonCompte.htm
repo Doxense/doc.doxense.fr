@@ -6,6 +6,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Watchdoc - Utilisateur - Consulter la page "Déblocage des documents - Mon compte"</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
+        <!-- Tableau triable
+        <link rel="stylesheet" type="text/css" href="../DataTables/DataTables-1.10.20/css/jquery.dataTables.css" /> -->
         <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
@@ -19,6 +21,7 @@
         <link href="../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
+        <link href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
         <style>/*&lt;meta /&gt;*/
 
 .button.print-button
@@ -39,6 +42,24 @@
 .button.collapse-all-button
 {
 	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.needs-pie
+{
+	behavior: url('../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <style>/*&lt;meta /&gt;*/
+
+.button.previous-topic-button
+{
+	-pie-background: linear-gradient(transparent, #fcfaf8);
+}
+
+.button.next-topic-button
+{
+	-pie-background: linear-gradient(#ffffff, #fcfaf8);
 }
 
 .needs-pie
@@ -146,7 +167,7 @@
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
-                                    <!-- End Google Tag Manager (noscript) -->
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Toolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
                                         <div class="button-group-container-left">
                                             <button class="button needs-pie print-button" title="Imprimer">
@@ -176,44 +197,41 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
+                                    <p>&#160;</p>
                                     <div class="topic-layout">
                                         <main class="topic-main">
                                             <div role="main" id="mc-main-content">
                                                 <h1 id="WatchdocUtilisateurConsulterlapageDéblocagedesdocumentsMoncompte" data-magellan-target="WatchdocUtilisateurConsulterlapageDéblocagedesdocumentsMoncompte">Watchdoc - Utilisateur - Consulter la page "Déblocage des documents - Mon compte"</h1>
-                                                <div data-sticky-container="" id="yWY8Yabtn0KIN7VTVvHUPw">
-                                                    <div class="sticky sticky-menu" style="width:100%" data-sticky="" data-top-anchor="yWY8Yabtn0KIN7VTVvHUPw:top" data-bottom-anchor="contentBody:bottom" data-scroll-container=".body-container" data-sticky-on="small" data-scroll-container-on="only screen and (min-width: 1280px)">
-                                                        <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
-                                                            <li class="tree-node"><a href="#WatchdocUtilisateurConsulterlapageD%C3%A9blocagedesdocumentsMoncompte">Watchdoc - Utilisateur - Consulter la page "Déblocage des documents - Mon compte"</a>
+                                                <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                    <li class="tree-node"><a href="#WatchdocUtilisateurConsulterlapageD%C3%A9blocagedesdocumentsMoncompte">Watchdoc - Utilisateur - Consulter la page "Déblocage des documents - Mon compte"</a>
+                                                        <ul>
+                                                            <li class="tree-node"><a href="#Pr%C3%A9sentation">Présentation</a>
+                                                            </li>
+                                                            <li class="tree-node"><a href="#D%C3%A9bloquersesimpressions">Débloquer ses impressions</a>
+                                                            </li>
+                                                            <li class="tree-node"><a href="#Consultersescodesetbadges">Consulter ses codes et badges</a>
+                                                            </li>
+                                                            <li class="tree-node"><a href="#SaisirsoncodePINousoncodedimpression">Saisir son code PIN ou son code d'impression</a>
+                                                            </li>
+                                                            <li class="tree-node"><a href="#Consultersesstatistiques">Consulter ses statistiques</a>
+                                                            </li>
+                                                            <li class="tree-node"><a href="#ConsultersesimpressionsHistoriquedesderniersdocuments">Consulter ses impressions - Historique des derniers documents</a>
+                                                            </li>
+                                                            <li class="tree-node"><a href="#Consultersesquotas">Consulter ses quotas</a>
+                                                            </li>
+                                                            <li class="tree-node"><a href="#Consultersesarchives">Consulter ses archives</a>
+                                                            </li>
+                                                            <li class="tree-node"><a href="#Reg%C3%A9n%C3%A9rersoncodePUK">Regénérer son code PUK</a>
+                                                            </li>
+                                                            <li class="tree-node"><a href="#Rechargersesquotas">Recharger ses quotas</a>
                                                                 <ul>
-                                                                    <li class="tree-node"><a href="#Pr%C3%A9sentation">Présentation</a>
-                                                                    </li>
-                                                                    <li class="tree-node"><a href="#D%C3%A9bloquersesimpressions">Débloquer ses impressions</a>
-                                                                    </li>
-                                                                    <li class="tree-node"><a href="#Consultersescodesetbadges">Consulter ses codes et badges</a>
-                                                                    </li>
-                                                                    <li class="tree-node"><a href="#SaisirsoncodePINousoncodedimpression">Saisir son code PIN ou son code d'impression</a>
-                                                                    </li>
-                                                                    <li class="tree-node"><a href="#Consultersesstatistiques">Consulter ses statistiques</a>
-                                                                    </li>
-                                                                    <li class="tree-node"><a href="#ConsultersesimpressionsHistoriquedesderniersdocuments">Consulter ses impressions - Historique des derniers documents</a>
-                                                                    </li>
-                                                                    <li class="tree-node"><a href="#Consultersesquotas">Consulter ses quotas</a>
-                                                                    </li>
-                                                                    <li class="tree-node"><a href="#Consultersesarchives">Consulter ses archives</a>
-                                                                    </li>
-                                                                    <li class="tree-node"><a href="#Reg%C3%A9n%C3%A9rersoncodePUK">Regénérer son code PUK</a>
-                                                                    </li>
-                                                                    <li class="tree-node"><a href="#Rechargersesquotas">Recharger ses quotas</a>
-                                                                        <ul>
-                                                                            <li class="tree-node"><a href="#RechargersoncomptePaybox">Recharger son compte Paybox</a>
-                                                                            </li>
-                                                                        </ul>
+                                                                    <li class="tree-node"><a href="#RechargersoncomptePaybox">Recharger son compte Paybox</a>
                                                                     </li>
                                                                 </ul>
                                                             </li>
                                                         </ul>
-                                                    </div>
-                                                </div>
+                                                    </li>
+                                                </ul>
                                                 <h2 id="Présentation" data-magellan-target="Présentation">Présentation</h2>
                                                 <p>La page "Déblocage des documents - Mon compte" est l'interface web de Watchdoc dédiée à l'utilisateur. </p>
                                                 <p>Son url est généralement communiquée par votre référent Watchdoc.</p>
@@ -229,22 +247,22 @@
                                                         <p>saisissez l'adresse url fournie par votre référent Watchdoc (ou cliquez sur le lien url fourni par votre référent Watchdoc dans le mail de présentation)&#160;;&#160;</p>
                                                     </li>
                                                     <li value="3">
-                                                        <p>dans l'interface <strong>Déblocage des impressions</strong>, identifiez-vous : <br /><br /><a class="MCPopupThumbnailLink" href="WD_Util_CompteV1_Authent.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1891" data-mc-height="729" src="WD_Util_CompteV1_Authent.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                        <p>dans l'interface <strong>Déblocage des impressions</strong>, identifiez-vous : <br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="WD_Util_CompteV1_Authent.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1891" data-mc-height="729" src="WD_Util_CompteV1_Authent.png" tabindex="" style="max-height: 1000px;" /></a></p>
                                                         <p>&#160;</p>
                                                     </li>
                                                     <li value="4">
                                                         <p>une fois authentifé, vous accédez à la page des documents en attente de validation ; </p>
                                                     </li>
                                                     <li value="5">
-                                                        <p>sélectionnez le(s) document(s), puis cliquez sur <b>Imprimer le(s) document(s)</b> :<br /><br /><a class="MCPopupThumbnailLink" href="WD_Util_CompteV1_Imprimer.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1469" data-mc-height="848" src="WD_Util_CompteV1_Imprimer.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                        <p>sélectionnez le(s) document(s), puis cliquez sur <b>Imprimer le(s) document(s)</b> :<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="WD_Util_CompteV1_Imprimer.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1469" data-mc-height="848" src="WD_Util_CompteV1_Imprimer.png" tabindex="" style="max-height: 1000px;" /></a></p>
                                                         <p>&#160;</p>
                                                     </li>
                                                     <li value="6">
-                                                        <p>confirmez votre demande et rendez-vous auprès du périphérique chargé de l'impression&#160;pour la réceptionner&#160;: <br /><br /><a class="MCPopupThumbnailLink" href="WD_Util_CompteV1_Confirm.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1470" data-mc-height="787" src="WD_Util_CompteV1_Confirm.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                        <p>confirmez votre demande et rendez-vous auprès du périphérique chargé de l'impression&#160;pour la réceptionner&#160;: <br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="WD_Util_CompteV1_Confirm.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1470" data-mc-height="787" src="WD_Util_CompteV1_Confirm.png" tabindex="" style="max-height: 1000px;" /></a></p>
                                                     </li>
                                                 </ol>
                                                 <p>&#160;</p>
-                                                <p><span style="font-family: 'Wingdings'">è</span>Une fois le document imprimé, une confirmation s'affiche&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="WD_Util_CompteV1_ImprOK.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1476" data-mc-height="798" src="WD_Util_CompteV1_ImprOK.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                <p><span style="font-family: 'Wingdings'">è</span>Une fois le document imprimé, une confirmation s'affiche&#160;:<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="WD_Util_CompteV1_ImprOK.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1476" data-mc-height="798" src="WD_Util_CompteV1_ImprOK.png" tabindex="" style="max-height: 1000px;" /></a></p>
                                                 <h2 id="Consultersescodesetbadges" data-magellan-target="Consultersescodesetbadges">Consulter ses codes et badges</h2>
                                                 <p>Pour consulter la liste de votre (ou vos) code(s) d'identification et/ou badges enregistrés&#160;:</p>
                                                 <ol>
@@ -258,7 +276,7 @@
                                                                 <p>dans la liste <strong>Vos codes d'identification </strong>figurent plus ou moins de codes (code PIN, code PUK, code d'impression) en fonction de la configuration appliquée. Si le code est masqué, cliquez sur le bouton <strong>Voir </strong><img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_VoirLeCode.png"></img> pour afficher le code&#160;;</p>
                                                             </li>
                                                             <li>
-                                                                <p>dans la liste <strong>Liste de vos badges enregistrés</strong> figurent le ou les badges que vous êtes en mesure d'utiliser pour vous identifier sur un WES&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/Util_MonCompte_CodesBadges.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1693" data-mc-height="434" src="../Z_Resources/Images/02_Captures/Util_MonCompte_CodesBadges.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a></p>
+                                                                <p>dans la liste <strong>Liste de vos badges enregistrés</strong> figurent le ou les badges que vous êtes en mesure d'utiliser pour vous identifier sur un WES&#160;:<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../Z_Resources/Images/02_Captures/Util_MonCompte_CodesBadges.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1693" data-mc-height="434" src="../Z_Resources/Images/02_Captures/Util_MonCompte_CodesBadges.png" tabindex="" style="width: 700px;height: auto;max-height: 1000px;" /></a></p>
                                                             </li>
                                                         </ul>
                                                     </li>
@@ -290,7 +308,7 @@
                                                         <p>saisissez votre code dans le champ ;</p>
                                                     </li>
                                                     <li value="5">
-                                                        <p>cliquez sur le bouton <b>Valider</b> <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Enregistrer.png" /> :<br /><br /><a class="MCPopupThumbnailLink" href="WD_Util_SaisieCode.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1896" data-mc-height="371" src="WD_Util_SaisieCode.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                        <p>cliquez sur le bouton <b>Valider</b> <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_Enregistrer.png" /> :<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="WD_Util_SaisieCode.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1896" data-mc-height="371" src="WD_Util_SaisieCode.png" tabindex="" style="max-height: 1000px;" /></a></p>
                                                     </li>
                                                 </ol>
                                                 <h2 id="Consultersesstatistiques" data-magellan-target="Consultersesstatistiques">Consulter ses statistiques</h2>
@@ -300,7 +318,7 @@
                                                         <p>depuis l'interface de déblocage de vos documents, cliquez sur <strong>Mes statistiques</strong> ; </p>
                                                     </li>
                                                     <li value="2">
-                                                        <p>cliquez sur l'onglet <strong>Mes Statistiques</strong>&#160;: vous accédez à une interface qui affichent vos données d'usage de Watchdoc et l'impact environnemental qui en découle :<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/Util_MesStats.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1680" data-mc-height="874" src="../Z_Resources/Images/02_Captures/Util_MesStats.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a></p>
+                                                        <p>cliquez sur l'onglet <strong>Mes Statistiques</strong>&#160;: vous accédez à une interface qui affichent vos données d'usage de Watchdoc et l'impact environnemental qui en découle :<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../Z_Resources/Images/02_Captures/Util_MesStats.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1680" data-mc-height="874" src="../Z_Resources/Images/02_Captures/Util_MesStats.png" tabindex="" style="width: 700px;height: auto;max-height: 1000px;" /></a></p>
                                                     </li>
                                                 </ol>
                                                 <h2 id="ConsultersesimpressionsHistoriquedesderniersdocuments" data-magellan-target="ConsultersesimpressionsHistoriquedesderniersdocuments">Consulter ses impressions - Historique des derniers documents</h2>
@@ -390,7 +408,7 @@
                                                                 <p>le solde utilisateur</p>
                                                             </li>
                                                             <li>
-                                                                <p>le coût de la dernière opération.<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/Util_Quotas_Consult.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1568" data-mc-height="345" src="../Z_Resources/Images/02_Captures/Util_Quotas_Consult.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a></p>
+                                                                <p>le coût de la dernière opération.<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../Z_Resources/Images/02_Captures/Util_Quotas_Consult.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1568" data-mc-height="345" src="../Z_Resources/Images/02_Captures/Util_Quotas_Consult.png" tabindex="" style="width: 700px;height: auto;max-height: 1000px;" /></a></p>
                                                             </li>
                                                         </ul>
                                                     </li>
@@ -404,7 +422,7 @@
                                                     </li>
                                                     <li value="2">
                                                         <p>cliquez sur l'onglet <strong>Mes archives</strong>&#160;:<br /><br /></p>
-                                                        <p><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/Util_Archive_consult.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1572" data-mc-height="435" src="../Z_Resources/Images/02_Captures/Util_Archive_consult.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a>
+                                                        <p><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../Z_Resources/Images/02_Captures/Util_Archive_consult.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1572" data-mc-height="435" src="../Z_Resources/Images/02_Captures/Util_Archive_consult.png" tabindex="" style="width: 700px;height: auto;max-height: 1000px;" /></a>
                                                         </p>
                                                         <p>
                                                             <br />
@@ -441,7 +459,7 @@
                                                 <p>Sous l'onglet <b>Mes codes et badges</b>, dans la <b>liste de vos codes d'authentification</b> :</p>
                                                 <ol>
                                                     <li value="1">
-                                                        <p>cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_RegenererPUK.png" /><![CDATA[  ]]><strong>Générer un nouveau code</strong> :<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/Util_CodePUK_Regeneration.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1495" data-mc-height="342" src="../Z_Resources/Images/02_Captures/Util_CodePUK_Regeneration.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a></p>
+                                                        <p>cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_RegenererPUK.png" /><![CDATA[  ]]><strong>Générer un nouveau code</strong> :<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../Z_Resources/Images/02_Captures/Util_CodePUK_Regeneration.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1495" data-mc-height="342" src="../Z_Resources/Images/02_Captures/Util_CodePUK_Regeneration.png" tabindex="" style="width: 700px;max-height: 1000px;" /></a></p>
                                                         <p>&#160;</p>
                                                     </li>
                                                     <li value="2">
@@ -467,47 +485,69 @@
                                                         <p class="Liste_num_1">Cliquez sur <strong>Suivant </strong>pour valider les informations saisies.</p>
                                                     </li>
                                                     <li style="font-size: 12pt;" value="5">
-                                                        <p class="Resultat">Paybox envoie la transaction à Watchdoc via le site web d'administration. Cette transaction est enregistrée dans un fichier de traces pour diagnostic en cas de besoin.&#160;Le PMV de l'utilisateur est alors alimenté par le service Watchdoc du montant indiqué :<br /><br /><a class="MCPopupThumbnailLink" href="../Z_Resources/Images/02_Captures/WD_Util_PayBox_Rechargement_Boite.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="933" data-mc-height="641" src="../Z_Resources/Images/02_Captures/WD_Util_PayBox_Rechargement_Boite.png" tabindex="" style="height: auto;width: 600px;max-width: 1000px;" /></a></p>
+                                                        <p class="Resultat">Paybox envoie la transaction à Watchdoc via le site web d'administration. Cette transaction est enregistrée dans un fichier de traces pour diagnostic en cas de besoin.&#160;Le PMV de l'utilisateur est alors alimenté par le service Watchdoc du montant indiqué :<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../Z_Resources/Images/02_Captures/WD_Util_PayBox_Rechargement_Boite.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="933" data-mc-height="641" src="../Z_Resources/Images/02_Captures/WD_Util_PayBox_Rechargement_Boite.png" tabindex="" style="height: auto;width: 600px;max-height: 1000px;" /></a></p>
                                                     </li>
                                                 </ol>
                                             </div>
                                         </main>
                                         <aside class="topic-menu"><b>Dans cette page :</b>
-                                            <div data-sticky-container="" id="HfplOhNvr0SkJ4ELqe95XQ">
-                                                <div class="sticky sticky-menu" style="width:100%" data-sticky="" data-top-anchor="HfplOhNvr0SkJ4ELqe95XQ:top" data-bottom-anchor="contentBody:bottom" data-scroll-container=".body-container" data-sticky-on="small" data-scroll-container-on="only screen and (min-width: 1280px)">
-                                                    <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
-                                                        <li class="tree-node"><a href="#WatchdocUtilisateurConsulterlapageD%C3%A9blocagedesdocumentsMoncompte">Watchdoc - Utilisateur - Consulter la page "Déblocage des documents - Mon compte"</a>
-                                                            <ul>
-                                                                <li class="tree-node"><a href="#Pr%C3%A9sentation">Présentation</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#D%C3%A9bloquersesimpressions">Débloquer ses impressions</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#Consultersescodesetbadges">Consulter ses codes et badges</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#SaisirsoncodePINousoncodedimpression">Saisir son code PIN ou son code d'impression</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#Consultersesstatistiques">Consulter ses statistiques</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#ConsultersesimpressionsHistoriquedesderniersdocuments">Consulter ses impressions - Historique des derniers documents</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#Consultersesquotas">Consulter ses quotas</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#Consultersesarchives">Consulter ses archives</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#Reg%C3%A9n%C3%A9rersoncodePUK">Regénérer son code PUK</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#Rechargersesquotas">Recharger ses quotas</a>
-                                                                </li>
-                                                            </ul>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocUtilisateurConsulterlapageD%C3%A9blocagedesdocumentsMoncompte">Watchdoc - Utilisateur - Consulter la page "Déblocage des documents - Mon compte"</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Pr%C3%A9sentation">Présentation</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#D%C3%A9bloquersesimpressions">Débloquer ses impressions</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Consultersescodesetbadges">Consulter ses codes et badges</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#SaisirsoncodePINousoncodedimpression">Saisir son code PIN ou son code d'impression</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Consultersesstatistiques">Consulter ses statistiques</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#ConsultersesimpressionsHistoriquedesderniersdocuments">Consulter ses impressions - Historique des derniers documents</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Consultersesquotas">Consulter ses quotas</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Consultersesarchives">Consulter ses archives</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Reg%C3%A9n%C3%A9rersoncodePUK">Regénérer son code PUK</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Rechargersesquotas">Recharger ses quotas</a>
                                                         </li>
                                                     </ul>
-                                                </div>
-                                            </div>
+                                                </li>
+                                            </ul>
                                         </aside>
                                     </div>
+                                    <p>&#160;</p>
+                                    <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
+                                        <div class="button-group-container-left">
+                                            <button class="button elearning-button needs-pie previous-topic-button" title="Précédent" disabled="true">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Précédent">
+                                                        <div class="button-icon"> </div>
+                                                    </div><span class="button-text">Précédent</span>
+                                                </div>
+                                            </button>
+                                            <button class="button elearning-button needs-pie next-topic-button" title="Suivant" disabled="true">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Suivant">
+                                                        <div class="button-icon"> </div>
+                                                    </div><span class="button-text">Suivant</span>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <p><span style="font-size: 10pt;">Une suggestion ? Une demande de correction ? <a href="mailto:documentations@doxense.com?subject=Doxdoc.fr" target="_blank" title="Envoyer un email à documentations@doxense.com" alt="Envoyer un email à documentations@doxense.com">Exprimez-vous !</a></span>
+                                    </p>
                                     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
                                     </script>
+                                    <!--div id="expand-collapse" title="Expand/collapse navigation" class="collapse">
+		</div>-->
                                     <script src="../Resources/Scripts/Laguna.js">
+                                    </script>
+                                    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
                                     </script>
                                     <script src="../Resources/Scripts/resize-initializer.js">
                                     </script>

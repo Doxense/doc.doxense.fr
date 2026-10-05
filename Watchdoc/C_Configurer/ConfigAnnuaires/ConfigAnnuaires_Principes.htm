@@ -7,8 +7,6 @@
         <meta name="description" content="Présentation des types et des fonctions des annuaires dans Watchdoc." /><title>Watchdoc - Annuaires - Présentation</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
-        <!-- Tableau triable
-        <link rel="stylesheet" type="text/css" href="../DataTables/DataTables-1.10.20/css/jquery.dataTables.css" /> -->
         <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
@@ -165,12 +163,6 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
-                                    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
-                                    </script>
-                                    <!-- Google Tag Manager (noscript) -->
-                                    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-                                    </noscript>
-                                    <!-- End Google Tag Manager (noscript) -->
                                     <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Toolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
                                         <div class="button-group-container-left">
                                             <button class="button needs-pie print-button" title="Imprimer">
@@ -248,7 +240,7 @@ Le fait que les messages soient archivés sur le serveur fait que l'utilisateur 
                                                 <p class="Liste_puce_1" style="text-align: justify;">&#160;</p>
                                                 <fieldset>Par souci de sécurité, nous ne recommandons pas l'authentification par code PUK, mais plutôt l'authentification par compte utilisateur (login)/code PIN.<br /></fieldset>
                                                 <p>&#160;</p>
-                                                <p>Lors de l'installation et de la configuration initiale de Watchdoc, si vous avez coché la case "<strong>WES&#160;: Création automatique des annuaires et des instances WES</strong>" dans la section <strong>Configuration automatique</strong>, tous les annuaires de Watchdoc (Users (LDAP), Meta, Cards, Code PUK et/ou utilisateurs invités (Guests)) sont automatiquement créés, que vous en ayez besoin ou non.<br /><br /><img src="../../Z_Resources/Images/02_Captures/MAI_Configurer_ConfigAutomatique.png" /></p>
+                                                <p>Lors de l'installation et de la configuration initiale de Watchdoc, si vous avez coché la case "<strong>WES&#160;: Création automatique des annuaires et des instances WES</strong>" dans la section <strong>Configuration automatique</strong>, tous les annuaires de Watchdoc (Users (LDAP), Meta, Cards, Code PUK et/ou utilisateurs invités (Guests)) sont automatiquement créés, que vous en ayez besoin ou non.<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Z_Resources/Images/02_Captures/MAI_Configurer_ConfigAutomatique.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="948" data-mc-height="124" src="../../Z_Resources/Images/02_Captures/MAI_Configurer_ConfigAutomatique.png" tabindex="" style="max-height: 1000px;" /></a></p>
                                                 <p>&#160;</p>
                                                 <p>Par défaut, Watchdoc conserve en mémoire (cache) les informations de l'annuaire relatives aux utilisateurs. Il évite ainsi de solliciter trop fréquemment l'annuaire et continue de fonctionner normalement, même en cas de panne de l’annuaire. <br />Les informations SQL, elles, peuvent être stockées dans un tampon local ou sur le serveur d’impression afin de parer à une défaillance du serveur SQL. </p>
                                                 <h3>Annuaires supportés </h3>
@@ -281,22 +273,23 @@ Le fait que les messages soient archivés sur le serveur fait que l'utilisateur 
                                             </div>
                                         </main>
                                         <aside class="topic-menu"><b>Dans cette page :</b>
-                                            <div data-sticky-container="" id="VK_oB2lH_0KCPCCy3JS37w">
-                                                <div class="sticky sticky-menu" style="width:100%" data-sticky="" data-top-anchor="VK_oB2lH_0KCPCCy3JS37w:top" data-bottom-anchor="contentBody:bottom" data-scroll-container=".body-container" data-sticky-on="small" data-scroll-container-on="only screen and (min-width: 1280px)">
-                                                    <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
-                                                        <li class="tree-node"><a href="#WatchdocAnnuairesPr%C3%A9sentation">Watchdoc - Annuaires - Présentation</a>
-                                                            <ul>
-                                                                <li class="tree-node"><a href="#PrincipesrelatifsauxannuairesdansWatchdoc">Principes  relatifs aux annuaires dans Watchdoc</a>
-                                                                </li>
-                                                            </ul>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocAnnuairesPr%C3%A9sentation">Watchdoc - Annuaires - Présentation</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#PrincipesrelatifsauxannuairesdansWatchdoc">Principes  relatifs aux annuaires dans Watchdoc</a>
                                                         </li>
                                                     </ul>
-                                                </div>
-                                            </div>
+                                                </li>
+                                            </ul>
                                         </aside>
                                     </div>
-                                    <!--<MadCap:miniTocProxy />
-        <MadCap:bodyProxy class=".body-container" />-->
+                                    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
+                                    </script>
+                                    <!-- Google Tag Manager (noscript) -->
+                                    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+                                    </noscript>
+                                    <!-- End Google Tag Manager (noscript) -->
+                                    <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">
                                             <button class="button elearning-button needs-pie previous-topic-button" title="Précédent" disabled="true">

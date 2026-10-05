@@ -115,11 +115,13 @@ img
 
 img.bord
 {
+	height: 250px;
+	width: auto;
+	mc-thumbnail-max-height: 1000px;
+	mc-thumbnail-max-width: auto;
+	mc-thumbnail: popup;
 	border-radius: 5px;
 	max-width: 700px;
-	mc-thumbnail-max-height: auto;
-	mc-thumbnail-max-width: 1000px;
-	mc-thumbnail: Hyperlink;
 	border: solid 1px;
 	border-color: #000000;
 }
@@ -230,7 +232,8 @@ div.home-tiles > div:hover	/*When hovering over a home-tile, these properties ap
 
 .topic-main
 {
-	flex: 1 1 auto;
+	display: flex;
+	flex: 1;
 	min-width: 0;
 }
 
@@ -238,8 +241,9 @@ div.home-tiles > div:hover	/*When hovering over a home-tile, these properties ap
 {
 	flex: 0 0 260px;
 	position: sticky;
-	top: 50px;
+	top: 20px;
 	align-self: flex-start;
+	height: 1200px;
 }
 
 /*=Elements for text contained within each home-tile=*/
@@ -548,13 +552,22 @@ button#myBtn
 
 	img
 	{
-		margin: 20px auto;
+		/*You can set height and width on each image to prevent an image from getting too large. Intent here is to scale down as browser size shrinks.*/
+		border: none;
+		max-width: 90%;
+		mc-thumbnail-max-height: auto;
+		mc-thumbnail: none;
 	}
 
-	img-bords
+	img.bord
 	{
-		border: solid;
-		margin: 20px auto;
+		border-radius: 5px;
+		max-width: 700px;
+		mc-thumbnail-max-height: 1000px;
+		mc-thumbnail-max-width: auto;
+		mc-thumbnail: Popup;
+		border: solid 1px;
+		border-color: #000000;
 	}
 
 	.btn_connect__block
@@ -679,10 +692,8 @@ button#myBtn
 {
 	position: fixed;
 	bottom: 20px;
-	right: 30px;
+	right: 50px;
 	z-index: 99;
-	font-size: 12px;
-	font-weight: bold;
 	border: none;
 	outline: none;
 	cursor: pointer;
@@ -693,13 +704,13 @@ button#myBtn
 	background-size: inherit;
 	background: transparent;
 	background-color: white;
-	background-image: url('../../../../Docdox_Watchdoc_FR/Content/Resources/Images/icon_flechehaut.png');
+	background-image: url('../Images/icon_flechehaut.png');
 	display: none;
 }
 
 button#myBtn:hover
 {
-	background-color: white;
+	background-color: # #FF803B;
 }
 
 div.toolbar-container
@@ -820,6 +831,11 @@ div.buttons._Skins_Toolbar_Right.mc-component
 	MadCap|glossaryTerm.Popup
 	{
 		background-color: #ffffff;
+	}
+
+	MadCap|dropDownBody
+	{
+		font-size: 12pt;
 	}
 }
 

@@ -165,10 +165,44 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
+                                    <!-- Google Tag Manager (noscript) -->
+                                    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+                                    </noscript>
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
+                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Toolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                        <div class="button-group-container-left">
+                                            <button class="button needs-pie print-button" title="Imprimer">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Imprimer">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie remove-highlight-button" title="Supprimer les surlignages">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Réduire tout" title="Développer tout" data-state1-title="Développer tout">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Développer tout">
+                                                        <div class="button-icon"> </div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="nocontent">
+                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
+                                        </div>
+                                    </div>
+                                    <p>&#160;</p>
                                     <div class="topic-layout">
                                         <main class="topic-main">
                                             <div role="main" id="mc-main-content">
-                                                <h1 id="WatchdocAnnuairesCréeretconfigurerunebasededonnéesutilisateursdetypeSQLSQLPostgreSQLSQLite" data-magellan-target="WatchdocAnnuairesCréeretconfigurerunebasededonnéesutilisateursdetypeSQLSQLPostgreSQLSQLite"><a name="aanchor284"></a>
+                                                <h1 id="WatchdocAnnuairesCréeretconfigurerunebasededonnéesutilisateursdetypeSQLSQLPostgreSQLSQLite" data-magellan-target="WatchdocAnnuairesCréeretconfigurerunebasededonnéesutilisateursdetypeSQLSQLPostgreSQLSQLite"><a name="aanchor283"></a>
                                                     <MadCap:concept term="CFG;WD" />Watchdoc - Annuaires - Créer et configurer une base de données utilisateurs de type SQL (SQL / PostgreSQL&#160;/ SQLite)</h1>
                                                 <h2 id="Principe" data-magellan-target="Principe">Principe</h2>
                                                 <p class="Liste_puce_1">Dans le cas où votre organisation ne dispose pas d'un annuaire LDAP, elle peut utiliser une table SQL en guise d'annuaire utilisateurs.&#160;</p>
@@ -195,7 +229,7 @@
                                                         <p class="Liste_puce_1"><strong>Base de données : </strong>indiquez le nom de la base de données dans laquelle sont enregistrés les comptes utilisateurs (watchdocstats, la plupart du temps).&#160;Cliquez sur le bouton <img src="../../Z_Resources/Images/02_Captures/Boutons/Bouton_Parcourir.png" style="width: 25px;height: 19px;" /> <strong>Parcourir</strong> pour parcourir le serveur SQL&#160;déclaré précédemment afin d'y sélectionner les tables qui y sont déclarées&#160;;</p>
                                                     </li>
                                                     <li>
-                                                        <p><strong>Chemin :</strong> pour une base de données de type SQLite, indiquez le chemin du fichier spécifique à la base de données utilisateurs :<br /><br /><a class="MCPopupThumbnailLink" href="Config_Annuaire_SQLUtil_Cnx.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="627" data-mc-height="256" src="Config_Annuaire_SQLUtil_Cnx.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                        <p><strong>Chemin :</strong> pour une base de données de type SQLite, indiquez le chemin du fichier spécifique à la base de données utilisateurs :<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="Config_Annuaire_SQLUtil_Cnx.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="627" data-mc-height="256" src="Config_Annuaire_SQLUtil_Cnx.png" tabindex="" style="max-height: 1000px;" /></a></p>
                                                     </li>
                                                 </ul>
                                                 <h2 id="RequêtesSQL" data-magellan-target="RequêtesSQL">Requêtes SQL</h2>
@@ -221,7 +255,7 @@
                                                                 <p class="Liste_puce_1"><strong>Algorithme :</strong> sélectionnez le niveau d'algorithme permettant de générer les codes PUK de vos utilisateurs (6 ou 10 chiffres)&#160;;</p>
                                                             </li>
                                                             <li>
-                                                                <p class="Liste_puce_1"><strong>Variabilité :</strong> sélectionnez dans la liste la fréquence selon laquelle l'algorithme de chiffrement du code PUK est renouvelé. Si le code est renouvelé, pensez à mettre en place un moyen d'en informer vos utilisateurs (cf.&#160;<a href="../../H_HowTo/WD_CodePUK_CommuniquerCodePUK_Utilisateurs.htm">Communiquer le code PUK&#160;aux utilisateurs Watchdoc</a>)&#160;:<br /><br /><a class="MCPopupThumbnailLink" href="Config_Annuaire_SQLUtil_CodePUK.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="902" data-mc-height="227" src="Config_Annuaire_SQLUtil_CodePUK.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a></p>
+                                                                <p class="Liste_puce_1"><strong>Variabilité :</strong> sélectionnez dans la liste la fréquence selon laquelle l'algorithme de chiffrement du code PUK est renouvelé. Si le code est renouvelé, pensez à mettre en place un moyen d'en informer vos utilisateurs (cf.&#160;<a href="../../H_HowTo/WD_CodePUK_CommuniquerCodePUK_Utilisateurs.htm">Communiquer le code PUK&#160;aux utilisateurs Watchdoc</a>)&#160;:<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="Config_Annuaire_SQLUtil_CodePUK.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="902" data-mc-height="227" src="Config_Annuaire_SQLUtil_CodePUK.png" tabindex="" style="width: 700px;max-height: 1000px;" /></a></p>
                                                             </li>
                                                         </ul>
                                                     </li>
@@ -240,7 +274,7 @@ Il est enregistré soit dans une table SQL, soit dans un fichier Json et peut ê
                                                         <p><strong>Chiffres :</strong> indiquez la longueur souhaitée du code PIN&#160;;</p>
                                                     </li>
                                                     <li>
-                                                        <p class="Liste_puce_1"><strong>Variabilité :</strong> sélectionnez dans la liste la fréquence selon laquelle  code PIN est renouvelé&#160;; <br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/01_Generiques/Config_annuaireSQL_CodePIN.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="449" data-mc-height="85" src="../../Z_Resources/Images/01_Generiques/Config_annuaireSQL_CodePIN.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                        <p class="Liste_puce_1"><strong>Variabilité :</strong> sélectionnez dans la liste la fréquence selon laquelle  code PIN est renouvelé&#160;; <br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Z_Resources/Images/01_Generiques/Config_annuaireSQL_CodePIN.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="449" data-mc-height="85" src="../../Z_Resources/Images/01_Generiques/Config_annuaireSQL_CodePIN.png" tabindex="" style="max-height: 1000px;" /></a></p>
                                                     </li>
                                                 </ul>
                                                 <h2 id="Codedimpression" data-magellan-target="Codedimpression">Code d'impression</h2>
@@ -254,7 +288,7 @@ Il est enregistré soit dans une table SQL, soit dans un fichier Json et peut ê
                                                 <ul>
                                                     <li style="font-size: 12pt;"><b>Stocké dans les paramètres utilisateurs (en clair) :</b> le code d'impression est enregistré en clair dans l'annuaire. L'utilisateur peut l'afficher  dans sa page "Mon compte" et peut également en générer un nouveau&#160;;</li>
                                                     <li style="font-size: 12pt;">
-                                                        <p><b>Stocké dans les paramètres utilisateurs (hashé) :</b> le code d'impression est enregistré de manière sécurisée dans la base Json.db.&#160;L'utilisateur ne peut pas l'afficher dans la page "Mon compte", mais il peut en générer un nouveau.<br /><br /><a class="MCPopupThumbnailLink" href="Config_Annuaire_CodeImpres.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="727" data-mc-height="87" src="Config_Annuaire_CodeImpres.png" tabindex="" style="max-width: 1000px;" /></a><br /></p>
+                                                        <p><b>Stocké dans les paramètres utilisateurs (hashé) :</b> le code d'impression est enregistré de manière sécurisée dans la base Json.db.&#160;L'utilisateur ne peut pas l'afficher dans la page "Mon compte", mais il peut en générer un nouveau.<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="Config_Annuaire_CodeImpres.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="727" data-mc-height="87" src="Config_Annuaire_CodeImpres.png" tabindex="" style="max-height: 1000px;" /></a><br /></p>
                                                     </li>
                                                 </ul>
                                                 <h2 id="Avancé" data-magellan-target="Avancé">Avancé </h2>
@@ -274,7 +308,7 @@ Il est enregistré soit dans une table SQL, soit dans un fichier Json et peut ê
                                                     </li>
                                                 </ul>
                                                 <p>
-                                                    <br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Annuaires_SQL_Timeout.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="638" data-mc-height="44" src="../../Z_Resources/Images/02_Captures/Config_Annuaires_SQL_Timeout.png" tabindex="" style="max-width: 1000px;" /></a>
+                                                    <br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Z_Resources/Images/02_Captures/Config_Annuaires_SQL_Timeout.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="638" data-mc-height="44" src="../../Z_Resources/Images/02_Captures/Config_Annuaires_SQL_Timeout.png" tabindex="" style="max-height: 1000px;" /></a>
                                                     <br />
                                                 </p>
                                                 <p>&#160;</p>
@@ -299,7 +333,7 @@ Il est enregistré soit dans une table SQL, soit dans un fichier Json et peut ê
                                                         <p class="Liste_puce_1"><strong>Compression :</strong> cochez cette case pour activer la compression du cache sur le disque. Il est fortement recommandé d'activer ce paramètre afin de réduire la taille du fichier quand la persistance est activée.</p>
                                                     </li>
                                                     <li>
-                                                        <p class="Liste_puce_1"><strong>Chiffrement	: </strong>cochez cette case pour chiffrer le fichier de cache sur le disque afin d'en sécuriser le contenu.<br /><br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Annuaires_Cache.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbord" data-mc-width="1119" data-mc-height="313" src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Cache.png" alt="" title="" tabindex="" style="width: 655px;height: 183px;max-width: 1000px;" /></a></p>
+                                                        <p class="Liste_puce_1"><strong>Chiffrement	: </strong>cochez cette case pour chiffrer le fichier de cache sur le disque afin d'en sécuriser le contenu.<br /><br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Z_Resources/Images/02_Captures/Config_Annuaires_Cache.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbord" data-mc-width="1119" data-mc-height="313" src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Cache.png" alt="" title="" tabindex="" style="width: 655px;height: 183px;max-height: 1000px;" /></a></p>
                                                     </li>
                                                 </ul>
                                                 <fieldset>Si le compte spécifié n'est pas situé sous "CN=Users,DC=...,DC=..." et que la forme "DOMAIN\login" ne fonctionne pas, il est impératif de préciser le DN complet (ex: "CN=compte_readonly,OU=test,DC=...,DC=...")</fieldset>
@@ -315,7 +349,7 @@ Il est enregistré soit dans une table SQL, soit dans un fichier Json et peut ê
                                                         <p class="Liste_puce_1"><strong>le compte utilisateur sert également d'adresse e-mail :</strong> sélectionnez cette option pour que Watchdoc crée l'adresse mail en concaténant le nom du compte de l'utilisateur avec un nom de domaine DNS. Dans ce cas, précisez le <strong>nom de domaine DNS</strong>&#160;à ajouter au nom de l'utilisateur lors de la concaténation&#160;;</p>
                                                     </li>
                                                     <li>
-                                                        <p class="Liste_puce_2"><strong>rechercher l'adresse dans un annuaire alias :</strong> optez pour ce choix si l'adresse e-mail est enregistrée dans un annuaire Alias. Dans ce cas,  sélectionnez l'annuaire dans lequel sont enregistrées les e-mails. (Pour configurer un annuaire de codes PUK, cf.&#160;<a href="ConfigAnnuaires_SQLPUK_Procedure.htm">Configurer un annuaire SQL de codes PUK</a>) :<br /><br /><a class="MCPopupThumbnailLink" href="Config_Annuaires_Emails.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbord" data-mc-width="995" data-mc-height="247" src="Config_Annuaires_Emails.png" alt="" title="" tabindex="" style="width: 500px;max-width: 1000px;" /></a></p>
+                                                        <p class="Liste_puce_2"><strong>rechercher l'adresse dans un annuaire alias :</strong> optez pour ce choix si l'adresse e-mail est enregistrée dans un annuaire Alias. Dans ce cas,  sélectionnez l'annuaire dans lequel sont enregistrées les e-mails. (Pour configurer un annuaire de codes PUK, cf.&#160;<a href="ConfigAnnuaires_SQLPUK_Procedure.htm">Configurer un annuaire SQL de codes PUK</a>) :<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="Config_Annuaires_Emails.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbord" data-mc-width="995" data-mc-height="247" src="Config_Annuaires_Emails.png" alt="" title="" tabindex="" style="width: 500px;max-height: 1000px;" /></a></p>
                                                     </li>
                                                 </ul>
                                                 <p>&#160;</p>
@@ -366,7 +400,7 @@ Il est enregistré soit dans une table SQL, soit dans un fichier Json et peut ê
                                                     </li>
                                                     <li>
                                                         <p class="Liste_puce_1"><strong>Délai attente :</strong> après déclenchement du fusible, délai d'attente avant réactivation.&#160;Au terme de ce délai, Watchdoc relance les requêtes afin de "sonder" l'état du serveur. Si les requêtes aboutissent, le fusible est réactivé, sinon il attend à nouveau l'expiration du délai.
-A tout moment, l'administrateur peut manuellement désactiver le fusible. Le fusible reste alors coupé jusqu'à ce qu'il soit réactivé manuellement. Pensez à utiliser cette fonctionnalité afin de tester l'impact d'une panne sur le serveur d'impression.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Annuaires_Fusible.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="647" data-mc-height="139" src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Fusible.png" tabindex="" style="max-width: 1000px;" /></a><br /><br /></p>
+A tout moment, l'administrateur peut manuellement désactiver le fusible. Le fusible reste alors coupé jusqu'à ce qu'il soit réactivé manuellement. Pensez à utiliser cette fonctionnalité afin de tester l'impact d'une panne sur le serveur d'impression.<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Z_Resources/Images/02_Captures/Config_Annuaires_Fusible.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="647" data-mc-height="139" src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Fusible.png" tabindex="" style="max-height: 1000px;" /></a><br /><br /></p>
                                                     </li>
                                                 </ul>
                                                 <p>Les valeurs généralement saisies pour l'activation du fusible dans un environnement multi serveur (Master) sont les suivantes :</p>
@@ -387,7 +421,7 @@ A tout moment, l'administrateur peut manuellement désactiver le fusible. Le fus
                                                 <h2 id="Printclients" data-magellan-target="Printclients">Print clients</h2>
                                                 <ul>
                                                     <li>
-                                                        <p><strong>Ne pas utiliser cet annuaire :</strong> cochez cette case pour que Watchdoc Print Client n'utilise pas  cet annuaire<br /><br /><a class="MCPopupThumbnailLink" href="Config_Annuaire_PrintClients.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="682" data-mc-height="29" src="Config_Annuaire_PrintClients.png" tabindex="" style="max-width: 1000px;" /></a></p>
+                                                        <p><strong>Ne pas utiliser cet annuaire :</strong> cochez cette case pour que Watchdoc Print Client n'utilise pas  cet annuaire<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="Config_Annuaire_PrintClients.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="682" data-mc-height="29" src="Config_Annuaire_PrintClients.png" tabindex="" style="max-height: 1000px;" /></a></p>
                                                     </li>
                                                 </ul>
                                                 <h2 id="Validationdelaconfiguration" data-magellan-target="Validationdelaconfiguration">Validation de la configuration </h2>
@@ -397,82 +431,44 @@ A tout moment, l'administrateur peut manuellement désactiver le fusible. Le fus
                                             </div>
                                         </main>
                                         <aside class="topic-menu"><b>Dans cette page :</b>
-                                            <div data-sticky-container="" id="iVlomm7ZC0WgBIaptXOpuQ">
-                                                <div class="sticky sticky-menu" style="width:100%" data-sticky="" data-top-anchor="iVlomm7ZC0WgBIaptXOpuQ:top" data-bottom-anchor="contentBody:bottom" data-scroll-container=".body-container" data-sticky-on="small" data-scroll-container-on="only screen and (min-width: 1280px)">
-                                                    <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
-                                                        <li class="tree-node"><a href="#WatchdocAnnuairesCr%C3%A9eretconfigurerunebasededonn%C3%A9esutilisateursdetypeSQLSQLPostgreSQLSQLite">Watchdoc - Annuaires - Créer et configurer une base de données utilisateurs de type SQL (SQL / PostgreSQL&#160;/ SQLite)</a>
-                                                            <ul>
-                                                                <li class="tree-node"><a href="#Principe">Principe</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#Connexion">Connexion</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#Requ%C3%AAtesSQL">Requêtes SQL</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#CodePUK">Code PUK</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#CodePIN">Code PIN</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#Codedimpression">Code d'impression</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#Avanc%C3%A9">Avancé </a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#Dur%C3%A9edevieducache">Durée de vie du cache</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#Cache">Cache</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#Badges">Badges</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#Email">E-mail</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#Fusibles">Fusibles</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#Printclients">Print clients</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#Validationdelaconfiguration">Validation de la configuration </a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#Etapr%C3%A8s">Et après ?&#160;</a>
-                                                                </li>
-                                                            </ul>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocAnnuairesCr%C3%A9eretconfigurerunebasededonn%C3%A9esutilisateursdetypeSQLSQLPostgreSQLSQLite">Watchdoc - Annuaires - Créer et configurer une base de données utilisateurs de type SQL (SQL / PostgreSQL&#160;/ SQLite)</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Principe">Principe</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Connexion">Connexion</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Requ%C3%AAtesSQL">Requêtes SQL</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#CodePUK">Code PUK</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#CodePIN">Code PIN</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Codedimpression">Code d'impression</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Avanc%C3%A9">Avancé </a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Dur%C3%A9edevieducache">Durée de vie du cache</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Cache">Cache</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Badges">Badges</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Email">E-mail</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Fusibles">Fusibles</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Printclients">Print clients</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Validationdelaconfiguration">Validation de la configuration </a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Etapr%C3%A8s">Et après ?&#160;</a>
                                                         </li>
                                                     </ul>
-                                                </div>
-                                            </div>
+                                                </li>
+                                            </ul>
                                         </aside>
                                     </div>
-                                    <!-- Google Tag Manager (noscript) -->
-                                    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-                                    </noscript>
-                                    <!-- End Google Tag Manager (noscript) -->
-                                    <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Toolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
-                                        <div class="button-group-container-left">
-                                            <button class="button needs-pie print-button" title="Imprimer">
-                                                <div>
-                                                    <div role="img" class="button-icon-wrapper" aria-label="Imprimer">
-                                                        <div class="button-icon"> </div>
-                                                    </div>
-                                                </div>
-                                            </button>
-                                            <button class="button needs-pie remove-highlight-button" title="Supprimer les surlignages">
-                                                <div>
-                                                    <div role="img" class="button-icon-wrapper">
-                                                        <div class="button-icon"> </div>
-                                                    </div>
-                                                </div>
-                                            </button>
-                                            <button class="button needs-pie expand-all-button" data-state1-class="expand-all-button" data-state2-class="collapse-all-button" data-state2-title="Réduire tout" title="Développer tout" data-state1-title="Développer tout">
-                                                <div>
-                                                    <div role="img" class="button-icon-wrapper" aria-label="Développer tout">
-                                                        <div class="button-icon"> </div>
-                                                    </div>
-                                                </div>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="nocontent">
-                                        <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
-                                        </div>
-                                    </div>
-                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">

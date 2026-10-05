@@ -7,8 +7,6 @@
         <meta name="description" content="Articles de dépannage : liste des messages d'erreur courants, causes et procédures de résolution abrégées, avec liens vers les procédures de résolution détaillées." /><title>Dépannage - Messages d'erreur - Alertes</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
-        <!-- Tableau triable
-        <link rel="stylesheet" type="text/css" href="../DataTables/DataTables-1.10.20/css/jquery.dataTables.css" /> -->
         <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
@@ -165,12 +163,6 @@
                             </nav>
                             <div class="body-container">
                                 <div data-mc-content-body="True">
-                                    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
-                                    </script>
-                                    <!-- Google Tag Manager (noscript) -->
-                                    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-                                    </noscript>
-                                    <!-- End Google Tag Manager (noscript) -->
                                     <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Toolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
                                         <div class="button-group-container-left">
                                             <button class="button needs-pie print-button" title="Imprimer">
@@ -205,11 +197,16 @@
                                             <div role="main" id="mc-main-content">
                                                 <h1 id="DépannageMessagesderreurAlertes" data-magellan-target="DépannageMessagesderreurAlertes">Dépannage - Messages d'erreur - Alertes</h1>
                                                 <h2 id="Watchdoc" data-magellan-target="Watchdoc"><a name="Watchdoc" id="Watchdoc"></a>Watchdoc</h2>
-                                                <p>&#160;</p>
-                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Watchdoc - Installation et mise à jour - Message - août 2026</a></span>
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Watchdoc - Le code PUK contient 7 chiffres au lieu de 6 ou 11 chiffres au lieu de 10 - sept. 2026</a></span>
                                                     <div class="MCDropDownBody dropDownBody">
-                                                        <p><strong>Contexte :</strong> en tant qu'administrateur de Watchdoc, quand j'installe ou que je mets à jour Watchdoc, un message m'informe que l'opération nécessite l'installation de MS&#160;dotnet-hosting-10.0.9-win.exe sur le site qui héberge le site web.<br />Cet exécutable est nécessaire au bon fonctionnement du SSO&#160;<br /></p>
-                                                        <p>Si je n'installe pas cet exécut</p>
+                                                        <p><strong>Contexte :</strong> en tant qu'administrateur de Watchdoc, dans l'annuaire LDAP, j'ai configuré le code PUK pour qu'il comporte 6 chiffres.&#160;Or, je constate que le code PUK contient 7 chiffres.&#160;Le même constat peut-être établir si j'ai configuré un code PUK de 10 chiffres et qu'il en comporte 11.<br /></p>
+                                                        <p><strong>Cause :</strong> il ne s'agit pas d'un problème mais du résultat de la configuration de l'annuaire LDAP, lorsqu'un préfixe est paramétré pour l'authentification par code PUK.<br />En effet, le code PUK comporte 6&#160;ou 10&#160;chiffres en fonction de l'algorithme choisi lors de son paramétrage. Vous pouvez ajouter un préfixe à tous les codes PUK&#160;d'un annuaire si vous souhaitez fusionner plusieurs annuaires LDAP utilisant des codes PUK. Cela permet de supprimer d'éventuels doublons.&#160;Dans ce cas, le code comporte 7 ou 11&#160;chiffres. (cf.&#160;<a href="../C_Configurer/ConfigAnnuaires/ConfigAnnuaires_LDAP_Procedure.htm#Code_PUK" target="_blank">paramétrer l'authentification par code PUK&#160;dans l'annuaire).</a></p>
+                                                    </div>
+                                                </div>
+                                                <p>&#160;</p>
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" />Watchdoc - Installation et mise à jour - Lors de la mise à jour en version 6.1.1.5654 - août 2026</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <p><strong>Contexte :</strong> en tant qu'administrateur de Watchdoc, quand j'installe ou que je mets à jour Watchdoc, un message m'informe que l'opération nécessite l'installation de MS&#160;dotnet-hosting-10.0.9-win.exe sur le site qui héberge le site web.<br />Cet exécutable est nécessaire au bon fonctionnement du SSO.<br /></p>
                                                         <p><strong>Cause :</strong> ce problème peut survenir lorsque les paramètres de l'annuaire ne sont pas corrects.</p>
                                                         <p><strong>Résolution :</strong> pour résoudre le problème, rendez-vous dans l'interface de configuration de l'annuaire, section Paramètres pour vérifier les paramètres  DN et Nom ou IP&#160;du serveur LDAP. Utilisez au besoin une commande "ping" pour vérifier la disponibilité du serveur.<br />Enregistrez la configuration après modification des paramètres et vérifiez que le message d'erreur n'apparaît plus.&#160;</p>
                                                     </div>
@@ -1074,8 +1071,7 @@
                                                     </div>
                                                 </div>
                                                 <p>&#160;</p>
-                                                <h3><a name="WES_Kyocera" id="WES_Kyocera">WES&#160;Kyocera</a>
-                                                </h3>
+                                                <h3><a name="WES_Kyocera" id="WES_Kyocera"></a>WES&#160;Kyocera</h3>
                                                 <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="18" alt="Fermé" data-mc-alt2="Ouvert" /></a><a name="WEScan_OCRKO" id="WEScan_OCRKO"></a><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_" aria-expanded="false">WES Kyocera. WEScan - Erreur lors de la numérisation, le traitement OCR n'est pas appliqué.</a></span>
                                                     <div class="MCDropDownBody dropDownBody">
                                                         <p><strong>Contexte :</strong> lorsqu'un utilisateur lance une numérisation à l'aide de WEScan en demandant un traitement OCR, il reçoit le scan, mais pas l'OCR.</p>
@@ -1888,48 +1884,49 @@ Aucun numéro de port TCP ou UDP n'est associé aux paquets ICMP, car ces numér
                                             </div>
                                         </main>
                                         <aside class="topic-menu"><b>Dans cette page :</b>
-                                            <div data-sticky-container="" id="Viig4zDyqkqGEa5Jwod_vw">
-                                                <div class="sticky sticky-menu" style="width:100%" data-sticky="" data-top-anchor="Viig4zDyqkqGEa5Jwod_vw:top" data-bottom-anchor="contentBody:bottom" data-scroll-container=".body-container" data-sticky-on="small" data-scroll-container-on="only screen and (min-width: 1280px)">
-                                                    <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
-                                                        <li class="tree-node"><a href="#D%C3%A9pannageMessagesderreurAlertes">Dépannage - Messages d'erreur - Alertes</a>
-                                                            <ul>
-                                                                <li class="tree-node"><a href="#Watchdoc">Watchdoc</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#WSCWatchdocSupervisionConsole">WSC&#160;- Watchdoc Supervision Console</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#WES">WES</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#WEScan">WEScan</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#WPCWatchdocPrintClient">WPC - Watchdoc Print Client</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#WCLIWatchdocCommandInLine">WCLI - Watchdoc Command In-Line</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#Bilans">Bilans</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#Quotas">Quotas</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#Serveur">Serveur</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#WRSWatchdocReportingServices">WRS - Watchdoc Reporting Services</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#WatchdocScanCare">Watchdoc ScanCare</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#Skyprint">Skyprint</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#ServicedimpressionMicrosoftWindows">Service d'impression Microsoft Windows</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#WDIS">WDIS</a>
-                                                                </li>
-                                                            </ul>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#D%C3%A9pannageMessagesderreurAlertes">Dépannage - Messages d'erreur - Alertes</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Watchdoc">Watchdoc</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#WSCWatchdocSupervisionConsole">WSC&#160;- Watchdoc Supervision Console</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#WES">WES</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#WEScan">WEScan</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#WPCWatchdocPrintClient">WPC - Watchdoc Print Client</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#WCLIWatchdocCommandInLine">WCLI - Watchdoc Command In-Line</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Bilans">Bilans</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Quotas">Quotas</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Serveur">Serveur</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#WRSWatchdocReportingServices">WRS - Watchdoc Reporting Services</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#WatchdocScanCare">Watchdoc ScanCare</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Skyprint">Skyprint</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#ServicedimpressionMicrosoftWindows">Service d'impression Microsoft Windows</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#WDIS">WDIS</a>
                                                         </li>
                                                     </ul>
-                                                </div>
-                                            </div>
+                                                </li>
+                                            </ul>
                                         </aside>
                                     </div>
-                                    <!--<MadCap:miniTocProxy />
-        <MadCap:bodyProxy class=".body-container" />-->
+                                    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
+                                    </script>
+                                    <!-- Google Tag Manager (noscript) -->
+                                    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+                                    </noscript>
+                                    <!-- End Google Tag Manager (noscript) -->
+                                    <p>&#160;</p>
                                     <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
                                         <div class="button-group-container-left">
                                             <button class="button elearning-button needs-pie previous-topic-button" title="Précédent" disabled="true">

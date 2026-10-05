@@ -7,6 +7,8 @@
         <meta name="description" content="Procédure de déclaration et de configuration d'une base MS SQL contenant les codes PUK des utilisateurs." /><title>Watchdoc - Annuaires - Créer et configurer une base de codes PUK de type SQL (SQL / PostgreSQL&#160;/ SQLite)</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
+        <!-- Tableau triable
+        <link rel="stylesheet" type="text/css" href="../DataTables/DataTables-1.10.20/css/jquery.dataTables.css" /> -->
         <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
@@ -20,6 +22,7 @@
         <link href="../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
+        <link href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
         <style>/*&lt;meta /&gt;*/
 
 .button.print-button
@@ -40,6 +43,24 @@
 .button.collapse-all-button
 {
 	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.needs-pie
+{
+	behavior: url('../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <style>/*&lt;meta /&gt;*/
+
+.button.previous-topic-button
+{
+	-pie-background: linear-gradient(transparent, #fcfaf8);
+}
+
+.button.next-topic-button
+{
+	-pie-background: linear-gradient(#ffffff, #fcfaf8);
 }
 
 .needs-pie
@@ -147,7 +168,7 @@
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
-                                    <!-- End Google Tag Manager (noscript) -->
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Toolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
                                         <div class="button-group-container-left">
                                             <button class="button needs-pie print-button" title="Imprimer">
@@ -177,10 +198,11 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
+                                    <p>&#160;</p>
                                     <div class="topic-layout">
                                         <main class="topic-main">
                                             <div role="main" id="mc-main-content">
-                                                <h1 id="WatchdocAnnuairesCréeretconfigurerunebasedecodesPUKdetypeSQLSQLPostgreSQLSQLite" data-magellan-target="WatchdocAnnuairesCréeretconfigurerunebasedecodesPUKdetypeSQLSQLPostgreSQLSQLite"><a name="aanchor230"></a>
+                                                <h1 id="WatchdocAnnuairesCréeretconfigurerunebasedecodesPUKdetypeSQLSQLPostgreSQLSQLite" data-magellan-target="WatchdocAnnuairesCréeretconfigurerunebasedecodesPUKdetypeSQLSQLPostgreSQLSQLite"><a name="aanchor229"></a>
                                                     <MadCap:concept term="CFG;WD" />Watchdoc - Annuaires - Créer et configurer une base de codes PUK de type SQL (SQL / PostgreSQL&#160;/ SQLite)</h1>
                                                 <h2 id="Principe" data-magellan-target="Principe">Principe</h2>
                                                 <p>Lorsque les utilisateurs de Watchdoc sont enregistrés dans un annuaire Entra ID (Microsoft Azure), s'ils s'authentifient à l'aide d'un code PUK, ces  codes sont enregistrés dans une base SQL.</p>
@@ -212,7 +234,7 @@
                                                 <h3>Configurer la base de  codes PUK (SQL)</h3>
                                                 <ol>
                                                     <li value="1">
-                                                        <p>Dans la section <strong>Propriétés</strong>, sélectionnez le <strong>Type</strong> <strong>Base de Codes PUK (SQL)</strong>:<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Admin_Annuaire_SQLCodesPUK.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1140" data-mc-height="523" src="../../Z_Resources/Images/02_Captures/Admin_Annuaire_SQLCodesPUK.png" tabindex="" style="width: 700px;height: auto;max-width: 1000px;" /></a></p>
+                                                        <p>Dans la section <strong>Propriétés</strong>, sélectionnez le <strong>Type</strong> <strong>Base de Codes PUK (SQL)</strong>:<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Z_Resources/Images/02_Captures/Admin_Annuaire_SQLCodesPUK.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1140" data-mc-height="523" src="../../Z_Resources/Images/02_Captures/Admin_Annuaire_SQLCodesPUK.png" tabindex="" style="width: 700px;height: auto;max-height: 1000px;" /></a></p>
                                                         <p>
                                                             <br />
                                                         </p>
@@ -232,7 +254,7 @@
                                                                 <p><strong>Identifiant : </strong>saisissez l'identifiant de l'annuaire ;</p>
                                                             </li>
                                                             <li>
-                                                                <p><strong>Utiliser la configuration de la base de statistiques : </strong>cochez cette case si vous souhaitez utiliser la même base que la base de statistiques, afin de ne pas avoir à remplir tous les champs suivants.<br />Cette case permet notamment de gagner du temps pour la configuration des serveurs slaves en mode Mailbox qui ne partagent pas une base de données commune. Les codes PUK&#160;sont enregistrés dans la base associée à chaque serveur slave.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Admin_Annuaire_SQLCodesPUK_BddStats.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1149" data-mc-height="425" src="../../Z_Resources/Images/02_Captures/Admin_Annuaire_SQLCodesPUK_BddStats.png" tabindex="" style="width: 700px;max-width: 1000px;" /></a></p>
+                                                                <p><strong>Utiliser la configuration de la base de statistiques : </strong>cochez cette case si vous souhaitez utiliser la même base que la base de statistiques, afin de ne pas avoir à remplir tous les champs suivants.<br />Cette case permet notamment de gagner du temps pour la configuration des serveurs slaves en mode Mailbox qui ne partagent pas une base de données commune. Les codes PUK&#160;sont enregistrés dans la base associée à chaque serveur slave.<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Z_Resources/Images/02_Captures/Admin_Annuaire_SQLCodesPUK_BddStats.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1149" data-mc-height="425" src="../../Z_Resources/Images/02_Captures/Admin_Annuaire_SQLCodesPUK_BddStats.png" tabindex="" style="width: 700px;max-height: 1000px;" /></a></p>
                                                             </li>
                                                         </ul>
                                                     </li>
@@ -309,7 +331,7 @@
                                                         <p class="Liste_puce_1"><strong>Compression :</strong> cochez cette case pour activer la compression du cache sur le disque. Il est fortement recommandé d'activer ce paramètre afin de réduire la taille du fichier quand la persistance est activée.</p>
                                                     </li>
                                                     <li>
-                                                        <p class="Liste_puce_1"><strong>Chiffrement	: </strong>cochez cette case pour chiffrer le fichier de cache sur le disque afin d'en sécuriser le contenu.<br /><br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Annuaires_Cache.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbord" data-mc-width="1119" data-mc-height="313" src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Cache.png" alt="" title="" tabindex="" style="width: 655px;height: 183px;max-width: 1000px;" /></a></p>
+                                                        <p class="Liste_puce_1"><strong>Chiffrement	: </strong>cochez cette case pour chiffrer le fichier de cache sur le disque afin d'en sécuriser le contenu.<br /><br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Z_Resources/Images/02_Captures/Config_Annuaires_Cache.png" data-mc-popup-alt=""><img class="MCPopupThumbnail img imgbord" data-mc-width="1119" data-mc-height="313" src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Cache.png" alt="" title="" tabindex="" style="width: 655px;height: 183px;max-height: 1000px;" /></a></p>
                                                     </li>
                                                 </ul>
                                                 <h2 id="Fusibles" data-magellan-target="Fusibles">Fusibles</h2>
@@ -333,7 +355,7 @@
                                                     </li>
                                                     <li>
                                                         <p class="Liste_puce_1"><strong>Délai attente :</strong> après déclenchement du fusible, délai d'attente avant réactivation.&#160;Au terme de ce délai, Watchdoc relance les requêtes afin de "sonder" l'état du serveur. Si les requêtes aboutissent, le fusible est réactivé, sinon il attend à nouveau l'expiration du délai.
-A tout moment, l'administrateur peut manuellement désactiver le fusible. Le fusible reste alors coupé jusqu'à ce qu'il soit réactivé manuellement. Pensez à utiliser cette fonctionnalité afin de tester l'impact d'une panne sur le serveur d'impression.<br /><br /><a class="MCPopupThumbnailLink" href="../../Z_Resources/Images/02_Captures/Config_Annuaires_Fusible.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="647" data-mc-height="139" src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Fusible.png" tabindex="" style="max-width: 1000px;" /></a><br /><br /></p>
+A tout moment, l'administrateur peut manuellement désactiver le fusible. Le fusible reste alors coupé jusqu'à ce qu'il soit réactivé manuellement. Pensez à utiliser cette fonctionnalité afin de tester l'impact d'une panne sur le serveur d'impression.<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Z_Resources/Images/02_Captures/Config_Annuaires_Fusible.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="647" data-mc-height="139" src="../../Z_Resources/Images/02_Captures/Config_Annuaires_Fusible.png" tabindex="" style="max-height: 1000px;" /></a><br /><br /></p>
                                                     </li>
                                                 </ul>
                                                 <p>Les valeurs généralement saisies pour l'activation du fusible dans un environnement multi serveur (Master) sont les suivantes :</p>
@@ -362,41 +384,63 @@ A tout moment, l'administrateur peut manuellement désactiver le fusible. Le fus
                                             </div>
                                         </main>
                                         <aside class="topic-menu"><b>Dans cette page :</b>
-                                            <div data-sticky-container="" id="KeCkt4BSWUCgU8clm9EGSw">
-                                                <div class="sticky sticky-menu" style="width:100%" data-sticky="" data-top-anchor="KeCkt4BSWUCgU8clm9EGSw:top" data-bottom-anchor="contentBody:bottom" data-scroll-container=".body-container" data-sticky-on="small" data-scroll-container-on="only screen and (min-width: 1280px)">
-                                                    <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
-                                                        <li class="tree-node"><a href="#WatchdocAnnuairesCr%C3%A9eretconfigurerunebasedecodesPUKdetypeSQLSQLPostgreSQLSQLite">Watchdoc - Annuaires - Créer et configurer une base de codes PUK de type SQL (SQL / PostgreSQL&#160;/ SQLite)</a>
-                                                            <ul>
-                                                                <li class="tree-node"><a href="#Principe">Principe</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#Pr%C3%A9requis">Prérequis</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#Proc%C3%A9dure">Procédure</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#Options">Options</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#Avanc%C3%A9">Avancé</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#Dur%C3%A9edevieducache">Durée de vie du cache</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#Cache">Cache</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#Fusibles">Fusibles</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#Printclients">Print clients</a>
-                                                                </li>
-                                                                <li class="tree-node"><a href="#Validationdelaconfiguration">Validation de la configuration </a>
-                                                                </li>
-                                                            </ul>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WatchdocAnnuairesCr%C3%A9eretconfigurerunebasedecodesPUKdetypeSQLSQLPostgreSQLSQLite">Watchdoc - Annuaires - Créer et configurer une base de codes PUK de type SQL (SQL / PostgreSQL&#160;/ SQLite)</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#Principe">Principe</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Pr%C3%A9requis">Prérequis</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Proc%C3%A9dure">Procédure</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Options">Options</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Avanc%C3%A9">Avancé</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Dur%C3%A9edevieducache">Durée de vie du cache</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Cache">Cache</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Fusibles">Fusibles</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Printclients">Print clients</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Validationdelaconfiguration">Validation de la configuration </a>
                                                         </li>
                                                     </ul>
-                                                </div>
-                                            </div>
+                                                </li>
+                                            </ul>
                                         </aside>
                                     </div>
+                                    <p>&#160;</p>
+                                    <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
+                                        <div class="button-group-container-left">
+                                            <button class="button elearning-button needs-pie previous-topic-button" title="Précédent" disabled="true">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Précédent">
+                                                        <div class="button-icon"> </div>
+                                                    </div><span class="button-text">Précédent</span>
+                                                </div>
+                                            </button>
+                                            <button class="button elearning-button needs-pie next-topic-button" title="Suivant" disabled="true">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Suivant">
+                                                        <div class="button-icon"> </div>
+                                                    </div><span class="button-text">Suivant</span>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <p><span style="font-size: 10pt;">Une suggestion ? Une demande de correction ? <a href="mailto:documentations@doxense.com?subject=Doxdoc.fr" target="_blank" title="Envoyer un email à documentations@doxense.com" alt="Envoyer un email à documentations@doxense.com">Exprimez-vous !</a></span>
+                                    </p>
                                     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
                                     </script>
+                                    <!--div id="expand-collapse" title="Expand/collapse navigation" class="collapse">
+		</div>-->
                                     <script src="../../Resources/Scripts/Laguna.js">
+                                    </script>
+                                    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
                                     </script>
                                     <script src="../../Resources/Scripts/resize-initializer.js">
                                     </script>

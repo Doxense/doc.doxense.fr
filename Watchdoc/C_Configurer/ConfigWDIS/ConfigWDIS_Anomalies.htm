@@ -6,6 +6,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>WDIS&#160;Watchdoc Data Integration Service - Utiliser</title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
+        <!-- Tableau triable
+        <link rel="stylesheet" type="text/css" href="../DataTables/DataTables-1.10.20/css/jquery.dataTables.css" /> -->
         <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
@@ -19,6 +21,7 @@
         <link href="../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Skins/Fluid/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
         <link href="../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
+        <link href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
         <style>/*&lt;meta /&gt;*/
 
 .button.print-button
@@ -39,6 +42,24 @@
 .button.collapse-all-button
 {
 	-pie-background: linear-gradient(transparent, transparent);
+}
+
+.needs-pie
+{
+	behavior: url('../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <style>/*&lt;meta /&gt;*/
+
+.button.previous-topic-button
+{
+	-pie-background: linear-gradient(transparent, #fcfaf8);
+}
+
+.button.next-topic-button
+{
+	-pie-background: linear-gradient(#ffffff, #fcfaf8);
 }
 
 .needs-pie
@@ -146,7 +167,7 @@
                                     <!-- Google Tag Manager (noscript) -->
                                     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK49S9NW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
                                     </noscript>
-                                    <!-- End Google Tag Manager (noscript) -->
+                                    <!--<MadCap:bodyProxy class=".body-container" />-->
                                     <div class="buttons popup-container clearfix topicToolbarProxy _Skins_Toolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
                                         <div class="button-group-container-left">
                                             <button class="button needs-pie print-button" title="Imprimer">
@@ -176,6 +197,7 @@
                                         <div class="MCBreadcrumbsBox_0 breadcrumbs" role="navigation" aria-label="Pistes de navigation" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici&#160;:</span>
                                         </div>
                                     </div>
+                                    <p>&#160;</p>
                                     <div class="topic-layout">
                                         <main class="topic-main">
                                             <div role="main" id="mc-main-content">
@@ -283,23 +305,45 @@
                                             </div>
                                         </main>
                                         <aside class="topic-menu"><b>Dans cette page :</b>
-                                            <div data-sticky-container="" id="gxBgKsCEukeQTyGW2CSuow">
-                                                <div class="sticky sticky-menu" style="width:100%" data-sticky="" data-top-anchor="gxBgKsCEukeQTyGW2CSuow:top" data-bottom-anchor="contentBody:bottom" data-scroll-container=".body-container" data-sticky-on="small" data-scroll-container-on="only screen and (min-width: 1280px)">
-                                                    <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
-                                                        <li class="tree-node"><a href="#WDISWatchdocDataIntegrationServiceUtiliser">WDIS&#160;Watchdoc Data Integration Service - Utiliser</a>
-                                                            <ul>
-                                                                <li class="tree-node"><a href="#G%C3%A9rerlesanomaliesavecWDIS">Gérer les anomalies avec WDIS</a>
-                                                                </li>
-                                                            </ul>
+                                            <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
+                                                <li class="tree-node"><a href="#WDISWatchdocDataIntegrationServiceUtiliser">WDIS&#160;Watchdoc Data Integration Service - Utiliser</a>
+                                                    <ul>
+                                                        <li class="tree-node"><a href="#G%C3%A9rerlesanomaliesavecWDIS">Gérer les anomalies avec WDIS</a>
                                                         </li>
                                                     </ul>
-                                                </div>
-                                            </div>
+                                                </li>
+                                            </ul>
                                         </aside>
                                     </div>
+                                    <p>&#160;</p>
+                                    <div class="buttons popup-container clearfix eLearningToolbarProxy _Skins_eLearningToolbarProxy mc-component nocontent">
+                                        <div class="button-group-container-left">
+                                            <button class="button elearning-button needs-pie previous-topic-button" title="Précédent" disabled="true">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Précédent">
+                                                        <div class="button-icon"> </div>
+                                                    </div><span class="button-text">Précédent</span>
+                                                </div>
+                                            </button>
+                                            <button class="button elearning-button needs-pie next-topic-button" title="Suivant" disabled="true">
+                                                <div>
+                                                    <div role="img" class="button-icon-wrapper" aria-label="Suivant">
+                                                        <div class="button-icon"> </div>
+                                                    </div><span class="button-text">Suivant</span>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <p>&#160;</p>
+                                    <p><span style="font-size: 10pt;">Une suggestion ? Une demande de correction ? <a href="mailto:documentations@doxense.com?subject=Doxdoc.fr" target="_blank" title="Envoyer un email à documentations@doxense.com" alt="Envoyer un email à documentations@doxense.com">Exprimez-vous !</a></span>
+                                    </p>
                                     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
                                     </script>
+                                    <!--div id="expand-collapse" title="Expand/collapse navigation" class="collapse">
+		</div>-->
                                     <script src="../../Resources/Scripts/Laguna.js">
+                                    </script>
+                                    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js">
                                     </script>
                                     <script src="../../Resources/Scripts/resize-initializer.js">
                                     </script>
