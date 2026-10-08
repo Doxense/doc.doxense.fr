@@ -207,7 +207,7 @@
                                                 <p>Lorsque l'authentification de l'utilisateur est réalisée à l'aide d'un badge, ces badges sont généralement enregistrés dans une base de données appelée <strong>Badges</strong> (Cards), gérée par WSC .&#160;Mais il peut arriver que le numéro du badge soit enregistré dans l'un des champs de l'annuaire (AD).</p>
                                                 <p>Dans ce cas, il est nécessaire de fournir cette information lors de la configuration de l'annuaire dans Watchdoc, de sorte que Watchdoc sache où trouver le numéro de badge.</p>
                                                 <h2 id="Procédure" data-magellan-target="Procédure">Procédure</h2>
-                                                <h3>Configurer l'annuaire</h3>
+                                                <h3 id="Configurerlannuaire" data-magellan-target="Configurerlannuaire">Configurer l'annuaire</h3>
                                                 <ol>
                                                     <li value="1">
                                                         <p>Accédez à l'interface d'administration de Watchdoc en tant qu’admininstrateur.</p>
@@ -225,7 +225,7 @@
                                                         <p>Validez la modification apportée à l'annuaire utilisateur.</p>
                                                     </li>
                                                 </ol>
-                                                <h3>Vider les caches</h3>
+                                                <h3 id="Viderlescaches" data-magellan-target="Viderlescaches">Vider les caches</h3>
                                                 <ol>
                                                     <li value="1">
                                                         <p>Videz ensuite le cache de l’annuaire utilisateurs Watchdoc sur le serveur dont dépendent les périphériques concernés par l'authentification par badge.</p>
@@ -234,7 +234,7 @@
                                                         <p>Testez la recherche d’un login Windows, puis le numéro de carte de l’utilisateur présent dans l’attribut afin de valider la recherche inversée.</p>
                                                     </li>
                                                 </ol>
-                                                <h3>Configurer le profil WES</h3>
+                                                <h3 id="ConfigurerleprofilWES" data-magellan-target="ConfigurerleprofilWES">Configurer le profil WES</h3>
                                                 <ol>
                                                     <li value="1">
                                                         <p>Retournez dans l'interface d'administrateur Watchdoc : depuis le<strong> Menu principal</strong>, section <strong>Configuration</strong>, cliquez sur <strong>Web, WES &amp; Destinations de numérisation.</strong></p>
@@ -265,12 +265,21 @@
                                             </div>
                                         </main>
                                         <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <br />
                                             <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
                                                 <li class="tree-node"><a href="#WatchdocAnnuairesParam%C3%A9trerunattributLDAPpourlauthentificationparbadge">Watchdoc - Annuaires -  Paramétrer un attribut LDAP&#160;pour l'authentification par badge</a>
                                                     <ul>
                                                         <li class="tree-node"><a href="#Contexte">Contexte</a>
                                                         </li>
                                                         <li class="tree-node"><a href="#Proc%C3%A9dure">Procédure</a>
+                                                            <ul>
+                                                                <li class="tree-node"><a href="#Configurerlannuaire">Configurer l'annuaire</a>
+                                                                </li>
+                                                                <li class="tree-node"><a href="#Viderlescaches">Vider les caches</a>
+                                                                </li>
+                                                                <li class="tree-node"><a href="#ConfigurerleprofilWES">Configurer le profil WES</a>
+                                                                </li>
+                                                            </ul>
                                                         </li>
                                                     </ul>
                                                 </li>

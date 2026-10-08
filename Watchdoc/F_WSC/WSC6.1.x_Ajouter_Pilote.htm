@@ -255,7 +255,7 @@
                                                 <h2 id="Procédure" data-magellan-target="Procédure">Procédure </h2>
                                                 <p>&#160;</p>
                                                 <fieldset>Si vous effectuez une<strong> mise à jour</strong> à partir d'une version antérieure à la v. 6.1, vous devez <b>désinstaller</b> les pilotes existants puis les <b>réinstaller</b> à l'aide de la procédure décrite ci-dessous.<br /></fieldset>
-                                                <h3>Télécharger le package certifié (tous les pilotes sauf Epson et Ricoh)</h3>
+                                                <h3 id="TéléchargerlepackagecertifiétouslespilotessaufEpsonetRicoh" data-magellan-target="TéléchargerlepackagecertifiétouslespilotessaufEpsonetRicoh">Télécharger le package certifié (tous les pilotes sauf Epson et Ricoh)</h3>
                                                 <ol>
                                                     <li value="1">
                                                         <p>En tant qu'administrateur, accédez au serveur qui héberge WSC.</p>
@@ -275,7 +275,7 @@
                                                         <p>Enregistrez le package sur le serveur.</p>
                                                     </li>
                                                 </ol>
-                                                <h3>Préparer les pilotes</h3>
+                                                <h3 id="Préparerlespilotes" data-magellan-target="Préparerlespilotes">Préparer les pilotes</h3>
                                                 <blockquote>
                                                     <h4> Tous les pilotes sauf Epson et Ricoh</h4>
                                                     <ol>
@@ -336,7 +336,7 @@
                                                         </li>
                                                     </ol>
                                                 </blockquote>
-                                                <h3>Ajouter un pilote </h3>
+                                                <h3 id="Ajouterunpilote" data-magellan-target="Ajouterunpilote">Ajouter un pilote </h3>
                                                 <ol>
                                                     <li value="1">
                                                         <p>Accédez à WSC en tant qu'administrateur.&#160;</p>
@@ -421,7 +421,7 @@ Telle qu'elle est configurée à l'orignie, elle ne peut pas servir à WPC for W
                                                         <p><span style="font-family: 'Wingdings'">è</span>Dans le cas contraire, un message d'erreur s'affiche. Cliquez sur le bouton <img src="../Z_Resources/Images/02_Captures/Boutons/Bouton_WSC_VoirLogs.png" />pour afficher les logs dans lesquels sont listées les erreurs.<br />Si vous n'arrivez pas à comprendre l'erreur et à réitérer l'opération avec succès, joingnez ces logs à un ticket <a href="https://connect.doxense.com/" target="_blank">Connect</a> adressé au Support Doxense.</p>
                                                     </li>
                                                 </ol>
-                                                <h3>Créer une file universelle</h3>
+                                                <h3 id="Créerunefileuniverselle" data-magellan-target="Créerunefileuniverselle">Créer une file universelle</h3>
                                                 <p>Dans Watchdoc, la file universelle sert exclusivement à Watchdoc Print Client (cf.&#160;<a href="../C_Configurer/ConfigFiles/ConfigFiles_Universelle.htm" target="_blank" title="Lien vers l'article de présentation de la file universelle " alt="Lien vers l'article de présentation de la file universelle ">File universelle</a>). Si vous souhaitez que le pilote serve à générer une file universelle, </p>
                                                 <ol>
                                                     <li value="1">
@@ -434,7 +434,7 @@ Telle qu'elle est configurée à l'orignie, elle ne peut pas servir à WPC for W
                                                         <p>cliquez sur<strong> Valider</strong> :<br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_File_CreerFileUniv.png" style="height: auto;width: 500px;" /><br /></p>
                                                     </li>
                                                 </ol>
-                                                <h3>Associer<a name="Configuration" id="Configuration"></a> une configuration</h3>
+                                                <h3 id="Associeruneconfiguration" data-magellan-target="Associeruneconfiguration">Associer<a name="Configuration" id="Configuration"></a> une configuration</h3>
                                                 <p>Lors de l'ajout du pilote, il est possible d'y ajouter une (ou plusieurs) configuration(s)  de file d'impression.</p>
                                                 <p>Cela permet d'associer le pilote à une (ou plusieurs) configuration existante afin de gagner du temps ensuite lors de l'installation des files. En effet, il est alors possible d'installer les files sans avoir à les configurer. Outre le gain de temps, cette association garantit l'harmonisation des configurations lors de l'ajout de files en masse.</p>
                                                 <p>&#160;</p>
@@ -459,7 +459,7 @@ Telle qu'elle est configurée à l'orignie, elle ne peut pas servir à WPC for W
                                                     </li>
                                                 </ol>
                                                 <h2 id="Dépannages" data-magellan-target="Dépannages">Dépannages</h2>
-                                                <h3>Alléger un pilote</h3>
+                                                <h3 id="Allégerunpilote" data-magellan-target="Allégerunpilote">Alléger un pilote</h3>
                                                 <p>Le poids d'un fichier contenant le pilote varie entre 10 et 30 Mb. Si le fichier est conforme mais trop lourd, la phase de préparation prend beaucoup de temps et se termine par un message d'erreur (RequestEntityTooLarge ou End of Central Directory record could not be found). Si vous essayez d'importer l'archive compressée directement dans WSC, le message est le même.</p>
                                                 <p>Dans ce cas, l'archive doit être réduite:</p>
                                                 <ol>
@@ -479,20 +479,39 @@ Telle qu'elle est configurée à l'orignie, elle ne peut pas servir à WPC for W
                                                         <p>Cliquez sur <strong>Réparer le package et analyser</strong>.</p>
                                                     </li>
                                                 </ol>
-                                                <h3>Package du pilote non conforme</h3>
+                                                <h3 id="Packagedupilotenonconforme" data-magellan-target="Packagedupilotenonconforme">Package du pilote non conforme</h3>
                                                 <p style="text-align: left;">Si vous tentez d'ajouter un package de pilote non-conforme aux attentes de WSC, un message d'erreur s'affiche dans l'interface <strong>Ajouter un pilote d'impression :</strong> No certified .inf file found.<strong><br /><br /><img src="../Z_Resources/Images/02_Captures/WSC_V61_PiloteCorrompu.png" style="width: 384px;height: 250px;" /></strong></p>
                                                 <p style="text-align: justify;">.<br />Dans ce cas, recommencez la procédure en veillant à ce que le pilote provienne bien du site officiel du fabricant et en utilisant DriverPackageExtractor.</p>
                                             </div>
                                         </main>
                                         <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <br />
                                             <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
                                                 <li class="tree-node"><a href="#ConsoledeSupervisionWSCv61xAjouterunpilotedriver">Console de Supervision (WSC v. 6.1.x) - Ajouter un pilote (driver)</a>
                                                     <ul>
                                                         <li class="tree-node"><a href="#Pr%C3%A9requis">Prérequis</a>
                                                         </li>
                                                         <li class="tree-node"><a href="#Proc%C3%A9dure">Procédure </a>
+                                                            <ul>
+                                                                <li class="tree-node"><a href="#T%C3%A9l%C3%A9chargerlepackagecertifi%C3%A9touslespilotessaufEpsonetRicoh">Télécharger le package certifié (tous les pilotes sauf Epson et Ricoh)</a>
+                                                                </li>
+                                                                <li class="tree-node"><a href="#Pr%C3%A9parerlespilotes">Préparer les pilotes</a>
+                                                                </li>
+                                                                <li class="tree-node"><a href="#Ajouterunpilote">Ajouter un pilote </a>
+                                                                </li>
+                                                                <li class="tree-node"><a href="#Cr%C3%A9erunefileuniverselle">Créer une file universelle</a>
+                                                                </li>
+                                                                <li class="tree-node"><a href="#Associeruneconfiguration">Associer une configuration</a>
+                                                                </li>
+                                                            </ul>
                                                         </li>
                                                         <li class="tree-node"><a href="#D%C3%A9pannages">Dépannages</a>
+                                                            <ul>
+                                                                <li class="tree-node"><a href="#All%C3%A9gerunpilote">Alléger un pilote</a>
+                                                                </li>
+                                                                <li class="tree-node"><a href="#Packagedupilotenonconforme">Package du pilote non conforme</a>
+                                                                </li>
+                                                            </ul>
                                                         </li>
                                                     </ul>
                                                 </li>

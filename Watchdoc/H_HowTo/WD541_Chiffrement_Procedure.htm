@@ -220,7 +220,7 @@
                                                     </li>
                                                 </ol>
                                                 <h2 id="Activerlafonctionchiffrement" data-magellan-target="Activerlafonctionchiffrement">Activer la fonction chiffrement</h2>
-                                                <h3>Pour les spools </h3>
+                                                <h3 id="Pourlesspools" data-magellan-target="Pourlesspools">Pour les spools </h3>
                                                 <p class="Liste_num_1">Pour activer le chiffrement des spools, sous le nœud "doxense-spooler/local", ajoutez les balises suivantes&#160;: </p>
                                                 <div class="codeSnippet"><a class="codeSnippetCopyButton" role="button" href="javascript:void(0);">Copier</a>
                                                     <div style="mc-code-lang: XML;" class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code><span style="color: #63a35c; ">&lt;secure-storage <span style="color: #795da3; ">enabled</span><span style="color: #df5000; ">="true"</span>&gt;</span><br />&#160;&#160;&#160;&#160;<span style="color: #63a35c; ">&lt;compression-provider&gt;</span>Zstd<span style="color: #63a35c; ">&lt;/compression-provider&gt;</span><br />&#160;&#160;&#160;&#160;<span style="color: #63a35c; ">&lt;protection-provider&gt;</span>AES<span style="color: #63a35c; ">&lt;/protection-provider&gt;</span><br /><span style="color: #63a35c; ">&lt;/secure-storage&gt;</span></code></pre>
@@ -248,7 +248,7 @@
                                                         <p class="Liste_num_1">Autrement, ajoutez les balises ci-dessous pour chiffrer également les scans avant d'enregistrer le fichier config.xml et redémarrer le service.</p>
                                                     </li>
                                                 </ol>
-                                                <h3>Pour les scans</h3>
+                                                <h3 id="Pourlesscans" data-magellan-target="Pourlesscans">Pour les scans</h3>
                                                 <ol>
                                                     <li value="1">
                                                         <p class="Liste_num_1">Ouvrez le fichier <b>config. xml</b> à l'aide d'un éditeur de texte et créez la balise suivante sous la balise &lt;scan-destinations&gt; (au pluriel) :</p>
@@ -291,12 +291,19 @@
                                             </div>
                                         </main>
                                         <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <br />
                                             <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
                                                 <li class="tree-node"><a href="#WatchdocChiffrementdesspoolsConfigurer">Watchdoc - Chiffrement des spools - Configurer</a>
                                                     <ul>
                                                         <li class="tree-node"><a href="#Acc%C3%A9deraufichierdeconfiguration">Accéder au fichier de configuration</a>
                                                         </li>
                                                         <li class="tree-node"><a href="#Activerlafonctionchiffrement">Activer la fonction chiffrement</a>
+                                                            <ul>
+                                                                <li class="tree-node"><a href="#Pourlesspools">Pour les spools </a>
+                                                                </li>
+                                                                <li class="tree-node"><a href="#Pourlesscans">Pour les scans</a>
+                                                                </li>
+                                                            </ul>
                                                         </li>
                                                         <li class="tree-node"><a href="#V%C3%A9rifierlactivationduchiffrement">Vérifier l'activation du chiffrement</a>
                                                         </li>

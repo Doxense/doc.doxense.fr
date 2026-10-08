@@ -232,10 +232,10 @@
                                                 </table>
                                                 <h2 id="Configurerlespériphériques" data-magellan-target="Configurerlespériphériques">Configurer les périphériques</h2>
                                                 <p style="text-align: justify;">La configuration du WES Toshiba doit être précédée d'une configuration sur le périphérique depuis l'interface web d'administration de ce dernier.</p>
-                                                <h3>Cloner les fichiers</h3>
+                                                <h3 id="Clonerlesfichiers" data-magellan-target="Clonerlesfichiers">Cloner les fichiers</h3>
                                                 <p style="text-align: justify;">Nous vous recommandons de cloner la configuration courante du périphérique en vue de rétablir la configuration initiale du périphérique en cas de besoin. </p>
                                                 <p style="text-align: left;">Pour cloner les fichiers, rendez-vous dans l'interface d'administration du périphérique suivante : <strong>Administration &gt; Maintenance &gt;&#160;Créer un fichier cloné</strong> et cliquez sur le bouton <strong>Créer</strong>&#160;:<br /><br /><img src="Config_WES_Toshiba_Prq_CreerFichierClone.png" style="width: 700px;height: auto;" /></p>
-                                                <h3>Activer la fonction ODCA</h3>
+                                                <h3 id="ActiverlafonctionODCA" data-magellan-target="ActiverlafonctionODCA">Activer la fonction ODCA</h3>
                                                 <p>Nous vous recommandons d'activer la fonction ODCA du périphérique Toshiba.</p>
                                                 <ol>
                                                     <li value="1">
@@ -245,7 +245,7 @@
                                                         <p>dans la section Network, choisissez <strong>Activer port</strong> (Enable Port)&#160;:<br /><br /></p>
                                                     </li>
                                                 </ol>
-                                                <h3><a name="Mode_Service" id="Mode_Service"></a>Activer le mode Service</h3>
+                                                <h3 id="ActiverlemodeService" data-magellan-target="ActiverlemodeService"><a name="Mode_Service" id="Mode_Service"></a>Activer le mode Service</h3>
                                                 <p>Ce paramétrage est obligatoire avant l'installation du WES.&#160;Seuls les techniciens Toshiba sont habilités à gérer ces paramètres : Doxense<sup>®</sup> ne fournit pas de documentation propre au périphérique Toshiba. </p>
                                                 <ul>
                                                     <li>
@@ -304,7 +304,7 @@
                                                         </ul>
                                                     </li>
                                                 </ul>
-                                                <h3><a name="Legacy_mode" id="Legacy_mode"></a>Paramétrer le mode LDAP en Legacy mode</h3>
+                                                <h3 id="ParamétrerlemodeLDAPenLegacymode" data-magellan-target="ParamétrerlemodeLDAPenLegacymode"><a name="Legacy_mode" id="Legacy_mode"></a>Paramétrer le mode LDAP en Legacy mode</h3>
                                                 <p>Dans le cas où votre périphérique Toshiba ne supporte pas le mode d'authentification MDS, vous pouvez utiliser le mode d'authentification LDAP traditionnel.<br />Le mode d'authentification LDAP&#160;n'est pas compatible avec la fonction <strong><a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term87">Quotas<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Crédit d'unités de valeurs dédié à l'impression et attribué à un utilisateur ou à un groupe d'utilisateurs.</span></a></strong> de Watchdoc.</p>
                                                 <p>Pour installer le mode LDAP, vous devez intervenir dans l'interface d'administration du périphérique ainsi que dans le profil WES.</p>
                                                 <p>&#160;</p>
@@ -326,7 +326,7 @@
                                                         <p>Dans la section <strong>Périphérique </strong>, paramètre <strong>Type d'authentification</strong>, sélectionnez le mode <strong>LDAP</strong>.<br /><br /><img src="Config_WES_TypeAuthent_LDAP.png" style="width: 700px;height: auto;" /></p>
                                                     </li>
                                                 </ol>
-                                                <h3>Configurer les paramètres de <a name="Param_Confidentialite" id="Param_Confidentialite"></a>confidentialité</h3>
+                                                <h3 id="Configurerlesparamètresdeconfidentialité" data-magellan-target="Configurerlesparamètresdeconfidentialité">Configurer les paramètres de <a name="Param_Confidentialite" id="Param_Confidentialite"></a>confidentialité</h3>
                                                 <p>Pour obtenir des informations précises relatives aux utilisateurs dans l'historique des impressions de Watchdoc, il est nécessaire de configurer les paramètres de confidentialité sur le périphérique d'impression.<br />Autrement, dans l'historique des impressions et des numérisations, les informations relatives aux utilisateurs risquent d'êtres masquées, remplacées par des étoiles (<b>?\META\**********</b>) ou la valeur <b>Anonymous</b>&#160;: <br /><br /><img src="Depanner_WES_ToshibaPrivacySettingsPb.png" style="width: 700px;height: auto;" /></p>
                                                 <p>&#160;</p>
                                                 <p>Pour configurer le paramètre de confidentialité, appliquez les étapes suivantes. <br /></p>
@@ -352,12 +352,25 @@
                                             </div>
                                         </main>
                                         <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <br />
                                             <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
                                                 <li class="tree-node"><a href="#WESToshibaPr%C3%A9requisetconfigurationpr%C3%A9alable">WES&#160;Toshiba - Prérequis  et configuration préalable</a>
                                                     <ul>
                                                         <li class="tree-node"><a href="#Configurerlesports">Configurer les ports</a>
                                                         </li>
                                                         <li class="tree-node"><a href="#Configurerlesp%C3%A9riph%C3%A9riques">Configurer les périphériques</a>
+                                                            <ul>
+                                                                <li class="tree-node"><a href="#Clonerlesfichiers">Cloner les fichiers</a>
+                                                                </li>
+                                                                <li class="tree-node"><a href="#ActiverlafonctionODCA">Activer la fonction ODCA</a>
+                                                                </li>
+                                                                <li class="tree-node"><a href="#ActiverlemodeService">Activer le mode Service</a>
+                                                                </li>
+                                                                <li class="tree-node"><a href="#Param%C3%A9trerlemodeLDAPenLegacymode">Paramétrer le mode LDAP en Legacy mode</a>
+                                                                </li>
+                                                                <li class="tree-node"><a href="#Configurerlesparam%C3%A8tresdeconfidentialit%C3%A9">Configurer les paramètres de confidentialité</a>
+                                                                </li>
+                                                            </ul>
                                                         </li>
                                                     </ul>
                                                 </li>

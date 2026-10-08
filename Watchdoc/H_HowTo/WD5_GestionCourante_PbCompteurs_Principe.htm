@@ -233,7 +233,7 @@
                                                 <h2 id="ModesdecomptagestandarddeWatchdoc" data-magellan-target="ModesdecomptagestandarddeWatchdoc">Modes de comptage standard de Watchdoc</h2>
                                                 <p>Watchdoc récupère des informations à partir de deux sources différentes : les tâches d'impression et le mode de comptage wes. Voici une explication de ces deux aspects.</p>
                                                 <p>&#160;</p>
-                                                <h3>Statistiques via les spools d'impression</h3>
+                                                <h3 id="Statistiquesvialesspoolsdimpression" data-magellan-target="Statistiquesvialesspoolsdimpression">Statistiques via les spools d'impression</h3>
                                                 <ol>
                                                     <li value="1">
                                                         <p>Un travail d'impression (aussi appelé fichier spool), est construit à partir du document original (étape 1 : word, excel...) via un pilote d'imprimante du fabricant avec des paramètres (couleur/mono, recto-verso, taille du papier...).</p>
@@ -249,10 +249,10 @@
                                                     </li>
                                                 </ol>
                                                 <p>&#160;</p>
-                                                <h3>Statistiques de comptabilisation WES </h3>
+                                                <h3 id="StatistiquesdecomptabilisationWES" data-magellan-target="StatistiquesdecomptabilisationWES">Statistiques de comptabilisation WES </h3>
                                                 <p>Watchdoc peut récupérer des informations sur les imprimantes et les multifonctions via une API de fournisseur d'impression pour collecter les journaux des travaux.</p>
                                                 <p>C'est la solution permettant d'être aussi proche que possible de la comptabilité matérielle et doit être activée dans le profil Watchdoc WES.<br /><br /><img src="../Z_Resources/Images/02_Captures/Config_WES_SousSection_Comptabilisation.png" style="width: 352px;height: 120px;" /></p>
-                                                <h3>Statistiques via SNMP</h3>
+                                                <h3 id="StatistiquesviaSNMP" data-magellan-target="StatistiquesviaSNMP">Statistiques via SNMP</h3>
                                                 <p>
                                                     <img src="../Z_Resources/Images/02_Captures/Admin_SNMP_SNMP_Consult.png" />
                                                     <br />
@@ -269,66 +269,66 @@
                                                 <h2 id="Casoùlinformationpeutcréeruneconfusion" data-magellan-target="Casoùlinformationpeutcréeruneconfusion">Cas où l'information peut créer une confusion</h2>
                                                 <p>Voici quelques raisons expliquant les écarts de comptage entre des tâches d'impression et les compteurs des périphériques d'impression, mais aussi des incohérences dans la lecture des compteurs qui équipent les périphériques.</p>
                                                 <p>&#160;</p>
-                                                <h3>Impression directe</h3>
+                                                <h3 id="Impressiondirecte" data-magellan-target="Impressiondirecte">Impression directe</h3>
                                                 <p>Certains clients autorisent le mode d'impression directe par IP Direct, USB Print, FTP ou autre...</p>
                                                 <p>Ces modes d'impression contournent le comptage de Watchdoc via les Spools d'impression car Watchdoc compte les pages directement dans la file d'attente d'impression sur les serveurs d'impression.</p>
                                                 <p>Ces travaux d'impression incrémenteront donc les compteurs des périphériques, mais pas les statistiques Watchdoc.</p>
                                                 <p>&#160;</p>
-                                                <h3>Travaux d'impression locaux</h3>
+                                                <h3 id="Travauxdimpressionlocaux" data-magellan-target="Travauxdimpressionlocaux">Travaux d'impression locaux</h3>
                                                 <p>Les pages de tests générées directement sur les périphériques par les techniciens sont seulement comptées par les compteurs de ces périphériques et ne sont jamias comptabilisées dans les statistiques Watchdoc.</p>
                                                 <p>&#160;</p>
-                                                <h3>Fichier de spool corrompu</h3>
+                                                <h3 id="Fichierdespoolcorrompu" data-magellan-target="Fichierdespoolcorrompu">Fichier de spool corrompu</h3>
                                                 <p>Un travail d'impression peut être corrompu par le pilote d'imprimante qui crée des lignes de commandes inattendues que le périphérique ne peut pas interpréter. Dans ce cas, les statistiques Watchdoc compteront les pages pour cette tâche mais les compteurs du périphérique ne changent pas.</p>
                                                 <p>&#160;</p>
-                                                <h3>Problème avec l'analyse de Watchdoc</h3>
+                                                <h3 id="ProblèmeaveclanalysedeWatchdoc" data-magellan-target="ProblèmeaveclanalysedeWatchdoc">Problème avec l'analyse de Watchdoc</h3>
                                                 <p>Certaines applications ou pilotes peuvent ne pas respecter les normes PCL/PS et induire en erreur notre comptabilité alors que l'impression est correcte. Nous travaillons depuis plus de 20 ans à corriger ces caractéristiques liées à l'application ou au pilote.</p>
                                                 <p>Seule l'analyse des spools et données SNMP&#160;relatifs à l'anomalie nous permettront de comprendre le problème afin de tenter d'améliorer notre outil.</p>
                                                 <p>&#160;</p>
-                                                <h3>Problème de comptage des périphériques.</h3>
+                                                <h3 id="Problèmedecomptagedespériphériques" data-magellan-target="Problèmedecomptagedespériphériques">Problème de comptage des périphériques.</h3>
                                                 <p>Doxense n'a pas toujours la même définition de la couleur que le fabricant. Il faut valider qu'un document monochrome ne signifie pas forcément noir et blanc et que la couleur est bien comptée à partir du premier pixel en couleur présent dans le travail d'impression.</p>
                                                 <p>&#160;</p>
-                                                <h3>Impression partielle</h3>
+                                                <h3 id="Impressionpartielle" data-magellan-target="Impressionpartielle">Impression partielle</h3>
                                                 <p>En cas de bourrage papier ou autre incident matériel du périphérique, il peut arriver que ce périphériquerecommence le traitement de la tâche d'impression. Dans ce cas, les pages qui ont été imprimées avant l'incident sont imprimées deux fois. Le résultat est que ces pages sont comptées deux fois dans les compteurs du matériel mais seulement une fois dans les statistiques des travaux Watchdoc.</p>
                                                 <p>&#160;</p>
-                                                <h3>Copies et fax quand aucun WES n'est installé</h3>
+                                                <h3 id="CopiesetfaxquandaucunWESnestinstallé" data-magellan-target="CopiesetfaxquandaucunWESnestinstallé">Copies et fax quand aucun WES n'est installé</h3>
                                                 <p>Les copies et les fax sont correctement comptés dans les statistiques des travaux lorsqu'un WES est installé sur un périphérique.</p>
                                                 <p>Dans le cas où aucun WES n'est installé, les compteurs du périphérique comptent ces pages, mais elles ne sont pas comptabilisées dans les statistiques de travaux Watchdoc.</p>
                                                 <p>(Par exemple, si un utilisateur rencontre une anomalie d'impression qui imprime des hiéroglyphies sur une rame complète de papier, Watchdoc compte le nombre initial de pages du document (1 page par exemple) alors que le périphérique a utilisé et compté 500 pages...).</p>
                                                 <p>&#160;</p>
-                                                <h3>Copies et télécopies lorsqu'un WES est installé</h3>
+                                                <h3 id="CopiesettélécopieslorsquunWESestinstallé" data-magellan-target="CopiesettélécopieslorsquunWESestinstallé">Copies et télécopies lorsqu'un WES est installé</h3>
                                                 <p>Par conception, Watchdoc compte les pages pour les travaux qui sont reçus sur les files d'attente surveillées. Après avoir été acheminé vers la file d'attente de sortie, le sort du travail n'est pas pris en compte. Si ce traail est annulé sur le périphérique lui-même, Watchdoc n'en est pas informé.</p>
                                                 <p>Donc par défaut, si un travail est annulé pendant qu'il est traité par le périphérique (en raison d'un bourrage papier, d'une mise hors tension, d'une erreur logicielle 900, par exemple), il sera compté dans les statistiques de Watchdoc comme s'il avait été effectivement imprimé.</p>
                                                 <p>Mais si un WES est installé et que la comptabilité WES est activée, Watchdoc interrogera périodiquement les statistiques du journal interne du périphérique pour vérifier ce qui a été réellement imprimé (tant que les statistiques du périphérique sont correctes).</p>
                                                 <p>Ce qui permet d'ajuster les statistiques des travaux pour les travaux  annulés sur le périphérique ou partiellement imprimés.</p>
                                                 <p>&#160;</p>
-                                                <h3>Travaux au niveau du périphérique</h3>
+                                                <h3 id="Travauxauniveaudupériphérique" data-magellan-target="Travauxauniveaudupériphérique">Travaux au niveau du périphérique</h3>
                                                 <p>La comptabilité WES permet également de recueillir des statistiques sur les travaux produits à partir des périphériques (copies, impression USB, impression Air, rapports d'appareils, pages de test, télécopies reçues, etc.) ainsi que tous les travaux qui ont été directement soumis à l'appareil sans passer par le serveur d'impression (Direct IP).</p>
                                                 <p>Selon la marque, l'ajustement des statistiques peut être décalé de plusieurs minutes car le journal du périphérique peut être assez volumineux (certains périphériques renvoient l'historique complet, ce qui cela prend du temps avant d'être traité par Watchdoc).</p>
                                                 <p>Ainsi, sur les périphériques sans WES, vous remarquez probablement un écart croissant avec le temps. </p>
                                                 <p>Dans certaines configurations, l'activation de la comptabilité WES n'est donc pas recommandée.</p>
                                                 <p>&#160;</p>
-                                                <h3>Alignement dans le temps</h3>
+                                                <h3 id="Alignementdansletemps" data-magellan-target="Alignementdansletemps">Alignement dans le temps</h3>
                                                 <p>Il est essentiel de comparer des chiffres alignés dans le temps. Certaines statistiques sont compilées quotidiennement (pages Watchdoc), c'est-à-dire jusqu'à minuit, d'autres sont presque instantanées (compteurs de périphériques), avec quelques retards dus au traitement.</p>
                                                 <p>Sauf si vous exécutez le rapport à 1 heure du matin lorsqu'il n'y a pas d'activité, les chiffres peuvent donc être désalignés en raison de l'activité d'impression depuis le début de la journée.</p>
                                                 <p>Pour clarifier la situation, il est conseillé de préciser, pour chaque ligne du rapport de statistiques du périphérique, le moment exact où le comptage a été réalisé.</p>
                                                 <p>En outre, Watchdoc stocke la date des travaux d'impression envoyés aux files d'attente, et non la date à laquelle les travaux sont imprimés sur papier. Des différences de temps peuvent apparaître, par exemple si l'imprimante manque de papier pendant un certain temps, si le travail est libéré par l'utilisateur plusieurs heures après avoir demandé l'impression...</p>
                                                 <p>&#160;</p>
-                                                <h3>Unités et taille du support</h3>
+                                                <h3 id="Unitésettailledusupport" data-magellan-target="Unitésettailledusupport">Unités et taille du support</h3>
                                                 <p>Watchdoc fournit des statistiques de travail comptées en pages équivalentes au format A4 :  1*A3 = 2*A4</p>
                                                 <p>Les compteurs de périphériques sont fournis en clics : 1*A3 = 1*A4</p>
                                                 <p>Ainsi, en fonction de la taille réelle du support, vous pouvez voir plus de pages dans Watchdoc que dans les compteurs bruts.</p>
                                                 <p>&#160;</p>
-                                                <h3>Bugs dans les en-têtes PJL</h3>
+                                                <h3 id="BugsdanslesentêtesPJL" data-magellan-target="BugsdanslesentêtesPJL">Bugs dans les en-têtes PJL</h3>
                                                 <p>Certains pilotes de fabricants ont des problèmes avec les en-têtes PJL et ils mettent au carré le nombre de copies.</p>
                                                 <p>Par conséquent, nous avons ajouté quelques options dans les paramètres de la file d'attente pour éviter ce comportement.</p>
                                                 <p>&#160;</p>
-                                                <h3>Comment MADC affecte la lecture du compteur</h3>
+                                                <h3 id="CommentMADCaffectelalectureducompteur" data-magellan-target="CommentMADCaffectelalectureducompteur">Comment MADC affecte la lecture du compteur</h3>
                                                 <p>Lors d'un remplacement matériel pour une file d'impression qui ne change pas de nom,  il n'y a pas de cohérence entre le compteur de l'ancien périphérique et ceux du nouveau.&#160;</p>
                                                 <p>Exemple : l'imprimante A est retirée avec un compteur @125000 pages, l'imprimante B est nouvelle avec un compteur @5 pages. Il y aura une évolution négative du compteur de 5-125000 = -124995 pages.</p>
                                                 <p>&#160;</p>
                                                 <p>Lors d'un double échange de matériel (pendant une réparation) sur la même file d'attente d'impression, comme dans le cas précédent, lorsque l'imprimante A revient de réparation et remplace l'imprimante B, pendant la période de remplacement, il n'y a pas de cohérence dans les compteurs.</p>
                                                 <p>&#160;</p>
-                                                <h3>Comparaison réelle</h3>
+                                                <h3 id="Comparaisonréelle" data-magellan-target="Comparaisonréelle">Comparaison réelle</h3>
                                                 <p>Pour pouvoir effectuer une comparaison de comptage correct, </p>
                                                 <ol>
                                                     <li value="1">
@@ -350,6 +350,7 @@
                                             </div>
                                         </main>
                                         <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <br />
                                             <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
                                                 <li class="tree-node"><a href="#WatchdocG%C3%A9rerlesprobl%C3%A8mesdecompteurssurlesp%C3%A9riph%C3%A9riquesdimpression">Watchdoc - Gérer les problèmes de compteurs sur les périphériques d'impression</a>
                                                     <ul>
@@ -358,10 +359,48 @@
                                                         <li class="tree-node"><a href="#Sourcesdanalyse">Sources d'analyse</a>
                                                         </li>
                                                         <li class="tree-node"><a href="#ModesdecomptagestandarddeWatchdoc">Modes de comptage standard de Watchdoc</a>
+                                                            <ul>
+                                                                <li class="tree-node"><a href="#Statistiquesvialesspoolsdimpression">Statistiques via les spools d'impression</a>
+                                                                </li>
+                                                                <li class="tree-node"><a href="#StatistiquesdecomptabilisationWES">Statistiques de comptabilisation WES </a>
+                                                                </li>
+                                                                <li class="tree-node"><a href="#StatistiquesviaSNMP">Statistiques via SNMP</a>
+                                                                </li>
+                                                            </ul>
                                                         </li>
                                                         <li class="tree-node"><a href="#Proc%C3%A9durespourlanalyse">Procédures pour l'analyse</a>
                                                         </li>
                                                         <li class="tree-node"><a href="#Caso%C3%B9linformationpeutcr%C3%A9eruneconfusion">Cas où l'information peut créer une confusion</a>
+                                                            <ul>
+                                                                <li class="tree-node"><a href="#Impressiondirecte">Impression directe</a>
+                                                                </li>
+                                                                <li class="tree-node"><a href="#Travauxdimpressionlocaux">Travaux d'impression locaux</a>
+                                                                </li>
+                                                                <li class="tree-node"><a href="#Fichierdespoolcorrompu">Fichier de spool corrompu</a>
+                                                                </li>
+                                                                <li class="tree-node"><a href="#Probl%C3%A8meaveclanalysedeWatchdoc">Problème avec l'analyse de Watchdoc</a>
+                                                                </li>
+                                                                <li class="tree-node"><a href="#Probl%C3%A8medecomptagedesp%C3%A9riph%C3%A9riques">Problème de comptage des périphériques.</a>
+                                                                </li>
+                                                                <li class="tree-node"><a href="#Impressionpartielle">Impression partielle</a>
+                                                                </li>
+                                                                <li class="tree-node"><a href="#CopiesetfaxquandaucunWESnestinstall%C3%A9">Copies et fax quand aucun WES n'est installé</a>
+                                                                </li>
+                                                                <li class="tree-node"><a href="#Copiesett%C3%A9l%C3%A9copieslorsquunWESestinstall%C3%A9">Copies et télécopies lorsqu'un WES est installé</a>
+                                                                </li>
+                                                                <li class="tree-node"><a href="#Travauxauniveaudup%C3%A9riph%C3%A9rique">Travaux au niveau du périphérique</a>
+                                                                </li>
+                                                                <li class="tree-node"><a href="#Alignementdansletemps">Alignement dans le temps</a>
+                                                                </li>
+                                                                <li class="tree-node"><a href="#Unit%C3%A9settailledusupport">Unités et taille du support</a>
+                                                                </li>
+                                                                <li class="tree-node"><a href="#Bugsdanslesent%C3%AAtesPJL">Bugs dans les en-têtes PJL</a>
+                                                                </li>
+                                                                <li class="tree-node"><a href="#CommentMADCaffectelalectureducompteur">Comment MADC affecte la lecture du compteur</a>
+                                                                </li>
+                                                                <li class="tree-node"><a href="#Comparaisonr%C3%A9elle">Comparaison réelle</a>
+                                                                </li>
+                                                            </ul>
                                                         </li>
                                                     </ul>
                                                 </li>

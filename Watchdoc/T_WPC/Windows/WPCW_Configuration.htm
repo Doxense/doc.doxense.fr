@@ -238,7 +238,7 @@
                                                 <p>&#160;</p>
                                                 <ul>
                                                     <li>
-                                                        <p><b>Priorité :</b> dans le cas où vous configurez plusieurs instances de WPC&#160;for Wiindows, la priorité permet de définir l'importance de cette instance par rapport aux autres (cf.&#160;<a href="WPCW_Configuration_NvelleInstance.htm" target="_blank">Configurer d'autres instances WPC</a>). L'instance la plus élevée sera appliquée en premier.<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="WPCW_Config_Priorites.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="536" data-mc-height="29" src="WPCW_Config_Priorites.png" tabindex="" style="max-height: 1000px;" /></a><br /><br /></p>
+                                                        <p><b>Priorité :</b> dans le cas où vous configurez plusieurs instances de WPC&#160;for Wiindows, la priorité permet de définir l'importance de cette instance par rapport aux autres (cf.&#160;<a href="WPCW_Configuration_NvelleInstance.htm" target="_blank">Configurer d'autres instances WPC</a>). L'instance la plus élevée sera appliquée en premier.<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="WPCW_Config_Priorites.png"><img class="MCPopupThumbnail img" data-mc-width="536" data-mc-height="29" src="WPCW_Config_Priorites.png" tabindex="" style="width: 500px;height: auto;mc-thumbnail: popup;" /></a><br /><br /></p>
                                                     </li>
                                                 </ul>
                                                 <ul>
@@ -311,8 +311,16 @@
                                                                     </ul>
                                                                 </li>
                                                                 <li>
-                                                                    <p><a name="USB" id="USB"></a><strong>Périph. USB</strong> : cochez la case pour autoriser WPC&#160;à comptabiliser les travaux des périphériques connectés en USB&#160;et non pas en réseau.</p>
-                                                                    <p>Dans ce cas, les travaux d'impression figurent dans la base de données configurée (en master s'il s'agit d'une configuration en domaine) ainsi que dans les fichiers traces du service Windows de WPC.</p>
+                                                                    <p><a name="USB" id="USB"></a><strong>Périph. USB</strong> : </p>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <p><b>Monitorer</b> : cochez la case pour autoriser WPC&#160;à comptabiliser les travaux des périphériques connectés en USB&#160;et non pas en réseau.</p>
+                                                                            <p>Dans ce cas, les travaux d'impression figurent dans la base de données configurée (en master s'il s'agit d'une configuration en domaine) ainsi que dans les fichiers traces du service Windows de WPC.</p>
+                                                                        </li>
+                                                                        <li>
+                                                                            <p><b>Utiliser un titre générique</b> : cochez la case pour que le titre du document soit remplacé par un titre générique afin de respecter la confidentialité des données (important, notamment lorsque le périphérique USB&#160;utilisé est un matériel personnel).</p>
+                                                                        </li>
+                                                                    </ul>
                                                                 </li>
                                                                 <li>
                                                                     <p><a name="ICMP" id="ICMP"></a><strong>Désactiver <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term117">ICMP<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Internet Control Message Protocol (Protocole de message de contrôle sur Internet) est un protocole de couche réseau (no 3 du modèle OSI) qui contrôle les erreurs de transmission. Ainsi, une machine émettrice sait qu'il y a eu un incident de réseau, par exemple lorsqu’un service ou un hôte est inaccessible. La commande Ping est un exemple d'application utilisant des messages de contrôle ICMP.
@@ -320,7 +328,7 @@ Aucun numéro de port TCP ou UDP n'est associé aux paquets ICMP, car ces numér
 (Source : Wikipédia)</span></a> :</strong> cochez la case pour désactiver les requêtes ICMP afin de ne pas saturer le serveur dans le cas où WPC for Windows est installé sur un grand nombre de postes.</p>
                                                                 </li>
                                                                 <li>
-                                                                    <p><b><a name="Print_proc" id="Print_proc"></a>Processeur d'impression du pilote :</b> cochez la case si vous souhaitez que les périphériques d'impression utilisent  le processeur d'impression du pilote. Si la case n'est pas cochée, le processeur "winprint" est utilisé par défaut.<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="WPCW_Config_Service.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="922" data-mc-height="205" src="WPCW_Config_Service.png" tabindex="" style="width: 700px;height: auto;max-height: 1000px;" /></a></p>
+                                                                    <p><b><a name="Print_proc" id="Print_proc"></a>Processeur d'impression du pilote :</b> cochez la case si vous souhaitez que les périphériques d'impression utilisent  le processeur d'impression du pilote. Si la case n'est pas cochée, le processeur "winprint" est utilisé par défaut.<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="WPCW_Config_Service.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="885" data-mc-height="231" src="WPCW_Config_Service.png" tabindex="" style="width: 700px;height: auto;max-height: 1000px;" /></a></p>
                                                                     <p>
                                                                         <br />
                                                                     </p>
@@ -468,6 +476,7 @@ Aucun numéro de port TCP ou UDP n'est associé aux paquets ICMP, car ces numér
                                             </div>
                                         </main>
                                         <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <br />
                                             <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
                                                 <li class="tree-node"><a href="#WatchdocPrintClientforWindowsConfigurer">Watchdoc Print Client for Windows® - Configurer</a>
                                                     <ul>

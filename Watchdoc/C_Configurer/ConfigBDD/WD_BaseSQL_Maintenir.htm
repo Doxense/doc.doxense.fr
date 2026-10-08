@@ -214,7 +214,7 @@
                                                 <p>Il est recommandé d'exécuter ce script toutes les semaines.<br /><br /></p>
                                                 <fieldset class="orange">Les scripts fournis sont conçus pour un environnement de&#160;taille moyenne.&#160;Dans le cas où vous mettez à jour la base dans un environnement plus important, veillez à adapter ces scripts afin d'éviter une saturation de l'espace disque ou une saturation des journaux de transactions qui pourraient entraîner un arrêt du serveur SQL/PostgreSQL.<br />Pensez, par exemple, à ajouter une pause dans la purge (WAITFOR DELAY), à gérer le log en ajoutant des BACKUP LOG&#160;dans les itérations de la boucle, à vérifier le taux de fragmentation des index et à utiliser un lecteur dédié où enregistrer les fichiers de sauvegarde.</fieldset>
                                                 <h2 id="BasededonnéesMSSQL" data-magellan-target="BasededonnéesMSSQL">Base de données MS&#160;SQL</h2>
-                                                <h3>Procédure de création du script</h3>
+                                                <h3 id="Procéduredecréationduscript" data-magellan-target="Procéduredecréationduscript">Procédure de création du script</h3>
                                                 <p>Pour exécuter le plan de maintenance par tâche planifiée, créez un script (.bat) dans un éditeur de texte&#160;: </p>
                                                 <ol>
                                                     <li value="1">
@@ -244,7 +244,7 @@
                                                         <p class="Liste_num_1">cliquez sur le fichier<strong>.bat</strong> pour lancer la maintenance.<br /></p>
                                                     </li>
                                                 </ol>
-                                                <h3>Détail du script WDmaintenance.sql</h3>
+                                                <h3 id="DétailduscriptWDmaintenancesql" data-magellan-target="DétailduscriptWDmaintenancesql">Détail du script WDmaintenance.sql</h3>
                                                 <p>Le script de maintenance  effectue :</p>
                                                 <ol>
                                                     <li value="1">
@@ -306,7 +306,7 @@
                                                 </blockquote>
                                                 <p>Téléchargez le <a href="WDMaintenance.sql" target="_blank">script pour une base SQL<br /></a></p>
                                                 <h2 id="BasededonnéesPostgreSQL" data-magellan-target="BasededonnéesPostgreSQL">Base de données PostgreSQL</h2>
-                                                <h3>Prérequis</h3>
+                                                <h3 id="Prérequis" data-magellan-target="Prérequis">Prérequis</h3>
                                                 <p>Vérifiez les prérequis suivants avant de créer le script&#160;: </p>
                                                 <ul>
                                                     <li>
@@ -319,7 +319,7 @@
                                                         <p><b>checkpoints&#160;:</b> PostgreSQL gère l'intégrité via des "Checkpoints". Il n'y a pas d'équivalent exact au DBCC CHECKDB (de MS SQL) car PostgreSQL vérifie l'intégrité au moment de l'écriture/lecture (Checksums de pages).</p>
                                                     </li>
                                                 </ul>
-                                                <h3>Procédure de création du script</h3>
+                                                <h3 id="Procéduredecréationduscript1" data-magellan-target="Procéduredecréationduscript1">Procédure de création du script</h3>
                                                 <p>Pour exécuter le plan de maintenance par tâche planifiée, créez un script (.bat) dans un éditeur de texte&#160;: </p>
                                                 <ol>
                                                     <li value="1">
@@ -375,14 +375,27 @@
                                             </div>
                                         </main>
                                         <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <br />
                                             <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
                                                 <li class="tree-node"><a href="#WatchdocMaintenirlabasededonn%C3%A9esWatchdocStatsSQLPostgreSQLSQLitePlansdemaintenance">Watchdoc - Maintenir la base de données  WatchdocStats (SQL / PostgreSQL / SQLite) - Plans de maintenance</a>
                                                     <ul>
                                                         <li class="tree-node"><a href="#Introduction">Introduction</a>
                                                         </li>
                                                         <li class="tree-node"><a href="#Basededonn%C3%A9esMSSQL">Base de données MS&#160;SQL</a>
+                                                            <ul>
+                                                                <li class="tree-node"><a href="#Proc%C3%A9duredecr%C3%A9ationduscript">Procédure de création du script</a>
+                                                                </li>
+                                                                <li class="tree-node"><a href="#D%C3%A9tailduscriptWDmaintenancesql">Détail du script WDmaintenance.sql</a>
+                                                                </li>
+                                                            </ul>
                                                         </li>
                                                         <li class="tree-node"><a href="#Basededonn%C3%A9esPostgreSQL">Base de données PostgreSQL</a>
+                                                            <ul>
+                                                                <li class="tree-node"><a href="#Pr%C3%A9requis">Prérequis</a>
+                                                                </li>
+                                                                <li class="tree-node"><a href="#Proc%C3%A9duredecr%C3%A9ationduscript1">Procédure de création du script</a>
+                                                                </li>
+                                                            </ul>
                                                         </li>
                                                     </ul>
                                                 </li>

@@ -318,7 +318,7 @@
                                                 </ol>
                                                 <p>&#160;</p>
                                                 <p>N.B.&#160;: Si le composant <strong>WebSite</strong> est manquant dans la liste, cela signifie que le rôle serveur <strong>Web IIS</strong> a été mal paramétré. Dans ce cas, cliquez sur le bouton <strong>IIS&#160;Diag</strong> de l'interface <strong>Custom Setup</strong> pour afficher la liste des composants ISS&#160;installés.<br />Dans le cas où un composant s'affiche en gris, c'est qu'il est manquant. Il convient alors de corriger le problème (dans le gestionnaire de serveurs) avant de relancer l'installation du site web Watchdoc.<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../Z_Resources/Images/02_Captures/WD_WD5_MIN_IISDIAG.png"><img class="MCPopupThumbnail img" data-mc-width="495" data-mc-height="392" src="../Z_Resources/Images/02_Captures/WD_WD5_MIN_IISDIAG.png" tabindex="" style="height: 250px;width: auto;mc-thumbnail-max-height: 1000px;mc-thumbnail-max-width: auto;mc-thumbnail: popup;max-height: 1000px;" /></a></p>
-                                                <h3>Configurer le kernel Watchdoc</h3>
+                                                <h3 id="ConfigurerlekernelWatchdoc" data-magellan-target="ConfigurerlekernelWatchdoc">Configurer le kernel Watchdoc</h3>
                                                 <p>Dans la fenêtre<strong> Kernel options</strong> qui s'affiche :</p>
                                                 <ol>
                                                     <li value="1">
@@ -340,7 +340,7 @@
                                                         <p class="Liste_num_1"> Cliquez sur <strong>Next </strong>pour poursuivre l'installation. </p>
                                                     </li>
                                                 </ol>
-                                                <h3>Configurer  Privilege Service options</h3>
+                                                <h3 id="ConfigurerPrivilegeServiceoptions" data-magellan-target="ConfigurerPrivilegeServiceoptions">Configurer  Privilege Service options</h3>
                                                 <p>Le composant <strong>Privileged Service</strong> est associé à l'utilisation de la destination "ScanToFolder" de WEScan. Pour être activée, cette destination nécessite en effet de disposer d'un compte de service (dont le mot de passe n'expire jamais) disposant du droit de lecture et d'écriture sur un dossier en partage réseau. WEScan peut ainsi envoyer les documents numérisés dans ce dossier en partage réseau. L'utilisateur pourra ensuite y récupérer ses documents numérisés.&#160;</p>
                                                 <p>&#160;</p>
                                                 <p>Dans la fenêtre <strong>Privileged Service options</strong> qui s'affiche :</p>
@@ -391,6 +391,7 @@
                                             </div>
                                         </main>
                                         <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <br />
                                             <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
                                                 <li class="tree-node"><a href="#WatchdocInstallerlekerneletlesiteweb">Watchdoc - Installer le kernel et le site web</a>
                                                     <ul>
@@ -399,6 +400,12 @@
                                                         <li class="tree-node"><a href="#D%C3%A9compresserlarchive">Décompresser l'archive</a>
                                                         </li>
                                                         <li class="tree-node"><a href="#LancerlinstallationdeWatchdoc">Lancer l'installation de Watchdoc</a>
+                                                            <ul>
+                                                                <li class="tree-node"><a href="#ConfigurerlekernelWatchdoc">Configurer le kernel Watchdoc</a>
+                                                                </li>
+                                                                <li class="tree-node"><a href="#ConfigurerPrivilegeServiceoptions">Configurer  Privilege Service options</a>
+                                                                </li>
+                                                            </ul>
                                                         </li>
                                                     </ul>
                                                 </li>

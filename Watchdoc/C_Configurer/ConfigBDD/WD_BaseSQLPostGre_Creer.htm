@@ -221,7 +221,7 @@
                                                     </li>
                                                 </ol>
                                                 <h2 id="Procédure" data-magellan-target="Procédure">Procédure</h2>
-                                                <h3>Copier les fichiers de création de tables</h3>
+                                                <h3 id="Copierlesfichiersdecréationdetables" data-magellan-target="Copierlesfichiersdecréationdetables">Copier les fichiers de création de tables</h3>
                                                 <p>Il est nécessaire de copier les fichiers de création de tables sur le serveur de la base de données PostgreSQL.<br /></p>
                                                 <ol>
                                                     <li value="1">
@@ -254,7 +254,7 @@
                                                         <p>dans ce dossier, collez les fichiers précédemment copiés&#160;: <br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="ConfigBDD_Postgre_DossierSQL.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="912" data-mc-height="404" src="ConfigBDD_Postgre_DossierSQL.png" tabindex="" style="max-height: 1000px;" /></a><br /></p>
                                                     </li>
                                                 </ol>
-                                                <h3>Accéder au serveur</h3>
+                                                <h3 id="Accéderauserveur" data-magellan-target="Accéderauserveur">Accéder au serveur</h3>
                                                 <ol>
                                                     <li value="1">
                                                         <p>En tant qu'administrateur, accédez au serveur sur lequel est hébergé PostgreSQL&#160;;</p>
@@ -266,7 +266,7 @@
                                                         <p>connectez-vous au serveur sur lequel vous souhaitez créer la base de données en indiquant les informations saisies lors de l'installation de PostgreSQL&#160;: <br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="ConfigBDD_Postgre_Connexion.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="704" data-mc-height="275" src="ConfigBDD_Postgre_Connexion.png" tabindex="" style="max-height: 1000px;" /></a><br /></p>
                                                     </li>
                                                 </ol>
-                                                <h3>Créer un utilisateur</h3>
+                                                <h3 id="Créerunutilisateur" data-magellan-target="Créerunutilisateur">Créer un utilisateur</h3>
                                                 <ol>
                                                     <li value="1">
                                                         <p>Créez un utilisateur avec son mot de passe à l'aide de la commande suivante : </p>
@@ -277,7 +277,7 @@
                                                         </p>
                                                     </li>
                                                 </ol>
-                                                <h3>Créer une base</h3>
+                                                <h3 id="Créerunebase" data-magellan-target="Créerunebase">Créer une base</h3>
                                                 <ol>
                                                     <li value="1">
                                                         <p>Créez la base en saisissant la commande suivante&#160;:</p>
@@ -300,7 +300,7 @@
                                                         <p id="code"><code>GRANT USAGE ON SCHEMA public TO watchdoc_rw; GRANT USAGE&#160;ON&#160;SCHEMA<br />GRANT SELECT,INSERT,UPDATE,DELETE ON ALL TABLES IN SCHEMA public TO watchdoc_rw; GRANT<br />ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT,INSERT,UPDATE,DELETE ON TABLES TO watchdoc_rw;</code>GRANT</p>
                                                     </p>
                                                 </ol>
-                                                <h3>Créer les tables</h3>
+                                                <h3 id="Créerlestables" data-magellan-target="Créerlestables">Créer les tables</h3>
                                                 <ol>
                                                     <li value="1">
                                                         <p>Déconnectez- vous et reconnectez-vous avec le compte Watchdoc nouvellement créé pour vérifier qu'il a bien été enregistré ;<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="ConfigBDD_Postgre_Table.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="598" data-mc-height="190" src="ConfigBDD_Postgre_Table.png" tabindex="" style="max-height: 1000px;" /></a><br /><br /></p>
@@ -327,7 +327,7 @@
                                                     </li>
                                                 </ol>
                                                 <p>&#160;</p>
-                                                <h3>Modification d’un fichier de configuration</h3>
+                                                <h3 id="Modificationdunfichierdeconfiguration" data-magellan-target="Modificationdunfichierdeconfiguration">Modification d’un fichier de configuration</h3>
                                                 <p>S'il s'agit d'une nouvelle base, il est nécessaire de modifier le fichier de configuration (hba.conf) pour autoriser les connexions à distance avec le nouvel utilisateur créé : </p>
                                                 <ul>
                                                     <li>
@@ -376,12 +376,27 @@
                                             </div>
                                         </main>
                                         <aside class="topic-menu"><b>Dans cette page :</b>
+                                            <br />
                                             <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
                                                 <li class="tree-node"><a href="#WatchdocBasededonn%C3%A9esPostgreSQLCr%C3%A9erunebasededonn%C3%A9es">Watchdoc - Base de données PostgreSQL&#160;- Créer une base de données</a>
                                                     <ul>
                                                         <li class="tree-node"><a href="#Pr%C3%A9requis">Prérequis</a>
                                                         </li>
                                                         <li class="tree-node"><a href="#Proc%C3%A9dure">Procédure</a>
+                                                            <ul>
+                                                                <li class="tree-node"><a href="#Copierlesfichiersdecr%C3%A9ationdetables">Copier les fichiers de création de tables</a>
+                                                                </li>
+                                                                <li class="tree-node"><a href="#Acc%C3%A9derauserveur">Accéder au serveur</a>
+                                                                </li>
+                                                                <li class="tree-node"><a href="#Cr%C3%A9erunutilisateur">Créer un utilisateur</a>
+                                                                </li>
+                                                                <li class="tree-node"><a href="#Cr%C3%A9erunebase">Créer une base</a>
+                                                                </li>
+                                                                <li class="tree-node"><a href="#Cr%C3%A9erlestables">Créer les tables</a>
+                                                                </li>
+                                                                <li class="tree-node"><a href="#Modificationdunfichierdeconfiguration">Modification d’un fichier de configuration</a>
+                                                                </li>
+                                                            </ul>
                                                         </li>
                                                     </ul>
                                                 </li>
