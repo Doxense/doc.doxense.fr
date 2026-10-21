@@ -91,8 +91,8 @@
     <body>
         <div class="foundation-wrap off-canvas-wrapper">
             <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
-                <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
-                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Retour" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expanded-event="open.zf.drilldown closed.zf.drilldown" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                <aside class="off-canvas position-left" role="complementary" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Retour" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-left is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expanded-event="open.zf.drilldown closed.zf.drilldown" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
                     </ul>
                 </aside>
                 <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
@@ -289,9 +289,23 @@
                                                     </li>
                                                 </ol>
                                                 <hr />
-                                                <h2 id="ProblèmedequotadoublélorsdelimpressiondunformatlargeA3" data-magellan-target="ProblèmedequotadoublélorsdelimpressiondunformatlargeA3">Problème de quota doublé lors de l'impression d'un format large (A3)</h2>
-                                                <p><strong>Contexte</strong> </p>
-                                                <p>Lorsqu'un double quota est activé pour tenir compte du format d'impression (un quota pour le format A4 et un autre pour le format A3), il arrive que l'on constate une erreur de comptabilisation, les impressions en grand format étant comptées deux fois dans le quota.<br />Par exemple, on dispose :</p>
+                                                <h2 id="Transformationdetravauxtransformationdespoolsnonpriseencompteoct2026" data-magellan-target="Transformationdetravauxtransformationdespoolsnonpriseencompteoct2026">Transformation <a name="CPCA" id="CPCA"></a>de travaux (transformation de spools) non prise en compte - oct. 2026</h2>
+                                                <p><strong>Contexte</strong>
+                                                </p>
+                                                <p>En tant qu'administrateur, je configure la transformation des travaux d'impression (transfo de spools) sur le profil WES de périphériques d'impression Canon. Je constate que ces transformations ne sont pas prises en compte.&#160;</p>
+                                                <p>&#160;</p>
+                                                <p><strong>Cause</strong> </p>
+                                                <p>Cette anomalie peut être due à la configuration du pilote.&#160;Le pilote basique Canon intègre le langage propriétaire CPCA incompatible avec la transformation des travaux.&#160;Pour permettre cette fonctionnalité, il convient de configurer le pilote de sorte qu'il soit de type PCL6.</p>
+                                                <p>&#160;</p>
+                                                <p><strong>Résolution</strong> </p>
+                                                <p>Il convient de modifier la configuration du pilote du périphérique pour faire en sorte qu'il soit compatible PCL6 et non CPCA (cf. <a href="../10_Canon/02_Canon_WES_ConfigPrea.htm#Pilote" target="_blank">Prérequis et configuration préalable</a>).</p>
+                                                <hr />
+                                                <h2 id="ErreurdecomptabilisationpouruneimpressionformatlargeA3lorsquedeuxquotassontconfigurés" data-magellan-target="ErreurdecomptabilisationpouruneimpressionformatlargeA3lorsquedeuxquotassontconfigurés">Erreur de <a name="deux_quotas" id="deux_quotas"></a>comptabilisation pour une impression format large (A3) lorsque deux  quotas sont  configurés</h2>
+                                                <p><strong>Contexte</strong>
+                                                </p>
+                                                <p>Lorsque deux quotas sont appliqués sur une file pour tenir compte de formats d'impression différents (un quota pour le format A4 et un autre pour le format A3), il arrive que l'on constate une erreur de comptabilisation : une impression en grand format est comptée double.</p>
+                                                <p>
+                                                    <br />Par exemple, on dispose :</p>
                                                 <ul>
                                                     <li>
                                                         <p>d'un quota appliquant un coût unitaire de 1 € pour une impression A4 ;<br /></p>
@@ -302,7 +316,7 @@
                                                 </ul>
                                                 <p>En cas d'impression A3, au lieu d'être débité de 2&#160;€, le quota est débité de 4 € .</p>
                                                 <p>&#160;</p>
-                                                <p><strong>Cause</strong>
+                                                <p style="text-align: left;"><strong>Cause</strong>
                                                     <br />L'erreur est due au système de comptabilisation du périphérique qui compte un grand format comme deux petits formats. Le coût est alors doublé, alors que le quota configuré pour un grand format est déjà plus élevé que le quota pour un petit format. </p>
                                                 <p>&#160;</p>
                                                 <p><strong>Résolution</strong>
@@ -318,7 +332,7 @@
                                                         <p>dans l'interface <b>Propriétés de la file d'impression</b>, rendez-vous dans la section <b>Mode Expert</b>&#160;; </p>
                                                     </li>
                                                     <li value="4">
-                                                        <p>pour le paramètre <b>Comptabilisation</b>, cochez la case <b>Redresser la comptabilisation pour les grands formats</b>&#160;: <br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../10_Xerox/ADE_WES_Xerox_ComptaGrdFormats.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1149" data-mc-height="320" src="../10_Xerox/ADE_WES_Xerox_ComptaGrdFormats.png" tabindex="" style="max-height: 1000px;" /></a></p>
+                                                        <p>pour le paramètre <b>Comptabilisation</b>, cochez la case <b>Redresser la comptabilisation pour les grands formats</b>&#160;: <br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../10_Xerox/ADE_WES_Xerox_ComptaGrdFormats.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="1149" data-mc-height="320" src="../10_Xerox/ADE_WES_Xerox_ComptaGrdFormats.png" tabindex="" style="max-height: 1200px;" /></a></p>
                                                         <p>&#160;</p>
                                                     </li>
                                                     <li value="5">
@@ -328,7 +342,7 @@
                                                 <p>&#160;</p>
                                                 <p>N.B.&#160;: après résolution, si vous constatez que l'anomalie perdure sur les impressions couleur uniquement, mettez à jour Watchdoc en version v.6.1.1.5696 min. qui intègre un correctif (pour un nombre de pages pair uniquement).</p>
                                                 <hr />
-                                                <h2 id="WESXeroxDifférencedecomptabilisationdesimpressionsredresséeslespagesnoirblancsontredresséesmaispaslespagesencouleurjuillet2026" data-magellan-target="WESXeroxDifférencedecomptabilisationdesimpressionsredresséeslespagesnoirblancsontredresséesmaispaslespagesencouleurjuillet2026">WES Xerox. Différence de comptabilisation des impressions redressées : les pages noir &amp; blanc sont redressées, mais pas les pages en couleur - juillet 2026.</h2>
+                                                <h2 id="Erreurdecomptabilisationdesimpressionsredresséeslespagesnoirblancsontredresséesmaispaslespagesencouleurjuillet2026" data-magellan-target="Erreurdecomptabilisationdesimpressionsredresséeslespagesnoirblancsontredresséesmaispaslespagesencouleurjuillet2026">Erreur de comptabilisation des impressions redressées : les pages noir &amp; blanc sont redressées, mais pas les pages en couleur - juillet 2026.</h2>
                                                 <p><strong>Contexte</strong>
                                                 </p>
                                                 <p>Lorsque la case "redresser la comptabilisation" est cochées dans la configuration de la file, il arrive que l'on constate une différence de traitement des pages redressées : seules les impressions noir &amp; blanc sont concernées et les pages en couleur ne le sont pas.&#160;</p>
@@ -628,9 +642,11 @@
                                                         </li>
                                                         <li class="tree-node"><a href="#Travauxdenum%C3%A9risationfaxetphotocopienoncomptabilis%C3%A9s">Travaux de numérisation, fax et photocopie non comptabilisés</a>
                                                         </li>
-                                                        <li class="tree-node"><a href="#Probl%C3%A8medequotadoubl%C3%A9lorsdelimpressiondunformatlargeA3">Problème de quota doublé lors de l'impression d'un format large (A3)</a>
+                                                        <li class="tree-node"><a href="#Transformationdetravauxtransformationdespoolsnonpriseencompteoct2026">Transformation de travaux (transformation de spools) non prise en compte - oct. 2026</a>
                                                         </li>
-                                                        <li class="tree-node"><a href="#WESXeroxDiff%C3%A9rencedecomptabilisationdesimpressionsredress%C3%A9eslespagesnoirblancsontredress%C3%A9esmaispaslespagesencouleurjuillet2026">WES Xerox. Différence de comptabilisation des impressions redressées : les pages noir &amp; blanc sont redressées, mais pas les pages en couleur - juillet 2026.</a>
+                                                        <li class="tree-node"><a href="#ErreurdecomptabilisationpouruneimpressionformatlargeA3lorsquedeuxquotassontconfigur%C3%A9s">Erreur de comptabilisation pour une impression format large (A3) lorsque deux  quotas sont  configurés</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#Erreurdecomptabilisationdesimpressionsredress%C3%A9eslespagesnoirblancsontredress%C3%A9esmaispaslespagesencouleurjuillet2026">Erreur de comptabilisation des impressions redressées : les pages noir &amp; blanc sont redressées, mais pas les pages en couleur - juillet 2026.</a>
                                                         </li>
                                                         <li class="tree-node"><a href="#LeWESnetrouvepluslafiledesortieMessagederreurImpossiblederetrouverlafiledesortiesept2026">Le WES&#160;ne trouve plus la file de sortie - Message d'erreur "Impossible de retrouver la file de sortie" - sept.&#160;2026</a>
                                                         </li>

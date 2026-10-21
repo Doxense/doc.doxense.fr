@@ -6,7 +6,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="description" content="Procédure de création et de configuration d'un domaine : désignation du serveur master et du ou des serveurs esclaves qui en dépendent, gestion et maintenance du domaine." />
         <meta name="Installation master / slave" content="Installation maître / esclave" />
-        <meta name="Installation maître / esclave" content="Installation maître / esclave" /><title>Watchdoc - Domaine - Supprimer (déclasser) un serveur master </title>
+        <meta name="Installation maître / esclave" content="Installation maître / esclave" /><title>Watchdoc - Domaine - Supprimer  un serveur master </title>
         <!-- Google Tag Manager -->
         <!-- End Google Tag Manager -->
         <!-- Tableau triable
@@ -93,8 +93,8 @@
     <body>
         <div class="foundation-wrap off-canvas-wrapper">
             <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
-                <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
-                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Retour" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expanded-event="open.zf.drilldown closed.zf.drilldown" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                <aside class="off-canvas position-left" role="complementary" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Retour" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-left is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expanded-event="open.zf.drilldown closed.zf.drilldown" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
                     </ul>
                 </aside>
                 <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
@@ -204,8 +204,8 @@
                                     <div class="topic-layout">
                                         <main class="topic-main">
                                             <div role="main" id="mc-main-content">
-                                                <h1 id="WatchdocDomaineSupprimerdéclasserunserveurmaster" data-magellan-target="WatchdocDomaineSupprimerdéclasserunserveurmaster"><a name="aanchor73"></a>
-                                                    <MadCap:concept term="CFG" />Watchdoc - Domaine - Supprimer (déclasser) un serveur master </h1>
+                                                <h1 id="WatchdocDomaineSupprimerunserveurmaster" data-magellan-target="WatchdocDomaineSupprimerunserveurmaster"><a name="aanchor73"></a>
+                                                    <MadCap:concept term="CFG" />Watchdoc - Domaine - Supprimer  un serveur master </h1>
                                                 <h2 id="SupprimerdéclasserunserveurMaster" data-magellan-target="SupprimerdéclasserunserveurMaster"><a name="kanchor1"></a><a name="Supprimer" id="Supprimer"></a>Supprimer (déclasser) un serveur Master</h2>
                                                 <p>Ponctuellement, il peut être nécessaire de déclasser un serveur master, c'est-à-dire lui enlever son rôle de master. </p>
                                                 <fieldset>Déclasser un serveur master est une opération dont les conséquences sont importantes, notamment pour les autres serveurs qui en dépendent.&#160;</fieldset>
@@ -227,7 +227,7 @@
                                                 <p class="Liste_num_1"><span style="font-family: 'Wingdings'">è</span> l'outil procède au déclassement du master : il vous informe que le serveur est devenu "single master" et vous rend la main.<br />Par ailleurs, depuis la version&#160;6.1.0.5276, Watchdoc génère automatiquement une sauvegarde du fichier de configuration permettant une restauration en cas d'erreur lors de l'opération.&#160;Ce fichier de sauvegarde est enregistré par défaut dans C:Program Files\Doxense\Watchdoc\Data\ et porte la date de sa création.</p>
                                                 <ol data-mc-continue="true">
                                                     <li value="5">
-                                                        <p class="Liste_num_1">lancez la commande permettant de redémarrer le serveur : &gt; <code style="font-family: 'Courier New';"><b style="font-family: 'Courier New';">net start watchdoc</b></code>:<br /><br /><img src="../../Z_Resources/Images/02_Captures/Config_Domaine_DeclasserMasterWCLI.png" style="width: 700px;" /></p>
+                                                        <p class="Liste_num_1">lancez la commande permettant de redémarrer le serveur : &gt; <code style="font-family: 'Courier New';"><b style="font-family: 'Courier New';">net start watchdoc</b></code>:<br /><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Z_Resources/Images/02_Captures/Config_Domaine_DeclasserMasterWCLI.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="984" data-mc-height="512" src="../../Z_Resources/Images/02_Captures/Config_Domaine_DeclasserMasterWCLI.png" tabindex="" style="width: 700px;max-height: 1200px;" /></a></p>
                                                         <p class="Liste_num_1">
                                                             <br />
                                                         </p>
@@ -239,11 +239,21 @@
                                                 <p>Cette opération doit être réalisée à l'aide de WCLI&#160;:<br></br></p>
                                                 <ol>
                                                     <li value="1">
-                                                        <p class="Liste_num_1">à l'aide de l'outil de commande, lancez WCLI&#160;: <code>cd "\Program Files\Doxense\Watchdoc\wcli.exe"</code> ;</p>
+                                                        <p class="Liste_num_1">à l'aide de l'outil de commande, lancez WCLI&#160;: </p>
+                                                        <div class="codeSnippet"><a class="codeSnippetCopyButton" role="button" href="javascript:void(0);">Copier</a>
+                                                            <div class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>cd "\Program Files\Doxense\Watchdoc\wcli.exe"</code></pre>
+                                                            </div>
+                                                        </div>
                                                     </li>
                                                     <li value="2">
-                                                        <p>lancez la commande permettant de sortir le serveur du domaine :                <code>removeslave /slave=DNS_SLAVE /domain=DOMAIN_ID</code><br /><br /><img src="../../Z_Resources/Images/02_Captures/WCLI_WatchdocCommandLine/WCLI_Removeslave.png" /><![CDATA[
-]]></p>
+                                                        <p>lancez la commande permettant de sortir le serveur du domaine :                </p>
+                                                        <div class="codeSnippet"><a class="codeSnippetCopyButton" role="button" href="javascript:void(0);">Copier</a>
+                                                            <div class="codeSnippetBody" data-mc-continue="False" data-mc-line-number-start="1" data-mc-use-line-numbers="False"><pre><code>removeslave /slave=DNS_SLAVE /domain=DOMAIN_ID</code></pre>
+                                                            </div>
+                                                        </div>
+                                                        <p>
+                                                            <br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Z_Resources/Images/02_Captures/WCLI_WatchdocCommandLine/WCLI_Removeslave.png"><img class="MCPopupThumbnail img imgbord" data-mc-width="957" data-mc-height="122" src="../../Z_Resources/Images/02_Captures/WCLI_WatchdocCommandLine/WCLI_Removeslave.png" tabindex="" style="max-height: 1200px;" /></a>
+                                                        </p>
                                                         <p><![CDATA[                ]]></p>
                                                     </li>
                                                     <li value="3">
@@ -251,13 +261,12 @@
                                                     </li>
                                                 </ol>
                                                 <p class="Liste_num_1"><span style="font-family: 'Wingdings'">è</span> vérifiez dans <strong>Gestion du domaine</strong> que le serveur ne figure plus dans la liste des serveurs slaves du domaine.&#160;</p>
-                                                <p class="Liste_num_1">&#160;</p>
                                             </div>
                                         </main>
                                         <aside class="topic-menu"><b>Dans cette page :</b>
                                             <br />
                                             <ul data-magellan="" data-animation-duration="250" data-active-class="selected" data-scroll-container=".body-container" data-scroll-container-on="only screen and (min-width: 1280px)" class="nocontent menu _Skins_MenuProxy mc-component">
-                                                <li class="tree-node"><a href="#WatchdocDomaineSupprimerd%C3%A9classerunserveurmaster">Watchdoc - Domaine - Supprimer (déclasser) un serveur master </a>
+                                                <li class="tree-node"><a href="#WatchdocDomaineSupprimerunserveurmaster">Watchdoc - Domaine - Supprimer  un serveur master </a>
                                                     <ul>
                                                         <li class="tree-node"><a href="#Supprimerd%C3%A9classerunserveurMaster">Supprimer (déclasser) un serveur Master</a>
                                                         </li>

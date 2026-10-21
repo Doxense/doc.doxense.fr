@@ -115,9 +115,7 @@ img
 
 img.bord
 {
-	height: 250px;
-	width: auto;
-	mc-thumbnail-max-height: 1000px;
+	mc-thumbnail-max-height: 1200px;
 	mc-thumbnail-max-width: auto;
 	mc-thumbnail: popup;
 	border-radius: 5px;
@@ -297,7 +295,7 @@ fieldset
 	background-repeat: no-repeat;
 	border-radius: 10px;
 	border: none;
-	background-image: url('../../../../Docdox_Watchdoc_FR/Content/Z_Resources/Images/01_Generiques/icon_Info.png');
+	background-image: url('../../Z_Resources/Images/01_Generiques/icon_Info.png');
 	text-align: left;
 	padding: 15px 15px 20px 40px;
 	margin: 5px 0;
@@ -458,13 +456,69 @@ MadCap|dropDownBody
 	padding: 10px 10px 10px 10px;
 }
 
+h1#results-heading a.heading-link,
+html.home-topic div.topic-hero h1 a.heading-link	/* prevent heading in search results and home page from being a bookmark */
+{
+	display: none;
+}
+
+h1#results-heading	/* prevent heading in search results from being a bookmark */
+{
+	cursor: auto;
+}
+
+.bookmark-hotspot.active:after
+{
+	font-size: 10px;
+	margin-left: 10px;
+	padding: 5px;
+	content: 'Copied!';
+	background-color: var(--Dark);
+	color: #fff;
+	border-radius: 5px;
+	position: absolute;
+	top: -20px;
+	left: -20px;
+}
+
+div#anchor-icon
+{
+	display: inline;
+}
+
+a.heading-link
+{
+	opacity: 0;
+	text-decoration: none;
+	letter-spacing: 1px;
+	position: relative;
+	display: none;
+}
+
+.bookmark-hotspot:hover a.heading-link
+{
+	opacity: 1;
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+	background-position: center;
+	width: 25px;
+	margin-left: -25px;
+	display: inline-block;
+	background-image: url('../Images/Assets/Icons/bookmark.svg');
+}
+
+.bookmark-hotspot
+{
+	position: relative;
+}
+
 .bookmark-hotspot:hover a.heading-link
 {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 20px 20px;
 	display: inline-block;
-	background-image: url('../Images/Link.svg');
+	background-image: url('../Images/Assets/Icons/bookmark.svg');
 }
 
 .body-container
@@ -474,13 +528,11 @@ MadCap|dropDownBody
 
 button#myBtn
 {
-	background-position: center;
+	position: fixed;
 	background-size: inherit;
 	border-radius: 4px;
 	background-color: transparent;
 	outline: inline;
-	font-size: 10px;
-	font-weight: normal;
 	background-repeat: no-repeat;
 	background-image: url('../../../../Docdox_Watchdoc_FR/Content/Resources/Images/icon_flechehaut.png');
 	display: none;
@@ -691,13 +743,13 @@ span.SearchHighlight1
 button#myBtn
 {
 	position: fixed;
-	bottom: 20px;
-	right: 50px;
+	bottom: 15px;
+	right: 40px;
 	z-index: 99;
 	border: none;
 	outline: none;
 	cursor: pointer;
-	padding: 15px;
+	padding: 10px;
 	border-radius: 4px;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -877,13 +929,11 @@ p.H2_Print
 {
 	button#myBtn
 	{
-		background-position: center;
+		position: fixed;
 		background-size: inherit;
 		border-radius: 4px;
 		background-color: transparent;
 		outline: inline;
-		font-size: 10px;
-		font-weight: normal;
 		background-repeat: no-repeat;
 		background-image: url('../../../../Docdox_Watchdoc_FR/Content/Resources/Images/icon_flechehaut.png');
 		display: none;
@@ -901,65 +951,65 @@ p.H2_Print
 		background-repeat: no-repeat;
 		background-size: 20px 20px;
 		display: inline-block;
-		background-image: url('../Images/Link.svg');
+		background-image: url('../Images/Assets/Icons/bookmark.svg');
 	}
-}
 
-/* Heading Bookmark Styles*/
+	/* Heading Bookmark Styles*/
 
-.bookmark-hotspot
-{
-	position: relative;
-}
+	.bookmark-hotspot
+	{
+		position: relative;
+	}
 
-.bookmark-hotspot:hover a.heading-link
-{
-	opacity: 1;
-	background-repeat: no-repeat;
-	background-size: 20px 20px;
-	background-position: center;
-	width: 25px;
-	margin-left: -25px;
-	display: inline-block;
-	background-image: url('../../../../Docdox_Watchdoc_FR/Content/Resources/Images/Link.svg');
-}
+	.bookmark-hotspot:hover a.heading-link
+	{
+		opacity: 1;
+		background-repeat: no-repeat;
+		background-size: 20px 20px;
+		background-position: center;
+		width: 25px;
+		margin-left: -25px;
+		display: inline-block;
+		background-image: url('../Images/Assets/Icons/bookmark.svg');
+	}
 
-a.heading-link
-{
-	opacity: 0;
-	text-decoration: none;
-	letter-spacing: 1px;
-	position: relative;
-	display: none;
-}
+	a.heading-link
+	{
+		opacity: 0;
+		text-decoration: none;
+		letter-spacing: 1px;
+		position: relative;
+		display: none;
+	}
 
-div#anchor-icon
-{
-	display: inline;
-}
+	div#anchor-icon
+	{
+		display: inline;
+	}
 
-.bookmark-hotspot.active:after
-{
-	font-size: 10px;
-	margin-left: 10px;
-	padding: 5px;
-	content: 'Copied!';
-	background-color: var(--Dark);
-	color: #fff;
-	border-radius: 5px;
-	position: absolute;
-	top: -20px;
-	left: -20px;
-}
+	.bookmark-hotspot.active:after
+	{
+		font-size: 10px;
+		margin-left: 10px;
+		padding: 5px;
+		content: 'Copied!';
+		background-color: var(--Dark);
+		color: #fff;
+		border-radius: 5px;
+		position: absolute;
+		top: -20px;
+		left: -20px;
+	}
 
-h1#results-heading	/* prevent heading in search results from being a bookmark */
-{
-	cursor: auto;
-}
+	h1#results-heading	/* prevent heading in search results from being a bookmark */
+	{
+		cursor: auto;
+	}
 
-h1#results-heading a.heading-link,
-html.home-topic div.topic-hero h1 a.heading-link	/* prevent heading in search results and home page from being a bookmark */
-{
-	display: none;
+	h1#results-heading a.heading-link,
+	html.home-topic div.topic-hero h1 a.heading-link	/* prevent heading in search results and home page from being a bookmark */
+	{
+		display: none;
+	}
 }
 

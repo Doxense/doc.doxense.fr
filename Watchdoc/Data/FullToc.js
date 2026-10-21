@@ -1,6 +1,6 @@
 var xmlFullTocData = "";
 xmlFullTocData += '<?xml version=\"1.0\" encoding=\"utf-8\"?>';
-xmlFullTocData += '<CatapultToc Version=\"1\" conditions=\"General.Online,Langues.FR\" DescendantCount=\"538\">';
+xmlFullTocData += '<CatapultToc Version=\"1\" conditions=\"General.Online,Langues.FR\" DescendantCount=\"540\">';
 xmlFullTocData += '    <TocEntry Title=\"Accueil\" Link=\"/index.html\" ComputedResetPageLayout=\"true\" ComputedFirstTopic=\"true\" DescendantCount=\"0\" />';
 xmlFullTocData += '    <TocEntry Title=\"Versions téléchargeables des produits\" Link=\"/A_Getting_Started/Versions_FR.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ReplaceMergeNode=\"false\" ComputedFirstTopic=\"false\" DescendantCount=\"3\">';
 xmlFullTocData += '        <TocEntry Title=\"6.1.1 - Packages et notes de versions\" Link=\"/A_Getting_Started/Release_611.htm\" StartSection=\"false\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
@@ -48,7 +48,7 @@ xmlFullTocData += '        <TocEntry Title=\"Déplacer Watchdoc d\'un domaine AD
 xmlFullTocData += '        <TocEntry Title=\"Désinstaller Watchdoc\" Link=\"/C_Configurer/ConfigDomaine/ConfigDomaine_Desinstallation.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Sauvegarder Watchdoc\" Link=\"/H_HowTo/WD5_GestionCourante_Sauvegarder_WD.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '    </TocEntry>';
-xmlFullTocData += '    <TocEntry Title=\"Mettre à jour / restaurer\" ComputedFirstTopic=\"false\" DescendantCount=\"23\">';
+xmlFullTocData += '    <TocEntry Title=\"Mettre à jour / restaurer\" ComputedFirstTopic=\"false\" DescendantCount=\"22\">';
 xmlFullTocData += '        <TocEntry Title=\"Prérequis et préparation de mise à jour\" Link=\"/E_MettreAJour/WD61_MaJ_WD_Prerequis.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Synthèse de mise à jour vers v. 6.1.1\" Link=\"/E_MettreAJour/MAJ_presentation.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"11\">';
 xmlFullTocData += '            <TocEntry Title=\"MàJ Watchdoc depuis 6.1.0 (simple - autonome)\" Link=\"/E_MettreAJour/WD611_MaJ_WD_Proc_Simpl_de_61.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
@@ -64,7 +64,6 @@ xmlFullTocData += '            <TocEntry Title=\"MàJ Watchdoc depuis 5.5 (simpl
 xmlFullTocData += '            <TocEntry Title=\"MàJ Watchdoc depuis 5.5 (domaine - déporté)\" Link=\"/E_MettreAJour/WD611_MaJ_WD_Proc_DomDept_de_55.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        </TocEntry>';
 xmlFullTocData += '        <TocEntry Title=\"Sauvegarder la précédente version site web\" Link=\"/E_MettreAJour/MAJ_WD_SauvSiteWeb.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
-xmlFullTocData += '        <TocEntry Title=\"Mettre à jour page Mon Compte v.2 \" Link=\"/B_Installer/Installer_PageMCv2.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Mettre à jour Watchdoc avec l\'assistant\" Link=\"/E_MettreAJour/WD61_MaJ_WD_Procedure.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Mettre à jour Watchdoc\" Link=\"/E_MettreAJour/MAJ_WD.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Mettre à jour WSC\" Link=\"/F_WSC/WSC_Gestion_MiseAJour.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
@@ -445,7 +444,7 @@ xmlFullTocData += '        <TocEntry Title=\"Personnaliser l\'interface graphiqu
 xmlFullTocData += '        <TocEntry Title=\"Activer WEScan\" Link=\"/C_Configurer/ConfigWEScan/WEScan_Config_ActiverFonction.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Utiliser WEScan\" Link=\"/C_Configurer/ConfigWEScan/WEScan_Utiliser.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '    </TocEntry>';
-xmlFullTocData += '    <TocEntry Title=\"WPC Watchdoc Print Client\" Link=\"/T_WPC/WPC_Presentation.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" StartSection=\"false\" ComputeToc=\"false\" ReplaceMergeNode=\"false\" ComputedFirstTopic=\"false\" DescendantCount=\"29\">';
+xmlFullTocData += '    <TocEntry Title=\"WPC Watchdoc Print Client\" Link=\"/T_WPC/WPC_Presentation.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" StartSection=\"false\" ComputeToc=\"false\" ReplaceMergeNode=\"false\" ComputedFirstTopic=\"false\" DescendantCount=\"31\">';
 xmlFullTocData += '        <TocEntry Title=\"Exporter le certificat Print API\" Link=\"/T_WPC/WPC_CertPrintAPI_Export.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"for Android\" Link=\"/T_WPC/Android/WPCA_Presentation_v61.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"6\">';
 xmlFullTocData += '            <TocEntry Title=\"Prérequis\" Link=\"/T_WPC/Android/WPCA_Prerequis_v61.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
@@ -461,7 +460,9 @@ xmlFullTocData += '            <TocEntry Title=\"Configurer WPC for Chrome dans 
 xmlFullTocData += '            <TocEntry Title=\"Utiliser\" Link=\"/T_WPC/Chrome/WPCC_Utilisation.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '            <TocEntry Title=\"Dépanner\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        </TocEntry>';
-xmlFullTocData += '        <TocEntry Title=\"for iOS\" Link=\"/T_WPC/iOS/WPCI_Presentation_v61.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"1\">';
+xmlFullTocData += '        <TocEntry Title=\"for iOS\" Link=\"/T_WPC/iOS/WPCI_Presentation_v61.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"3\">';
+xmlFullTocData += '            <TocEntry Title=\"Prérequis\" Link=\"/T_WPC/iOS/WPCI_Prerequis_v61.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
+xmlFullTocData += '            <TocEntry Title=\"Installer l\'app. à partir de l\'ipa\" Link=\"/T_WPC/iOS/WPCI_Installation_v61.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '            <TocEntry Title=\"Utiliser\" Link=\"/T_WPC/iOS/WPCI_Utilisation_v61.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        </TocEntry>';
 xmlFullTocData += '        <TocEntry Title=\"for Windows\" Link=\"/T_WPC/Windows/WPCW_Presentation.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"13\">';
@@ -609,7 +610,7 @@ xmlFullTocData += '    <TocEntry Title=\"Sécurité - CVE\" ComputedFirstTopic=\
 xmlFullTocData += '        <TocEntry Title=\"CVE-2025-58384 : exécution de code à distance\" Link=\"/J_Securite/cve-2025-58384.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"CVE-2025-58385 : Usurpation d’identité, vol de données\" Link=\"/J_Securite/cve-2025-58385.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '    </TocEntry>';
-xmlFullTocData += '    <TocEntry Title=\"Utiliser Watchdoc\" StartSection=\"false\" Link=\"/S_AideUtilisateurFinal/Util_fr.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"16\">';
+xmlFullTocData += '    <TocEntry Title=\"Utiliser Watchdoc\" StartSection=\"false\" Link=\"/S_AideUtilisateurFinal/Util_fr.htm\" ComputedFirstTopic=\"false\" DescendantCount=\"17\">';
 xmlFullTocData += '        <TocEntry Title=\"Première utilisation\" Link=\"/S_AideUtilisateurFinal/Premiere_Utilisation_WD.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Imprimer avec Watchdoc\" Link=\"/S_AideUtilisateurFinal/Util_Imprimer_WD.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Imprimer avec WPC for Windows\" Link=\"/S_AideUtilisateurFinal/Util_Initialiser_WPCW.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"3\">';
@@ -619,6 +620,7 @@ xmlFullTocData += '            <TocEntry Title=\"Imprimer en cas de panne\" Link
 xmlFullTocData += '        </TocEntry>';
 xmlFullTocData += '        <TocEntry Title=\"Installer l\'app. mobile Android\" Link=\"/T_WPC/Android/WPCA_Installation_v61.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Imprimer avec l\'app. mobile Android\" Link=\"/T_WPC/Android/WPCA_Utilisation_v61.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
+xmlFullTocData += '        <TocEntry Title=\"Imprimer avec l\'app. mobile iOS\" Link=\"/T_WPC/iOS/WPCI_Utilisation_v61.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Imprimer avec Skyprint\" Link=\"/C_Configurer/ConfigWEScan/Skyprint_Utiliser.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Numériser avec Watchdoc\" Link=\"/S_AideUtilisateurFinal/Numeriser.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';
 xmlFullTocData += '        <TocEntry Title=\"Dissocier son badge\" Link=\"/S_AideUtilisateurFinal/DissocierBadge_WD.htm\" xmlns:MadCap=\"http://www.madcapsoftware.com/Schemas/MadCap.xsd\" ComputedFirstTopic=\"false\" DescendantCount=\"0\" />';

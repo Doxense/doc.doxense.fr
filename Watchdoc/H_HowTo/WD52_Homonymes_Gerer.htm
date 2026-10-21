@@ -90,8 +90,8 @@
     <body>
         <div class="foundation-wrap off-canvas-wrapper">
             <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
-                <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
-                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Retour" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expanded-event="open.zf.drilldown closed.zf.drilldown" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                <aside class="off-canvas position-left" role="complementary" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Retour" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-left is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expanded-event="open.zf.drilldown closed.zf.drilldown" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
                     </ul>
                 </aside>
                 <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
@@ -201,7 +201,7 @@
                                     <div class="topic-layout">
                                         <main class="topic-main">
                                             <div role="main" id="mc-main-content">
-                                                <h1 id="WatchdocAnnuairesGérerlhomonymie" data-magellan-target="WatchdocAnnuairesGérerlhomonymie"><a name="aanchor438"></a>
+                                                <h1 id="WatchdocAnnuairesGérerlhomonymie" data-magellan-target="WatchdocAnnuairesGérerlhomonymie"><a name="aanchor439"></a>
                                                     <MadCap:concept term="WD" />Watchdoc - Annuaires - Gérer l'homonymie</h1>
                                                 <h2 id="Préambule" data-magellan-target="Préambule">Préambule</h2>
                                                 <p>Comme Watchdoc permet la gestion des impressions propres à chaque utilisateur d'une entité, le cas spécifique de comptes utilisateurs homonymes peut présenter une difficulté de configuration.</p>
@@ -240,21 +240,19 @@
                                                 <p>&#160;</p>
                                                 <p>L'homonymie évoquée ici n'est pas une homonymie pure portant sur des utilisateurs ayant les mêmes prénoms et noms, mais sur l'homonymie des comptes utilisateurs (SAMAccount Name). Ainsi, Adrien ou Alice Dupont, qui ne sont pas des homonymes, possèdent tous deux un compte (SAMAccoutnName) a.dupont similaire.&#160;</p>
                                                 <p>
-                                                    <br />
-                                                    <img src="../Z_Resources/Images/03_Schemas/Homonymie.png" style="width: 700px;height: auto;" />
+                                                    <br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../Z_Resources/Images/03_Schemas/Homonymie.png"><img class="MCPopupThumbnail img" data-mc-width="4289" data-mc-height="2006" src="../Z_Resources/Images/03_Schemas/Homonymie.png" tabindex="" style="width: 700px;height: auto;mc-thumbnail: popup;mc-thumbnail-max-height: 1200px;max-height: 1200px;" /></a>
                                                 </p>
                                                 <p>&#160;</p>
                                                 <p>&#160;</p>
                                                 <p>Si l'entreprise A d'Adrien Dupont fusionne avec l'entreprise B d'Alice,  deux comptes <strong>a.dupont</strong> seront présents dans l'annuaire META de l'entreprise C née de cette fusion.&#160;Ne pas tenir compte de l'homonymie exposerait les utilisateurs au risque de débloquer des impressions appartenant à un utilisateur homonyme. Ce qui, pour certains documents sensibles, poserait problème :</p>
                                                 <p>&#160;</p>
-                                                <p> <img src="../Z_Resources/Images/03_Schemas/Homonymie3.png" style="width: 700px;height: auto;" /></p>
+                                                <p> <a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../Z_Resources/Images/03_Schemas/Homonymie3.png"><img class="MCPopupThumbnail img" data-mc-width="1280" data-mc-height="720" src="../Z_Resources/Images/03_Schemas/Homonymie3.png" tabindex="" style="width: 700px;height: auto;mc-thumbnail: popup;mc-thumbnail-max-height: 1200px;max-height: 1200px;" /></a></p>
                                                 <p>
                                                     <br />
                                                 </p>
                                                 <p>Pour résoudre ce problème, Watchdoc  intègre une fonction permettant d'ajouter un domaine au compte utilisateur dans l'annuaire META afin de distinguer les comptes homonymes.</p>
                                                 <p>&#160;</p>
-                                                <p>
-                                                    <img src="../Z_Resources/Images/03_Schemas/Homonymie4.png" style="width: 700px;height: auto;" />
+                                                <p><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../Z_Resources/Images/03_Schemas/Homonymie4.png"><img class="MCPopupThumbnail img" data-mc-width="1280" data-mc-height="720" src="../Z_Resources/Images/03_Schemas/Homonymie4.png" tabindex="" style="width: 700px;height: auto;mc-thumbnail: popup;mc-thumbnail-max-height: 1200px;max-height: 1200px;" /></a>
                                                 </p>
                                                 <h2 id="Procédure" data-magellan-target="Procédure">Procédure</h2>
                                                 <p>Pour activer la gestion de l'homonymie dans Watchdoc, il est nécessaire :</p>

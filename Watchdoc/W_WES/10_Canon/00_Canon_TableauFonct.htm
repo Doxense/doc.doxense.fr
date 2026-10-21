@@ -92,8 +92,8 @@
     <body>
         <div class="foundation-wrap off-canvas-wrapper">
             <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
-                <aside class="off-canvas position-right" role="complementary" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
-                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Retour" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-right is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expanded-event="open.zf.drilldown closed.zf.drilldown" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                <aside class="off-canvas position-left" role="complementary" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Retour" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-left is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expanded-event="open.zf.drilldown closed.zf.drilldown" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
                     </ul>
                 </aside>
                 <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
@@ -200,7 +200,7 @@
                                         </div>
                                     </div>
                                     <div class=".body-container" role="main" id="mc-main-content">
-                                        <h1><a name="aanchor314"></a>
+                                        <h1><a name="aanchor316"></a>
                                             <MadCap:concept term="WES" />
                                             <img src="../../Z_Resources/Images/02_Captures/WES/Logo_Canon.png" style="width: 230px;height: 50px;" /><![CDATA[            ]]><MadCap:conditionalText data-mc-conditions="Langues.FR">Fonctionnalités du WES Canon </MadCap:conditionalText></h1>
                                         <p>
@@ -486,7 +486,7 @@ Cette modification peut être proposée ou imposée.</span></a> (ou transformati
                                                     </td>
                                                     <td class="TableStyle-Standard-BodyE-Regular-Row2"><span style="color: #ff4500;">✖</span>
                                                     </td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2"><span style="color: #3cb371;">✔</span> <span style="font-size: 12pt;">avec PCL6</span><b style="font-size: 12pt;"> *</b></td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row2"><span style="color: #3cb371;">✔</span> <span style="font-size: 12pt;">avec PCL6</span><b style="font-size: 12pt;">*</b>uniquement <br /><span style="color: #ff4500;">✖</span> pas avec CPCA</td>
                                                 </tr>
                                                 <tr class="TableStyle-Standard-Body-Row1">
                                                     <td class="TableStyle-Standard-BodyE-Regular-Row1">
@@ -496,9 +496,7 @@ Cette fonction n'est possible qu'avec des fichiers de format PCL 6</span></a>
                                                     </td>
                                                     <td class="TableStyle-Standard-BodyE-Regular-Row1"><span style="color: #ff4500;">✖</span>
                                                     </td>
-                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1">
-                                                        <p><span style="color: #3cb371;">✔</span>  avec PCL6 <b>*</b></p>
-                                                    </td>
+                                                    <td class="TableStyle-Standard-BodyD-Regular-Row1"><span style="color: #3cb371;">✔</span> <span style="font-size: 12pt;">avec PCL6</span><b style="font-size: 12pt;">*</b>uniquement <br /><span style="color: #ff4500;">✖</span> pas avec CPCA</td>
                                                 </tr>
                                                 <tr class="TableStyle-Standard-Body-Row2">
                                                     <td class="TableStyle-Standard-BodyE-Regular-Row2">
@@ -832,7 +830,9 @@ Ce mode est configuré dans le profil WES appliqué sur le périphérique.</span
                                             </tbody>
                                         </table>
                                         <p>&#160;</p>
-                                        <p>* avec PCL6, qui n'intègre pas les éléments du protocole CPCA de Canon. Si le protocole PCL6 n'est pas strictement respecté, les fonctionnalités de transformation de la file d'attente et de suppression de pages peuvent être prises en charge à l'aide d'un autre pilote.</p>
+                                        <p>* Si le protocole PCL6 n'est pas strictement respecté et que le protocole intègre des éléments du protocole <a href="#" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open glossaryTerm MCTextPopupHotSpot_" glossTerm="Glossary.Term137">CPCA<img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" /><span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"> </span>Common Peripheral Controlling Architecture : protocole propriétaire de Canon conçu pour contrôler de manière unifiée les fonctions des périphériques multifonctions tels que l'impression, la copie et la numérisation, en utilisant une structure orientée objet pour la gestion et le monitoring des statuts.
+Ce protocole n'est pas compatible avec la transformation des travaux du WES.</span></a> (langage propriétaire de Canon), les fonctionnalités de transformation des travaux en  file d'attente, notamment le changement des options d'impression et la suppression de pages ne fonctionnent pas.&#160;<br /></p>
+                                        <p>Ces fonctionnalités de transformation peuvent être prises en charge à l'aide d'un autre pilote.</p>
                                         <p>&#160;</p>
                                         <p>** La fonction Canon ScanToFolder nécessite une modification de la fonction suivante sur le périphérique d'impression : Paramètres de fonction/Envoyer/Paramètres communs/Méthode de spécification du dossier personnel :</p>
                                         <p>Sélectionnez « Utiliser le serveur de connexion » et décochez « Utiliser les informations d'authentification de chaque utilisateur ».</p>

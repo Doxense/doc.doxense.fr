@@ -26,6 +26,9 @@
         <meta name="phrase" value="tolérance de panne" />
         <meta name="phrase" value="tolérance aux pannes" />
         <meta name="phrase" value="mode mutilserveurs" />
+        <meta name="phrase" value="ha" />
+        <meta name="phrase" value="H A" />
+        <meta name="phrase" value="high availability" />
         <meta name="feedback" value="true" />
         <meta name="source-type" value="micro-content" />
         <meta name="truncated" value="false" />
@@ -47,15 +50,15 @@
     </head>
     <body>
         <h2>Haute-disponibilité</h2>
-        <p>La haute-disponibilité (ou HA pour High Availability) est la aualité d'un système, ou d'une partie d'un système (ex. : un périphérique), dont le pourcentage de temps durant lequel on peut l'utiliser est très élevé par rapport au temps global où il est en demande. 
+        <p>La haute-disponibilité (ou HA pour High Availability) est la qualité d'un système, ou d'une partie d'un système (un périphérique, par ex.), dont le pourcentage de temps d'utilisation est très élevé par rapport au temps global où il est en demande. 
 (Source : OQLF)</p>
         <p>&#160;</p>
-        <p>La haute-disponibilité de Watchdoc repose sur la surveillance du Service Watchdoc et du spooler MS Windows<sup>®</sup> ainsi que sur la sécurisation de la connectivité entre le poste de travail et le serveur d'impression et entre le périphérique d'impression et le serveur d'impression.</p>
+        <p>La haute-disponibilité de Watchdoc repose sur la surveillance du Service Watchdoc et du spooler MS Windows<sup>®</sup> ainsi que sur la sécurisation de la connectivité entre le poste de travail et le serveur d'impression,, mais aussi entre le périphérique d'impression et le serveur d'impression.</p>
         <p>&#160;</p>
-        <p>La haute-disponibilité des WES&#160;englobe 3 modes différents*. </p>
+        <p>La haute-disponibilité des WES&#160;englobe 3 modes différents<b>*</b>. </p>
         <ul>
             <li>
-                <p>Le mode <b>multiserveur</b> : ce mode permet d'associer au serveur d'impression principal un ou des serveurs de secours. Ces serveurs de secours sont ainsi capables de traiter les requêtes en cas de panne du serveur principal.</p>
+                <p>Le mode <b>multiserveur</b> : ce mode permet d'associer  un ou des serveurs de secours au serveur d'impression principal. Ces serveurs de secours sont ainsi capables de traiter les requêtes en cas de panne du serveur principal.</p>
                 <p>Ce mode n'est pas compatible avec tous les modèles de périphériques (fonctionne avec les WES développés en Java). Il doit être configuré sur le profil WES installé sur le périphérique (cf.&#160;Configurer leprofil WES, section &gt; options de secours).</p>
                 <p>&#160;</p>
             </li>
@@ -67,10 +70,10 @@
             <li>
                 <p>Le mode <b>hors-ligne</b> : ce mode rend le périphérique d'impression capable de fonctionner de manière dégradée dans le cas où les serveurs d'impression (principal et de secours) sont en panne. En mode <b>hors-ligne, l'impression est impossible</b>, mais les autres fonctions du périphérique telles que la photocopie, le fax et le scan peuvent être proposées.</p>
                 <p>En cas de panne des serveurs, si le mode hors-ligne est désactivé, toutes les fonctions du périphérique sont bloquées jusqu'à dépannage du serveur.</p>
-                <p>Ce mode est configuré dans le profil WES installé sur le périphérique (cf.&#160;Configurer leprofil WES, section &gt; options de secours)..</p>
+                <p>Ce mode est configuré dans le profil WES installé sur le périphérique (cf.&#160;Configurer leprofil WES, section &gt; options de secours).</p>
             </li>
         </ul>
         <p>&#160;</p>
-        <p>* ces modes ne sont pas compatibles avec tous les modèles. Rendez-vous dans la page  <b>Fonctionnalités</b> de votre WES pour vérifier.</p>
+        <p>* ces modes ne sont pas compatibles avec tous les modèles. Rendez-vous dans la page  <b>Fonctionnalités</b> de votre <a href="../../../../W_WES/WES_disponibles.htm" target="_blank">WES</a> pour vérifier.</p>
     </body>
 </html>
