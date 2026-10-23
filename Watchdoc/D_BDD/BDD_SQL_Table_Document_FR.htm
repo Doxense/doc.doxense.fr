@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr" xml:lang="fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="Outils complémentaires|Base de données SQL" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="HTML5">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="fr" xml:lang="fr" class="_Skins_HTML5_Cardiff__Side_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-has-content-body="True" data-mc-toc-path="Configurer Watchdoc|Base de données|Structure BDD SQL" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="HTML5">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
@@ -302,7 +302,7 @@
                                                                 <p>&#160;</p>
                                                             </td>
                                                             <td style="font-size: 12pt;" class="TableStyle-Standard-BodyD-Regular-Row2">
-                                                                <p>Nom de la file sur laquelle le document est imprimé</p>
+                                                                <p>Identifiant de la file sur laquelle le document est imprimé</p>
                                                             </td>
                                                         </tr>
                                                         <tr class="TableStyle-Standard-Body-Row1">
@@ -1237,667 +1237,669 @@
                                                     </tbody>
                                                 </table>
                                                 <p>&#160;</p>
-                                                <table>
-                                                    <col style="font-size: 12pt;" />
-                                                    <col style="font-size: 12pt;" />
-                                                    <col style="font-size: 12pt;" />
-                                                    <col style="font-size: 12pt;" />
-                                                    <col style="font-size: 12pt;" />
-                                                    <tr>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">Les champs IN contiennent des valeurs relatives au document initial, avant transformation éventuelle. Comparées aux valeurs relatives au document traité, ces données permettent de savoir si le document a subi des transformations avant impression :</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td style="font-weight: bold;font-size: 12pt;">Champ</td>
-                                                        <td style="font-weight: bold;font-size: 12pt;">Type</td>
-                                                        <td style="font-weight: bold;font-size: 12pt;">Requis</td>
-                                                        <td style="font-weight: bold;font-size: 12pt;">Clé primaire</td>
-                                                        <td style="font-weight: bold;font-size: 12pt;">Description</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">docINCOLOR</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">tinyint</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">Couleur : 0=document en noir&amp;blanc, 1=document couleur.</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">docINSHEETS</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">int</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">Nombre de feuilles du document.</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">docINLPAGES</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">int</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">Nombre de pages du document unitaire (non multiplié par le nombre d’exemplaires).</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">docINCPAGES</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">int</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">Nombre de pages couleurs du document.</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">docINDUPLEX</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">tinyint</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">Mode d'impression (0=simplex, 1=duplex)</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">docINNUMCOPIES</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">int</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">Nombre d’exemplaires demandés.</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">docCUTCPAGES</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">int</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">Nombre de pages couleurs coupées</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">docTIMESPOOLING</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">float</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">RFU : réservé pour un usage futur </p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">docTIMEWAITPARSING</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">float</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">RFU</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">docTIMEPARSING</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">float</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">RFU</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">docTIMEAUTHUSER</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">float</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">RFU</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">docTIMEWAITUSER</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">float</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">RFU</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">docTIMEWAITQUEUE</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">float</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">RFU</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">docTIMEPRINTING</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">float</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">RFU</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">docCOMPLETED
+                                                <p style="font-size: 12pt;">Les champs IN contiennent des valeurs relatives au document initial, avant transformation éventuelle. Comparées aux valeurs relatives au document traité, ces données permettent de savoir si le document a subi des transformations avant impression :</p>
+                                                <p>&#160;</p>
+                                                <table style="width: 100%;mc-table-style: url('../Resources/TableSlylesheets/Standard.css');" class="TableStyle-Standard" cellspacing="0">
+                                                    <col class="TableStyle-Standard-Column-Regular" />
+                                                    <col style="width: 164px;" class="TableStyle-Standard-Column-Regular" />
+                                                    <col style="width: 52px;" class="TableStyle-Standard-Column-Regular" />
+                                                    <col style="width: 106px;" class="TableStyle-Standard-Column-Regular" />
+                                                    <col class="TableStyle-Standard-Column-Regular" />
+                                                    <tbody>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td style="font-weight: bold;font-size: 12pt;text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;" class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p><strong>Champ</strong>
+                                                                </p>
+                                                            </td>
+                                                            <td style="font-weight: bold;font-size: 12pt;text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;" class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p><strong>Type</strong>
+                                                                </p>
+                                                            </td>
+                                                            <td style="font-weight: bold;font-size: 12pt;text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;" class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p><b>Requis</b>
+                                                                </p>
+                                                            </td>
+                                                            <td style="font-weight: bold;font-size: 12pt;text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;" class="TableStyle-Standard-BodyE-Regular-Row2">
+                                                                <p><b>CléPrimaire</b>
+                                                                </p>
+                                                            </td>
+                                                            <td style="font-weight: bold;font-size: 12pt;text-align: left;vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;" class="TableStyle-Standard-BodyD-Regular-Row2">
+                                                                <p><b>Description</b>
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">docINCOLOR</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">tinyint</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">Couleur : 0=document en noir&amp;blanc, 1=document couleur.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">docINSHEETS</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">int</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">Nombre de feuilles du document.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">docINLPAGES</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">int</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">Nombre de pages du document unitaire (non multiplié par le nombre d’exemplaires).</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">docINCPAGES</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">int</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">Nombre de pages couleurs du document.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">docINDUPLEX</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">tinyint</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">Mode d'impression (0=simplex, 1=duplex)</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">docINNUMCOPIES</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">int</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">Nombre d’exemplaires demandés.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">docCUTCPAGES</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">int</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">Nombre de pages couleurs coupées</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">docTIMESPOOLING</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">float</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-size: 12pt;">Temps passé en tant que spool</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">docTIMEWAITPARSING</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">float</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1" style="font-size: 12pt;">Temps d'attente avant l'analyse</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">docTIMEPARSING</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">float</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-size: 12pt;">Temps d'analyse</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">docTIMEAUTHUSER</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">float</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1" style="font-size: 12pt;">Temps nécessaire à l'authentification de l'utilisateur</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">docTIMEWAITUSER</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">float</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-size: 12pt;">Temps pendant lequel le travail a attendu l'utilisateur (libération)</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">docTIMEWAITQUEUE</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">float</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1" style="font-size: 12pt;">Temps d'attente dans la file d'attente</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">docTIMEPRINTING</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">float</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">Durée de l'impression</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">docCOMPLETED
                     </p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">tinyint</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">docMODIFIED 
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">tinyint</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1" style="font-size: 12pt;">
+                                                                <p>1 si la tâche est terminée</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">docMODIFIED 
                     </p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">smallint
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">smallint
                     </p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">docPHYSICALIN</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">Tinyint
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-size: 12pt;">
+                                                                <p>1 si Watchdoc a modifié le travail d'impression (transformation)</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">docPHYSICALIN</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">Tinyint
                     </p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">docPHYSICALOUT
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1" style="font-size: 12pt;">
+                                                                <p>1 si l'opération part d'un support physique (numérisation, copie).</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">docPHYSICALOUT
                     </p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">Tinyint
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">Tinyint
                     </p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">docSAVING</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">tinyint</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">docTRANSFOPROFIL
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-size: 12pt;">
+                                                                <p>1 si l'opération fournit un support physique (impression, copie).</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">docSAVING</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">tinyint</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1" style="font-size: 12pt;">
+                                                                <p>1 si le projet a permis de réaliser une économie</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">docTRANSFOPROFIL
                     </p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">Varchar (128)
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">Varchar (128)
                     </p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">docSPLRJobid
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-size: 12pt;">
+                                                                <p>Profil de transformation de travaux appliqué (actuellement NULL).</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">docSPLRJobid
                     </p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">Varchar (64)
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">Varchar (64)
                     </p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">docSPLRUserid
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">Identifiant du spool (tronqué par * si supérieur à 64 caractères)</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">docSPLRUserid
                     </p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">Varchar (128)
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">Varchar (128)
                     </p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">docSPLRSrvid
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">Identifiant de l'utilisateur ayant envoyé le spool</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">docSPLRSrvid
                     </p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">Varchar (64)
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">Varchar (64)
                     </p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">DocSPLRSrvtype
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1" style="font-size: 12pt;">
+                                                                <p>Identifiant du serveur du spooler</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">DocSPLRSrvtype
                     </p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">Varchar (16)
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">Varchar (16)
                     </p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">DocSPLRSrvver
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">Type du serveur du spooler : local ou distant (remote)</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">DocSPLRSrvver
                     </p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">Varchar (32)
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">Varchar (32)
                     </p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">DocSPLRDate
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1" style="font-size: 12pt;">
+                                                                <p>Version Watchdoc du serveur local (NULL pour un serveur distant).</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">DocSPLRDate
                     </p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">Datetime
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">Datetime
                     </p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">DocSPLRretries
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-size: 12pt;">
+                                                                <p>Date du spooler (actuellement NULL)</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">DocSPLRretries
                     </p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">smallint</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">docACTORType
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">smallint</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1" style="font-size: 12pt;">
+                                                                <p>Nombre de tentatives du spooler (actuellement NULL)</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">docACTORType
                     </p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">Varchar (32)
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">Varchar (32)
                     </p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">docACTORVer
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-size: 12pt;">
+                                                                <p>Application à l'origine de la soumission (winspl par défaut)</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">docACTORVer
                     </p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">Varchar (32)
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">Varchar (32)
                     </p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">docACTOROrigin
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1" style="font-size: 12pt;">
+                                                                <p>Version de cette application (≤ 32 caractères)</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">docACTOROrigin
                     </p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">Varchar (32)
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">Varchar (32)
                     </p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">docACTORUserID
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-size: 12pt;">
+                                                                <p>Origine signalée par l'application</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">docACTORUserID
                     </p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">Varchar (128)
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">Varchar (128)
                     </p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">docACTORTargetTYPE
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1" style="font-size: 12pt;">
+                                                                <p>Utilisateur tel qu'il est connu par l'application</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">docACTORTargetTYPE
                     </p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">Varchar (32)
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">Varchar (32)
                     </p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">docACTORTargetInto
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-size: 12pt;">
+                                                                <p>Cible de l'acteur (réservé, actuellement NULL)</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">docACTORTargetInto
                     </p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">Varchar (128)
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">Varchar (128)
                     </p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                        <td>
-                                                            <p style="font-size: 12pt;">&#160;</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>docSOURCETYPE</td>
-                                                        <td>Varchar (64)
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1" style="font-size: 12pt;">
+                                                                <p style="font-size: 12pt;">Cible de l'acteur (réservé, actuellement NULL)</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">docSOURCETYPE</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">Varchar (64)
 </td>
-                                                        <td>&#160;</td>
-                                                        <td>&#160;</td>
-                                                        <td>&#160;</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>docLOCATIONID
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">&#160;</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">&#160;</td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-size: 12pt;">Type de la source</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">docLOCATIONID
 </td>
-                                                        <td>Varchar (64)
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">Varchar (64)
 </td>
-                                                        <td>&#160;</td>
-                                                        <td>&#160;</td>
-                                                        <td>&#160;</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>docLARGE</td>
-                                                        <td>
-                                                            <p>tinyint</p>
-                                                        </td>
-                                                        <td>&#160;</td>
-                                                        <td>&#160;</td>
-                                                        <td>&#160;</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>docEXTRA1
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">&#160;</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">&#160;</td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1" style="font-size: 12pt;">Identifiant géographique de la file (renvoie vers locations.locID, 6.0).</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">docLARGE</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">
+                                                                <p>tinyint</p>
+                                                            </td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">&#160;</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">&#160;</td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-size: 12pt;">1 = grand format (A3 ou surface par page supérieure au seuil)<br />0 = petit format<br />Permet d'éviter la logique CASE dans les rapports</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">docEXTRA1
 </td>
-                                                        <td>nvarchar(max)</td>
-                                                        <td>&#160;</td>
-                                                        <td>&#160;</td>
-                                                        <td>&#160;</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>docEXTRA2
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">nvarchar(max)</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">&#160;</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row1" style="font-size: 12pt;">&#160;</td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row1" style="font-size: 12pt;">champ réservé pour un usage ultérieur</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row2">
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">docEXTRA2
 </td>
-                                                        <td>nvarchar(max)</td>
-                                                        <td>&#160;</td>
-                                                        <td>&#160;</td>
-                                                        <td>&#160;</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>docEXTRA3</td>
-                                                        <td>float (null)</td>
-                                                        <td>&#160;</td>
-                                                        <td>&#160;</td>
-                                                        <td>&#160;</td>
-                                                    </tr>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">nvarchar(max)</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">&#160;</td>
+                                                            <td class="TableStyle-Standard-BodyE-Regular-Row2" style="font-size: 12pt;">&#160;</td>
+                                                            <td class="TableStyle-Standard-BodyD-Regular-Row2" style="font-size: 12pt;">champ réservé pour un usage ultérieur</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-Standard-Body-Row1">
+                                                            <td class="TableStyle-Standard-BodyB-Regular-Row1" style="font-size: 12pt;">docEXTRA3</td>
+                                                            <td class="TableStyle-Standard-BodyB-Regular-Row1" style="font-size: 12pt;">float (null)</td>
+                                                            <td class="TableStyle-Standard-BodyB-Regular-Row1" style="font-size: 12pt;">&#160;</td>
+                                                            <td class="TableStyle-Standard-BodyB-Regular-Row1" style="font-size: 12pt;">&#160;</td>
+                                                            <td class="TableStyle-Standard-BodyA-Regular-Row1" style="font-size: 12pt;">champ réservé pour un usage ultérieur</td>
+                                                        </tr>
+                                                    </tbody>
                                                 </table>
                                                 <p>&#160;</p>
                                                 <h4>Index
