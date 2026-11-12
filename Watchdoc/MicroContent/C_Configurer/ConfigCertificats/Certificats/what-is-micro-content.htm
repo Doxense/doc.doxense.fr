@@ -25,6 +25,8 @@
         <meta name="phrase" value="sécuriser ses portails" />
         <meta name="phrase" value="New Phrase 2" />
         <meta name="phrase" value="gérer les certificats des portails" />
+        <meta name="phrase" value="certificat subordonné" />
+        <meta name="phrase" value="subsidiary certificate" />
         <meta name="feedback" value="true" />
         <meta name="source-type" value="micro-content" />
         <meta name="truncated" value="false" />
@@ -45,7 +47,7 @@
         </script>
     </head>
     <body>
-        <h1>Point d'entrée du serveur web et certificats</h1>
+        <h2>Point d'entrée du serveur web et certificats</h2>
         <p>Watchdoc échange des informations avec différents périphériques (imprimantes, MFP, lecteurs de cartes) grâce à des interfaces telles que WSC, les WES et autres API (dont la Print API&#160;pour WPC&#160;et Skyprint) ainsi que  la page "Mon compte". </p>
         <p>&#160;</p>
         <p>Pour sécuriser ces pages (portails) accessibles via Internet, Watchdoc utilise le protocole TLS/SSL (via les ports 5744, 5753 et 5754) reposant sur  des certificats auto-signés fournis par défaut.</p>
@@ -59,5 +61,7 @@
         <p>Dans l'interface <strong>Serveur Web</strong>, vous pouvez modifier les points d'entrées du serveur web existants et en créer de nouveaux (cf.&#160;<a href="../../../../C_Configurer/ConfigServeurWeb/Config_ServeurWeb_Presentation.htm">Configurer les points d'entrée du serveur web</a>).<br />Attention, toutefois à ne pas désactiver le point d'entrée _crystal, sous peine de rendre Watchdoc inopérant ! <br /></p>
         <p>&#160;</p>
         <p>Vous pouvez aussi y gérer les certificats nécessaires à la sécurisation du serveur web de Watchdoc (cf.&#160;<a href="../../../../C_Configurer/ConfigCertificats/ConfigCertificats_Procedure.htm">Gérer les certificats</a>).</p>
+        <p>&#160;</p>
+        <p>Notez que pour les marques Canon (avec application d'authentification antérieure à v 2.7), Kyocera et Ricoh, Watchdoc n'accepte pas les certificats signés par des AC subordonnées.</p>
     </body>
 </html>

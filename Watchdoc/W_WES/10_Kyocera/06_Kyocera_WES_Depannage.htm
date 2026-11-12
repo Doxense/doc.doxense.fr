@@ -288,6 +288,22 @@
                                                     </li>
                                                 </ol>
                                                 <hr />
+                                                <h2 id="LorsdelinstallationduWESlerapportdétatindiqueLapplicationestinstalléemaisnedisposepasdeserveurnov2026" data-magellan-target="LorsdelinstallationduWESlerapportdétatindiqueLapplicationestinstalléemaisnedisposepasdeserveurnov2026">Lors de l'installation du WES, le rapport d'état indique "L'application est installée mais ne dispose pas de serveur" - nov. 2026</h2>
+                                                <p><strong>Contexte</strong>
+                                                </p>
+                                                <p>En tant qu'administrateur, je configure Watchdoc avec un certificat signé par une autorité de certification subordonnée.&#160;<br /></p>
+                                                <p>Lorsque j'installe le WES, le rapport d'état de l'application embarquée m'informe que "L'application est installée mais ne dispose pas de serveur".</p>
+                                                <p>Sur l'écran du périphérique d'impression, le message d'erreur suivant s'affiche : "Aucune connexion au serveur".</p>
+                                                <p>Dans les logs, une trace sur le réseau met en évidence que Canon refuse le certificat présenté par le serveur (Certificate Unknown) tandis que le certificat issu de la PKI est correctement présenté au périphérique d'impression,</p>
+                                                <p>&#160;</p>
+                                                <p><strong>Cause</strong>
+                                                </p>
+                                                <p>Cette anomalie est due à la nature du certificat qui n'est pas un certificat racine mais un certificat subordonné.</p>
+                                                <p>&#160;</p>
+                                                <p><strong>Résolution</strong>
+                                                </p>
+                                                <p style="text-align: left;">Avec une application d'authentification Canon antérieure à la v. 2.7, il convient d'installer un certificat racine.&#160;<br />A partir de la version 2.8 del'application d'authentification Canon, il est possible d'utiliser un certificat subordonné mais cela necessite d'installer les certificats du serveur dans le périphérique d'impression.</p>
+                                                <hr />
                                                 <h2 id="Transformationdetravauxtransformationdespoolsnonpriseencompteoct2026" data-magellan-target="Transformationdetravauxtransformationdespoolsnonpriseencompteoct2026">Transformation <a name="CPCA" id="CPCA"></a>de travaux (transformation de spools) non prise en compte - oct. 2026</h2>
                                                 <p><strong>Contexte</strong>
                                                 </p>
@@ -430,6 +446,8 @@
                                                         <li class="tree-node"><a href="#ActiverlestracesduWESWEStraces">Activer les traces du WES (WEStraces)</a>
                                                         </li>
                                                         <li class="tree-node"><a href="#Travauxdenum%C3%A9risationfaxetphotocopienoncomptabilis%C3%A9s">Travaux de numérisation, fax et photocopie non comptabilisés</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#LorsdelinstallationduWESlerapportd%C3%A9tatindiqueLapplicationestinstall%C3%A9emaisnedisposepasdeserveurnov2026">Lors de l'installation du WES, le rapport d'état indique "L'application est installée mais ne dispose pas de serveur" - nov. 2026</a>
                                                         </li>
                                                         <li class="tree-node"><a href="#Transformationdetravauxtransformationdespoolsnonpriseencompteoct2026">Transformation de travaux (transformation de spools) non prise en compte - oct. 2026</a>
                                                         </li>
