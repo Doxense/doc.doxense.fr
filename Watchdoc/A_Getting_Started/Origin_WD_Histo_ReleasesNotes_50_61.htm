@@ -209,7 +209,85 @@
                                                     <img src="../Z_Resources/Images/01_Generiques/icon_pdf.png" style="width: 30px;height: 30px;" />&#160;<a href="WD_Notes_de_Versions.pdf" target="_blank">Téléchargez l'historique des notes de versions de Watchdoc 5.0 - 6.1 (.pdf)</a><span><span style="background-color: #ffffff; color: #ffffff;">Release notes</span></span></p>
                                                 <hr width="100%" size="0" align="center" data-mc-conditions="General.Online" />
                                                 <h2 data-mc-conditions="General.Online" id="Watchdoc61x" data-magellan-target="Watchdoc61x">Watchdoc 6.1.x</h2>
-                                                <h2 id="WatchdocetWSC6115787WPCforWindows706185etSkyprint70618504112026" data-magellan-target="WatchdocetWSC6115787WPCforWindows706185etSkyprint70618504112026">Watchdoc et WSC <span class="mc-variable Versions.Watchdoc variable">6.1.1.5787</span>,  WPC for Windows <span class="mc-variable Versions.WPC_for_Windows variable">7.0.6185</span> et Skyprint <span class="mc-variable Versions.Skyprint variable">7.0.6185</span> - 04/11/2026</h2>
+                                                <h2 id="WatchdocetWSC6115801WPCforWindows706200etSkyprint70619919112026" data-magellan-target="WatchdocetWSC6115801WPCforWindows706200etSkyprint70619919112026">Watchdoc et WSC <span class="mc-variable Versions.Watchdoc variable">6.1.1.5801</span>,  WPC for Windows <span class="mc-variable Versions.WPC_for_Windows variable">7.0.6200</span> et Skyprint <span class="mc-variable Versions.Skyprint variable">7.0.6199</span> - 19/11/2026</h2>
+                                                <p style="color: #000000;"><b style="color: #696969;">Améliorations</b>
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <p style="font-weight: bold;">Watchdoc : </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>suppression des prérequis d'installation .net-hosting et URL-Rewrite non-nécessaires en v.&#160;6.1.1 à partir de cette version</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>amélioration de la sauvegarde lors d'une mise à jour : sauvegarde du driver store ainsi que des fichiers de logs watchdoc.log + watchdoc.log.bak.X au minimum</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>lors de l'installation, ajout automatique du champs DNS (paramètre "Remote Watchdoc web server" dans l'interface Kernel options)</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>correction de la gestion de la synchronisation des clef AES servant au chiffrement des secrets utilisateurs</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>dans une configuration interserveur, désactivation du cache de la configuration SNMPv3 du groupe sur les files d'impression appartenant au groupe</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>ajout de traces pour améliorer le diagnostic en cas de configuration de files invalides (notamment lorsque la file shadow a été retirée manuellement  d’une file d’impression)</p>
+                                                            </li>
+                                                            <li>
+                                                                <p>Connexion impossible &amp; Pas de message identifiant Erroné si connexion login/PIN</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p style="font-weight: bold;">WSC&#160;: </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p>lors de la création de files d'impression par import .csv, il est désormais possible de préciser le protocole d'impression (RAW, LPR, IPP, IPPS) dans la nouvelle colonne "DefaultProtocole"</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p><b>WES&#160;Konica Minolta :</b>amélioration de la gestion de l'accès public depuis le WES, notamment pour permettre l'accès à certaines fonctions d'un MFP lorsque la fonction d'impression n'est pas opérationnelle</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><b>WES Xerox :</b> ajout du support des Xerox PrimeLink C9265</p>
+                                                    </li>
+                                                </ul>
+                                                <p style="font-weight: bold;">&#160;</p>
+                                                <p style="font-weight: bold;">Correctifs</p>
+                                                <ul>
+                                                    <li>
+                                                        <p style="font-weight: bold;">Watchdoc : </p>
+                                                        <ul>
+                                                            <li>
+                                                                <p style="font-weight: bold;"><span style="font-weight: normal;">correction d'un dysfonctionnement d'enregistrement de la configuration des paramètres Azure combiné avec le serveur SMTP&#160;Exchange Online.&#160;Le formulaire est désormais corrigé et enregistre bien les changements de configuration</span>
+                                                                </p>
+                                                            </li>
+                                                        </ul>
+                                                        <ul>
+                                                            <li>
+                                                                <p>correction d'une anomalie qui maintenait des requêtes ICMP alors qu'elles étaient désactivées.&#160;Désormais, il est possible de désactiver ICMP</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <p><b>WES :</b> correction du comportement des WES lors de l’authentification par code PIN quand le code PIN n’est pas défini : désormais, un message clair s'affiche sur le WES</p>
+                                                    </li>
+                                                    <li>
+                                                        <p style="font-weight: normal;"><b>WES Sharp :</b> lors de l'installation du WES, alors que l'authentification par badge était désactivé dans la configuration du WES, le badge était automatiquement activé sur le périphérique d'impression et provoquait une erreur.&#160;Ce n'est plus le cas.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><b>WEScan Konica Minolta :</b> correction de l'anomalie qui générait un doublon lors de la création d'un profil de scan personnalisé lorsque le service KeepAlive était installé sur le navigateur du périphérique d'impression. </p>
+                                                    </li>
+                                                </ul>
+                                                <h2 id="WatchdocetWSC6115787WPCforWindowsetSkyprint70618504112026" data-magellan-target="WatchdocetWSC6115787WPCforWindowsetSkyprint70618504112026">Watchdoc et WSC 6.1.1.5787,  WPC for Windows  et Skyprint 7.0.6185 - 04/11/2026</h2>
+                                                <p data-mc-conditions="General.Online"><a href="https://downloads.doxense.fr/files/watchdoc/6110/Watchdoc_Express_6.1.1.5787.zip" alt="Lien vers le package de téléchagement du programme Watchdoc Setup" title="Lien vers le package de téléchagement du programme Watchdoc Setup">Watchdoc Express</a> / 
+		<a href="https://downloads.doxense.fr/files/watchdoc/6110/Watchdoc_Setup_6.1.1.5787.zip" alt="Lien vers le package de téléchagement du programme Watchdoc Setup" title="Lien vers le package de téléchagement du programme Watchdoc Setup">Watchdoc Setup</a> / 
+		<a href="https://downloads.doxense.fr/files/watchdoc/6110/Watchdoc_Update_6.1.1.5787.zip" alt="Lien vers le package de téléchagement du programme Watchdoc Express" title="Lien vers le package de téléchagement du programme Watchdoc Express">Watchdoc Update</a> / 
+		<a href="https://downloads.doxense.fr/files/watchdoc/6110/Supervision_Update_6.1.1.5787.zip" alt="Lien de téléchargement du programme de mise à jour" title="Lien de téléchargement du programme de mise à jour">WSC Update </a> / 
+		<a href="https://downloads.doxense.fr/files/watchdoc/6110/Supervision_Setup_6.1.1.5787.zip" alt="Link to the setup file" title="Link to the setup file">WSC Setup</a></p>
+                                                <p data-mc-conditions="General.Online">&#160;</p>
                                                 <p style="color: #000000;"><b style="color: #696969;">Améliorations</b>
                                                 </p>
                                                 <ul>
@@ -1171,7 +1249,7 @@
                                                                 <p>correction du programme de mise à jour d'une base Postgre SQL&#160;(pgsql_update_[n°_v].sql) garantissant la mise à jour de la base sans problème de docID</p>
                                                             </li>
                                                             <li>
-                                                                <p>correction du paramètre "Code PIN" qui apparaissait en erreur dans la configuration de l'annuaire META après mise à jour en version <span class="mc-variable Versions.Watchdoc variable">6.1.1.5787</span></p>
+                                                                <p>correction du paramètre "Code PIN" qui apparaissait en erreur dans la configuration de l'annuaire META après mise à jour en version <span class="mc-variable Versions.Watchdoc variable">6.1.1.5801</span></p>
                                                             </li>
                                                             <li>
                                                                 <p>correction d'une anomalie provoquant une erreur dans la page "Mon compte" (message "Une erreur s'est produite - Error while calling method ScreenMyAccountStats") liée à l'activation du paramètre "Afficher les statistiques d'équipes" quand l'utilisateur n'appartient à aucune équipe</p>
@@ -1748,7 +1826,9 @@
                                                     <ul>
                                                         <li class="tree-node"><a href="#Watchdoc61x">Watchdoc 6.1.x</a>
                                                         </li>
-                                                        <li class="tree-node"><a href="#WatchdocetWSC6115787WPCforWindows706185etSkyprint70618504112026">Watchdoc et WSC 6.1.1.5787,  WPC for Windows 7.0.6185 et Skyprint 7.0.6185 - 04/11/2026</a>
+                                                        <li class="tree-node"><a href="#WatchdocetWSC6115801WPCforWindows706200etSkyprint70619919112026">Watchdoc et WSC 6.1.1.5801,  WPC for Windows 7.0.6200 et Skyprint 7.0.6199 - 19/11/2026</a>
+                                                        </li>
+                                                        <li class="tree-node"><a href="#WatchdocetWSC6115787WPCforWindowsetSkyprint70618504112026">Watchdoc et WSC 6.1.1.5787,  WPC for Windows  et Skyprint 7.0.6185 - 04/11/2026</a>
                                                         </li>
                                                         <li class="tree-node"><a href="#WatchdocetWSC611578129102026">Watchdoc et WSC&#160;6.1.1.5781 - 29/10/2026</a>
                                                         </li>
